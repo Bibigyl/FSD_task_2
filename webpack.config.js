@@ -8,6 +8,7 @@ const PATHS = {
   src: path.join(__dirname,'src'),
   dist: path.join(__dirname, 'dist')
 };
+var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   entry: {
@@ -18,7 +19,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[hash].js'
   },
   module: {
     rules: [
@@ -71,6 +72,7 @@ module.exports = {
       template: './src/pages/ui-kit/ui-kit.pug',
       filename: 'ui-kit.html'
     }),
-    new WebpackMd5Hash()
+    new WebpackMd5Hash(),
+    new LiveReloadPlugin()
   ]
 };
