@@ -10,7 +10,12 @@ const PATHS = {
 };
 
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: {
+    'landing-page': './src/pages/landing-page/landing-page.js',
+    'room-details': './src/pages/room-details/room-details.js',
+    'seach-room': './src/pages/search-room/search-room.js',
+    'ui-kit': './src/pages/ui-kit/ui-kit.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js'
@@ -45,8 +50,26 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/index.pug',
-      filename: 'index.html'
+      template: './src/pages/landing-page/landing-page.pug',
+      filename: 'landing-page.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/pages/room-details/room-details.pug',
+      filename: 'room-details.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/pages/search-room/search-room.pug',
+      filename: 'search-room.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/pages/ui-kit/ui-kit.pug',
+      filename: 'ui-kit.html'
     }),
     new WebpackMd5Hash()
   ]
