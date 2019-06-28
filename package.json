@@ -6,8 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
-    "start": "webpack-dev-server --content-base src --hot --inline --open",
-    "watch": "webpack --watch --open",
+    "start": "webpack-dev-server --open --mode development",
     "serv": "static dist"
   },
   "author": "",
@@ -33,7 +32,6 @@
     "webpack": "^4.34.0",
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.2",
-    "webpack-livereload-plugin": "^2.2.0",
     "webpack-md5-hash": "0.0.6"
   },
   "dependencies": {

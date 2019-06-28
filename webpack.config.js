@@ -74,5 +74,8 @@ module.exports = {
     }),
     new WebpackMd5Hash(),
     new LiveReloadPlugin()
-  ]
+  ],
+  devServer: {
+    stats: 'errors-only'
+  }
 };
