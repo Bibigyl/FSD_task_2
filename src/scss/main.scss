@@ -1,6 +1,6 @@
 /*------------------------------ CSS normalize (reset) ----------------------------------------*/
 
-//@import 'normalize.css';
+@import './reset';
 
 /*------------------------------ Common styles ----------------------------------------*/
 
@@ -9,8 +9,11 @@
 /*------- Add fonts ------------*/
 
 @include font-face("Quicksand-Bold", "../fonts/Quicksand-Bold/Quicksand-Bold");
-/*@include font-face("Montserrat-Bold", "./fonts/Montserrat-Bold/Montserrat-Bold");
-@include font-face("Montserrat-Medium", "./fonts/Montserrat-Medium/Montserrat-Medium");
+@include font-face("Quicksand-Medium", "../fonts/Quicksand-Medium/Quicksand-Medium"); /*!!!!!*/
+@include font-face("Quicksand-Regular", "../fonts/Quicksand-Regular/Quicksand-Regular");
+@include font-face("Montserrat-Bold", "../fonts/Montserrat-Bold/Montserrat-Bold");
+@include font-face("Montserrat-Medium", "../fonts/Montserrat-Medium/Montserrat-Medium"); /*!!!!!*/
+@include font-face("Montserrat-Regular", "../fonts/Montserrat-Regular/Montserrat-Regular");
 
 /*-------- Variables -------------*/
 
@@ -24,7 +27,7 @@ $purple: #BC9CFF;
 $green: #6FCF97;
 
 body {
-	font-family: "Montserrat-Bold";
+	font-family: "Montserrat-Regular";
 	font-size: 14px;
 	line-height: 24px;
 }
@@ -49,9 +52,9 @@ h3 {
 /*------------------------------ Styles for UI-Kit ----------------------------------------*/
 
 .ui-section {
-	margin: 145px 150px;
-	position: relative;
+	padding: 140px 140px;
 	background-color: #E5E5E5;
+	position: relative;
 }
 .ui-section_white {
 	background-color: #FFFFFF;
@@ -62,9 +65,98 @@ h3 {
 	left: 30px;
 }
 .ui-container {
-	min-width: 1440px;
+	max-width: 1440px;
 	display: flex;
+}
+.colors, .fonts {
+	flex-grow: 1;
+	width: 100%;
+	margin-top: 5px;
+}
+.color-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.color-item__square {
+	width: 70px;
+	height: 70px;
+	border-radius: 6px;
+	display: inline-block;
+	margin-left: 10px;
+}
+.color-item:nth-child(1) .color-item__square {
+	background-color: $c100;
+}
+.color-item:nth-child(2) .color-item__square {
+	background-color: $c75;
+}
+.color-item:nth-child(3) .color-item__square {
+	background-color: $c50;
+}
+.color-item:nth-child(4) .color-item__square {
+	background-color: $c25;
+}
+.color-item:nth-child(5) .color-item__square {
+	background-color: $c5;
+}
+.color-item:nth-child(6) .color-item__square {
+	background-color: $purple;
+}
+.color-item:nth-child(7) .color-item__square {
+	background-color: $green;
+}
+.color-item__desc {
+	display: inline-block;
+	margin-left: 40px;
+	vertical-align: middle;
+	h2 {
+		line-height: 29px;
+	}
+	span {
+		font-family: "Quicksand-Regular";
+	}
+}
+.font-item {
+	display: flex;
+	margin-bottom: 50px;
+	&:last-child {
+		margin-top: -2px;
+	}
+}
+.font-item__tag {
+	text-align: right;
+	width: 112px;	
+	& > * {
+		font-family: "Montserrat-Regular";		
+	}	
+}
+.font-item__desc {
+	margin-left: 30px;
+	max-width: 350px;
 }
 
 
+.colors-and-type {
+	display: none;
+}
 /*------------------------------ Temp styles ----------------------------------------*/
+
+input, select, textarea {
+	background: #FFFFFF;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	box-sizing: border-box;
+	border-radius: 4px;
+	width: 320px;
+	height: 44px;
+	margin-bottom: 20px;
+}
+label {
+	h3 {
+		margin-bottom: 5px;
+	}
+	margin-bottom: 21px;
+}
+.form-block {
+	padding-top: 3px;
+}
