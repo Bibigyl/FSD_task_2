@@ -1,5 +1,70 @@
-div {
-	color: yellow;
-	border-radius: 5px;
-	border-color: green;
+/*------------------------------ CSS normalize (reset) ----------------------------------------*/
+
+//@import 'normalize.css';
+
+/*------------------------------ Common styles ----------------------------------------*/
+
+@import './mixins';
+
+/*------- Add fonts ------------*/
+
+@include font-face("Quicksand-Bold", "../fonts/Quicksand-Bold/Quicksand-Bold");
+/*@include font-face("Montserrat-Bold", "./fonts/Montserrat-Bold/Montserrat-Bold");
+@include font-face("Montserrat-Medium", "./fonts/Montserrat-Medium/Montserrat-Medium");
+
+/*-------- Variables -------------*/
+
+
+$c100: #1F2041;
+$c75: rgba(31, 32, 65, 0.75);
+$c50: rgba(31, 32, 65, 0.50);
+$c25: rgba(31, 32, 65, 0.25);
+$c5: rgba(31, 32, 65, 0.05);
+$purple: #BC9CFF;
+$green: #6FCF97;
+
+body {
+	font-family: "Montserrat-Bold";
+	font-size: 14px;
+	line-height: 24px;
 }
+h1 {
+	font-family: "Quicksand-Bold";
+	font-size: 24px;
+	line-height: 30px;
+}
+h2 {
+	font-family: "Quicksand-Bold";
+	font-size: 19px;
+	line-height: 24px;
+}
+h3 {
+	font-family: "Montserrat-Bold";
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+}
+
+
+/*------------------------------ Styles for UI-Kit ----------------------------------------*/
+
+.ui-section {
+	margin: 145px 150px;
+	position: relative;
+	background-color: #E5E5E5;
+}
+.ui-section_white {
+	background-color: #FFFFFF;
+}
+.ui-logo {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+.ui-container {
+	min-width: 1440px;
+	display: flex;
+}
+
+
+/*------------------------------ Temp styles ----------------------------------------*/
