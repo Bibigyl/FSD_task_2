@@ -1,12 +1,16 @@
-/*------------------------------ CSS normalize (reset) ----------------------------------------*/
+/*------------------------- CSS normalize (reset) -----------------------------------*/
 
 @import './reset';
 
+/*------------------------------ Import libs ----------------------------------------*/
+
+@import '~material-design-icons/iconfont/material-icons.css';
+
 /*------------------------------ Common styles ----------------------------------------*/
 
-@import './mixins';
-
 /*------- Add fonts ------------*/
+
+@import './mixins';
 
 @include font-face("Quicksand-Bold", "../fonts/Quicksand-Bold/Quicksand-Bold");
 @include font-face("Quicksand-Medium", "../fonts/Quicksand-Medium/Quicksand-Medium"); /*!!!!!*/
@@ -16,7 +20,6 @@
 @include font-face("Montserrat-Regular", "../fonts/Montserrat-Regular/Montserrat-Regular");
 
 /*-------- Variables -------------*/
-
 
 $c100: #1F2041;
 $c75: rgba(31, 32, 65, 0.75);
@@ -147,28 +150,45 @@ h3 {
 /*------------------------------ Temp styles ----------------------------------------*/
 
 .ui-form-block {
-	padding-top: 3px;
+	padding-top: 2px;
 	width: 100%;	
 }
 .ui-label {
+	position: relative;
 	& .input, .select {
 		margin-bottom: 21px;	
 	}
 }
-.input, .select {
+.ui-field-state {
+	position: absolute;
+	right: 0;
+	top: -40px;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.input {
 	background: #FFFFFF;
-	border: 1px solid rgba(31, 32, 65, 0.25);
+	border: 1px solid $c25;
 	box-sizing: border-box;
 	border-radius: 4px;
 	height: 44px;
 	padding-left: 15px;
-	color: $c75;
-}
-.input {
+	color: $c25;
 	font-family: "Montserrat-Regular";
 	font-size: .97em;		
 	&::placeholder {
 		font-family: "Montserrat-Regular";
+		color: $c25;
+	}
+	&:hover, &:focus {
+		border-color: $c50;
+		color: $c75;
+	}
+}
+.ui-input_hover {
+	border-color: $c50;
+	&::placeholder {
+		color: $c75;	
 	}
 }
 .input_size_big {
@@ -180,11 +200,20 @@ h3 {
 	max-width: 320px;	
 }
 .select {
+	background: #FFFFFF;
+	border: 1px solid $c25;
+	box-sizing: border-box;
+	border-radius: 4px;
+	height: 44px;
+	padding-left: 15px;
 	font-family: "Montserrat-Regular";
-	font-size: .97em;	
 	& option[selected][disabled] {
 		font-family: "Montserrat-Regular";
-		font-size: .97em;
+	}
+	&:not(:checked), &:checked {
+		color: #000;
+		padding-bottom: 3px;
+		padding-left: 11px;
 	}
 }
 .label {

@@ -39,6 +39,7 @@
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "jquery": "^3.4.1",
+    "material-design-icons": "^3.0.1",
     "node-static": "^0.7.11"
   }
 }
