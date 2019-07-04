@@ -1,5 +1,6 @@
 // webpack v4
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -85,7 +86,12 @@ module.exports = {
 			template: './src/pages/ui-kit/ui-kit.pug',
 			filename: 'ui-kit.html'
 		}),
-		new LiveReloadPlugin()
+		new LiveReloadPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    })
 	],
 	devServer: {
 		stats: 'errors-only'

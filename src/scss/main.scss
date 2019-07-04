@@ -30,22 +30,26 @@ body {
 	font-family: "Montserrat-Regular";
 	font-size: 14px;
 	line-height: 24px;
+	color: $c75;
 }
 h1 {
 	font-family: "Quicksand-Bold";
 	font-size: 24px;
 	line-height: 30px;
+	color: $c100;
 }
 h2 {
 	font-family: "Quicksand-Bold";
 	font-size: 19px;
 	line-height: 24px;
+	color: $c100;
 }
 h3 {
 	font-family: "Montserrat-Bold";
 	font-size: 12px;
 	line-height: 15px;
 	text-transform: uppercase;
+	color: $c100;
 }
 
 
@@ -70,7 +74,7 @@ h3 {
 }
 .colors, .fonts {
 	flex-grow: 1;
-	width: 100%;
+	width: 33.333%;
 	margin-top: 5px;
 }
 .color-item {
@@ -142,21 +146,49 @@ h3 {
 }
 /*------------------------------ Temp styles ----------------------------------------*/
 
-input, select, textarea {
+.ui-form-block {
+	padding-top: 3px;
+	width: 100%;	
+}
+.ui-label {
+	& .input, .select {
+		margin-bottom: 21px;	
+	}
+}
+.input, .select {
 	background: #FFFFFF;
 	border: 1px solid rgba(31, 32, 65, 0.25);
 	box-sizing: border-box;
 	border-radius: 4px;
-	width: 320px;
 	height: 44px;
-	margin-bottom: 20px;
+	padding-left: 15px;
+	color: $c75;
 }
-label {
+.input {
+	font-family: "Montserrat-Regular";
+	font-size: .97em;		
+	&::placeholder {
+		font-family: "Montserrat-Regular";
+	}
+}
+.input_size_big {
+	width: 100%;	
+	max-width: 320px;	
+}
+.select_size_big {
+	width: 100%;	
+	max-width: 320px;	
+}
+.select {
+	font-family: "Montserrat-Regular";
+	font-size: .97em;	
+	& option[selected][disabled] {
+		font-family: "Montserrat-Regular";
+		font-size: .97em;
+	}
+}
+.label {
 	h3 {
 		margin-bottom: 5px;
 	}
-	margin-bottom: 21px;
-}
-.form-block {
-	padding-top: 3px;
 }

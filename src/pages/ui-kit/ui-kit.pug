@@ -12,8 +12,8 @@ html(lang="ru")
 
 
 		section(class="ui-section ui-section_white colors-and-type")
-			div(class="ui-logo logo logo_grey")
-				include ../../common.blocks/logo/logo.pug
+			div(class="ui-logo")
+				include ../../common.blocks/logo/ui-logo.pug
 			div(class="ui-container")
 
 				div(class="colors")
@@ -65,26 +65,28 @@ html(lang="ru")
 						span(class="font-item__desc") This is the body text which is used for most</br> of the design, like paragraphs, lists, etc.
 		
 		section(class="ui-section ui-section_white form-elements")
-			div(class="ui-logo logo logo_grey")
-				include ../../common.blocks/logo/logo.pug
-			container(class="ui-container form-blocks-1")
-				div(class="form-block")
-					label 
+			div(class="ui-logo")
+				include ../../common.blocks/logo/ui-logo.pug
+			container(class="ui-container ui-form-blocks-1")
+				div(class="ui-form-block")
+					label(class="label ui-label")
 						h3 Text field
-						input(placeholder="email")
-					label
+						input(class="input input_size_big" placeholder="Email")
+						span(class="ui-state") 
+					label(class="label ui-label")
 						h3 Text field
-						input(placeholder="This is pretty awesome")
-					label
+						input(class="input input_size_big" placeholder="This is pretty awesome")
+					label(class="label ui-label")
 						h3 Dropdown
-						select(placeholde="Сколько гостей")
+						select(class="select select_size_big")
+							option(value="" disabled selected hidden) Сколько гостей
 							option 1
 							option 2
 							option 3
 							option 4
-					label
+					label(class="label ui-label")
 						h3 Masked text field
-						input(placeholder="email")
+						input(class="input input_size_big input_masked_date" placeholder="ДД/ММ/ГГГГ")
 
 
 
