@@ -4,11 +4,12 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
+const autoprefixer = require('autoprefixer');
 const PATHS = {
 	src: path.join(__dirname,'src'),
 	dist: path.join(__dirname, 'dist')
 };
-var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
 	entry: {
@@ -32,7 +33,15 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+				use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', {
+					loader: 'postcss-loader',
+					options: {
+						plugins: () => autoprefixer({
+							overrideBrowserslist: ['last 3 versions', '> 1%']
+						})
+					}
+				}, 
+			'sass-loader']
 			},
 			{
 				test: /\.pug$/,
@@ -87,11 +96,11 @@ module.exports = {
 			filename: 'ui-kit.html'
 		}),
 		new LiveReloadPlugin(),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery'
-    })
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			jQuery: 'jquery',
+			'window.jQuery': 'jquery'
+		})
 	],
 	devServer: {
 		stats: 'errors-only'

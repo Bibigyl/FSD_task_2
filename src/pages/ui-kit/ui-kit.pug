@@ -68,29 +68,147 @@ html(lang="ru")
 			div(class="ui-logo")
 				include ../../common.blocks/logo/ui-logo.pug
 			container(class="ui-container ui-form-blocks-1")
-				div(class="ui-form-block")
-					label(class="label ui-label")
-						h3 Text field
-						input(class="input input_size_big" placeholder="Email")
-						span(class="ui-field-state") Default
-					label(class="label ui-label")
-						h3 Text field
-						input(class="input ui-input_hover input_size_big" placeholder="This is pretty awesome")
-						span(class="ui-field-state") Hover / Focus
-					label(class="label ui-label")
-						h3 Dropdown
-						select(class="select select_size_big")
-							option(value="" disabled selected hidden) Сколько гостей
-							option 1
-							option 2
-							option 3
-							option 4
-						span(class="ui-field-state") Default
-					label(class="label ui-label")
-						h3 Masked text field
-						input(class="input input_size_big input_masked_date" placeholder="ДД/ММ/ГГГГ")
-						span(class="ui-field-state") Default
-		<i class="material-icons">face</i>
+				div(class="ui-column")
+					div(class="ui-form-block")
+						label(class="label ui-label")
+							h3 Text field
+							input(class="input input_size_big" placeholder="Email")
+							span(class="ui-field-state") Default
+						label(class="label ui-label")
+							h3 Text field
+							input(class="input ui-input_hover input_size_big" placeholder="This is pretty awesome")
+							span(class="ui-field-state") Hover / Focus
+						label(class="label ui-label")
+							h3 Dropdown
+							select(class="select select_size_big")
+								option(value="" disabled selected hidden) Сколько гостей
+								option 1
+								option 2
+								option 3
+								option 4
+							div(class="select__arrow")
+								i(class="material-icons") expand_more
+							span(class="ui-field-state") Default
+						label(class="label ui-label")
+							h3 Masked text field
+							input(class="input input_size_big input_masked_date" placeholder="ДД/ММ/ГГГГ")
+							span(class="ui-field-state") Default
+
+					div(class="ui-form-block ui-form-block_inline")
+						label(class="label ui-label")
+							h3 Date dropdown
+							select(class="select select_size_small")
+								option(value="" disabled selected hidden) ДД.ММ.ГГГГ
+								option 1
+								option 2
+								option 3
+								option 4
+							div(class="select__arrow")
+								i(class="material-icons") expand_more
+						label(class="label ui-label")
+							h3 Date dropdown
+							select(class="select select_size_small")
+								option(value="" disabled selected hidden) 19.08.2019
+								option 1
+								option 2
+								option 3
+								option 4
+							div(class="select__arrow")
+								i(class="material-icons") expand_more
+
+					div(class="ui-form-block")
+						label(class="label ui-label")
+							h3 Filter date dropdown
+							select(class="select select_size_middle")
+								option(value="" disabled selected hidden) 19 авг - 23 авг
+								option 1
+								option 2
+								option 3
+								option 4
+							div(class="select__arrow")
+								i(class="material-icons") expand_more
+
+					div(class="ui-form-block")
+						label(class="label ui-label")
+							h3 Subscription text field
+							input(class="input input_size_middle" placeholder="Email")
+							div(class="input__arrow")
+								i(class="material-icons") arrow_forward
+
+				div(class="ui-column")
+					div(class="ui-form-block")
+						h3 Checkbox buttons
+						label(class="label ui-label label_type_checkbox")
+							input(class="input_type_checkbox" type="checkbox")
+							div(class="checkbox-text") Можно курить
+						label(class="label ui-label label_type_checkbox")
+							input(class="input_type_checkbox" type="checkbox" checked)
+							div(class="checkbox-text") Можно с питомцами
+						label(class="label ui-label label_type_checkbox")
+							input(class="input_type_checkbox" type="checkbox" checked)
+							div(class="checkbox-text") Можно пригласить гостей </br>(до 10 человек)
+
+					div(class="ui-form-block")
+						h3 Radio buttons
+						label(class="label ui-label label_type_radio")
+							input(class="input_type_radio" type="radio" name="ui-radio" checked)
+							div(class="radio-text") Мужчина
+						label(class="label ui-label label_type_radio")
+							input(class="input_type_radio" type="radio" name="ui-radio")
+							div(class="radio-text") Женщина
+
+					div(class="ui-form-block")
+						h3 Toggle
+						label(class="label ui-label label_type_toggle")
+							input(class="input_type_toggle" type="checkbox" checked)
+							div(class="toggle-text") Получать спецпредложения
+						label(class="label ui-label label_type_toggle")
+							input(class="input_type_toggle" type="checkbox")
+							div(class="toggle-text") Получать спецпредложения
+
+					div(class="ui-form-block")
+						h3 Like button
+						label(class="label ui-label label_type_like-button")
+							input(class="input_type_like-button" type="checkbox" checked)
+							div(class="like-button-text material-icons") 2
+						label(class="label ui-label label_type_like-button")
+							input(class="input_type_like-button" type="checkbox")
+							div(class="like-button-text material-icons") 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				div(class="ui-column")
+					div(class="ui-form-block")
+						h3 Range slider
+						label(class="label ui-label label_type_checkbox")
+							input(class="input_type_checkbox" type="checkbox")
+							div(class="checkbox-text") Можно курить
+
+
+		<i class="material-icons">expand_more</i>
+		div(class="ui-form-block")
+			h3 Checkbox buttons
+			label(class="label ui-label label_type_checkbox")
+				input(class="input_type_checkbox" type="checkbox")
+				div(class="checkbox-text ") Можно курить
 
 
 
