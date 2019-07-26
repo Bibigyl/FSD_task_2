@@ -140,45 +140,71 @@ html(lang="ru")
 						h3 Checkbox buttons
 						label(class="label ui-label label_type_checkbox")
 							input(class="input_type_checkbox" type="checkbox")
-							div(class="checkbox-text") Можно курить
+							div(class="checkbox__text") Можно курить
 						label(class="label ui-label label_type_checkbox")
 							input(class="input_type_checkbox" type="checkbox" checked)
-							div(class="checkbox-text") Можно с питомцами
+							div(class="checkbox__text") Можно с питомцами
 						label(class="label ui-label label_type_checkbox")
 							input(class="input_type_checkbox" type="checkbox" checked)
-							div(class="checkbox-text") Можно пригласить гостей </br>(до 10 человек)
+							div(class="checkbox__text") Можно пригласить гостей </br>(до 10 человек)
 
 					div(class="ui-form-block")
 						h3 Radio buttons
 						label(class="label ui-label label_type_radio")
 							input(class="input_type_radio" type="radio" name="ui-radio" checked)
-							div(class="radio-text") Мужчина
+							div(class="radio__text") Мужчина
 						label(class="label ui-label label_type_radio")
 							input(class="input_type_radio" type="radio" name="ui-radio")
-							div(class="radio-text") Женщина
+							div(class="radio__text") Женщина
 
 					div(class="ui-form-block")
 						h3 Toggle
 						label(class="label ui-label label_type_toggle")
 							input(class="input_type_toggle" type="checkbox" checked)
-							div(class="toggle-text") Получать спецпредложения
+							div(class="toggle__text") Получать спецпредложения
 						label(class="label ui-label label_type_toggle")
 							input(class="input_type_toggle" type="checkbox")
-							div(class="toggle-text") Получать спецпредложения
+							div(class="toggle__text") Получать спецпредложения
 
 					div(class="ui-form-block")
 						h3 Like button
-						label(class="label ui-label label_type_like-button")
-							input(class="input_type_like-button" type="checkbox" checked)
-							div(class="like-button-text material-icons") 2
-						label(class="label ui-label label_type_like-button")
-							input(class="input_type_like-button" type="checkbox")
-							div(class="like-button-text material-icons") 2
+						div(class="like-button-wrap like-button-wrap_active")
+							label(class="label ui-label label_type_like-button")
+								input(class="input_type_like-button" type="checkbox")
+								div(class="like-button__text") 2
+									div(class="material-icons") favorite_border
+						div(class="like-button-wrap")
+							label(class="label ui-label label_type_like-button")
+								input(class="input_type_like-button" type="checkbox" checked)
+								div(class="like-button__text") 12
+									div(class="material-icons") favorite
+
+					div(class="ui-form-block")
+						h3 Rate button
+						div(class="rating")
+							label(class="label label_type_rating")
+								input(class="input_type_rating" name="rating" value="5" id="rating_5" type="radio")
+								div(class="rating__star material-icons")
+							label(class="label label_type_rating")
+								input(class="input_type_rating" name="rating" value="4" id="rating_4" type="radio")
+								div(class="rating__star material-icons")
+							label(class="label label_type_rating")
+								input(class="input_type_rating" name="rating" value="3" id="rating_3" type="radio")
+								div(class="rating__star material-icons")
+							label(class="label label_type_rating label_type_rating_active")
+								input(class="input_type_rating" name="rating" value="2" id="rating_2" type="radio")
+								div(class="rating__star material-icons")
+							label(class="label label_type_rating")
+								input(class="input_type_rating" name="rating" value="1" id="rating_1" type="radio")
+								div(class="rating__star material-icons")
 
 
 
 
 
+
+
+				
 
 
 
@@ -200,7 +226,8 @@ html(lang="ru")
 						h3 Range slider
 						label(class="label ui-label label_type_checkbox")
 							input(class="input_type_checkbox" type="checkbox")
-							div(class="checkbox-text") Можно курить
+							div(class="checkbox__text") Можно курить
+
 
 
 		<i class="material-icons">expand_more</i>
@@ -208,7 +235,7 @@ html(lang="ru")
 			h3 Checkbox buttons
 			label(class="label ui-label label_type_checkbox")
 				input(class="input_type_checkbox" type="checkbox")
-				div(class="checkbox-text ") Можно курить
+				div(class="checkbox__text ") Можно курить
 
 
 
@@ -220,7 +247,7 @@ html(lang="ru")
 
 
 
-
+		<div class="gradient-box"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum, lorem vel tincidunt imperdiet, nibh elit laoreet felis, a bibendum nisl tortor non orci. Donec pretium fermentum felis, quis aliquet est rutrum ut. Integer quis massa ut lacus viverra pharetra in eu lacus. Aliquam tempus odio adipiscing diam pellentesque rhoncus. Curabitur a bibendum est. </p></div>
 		<script src="ui-kit.js"></script>
 		script(src="http://localhost:35729/livereload.js")
 
