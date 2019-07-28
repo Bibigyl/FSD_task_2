@@ -181,61 +181,40 @@ html(lang="ru")
 
 					div(class="ui-form-block")
 						h3 Rate button
-						div(class="rating")
-							label(class="label label_type_rating")
-								input(class="input_type_rating" name="rating" value="5" id="rating_5" type="radio")
-								div(class="rating__star material-icons")
-							label(class="label label_type_rating")
-								input(class="input_type_rating" name="rating" value="4" id="rating_4" type="radio")
-								div(class="rating__star material-icons")
-							label(class="label label_type_rating")
-								input(class="input_type_rating" name="rating" value="3" id="rating_3" type="radio")
-								div(class="rating__star material-icons")
-							label(class="label label_type_rating label_type_rating_active")
-								input(class="input_type_rating" name="rating" value="2" id="rating_2" type="radio")
-								div(class="rating__star material-icons")
-							label(class="label label_type_rating")
-								input(class="input_type_rating" name="rating" value="1" id="rating_1" type="radio")
-								div(class="rating__star material-icons")
+						div(class="rating ui-rating")
+							input(class="input_type_rating" name="ui-rating" value="5" id="ui-rating_5" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_5")
+							input(class="input_type_rating" name="ui-rating" value="4" id="ui-rating_4" type="radio" checked)
+							label(class="label label_type_rating material-icons" for="ui-rating_4")
+							input(class="input_type_rating" name="ui-rating" value="3" id="ui-rating_3" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_3")
+							input(class="input_type_rating" name="ui-rating" value="2" id="ui-rating_2" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_2")
+							input(class="input_type_rating" name="ui-rating" value="1" id="ui-rating_1" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_1")
 
-
-
-
-
-
-
-				
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+						div(class="rating ui-rating")
+							input(class="input_type_rating" name="ui2-rating" value="5" id="ui2-rating_5" type="radio" checked)
+							label(class="label label_type_rating material-icons" for="ui2-rating_5")
+							input(class="input_type_rating" name="ui2-rating" value="4" id="ui2-rating_4" type="radio")
+							label(class="label label_type_rating material-icons" for="ui2-rating_4")
+							input(class="input_type_rating" name="ui2-rating" value="3" id="ui2-rating_3" type="radio")
+							label(class="label label_type_rating material-icons" for="ui2-rating_3")
+							input(class="input_type_rating" name="ui2-rating" value="2" id="ui2-rating_2" type="radio")
+							label(class="label label_type_rating material-icons" for="ui2-rating_2")
+							input(class="input_type_rating" name="ui2-rating" value="1" id="ui2-rating_1" type="radio")
+							label(class="label label_type_rating material-icons" for="ui2-rating_1")
 
 
 				div(class="ui-column")
 					div(class="ui-form-block")
 						h3 Range slider
-						label(class="label ui-label label_type_checkbox")
-							input(class="input_type_checkbox" type="checkbox")
-							div(class="checkbox__text") Можно курить
-
-
-
-		<i class="material-icons">expand_more</i>
-		div(class="ui-form-block")
-			h3 Checkbox buttons
-			label(class="label ui-label label_type_checkbox")
-				input(class="input_type_checkbox" type="checkbox")
-				div(class="checkbox__text ") Можно курить
+						div(class="wraper")
+							div(class="container")
+								div(class="slider-wrapper")
+									div(id="slider-range")
+								div(class="range-wrapper")
+									div(class="range")
 
 
 
@@ -247,8 +226,16 @@ html(lang="ru")
 
 
 
-		<div class="gradient-box"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum, lorem vel tincidunt imperdiet, nibh elit laoreet felis, a bibendum nisl tortor non orci. Donec pretium fermentum felis, quis aliquet est rutrum ut. Integer quis massa ut lacus viverra pharetra in eu lacus. Aliquam tempus odio adipiscing diam pellentesque rhoncus. Curabitur a bibendum est. </p></div>
-		<script src="ui-kit.js"></script>
+
+
+
+
+
+
+
+
+
+		script(src="ui-kit.js")
 		script(src="http://localhost:35729/livereload.js")
 
 
