@@ -50,6 +50,34 @@ $('#slider-range').slider({
 
 
 
+//----------------------------- Dropdown -------------------------------------
+
+$(".dropdown__arrow").on("click", function() {
+	$(this).parent().children("ul").slideToggle(300, "linear").parent().parent().toggleClass("dropdown_state_open");
+
+});
+
+$(".dropdown__button").on("click", function() {
+	var numNode = $(this).parent().find(".dropdown__num");
+	var num = numNode.text() * 1;
+	if ( !$(this).hasClass("dropdown__button_not-active") ) {
+		if ( $(this).hasClass("dropdown__button_minus") ) {
+			num = num - 1;
+			numNode.text(num);
+			if ( num == 0 ) { $(this).addClass("dropdown__button_not-active") }
+			if ( num == 98 ) { 
+				$(this).parent().find(".dropdown__button_plus").removeClass("dropdown__button_not-active"); 
+			}
+		} else {
+			num = num + 1;
+			numNode.text(num);
+			if ( num == 99 ) { $(this).addClass("dropdown__button_not-active") }
+			if ( num == 1 ) { 
+				$(this).parent().find(".dropdown__button_minus").removeClass("dropdown__button_not-active"); 
+			}
+		}
+	}
+});
 
 });
 

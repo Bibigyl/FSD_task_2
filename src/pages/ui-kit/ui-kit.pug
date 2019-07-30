@@ -232,7 +232,89 @@ html(lang="ru")
 					div(class="ui-form-block")
 						h3 Pagination
 						div(class="pagination")
+						div(class="pagination__arrow")
+							i(class="material-icons") arrow_forward
+						div(class="pagination__text") <span>1 - 12 из 100+</span> вариантов аренды
 
+			container(class="ui-container ui-form-blocks-2")
+				div(class="ui-column")
+					div(class="ui-form-block")
+						div(class="ui-dropdown dropdown dropdown_size_middle  dropdown_choice_furniture")
+							h3 Dropdown
+							div(class="dropdown__field") 2 спальни, 2 кровати...
+								ul
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 2
+										span(class="dropdown__button dropdown__button_minus") -
+										|Спальни
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 2
+										span(class="dropdown__button dropdown__button_minus") -
+										|Кровати
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 0
+										span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+										|Ванные комнаты
+								div(class="dropdown__arrow")
+									i(class="material-icons") expand_more
+								span(class="ui-field-state") Default
+
+						div(class="ui-dropdown dropdown dropdown_size_middle  dropdown_choice_furniture dropdown_state_open")
+							h3 Dropdown
+							div(class="dropdown__field") 2 спальни, 2 кровати...
+								ul
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 2
+										span(class="dropdown__button dropdown__button_minus") -
+										|Спальни
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 2
+										span(class="dropdown__button dropdown__button_minus") -
+										|Кровати
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 0
+										span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+										|Ванные комнаты
+								div(class="dropdown__arrow")
+									i(class="material-icons") expand_more
+								span(class="ui-field-state") Expanded
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				div(class="ui-column")
+					div(class="ui-form-block")
+						label(class="label ui-label")
+							h3 Dropdown
+							select(class="select select_size_middle select_type_multiple-choice select_choice_furniture")
+								option(value="" disabled selected hidden) 2 спальни, 2 кровати...
+								option 1
+
+
+				div(class="ui-column")
+					div(class="ui-form-block")
+						label(class="label ui-label")
+							h3 Dropdown
+							select(class="select select_size_middle select_type_multiple-choice select_choice_furniture")
+								option(value="" disabled selected hidden) 2 спальни, 2 кровати...
+								option 1
 
 
 
