@@ -58,9 +58,13 @@ h3 {
 .material-icons {
 	font-size: 24px;
 	color: $c75;
+	transition: .2s;
 }
 .hidden {
-	display: none;
+	display: none!important;
+}
+.arrow {
+	cursor: pointer;
 }
 
 /*------------------------------ Styles for UI-Kit ----------------------------------------*/
@@ -169,6 +173,11 @@ h3 {
 }
 .ui-form-blocks-2 {
 	max-width: 1157px;
+	margin-bottom: 138px;
+}
+.ui-form-blocks-3 {
+	max-width: 1158px;
+	margin-bottom: 200px;
 }
 .ui-form-block {
 	width: 100%;
@@ -247,37 +256,37 @@ h3 {
 }
 .ui-form-blocks-2 .ui-column {
 	width: 33.3%;
+	&:first-child {
+		& .ui-form-block {
+			&:first-child {
+			}
+		}
+	}
 	&:nth-child(2) {
 		& .ui-form-block {
 			margin-left: 61px;
+		}
+	}
+	&:nth-child(3) {
+		& .ui-form-block {
+			margin-left: 67px;
+			&:nth-child(3) {
+			}
+		}
+	}
+}
+.ui-form-blocks-3 .ui-column {
+	width: 33.3%;
+	&:nth-child(2) {
+		& .ui-form-block {
+				margin-left: 61px;
 			&:first-child {
-				
-				h3 {
-					
-				}
+
 			}
 			&:nth-child(2) {
-				
-				h3 {
-					
-				}
+
 			}
 			&:nth-child(3) {
-				h3 {
-					
-				}
-				
-			}
-			&:nth-child(4) {
-				h3 {
-					
-				}
-				
-			}
-			&:nth-child(5) {
-				h3 {
-					
-				}
 			}
 		}
 	}
@@ -285,26 +294,13 @@ h3 {
 		& .ui-form-block {
 			margin-left: 67px;
 			&:first-child {
-				
-				h3 {
-					
-				}
-			}
-			&:nth-child(2) {
-				margin-bottom: 11px;
-				h3 {
-					
-				}
-			}
-			&:nth-child(3) {
-				h3 {
-					
+				& h3 {
+					line-height: 43px;
 				}
 			}
 		}
 	}
 }
-
 .ui-label {
 	& .input, .select {
 		margin-bottom: 21px;	
@@ -809,11 +805,13 @@ h3 {
 	font-family: "Montserrat-regular";
 	font-style: normal;
 	font-weight: bold;
-	color: $purple;
 	font-size: 12px;
 	cursor: pointer;
 }
-.ui-link_state_not-active {
+.link_color_bright {
+	color: $purple;
+}
+.link_color_grey {
 	color: $c50;
 }
 
@@ -857,7 +855,6 @@ h3 {
 	color: #fff;
 	text-align: center;
 	vertical-align: middle;
-	cursor: pointer;
 	& .material-icons {
 		color: #fff;
 		margin-top: 8px;
@@ -867,39 +864,53 @@ h3 {
 	margin: 7px 0 0 7px;
 }
 .dropdown__field {
-	width: 266px;
 	height: 44px;
 	border: 1px solid $c25;
 	box-sizing: border-box;
 	position: relative;
 	padding: 8px 13px;
-	border-top-right-radius: 2px;
-	border-top-left-radius: 2px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
 	transition: .4s;
+}
+.dropdown_size_middle {
+	& .dropdown__field {
+		width: 266px;
+	}
+	& ul {
+		width: 264px;
+	}
+}
+.dropdown_size_big {
+	& .dropdown__field {
+		width: 320px;
+	}
+	& ul {
+		width: 318px;
+	}
 }
 .dropdown__arrow {
 	position: absolute;
 	top: 9px;
 	right: 10px;
-	cursor: pointer;
 }
 .dropdown {
+	position: relative;
 	& h3 {
 		margin-bottom: 5px;
 	}
-	& ul {
-		position: absolute;
-		top: 42px;
-		left: -1px;
-		width: 264px;
-		border: 1px solid $c50;
-		border-bottom-right-radius: 2px;
-		border-bottom-left-radius: 2px;
-		display: none;
-		box-shadow: 0px 2px 10px rgba(31, 32, 65, 0.05);
-		z-index: 1;
-		background-color: #fff;
-	}
+}
+.dropdown-ul-wrap {
+	position: absolute;
+	top: 63px;
+	left: 0px;
+	border: 1px solid $c50;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	display: none;
+	box-shadow: 0px 2px 10px rgba(31, 32, 65, 0.05);
+	z-index: 1;
+	background-color: #fff;
 	& li {
     display: block;
     padding: 6px 7px 0px 13px;
@@ -936,12 +947,6 @@ h3 {
 	font-family: "Montserrat-Regular";
 	cursor: pointer;
 }
-.dropdown__button_minus {
-
-}
-.dropdown__button_plus {
-
-}
 .dropdown__button_not-active {
 	opacity: .5;
 }
@@ -956,10 +961,84 @@ h3 {
 		border-color: $c50;
 		transition: .4s;
 	}
-	ul {
+	& .dropdown-ul-wrap {
 		display: block;
 	}
 }
-.dropdown li span {
-
+.checkbox-list {
+	position: relative;
+	width: 266px;
+	height: 44px;
+	margin-bottom: 20px;
+	& ul {
+		display: none;
+		background-color: #fff;
+	}
+	& h3 {
+		line-height: 44px;
+		margin-bottom: 3px;
+	}
+}
+.checkbox-list__arrow {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.checkbox-list_state_open {
+	& ul {
+		display: block;
+	}
+	& .material-icons {
+		transform: scale(1, -1);
+		transition: .2s;
+	}
+}
+.dropdown__link_apply {
+	display: inline-block;
+	float: right;
+	padding: 9px 7px 7px 0px;	
+}
+.dropdown__link_clear {
+	display: inline-block;
+	float: left;
+	padding: 9px 7px 0px 14px;	
+}
+.rich-checkbox-list {
+	& h3 {
+		line-height: 44px;
+		margin-bottom: 1px;
+	}
+	& .checkbox__text {
+		font-size: 14px;
+		color: $c75;
+		font-family: "Montserrat-Bold";
+		margin-bottom: 5px;
+	}
+	& p {
+		font-size: 12px;
+		line-height: 14px;
+		color: $c75;
+		margin-left: 30px;
+		max-width: 230px;
+	}
+	& li {
+		margin-bottom: 9px;
+	}
+}
+.bullet-list {
+	& li {
+		margin-bottom: 10px;
+		padding-left: 21px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			left: 0px;
+			top: 6px;
+			background-color: $c25;
+			border-radius: 100px;
+		}
+	}
 }

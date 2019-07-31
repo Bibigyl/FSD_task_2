@@ -53,8 +53,7 @@ $('#slider-range').slider({
 //----------------------------- Dropdown -------------------------------------
 
 $(".dropdown__arrow").on("click", function() {
-	$(this).parent().children("ul").slideToggle(300, "linear").parent().parent().toggleClass("dropdown_state_open");
-
+	$(this).parent().parent().children(".dropdown-ul-wrap").slideToggle(300, "linear").parent().toggleClass("dropdown_state_open");
 });
 
 $(".dropdown__button").on("click", function() {
@@ -79,7 +78,18 @@ $(".dropdown__button").on("click", function() {
 	}
 });
 
+//----------------------------- Checkbox-list -------------------------------------
+
+$(".checkbox-list__arrow").on("click", function() {
+	$(this).parent().children("ul").slideToggle(300, "linear").parent().toggleClass("checkbox-list_state_open");
 });
+
+
+
+
+});
+
+
 
 //---------------------------Pagination -------------------------------
 
