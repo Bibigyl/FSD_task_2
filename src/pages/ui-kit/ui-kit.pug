@@ -241,7 +241,7 @@ html(lang="ru")
 					div(class="ui-form-block")
 						div(class="ui-dropdown dropdown dropdown_size_middle  dropdown_choice_furniture")
 							h3 Dropdown
-							div(class="dropdown__field") 2 спальни, 2 кровати...
+							div(class="dropdown__field") <span>2 спальни, 2 кровати...</span>
 								div(class="dropdown__arrow arrow")
 									i(class="material-icons") expand_more
 								span(class="ui-field-state") Default
@@ -265,7 +265,7 @@ html(lang="ru")
 
 						div(class="ui-dropdown dropdown dropdown_size_middle  dropdown_choice_furniture dropdown_state_open")
 							h3 Dropdown
-							div(class="dropdown__field") 2 спальни, 2 кровати...
+							div(class="dropdown__field") <span>2 спальни, 2 кровати...</span>
 								div(class="dropdown__arrow arrow")
 									i(class="material-icons") expand_more
 								span(class="ui-field-state") Expanded
@@ -273,7 +273,7 @@ html(lang="ru")
 								ul
 									li 
 										span(class="dropdown__button dropdown__button_plus") +
-										span(class="dropdown__num") 2
+										span(class="dropdown__num") 3
 										span(class="dropdown__button dropdown__button_minus") -
 										|Спальни
 									li 
@@ -290,9 +290,9 @@ html(lang="ru")
 
 				div(class="ui-column")
 					div(class="ui-form-block")
-						div(class="ui-dropdown dropdown dropdown_size_big  dropdown_choice_furniture dropdown_state_open")
+						div(class="ui-dropdown dropdown dropdown_size_big  dropdown_choice_guests dropdown_state_open")
 							h3 Dropdown
-							div(class="dropdown__field") Сколько гостей
+							div(class="dropdown__field") <span>Сколько гостей</span>
 								div(class="dropdown__arrow arrow")
 									i(class="material-icons") expand_more
 							div(class="dropdown-ul-wrap")
@@ -300,12 +300,12 @@ html(lang="ru")
 									li 
 										span(class="dropdown__button dropdown__button_plus") +
 										span(class="dropdown__num") 0
-										span(class="dropdown__button dropdown__button_minus") -
+										span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
 										|Взрослые
 									li 
 										span(class="dropdown__button dropdown__button_plus") +
 										span(class="dropdown__num") 0
-										span(class="dropdown__button dropdown__button_minus") -
+										span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
 										|Дети
 									li 
 										span(class="dropdown__button dropdown__button_plus") +
@@ -318,21 +318,21 @@ html(lang="ru")
 
 				div(class="ui-column")
 					div(class="ui-form-block")
-						div(class="ui-dropdown dropdown dropdown_size_big  dropdown_choice_furniture dropdown_state_open")
+						div(class="ui-dropdown dropdown dropdown_size_big  dropdown_choice_guests dropdown_state_open")
 							h3 Dropdown
-							div(class="dropdown__field") Сколько гостей
+							div(class="dropdown__field") <span>3 гостя</span>
 								div(class="dropdown__arrow arrow")
 									i(class="material-icons") expand_more
 							div(class="dropdown-ul-wrap")
 								ul
 									li 
 										span(class="dropdown__button dropdown__button_plus") +
-										span(class="dropdown__num") 0
+										span(class="dropdown__num") 2
 										span(class="dropdown__button dropdown__button_minus") -
 										|Взрослые
 									li 
 										span(class="dropdown__button dropdown__button_plus") +
-										span(class="dropdown__num") 0
+										span(class="dropdown__num") 1
 										span(class="dropdown__button dropdown__button_minus") -
 										|Дети
 									li 
@@ -446,16 +446,31 @@ html(lang="ru")
 							li Без вечеринок и мероприятий
 							li Время прибытия — после 13:00,</br>а выезд до 12:00
 
-			container(class="ui-container ui-form-blocks-3")
+			container(class="ui-container ui-form-blocks-4")
 				div(class="ui-column")
 					div(class="ui-form-block")
 						ul(class="advantages")
 							li
-								i(class="material-icons") insert_emoticon
-								span(class="title") Комфорт
+								i(class="material-icons advantage__icon") insert_emoticon
+								span(class="advantage__title") Комфорт
 								span Шумопоглащаюшие стены
-
-
+						ul(class="advantages")
+							li
+								i(class="material-icons advantage__icon") location_city
+								span(class="advantage__title") Удобство
+								span Окно в каждой из спален
+				div(class="ui-column")
+					div(class="ui-form-block")
+						div(class="review ui-review")
+							div(class="review__avatar ui-review__avatar"  style="background-image: url('src/images/avatar.png');")
+							div(class="like-button-wrap review__like-button")
+								label(class="label ui-label label_type_like-button")
+									input(class="input_type_like-button" type="checkbox" checked)
+									div(class="like-button__text") 12
+										div(class="material-icons") favorite
+							span(class="review__name") Мурад Сарафанов
+							span 5 дней назад
+							p(class="review__text") Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 
 
 

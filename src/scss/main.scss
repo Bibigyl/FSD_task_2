@@ -58,7 +58,6 @@ h3 {
 .material-icons {
 	font-size: 24px;
 	color: $c75;
-	transition: .2s;
 }
 .hidden {
 	display: none!important;
@@ -177,7 +176,10 @@ h3 {
 }
 .ui-form-blocks-3 {
 	max-width: 1158px;
-	margin-bottom: 200px;
+	margin-bottom: 201px;
+}
+.ui-form-blocks-4 {
+	max-width: 1300px;
 }
 .ui-form-block {
 	width: 100%;
@@ -301,6 +303,25 @@ h3 {
 		}
 	}
 }
+.ui-form-blocks-4 .ui-column {
+
+	&:first-child {
+		width: 33.3%;
+		& .ui-form-block {
+			margin-left: 71px;
+			&:first-child {
+
+			}
+		}
+	}
+	&:nth-child(2) {
+		width: 66.6%;
+
+		& .ui-form-block {
+			margin-left: 84px;
+		}
+	}
+}	
 .ui-label {
 	& .input, .select {
 		margin-bottom: 21px;	
@@ -378,7 +399,7 @@ h3 {
 		// add later
 	}
 	&:not(:checked), &:checked {
-		padding-bottom: 5px;
+		padding-bottom: 1px;
 		padding-left: 14px;
 	}
 }
@@ -983,6 +1004,9 @@ h3 {
 	position: absolute;
 	top: 10px;
 	right: 10px;
+	& .material-icons {
+		transition: .2s;
+	}
 }
 .checkbox-list_state_open {
 	& ul {
@@ -1041,4 +1065,68 @@ h3 {
 			border-radius: 100px;
 		}
 	}
+}
+.advantages {
+	position: relative;
+	margin-bottom: 41px;
+	& span {
+		margin-left: 58px;
+	}
+	&:after {
+		position: absolute;
+		content: '';
+		width: 280px;
+		border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+		top: 69px;
+	}
+}
+.advantage__icon {
+	position: absolute;
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 48px;
+	line-height: 41px;
+	top: 5px;
+}
+.advantage__title {
+	font-family: "Montserrat-Bold";
+	display: block;
+}
+.review {
+	position: relative;
+	& > span,
+	& > p {
+		margin-left: 58px;
+		display: block;
+	}
+}
+.review__avatar {
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	left: 1px;
+	top: 1px;
+	border: 2px solid #FFFFFF;
+	box-sizing: border-box;
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+	border-radius: 32px;
+}
+.ui-review__avatar {
+	background-position: -22px -12px;
+}
+.review__like-button {
+	position: absolute;
+	top: 60px;
+	left: 5px;
+}
+.review__name {
+	font-family: "Montserrat-Bold";
+	margin-top: 10px;
+}
+.review__text {
+	margin-top: 10px;
+}
+.ui-review {
+	max-width: 712px;
 }
