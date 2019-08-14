@@ -232,7 +232,7 @@ $(".dropdown__link_clear").on("click", function() {
 		$liArr.eq(i).children(".dropdown__button_minus").addClass("dropdown__button_not-active");	
 	}
 
-	$ulNode.parent().parent().children(".dropdown__field").text("Сколько гостей")
+	$ulNode.parent().parent().find(".dropdown__field span").text("Сколько гостей")
 	$(this).addClass("hidden");
 });
 

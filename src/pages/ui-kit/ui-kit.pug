@@ -94,27 +94,28 @@ html(lang="ru")
 							input(class="input input_size_big input_masked_date" placeholder="ДД/ММ/ГГГГ")
 							span(class="ui-field-state") Default
 
-					div(class="ui-form-block ui-form-block_inline")
-						label(class="label ui-label")
-							h3 Date dropdown
-							select(class="select select_size_small")
-								option(value="" disabled selected hidden) ДД.ММ.ГГГГ
-								option 1
-								option 2
-								option 3
-								option 4
-							div(class="select__arrow arrow")
-								i(class="material-icons") expand_more
-						label(class="label ui-label")
-							h3 Date dropdown
-							select(class="select select_size_small")
-								option(value="" disabled selected hidden) 19.08.2019
-								option 1
-								option 2
-								option 3
-								option 4
-							div(class="select__arrow arrow")
-								i(class="material-icons") expand_more
+					div(class="ui-form-block")
+						div(class="date-search")
+							label(class="label ui-label")
+								h3 Date dropdown
+								select(class="select select_size_small")
+									option(value="" disabled selected hidden) ДД.ММ.ГГГГ
+									option 1
+									option 2
+									option 3
+									option 4
+								div(class="select__arrow arrow")
+									i(class="material-icons") expand_more
+							label(class="label ui-label")
+								h3 Date dropdown
+								select(class="select select_size_small")
+									option(value="" disabled selected hidden) 19.08.2019
+									option 1
+									option 2
+									option 3
+									option 4
+								div(class="select__arrow arrow")
+									i(class="material-icons") expand_more
 
 					div(class="ui-form-block")
 						label(class="label ui-label")
@@ -472,10 +473,204 @@ html(lang="ru")
 							span 5 дней назад
 							p(class="review__text") Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 
+		section(class="ui-section ui-section_grey cards")
+			div(class="ui-logo")
+				include ../../common.blocks/logo/ui-logo.pug
+			container(class="ui-container")
+				div(class="ui-card card search-card")
+					h1 Найдём номера под ваши пожелания
+					div(class="date-search")
+						label(class="label ui-label")
+							h3 Прибытие
+							select(class="select select_size_small")
+								option(value="" disabled selected hidden) ДД.ММ.ГГГГ
+								option 1
+								option 2
+								option 3
+								option 4
+							div(class="select__arrow arrow")
+								i(class="material-icons") expand_more
+						label(class="label")
+							h3 Выезд
+							select(class="select select_size_small")
+								option(value="" disabled selected hidden) ДД.ММ.ГГГГ
+								option 1
+								option 2
+								option 3
+								option 4
+							div(class="select__arrow arrow")
+								i(class="material-icons") expand_more
+
+					div(class="dropdown dropdown_size_big  dropdown_choice_guests")
+						h3 Гости
+						div(class="dropdown__field") <span>Сколько гостей</span>
+							div(class="dropdown__arrow arrow")
+								i(class="material-icons") expand_more
+						div(class="dropdown-ul-wrap")
+							ul
+								li 
+									span(class="dropdown__button dropdown__button_plus") +
+									span(class="dropdown__num") 0
+									span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+									|Взрослые
+								li 
+									span(class="dropdown__button dropdown__button_plus") +
+									span(class="dropdown__num") 0
+									span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+									|Дети
+								li 
+									span(class="dropdown__button dropdown__button_plus") +
+									span(class="dropdown__num") 0
+									span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+									|Младенцы
+							a(class="link dropdown__link_clear link_color_grey hidden") Очистить
+							a(class="link dropdown__link_apply link_color_bright") Применить
+					div(class=" button button_color_filled button_size_big") Подобрать номер
+						div(class="button__arrow arrow")
+							i(class="material-icons") arrow_forward
+
+				div(class="ui-card card check-in-card")
+					h1 Регистрация аккаунта
+
+					label(class="label")
+						input(class="input input_size_big" placeholder="Имя" type="text" name="name")
+					label(class="label")
+						input(class="input input_size_big" placeholder="Фамилия" type="text" name="surname")
+
+					label(class="label label_type_radio")
+						input(class="input_type_radio" type="radio" name="gender" value="man" checked)
+						div(class="radio__text") Мужчина
+					label(class="label ui-label label_type_radio")
+						input(class="input_type_radio" type="radio" name="gender" value="woman")
+						div(class="radio__text") Женщина
+
+					label(class="label")
+						h3 Дата рождения
+						input(class="input input_size_big input_masked_date" name="birthday" placeholder="ДД.ММ.ГГГГ")
+
+					h3 Данные для входа в сервис
+					label(class="label")
+						input(class="input input_size_big" name="email" placeholder="Email")
+					label(class="label")
+						input(class="input input_size_big" name="password" placeholder="Пароль")
+
+					label(class="label ui-label label_type_toggle")
+						input(class="input_type_toggle" type="checkbox" name="promotions")
+						div(class="toggle__text") Получать спецпредложения
+
+					div(class="button button_color_filled button_size_big") Перейти к оплате
+						div(class="button__arrow arrow")
+							i(class="material-icons") arrow_forward
+
+					div(class="card__information")
+						span Уже есть аккаунт на Toxin
+						div(class="button-wrap button_size_middle")
+							button(class="ui-button button button_color_empty") Войти
+
+
+				div(class="ui-card card booking-card")
+					div(class="booking-card__room")
+						h2 №<span class="room__number">888</span>
+						a(class="link link_color_bright") люкс
+					div(class="booking-card__price-per-day")
+						h3 <span>9 990</span>₽
+						span в сутки
+					div(class="date-search clearfix")
+						label(class="label ui-label")
+							h3 Прибытие
+							select(class="select select_size_small")
+								option(value="" disabled selected hidden) 19.08.2019
+								option 1
+								option 2
+								option 3
+								option 4
+							div(class="select__arrow arrow")
+								i(class="material-icons") expand_more
+						label(class="label")
+							h3 Выезд
+							select(class="select select_size_small")
+								option(value="" disabled selected hidden) 23.08.2019
+								option 1
+								option 2
+								option 3
+								option 4
+							div(class="select__arrow arrow")
+								i(class="material-icons") expand_more
+
+					div(class="dropdown dropdown_size_big  dropdown_choice_guests")
+						h3 Гости
+						div(class="dropdown__field") <span>3 гостя</span>
+							div(class="dropdown__arrow arrow")
+								i(class="material-icons") expand_more
+						div(class="dropdown-ul-wrap")
+							ul
+								li 
+									span(class="dropdown__button dropdown__button_plus") +
+									span(class="dropdown__num") 0
+									span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+									|Взрослые
+								li 
+									span(class="dropdown__button dropdown__button_plus") +
+									span(class="dropdown__num") 0
+									span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+									|Дети
+								li 
+									span(class="dropdown__button dropdown__button_plus") +
+									span(class="dropdown__num") 0
+									span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+									|Младенцы
+							a(class="link dropdown__link_clear link_color_grey hidden") Очистить
+							a(class="link dropdown__link_apply link_color_bright") Применить
+
+					div(class="booking-info-wrap")
+						div(class="booking-card__booking-info clearfix")
+							span(class="booking-info__text") <span class="booking-info__price-per-day">9 990</span>₽ х <span class="booking-info__days-number">4</span> суток
+							span(class="booking-info__price") <span>39 960</span>₽
+
+						div(class="booking-card__booking-info clearfix")
+							span(class="booking-info__text") Сбор за услуги: скидка <span class="booking-info__discount">2 179</span>₽
+							span(class="booking-info__price") <span>0</span>₽
+							div(class="booking-info__icon") i
+
+						div(class="booking-card__booking-info clearfix")
+							span(class="booking-info__text") Сбор за дополнительные услуги
+							span(class="booking-info__price") <span>300</span>₽
+							div(class="booking-info__icon") i
+
+					div(class="booking-card__total clearfix")
+						h2 Итого
+						//- div(class="total__line")
+						h2(class="total__price") <span>38 081</span>₽
+
+					div(class="button button_color_filled button_size_big") Забронировать
+						div(class="button__arrow arrow")
+							i(class="material-icons") arrow_forward
+
+				div(class="ui-card card login-card")
+					h1 Войти
+
+					label(class="label")
+						input(class="input input_size_big" name="email" placeholder="Email")
+					label(class="label")
+						input(class="input input_size_big" name="password" placeholder="Пароль")
+
+					div(class="ui-button button button_color_filled button_size_big") Войти
+						div(class="button__arrow arrow")
+							i(class="material-icons") arrow_forward
+
+					div(class="card__information")
+						span Нет аккаунта на Toxin?
+						div(class="button-wrap button_size_middle")
+							button(class="ui-button button button_color_empty") Создать
 
 
 
 
+
+
+
+				div(class="c5 c")
+				div(class="c6 c")
 
 
 		script(src="ui-kit.js")
