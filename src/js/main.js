@@ -1,7 +1,14 @@
 //--------------- import libs -----------------------------
 
+// import $ from 'jquery';
 import "../libs/jquery.maskedinput/jquery.maskedinput.min.js";
 import "../libs/jquery-ui-1.12.1.custom/jquery-ui.min.js";
+import "../libs/daterangepicker-master/moment.min.js";
+import "../libs/daterangepicker-master/daterangepicker.js";
+import "../libs/jquery.daterangepicker/jquery.daterangepicker.js";
+
+ var moment = require('moment');
+ moment().format();
 
 // ------------------ temmp -----------------------------
 
@@ -242,14 +249,56 @@ $(".checkbox-list__arrow").on("click", function() {
 	$(this).parent().children("ul").slideToggle(300, "linear").parent().toggleClass("checkbox-list_state_open");
 });
 
+//------------------------------- Calendar -----------------------------------------
 
+
+
+$('#date-search').dateRangePicker({
+	language: 'ru',
+	singleMonth: true,
+	showShortcuts: false,
+	showTopbar: true,
+	startOfWeek: 'monday',
+	getValue: function()
+	{
+		if ($('#first-date').val() && $('#last-date').val() )
+			return $('#first-date').val() + ' to ' + $('#last-date').val();
+		else
+			return '';
+	},
+	setValue: function(s,s1,s2)
+	{
+		$('#first-date').val(s1);
+		$('#last-date').val(s2);
+	},
+  customArrowPrevSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_back</i></div>',
+  customArrowNextSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_forward</i></div>',
+
+});
+
+
+$('#ui-search-date').dateRangePicker({
+	language: 'ru',
+	singleMonth: true,
+	showShortcuts: false,
+	showTopbar: false,
+	startOfWeek: 'monday',
+	hoveringTooltip: false,
+
+  customArrowPrevSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_back</i></div>',
+  customArrowNextSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_forward</i></div>',
+
+	inline: true,
+	container: '#ui-calendar-card',
+	alwaysOpen: true,
+});
 
 
 });
 
 
 
-//---------------------------Pagination -------------------------------
+//---------------------------Pagintaion -------------------------------
 
 var totalElements = 300; // elements to show on the page
 var perPage = 20; // how many elements need to show per page

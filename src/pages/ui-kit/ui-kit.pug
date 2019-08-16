@@ -95,26 +95,16 @@ html(lang="ru")
 							span(class="ui-field-state") Default
 
 					div(class="ui-form-block")
-						div(class="date-search")
+						div(class="date-search" id="date-search" )
 							label(class="label ui-label")
 								h3 Date dropdown
-								select(class="select select_size_small")
-									option(value="" disabled selected hidden) ДД.ММ.ГГГГ
-									option 1
-									option 2
-									option 3
-									option 4
-								div(class="select__arrow arrow")
+								input(class="input input_size_small" id="first-date")
+								div(class="input__arrow arrow")
 									i(class="material-icons") expand_more
 							label(class="label ui-label")
 								h3 Date dropdown
-								select(class="select select_size_small")
-									option(value="" disabled selected hidden) 19.08.2019
-									option 1
-									option 2
-									option 3
-									option 4
-								div(class="select__arrow arrow")
+								input(class="input input_size_small" id="last-date")
+								div(class="input__arrow arrow")
 									i(class="material-icons") expand_more
 
 					div(class="ui-form-block")
@@ -664,12 +654,10 @@ html(lang="ru")
 							button(class="ui-button button button_color_empty") Создать
 
 
+				div(class="ui-card card calendar-card" id="ui-calendar-card")
+					input(id="ui-search-date")
 
 
-
-
-
-				div(class="c5 c")
 				div(class="c6 c")
 
 

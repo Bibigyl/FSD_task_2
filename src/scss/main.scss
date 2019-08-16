@@ -7,6 +7,7 @@
 @import '~material-design-icons/iconfont/material-icons.css';
 @import '../libs/jquery-ui-1.12.1.custom/jquery-ui.min.css';
 
+
 /*------------------------------ Common styles ----------------------------------------*/
 
 /*------- Add fonts ------------*/
@@ -29,6 +30,8 @@ $c25: rgba(31, 32, 65, 0.25);
 $c5: rgba(31, 32, 65, 0.05);
 $purple: #BC9CFF;
 $green: #6FCF97;
+
+@import '../libs/jquery.daterangepicker/daterangepicker.scss';
 
 body {
 	font-family: "Montserrat-Regular", sans-serif;
@@ -209,15 +212,16 @@ h3 {
 	&:first-child {
 		margin-right: 20px;
 	}
-	& .select__arrow {
+	& .input__arrow {
 		top: 30px;
+		pointer-events: none;
+	}
+	& .input {
+		cursor: pointer;
 	}
 }
 .date-search {
 	display: flex;
-	// & .select {
-	// 	width: 150px;
-	// }
 }
 .ui-form-blocks-1 .ui-column {
 	width: 33.3%;
@@ -404,7 +408,7 @@ h3 {
 	width: 100%;	
 	max-width: 266px;	
 }
-.select_size_small {
+.input_size_small {
 	width: 150px;
 }
 .select {
@@ -1359,4 +1363,19 @@ h3 {
 	& input[name="password"] {
 		margin-bottom: 20px;
 	}
+}
+#ui-search-date {
+	display: none;
+}
+.calendar-card {
+	padding: 3px 3px;
+	text-align: center;
+}
+.calendar-card {
+	width: 320px;
+	& .week-name table th {
+
+		
+	}
+
 }

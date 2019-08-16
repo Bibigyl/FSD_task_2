@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const autoprefixer = require('autoprefixer');
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 const PATHS = {
 	src: path.join(__dirname,'src'),
 	dist: path.join(__dirname, 'dist')
@@ -66,6 +67,12 @@ module.exports = {
 			}
 		]
 	},
+  resolve: {
+    alias: {
+    	//locale problem: https://github.com/moment/moment/issues/2979
+      moment$: 'moment/moment.js',
+    }
+  },
 	plugins: [ 
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
@@ -100,7 +107,12 @@ module.exports = {
 			$: 'jquery',
 			jQuery: 'jquery',
 			'window.jQuery': 'jquery'
-		})
+		}),
+    new MomentLocalesPlugin({
+        localesToKeep: ['es-us', 'ru'],
+    }),
+    //locale problem: https://github.com/moment/moment/issues/2979
+    new webpack.ContextReplacementPlugin(/\.\/locale$/, 'empty-module', false, /js$/)
 	],
 	devServer: {
 		stats: 'errors-only'
