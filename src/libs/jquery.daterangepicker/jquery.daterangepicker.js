@@ -1184,6 +1184,7 @@
                 opt.start = false;
                 opt.end = false;
                 box.find('.day.checked').removeClass('checked');
+                box.find('.day.checked').parent().removeClass('td-checked');
                 opt.setValue.call(selfDom, valueName);
                 checkSelectionValid();
                 showSelectedInfo(true);
@@ -1438,8 +1439,11 @@
             opt.start = false;
             opt.end = false;
             box.find('.day.checked').removeClass('checked');
+            box.find('.day.checked').parent().removeClass('td-checked');
             box.find('.day.last-date-selected').removeClass('last-date-selected');
+            box.find('.day.last-date-selected').parent().removeClass('td-last-date-selected');
             box.find('.day.first-date-selected').removeClass('first-date-selected');
+            box.find('.day.first-date-selected').parent().removeClass('td-first-date-selected');
             opt.setValue.call(selfDom, '');
             checkSelectionValid();
             showSelectedInfo();
@@ -1479,6 +1483,7 @@
             if (day.hasClass('invalid')) return;
             var time = day.attr('time');
             day.addClass('checked');
+            day.parent().addClass('td-checked');
             if (opt.singleDate) {
                 opt.start = time;
                 opt.end = false;
@@ -1633,7 +1638,7 @@
                 if (opt.singleDate) {
                     box.find('.day.hovering').removeClass('hovering');
                     day.addClass('hovering');
-                    day.parent().addClass('hovering-th');
+                    day.parent().addClass('td-hovering');
                 } else {
                     box.find('.day').each(function() {
                         var time = parseInt($(this).attr('time')),
@@ -1642,9 +1647,10 @@
 
                         if (time == hoverTime) {
                             $(this).addClass('hovering');
-                            $(this).addClass('hovering-th')
+                            $(this).parent().addClass('td-hovering');
                         } else {
                             $(this).removeClass('hovering');
+                            $(this).parent().removeClass('td-hovering');
                         }
 
                         if (
@@ -1655,8 +1661,10 @@
                             )
                         ) {
                             $(this).addClass('hovering');
+                            $(this).parent().addClass('td-hovering');
                         } else {
                             $(this).removeClass('hovering');
+                            $(this).parent().removeClass('td-hovering');
                         }
                     });
 
@@ -1764,11 +1772,13 @@
                 opt.start = false;
                 opt.end = false;
                 box.find('.day').removeClass('checked');
+                box.find('.day').parent().removeClass('td-checked');
                 box.find('.drp_top-bar').removeClass('normal').addClass('error').find('.error-top').html(translate('less-than').replace('%d', opt.maxDays));
             } else if (opt.minDays && days < opt.minDays) {
                 opt.start = false;
                 opt.end = false;
                 box.find('.day').removeClass('checked');
+                box.find('.day').parent().removeClass('td-checked');
                 box.find('.drp_top-bar').removeClass('normal').addClass('error').find('.error-top').html(translate('more-than').replace('%d', opt.minDays));
             } else {
                 if (opt.start || opt.end)
@@ -1791,6 +1801,7 @@
                     opt.start = false;
                     opt.end = false;
                     box.find('.day').removeClass('checked');
+                    box.find('.day').parent().removeClass('td-checked');
                 }
             }
         }
@@ -1939,21 +1950,27 @@
                     (opt.start && !opt.end && moment(start).format('YYYY-MM-DD') == moment(time).format('YYYY-MM-DD'))
                 ) {
                     $(this).addClass('checked');
+                    $(this).parent().addClass('td-checked');
                 } else {
                     $(this).removeClass('checked');
+                    $(this).parent().removeClass('td-checked');
                 }
 
                 //add first-date-selected class name to the first date selected
                 if (opt.start && moment(start).format('YYYY-MM-DD') == moment(time).format('YYYY-MM-DD')) {
                     $(this).addClass('first-date-selected');
+                    $(this).parent().addClass('td-first-date-selected');
                 } else {
                     $(this).removeClass('first-date-selected');
+                    $(this).parent().removeClass('td-first-date-selected');
                 }
                 //add last-date-selected
                 if (opt.end && moment(end).format('YYYY-MM-DD') == moment(time).format('YYYY-MM-DD')) {
                     $(this).addClass('last-date-selected');
+                    $(this).parent().addClass('td-last-date-selected');
                 } else {
                     $(this).removeClass('last-date-selected');
+                    $(this).parent().removeClass('td-last-date-selected');
                 }
             });
 
@@ -2607,6 +2624,3 @@
     };
 }));
 
-$(".month-wrapper .day").on("hover", function() {
-
-});

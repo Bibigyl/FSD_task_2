@@ -45,10 +45,6 @@
     color: #666;
     font-weight: 700;
   }
-  a {
-    color: rgb(107, 180, 214);
-    text-decoration: underline;
-  }
   .month-name {
     font-family: "Quicksand-Bold", sans-serif;
     color: $c100;
@@ -95,6 +91,7 @@
     opacity: 0.01;
   }
   .month-wrapper {
+    margin-bottom: 9px;
     padding: 5px;
     cursor: default;
     position: relative;
@@ -115,6 +112,40 @@
         width: 40px;
         height: 40px;
       }
+      .td-hovering, .td-checked {
+        background-color: rgba($purple, .25);
+        &.td-first-date-selected {
+          background-image:  linear-gradient(90deg, #fff, #fff 20px, lighten($purple, 15%) 0);
+        }
+        &.td-last-date-selected {
+          background-image:  linear-gradient(-90deg, #fff, #fff 20px, lighten($purple, 15%) 0);
+        }
+        &.td-first-date-selected.td-last-date-selected {
+          background: none;
+        }
+        &.td-first-day-selected-temp {
+          background-color: rgba($purple, .25) !important;
+          background-image: none;
+        }
+      }
+      // .td-hovering-forward {
+      //   background-image:  linear-gradient(-90deg, #fff, #fff 20px, lighten($purple, 15%) 0) !important;
+      // }
+      // .td-hovering-back {
+      //   background-image:  linear-gradient(90deg, #fff, #fff 20px, lighten($purple, 15%) 0) !important;
+      // }
+      // .td-selected-first {
+      //   background-image:  linear-gradient(90deg, #fff, #fff 20px, lighten($purple, 15%) 0) !important;
+      //   &:hover {
+      //     background: none !important;
+      //   }
+      // }
+      // .td-selected-last {
+      //   background-image:  linear-gradient(-90deg, #fff, #fff 20px, lighten($purple, 15%) 0) !important;
+      //   &:hover {
+      //     background: none !important;
+      //   }
+      // }
       .day {
         height: 100%;
         line-height: 40px;
@@ -123,12 +154,12 @@
       }
       div.day {
         &.lastMonth, &.nextMonth {
-          color: #999;
+          color: $c25;
           cursor: default;
         }
       }
       .day.checked {
-        background-color: rgb(156, 219, 247);
+        //background-color: rgb(156, 219, 247);
       }
       .week-name {
         height: 30px;
@@ -159,24 +190,25 @@
         cursor: pointer;
       }
       &.hovering {
-        background-color: #cdecfa;
+        //background-color: #cdecfa;
       }
     }
     &.nextMonth, &.lastMonth {
-      display: none;
+      //display: none;
     }
     &.real-today {
       border-radius: 100px;
       font-weight: bold;
       color: #fff;
-      //background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
-      background-image:  linear-gradient(90deg, #fff, #fff 20px, $purple 0);
+      background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
       &.checked, &.hovering {
-        background-color: rgb(112, 204, 213);
+        //background-color: rgb(112, 204, 213);
       }
     }
     &:hover {
-      background: linear-gradient(180deg, rgba(#BC9CFF, .5) 0%, rgba(#8BA4F9, .5) 100%);
+      //background: linear-gradient(180deg, rgba(#BC9CFF, .5) 0%, rgba(#8BA4F9, .5) 100%);
+      //background-color: rgba($purple, .25);
+      background: linear-gradient(180deg, lighten(#BC9CFF, 5%) 0%, lighten(#8BA4F9, 5%) 100%);
     }
   }
   table .caption {

@@ -1367,15 +1367,23 @@ h3 {
 #ui-search-date {
 	display: none;
 }
-.calendar-card {
-	padding: 3px 3px;
-	text-align: center;
+#ui-calendar-card {
+	tbody tr:nth-child(2) td:nth-child(4) .day {
+		background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+		color: #fff;
+		font-weight: bold;
+	}	
 }
 .calendar-card {
+	padding: 3px 3px;
 	width: 320px;
-	& .week-name table th {
-
-		
+}
+.calendar__link-wrap {
+	a:first-child {
+		margin-left: 6px;
 	}
-
+	a:last-child {
+		float: right;
+		margin-right: 6px;
+	}
 }
