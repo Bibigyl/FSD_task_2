@@ -14,7 +14,7 @@ import "../libs/jquery.daterangepicker/jquery.daterangepicker.js";
 
 $( document ).ready(function() {
   
-$(".input_masked_date").mask('99/99/9999',{placeholder:"ДД/ММ/ГГГГ"});
+$(".input_masked_date").mask('99.99.9999',{placeholder:"ДД.ММ.ГГГГ"});
 
 
 
@@ -259,6 +259,7 @@ $('#date-search').dateRangePicker({
 	showShortcuts: false,
 	showTopbar: true,
 	startOfWeek: 'monday',
+	format: 'DD.MM.YYYY',
 	getValue: function()
 	{
 		if ($('#first-date').val() && $('#last-date').val() )
@@ -276,13 +277,61 @@ $('#date-search').dateRangePicker({
 
 });
 
+$('#search-card__date-search').dateRangePicker({
+	language: 'ru',
+	singleMonth: true,
+	showShortcuts: false,
+	showTopbar: true,
+	startOfWeek: 'monday',
+	format: 'DD.MM.YYYY',
+	getValue: function()
+	{
+		if ($('#search-card__first-date').val() && $('#search-card__last-date').val() )
+			return $('#search-card__first-date').val() + ' to ' + $('#search-card__last-date').val();
+		else
+			return '';
+	},
+	setValue: function(s,s1,s2)
+	{
+		$('#search-card__first-date').val(s1);
+		$('#search-card__last-date').val(s2);
+	},
+  customArrowPrevSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_back</i></div>',
+  customArrowNextSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_forward</i></div>',
 
-$('#ui-search-date').dateRangePicker({
+});
+
+$('#booking-card__date-search').dateRangePicker({
+	language: 'ru',
+	singleMonth: true,
+	showShortcuts: false,
+	showTopbar: true,
+	startOfWeek: 'monday',
+	format: 'DD.MM.YYYY',
+	getValue: function()
+	{
+		if ($('#booking-card__first-date').val() && $('#booking-card__last-date').val() )
+			return $('#booking-card__first-date').val() + ' to ' + $('#booking-card__last-date').val();
+		else
+			return '';
+	},
+	setValue: function(s,s1,s2)
+	{
+		$('#booking-card__first-date').val(s1);
+		$('#booking-card__last-date').val(s2);
+	},
+  customArrowPrevSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_back</i></div>',
+  customArrowNextSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_forward</i></div>',
+
+});
+
+$('#ui-calendar').dateRangePicker({
 	language: 'ru',
 	singleMonth: true,
 	showShortcuts: false,
 	showTopbar: false,
 	startOfWeek: 'monday',
+	//format: 'DD.MM.YYYY',
 	hoveringTooltip: false,
 
   customArrowPrevSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_back</i></div>',
@@ -294,11 +343,11 @@ $('#ui-search-date').dateRangePicker({
 	
 });
 
-$('#ui-search-date').data('dateRangePicker').setDateRange('2019-08-19','2019-08-23');
+$('#ui-calendar').data('dateRangePicker').setDateRange('2019-08-19','2019-08-23');
 $('.calendar__link_clear').click(function(evt)
 {
 	evt.stopPropagation();
-	$('#ui-search-date').data('dateRangePicker').clear();
+	$('#ui-calendar').data('dateRangePicker').clear();
 	$(".td-checked").removeClass("td-checked td-first-day-selected-temp")
 });
 

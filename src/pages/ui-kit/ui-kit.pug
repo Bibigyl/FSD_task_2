@@ -98,12 +98,12 @@ html(lang="ru")
 						div(class="date-search" id="date-search" )
 							label(class="label ui-label")
 								h3 Date dropdown
-								input(class="input input_size_small" id="first-date")
+								input(class="input input_size_small calendar" id="first-date")
 								div(class="input__arrow arrow")
 									i(class="material-icons") expand_more
 							label(class="label ui-label")
 								h3 Date dropdown
-								input(class="input input_size_small" id="last-date")
+								input(class="input input_size_small calendar" id="last-date")
 								div(class="input__arrow arrow")
 									i(class="material-icons") expand_more
 
@@ -469,26 +469,16 @@ html(lang="ru")
 			container(class="ui-container")
 				div(class="ui-card card search-card")
 					h1 Найдём номера под ваши пожелания
-					div(class="date-search")
+					div(class="date-search" id="search-card__date-search" )
 						label(class="label ui-label")
-							h3 Прибытие
-							select(class="select select_size_small")
-								option(value="" disabled selected hidden) ДД.ММ.ГГГГ
-								option 1
-								option 2
-								option 3
-								option 4
-							div(class="select__arrow arrow")
+							h3 Date dropdown
+							input(class="input input_masked_date input_size_small" id="search-card__first-date" placeholder="ДД.ММ.ГГГГ")
+							div(class="input__arrow arrow")
 								i(class="material-icons") expand_more
-						label(class="label")
-							h3 Выезд
-							select(class="select select_size_small")
-								option(value="" disabled selected hidden) ДД.ММ.ГГГГ
-								option 1
-								option 2
-								option 3
-								option 4
-							div(class="select__arrow arrow")
+						label(class="label ui-label")
+							h3 Date dropdown
+							input(class="input input_masked_date input_size_small" id="search-card__last-date")
+							div(class="input__arrow arrow")
 								i(class="material-icons") expand_more
 
 					div(class="dropdown dropdown_size_big  dropdown_choice_guests")
@@ -565,26 +555,19 @@ html(lang="ru")
 					div(class="booking-card__price-per-day")
 						h3 <span>9 990</span>₽
 						span в сутки
-					div(class="date-search clearfix")
-						label(class="label ui-label")
-							h3 Прибытие
-							select(class="select select_size_small")
-								option(value="" disabled selected hidden) 19.08.2019
-								option 1
-								option 2
-								option 3
-								option 4
-							div(class="select__arrow arrow")
+					div(class="clearfix")
+					div(class="kate")
+
+					div(class="date-search" id="booking-card__date-search" )
+						label(class="label")
+							h3 Date dropdown
+							input(class="input input_size_small" id="booking-card__first-date")
+							div(class="input__arrow arrow")
 								i(class="material-icons") expand_more
 						label(class="label")
-							h3 Выезд
-							select(class="select select_size_small")
-								option(value="" disabled selected hidden) 23.08.2019
-								option 1
-								option 2
-								option 3
-								option 4
-							div(class="select__arrow arrow")
+							h3 Date dropdown
+							input(class="input input_size_small" id="booking-card__last-date")
+							div(class="input__arrow arrow")
 								i(class="material-icons") expand_more
 
 					div(class="dropdown dropdown_size_big  dropdown_choice_guests")
@@ -655,10 +638,79 @@ html(lang="ru")
 
 
 				div(class="ui-card card calendar-card" id="ui-calendar-card")
-					input(id="ui-search-date")
+					input(id="ui-calendar" class="calendar ui-calendar")
 
 
-				div(class="c6 c")
+				div(class="ui-card card room-card")
+					div(class="room-card__image ui-room-card__image" style="background-image: url('src/images/room1.png')")
+						div(class="room-card__arrow arrow") 
+							i(class="material-icons") expand_more
+						div(class="room-card__arrow arrow") 
+							i(class="material-icons") expand_more
+						div(class="room-card__dots")
+							div(class="room__dot room__dot_active")
+							div(class="room__dot")
+							div(class="room__dot")
+							div(class="room__dot")
+					div(class="room-card__room")
+						h2 №<span class="room__number">888</span>
+						a(class="link link_color_bright") люкс
+					div(class="room-card__price-per-day")
+						h3 <span>9 990</span>₽
+						span в сутки
+					div(class="clearfix room-card__line")
+					div(class="room-card__rating-wrap")
+						div(class="rating room-card__rating")
+							input(class="input_type_rating" name="ui-rating1" value="5" id="ui-rating_51" type="radio" checked)
+							label(class="label label_type_rating material-icons" for="ui-rating_51")
+							input(class="input_type_rating" name="ui-rating1" value="4" id="ui-rating_41" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_41")
+							input(class="input_type_rating" name="ui-rating1" value="3" id="ui-rating_31" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_31")
+							input(class="input_type_rating" name="ui-rating1" value="2" id="ui-rating_21" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_21")
+							input(class="input_type_rating" name="ui-rating1" value="1" id="ui-rating_11" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_11")
+						div(class="room-card__reviews")
+							h3 145
+							span Отзывов
+
+
+				div(class="ui-card card room-card")
+					div(class="room-card__image ui-room-card__image" style="background-image: url('src/images/room2.png')")
+						div(class="room-card__arrow arrow hidden") 
+							i(class="material-icons") expand_more
+						div(class="room-card__arrow arrow hidden") 
+							i(class="material-icons") expand_more
+						div(class="room-card__dots")
+							div(class="room__dot room__dot_active")
+							div(class="room__dot")
+							div(class="room__dot")
+							div(class="room__dot")
+					div(class="room-card__room")
+						h2 №<span class="room__number">840</span>
+						a(class="link link_color_bright hidden") люкс
+					div(class="room-card__price-per-day")
+						h3 <span>9 900</span>₽
+						span в сутки
+					div(class="clearfix room-card__line")
+					div(class="room-card__rating-wrap")
+						div(class="rating room-card__rating")
+							input(class="input_type_rating" name="ui-rating2" value="5" id="ui-rating_52" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_52")
+							input(class="input_type_rating" name="ui-rating2" value="4" id="ui-rating_42" type="radio" checked)
+							label(class="label label_type_rating material-icons" for="ui-rating_42")
+							input(class="input_type_rating" name="ui-rating2" value="3" id="ui-rating_32" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_32")
+							input(class="input_type_rating" name="ui-rating2" value="2" id="ui-rating_22" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_22")
+							input(class="input_type_rating" name="ui-rating2" value="1" id="ui-rating_12" type="radio")
+							label(class="label label_type_rating material-icons" for="ui-rating_12")
+						div(class="room-card__reviews")
+							h3 65
+							span Отзывов
+
+
 
 
 		script(src="ui-kit.js")
