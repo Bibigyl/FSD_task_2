@@ -91,19 +91,19 @@ html(lang="ru")
 							span(class="ui-field-state") Default
 						label(class="label ui-label")
 							h3 Masked text field
-							input(class="input input_size_big input_masked_date" placeholder="ДД/ММ/ГГГГ")
+							input(class="input input_size_big input_masked_date" placeholder="ДД.ММ.ГГГГ")
 							span(class="ui-field-state") Default
 
 					div(class="ui-form-block")
 						div(class="date-search" id="date-search" )
 							label(class="label ui-label")
 								h3 Date dropdown
-								input(class="input input_size_small calendar" id="first-date")
+								input(class="input input_size_small calendar" id="first-date" placeholder="ДД.ММ.ГГГГ")
 								div(class="input__arrow arrow")
 									i(class="material-icons") expand_more
 							label(class="label ui-label")
 								h3 Date dropdown
-								input(class="input input_size_small calendar" id="last-date")
+								input(class="input input_size_small calendar" id="last-date" placeholder="ДД.ММ.ГГГГ")
 								div(class="input__arrow arrow")
 									i(class="material-icons") expand_more
 
@@ -123,8 +123,8 @@ html(lang="ru")
 						label(class="label ui-label")
 							h3 Subscription text field
 							input(class="input input_size_middle" placeholder="Email")
-							div(class="input__arrow arrow")
-								i(class="material-icons") arrow_forward
+							div(class="input__arrow  arrow")
+								i(class="material-icons icons_colored") arrow_forward
 
 				div(class="ui-column")
 					div(class="ui-form-block")
@@ -208,12 +208,12 @@ html(lang="ru")
 					div(class="ui-form-block")
 						h3 Buttons
 						div(class="ui-buttons-wrap")
-							button(class="ui-button button button_color_filled button_size_middle" ) Click me
-							button(class="ui-button button button_color_filled button_size_middle ui-button_state_not-active") Click me
+							div(class="ui-button button button_color_filled button_size_middle" ) Click me
+							div(class="ui-button button button_color_filled button_size_middle ui-button_state_not-active") Click me
 							div(class="button-wrap ui-button-wrap button_size_middle")
-								button(class="ui-button button button_color_empty") Click me
+								div(class="ui-button button button_color_empty") Click me
 							div(class="button-wrap ui-button-wrap ui-button_state_not-active button_size_middle")
-								button(class="ui-button button button_color_empty ") Click me
+								div(class="ui-button button button_color_empty ") Click me
 							a(class="ui-link link link_color_bright") Click me
 							a(class="ui-link link link_color_grey") Click me
 							div(class="ui-button button button_color_filled button_size_big") Перейти к оплате
@@ -470,14 +470,14 @@ html(lang="ru")
 				div(class="ui-card card search-card")
 					h1 Найдём номера под ваши пожелания
 					div(class="date-search" id="search-card__date-search" )
-						label(class="label ui-label")
-							h3 Date dropdown
+						label(class="label")
+							h3 Прибытие
 							input(class="input input_masked_date input_size_small" id="search-card__first-date" placeholder="ДД.ММ.ГГГГ")
 							div(class="input__arrow arrow")
 								i(class="material-icons") expand_more
-						label(class="label ui-label")
-							h3 Date dropdown
-							input(class="input input_masked_date input_size_small" id="search-card__last-date")
+						label(class="label")
+							h3 Выезд
+							input(class="input input_masked_date input_size_small" id="search-card__last-date" placeholder="ДД.ММ.ГГГГ")
 							div(class="input__arrow arrow")
 								i(class="material-icons") expand_more
 
@@ -520,7 +520,7 @@ html(lang="ru")
 					label(class="label label_type_radio")
 						input(class="input_type_radio" type="radio" name="gender" value="man" checked)
 						div(class="radio__text") Мужчина
-					label(class="label ui-label label_type_radio")
+					label(class="label label_type_radio")
 						input(class="input_type_radio" type="radio" name="gender" value="woman")
 						div(class="radio__text") Женщина
 
@@ -534,7 +534,7 @@ html(lang="ru")
 					label(class="label")
 						input(class="input input_size_big" name="password" placeholder="Пароль")
 
-					label(class="label ui-label label_type_toggle")
+					label(class="label label_type_toggle")
 						input(class="input_type_toggle" type="checkbox" name="promotions")
 						div(class="toggle__text") Получать спецпредложения
 
@@ -545,7 +545,7 @@ html(lang="ru")
 					div(class="card__information")
 						span Уже есть аккаунт на Toxin
 						div(class="button-wrap button_size_middle")
-							button(class="ui-button button button_color_empty") Войти
+							div(class="button button_color_empty") Войти
 
 
 				div(class="ui-card card booking-card")
@@ -555,18 +555,16 @@ html(lang="ru")
 					div(class="booking-card__price-per-day")
 						h3 <span>9 990</span>₽
 						span в сутки
-					div(class="clearfix")
-					div(class="kate")
 
-					div(class="date-search" id="booking-card__date-search" )
+					div(class="date-search clearfix" id="booking-card__date-search" )
 						label(class="label")
-							h3 Date dropdown
-							input(class="input input_size_small" id="booking-card__first-date")
+							h3 Прибытие
+							input(class="input input_size_small" id="booking-card__first-date" placeholder="19.08.2019")
 							div(class="input__arrow arrow")
 								i(class="material-icons") expand_more
 						label(class="label")
-							h3 Date dropdown
-							input(class="input input_size_small" id="booking-card__last-date")
+							h3 Выезд
+							input(class="input input_size_small" id="booking-card__last-date" placeholder="23.08.2019")
 							div(class="input__arrow arrow")
 								i(class="material-icons") expand_more
 
@@ -619,6 +617,8 @@ html(lang="ru")
 						div(class="button__arrow arrow")
 							i(class="material-icons") arrow_forward
 
+
+
 				div(class="ui-card card login-card")
 					h1 Войти
 
@@ -627,14 +627,14 @@ html(lang="ru")
 					label(class="label")
 						input(class="input input_size_big" name="password" placeholder="Пароль")
 
-					div(class="ui-button button button_color_filled button_size_big") Войти
+					div(class="button button_color_filled button_size_big") Войти
 						div(class="button__arrow arrow")
 							i(class="material-icons") arrow_forward
 
 					div(class="card__information")
 						span Нет аккаунта на Toxin?
 						div(class="button-wrap button_size_middle")
-							button(class="ui-button button button_color_empty") Создать
+							div(class="button button_color_empty") Создать
 
 
 				div(class="ui-card card calendar-card" id="ui-calendar-card")
@@ -709,6 +709,104 @@ html(lang="ru")
 						div(class="room-card__reviews")
 							h3 65
 							span Отзывов
+
+
+		section(class="ui-section ui-section_grey headers-and-footers")
+			div(class="ui-logo")
+				include ../../common.blocks/logo/ui-logo.pug				
+
+			div(class="ui-line-block header wide-block header_main")
+				div(class="container")
+					div(class="header__logo")
+						include ../../common.blocks/logo/logo-with-name.pug
+					ul(class="header__menu menu")
+						li(class="menu__item_active") Home
+						li About Us
+						li(class="menu__item_with-arrow") Services
+							i(class="material-icons") expand_more
+						li Careers
+						li News
+						li Documentation
+					div(class="button-wrap button_size_middle")
+						div(class="button button_color_empty") Login
+					div(class="button button_color_filled button_size_middle" ) Register
+					span(class="header__user-name hidden") Cosmin Negoita
+
+			div(class="ui-line-block header wide-block header_user")
+				div(class="container")
+					a(class="header__logo")
+						include ../../common.blocks/logo/logo-with-name.pug
+					ul(class="header__menu menu")
+						li(class="menu__item_active") Home
+						li About Us
+						li(class="menu__item_with-arrow") Services
+							i(class="material-icons") expand_more
+						li Careers
+						li News
+						li Documentation
+					div(class="button-wrap button_size_middle hidden")
+						div(class="button button_color_empty") Login
+					div(class="button button_color_filled button_size_middle hidden" ) Register
+					span(class="header__user-name") Cosmin Negoita
+
+			div(class="ui-line-block footer wide-block footer_main")
+				div(class="container")
+					div(class="footer__info")
+						a(class="footer__logo")
+							include ../../common.blocks/logo/logo-with-name.pug
+						p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+					
+					div(class="footer__ul ")
+						h3 Navigation
+						ul
+							li About Us
+							li News
+							li Support
+							li Products
+					div(class="footer__ul ")
+						h3 About Us
+						ul
+							li Who we are
+							li Our team
+							li Careers
+							li Investors
+					div(class="footer__ul ")
+						h3 Support
+						ul
+							li Documentation
+							li Community
+							li Get in Touch
+
+					div(class="footer__subscribe") 
+						h3 Subscribe to our newsletter
+						p Receive our latest news and promotions in your inbox!
+						label(class="label")
+							input(class="input input_size_middle" placeholder="Your email address")
+							div(class="input__arrow arrow")
+								i(class="material-icons icons_colored") arrow_forward
+				hr
+				div(class="container")
+					span(class="footer__copyright") Copyright  © 2018 Toxin UI Kit. All rights reserved.
+					div(class="footer__social-icons social-icons ")
+						a(class="social-icon")
+							i(class="fa fa-twitter icons_colored")
+						a(class="social-icon")
+							i(class="fa fa-facebook-official icons_colored")
+						a(class="social-icon")
+							i(class="fa fa-instagram icons_colored")
+
+			div(class="ui-line-block wide-block footer-min")
+				div(class="footer-min-wrap")
+					a(class="footer__logo")
+						include ../../common.blocks/logo/logo-with-name.pug
+					p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+					div(class="social-icons ")
+						a(class="social-icon")
+							i(class="fa fa-twitter icons_colored")
+						a(class="social-icon")
+							i(class="fa fa-facebook-official icons_colored")
+						a(class="social-icon")
+							i(class="fa fa-instagram icons_colored")
 
 
 

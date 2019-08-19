@@ -260,6 +260,7 @@ $('#date-search').dateRangePicker({
 	showTopbar: true,
 	startOfWeek: 'monday',
 	format: 'DD.MM.YYYY',
+	hoveringTooltip: false,
 	getValue: function()
 	{
 		if ($('#first-date').val() && $('#last-date').val() )
@@ -284,6 +285,7 @@ $('#search-card__date-search').dateRangePicker({
 	showTopbar: true,
 	startOfWeek: 'monday',
 	format: 'DD.MM.YYYY',
+	hoveringTooltip: false,
 	getValue: function()
 	{
 		if ($('#search-card__first-date').val() && $('#search-card__last-date').val() )
@@ -308,6 +310,7 @@ $('#booking-card__date-search').dateRangePicker({
 	showTopbar: true,
 	startOfWeek: 'monday',
 	format: 'DD.MM.YYYY',
+	hoveringTooltip: false,
 	getValue: function()
 	{
 		if ($('#booking-card__first-date').val() && $('#booking-card__last-date').val() )
@@ -344,11 +347,37 @@ $('#ui-calendar').dateRangePicker({
 });
 
 $('#ui-calendar').data('dateRangePicker').setDateRange('2019-08-19','2019-08-23');
-$('.calendar__link_clear').click(function(evt)
+$('.calendar-card .calendar__link_clear').click(function(evt)
 {
 	evt.stopPropagation();
 	$('#ui-calendar').data('dateRangePicker').clear();
 	$(".td-checked").removeClass("td-checked td-first-day-selected-temp")
+});
+
+$('.calendar-card .calendar__link_apply').click(function(evt)
+{
+	evt.stopPropagation();
+	$('#ui-calendar').data('dateRangePicker').close();
+	$(".td-checked").removeClass("td-checked td-first-day-selected-temp")
+});
+
+
+$('.calendar__link_clear').click(function(evt)
+{
+	evt.stopPropagation();
+	$('#serch-card__date-search').data('dateRangePicker').clear();
+	$('#booking-card__date-search').data('dateRangePicker').clear();
+	$('#search-date').data('dateRangePicker').clear();
+	$(".td-checked").removeClass("td-checked td-first-day-selected-temp");
+});
+
+$('.calendar__link_apply').click(function(evt)
+{
+	evt.stopPropagation();
+	$('#search-card__date-search').data('dateRangePicker').close();
+	$('#booking-card__date-search').data('dateRangePicker').close();
+	$('#search-date').data('dateRangePicker').close();
+	$(".td-checked").removeClass("td-checked td-first-day-selected-temp");
 });
 
 // var firstClickTime = 0;
