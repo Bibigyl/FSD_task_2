@@ -1,0 +1,35 @@
+.select {
+	background: #FFFFFF;
+	border: 1px solid $c25;
+	box-sizing: border-box;
+	border-radius: 4px;
+	height: 44px;
+	padding-left: 15px;
+	color: $c75;
+	font-family: "Montserrat-Regular";
+	appearance: none;
+	option[selected][disabled] {
+		// add later
+	}
+	&:not(:checked), &:checked {
+		padding-bottom: 1px;
+		padding-left: 14px;
+	}
+}
+.select__arrow {
+	position: absolute;
+	top: -4px;
+	right: 10px;
+	pointer-events: none;
+}
+.select_size_big {
+	width: 100%;	
+	max-width: 320px;	
+}
+.select_size_middle {
+	width: 100%;	
+	max-width: 266px;	
+}
+.select_size_small {
+	width: 100%;
+}

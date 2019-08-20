@@ -2298,7 +2298,7 @@
                 '<div class="dp-clearfix"></div>' +
                 '</div>';
 
-            html += '<div class="footer">';
+            html += '<div class="calendar__footer">';
             if (opt.showShortcuts) {
                 html += '<div class="shortcuts"><b>' + translate('shortcuts') + '</b>';
 

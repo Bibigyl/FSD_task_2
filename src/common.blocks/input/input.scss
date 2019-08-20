@@ -1,0 +1,37 @@
+.input {
+	font-size: 14px;	
+	background: #FFFFFF;
+	border: 1px solid $c25;
+	box-sizing: border-box;
+	border-radius: 4px;
+	height: 44px;
+	padding-left: 15px;
+	color: $c25;
+	font-family: "Montserrat-Regular";
+	position: relative;
+	&::placeholder {
+		font-family: "Montserrat-Regular";
+		color: $c25;
+	}
+	&:hover, &:focus {
+		border-color: $c50;
+		color: $c75;
+	}
+}
+.input__arrow {
+	position: absolute;
+	font-size: 24px;
+	top: -3px;
+	right: 9px;
+}
+.input_size_big {
+	width: 100%;	
+	max-width: 320px;	
+}
+.input_size_middle {
+	width: 100%;	
+	max-width: 266px;	
+}
+.input_size_small {
+	width: 150px;
+}

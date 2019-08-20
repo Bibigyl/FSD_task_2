@@ -1,0 +1,35 @@
+.advantages {
+	position: relative;
+	margin-bottom: 41px;
+	span {
+		margin-left: 58px;
+	}
+	li {
+		margin-bottom: 41px;
+		position: relative;
+	}
+	& li:after {
+		position: absolute;
+		content: '';
+		width: 280px;
+		border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+		top: 69px;
+		left: 0;
+	}
+	& li:last-child:after {
+		display: none;
+	}
+}
+.advantage__icon {
+	position: absolute;
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 48px;
+	line-height: 41px;
+	top: 5px;
+}
+.advantage__title {
+	font-family: "Montserrat-Bold";
+	display: block;
+}

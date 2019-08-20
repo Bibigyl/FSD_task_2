@@ -1,0 +1,31 @@
+.checkbox-list {
+	position: relative;
+	width: 266px;
+	height: 44px;
+	margin-bottom: 20px;
+	ul {
+		display: none;
+		background-color: #fff;
+	}
+	h3 {
+		line-height: 44px;
+		margin-bottom: 3px;
+	}
+}
+.checkbox-list__arrow {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	.material-icons {
+		transition: .2s;
+	}
+}
+.checkbox-list_state_open {
+	ul {
+		display: block;
+	}
+	.material-icons {
+		transform: scale(1, -1);
+		transition: .2s;
+	}
+}

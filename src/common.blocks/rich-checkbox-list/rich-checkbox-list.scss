@@ -1,0 +1,22 @@
+.rich-checkbox-list {
+	h3 {
+		line-height: 44px;
+		margin-bottom: 1px;
+	}
+	.checkbox__text {
+		font-size: 14px;
+		color: $c75;
+		font-family: "Montserrat-Bold";
+		margin-bottom: 5px;
+	}
+	p {
+		font-size: 12px;
+		line-height: 14px;
+		color: $c75;
+		margin-left: 30px;
+		max-width: 230px;
+	}
+	li {
+		margin-bottom: 9px;
+	}
+}

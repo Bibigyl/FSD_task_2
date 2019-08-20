@@ -1,0 +1,41 @@
+div(class="card search-card")
+	h1 Найдём номера под ваши пожелания
+	div(class="date-search" id="search-card__date-search" )
+		label(class="label")
+			h3 Прибытие
+			input(class="input input_masked_date input_size_small" id="search-card__first-date" placeholder="ДД.ММ.ГГГГ")
+			div(class="input__arrow arrow")
+				i(class="material-icons") expand_more
+		label(class="label")
+			h3 Выезд
+			input(class="input input_masked_date input_size_small" id="search-card__last-date" placeholder="ДД.ММ.ГГГГ")
+			div(class="input__arrow arrow")
+				i(class="material-icons") expand_more
+
+	div(class="dropdown dropdown_size_big  dropdown_choice_guests")
+		h3 Гости
+		div(class="dropdown__field") <span>Сколько гостей</span>
+			div(class="dropdown__arrow arrow")
+				i(class="material-icons") expand_more
+		div(class="dropdown-ul-wrap")
+			ul
+				li 
+					span(class="dropdown__button dropdown__button_plus") +
+					span(class="dropdown__num") 0
+					span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+					|Взрослые
+				li 
+					span(class="dropdown__button dropdown__button_plus") +
+					span(class="dropdown__num") 0
+					span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+					|Дети
+				li 
+					span(class="dropdown__button dropdown__button_plus") +
+					span(class="dropdown__num") 0
+					span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+					|Младенцы
+			a(class="link dropdown__link_clear link_color_grey hidden") Очистить
+			a(class="link dropdown__link_apply link_color_bright") Применить
+	div(class=" button button_color_filled button_size_big") Подобрать номер
+		div(class="button__arrow arrow")
+			i(class="material-icons") arrow_forward

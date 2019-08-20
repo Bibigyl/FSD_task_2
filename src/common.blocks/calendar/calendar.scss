@@ -1,0 +1,15 @@
+@import '../libs/jquery.daterangepicker/daterangepicker.scss';
+
+.calendar-card {
+	padding: 0;
+	width: 320px;
+}
+.calendar__link-wrap {
+	a:first-child {
+		margin-left: 8px;
+	}
+	a:last-child {
+		float: right;
+		margin-right: 8px;
+	}
+}

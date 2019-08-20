@@ -1,0 +1,67 @@
+div(class="card booking-card")
+	div(class="booking-card__room")
+		h2 №<span class="room__number">888</span>
+		a(class="link link_color_bright") люкс
+	div(class="booking-card__price-per-day")
+		h3 <span>9 990</span>₽
+		span в сутки
+
+	div(class="date-search clearfix" id="booking-card__date-search" )
+		label(class="label")
+			h3 Прибытие
+			input(class="input input_size_small" id="booking-card__first-date" placeholder="19.08.2019")
+			div(class="input__arrow arrow")
+				i(class="material-icons") expand_more
+		label(class="label")
+			h3 Выезд
+			input(class="input input_size_small" id="booking-card__last-date" placeholder="23.08.2019")
+			div(class="input__arrow arrow")
+				i(class="material-icons") expand_more
+
+	div(class="dropdown dropdown_size_big  dropdown_choice_guests")
+		h3 Гости
+		div(class="dropdown__field") <span>3 гостя</span>
+			div(class="dropdown__arrow arrow")
+				i(class="material-icons") expand_more
+		div(class="dropdown-ul-wrap")
+			ul
+				li 
+					span(class="dropdown__button dropdown__button_plus") +
+					span(class="dropdown__num") 0
+					span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+					|Взрослые
+				li 
+					span(class="dropdown__button dropdown__button_plus") +
+					span(class="dropdown__num") 0
+					span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+					|Дети
+				li 
+					span(class="dropdown__button dropdown__button_plus") +
+					span(class="dropdown__num") 0
+					span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+					|Младенцы
+			a(class="link dropdown__link_clear link_color_grey hidden") Очистить
+			a(class="link dropdown__link_apply link_color_bright") Применить
+
+	div(class="booking-info-wrap")
+		div(class="booking-card__booking-info clearfix")
+			span(class="booking-info__text") <span class="booking-info__price-per-day">9 990</span>₽ х <span class="booking-info__days-number">4</span> суток
+			span(class="booking-info__price") <span>39 960</span>₽
+
+		div(class="booking-card__booking-info clearfix")
+			span(class="booking-info__text") Сбор за услуги: скидка <span class="booking-info__discount">2 179</span>₽
+			span(class="booking-info__price") <span>0</span>₽
+			div(class="booking-info__icon") i
+
+		div(class="booking-card__booking-info clearfix")
+			span(class="booking-info__text") Сбор за дополнительные услуги
+			span(class="booking-info__price") <span>300</span>₽
+			div(class="booking-info__icon") i
+
+	div(class="booking-card__total clearfix")
+		h2 Итого
+		h2(class="total__price") <span>38 081</span>₽
+
+	div(class="button button_color_filled button_size_big") Забронировать
+		div(class="button__arrow arrow")
+			i(class="material-icons") arrow_forward

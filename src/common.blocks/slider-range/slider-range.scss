@@ -1,0 +1,73 @@
+.slider-range{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+}
+
+// Slider
+
+.slider-wrapper{
+  width: 266px;
+  display: inline-block;
+  position: relative;
+}
+.ui-slider{
+  border: 1px solid $c25;
+  height: 4px;
+  position: relative;
+  border-radius: 100px;
+}
+.ui-slider-range{
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  height: 20px;
+  position: absolute;
+}
+.ui-slider-horizontal .ui-slider-range {
+	height: 6px;	
+	top: -1px;	
+}
+.ui-slider .ui-slider-handle {
+  background: #6FCF97;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  display: block;
+  transform: translateY(-50%);
+  border-radius: 100px;
+  z-index: 10;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #fff;
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  &:active{
+    cursor: grabbing;
+  }
+}
+
+// Range Indicator
+
+.range-wrapper{
+  position: absolute;
+  top: -32px;
+	right: 0;
+}
+.range {
+  white-space: nowrap;
+  z-index: 10;
+  position: relative;
+  font-size: 12px;
+  font-family: "Montserrat-Regular";
+}
+.range-value{
+  display: inline-block;
+}
+.range-divider{
+  width: 10px;
+  text-align: center;
+  display: inline-block;
+  &:after{
+    content: '-';
+  }
+}

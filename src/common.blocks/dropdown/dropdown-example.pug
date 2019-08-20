@@ -1,0 +1,49 @@
+	div(class="dropdown dropdown_size_middle dropdown_choice_furniture")
+		h3 Dropdown
+		div(class="dropdown__field") <span>2 спальни, 2 кровати...</span>
+			div(class="dropdown__arrow arrow")
+				i(class="material-icons") expand_more
+			span(class="ui-field-state") Default
+		div(class="dropdown-ul-wrap")
+			ul
+				li 
+					span(class="dropdown__button dropdown__button_plus") +
+					span(class="dropdown__num") 2
+					span(class="dropdown__button dropdown__button_minus") -
+					|Спальни
+				li 
+					span(class="dropdown__button dropdown__button_plus") +
+					span(class="dropdown__num") 2
+					span(class="dropdown__button dropdown__button_minus") -
+					|Кровати
+				li 
+					span(class="dropdown__button dropdown__button_plus") +
+					span(class="dropdown__num") 0
+					span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+					|Ванные комнаты
+
+
+div(class="ui-dropdown dropdown dropdown_size_big  dropdown_choice_guests dropdown_state_open")
+	h3 Dropdown
+	div(class="dropdown__field") <span>Сколько гостей</span>
+		div(class="dropdown__arrow arrow")
+			i(class="material-icons") expand_more
+	div(class="dropdown-ul-wrap")
+		ul
+			li 
+				span(class="dropdown__button dropdown__button_plus") +
+				span(class="dropdown__num") 0
+				span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+				|Взрослые
+			li 
+				span(class="dropdown__button dropdown__button_plus") +
+				span(class="dropdown__num") 0
+				span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+				|Дети
+			li 
+				span(class="dropdown__button dropdown__button_plus") +
+				span(class="dropdown__num") 0
+				span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+				|Младенцы
+		a(class="link dropdown__link_clear link_color_grey hidden") Очистить
+		a(class="link dropdown__link_apply link_color_bright") Применить

@@ -1,0 +1,71 @@
+.button {
+	border-radius: 100px;
+	font-family: "Montserrat-Regular";
+	font-style: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 15px;
+	border: none;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	&:hover,
+	&:active,
+	&:focus {
+		border: none;
+		font-style: normal;
+		font-weight: bold;
+	}
+}
+.button__arrow {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+}
+.button_size_middle {
+	width: 99px;
+	padding: 14px 0;
+}
+.button_size_big {
+	width: 100%;
+	max-width: 320px;
+	position: relative;
+	font-size: 12px;
+	padding: 14px 0;
+}
+.button_color_filled {
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	color: #fff;
+	&:hover,
+	&:active,
+	&:focus {
+		background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+		color: #fff;
+	}
+	& .material-icons {
+		color: #fff;
+	}
+}
+.button_size_middle.button-wrap {
+	border-radius: 100px;
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	position: relative;
+	padding: 22px 0;
+}
+.button_color_empty {
+	position: absolute;
+	padding: 0;
+	top: 2px;
+	left: 2px;
+	background: #fff;
+	width: 95px;
+	line-height: 40px;
+	color: $purple;
+	&:hover,
+	&:active,
+	&:focus {
+		background: #fff;
+		color: $purple;
+	}
+}

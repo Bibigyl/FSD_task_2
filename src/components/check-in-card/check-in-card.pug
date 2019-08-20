@@ -1,0 +1,37 @@
+div(class="card check-in-card")
+	h1 Регистрация аккаунта
+
+	label(class="label")
+		input(class="input input_size_big" placeholder="Имя" type="text" name="name")
+	label(class="label")
+		input(class="input input_size_big" placeholder="Фамилия" type="text" name="surname")
+
+	label(class="label label_radio")
+		input(class="radio" type="radio" name="gender" value="man" checked)
+		div(class="radio__text") Мужчина
+	label(class="label label_radio")
+		input(class="radio" type="radio" name="gender" value="woman")
+		div(class="radio__text") Женщина
+
+	label(class="label")
+		h3 Дата рождения
+		input(class="input input_size_big input_masked_date" name="birthday" placeholder="ДД.ММ.ГГГГ")
+
+	h3 Данные для входа в сервис
+	label(class="label")
+		input(class="input input_size_big" name="email" placeholder="Email")
+	label(class="label")
+		input(class="input input_size_big" name="password" placeholder="Пароль")
+
+	label(class="label label_toggle")
+		input(class="toggle" type="checkbox" name="promotions")
+		div(class="toggle__text") Получать спецпредложения
+
+	div(class="button button_color_filled button_size_big") Перейти к оплате
+		div(class="button__arrow arrow")
+			i(class="material-icons") arrow_forward
+
+	div(class="card__information")
+		span Уже есть аккаунт на Toxin
+		div(class="button-wrap button_size_middle")
+			div(class="button button_color_empty") Войти
