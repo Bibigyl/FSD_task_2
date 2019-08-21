@@ -7,6 +7,10 @@
 	& input:checked + .like-button__text {
 	  color: $purple;
 	  transition: .2s;
+	  .material-icons:after {
+	  	content: 'favorite';
+	  	color: $purple;
+	  }
 	}
 }
 .like-button-wrap {
@@ -40,13 +44,16 @@
 	color: $c25;
 	text-align: center;
 	transition: .2s;
-	& .material-icons {
+	position: relative;
+	& .material-icons:after {
+		transition: .2s;
+		position: absolute;
 		box-sizing: border-box;
 	  content: 'favorite_border';
+	  color: $c25;
 	  position: absolute;
 	  top: 4px;
 	  left: 3px;
 	  font-size: 10px;
-	  color: inherit;
 	}
 }

@@ -23,6 +23,7 @@
 .checkbox-list_state_open {
 	ul {
 		display: block;
+		z-index: 5;
 	}
 	.material-icons {
 		transform: scale(1, -1);

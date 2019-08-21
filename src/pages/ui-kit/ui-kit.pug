@@ -6,11 +6,6 @@ html(lang="ru")
 		title UI Kit page
 		link(rel="stylesheet" href="style.css")
 	body
-
-	<!--------- Variables --------------------->
-
-
-
 		section(class="ui-section ui-section_white colors-and-type")
 			div(class="ui-logo")
 				include ../../common.blocks/logo/ui-logo.pug
@@ -95,15 +90,15 @@ html(lang="ru")
 							span(class="ui-field-state") Default
 
 					div(class="ui-form-block")
-						div(class="date-search" id="date-search" )
+						div(class="ui-date-search" id="ui-date-search" )
 							label(class="label ui-label")
 								h3 Date dropdown
-								input(class="input input_size_small calendar" id="first-date" placeholder="ДД.ММ.ГГГГ")
+								input(class="input input_size_small calendar" id="ui-first-date" placeholder="ДД.ММ.ГГГГ")
 								div(class="input__arrow arrow")
 									i(class="material-icons") expand_more
 							label(class="label ui-label")
 								h3 Date dropdown
-								input(class="input input_size_small calendar" id="last-date" placeholder="ДД.ММ.ГГГГ")
+								input(class="input input_size_small calendar" id="ui-last-date" placeholder="ДД.ММ.ГГГГ")
 								div(class="input__arrow arrow")
 									i(class="material-icons") expand_more
 
@@ -122,7 +117,7 @@ html(lang="ru")
 					div(class="ui-form-block")
 						label(class="label ui-label")
 							h3 Subscription text field
-							input(class="input input_size_middle" placeholder="Email")
+							input(class="input input_size_middle" type="email" placeholder="Email")
 							div(class="input__arrow  arrow")
 								i(class="material-icons icons_colored") arrow_forward
 
@@ -159,16 +154,16 @@ html(lang="ru")
 
 					div(class="ui-form-block")
 						h3 Like button
-						div(class="like-button-wrap like-button-wrap_active")
+						div(class="like-button-wrap")
 							label(class="label ui-label label_like-button")
 								input(class="like-button" type="checkbox")
 								div(class="like-button__text") 2
-									div(class="material-icons") favorite_border
-						div(class="like-button-wrap")
+									div(class="material-icons")
+						div(class="like-button-wrap like-button-wrap_active")
 							label(class="label ui-label label_like-button")
 								input(class="like-button" type="checkbox" checked)
 								div(class="like-button__text") 12
-									div(class="material-icons") favorite
+									div(class="material-icons")
 
 					div(class="ui-form-block")
 						h3 Rate button
@@ -232,10 +227,10 @@ html(lang="ru")
 					div(class="ui-form-block")
 						div(class="ui-dropdown dropdown dropdown_size_middle  dropdown_choice_furniture")
 							h3 Dropdown
-							div(class="dropdown__field") <span>2 спальни, 2 кровати...</span>
+							div(class="dropdown__field") <span>2 спальни, 2 кровати, 150 dsyyfp mkfkek</span>
 								div(class="dropdown__arrow arrow")
 									i(class="material-icons") expand_more
-								span(class="ui-field-state") Default
+							span(class="ui-field-state") Default
 							div(class="dropdown-ul-wrap")
 								ul
 									li 
@@ -259,7 +254,7 @@ html(lang="ru")
 							div(class="dropdown__field") <span>2 спальни, 2 кровати...</span>
 								div(class="dropdown__arrow arrow")
 									i(class="material-icons") expand_more
-								span(class="ui-field-state") Expanded
+							span(class="ui-field-state") Expanded
 							div(class="dropdown-ul-wrap")
 								ul
 									li 
@@ -453,11 +448,11 @@ html(lang="ru")
 					div(class="ui-form-block")
 						div(class="review ui-review")
 							div(class="review__avatar ui-review__avatar"  style="background-image: url('src/images/avatar.png');")
-							div(class="like-button-wrap review__like-button")
+							div(class="like-button-wrap review__like-button like-button-wrap_active ")
 								label(class="label ui-label label_like-button")
 									input(class="like-button" type="checkbox" checked)
 									div(class="like-button__text") 12
-										div(class="material-icons") favorite
+										div(class="material-icons")
 							span(class="review__name") Мурад Сарафанов
 							span 5 дней назад
 							p(class="review__text") Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
