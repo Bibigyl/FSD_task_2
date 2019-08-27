@@ -19,7 +19,6 @@
 .footer__info {
 	max-width: 280px;
 	p {
-    letter-spacing: -0.09px;
     max-width: 278px;
     margin-right: 5px;		
 	}
@@ -35,11 +34,9 @@
 	padding-top: 3px;
 	h3 {
 		margin-bottom: 18px;
-		letter-spacing: -0.3px;
 	}
 	p {
 		margin-bottom: 24px;
-		letter-spacing: -0.15px;
 	}
 }
 .footer__ul {
@@ -51,16 +48,13 @@
 		margin-right: 30px;
 	}
 	h3 {
-		margin-bottom: 18px;
-		letter-spacing: -0.15px;
+		margin-bottom: 18px;	
 	}
 	li {
 		margin-bottom: 14px;
 		cursor: pointer;
+		color: $c50;
 	}
-}
-.footer__copyright {
-	letter-spacing: -0.1px;
 }
 .footer__social-icons {
 	:last-child {

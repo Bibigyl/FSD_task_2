@@ -1,11 +1,11 @@
 .colors-and-type {
-  display: block;
+  display: none;
 }
 .form-elements {
-  display: block;
+  display: none;
 }
 .cards {
-  display: block;
+  display: none;
 }
 .headers-and-footers {
   display: block;
@@ -269,19 +269,13 @@
   width: 320px;
 }
 .ui-button {
-  display: inline-block;
   margin-right: 17px;
   margin-bottom: 30px;
-}
-.ui-button-wrap {
-  margin-bottom: 20px;
-  display: inline-block;
-  margin-right: 17px;
-  &.ui-button {
-    margin-bottom: 0;
-  }
   &:nth-child(4) {
-    margin-right: 70px;
+    margin-right: 20px;
+  }
+  &:nth-child(3), &:nth-child(4) {
+    margin-bottom: 25px;
   }
 }
 .ui-button_state_not-active {
@@ -291,7 +285,7 @@
   }
 }
 .ui-link {
-  margin: 0 20px 26px 2px;
+  margin: 0 20px 24px 2px;
   display: inline-block;
   &:last-child {
     margin-right: 50px;
@@ -362,4 +356,25 @@
 /*-------  ui 4th page  --------------*/
 .ui-line-block {
   margin-bottom: 40px;
+}
+.ui-footer {
+  .footer__info p {
+    letter-spacing: -0.09px;
+  }
+  .footer__subscribe {
+    h3 {
+      letter-spacing: -0.3px;
+    }
+    p {
+      letter-spacing: -0.15px;
+    }
+  }
+  .footer__ul {
+    h3 {
+      letter-spacing: -0.15px;
+    }
+  }
+  .footer__copyright {
+    letter-spacing: -0.1px;
+  }
 }

@@ -1,0 +1,46 @@
+.search-room__header {
+	.header__menu {
+		a {
+			margin-right: 20px;
+			letter-spacing: 0.07px;			
+		}
+		li:last-child a {
+			margin-right: 16px;
+		}
+	}
+	.button_size_middle {
+		margin-left: 24px;
+	}
+}
+.options, .rooms {
+	//border: solid;
+	//height: 500px;
+}
+.search-room {
+	> .container {
+		display: flex;
+		padding-top: 30px;
+	}
+}
+.options {
+	width: 100%;
+	max-width: 280px;
+}
+.rooms {
+	width: 100%;
+}
+.option-wrap {
+	width: 100%;
+	max-width: 266px;
+	margin-bottom: 20px;
+}
+.options {
+	.dropdown {
+		width: 100%;
+	}
+	.dropdown-ul-wrap {
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+}

@@ -1,45 +1,32 @@
-div(class="footer wide-block")
-	div(class="container")
-		div(class="footer__info")
-			a(class="footer__logo")
-				include ../../common.blocks/logo/logo-with-name.pug
-			p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-		
-		div(class="footer__ul ")
-			h3 Navigation
-			ul
-				li About Us
-				li News
-				li Support
-				li Products
-		div(class="footer__ul ")
-			h3 About Us
-			ul
-				li Who we are
-				li Our team
-				li Careers
-				li Investors
-		div(class="footer__ul ")
-			h3 Support
-			ul
-				li Documentation
-				li Community
-				li Get in Touch
+mixin footer(footer_class, info, uls, subscribe, copyright)
+	div(class="footer wide-block" class=footer_class)
+		div(class="container")
+			div(class="footer__info")
+				a(class="footer__logo")
+					include ../../common.blocks/logo/logo-with-name.pug
+				p= info 
+			
+			each ul in uls
+				div(class="footer__ul ")
+					h3= ul.title
+					ul
+						each item in ul.items
+							li= item
 
-		div(class="footer__subscribe") 
-			h3 Subscribe to our newsletter
-			p Receive our latest news and promotions in your inbox!
-			label(class="label")
-				input(class="input input_size_middle" type="email" placeholder="Your email address")
-				div(class="input__arrow arrow")
-					i(class="material-icons icons_colored") arrow_forward
-	hr
-	div(class="container")
-		span(class="footer__copyright") Copyright  © 2018 Toxin UI Kit. All rights reserved.
-		div(class="footer__social-icons social-icons ")
-			a(class="social-icon")
-				i(class="fa fa-twitter icons_colored")
-			a(class="social-icon")
-				i(class="fa fa-facebook-official icons_colored")
-			a(class="social-icon")
-				i(class="fa fa-instagram icons_colored")
+			div(class="footer__subscribe") 
+				h3= subscribe.title
+				p= subscribe.text
+				label(class="label")
+					input(class="input input_size_middle" type="email" placeholder=subscribe.button_text)
+					div(class="input__arrow arrow")
+						i(class="material-icons icons_colored") arrow_forward
+		hr
+		div(class="container")
+			span(class="footer__copyright")= copyright
+			div(class="footer__social-icons social-icons ")
+				a(class="social-icon")
+					i(class="fa fa-twitter icons_colored")
+				a(class="social-icon")
+					i(class="fa fa-facebook-official icons_colored")
+				a(class="social-icon")
+					i(class="fa fa-instagram icons_colored")

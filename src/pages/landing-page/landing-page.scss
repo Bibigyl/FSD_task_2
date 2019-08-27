@@ -1,0 +1,45 @@
+.landing-page__header {
+	position: absolute;
+	.header__menu {
+		a {
+			margin-right: 20px;
+			letter-spacing: 0.07px;			
+		}
+		li:last-child a {
+			margin-right: 16px;
+		}
+	}
+	.button_size_middle {
+		margin-left: 24px;
+	}
+}
+.front {
+	width: 100%;
+	height: 100vh;
+	height: 900px; //-----------------------! temp?
+	background: center, center no-repeat;
+	background-size: cover;
+	position: relative;
+	.search-card {
+		margin: 140px 0 auto 0;
+	}
+}
+.front__container {
+	width: 80vw;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.front__text {
+	align-self: flex-end;
+	max-width: 260px;
+	text-align: right;
+	margin-bottom: 20px;
+}
+.landing-page__footer {
+	letter-spacing: 0;
+	.footer__copyright {
+		letter-spacing: 0;
+	}
+}

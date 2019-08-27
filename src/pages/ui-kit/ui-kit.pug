@@ -90,7 +90,7 @@ html(lang="ru")
 							span(class="ui-field-state") Default
 
 					div(class="ui-form-block")
-						div(class="ui-date-search" id="ui-date-search" )
+						div(class="lui-date-search date-search" id="ui-date-search" )
 							label(class="label ui-label")
 								h3 Date dropdown
 								input(class="input input_size_small calendar" id="ui-first-date" placeholder="ДД.ММ.ГГГГ")
@@ -98,7 +98,7 @@ html(lang="ru")
 									i(class="material-icons") expand_more
 							label(class="label ui-label")
 								h3 Date dropdown
-								input(class="input input_size_small calendar" id="ui-last-date" placeholder="ДД.ММ.ГГГГ")
+								input(class="input input_size_small calendar" id="ui-last-date" placeholder="19.08.2019")
 								div(class="input__arrow arrow")
 									i(class="material-icons") expand_more
 
@@ -205,10 +205,10 @@ html(lang="ru")
 						div(class="ui-buttons-wrap")
 							div(class="ui-button button button_color_filled button_size_middle" ) Click me
 							div(class="ui-button button button_color_filled button_size_middle ui-button_state_not-active") Click me
-							div(class="button-wrap ui-button-wrap button_size_middle")
-								div(class="ui-button button button_color_empty") Click me
-							div(class="button-wrap ui-button-wrap ui-button_state_not-active button_size_middle")
-								div(class="ui-button button button_color_empty ") Click me
+							div(class="ui-button button-wrap ui-button-wrap button-wrap_color_empty")
+								div(class="button") Click me
+							div(class="ui-button button-wrap ui-button-wrap ui-button_state_not-active button-wrap_color_empty")
+								div(class="button") Click me
 							a(class="ui-link link link_color_bright") Click me
 							a(class="ui-link link link_color_grey") Click me
 							div(class="ui-button button button_color_filled button_size_big") Перейти к оплате
@@ -227,7 +227,7 @@ html(lang="ru")
 					div(class="ui-form-block")
 						div(class="ui-dropdown dropdown dropdown_size_middle  dropdown_choice_furniture")
 							h3 Dropdown
-							div(class="dropdown__field") <span>2 спальни, 2 кровати, 150 dsyyfp mkfkek</span>
+							div(class="dropdown__field") <span>2 спальни, 2 кровати...</span>
 								div(class="dropdown__arrow arrow")
 									i(class="material-icons") expand_more
 							span(class="ui-field-state") Default
@@ -527,30 +527,51 @@ html(lang="ru")
 				include ../../common.blocks/logo/ui-logo.pug				
 
 
-			div(class="ui-line-block")
-				include ../../components/header/header.pug	
+			include ../../components/header/header.pug
+			+header(
+				"ui-line-block",
+			[
+				{name: "Home", href: "#", class: "menu__item_active"},
+				{name: "About Us", href: "#"},
+				{name: "Services", href: "#", arrow: true},
+				{name: "Careers", href: "#"},
+				{name: "News", href: "#"},
+				{name: "Documentation", href: "#"},
+			],
+			  {name: "Login"}, 
+			  {name: "Register"}, 
+			  {name: "Cosmin Negoita", class: "hidden"}
+			)
 
 
-			div(class="ui-line-block header wide-block header_user")
-				div(class="container")
-					a(class="header__logo")
-						include ../../common.blocks/logo/logo-with-name.pug
-					ul(class="header__menu menu")
-						li(class="menu__item_active") Home
-						li About Us
-						li(class="menu__item_with-arrow") Services
-							i(class="material-icons") expand_more
-						li Careers
-						li News
-						li Documentation
-					div(class="button-wrap button_size_middle hidden")
-						div(class="button button_color_empty") Login
-					div(class="button button_color_filled button_size_middle hidden" ) Register
-					span(class="header__user-name") Cosmin Negoita
+			include ../../components/header/header.pug
+			+header(
+				"ui-line-block",
+				[
+					{name: "Home", href: "#", class: "menu__item_active"},
+					{name: "About Us", href: "#"},
+					{name: "Services", href: "#", arrow: true},
+					{name: "Careers", href: "#"},
+					{name: "News", href: "#"},
+					{name: "Documentation", href: "#"},
+				],
+			  {name: "Login", class: "hidden"}, 
+			  {name: "Register", class: "hidden"}, 
+			  {name: "Cosmin Negoita"}
+			)
 
-
-			div(class="ui-line-block")
-				include ../../components/footer/footer.pug
+			include ../../components/footer/footer.pug
+			+footer(
+				"ui-line-block ui-footer",
+				"Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+				[
+					{title: "Navigation", items: ["About Us", "News", "Support", "Products"]},
+					{title: "About Us", items: ["Who we are", "Our team", "Careers", "Investors"]},
+					{title: "Support", items: ["Documentation", "Community", "Get in Touch"]}
+				],
+				{title: "Subscribe to our newsletter", text: "Receive our latest news and promotions in your inbox!", button_text: "Your email address"},
+				"Copyright © 2018 Toxin UI Kit. All rights reserved."
+			)
 
 
 			div(class="ui-line-block")

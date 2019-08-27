@@ -98,12 +98,12 @@ h3 {
 	max-width: 1920px;
 	background-color: #fff;
 	width: 100%;
-	.container {
-		width: 100%;
-		max-width: 1160px;
-		margin-right: auto;
-		margin-left: auto;
-	}
+}
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*------------------------------ Import styles ----------------------------------------*/
@@ -149,3 +149,18 @@ h3 {
 /*--------- Pages styles -------------*/
 
 @import '../pages/ui-kit/ui-kit.scss';
+@import '../pages/landing-page/landing-page.scss';
+@import '../pages/search-room/search-room.scss';
+
+.b {
+	padding: 10px 20px;
+	background-color: #fff;
+	margin: 2px;
+	display: inline-flex;	
+	border-radius: 100px;	
+}
+.bw {
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	display: inline-flex;	
+	border-radius: 100px;	
+}

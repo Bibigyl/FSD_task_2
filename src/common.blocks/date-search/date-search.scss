@@ -1,7 +1,5 @@
-.date-search label {
-	display: inline-block;
-	width: 150px;
-	&:first-child {
+.date-search {
+	label:first-child {
 		margin-right: 20px;
 	}
 	.input__arrow {
@@ -15,4 +13,5 @@
 }
 .date-search {
 	display: flex;
+	width: 100%;
 }

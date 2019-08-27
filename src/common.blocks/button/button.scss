@@ -8,8 +8,8 @@
 	line-height: 15px;
 	border: none;
 	cursor: pointer;
-	vertical-align: middle;
-	text-align: center;
+	display: inline-flex;
+	position: relative;
 	&:hover,
 	&:active,
 	&:focus {
@@ -24,13 +24,12 @@
 	right: 10px;
 }
 .button_size_middle {
-	width: 99px;
-	padding: 14px 0;
+	padding: 14px 20px;
 }
 .button_size_big {
+	justify-content: center;
 	width: 100%;
 	max-width: 320px;
-	position: relative;
 	font-size: 12px;
 	padding: 14px 0;
 }
@@ -47,20 +46,21 @@
 		color: #fff;
 	}
 }
-.button_size_middle.button-wrap {
-	border-radius: 100px;
+.button-wrap_color_empty {
 	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-	position: relative;
-	padding: 22px 0;
-}
-.button_color_empty {
-	position: absolute;
+	display: inline-flex;
+	border-radius: 100px;
 	padding: 0;
-	top: 2px;
-	left: 2px;
-	background: #fff;
-	width: 95px;
-	line-height: 40px;
+	&:hover,
+	&:active,
+	&:focus {
+		background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	}
+}
+.button-wrap_color_empty > * {
+	padding: 13px 18px;
+	background-color: #fff;
+	margin: 2px;
 	color: $purple;
 	&:hover,
 	&:active,

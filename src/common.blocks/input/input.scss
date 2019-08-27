@@ -5,7 +5,7 @@
 	box-sizing: border-box;
 	border-radius: 4px;
 	height: 44px;
-	padding-left: 15px;
+	padding-left: 14px;
 	color: $c25;
 	font-family: "Montserrat-Regular";
 	position: relative;
@@ -33,5 +33,6 @@
 	max-width: 266px;	
 }
 .input_size_small {
-	width: 150px;
+	max-width: 150px;
+	width: 100%;
 }
