@@ -16,7 +16,7 @@ module.exports = {
 	entry: {
 		'landing-page': './src/pages/landing-page/landing-page.js',
 		'room-details': './src/pages/room-details/room-details.js',
-		'seach-room': './src/pages/search-room/search-room.js',
+		'search-room': './src/pages/search-room/search-room.js',
 		'ui-kit': './src/pages/ui-kit/ui-kit.js'
 	},
 	output: {

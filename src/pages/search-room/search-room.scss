@@ -12,14 +12,11 @@
 		margin-left: 24px;
 	}
 }
-.options, .rooms {
-	//border: solid;
-	//height: 500px;
-}
 .search-room {
 	> .container {
 		display: flex;
 		padding-top: 30px;
+		padding-bottom: 71px;
 	}
 }
 .options {
@@ -33,6 +30,31 @@
 	width: 100%;
 	max-width: 266px;
 	margin-bottom: 20px;
+	&.dropdown_choice_guests {
+		margin-bottom: 30px;
+	}
+	&.slider {
+		margin-bottom: 24px;
+		h3 {
+			margin-bottom: 12px;
+		}
+		.slider__text {
+			font-size: 12px;
+			margin-top: 3px;
+		}
+	}
+	&.checkboxes {
+		h3 {
+			margin-bottom: 17px;
+		}
+		margin-bottom: 14px;
+	}
+	&.rich-checkbox-list {
+		margin-bottom: 29px;
+	}
+	&.dropdown_choice_furniture {
+		margin-bottom: 16px;
+	}
 }
 .options {
 	.dropdown {
@@ -42,5 +64,24 @@
 		width: 100%;
 		box-sizing: border-box;
 	}
-
+}
+.rooms-wrap {
+	padding-left: 47px;
+	h1 {
+		letter-spacing: 0.65px;
+		margin-bottom: 20px;
+	}
+	.paginator-wrap {
+		text-align: center;
+		margin-right: 17px;
+	}
+}
+.rooms {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	.room-card {
+		margin-bottom: 20px;
+	}
 }

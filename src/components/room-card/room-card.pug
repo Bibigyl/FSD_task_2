@@ -1,33 +1,30 @@
-div(class="card room-card")
-	div(class="room-card__image ui-room-card__image" style="background-image: url('src/images/room1.png')")
-		div(class="room-card__arrow arrow") 
-			i(class="material-icons") expand_more
-		div(class="room-card__arrow arrow") 
-			i(class="material-icons") expand_more
-		div(class="room-card__dots")
-			div(class="room__dot room__dot_active")
-			div(class="room__dot")
-			div(class="room__dot")
-			div(class="room__dot")
-	div(class="room-card__room")
-		h2 №<span class="room__number">888</span>
-		a(class="link link_color_bright") люкс
-	div(class="room-card__price-per-day")
-		h3 <span>9 990</span>₽
-		span в сутки
-	div(class="clearfix room-card__line")
-	div(class="room-card__rating-wrap")
-		div(class="rating room-card__rating")
-			input(class="rating__star" name="ui-rating1" value="5" id="ui-rating_51" type="radio" checked)
-			label(class="label label_rating material-icons" for="ui-rating_51")
-			input(class="rating__star" name="ui-rating1" value="4" id="ui-rating_41" type="radio")
-			label(class="label label_rating material-icons" for="ui-rating_41")
-			input(class="rating__star" name="ui-rating1" value="3" id="ui-rating_31" type="radio")
-			label(class="label label_rating material-icons" for="ui-rating_31")
-			input(class="rating__star" name="ui-rating1" value="2" id="ui-rating_21" type="radio")
-			label(class="label label_rating material-icons" for="ui-rating_21")
-			input(class="rating__star" name="ui-rating1" value="1" id="ui-rating_11" type="radio")
-			label(class="label label_rating material-icons" for="ui-rating_11")
-		div(class="room-card__reviews")
-			h3 145
-			span Отзывов
+mixin room(room_class, image, number, price, rating, star_name, reviews, lux)
+	div(class="card room-card" class=room_class)
+		div(class="room-card__image ui-room-card__image" style="background-image: url(" + image + ")")
+			div(class="room-card__arrow arrow") 
+				i(class="material-icons") expand_more
+			div(class="room-card__arrow arrow") 
+				i(class="material-icons") expand_more
+			div(class="room-card__dots")
+				div(class="room__dot room__dot_active")
+				div(class="room__dot")
+				div(class="room__dot")
+				div(class="room__dot")
+		div(class="room-card__room")
+			h2 №
+				span(class="room__number")= number
+			if lux
+				a(class="link link_color_bright") люкс
+		div(class="room-card__price-per-day")
+			h3= Math.floor(price / 1000) + " " + ("00" + price % 1000).slice(-3) + "₽"
+			span в сутки
+		div(class="clearfix room-card__line")
+		div(class="room-card__rating-wrap")
+			div(class="rating room-card__rating")
+				-for (var i = 5; i > 0; i--)
+					input(class="rating__star" name=(star_name + i) value=i id=(star_name + i) type="radio" checked= rating == i )
+					label(class="label label_rating material-icons" for=(star_name + i) )
+
+			div(class="room-card__reviews")
+				h3= reviews
+				span Отзывов

@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
   $(".dropdown__arrow").on("click", function() {
-    $(this).parent().parent().children(".dropdown-ul-wrap").slideToggle(300, "linear").parent().toggleClass("dropdown_state_open");
+    $(this).parent().parent().children(".dropdown-ul-wrap").slideToggle(200, "linear").parent().toggleClass("dropdown_state_open");
 
   });
 
