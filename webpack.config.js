@@ -17,6 +17,7 @@ module.exports = {
 		'landing-page': './src/pages/landing-page/landing-page.js',
 		'room-details': './src/pages/room-details/room-details.js',
 		'search-room': './src/pages/search-room/search-room.js',
+		'registration': './src/pages/registration/registration.js',
 		'ui-kit': './src/pages/ui-kit/ui-kit.js'
 	},
 	output: {
@@ -95,6 +96,12 @@ module.exports = {
 			hash: true,
 			template: './src/pages/search-room/search-room.pug',
 			filename: 'search-room.html'
+		}),
+		new HtmlWebpackPlugin({
+			inject: false,
+			hash: true,
+			template: './src/pages/registration/registration.pug',
+			filename: 'registration.html'
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,

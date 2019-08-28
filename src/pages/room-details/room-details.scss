@@ -1,0 +1,156 @@
+.room-details__header {
+	.header__menu {
+		a {
+			margin-right: 20px;
+			letter-spacing: 0.07px;			
+		}
+		li:last-child a {
+			margin-right: 16px;
+		}
+	}
+	.button_size_middle {
+		margin-left: 24px;
+	}
+}
+.room-photos {
+	display: flex;
+}
+.room-photo_wide {
+	height: 485px;
+	width: 64%;
+}
+.room-photos-wrap {
+	width: 36%;
+}
+.room-photo_slim {
+	width: 100%;
+	height: 50%;
+}
+.details-wrap {
+	display: flex;
+	padding-top: 70px;
+	padding-bottom: 62px;
+}
+.room-card-wrap {
+	width: 100%;
+	min-width: 300px;
+	max-width: 380px;
+	margin-left: 20px;
+}
+.details {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	* {
+		box-sizing: border-box;
+	}
+	h2 {
+		margin-bottom: 20px;
+		letter-spacing: 0.6px;
+		font-stretch: expanded;
+	}
+	&__info {
+		width: 47%;
+		margin-bottom: -8px;
+	}
+	&__impressions {
+		padding-left: 3px;
+		width: 53%;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		h2 {
+			width: 100%;
+			letter-spacing: 0.8px;
+		}
+	}
+	&__reviews {
+		width: 100%;
+		padding-right: 50px;
+		margin-bottom: 10px;
+		h2 {
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+		.reviews__num {
+			display: inline-block;
+			float: right;
+		}
+		.review {
+			margin-bottom: 23px;
+		}
+		.review__avatar {
+			top: 0;
+			left: 0;
+		}
+		.review__like-button {
+			left: 3px;
+		}
+	}
+	&__rules {
+		width: 47%;
+		padding-right: 100px;
+		h2 {
+			padding-left: 20px;
+			margin-bottom: 17px;
+		}
+	}
+	&__cancellation {
+		width: 53%;
+		padding-right: 60px;
+		padding-left: 5px;
+		h2 {
+			margin-bottom: 17px;
+		}
+	}
+}
+.diagram {
+	width: 120px;
+	height: 121px;
+	text-align: center;
+	padding-top: 39px;
+	margin-bottom: 3px;
+}
+.diagram__number {
+	display: block;
+	color: $purple;
+	font-size: 24px;
+	font-family: "Quicksand-Bold";
+	font-weight: bold;
+}
+.diagram__text {
+	display: block;
+	color: $purple;
+	font-size: 15px;
+	line-height: 17px;
+	font-family: "Montserrat-Bold";
+	font-weight: bold;
+}
+.diagram__items {
+	align-self: flex-end;
+	margin-left: 30px;
+	.bullet-list {
+		li {
+			margin-bottom: 0;
+			line-height: 24px;
+			padding-left: 16px;
+			&:nth-child(1):before {
+				background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+			}
+			&:nth-child(2):before {
+				background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+			}
+			&:nth-child(3):before {
+				background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+			}
+			&:nth-child(4):before {
+				background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+			}
+		}
+	}
+}
+
+//-----------------------! temp. Position of calendar
+.room-details .date-picker-wrapper {
+	padding: 12px 7px;
+}

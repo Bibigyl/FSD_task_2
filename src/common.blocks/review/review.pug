@@ -1,10 +1,13 @@
-div(class="review")
-	div(class="review__avatar"  style="background-image: url('src/images/avatar.png');")
-	div(class="like-button-wrap review__like-button")
-		label(class="label label_like-button")
-			input(class="like-button" type="checkbox" checked)
-			div(class="like-button__text") 12
-				div(class="material-icons") favorite
-	span(class="review__name") Мурад Сарафанов
-	span 5 дней назад
-	p(class="review__text") Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+mixin review(avatar, likes, name, when, text)
+	div.review
+		div.review__avatar.ui-review__avatar(style="background-image: url(" + avatar + ")")
+		div.like-button-wrap.review__like-button
+			label.label.label_like-button
+				input.like-button(type="checkbox")
+				div.like-button__text= likes
+					div.material-icons
+		span.review__name= name
+		span= when
+		p.review__text= text
+
+// .ui-review__avatar is a temp class for this layout, not full picktures

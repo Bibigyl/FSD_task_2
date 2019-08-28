@@ -1,9 +1,12 @@
+.num-and-price-wrap {
+	display: flex;
+	margin-bottom: 18px;
+	justify-content: space-between;
+}
 .booking-card__room {
 	padding-top: 3px;
-	float: left;
-	margin-bottom: 18px;
 	> * {
-		display: inline-block;
+		display: inline;
 	}
 	h2 {
 		font-size: 14px;
@@ -15,10 +18,9 @@
 }
 
 .booking-card__price-per-day {
-	float: right;
 	padding-top: 7px;
 	> * {
-		display: inline-block;
+		display: inline;
 	}
 	h3 {
 		font-size: 14px;
@@ -43,7 +45,6 @@
 	margin-bottom: 37px;	
 }
 .booking-info__text {
-	float: left;
 	max-width: 215px;
 	line-height: 18px;
 	margin-top: 3px;
@@ -55,7 +56,6 @@
 }
 .booking-info__icon {
 	margin-top: 2px;
-	float: right;
 	width: 20px;
 	height: 20px;
 	border: 1px solid $c25;
@@ -70,6 +70,8 @@
 .booking-card__booking-info {
 	height: 34px;
 	padding-left: 1px;
+	display: flex;
+	justify-content: space-between;
 }
 .booking-card__total {
 	margin-bottom: 20px;
@@ -98,3 +100,5 @@
 	float: right;
 	padding-left: 4px;
 }
+
+

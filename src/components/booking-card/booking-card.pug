@@ -1,20 +1,21 @@
 div(class="card booking-card")
-	div(class="booking-card__room")
-		h2 №<span class="room__number">888</span>
-		a(class="link link_color_bright") люкс
-	div(class="booking-card__price-per-day")
-		h3 <span>9 990</span>₽
-		span в сутки
+	div(class="num-and-price-wrap")
+		div(class="booking-card__room")
+			h2 №<span class="room__number">888</span>
+			a(class="link link_color_bright") люкс
+		div(class="booking-card__price-per-day")
+			h3 <span>9 990</span>₽
+			span в сутки
 
-	div(class="date-search clearfix" id="booking-card__date-search" )
+	div(class="date-search" id="booking-card__date-search" )
 		label(class="label")
 			h3 Прибытие
-			input(class="input input_size_small" id="booking-card__first-date" placeholder="19.08.2019")
+			input(class="input input_masked_date input_size_small" id="booking-card__first-date" placeholder="19.08.2019")
 			div(class="input__arrow arrow")
 				i(class="material-icons") expand_more
 		label(class="label")
 			h3 Выезд
-			input(class="input input_size_small" id="booking-card__last-date" placeholder="23.08.2019")
+			input(class="input input_masked_date input_size_small" id="booking-card__last-date" placeholder="23.08.2019")
 			div(class="input__arrow arrow")
 				i(class="material-icons") expand_more
 
@@ -44,21 +45,21 @@ div(class="card booking-card")
 			a(class="link dropdown__link_apply link_color_bright") Применить
 
 	div(class="booking-info-wrap")
-		div(class="booking-card__booking-info clearfix")
+		div(class="booking-card__booking-info")
 			span(class="booking-info__text") <span class="booking-info__price-per-day">9 990</span>₽ х <span class="booking-info__days-number">4</span> суток
 			span(class="booking-info__price") <span>39 960</span>₽
 
-		div(class="booking-card__booking-info clearfix")
+		div(class="booking-card__booking-info")
 			span(class="booking-info__text") Сбор за услуги: скидка <span class="booking-info__discount">2 179</span>₽
+			div(class="booking-info__icon") i
 			span(class="booking-info__price") <span>0</span>₽
-			div(class="booking-info__icon") i
-
-		div(class="booking-card__booking-info clearfix")
+			
+		div(class="booking-card__booking-info")
 			span(class="booking-info__text") Сбор за дополнительные услуги
-			span(class="booking-info__price") <span>300</span>₽
 			div(class="booking-info__icon") i
-
-	div(class="booking-card__total clearfix")
+			span(class="booking-info__price") <span>300</span>₽
+			
+	div(class="booking-card__total")
 		h2 Итого
 		h2(class="total__price") <span>38 081</span>₽
 

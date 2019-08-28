@@ -42,12 +42,14 @@ h1 {
 	line-height: 30px;
 	color: $c100;
 	font-weight: bold;
+	font-style: normal;
 }
 h2 {
 	font-family: "Quicksand-Bold", sans-serif;
 	font-size: 19px;
 	line-height: 24px;
 	color: $c100;
+	font-weight: bold;
 }
 h3 {
 	font-family: "Montserrat-Bold", sans-serif;
@@ -74,6 +76,7 @@ h3 {
 	padding: 40px 30px 30px 30px;
 	box-sizing: border-box;
 	border-radius: 4px;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 	h1 {
 		font-size: 26px;
 	}
@@ -109,6 +112,13 @@ hr {
 	margin: 0;
 	opacity: .3;
 }
+.background-image {
+	background: center, center no-repeat;
+	background-size: cover;
+	position: relative;	
+}
+
+
 
 /*------------------------------ Import styles ----------------------------------------*/
 
@@ -155,16 +165,5 @@ hr {
 @import '../pages/ui-kit/ui-kit.scss';
 @import '../pages/landing-page/landing-page.scss';
 @import '../pages/search-room/search-room.scss';
-
-.b {
-	padding: 10px 20px;
-	background-color: #fff;
-	margin: 2px;
-	display: inline-flex;	
-	border-radius: 100px;	
-}
-.bw {
-	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-	display: inline-flex;	
-	border-radius: 100px;	
-}
+@import '../pages/room-details/room-details.scss';
+@import '../pages/registration/registration.scss';

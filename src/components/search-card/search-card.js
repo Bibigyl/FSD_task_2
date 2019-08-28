@@ -40,14 +40,14 @@ $(document).ready( function() {
     {
       evt.stopPropagation();
       $('#search-card__date-search').data('dateRangePicker').clear();
-      $("#search-card__date-search .td-checked").removeClass("td-checked td-first-day-selected-temp");
+      $(".td-checked").removeClass("td-checked td-first-day-selected-temp");
     });
 
     $('.calendar__link_apply').click(function(evt)
     {
       evt.stopPropagation();
       $('#search-card__date-search').data('dateRangePicker').close();
-      $("#search-card__date-search .td-checked").removeClass("td-checked td-first-day-selected-temp");
+      $(".td-checked").removeClass("td-checked td-first-day-selected-temp");
     });
   });
 
