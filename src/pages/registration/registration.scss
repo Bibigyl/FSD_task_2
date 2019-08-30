@@ -1,0 +1,28 @@
+.registration__header {
+	.header__menu {
+		a {
+			margin-right: 20px;
+			letter-spacing: 0.07px;			
+		}
+		li:last-child a {
+			margin-right: 16px;
+		}
+	}
+	.button_size_middle {
+		margin-left: 24px;
+	}
+}
+.registration__front {
+	height: 702px;
+	display: flex;
+	justify-content: center;
+	.card-wrap {
+		align-self: center;
+	}
+}
+.login-card {
+	margin-top: 12px;
+}
+.check-in-card {
+	margin-top: 5px;
+}

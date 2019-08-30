@@ -17,6 +17,9 @@
 		border-color: $c50;
 		color: $c75;
 	}
+	&:not(empty) {
+		color: $c75;
+	}
 }
 .input__arrow {
 	position: absolute;

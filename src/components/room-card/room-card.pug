@@ -22,7 +22,7 @@ mixin room(room_class, image, number, price, rating, star_name, reviews, lux)
 		div(class="room-card__rating-wrap")
 			div(class="rating room-card__rating")
 				-for (var i = 5; i > 0; i--)
-					input(class="rating__star" name=(star_name + i) value=i id=(star_name + i) type="radio" checked= rating == i )
+					input(class="rating__star" name=(star_name) value=i id=(star_name + i) type="radio" checked= rating == i )
 					label(class="label label_rating material-icons" for=(star_name + i) )
 
 			div(class="room-card__reviews")

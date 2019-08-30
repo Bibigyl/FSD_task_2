@@ -1,5 +1,4 @@
 .landing-page__header {
-	position: absolute;
 	.header__menu {
 		a {
 			margin-right: 20px;
@@ -13,17 +12,17 @@
 		margin-left: 24px;
 	}
 }
-.front {
+.landing-page__front {
 	width: 100%;
 	height: 100vh;
 	height: 900px; //-----------------------! temp?
 	.search-card {
-		margin: 140px 0 auto 0;
+		margin: 71px 0 auto 0;
 	}
 }
 .front__container {
 	width: 80vw;
-	height: 100%;
+	height: 830px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;

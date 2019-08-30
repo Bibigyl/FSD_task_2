@@ -1,0 +1,44 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset = 'utf-8')
+    meta(name='viemport', content="initial-scale=1.0, width=device-width")
+    title Registration
+    link(rel="stylesheet" href="style.css")
+  body.registration
+    include ../../components/header/header.pug
+    +header(
+      "registration__header",
+    [
+      {name: "О нас", href: "#"},
+      {name: "Услуги", href: "#", arrow: true},
+      {name: "Вакансии", href: "#"},
+      {name: "Новости", href: "#"},
+      {name: "Соглашения", href: "#", arrow: true},
+    ],
+      {name: "Войти"}, 
+      {name: "Зарегистрироваться"}, 
+      {name: "Cosmin Negoita", class: "hidden"}
+    )
+    
+    .registration__front.background-image(style="background-image: url('src/pages/registration/images/registration__front.jpg')")
+      .card-wrap.check-in-card-wrap.card_active
+        include ../../components/check-in-card/check-in-card.pug
+      .card-wrap.login-card-wrap.hidden
+        include ../../components/login-card/login-card.pug
+
+    include ../../components/footer/footer.pug
+    +footer(
+      "registration__footer",
+      "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+      [
+        {title: "Навигация", items: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
+        {title: "О нас", items: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
+        {title: "Служба поддержки", items: ["Соглашения", "Сообщества", "Связь с нами"]}
+      ],
+      {title: "Подписка", text: "Получайте специальные предложения и новости сервиса", button_text: "Email"},
+      "Copyright © 2018 Toxin отель. Все права зачищены."
+    )
+
+    script(src="registration.js")
+    script(src="http://localhost:35729/livereload.js")

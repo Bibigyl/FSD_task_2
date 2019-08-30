@@ -1,0 +1,584 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset = 'utf-8')
+		meta(name='viemport', content="initial-scale=1.0, width=device-width")
+		title UI Kit page
+		link(rel="stylesheet" href="style.css")
+	body
+		section(class="ui-section ui-section_white colors-and-type")
+			div(class="ui-logo")
+				include ../../common.blocks/logo/ui-logo.svg
+			div(class="ui-container")
+
+				div(class="colors")
+					div(class="color-item")
+						div(class="color-item__square")
+						div(class="color-item__desc")
+							h2 Dark Shade 100%</br><span>#1F2041</span>
+					div(class="color-item")
+						div(class="color-item__square")
+						div(class="color-item__desc")
+							h2 Dark Shade 75%</br><span>#1F2041</span>
+					div(class="color-item")
+						div(class="color-item__square")
+						div(class="color-item__desc")
+							h2 Dark Shade 50%</br><span>#1F2041</span>
+					div(class="color-item")
+						div(class="color-item__square")
+						div(class="color-item__desc")
+							h2 Dark Shade 25%</br><span>#1F2041</span>
+					div(class="color-item")
+						div(class="color-item__square")
+						div(class="color-item__desc")
+							h2 Dark Shade 5%</br><span>#1F2041</span>
+					div(class="color-item")
+						div(class="color-item__square")
+						div(class="color-item__desc")
+							h2 Purple</br><span>#BC9CFF</span>
+					div(class="color-item")
+						div(class="color-item__square")
+						div(class="color-item__desc")
+							h2 Green</br><span>#6FCF97</span>
+
+				div(class="fonts")
+					div(class="font-item")
+						div(class="font-item__tag")
+							h1 H1
+						h1(class="font-item__desc") This one is the sub-section or widget title
+					div(class="font-item")
+						div(class="font-item__tag")
+							h2 H2
+						h2(class="font-item__desc") Next one is the item title inside widgets
+					div(class="font-item")
+						div(class="font-item__tag")
+							h3 H3
+						h3(class="font-item__desc") This is a label or cta text
+					div(class="font-item")
+						div(class="font-item__tag")
+							span Body
+						span(class="font-item__desc") This is the body text which is used for most</br> of the design, like paragraphs, lists, etc.
+		
+		section(class="ui-section ui-section_white form-elements")
+			div(class="ui-logo")
+				include ../../common.blocks/logo/ui-logo.svg
+			container(class="ui-container ui-form-blocks-1")
+				div(class="ui-column")
+					div(class="ui-form-block")
+						label(class="label ui-label")
+							h3 Text field
+							input(class="input input_size_big" placeholder="Email")
+							span(class="ui-field-state") Default
+						label(class="label ui-label")
+							h3 Text field
+							input(class="input ui-input_hover input_size_big" placeholder="This is pretty awesome")
+							span(class="ui-field-state") Hover / Focus
+						label(class="label ui-label")
+							h3 Dropdown
+							select(class="select select_size_big")
+								option(value="" disabled selected hidden) Сколько гостей
+								option 1
+								option 2
+								option 3
+								option 4
+							div(class="select__arrow arrow")
+								i(class="material-icons") expand_more
+							span(class="ui-field-state") Default
+						label(class="label ui-label")
+							h3 Masked text field
+							input(class="input input_size_big input_masked_date" placeholder="ДД.ММ.ГГГГ")
+							span(class="ui-field-state") Default
+
+					div(class="ui-form-block")
+						div(class="lui-date-search date-search" id="ui-date-search" )
+							label(class="label ui-label")
+								h3 Date dropdown
+								input(class="input input_size_small calendar" id="ui-first-date" placeholder="ДД.ММ.ГГГГ")
+								div(class="input__arrow arrow")
+									i(class="material-icons") expand_more
+							label(class="label ui-label")
+								h3 Date dropdown
+								input(class="input input_size_small calendar" id="ui-last-date" placeholder="19.08.2019")
+								div(class="input__arrow arrow")
+									i(class="material-icons") expand_more
+
+					div(class="ui-form-block")
+						label(class="label ui-label")
+							h3 Filter date dropdown
+							select(class="select select_size_middle")
+								option(value="" disabled selected hidden) 19 авг - 23 авг
+								option 1
+								option 2
+								option 3
+								option 4
+							div(class="select__arrow arrow")
+								i(class="material-icons") expand_more
+
+					div(class="ui-form-block")
+						label(class="label ui-label")
+							h3 Subscription text field
+							input(class="input input_size_middle" type="email" placeholder="Email")
+							div(class="input__arrow  arrow")
+								i(class="material-icons icons_colored") arrow_forward
+
+				div(class="ui-column")
+					div(class="ui-form-block")
+						h3 Checkbox buttons
+						label(class="label ui-label label_checkbox")
+							input(class="checkbox" type="checkbox")
+							div(class="checkbox__text") Можно курить
+						label(class="label ui-label label_checkbox")
+							input(class="checkbox" type="checkbox" checked)
+							div(class="checkbox__text") Можно с питомцами
+						label(class="label ui-label label_checkbox")
+							input(class="checkbox" type="checkbox" checked)
+							div(class="checkbox__text") Можно пригласить гостей </br>(до 10 человек)
+
+					div(class="ui-form-block")
+						h3 Radio buttons
+						label(class="label ui-label label_radio")
+							input(class="radio" type="radio" name="ui-radio" checked)
+							div(class="radio__text") Мужчина
+						label(class="label ui-label label_radio")
+							input(class="radio" type="radio" name="ui-radio")
+							div(class="radio__text") Женщина
+
+					div(class="ui-form-block")
+						h3 Toggle
+						label(class="label ui-label label_toggle")
+							input(class="toggle" type="checkbox" checked)
+							div(class="toggle__text") Получать спецпредложения
+						label(class="label ui-label label_toggle")
+							input(class="toggle" type="checkbox")
+							div(class="toggle__text") Получать спецпредложения
+
+					div(class="ui-form-block")
+						h3 Like button
+						div(class="like-button-wrap")
+							label(class="label ui-label label_like-button")
+								input(class="like-button" type="checkbox")
+								div(class="like-button__text") 2
+									div(class="material-icons")
+						div(class="like-button-wrap like-button-wrap_active")
+							label(class="label ui-label label_like-button")
+								input(class="like-button" type="checkbox" checked)
+								div(class="like-button__text") 12
+									div(class="material-icons")
+
+					div(class="ui-form-block")
+						h3 Rate button
+						div(class="rating ui-rating")
+							input(class="rating__star" name="ui-rating" value="5" id="ui-rating_5" type="radio")
+							label(class="label label_rating material-icons" for="ui-rating_5")
+							input(class="rating__star" name="ui-rating" value="4" id="ui-rating_4" type="radio" checked)
+							label(class="label label_rating material-icons" for="ui-rating_4")
+							input(class="rating__star" name="ui-rating" value="3" id="ui-rating_3" type="radio")
+							label(class="label label_rating material-icons" for="ui-rating_3")
+							input(class="rating__star" name="ui-rating" value="2" id="ui-rating_2" type="radio")
+							label(class="label label_rating material-icons" for="ui-rating_2")
+							input(class="rating__star" name="ui-rating" value="1" id="ui-rating_1" type="radio")
+							label(class="label label_rating material-icons" for="ui-rating_1")
+
+						div(class="rating ui-rating")
+							input(class="rating__star" name="ui2-rating" value="5" id="ui2-rating_5" type="radio" checked)
+							label(class="label label_rating material-icons" for="ui2-rating_5")
+							input(class="rating__star" name="ui2-rating" value="4" id="ui2-rating_4" type="radio")
+							label(class="label label_rating material-icons" for="ui2-rating_4")
+							input(class="rating__star" name="ui2-rating" value="3" id="ui2-rating_3" type="radio")
+							label(class="label label_rating material-icons" for="ui2-rating_3")
+							input(class="rating__star" name="ui2-rating" value="2" id="ui2-rating_2" type="radio")
+							label(class="label label_rating material-icons" for="ui2-rating_2")
+							input(class="rating__star" name="ui2-rating" value="1" id="ui2-rating_1" type="radio")
+							label(class="label label_rating material-icons" for="ui2-rating_1")
+
+				div(class="ui-column")
+					div(class="ui-form-block")
+						h3 Range slider
+						div(class="slider-range")
+							div(class="slider-wrapper")
+								div(id="slider-range")
+							div(class="range-wrapper")
+								div(class="range")
+
+					div(class="ui-form-block")
+						h3 Buttons
+						div(class="ui-buttons-wrap")
+							div(class="ui-button button button_color_filled button_size_middle" ) Click me
+							div(class="ui-button button button_color_filled button_size_middle ui-button_state_not-active") Click me
+							div(class="ui-button button-wrap ui-button-wrap button-wrap_color_empty")
+								div(class="button") Click me
+							div(class="ui-button button-wrap ui-button-wrap ui-button_state_not-active button-wrap_color_empty")
+								div(class="button") Click me
+							a(class="ui-link link link_color_bright") Click me
+							a(class="ui-link link link_color_grey") Click me
+							div(class="ui-button button button_color_filled button_size_big") Перейти к оплате
+								div(class="button__arrow arrow")
+									i(class="material-icons") arrow_forward
+
+					div(class="ui-form-block")
+						h3 Pagination
+						div(class="pagination")
+						div(class="pagination__arrow arrow")
+							i(class="material-icons") arrow_forward
+						div(class="pagination__text") <span>1 - 12 из 100+</span> вариантов аренды
+
+			container(class="ui-container ui-form-blocks-2")
+				div(class="ui-column")
+					div(class="ui-form-block")
+						div(class="ui-dropdown dropdown dropdown_size_middle  dropdown_choice_furniture")
+							h3 Dropdown
+							div(class="dropdown__field") <span>2 спальни, 2 кровати...</span>
+								div(class="dropdown__arrow arrow")
+									i(class="material-icons") expand_more
+							span(class="ui-field-state") Default
+							div(class="dropdown-ul-wrap")
+								ul
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 2
+										span(class="dropdown__button dropdown__button_minus") -
+										|Спальни
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 2
+										span(class="dropdown__button dropdown__button_minus") -
+										|Кровати
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 0
+										span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+										|Ванные комнаты
+
+						div(class="ui-dropdown dropdown dropdown_size_middle  dropdown_choice_furniture dropdown_state_open")
+							h3 Dropdown
+							div(class="dropdown__field") <span>2 спальни, 2 кровати...</span>
+								div(class="dropdown__arrow arrow")
+									i(class="material-icons") expand_more
+							span(class="ui-field-state") Expanded
+							div(class="dropdown-ul-wrap")
+								ul
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 3
+										span(class="dropdown__button dropdown__button_minus") -
+										|Спальни
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 2
+										span(class="dropdown__button dropdown__button_minus") -
+										|Кровати
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 0
+										span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+										|Ванные комнаты
+
+
+				div(class="ui-column")
+					div(class="ui-form-block")
+						div(class="ui-dropdown dropdown dropdown_size_big  dropdown_choice_guests dropdown_state_open")
+							h3 Dropdown
+							div(class="dropdown__field") <span>Сколько гостей</span>
+								div(class="dropdown__arrow arrow")
+									i(class="material-icons") expand_more
+							div(class="dropdown-ul-wrap")
+								ul
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 0
+										span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+										|Взрослые
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 0
+										span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+										|Дети
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 0
+										span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+										|Младенцы
+								a(class="link dropdown__link_clear link_color_grey hidden") Очистить
+								a(class="link dropdown__link_apply link_color_bright") Применить
+
+
+				div(class="ui-column")
+					div(class="ui-form-block")
+						div(class="ui-dropdown dropdown dropdown_size_big  dropdown_choice_guests dropdown_state_open")
+							h3 Dropdown
+							div(class="dropdown__field") <span>3 гостя</span>
+								div(class="dropdown__arrow arrow")
+									i(class="material-icons") expand_more
+							div(class="dropdown-ul-wrap")
+								ul
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 2
+										span(class="dropdown__button dropdown__button_minus") -
+										|Взрослые
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 1
+										span(class="dropdown__button dropdown__button_minus") -
+										|Дети
+									li 
+										span(class="dropdown__button dropdown__button_plus") +
+										span(class="dropdown__num") 0
+										span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+										|Младенцы
+								a(class="link dropdown__link_clear link_color_grey") Очистить
+								a(class="link dropdown__link_apply link_color_bright") Применить
+
+			container(class="ui-container ui-form-blocks-3")
+				div(class="ui-column")
+					div(class="ui-form-block")
+						div(class="checkbox-list")
+							h3 Expandable checkbox list
+							div(class="checkbox-list__arrow arrow")
+								i(class="material-icons") expand_more
+							ul
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox")
+										div(class="checkbox__text") Завтрак
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox" checked)
+										div(class="checkbox__text") Письменный стол
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox" checked)
+										div(class="checkbox__text") Стул для кормления
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox")
+										div(class="checkbox__text") Кроватка
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox" checked)
+										div(class="checkbox__text") Телевизор
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox" checked)
+										div(class="checkbox__text") Шампунь
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox" checked)
+										div(class="checkbox__text") Телевизор
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox" checked)
+										div(class="checkbox__text") Шампунь
+
+						div(class="checkbox-list checkbox-list_state_open")
+							h3 Expandable checkbox list
+							div(class="checkbox-list__arrow arrow")
+								i(class="material-icons") expand_more
+							ul
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox")
+										div(class="checkbox__text") Завтрак
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox" checked)
+										div(class="checkbox__text") Письменный стол
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox" checked)
+										div(class="checkbox__text") Стул для кормления
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox" checked)
+										div(class="checkbox__text") Кроватка
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox")
+										div(class="checkbox__text") Телевизор
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox")
+										div(class="checkbox__text") Шампунь
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox")
+										div(class="checkbox__text") Телевизор
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox")
+										div(class="checkbox__text") Шампунь
+
+				div(class="ui-column")
+					div(class="ui-form-block")
+						div(class="rich-checkbox-list")
+							h3 Rich checkbox buttons
+							ul
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox")
+										div(class="checkbox__text") Широкий коридор
+										p Ширина коридоров в номере</br>не менее 91 см.
+								li
+									label(class="label ui-label label_checkbox")
+										input(class="checkbox" type="checkbox")
+										div(class="checkbox__text") Помощник для инвалидов
+										p На 1 этаже вас встретит специалист и проводит до номера
+
+				div(class="ui-column")
+					div(class="ui-form-block")
+						h3 Bullet list
+						ul(class="bullet-list")
+							li Нельзя с питомцами
+							li Без вечеринок и мероприятий
+							li Время прибытия — после 13:00,</br>а выезд до 12:00
+
+			container(class="ui-container ui-form-blocks-4")
+				div(class="ui-column")
+					div(class="ui-form-block")
+						ul(class="advantages")
+							li
+								i(class="material-icons advantage__icon") insert_emoticon
+								span(class="advantage__title") Комфорт
+								span Шумопоглащаюшие стены
+							li
+								i(class="material-icons advantage__icon") location_city
+								span(class="advantage__title") Удобство
+								span Окно в каждой из спален
+				div(class="ui-column")
+					div(class="ui-form-block")
+						div(class="review ui-review")
+							div(class="review__avatar ui-review__avatar"  style="background-image: url('src/images/avatar.png');")
+							div(class="like-button-wrap review__like-button like-button-wrap_active ")
+								label(class="label ui-label label_like-button")
+									input(class="like-button" type="checkbox" checked)
+									div(class="like-button__text") 12
+										div(class="material-icons")
+							span(class="review__name") Мурад Сарафанов
+							span 5 дней назад
+							p(class="review__text") Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+
+
+		section(class="ui-section ui-section_grey cards")
+			div(class="ui-logo")
+				include ../../common.blocks/logo/ui-logo.svg
+			container(class="ui-container")
+				div(class="ui-card")
+					include ../../components/search-card/search-card.pug
+
+
+				div(class="ui-card")
+					include ../../components/check-in-card/check-in-card.pug
+
+
+				div(class="ui-card")
+					include ../../components/booking-card/booking-card.pug
+
+
+				div(class="ui-card")
+					include ../../components/login-card/login-card.pug
+
+
+				div(class="ui-card card calendar-card" id="ui-calendar-card")
+					input(id="ui-calendar" class="calendar ui-calendar")
+
+
+				div(class="ui-card ui-card-room")
+					include ../../components/room-card/room-card.pug
+
+
+				div(class="ui-card ui-card-room")
+					div(class="card room-card")
+						div(class="room-card__image ui-room-card__image" style="background-image: url('src/images/room2.png')")
+							div(class="room-card__arrow arrow hidden") 
+								i(class="material-icons") expand_more
+							div(class="room-card__arrow arrow hidden") 
+								i(class="material-icons") expand_more
+							div(class="room-card__dots")
+								div(class="room__dot room__dot_active")
+								div(class="room__dot")
+								div(class="room__dot")
+								div(class="room__dot")
+						div(class="room-card__room")
+							h2 №<span class="room__number">840</span>
+							a(class="link link_color_bright hidden") люкс
+						div(class="room-card__price-per-day")
+							h3 <span>9 900</span>₽
+							span в сутки
+						div(class="clearfix room-card__line")
+						div(class="room-card__rating-wrap")
+							div(class="rating room-card__rating")
+								input(class="rating__star" name="ui-rating2" value="5" id="ui-rating_52" type="radio")
+								label(class="label label_rating material-icons" for="ui-rating_52")
+								input(class="rating__star" name="ui-rating2" value="4" id="ui-rating_42" type="radio" checked)
+								label(class="label label_rating material-icons" for="ui-rating_42")
+								input(class="rating__star" name="ui-rating2" value="3" id="ui-rating_32" type="radio")
+								label(class="label label_rating material-icons" for="ui-rating_32")
+								input(class="rating__star" name="ui-rating2" value="2" id="ui-rating_22" type="radio")
+								label(class="label label_rating material-icons" for="ui-rating_22")
+								input(class="rating__star" name="ui-rating2" value="1" id="ui-rating_12" type="radio")
+								label(class="label label_rating material-icons" for="ui-rating_12")
+							div(class="room-card__reviews")
+								h3 65
+								span Отзывов
+
+
+		section(class="ui-section ui-section_grey headers-and-footers")
+			div(class="ui-logo")
+				include ../../common.blocks/logo/ui-logo.svg
+
+
+			include ../../components/header/header.pug
+			+header(
+				"ui-line-block",
+			[
+				{name: "Home", href: "#", class: "menu__item_active"},
+				{name: "About Us", href: "#"},
+				{name: "Services", href: "#", arrow: true},
+				{name: "Careers", href: "#"},
+				{name: "News", href: "#"},
+				{name: "Documentation", href: "#"},
+			],
+			  {name: "Login"}, 
+			  {name: "Register"}, 
+			  {name: "Cosmin Negoita", class: "hidden"}
+			)
+
+
+			include ../../components/header/header.pug
+			+header(
+				"ui-line-block",
+				[
+					{name: "Home", href: "#", class: "menu__item_active"},
+					{name: "About Us", href: "#"},
+					{name: "Services", href: "#", arrow: true},
+					{name: "Careers", href: "#"},
+					{name: "News", href: "#"},
+					{name: "Documentation", href: "#"},
+				],
+			  {name: "Login", class: "hidden"}, 
+			  {name: "Register", class: "hidden"}, 
+			  {name: "Cosmin Negoita"}
+			)
+
+			include ../../components/footer/footer.pug
+			+footer(
+				"ui-line-block ui-footer",
+				"Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+				[
+					{title: "Navigation", items: ["About Us", "News", "Support", "Products"]},
+					{title: "About Us", items: ["Who we are", "Our team", "Careers", "Investors"]},
+					{title: "Support", items: ["Documentation", "Community", "Get in Touch"]}
+				],
+				{title: "Subscribe to our newsletter", text: "Receive our latest news and promotions in your inbox!", button_text: "Your email address"},
+				"Copyright © 2018 Toxin UI Kit. All rights reserved."
+			)
+
+
+			div(class="ui-line-block")
+				include ../../components/footer-min/footer-min.pug
+
+
+		script(src="ui-kit.js")
+		script(src="http://localhost:35729/livereload.js")
+
+

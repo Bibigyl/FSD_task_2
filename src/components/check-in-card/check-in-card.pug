@@ -19,9 +19,9 @@ div(class="card check-in-card")
 
 	h3 Данные для входа в сервис
 	label(class="label")
-		input(class="input input_size_big" name="email" placeholder="Email")
+		input(class="input input_size_big" type="email" name="email" placeholder="Email")
 	label(class="label")
-		input(class="input input_size_big" name="password" placeholder="Пароль")
+		input(class="input input_size_big" type="password" name="password" placeholder="Пароль")
 
 	label(class="label label_toggle")
 		input(class="toggle" type="checkbox" name="promotions")
@@ -33,5 +33,5 @@ div(class="card check-in-card")
 
 	div(class="card__information")
 		span Уже есть аккаунт на Toxin
-		div(class="button-wrap button_size_middle")
-			div(class="button button_color_empty") Войти
+		div(class="button-wrap button-wrap_color_empty button_login")
+			div(class="button") Войти

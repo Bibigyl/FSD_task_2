@@ -47,8 +47,9 @@ $(document).ready( function() {
     {
       evt.stopPropagation();
       $('#search-card__date-search').data('dateRangePicker').close();
-      $(".td-checked").removeClass("td-checked td-first-day-selected-temp");
     });
+
   });
+
 
 });

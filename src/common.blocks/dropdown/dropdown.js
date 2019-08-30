@@ -106,7 +106,7 @@ $( document ).ready(function() {
       return text;
     }
 
-    function guestsText() {
+    function guestsTextFull() {
       for ( let i = 0; i < 3; i++ ) {
         t = $ulNode.children().eq(i).find(".dropdown__num").text();
         if (t != 0) {
@@ -155,17 +155,33 @@ $( document ).ready(function() {
 
     function guestsCount() {
       let count = $ulNode.children().eq(0).find(".dropdown__num").text()*1 + $ulNode.children().eq(1).find(".dropdown__num").text()*1;
+      let n = $ulNode.children().eq(2).find(".dropdown__num").text()*1;
+
       if ( count >= 5 && count <= 20 ) {
         count = count + " гостей";
       } else if ( count % 10 == 1 ) {
         count = count + " гость";
       } else if ( count % 10 >= 2 && count % 10 <= 4 ) {
         count = count + " гостя";
-      } else if ( count == 0 ) {
+      } else if ( count == 0 && n == 0 ) {
         count = "Сколько гостей";
+        return count;
       } else {
         count = count + " гостей";
       }
+
+      if (n == 0 ) {
+        return count; 
+      } else if ( n % 10 == 1 ) {
+        n = n + " младенец";
+      } else if ( n % 10 >= 2 && n % 10 <= 4 ) {
+        n = n + " младенца";
+      } else {
+        n = n + " младенцев";
+      }
+
+      count = count + ", " + n;
+
       return count; 
     }
 

@@ -8,7 +8,6 @@
 @import '../libs/jquery-ui-1.12.1.custom/jquery-ui.min.css';
 @import '../libs/font-awesome-4.7.0/scss/font-awesome.scss';
 
-
 /*------------------------------ Common styles ----------------------------------------*/
 
 /*------- Add fonts ------------*/
@@ -46,6 +45,7 @@ h1 {
 }
 h2 {
 	font-family: "Quicksand-Bold", sans-serif;
+	//font-family: "Montserrat-Bold", sans-serif;
 	font-size: 19px;
 	line-height: 24px;
 	color: $c100;

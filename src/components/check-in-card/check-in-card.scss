@@ -25,7 +25,10 @@
 	.toggle__text {
 		margin-bottom: 24px;
 	}
-	.button {
-		margin-bottom: 29px;	
+	.button_size_big {
+		margin-bottom: 29px;
+	}
+	.button-wrap_color_empty > * {
+		padding: 13px 24px;
 	}
 }
