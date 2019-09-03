@@ -107,6 +107,19 @@ h3 {
   max-width: 1160px;
   margin-right: auto;
   margin-left: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+  	box-sizing: border-box;
+  }
+}
+@media (max-width: 1200px) {
+	.container {
+		padding: 0 30px;
+		margin-right: 0;
+		margin-left: 0;
+	}
 }
 hr {
 	margin: 0;
@@ -117,8 +130,26 @@ hr {
 	background-size: cover;
 	position: relative;	
 }
-
-
+.card__information {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	span {
+		width: 60%;
+		min-width: 193px;
+		box-sizing: border-box;
+		line-height: 40px;
+	}
+	.button {
+		min-width: 50px;
+	}
+}
+@media (max-width: 370px) {
+	.card__information > * {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 
 /*------------------------------ Import styles ----------------------------------------*/
 
@@ -167,3 +198,19 @@ hr {
 @import '../pages/search-room/search-room.scss';
 @import '../pages/room-details/room-details.scss';
 @import '../pages/registration/registration.scss';
+
+
+/*------------- Common styles for pages in russian -----------*/
+
+@media (max-width: 800px) {
+	h1 {
+		font-size: 24px;
+		letter-spacing: auto;
+	}
+}
+@media (max-width: 400px) {
+	h1 {
+		font-size: 20px;
+		letter-spacing: auto;
+	}
+}

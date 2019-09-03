@@ -32,3 +32,20 @@
 		padding: 13px 24px;
 	}
 }
+@media (max-width: 800px) {
+	.check-in-card h1 {
+		font-size: 24px;
+		letter-spacing: auto;
+	}
+}
+@media (max-width: 500px) {
+	.check-in-card .label_radio:nth-child(4) {
+		margin-bottom: 5px;	
+	}
+}
+@media (max-width: 400px) {
+	.check-in-card h1 {
+		font-size: 20px;
+		letter-spacing: auto;
+	}
+}

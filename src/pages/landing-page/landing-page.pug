@@ -5,11 +5,11 @@ html(lang="ru")
 		meta(name='viemport', content="initial-scale=1.0, width=device-width")
 		title Landing page
 		link(rel="stylesheet" href="style.css")
-	body
+	body.landing-page
 		.landing-page__front.background-image(style="background-image: url('src/pages/landing-page/images/front.jpg')")
 			include ../../components/header/header.pug
 			+header(
-				"landing-page__header",
+				"landing-page__header header_language_ru",
 			[
 				{name: "О нас", href: "#"},
 				{name: "Услуги", href: "#", arrow: true},

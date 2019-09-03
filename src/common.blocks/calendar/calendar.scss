@@ -15,3 +15,23 @@
 		margin-right: 8px;
 	}
 }
+
+@media (max-width: 560px) {
+	.date-picker-wrapper {
+		width: 250px;
+		.month-wrapper table {
+			width: 210px;
+			.day, td {
+				height: 30px;
+				line-height: 30px;
+			}
+			.caption {
+				height: 35px;
+			}	
+		}
+		.month-name {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+	}
+}

@@ -5,7 +5,9 @@
 	margin-bottom: 20px;
 	ul {
 		display: none;
-		background-color: #fff;
+		position: absolute;
+		top: 47px;
+		left: -1px;
 	}
 	h3 {
 		line-height: 44px;
@@ -23,7 +25,8 @@
 .checkbox-list_state_open {
 	ul {
 		display: block;
-		z-index: 5;
+		background-color: #fff;
+		z-index: 100;
 	}
 	.material-icons {
 		transform: scale(1, -1);

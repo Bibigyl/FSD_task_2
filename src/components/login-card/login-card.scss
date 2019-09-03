@@ -12,4 +12,36 @@
 	.button_size_big {
 		margin-bottom: 31px;
 	}
+	.card__information {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		span {
+			width: 60%;
+			min-width: 193px;
+			box-sizing: border-box;
+		}
+		.button {
+			min-width: 50px;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.login-card h1 {
+		font-size: 24px;
+		letter-spacing: auto;
+	}
+}
+@media (max-width: 400px) {
+	.login-card h1 {
+		font-size: 20px;
+		letter-spacing: auto;
+	}
+}
+@media (max-width: 370px) {
+	.login-card .card__information > *{
+		margin-left: auto;
+		margin-right: auto;
+	}
 }

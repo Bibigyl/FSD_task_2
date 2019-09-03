@@ -42,7 +42,7 @@
 	}
 }
 .booking-info-wrap {
-	margin-bottom: 37px;	
+	margin-bottom: 32px;	
 }
 .booking-info__text {
 	max-width: 215px;
@@ -51,7 +51,7 @@
 }
 .booking-info__price {
 	float: right;
-	width: 80px;
+	width: 74px;
 	text-align: right;
 }
 .booking-info__icon {
@@ -68,7 +68,7 @@
 	line-height: 20px;
 }
 .booking-card__booking-info {
-	height: 34px;
+	margin-bottom: 10px;
 	padding-left: 1px;
 	display: flex;
 	justify-content: space-between;
@@ -100,5 +100,39 @@
 	float: right;
 	padding-left: 4px;
 }
-
-
+@media(max-width: 700px) {
+	.details-and-room-card-wrap .room-card-wrap {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media(max-width: 500px) {
+	.booking-card {
+		width: 100%;
+		box-sizing: border-box;
+		* {
+			box-sizing: border-box;
+		}
+	}
+	.details-and-room-card-wrap .room-card-wrap {
+		// width: 100%;
+		box-sizing: border-box;
+		// max-width: none;
+		 min-width: 200px;
+	}
+}
+@media(max-width: 450px) {
+	.booking-card {
+		box-shadow: none;
+		background: none;
+		padding: 0;
+	}
+	.advantages span {
+		margin-left: 50px;
+	}
+}
+@media(max-width: 350px) {
+	.details-and-room-card-wrap {
+		padding: 20px 20px 40px;
+	}
+}

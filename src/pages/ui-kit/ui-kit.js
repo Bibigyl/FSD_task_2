@@ -22,7 +22,7 @@ $( document ).ready(function() {
   });
 
 
-  $('#ui-calendar').data('dateRangePicker').setDateRange('19-08-2019','23-08-2019');
+  $('#ui-calendar').data('dateRangePicker').setDateRange('2019/08/19','2019/08/23');
 
   var calendarDayClickCounter = 0;
 

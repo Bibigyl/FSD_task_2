@@ -199,5 +199,9 @@ $( document ).ready(function() {
     $ulNode.parent().parent().find(".dropdown__field span").text("Сколько гостей")
     $(this).addClass("hidden");
   });
+
+  $(".dropdown__link_apply").on("click", function() {
+    $(this).parent().slideToggle(200, "linear").parent().toggleClass("dropdown_state_open");
+  });
   
 });

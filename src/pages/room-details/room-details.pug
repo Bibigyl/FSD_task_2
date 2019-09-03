@@ -8,7 +8,7 @@ html(lang="ru")
   body.room-details
     include ../../components/header/header.pug
     +header(
-      "room-details__header",
+      "room-details__header header_language_ru",
     [
       {name: "О нас", href: "#"},
       {name: "Услуги", href: "#", arrow: true},
@@ -26,7 +26,7 @@ html(lang="ru")
         .room-photo_slim.background-image(style="background-image: url('src/pages/room-details/images/2.jpg')")
         .room-photo_slim.background-image(style="background-image: url('src/pages/room-details/images/3.jpg')")
 
-    .details-wrap.container
+    .details-and-room-card-wrap.container
       .details
         .details__info
           h2 Сведения о номере
