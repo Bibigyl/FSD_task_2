@@ -1,30 +1,12 @@
-// .search-room__header {
-// 	.header__menu {
-// 		a {
-// 			margin-right: 20px;
-// 			letter-spacing: 0.07px;			
-// 		}
-// 		li:last-child a {
-// 			margin-right: 16px;
-// 		}
-// 	}
-// 	.button_size_middle {
-// 		margin-left: 24px;
-// 	}
+// * {
+//   border: 1px solid #f00 !important;
 // }
-.search-room {
-	> .container {
-		display: flex;
-		padding-top: 30px;
-		padding-bottom: 71px;
-	}
+body, html {
+  overflow-x:hidden; 
 }
-.options {
-	width: 100%;
-	max-width: 280px;
-}
-.rooms {
-	width: 100%;
+.search-room-container {
+	padding-top: 30px;
+	padding-bottom: 71px;
 }
 .option-wrap {
 	width: 100%;
@@ -47,16 +29,18 @@
 		h3 {
 			margin-bottom: 17px;
 		}
-		margin-bottom: 14px;
+		margin-bottom: 29px;
 	}
 	&.rich-checkbox-list {
 		margin-bottom: 29px;
 	}
 	&.dropdown_choice_furniture {
-		margin-bottom: 16px;
+		margin-bottom: 30px;
 	}
 }
 .options {
+  flex: 0 0 266px;
+  box-sizing: border-box;
 	.dropdown {
 		width: 100%;
 	}
@@ -66,7 +50,12 @@
 	}
 }
 .rooms-wrap {
-	padding-left: 47px;
+  flex: 1 1 50%;
+  padding-left: 60px;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
 	h1 {
 		letter-spacing: 0.65px;
 		margin-bottom: 20px;
@@ -77,11 +66,66 @@
 	}
 }
 .rooms {
+  width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-bottom: 20px;
 	.room-card {
-		margin-bottom: 20px;
+		margin-bottom: 21px;
+    width: 100%;
+    min-width: 270px;
+    max-width: 270px;
 	}
+}
+@media(max-width: 1200px) {
+  .rooms {
+    justify-content: space-around;
+  }
+}
+@media(max-width: 970px) {
+  .options {
+    flex: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 390px;
+    align-content: space-between;
+  }
+  .rooms-wrap {
+    flex: 100%;
+    padding-left: 0;
+  }
+}
+@media(max-width: 920px) {
+  .options {
+    height: 570px;
+    align-content: space-around;
+  }
+  .rooms .room-card {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+@media(max-width: 665px) {
+  .options {
+    height: auto;
+    margin-bottom: 20px;
+  }
+} 
+@media(max-width: 450px) {
+  .room-card {
+    width: 100%;
+  }
+}
+@media(max-width: 370px) {
+  .slider-wrapper {
+    width: 230px;
+  }
+  .rooms .room-card {
+    min-width: 230px;
+  }
+  .search-room-container {
+    padding: 70px 10px;
+  }
 }

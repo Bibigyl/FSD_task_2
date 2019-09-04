@@ -220,3 +220,9 @@ label[for="menu__button"] {
 	  padding: 8px 25px;
 	}	
 }
+@media (max-width: 400px) {
+	.header .mobil-menu  {
+	  padding: 30px 20px;
+	  right: 5px;
+	}	
+}

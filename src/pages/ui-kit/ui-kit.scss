@@ -1,3 +1,50 @@
+/*-------- Variables -------------*/
+
+$c100: #1F2041;
+$c75: rgba(31, 32, 65, 0.75);
+$c50: rgba(31, 32, 65, 0.50);
+$c25: rgba(31, 32, 65, 0.25);
+$c5: rgba(31, 32, 65, 0.05);
+$purple: #BC9CFF;
+$green: #6FCF97;
+
+//------------------ Imports ------------------------
+
+@import '../../scss/main.scss';
+
+// /*------- Blocks styles -------------*/
+
+// @import '../../common.blocks/checkbox/checkbox.scss';
+// @import '../../common.blocks/radio/radio.scss';
+// @import '../../common.blocks/toggle/toggle.scss';
+// @import '../../common.blocks/like-button/like-button.scss';
+// @import '../../common.blocks/rating/rating.scss';
+// @import '../../common.blocks/slider-range/slider-range.scss';
+// @import '../../common.blocks/button/button.scss';
+// @import '../../common.blocks/link/link.scss';
+// @import '../../common.blocks/pagination/pagination.scss';
+// @import '../../common.blocks/dropdown/dropdown.scss';
+// @import '../../common.blocks/checkbox-list/checkbox-list.scss';
+// @import '../../common.blocks/rich-checkbox-list/rich-checkbox-list.scss';
+// @import '../../common.blocks/advantages/advantages.scss';
+// @import '../../common.blocks/review/review.scss';
+// @import '../../common.blocks/bullet-list/bullet-list.scss';
+// /* Styles for calendar and inputs - date-search */
+// @import '../../common.blocks/calendar/calendar.scss';
+// @import '../../common.blocks/date-search/date-search.scss';
+
+// /*--------- Components styles -------------*/
+
+// @import '../../components/search-card/search-card.scss';
+// @import '../../components/check-in-card/check-in-card.scss';
+// @import '../../components/booking-card/booking-card.scss';
+// @import '../../components/login-card/login-card.scss';
+// @import '../../components/room-card/room-card.scss';
+// @import '../../components/header/header.scss';
+// @import '../../components/footer/footer.scss';
+// @import '../../components/footer-min/footer-min.scss';
+
+
 .colors-and-type {
   display: none;
 }
@@ -217,7 +264,7 @@
 .ui-form-blocks-2 .ui-column {
   width: 33.3%;
   min-width: 380px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   &:nth-child(2) {
     .ui-form-block {
       padding-left: 61px;
@@ -427,9 +474,13 @@
     letter-spacing: -0.1px;
   }
 }
-.ui-checkbox-list.checkbox-list_state_open {
-  height: 287px;
+// .ui-checkbox-list.checkbox-list_state_open {
+//   height: 287px;
+// }
+.ui-checkbox-list {
+  margin-bottom: 30px;
 }
+
 
 //----------------------------------- @madia -------------------------------------
 

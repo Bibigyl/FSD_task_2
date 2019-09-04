@@ -1,7 +1,25 @@
 //------------------ Imports ------------------------
 
-import "../../scss/main.scss";
+import "./ui-kit.scss";
 import "../../js/main.js";
+
+//------------------ import blocks scripts -----------------------------
+
+// import "../common.blocks/input/input.js";
+// import "../common.blocks/slider-range/slider-range.js";
+// import "../common.blocks/dropdown/dropdown.js";
+// import "../common.blocks/checkbox-list/checkbox-list.js";
+// //import "../common.blocks/date-search/date-search.js";
+// //import "../common.blocks/calendar/calendar.js";
+// import "../common.blocks/pagination/pagination.js";
+// import "../common.blocks/like-button/like-button.js";
+
+// //------------------ import components scripts -----------------------------
+
+// import "../components/booking-card/booking-card.js";
+// import "../components/search-card/search-card.js";
+// import "../components/header/header.js";
+
 
 $( document ).ready(function() {
   
@@ -94,6 +112,7 @@ $( document ).ready(function() {
       $('#ui-date-search').data('dateRangePicker').close();
       $("#ui-date-search .td-checked").removeClass("td-checked td-first-day-selected-temp");
     });
+
   });
   
 });

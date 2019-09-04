@@ -5,7 +5,7 @@ html(lang="ru")
     meta(name='viemport', content="initial-scale=1.0, width=device-width")
     title Search-room
     link(rel="stylesheet" href="style.css")
-  body.search-room
+  body.search-room.page_language_ru
     include ../../components/header/header.pug
     +header(
       "search-room__header header_language_ru",
@@ -20,7 +20,7 @@ html(lang="ru")
       {name: "Зарегистрироваться"}, 
       {name: "Cosmin Negoita", class: "hidden"}
     )
-    .container
+    .container.search-room-container
       .options
         .option-wrap
           label(class="label")
@@ -179,7 +179,7 @@ html(lang="ru")
     hr
     include ../../components/footer/footer.pug
     +footer(
-      "landing-page__footer",
+      "search-room__footer",
       "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
       [
         {title: "Навигация", items: ["О нас", "Новости", "Служба поддержки", "Услуги"]},

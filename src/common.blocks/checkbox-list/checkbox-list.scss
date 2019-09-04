@@ -1,22 +1,22 @@
 .checkbox-list {
 	position: relative;
 	width: 266px;
-	height: 44px;
 	margin-bottom: 20px;
 	ul {
-		display: none;
-		position: absolute;
-		top: 47px;
-		left: -1px;
+		display: block;
+		height: auto;
+		max-height: 0px;
+		background-color: #fff;
+		transition: .4s linear;
+		overflow:hidden; 
 	}
 	h3 {
-		line-height: 44px;
-		margin-bottom: 3px;
+		margin-bottom: 16px;
 	}
 }
 .checkbox-list__arrow {
 	position: absolute;
-	top: 10px;
+	top: -4px;
 	right: 10px;
 	.material-icons {
 		transition: .2s;
@@ -24,9 +24,8 @@
 }
 .checkbox-list_state_open {
 	ul {
-		display: block;
-		background-color: #fff;
-		z-index: 100;
+		max-height: 300px;
+		transition: .4s linear;
 	}
 	.material-icons {
 		transform: scale(1, -1);

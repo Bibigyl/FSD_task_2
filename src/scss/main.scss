@@ -1,24 +1,3 @@
-/*------------------------- CSS normalize (reset) -----------------------------------*/
-
-@import './reset';
-
-/*------------------------------ Import libs ----------------------------------------*/
-
-@import '~material-design-icons/iconfont/material-icons.css';
-@import '../libs/jquery-ui-1.12.1.custom/jquery-ui.min.css';
-@import '../libs/font-awesome-4.7.0/scss/font-awesome.scss';
-
-/*------------------------------ Common styles ----------------------------------------*/
-
-/*------- Add fonts ------------*/
-
-@import './mixins';
-
-@include font-face("Quicksand-Bold", "../fonts/Quicksand-Bold/Quicksand-Bold");
-@include font-face("Quicksand-Regular", "../fonts/Quicksand-Regular/Quicksand-Regular");
-@include font-face("Montserrat-Bold", "../fonts/Montserrat-Bold/Montserrat-Bold");
-@include font-face("Montserrat-Regular", "../fonts/Montserrat-Regular/Montserrat-Regular");
-
 /*-------- Variables -------------*/
 
 $c100: #1F2041;
@@ -28,6 +7,29 @@ $c25: rgba(31, 32, 65, 0.25);
 $c5: rgba(31, 32, 65, 0.05);
 $purple: #BC9CFF;
 $green: #6FCF97;
+
+/*------------------------- CSS normalize (reset) -----------------------------------*/
+
+@import './reset';
+
+/*------------------------------ Import libs ----------------------------------------*/
+
+@import '~material-design-icons/iconfont/material-icons.css';
+@import '../libs/jquery-ui-1.12.1.custom/jquery-ui.min.css';
+//@import '~font-awesome/scss/font-awesome';
+// @import '../libs/jquery.daterangepicker/daterangepicker.scss';
+
+/*------------------------------ Common styles ----------------------------------------*/
+
+/*------- Add fonts ------------*/
+
+// @import '../../scss/mixins';
+
+// @include font-face("Quicksand-Bold", "../fonts/Quicksand-Bold/Quicksand-Bold");
+// @include font-face("Quicksand-Regular", "../fonts/Quicksand-Regular/Quicksand-Regular");
+// @include font-face("Montserrat-Bold", "../fonts/Montserrat-Bold/Montserrat-Bold");
+// @include font-face("Montserrat-Regular", "../fonts/Montserrat-Regular/Montserrat-Regular");
+
 
 body {
 	font-family: "Montserrat-Regular", sans-serif;
@@ -45,7 +47,6 @@ h1 {
 }
 h2 {
 	font-family: "Quicksand-Bold", sans-serif;
-	//font-family: "Montserrat-Bold", sans-serif;
 	font-size: 19px;
 	line-height: 24px;
 	color: $c100;
@@ -114,13 +115,6 @@ h3 {
   	box-sizing: border-box;
   }
 }
-@media (max-width: 1200px) {
-	.container {
-		padding: 0 30px;
-		margin-right: 0;
-		margin-left: 0;
-	}
-}
 hr {
 	margin: 0;
 	opacity: .3;
@@ -142,6 +136,25 @@ hr {
 	}
 	.button {
 		min-width: 50px;
+	}
+}
+@media (max-width: 800px) {
+	.page_language_ru h1 {
+		font-size: 24px;
+		letter-spacing: auto;
+	}
+}
+@media (max-width: 400px) {
+	.page_language_ru h1 {
+		font-size: 20px;
+		letter-spacing: auto;
+	}
+}
+@media (max-width: 1200px) {
+	.container {
+		padding: 0 30px;
+		margin-right: 0;
+		margin-left: 0;
 	}
 }
 @media (max-width: 370px) {
@@ -193,24 +206,9 @@ hr {
 
 /*--------- Pages styles -------------*/
 
-@import '../pages/ui-kit/ui-kit.scss';
-@import '../pages/landing-page/landing-page.scss';
-@import '../pages/search-room/search-room.scss';
-@import '../pages/room-details/room-details.scss';
-@import '../pages/registration/registration.scss';
+// @import '../pages/ui-kit/ui-kit.scss';
+// @import '../pages/landing-page/landing-page.scss';
+// @import '../pages/search-room/search-room.scss';
+// @import '../pages/room-details/room-details.scss';
+// @import '../pages/registration/registration.scss';
 
-
-/*------------- Common styles for pages in russian -----------*/
-
-@media (max-width: 800px) {
-	h1 {
-		font-size: 24px;
-		letter-spacing: auto;
-	}
-}
-@media (max-width: 400px) {
-	h1 {
-		font-size: 20px;
-		letter-spacing: auto;
-	}
-}
