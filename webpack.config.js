@@ -23,7 +23,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name]/[name].js'
+		filename: '[name].js'
 	},
 	module: {
 		rules: [
@@ -78,37 +78,37 @@ module.exports = {
 	plugins: [ 
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
-			filename: '[name]/[name].css',
+			filename: 'style.css',
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/landing-page/landing-page.pug',
-			filename: 'landing-page/landing-page.html'
+			filename: 'landing-page.html'
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/room-details/room-details.pug',
-			filename: 'room-details/room-details.html'
+			filename: 'room-details.html'
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/search-room/search-room.pug',
-			filename: 'search-room/search-room.html'
+			filename: 'search-room.html'
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/registration/registration.pug',
-			filename: 'registration/registration.html'
+			filename: 'registration.html'
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/ui-kit/ui-kit.pug',
-			filename: 'ui-kit/ui-kit.html'
+			filename: 'ui-kit.html'
 		}),
 		new LiveReloadPlugin(),
 		new webpack.ProvidePlugin({

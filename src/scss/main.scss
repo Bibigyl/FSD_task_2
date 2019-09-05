@@ -16,19 +16,19 @@ $green: #6FCF97;
 
 @import '~material-design-icons/iconfont/material-icons.css';
 @import '../libs/jquery-ui-1.12.1.custom/jquery-ui.min.css';
-//@import '~font-awesome/scss/font-awesome';
-// @import '../libs/jquery.daterangepicker/daterangepicker.scss';
+@import '../libs/font-awesome/scss/font-awesome.scss';
+@import '../libs/jquery.daterangepicker/daterangepicker.scss';
 
 /*------------------------------ Common styles ----------------------------------------*/
 
 /*------- Add fonts ------------*/
 
-// @import '../../scss/mixins';
+@import './mixins';
 
-// @include font-face("Quicksand-Bold", "../fonts/Quicksand-Bold/Quicksand-Bold");
-// @include font-face("Quicksand-Regular", "../fonts/Quicksand-Regular/Quicksand-Regular");
-// @include font-face("Montserrat-Bold", "../fonts/Montserrat-Bold/Montserrat-Bold");
-// @include font-face("Montserrat-Regular", "../fonts/Montserrat-Regular/Montserrat-Regular");
+@include font-face("Quicksand-Bold", "../fonts/Quicksand-Bold/Quicksand-Bold");
+@include font-face("Quicksand-Regular", "../fonts/Quicksand-Regular/Quicksand-Regular");
+@include font-face("Montserrat-Bold", "../fonts/Montserrat-Bold/Montserrat-Bold");
+@include font-face("Montserrat-Regular", "../fonts/Montserrat-Regular/Montserrat-Regular");
 
 
 body {
@@ -138,6 +138,15 @@ hr {
 		min-width: 50px;
 	}
 }
+
+
+@media (max-width: 1200px) {
+	.container {
+		padding: 0 30px;
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
 @media (max-width: 800px) {
 	.page_language_ru h1 {
 		font-size: 24px;
@@ -148,13 +157,6 @@ hr {
 	.page_language_ru h1 {
 		font-size: 20px;
 		letter-spacing: auto;
-	}
-}
-@media (max-width: 1200px) {
-	.container {
-		padding: 0 30px;
-		margin-right: 0;
-		margin-left: 0;
 	}
 }
 @media (max-width: 370px) {
@@ -206,9 +208,9 @@ hr {
 
 /*--------- Pages styles -------------*/
 
-// @import '../pages/ui-kit/ui-kit.scss';
-// @import '../pages/landing-page/landing-page.scss';
-// @import '../pages/search-room/search-room.scss';
-// @import '../pages/room-details/room-details.scss';
-// @import '../pages/registration/registration.scss';
+@import '../pages/ui-kit/ui-kit.scss';
+@import '../pages/landing-page/landing-page.scss';
+@import '../pages/search-room/search-room.scss';
+@import '../pages/room-details/room-details.scss';
+@import '../pages/registration/registration.scss';
 

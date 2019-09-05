@@ -1,52 +1,5 @@
-/*-------- Variables -------------*/
-
-$c100: #1F2041;
-$c75: rgba(31, 32, 65, 0.75);
-$c50: rgba(31, 32, 65, 0.50);
-$c25: rgba(31, 32, 65, 0.25);
-$c5: rgba(31, 32, 65, 0.05);
-$purple: #BC9CFF;
-$green: #6FCF97;
-
-//------------------ Imports ------------------------
-
-@import '../../scss/main.scss';
-
-// /*------- Blocks styles -------------*/
-
-// @import '../../common.blocks/checkbox/checkbox.scss';
-// @import '../../common.blocks/radio/radio.scss';
-// @import '../../common.blocks/toggle/toggle.scss';
-// @import '../../common.blocks/like-button/like-button.scss';
-// @import '../../common.blocks/rating/rating.scss';
-// @import '../../common.blocks/slider-range/slider-range.scss';
-// @import '../../common.blocks/button/button.scss';
-// @import '../../common.blocks/link/link.scss';
-// @import '../../common.blocks/pagination/pagination.scss';
-// @import '../../common.blocks/dropdown/dropdown.scss';
-// @import '../../common.blocks/checkbox-list/checkbox-list.scss';
-// @import '../../common.blocks/rich-checkbox-list/rich-checkbox-list.scss';
-// @import '../../common.blocks/advantages/advantages.scss';
-// @import '../../common.blocks/review/review.scss';
-// @import '../../common.blocks/bullet-list/bullet-list.scss';
-// /* Styles for calendar and inputs - date-search */
-// @import '../../common.blocks/calendar/calendar.scss';
-// @import '../../common.blocks/date-search/date-search.scss';
-
-// /*--------- Components styles -------------*/
-
-// @import '../../components/search-card/search-card.scss';
-// @import '../../components/check-in-card/check-in-card.scss';
-// @import '../../components/booking-card/booking-card.scss';
-// @import '../../components/login-card/login-card.scss';
-// @import '../../components/room-card/room-card.scss';
-// @import '../../components/header/header.scss';
-// @import '../../components/footer/footer.scss';
-// @import '../../components/footer-min/footer-min.scss';
-
-
 .colors-and-type {
-  display: none;
+  display: block;
 }
 .form-elements {
   display: block;
@@ -98,9 +51,6 @@ $green: #6FCF97;
   min-width: 400px;
   margin-top: 5px;
 }
-.colors {
-  padding-left: 30px;
-}
 .fonts {
   padding-left: 113px;
 }
@@ -145,6 +95,7 @@ $green: #6FCF97;
   }
   span {
     font-family: "Quicksand-Regular";
+    font-weight: 400;
   }
 }
 .font-item {
@@ -164,7 +115,8 @@ $green: #6FCF97;
   text-align: right;
   width: 50px;
   > * {
-    font-family: "Montserrat-Regular";    
+    font-family: "Montserrat-Regular";
+    color: $c25;
   } 
 }
 .font-item__desc {
@@ -189,7 +141,7 @@ $green: #6FCF97;
 }
 .ui-form-blocks-3 {
   max-width: 1218px;
-  margin-bottom: 9px;
+  margin-bottom: 0px;
 }
 .ui-form-blocks-4 {
   width: 100%;
@@ -291,7 +243,7 @@ $green: #6FCF97;
       padding-left: 67px;
       &:first-child {
         h3 {
-          line-height: 43px;
+          margin-bottom: 12px;
         }
       }
     }
@@ -321,7 +273,7 @@ $green: #6FCF97;
 .ui-field-state {
   position: absolute;
   right: 0;
-  top: -40px;
+  top: -7px;
   text-transform: uppercase;
   font-size: 12px;
 }
@@ -348,10 +300,10 @@ $green: #6FCF97;
   margin-right: 15px;
   margin-bottom: 30px;
   &:nth-child(4) {
-    margin-right: 20px;
+    margin-right: 21px;
   }
   &:nth-child(3), &:nth-child(4) {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
   }
 }
 .ui-button_state_not-active {
@@ -449,7 +401,9 @@ $green: #6FCF97;
 .ui-room-card_with-arrows .room-card__arrow {
   opacity: 1;
 }
+
 /*-------  ui 4th page  --------------*/
+
 .ui-line-block {
   margin-bottom: 40px;
 }
@@ -474,41 +428,15 @@ $green: #6FCF97;
     letter-spacing: -0.1px;
   }
 }
-// .ui-checkbox-list.checkbox-list_state_open {
-//   height: 287px;
-// }
 .ui-checkbox-list {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
+}
+.ui-label .input__arrow {
+  top: 29px;
 }
 
+//---------------------------- @madia ---------------------------------
 
-//----------------------------------- @madia -------------------------------------
-
-
-/*==========  Desktop First  ==========*/
-
-// ≥1200px
-@media (min-width: 1200px) {
-
-}
-
-// ≥992px
-@media (min-width: 992px) {
-
-}
-
-// ≥768px
-@media (min-width: 768px) {
-
-}
-
-// ≥576px
-@media (min-width: 576px) { 
-
-}
-
-
-/*==========  Mobile First  ==========*/
 
 @media (max-width: 1300px) {
   .ui-form-blocks-2 .ui-column:nth-child(2) .ui-form-block {
@@ -518,7 +446,7 @@ $green: #6FCF97;
     padding-left: 0;
   }
   .cards .ui-container {
-    height: 2000px;
+    height: 1660px;
     padding-left: 40px;
     > * {
       margin-right: auto;
@@ -530,8 +458,6 @@ $green: #6FCF97;
     }
   }
 }
-
-// ≤1200px
 @media (max-width: 1199.98px) {
   .fonts {
     padding-left: 30px;
@@ -540,14 +466,11 @@ $green: #6FCF97;
     margin-bottom: 50px;
  }
 }
-
 @media (max-width: 1036px) {
   .cards .ui-container {
     height: 3055px;
   }
 }
-
-// ≤992px
 @media (max-width: 991.98px) {
  .ui-form-blocks-2 {
   margin-bottom: 30px;
@@ -568,36 +491,75 @@ $green: #6FCF97;
     padding-left: 0;
   }
 }
-
-// ≤768px
-@media (max-width: 767.98px) {
-
-}
 @media (max-width: 1216px) {
   .ui-form-blocks-1 .ui-column:nth-child(3) .ui-form-block {
     padding-left: 0;
   }
 }
-
 @media (max-width: 880px) {
  .colors {
   margin-bottom: 70px;
  }
 }
-
 @media (max-width: 716px) {
  .ui-form-blocks-1 .ui-column:nth-child(2) .ui-form-block,
  .ui-form-blocks-1 .ui-column:nth-child(3) .ui-form-block {
   padding-left: 0;
  }
 }
-
-// ≤576px
 @media (max-width: 575.98px) {
+  .ui-card .booking-card {
+    background-color: #fff;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    padding: 40px 30px 30px 30px;
+  }
  .ui-form-blocks-1, .ui-form-blocks-1, .ui-form-blocks-1, .ui-form-blocks-1 {
    .ui-column {
-      min-width: 320px;
+      min-width: 250px;
    }  
  }
 }
-
+@media (max-width: 560px) {
+  .calendar-card {
+    width: 250px;
+  }
+}
+@media (max-width: 441px) {
+  .cards .ui-container {
+    height: 3200px;
+  }
+  .ui-container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .colors, .fonts {
+    min-width: 250px;
+    width: 100%;
+    padding-left: 0;
+  }
+  .ui-section {
+    padding-bottom: 40px;
+  }
+  .color-item__square {
+    height: 30px;
+    width: 30px;
+  }
+  #ui-date-search .input__arrow {
+    top: 44px;
+  }
+  .advantages li:after {
+    width: 100%;
+  }
+  .ui-form-blocks-2 .ui-column, 
+  .ui-form-blocks-3 .ui-column,
+  .ui-form-blocks-4 .ui-column:first-child,
+  .ui-form-blocks-4 .ui-column:nth-child(2)  {
+    min-width: 250px;
+  }
+  .cards .ui-container {
+    padding-left: 10px;
+  }
+  .ui-footer .footer__social-icons {
+    text-align: center;
+  }
+}

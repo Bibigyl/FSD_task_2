@@ -2,11 +2,7 @@
 
 import "../../scss/main.scss";
 import "../../js/main.js";
- // var moment = require('moment');
- // moment().format();
- // import moment from 'moment'
- // import 'moment/locale/es' 
- // moment.locale('ru');
+
 $( document ).ready(function() {
 
 
@@ -50,6 +46,6 @@ $( document ).ready(function() {
 
   });
 
-  $('#search-room__date-search').data('dateRangePicker').setDateRange('19-08-2019','23-08-2019');
+  $('#search-room__date-search').data('dateRangePicker').setDateRange('19 авг.','23 авг.');
 
 });

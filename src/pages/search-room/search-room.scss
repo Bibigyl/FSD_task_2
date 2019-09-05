@@ -71,11 +71,22 @@ body, html {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-bottom: 20px;
-	.room-card {
+	.search-room__room-card {
 		margin-bottom: 21px;
     width: 100%;
     min-width: 270px;
     max-width: 270px;
+	}
+}
+.search-room__room-card {
+	.room__dot {
+		width: 7px;
+		height: 7px;
+	}
+}
+.date-search-option {
+	.input__arrow {
+		top: 30px;
 	}
 }
 @media(max-width: 1200px) {

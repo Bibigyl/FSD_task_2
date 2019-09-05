@@ -21,10 +21,10 @@ html(lang="ru")
       {name: "Cosmin Negoita", class: "hidden"}
     )
     .room-photos
-      .room-photo_wide.background-image(style="background-image: url('src/pages/room-details/images/1.jpg')")
+      .room-photo_wide.background-image(style=`background-image: url( ${require('./images/room-details__front-1.jpg')})`)
       .room-photos-wrap
-        .room-photo_slim.background-image(style="background-image: url('src/pages/room-details/images/2.jpg')")
-        .room-photo_slim.background-image(style="background-image: url('src/pages/room-details/images/3.jpg')")
+        .room-photo_slim.background-image(style=`background-image: url( ${require('./images/room-details__front-2.jpg')})`)
+        .room-photo_slim.background-image(style=`background-image: url( ${require('./images/room-details__front-3.jpg')})`)
 
     .details-and-room-card-wrap.container
       .details
@@ -45,7 +45,7 @@ html(lang="ru")
               span Номер оснащён камином
         .details__impressions
           h2 Впечатления от номера
-          .diagram(style="background-image: url('src/pages/room-details/images/diagram.svg')")
+          .diagram(style=`background-image: url( ${require('./images/diagram.svg')})`)
             span.diagram__number 260
             span.diagram__text голосов
           .diagram__items
@@ -58,8 +58,8 @@ html(lang="ru")
           h2 Отзывы посетителей номера
           span.reviews__num 2 отзыва
           include ../../common.blocks/review/review.pug
-          +review("src/pages/room-details/images/avatar2.jpg", 12, "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
-          +review("src/pages/room-details/images/avatar1.jpg", 12, "Патрисия Стёклышкова", "Неделю назад", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
+          +review(`background-image: url( ${require('./images/room-details__avatar-1.jpg')})`, 12, "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
+          +review(`background-image: url( ${require('./images/room-details__avatar-2.jpg')})`, 12, "Патрисия Стёклышкова", "Неделю назад", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
         .details__rules
           h2 Правила
           ul(class="bullet-list")

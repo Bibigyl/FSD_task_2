@@ -11,6 +11,7 @@
 	}
 	.button-wrap_color_empty > * {
 		padding: 8px 18px;
+		margin: 2px;
 	}
 	.button_size_middle {
 		padding: 10px 20px;
@@ -73,9 +74,6 @@
 		margin-left: 24px;
 	}
 }
-
-$bg-clr: #fff;
-$icn-clr: #000;
 
 input#menu__button {
   display: none;

@@ -22,7 +22,7 @@ html(lang="ru")
     )
     .container.search-room-container
       .options
-        .option-wrap
+        .option-wrap.date-search-option
           label(class="label")
             h3 Даты пребывания в отеле
             input(class="input input_size_middle" id="search-room__date-search")
@@ -96,7 +96,6 @@ html(lang="ru")
           div(class="dropdown__field") <span>2 спальни, 2 кровати...</span>
             div(class="dropdown__arrow arrow")
               i(class="material-icons") expand_more
-            span(class="ui-field-state") Default
           div(class="dropdown-ul-wrap")
             ul
               li 
@@ -157,18 +156,18 @@ html(lang="ru")
         h1 Номера, которые мы для вас подобрали
         .rooms
           include ../../components/room-card/room-card.pug
-          +room("class", "src/pages/search-room/images/1.jpg", 888, 9990, 5, "rating1_", 145, true)
-          +room("class", "src/pages/search-room/images/2.jpg", 840, 9900, 4, "rating2_", 65)
-          +room("class", "src/pages/search-room/images/3.jpg", 980, 8500, 3, "rating3_", 35, true)
-          +room("class", "src/pages/search-room/images/4.jpg", 856, 7300, 5, "rating4_", 19)
-          +room("class", "src/pages/search-room/images/5.jpg", 740, 6000, 4, "rating5_", 44)
-          +room("class", "src/pages/search-room/images/6.jpg", 982, 5800, 3, "rating6_", 56)
-          +room("class", "src/pages/search-room/images/7.jpg", 678, 5500, 5, "rating7_", 45)
-          +room("class", "src/pages/search-room/images/8.jpg", 450, 5300, 4, "rating8_", 39)
-          +room("class", "src/pages/search-room/images/9.jpg", 350, 5000, 3, "rating9_", 77)
-          +room("class", "src/pages/search-room/images/10.jpg", 666, 5000, 5, "rating10_", 25)
-          +room("class", "src/pages/search-room/images/11.jpg", 444, 5000, 3, "rating11_", 15)
-          +room("class", "src/pages/search-room/images/12.jpg", 352, 5000, 3, "rating12_", 55)
+          +room("search-room__room-card", `background-image: url( ${require('./images/1.jpg')})`, 888, 9990, 5, "rating1_", 145, true)
+          +room("search-room__room-card", `background-image: url( ${require('./images/2.jpg')})`, 840, 9900, 4, "rating2_", 65)
+          +room("search-room__room-card", `background-image: url( ${require('./images/3.jpg')})`, 980, 8500, 3, "rating3_", 35, true)
+          +room("search-room__room-card", `background-image: url( ${require('./images/4.jpg')})`, 856, 7300, 5, "rating4_", 19)
+          +room("search-room__room-card", `background-image: url( ${require('./images/5.jpg')})`, 740, 6000, 4, "rating5_", 44)
+          +room("search-room__room-card", `background-image: url( ${require('./images/6.jpg')})`, 982, 5800, 3, "rating6_", 56)
+          +room("search-room__room-card", `background-image: url( ${require('./images/7.jpg')})`, 678, 5500, 5, "rating7_", 45)
+          +room("search-room__room-card", `background-image: url( ${require('./images/8.jpg')})`, 450, 5300, 4, "rating8_", 39)
+          +room("search-room__room-card", `background-image: url( ${require('./images/9.jpg')})`, 350, 5000, 3, "rating9_", 77)
+          +room("search-room__room-card", `background-image: url( ${require('./images/10.jpg')})`, 666, 5000, 5, "rating10_", 25)
+          +room("search-room__room-card", `background-image: url( ${require('./images/11.jpg')})`, 444, 5000, 3, "rating11_", 15)
+          +room("search-room__room-card", `background-image: url( ${require('./images/12.jpg')})`, 352, 5000, 3, "rating12_", 55)
 
         .paginator-wrap
           div(class="pagination")

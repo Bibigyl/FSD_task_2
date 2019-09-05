@@ -1,6 +1,7 @@
 mixin room(room_class, image, number, price, rating, star_name, reviews, lux)
 	div(class="card room-card" class=room_class)
-		div(class="room-card__image background-image" style="background-image: url(" + image + ")")
+		//- var img = ${require('./images/avatar.png')};
+		div(class="room-card__image background-image" style=image)
 			div(class="room-card__arrow arrow") 
 				i(class="material-icons") expand_more
 			div(class="room-card__arrow arrow") 

@@ -12,13 +12,13 @@
 		// add later
 	}
 	&:not(:checked), &:checked {
-		padding-bottom: 1px;
+		padding-bottom: 4px;
 		padding-left: 14px;
 	}
 }
 .select__arrow {
 	position: absolute;
-	top: -4px;
+	top: 28px;
 	right: 10px;
 	pointer-events: none;
 }

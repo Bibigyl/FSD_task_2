@@ -4,7 +4,7 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name='viewport' content="initial-scale=1.0, width=device-width")
     title UI Kit page
-    link(rel="stylesheet" href="ui-kit.css")
+    link(rel="stylesheet" href="style.css")
   body
     section(class="ui-section ui-section_white colors-and-type")
       div(class="ui-logo")
@@ -65,32 +65,36 @@ html(lang="ru")
       container(class="ui-container ui-form-blocks-1")
         div(class="ui-column")
           div(class="ui-form-block")
-            label(class="label ui-label")
-              h3 Text field
-              input(class="input input_size_big" placeholder="Email")
-              span(class="ui-field-state") Default
-            label(class="label ui-label")
-              h3 Text field
-              input(class="input ui-input_hover input_size_big" placeholder="This is pretty awesome")
-              span(class="ui-field-state") Hover / Focus
-            label(class="label ui-label")
-              h3 Dropdown
-              select(class="select select_size_big")
-                option(value="" disabled selected hidden) Сколько гостей
-                option 1
-                option 2
-                option 3
-                option 4
-              div(class="select__arrow arrow")
-                i(class="material-icons") expand_more
-              span(class="ui-field-state") Default
-            label(class="label ui-label")
-              h3 Masked text field
-              input(class="input input_size_big input_masked_date" placeholder="ДД.ММ.ГГГГ")
-              span(class="ui-field-state") Default
+            .block-wrap
+              label(class="label ui-label")
+                h3 Text field
+                input(class="input input_size_big" placeholder="Email")
+                span(class="ui-field-state") Default
+            .block-wrap
+              label(class="label ui-label")
+                h3 Text field
+                input(class="input ui-input_hover input_size_big" placeholder="This is pretty awesome")
+                span(class="ui-field-state") Hover / Focus
+            .block-wrap
+              label(class="label ui-label")
+                h3 Dropdown
+                select(class="select select_size_big")
+                  option(value="" disabled selected hidden) Сколько гостей
+                  option 1
+                  option 2
+                  option 3
+                  option 4
+                div(class="select__arrow arrow")
+                  i(class="material-icons") expand_more
+                span(class="ui-field-state") Default
+            .block-wrap
+              label(class="label ui-label")
+                h3 Masked text field
+                input(class="input input_size_big input_masked_date" placeholder="ДД.ММ.ГГГГ")
+                span(class="ui-field-state") Default
 
           div(class="ui-form-block")
-            div(class="lui-date-search date-search" id="ui-date-search" )
+            div(class="date-search" id="ui-date-search" )
               label(class="label ui-label")
                 h3 Date dropdown
                 input(class="input input_size_small calendar" id="ui-first-date" placeholder="ДД.ММ.ГГГГ")
@@ -447,7 +451,7 @@ html(lang="ru")
         div(class="ui-column")
           div(class="ui-form-block")
             div(class="review ui-review")
-              div(class="review__avatar ui-review__avatar"  style=`background: url( ${require('./images/avatar.png')})`)
+              div(class="review__avatar ui-review__avatar"  style=`background-image: url( ${require('./images/avatar.png')})`)
               div(class="like-button-wrap review__like-button like-button-wrap_active ")
                 label(class="label ui-label label_like-button")
                   input(class="like-button" type="checkbox" checked)
@@ -483,9 +487,9 @@ html(lang="ru")
 
 
         include ../../components/room-card/room-card.pug
-        +room("ui-card ui-room-card_with-arrows", "src/pages/ui-kit/images/room1.png", 888, 9990, 5, "rating1_", 145, true)
+        +room("ui-card ui-room-card_with-arrows", `background-image: url( ${require('./images/room1.png')})`, 888, 9990, 5, "rating1_", 145, true)
 
-        +room("ui-card ui-room-card", "src/pages/ui-kit/images/room2.png", 840, 9900, 4, "rating2_", 65, true)
+        +room("ui-card ui-room-card", `background-image: url( ${require('./images/room2.png')})`, 840, 9900, 4, "rating2_", 65, true)
 
 
     section(class="ui-section ui-section_grey headers-and-footers")

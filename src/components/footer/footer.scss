@@ -105,4 +105,11 @@
 	.footer__info {
 		min-width: 200px;	
 	}
+	.footer .container:last-child {
+    height: auto;
+    .social-icons {
+    	margin-bottom: 10px;
+    	text-align: center;
+    }
+  }
 }

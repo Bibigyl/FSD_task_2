@@ -21,7 +21,7 @@ html(lang="ru")
       {name: "Cosmin Negoita", class: "hidden"}
     )
     
-    .registration__front.background-image(style="background-image: url('src/pages/registration/images/registration__front.jpg')")
+    .registration__front.background-image(style=`background-image: url( ${require('./images/registration__front.jpg')})`)
       .card-wrap.check-in-card-wrap.card_active
         include ../../components/check-in-card/check-in-card.pug
       .card-wrap.login-card-wrap.hidden
