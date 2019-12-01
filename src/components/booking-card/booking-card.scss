@@ -1,138 +1,140 @@
 .num-and-price-wrap {
-	display: flex;
-	margin-bottom: 18px;
-	justify-content: space-between;
+  display: flex;
+  margin-bottom: 18px;
+  justify-content: space-between;
 }
 .booking-card__room {
-	padding-top: 3px;
-	> * {
-		display: inline;
-	}
-	h2 {
-		font-size: 14px;
-	}
-	.room__number {
-		font-size: 25px;
-		margin: 0 4px;
-	}
+  padding-top: 3px;
+  > * {
+  display: inline;
+  }
+  h2 {
+  font-size: 14px;
+  }
+  .room__number {
+  font-size: 25px;
+  margin: 0 4px;
+  }
 }
-
 .booking-card__price-per-day {
-	padding-top: 7px;
-	> * {
-		display: inline;
-	}
-	h3 {
-		font-size: 14px;
-		margin-right: 4px;
-		color: $c50;
-	}
-	> span {
-		font-size: 12px;
-		color: $c50;
-	}
+  padding-top: 7px;
+  > * {
+  display: inline;
+  }
+  h3 {
+  font-size: 14px;
+  margin-right: 4px;
+  color: $c50;
+  }
+  > span {
+  font-size: 12px;
+  color: $c50;
+  }
 }
 .booking-card {
-	max-width: 380px;
-	.dropdown {
-		margin-bottom: 17px;
-	}
-	.date-search {
-		margin-bottom: 20px;
-	}
+  max-width: 380px;
+  .dropdown {
+  margin-bottom: 17px;
+  }
+  .date-search {
+  margin-bottom: 20px;
+  }
 }
 .booking-info-wrap {
-	margin-bottom: 32px;	
+  margin-bottom: 32px;  
 }
 .booking-info__text {
-	max-width: 215px;
-	line-height: 18px;
-	margin-top: 3px;
+  max-width: 215px;
+  line-height: 18px;
+  margin-top: 3px;
 }
 .booking-info__price {
-	float: right;
-	width: 74px;
-	text-align: right;
+  float: right;
+  width: 74px;
+  text-align: right;
 }
 .booking-info__icon {
-	margin-top: 2px;
-	width: 20px;
-	height: 20px;
-	border: 1px solid $c25;
-	box-sizing: border-box;
-	font-size: 12px;
-	font-weight: bold;
-	color: $c25;
-	border-radius: 100px;
-	text-align: center;
-	line-height: 20px;
+  margin-top: 2px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $c25;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: bold;
+  color: $c25;
+  border-radius: 100px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
 }
 .booking-card__booking-info {
-	margin-bottom: 10px;
-	padding-left: 1px;
-	display: flex;
-	justify-content: space-between;
+  margin-bottom: 10px;
+  padding-left: 1px;
+  display: flex;
+  justify-content: space-between;
 }
 .booking-card__total {
-	margin-bottom: 20px;
-	overflow: hidden;
-	> * {
-		display: block;
-		z-index: 2;
-	}
-	&:after {
-    content:'';
-    display: block;
-    overflow: hidden;
-    height: 18px;
-    border-bottom: 1px dotted $c25;
-	}
-	h2:first-child {
-		padding-right: 2px;
-		float: left;
-		font-weight: bold;
-		font-size: 18px;
-		letter-spacing: .1em;
-		margin-left: 2px;
-	}
+  margin-bottom: 20px;
+  overflow: hidden;
+  > * {
+  display: block;
+  z-index: 2;
+  }
+  &:after {
+  content:'';
+  display: block;
+  overflow: hidden;
+  height: 18px;
+  border-bottom: 1px dotted $c25;
+  }
+  h2:first-child {
+  padding-right: 2px;
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: .1em;
+  margin-left: 2px;
+  }
 }
 .total__price {
-	float: right;
-	padding-left: 4px;
+  float: right;
+  padding-left: 4px;
 }
+.date-picker-wrapper {
+  padding: 12px 7px;
+}
+
 @media(max-width: 700px) {
-	.details-and-room-card-wrap .room-card-wrap {
-		margin-left: auto;
-		margin-right: auto;
-	}
+  .details-and-room-card-wrap .room-card-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  }
 }
 @media(max-width: 500px) {
-	.booking-card {
-		width: 100%;
-		box-sizing: border-box;
-		* {
-			box-sizing: border-box;
-		}
-	}
-	.details-and-room-card-wrap .room-card-wrap {
-		// width: 100%;
-		box-sizing: border-box;
-		// max-width: none;
-		 min-width: 200px;
-	}
+  .booking-card {
+  width: 100%;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+  }
+  .details-and-room-card-wrap .room-card-wrap {
+  box-sizing: border-box;
+  min-width: 200px;
+  }
 }
 @media(max-width: 450px) {
-	.booking-card {
-		box-shadow: none;
-		background: none;
-		padding: 0;
-	}
-	.advantages span {
-		margin-left: 50px;
-	}
+  .booking-card {
+  box-shadow: none;
+  background: none;
+  padding: 0;
+  }
+  .advantages span {
+  margin-left: 50px;
+  }
 }
 @media(max-width: 350px) {
-	.details-and-room-card-wrap {
-		padding: 20px 20px 40px;
-	}
+  .details-and-room-card-wrap {
+  padding: 20px 20px 40px;
+  }
 }

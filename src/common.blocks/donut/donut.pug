@@ -1,0 +1,69 @@
+<div class="donut-wrap" id="donut" >
+  <figure>
+    <div class="figure-content">
+      <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut" aria-labelledby="beers-title beers-desc" role="img">
+
+        <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff" role="presentation"></circle>
+        <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="1" role="presentation"></circle>
+
+        <linearGradient id="excellent" x1="0" y1="0.5" x2="0.5" y2="0" >
+          <stop offset="0%" stop-color="#FFE39C"/>
+          <stop offset="100%" stop-color="#FFBA9C"/>
+        </linearGradient>
+
+        <linearGradient id="good" x1="0.5" y1="0"  x2="0" y2="0.5">
+          <stop offset="0%" stop-color="#6FCF97" />
+          <stop offset="100%" stop-color="#66D2EA" />
+        </linearGradient>
+
+        <linearGradient id="satisfactorily" x1="0" y1="0"  x2="0" y2="0.5">
+          <stop offset="0%" stop-color="#BC9CFF" />
+          <stop offset="100%" stop-color="#8BA4F9" />
+        </linearGradient>
+
+        <linearGradient id="badly" x1="0" y1="0"  x2="0.5" y2="0">
+          <stop offset="0%" stop-color="#919191" />
+          <stop offset="100%" stop-color="#3D4975" />
+        </linearGradient>
+
+
+        <circle class="donut-segment" mark='excellent' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#excellent)" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="25" >
+        </circle>
+
+        <circle class="donut-segment" mark='good' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#good)" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="0">
+        </circle>
+
+        <circle class="donut-segment" mark='satisfactorily' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#satisfactorily)" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="-25">
+        </circle>
+
+        <circle class="donut-segment" mark='badly' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#badly)" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="-50">
+        </circle>
+
+
+        <g class="chart-text">
+          <text x="50%" y="50%" fill='grey' class="chart-number">10</text>
+          <text x="50%" y="50%" fill='grey' class="chart-label">голосов</text>
+        </g>
+      </svg>
+    </div>
+
+
+
+    <figcaption class="figure-key">
+      <ul class="figure-key-list" aria-hidden="true" role="presentation">
+        <li class='donut__mark'>
+          <span class="shape-circle shape-circle_excellent" mark='excellent'></span> Великолепно
+        </li>
+        <li class='donut__mark'>
+          <span class="shape-circle shape-circle_good" mark='good'></span> Хорошо
+        </li>
+        <li class='donut__mark'>
+          <span class="shape-circle shape-circle_satisfactorily" mark='satisfactorily'></span> Удовлетворительно
+        </li>
+        <li class='donut__mark'>
+          <span class="shape-circle shape-circle_badly" mark='badly'></span> Разочарован
+        </li>
+      </ul>
+    </figcaption>
+  </figure>
+</div>

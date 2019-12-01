@@ -23,134 +23,134 @@ html(lang="ru")
     .container.search-room-container
       .options
         .option-wrap.date-search-option
-          label(class="label")
+          label.label
             h3 Даты пребывания в отеле
-            input(class="input input_size_middle" id="search-room__date-search")
-            div(class="input__arrow arrow")
-              i(class="material-icons") expand_more
+            input.input.input_size_middle#search-room__date-search
+            .input__arrow.arrow
+              i.material-icons expand_more
 
 
-        div(class="option-wrap dropdown dropdown_choice_guests")
+        .option-wrap.dropdown.dropdown_choice_guests
           h3 Гости
-          div(class="dropdown__field") <span>Сколько гостей</span>
-            div(class="dropdown__arrow arrow")
-              i(class="material-icons") expand_more
-          div(class="dropdown-ul-wrap")
+          .dropdown__field <span>Сколько гостей</span>
+            .dropdown__arrow.arrow
+              i.material-icons expand_more
+          .dropdown-ul-wrap
             ul
               li 
-                span(class="dropdown__button dropdown__button_plus") +
-                span(class="dropdown__num") 0
-                span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+                span.dropdown__button.dropdown__button_plus +
+                span.dropdown__num 0
+                span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
                 |Взрослые
               li 
-                span(class="dropdown__button dropdown__button_plus") +
-                span(class="dropdown__num") 0
-                span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+                span.dropdown__button.dropdown__button_plus +
+                span.dropdown__num 0
+                span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
                 |Дети
               li 
-                span(class="dropdown__button dropdown__button_plus") +
-                span(class="dropdown__num") 0
-                span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+                span.dropdown__button.dropdown__button_plus +
+                span.dropdown__num 0
+                span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
                 |Младенцы
-            a(class="link dropdown__link_clear link_color_grey hidden") Очистить
-            a(class="link dropdown__link_apply link_color_bright") Применить
+            a.link.dropdown__link_clear.link_color_grey.hidden Очистить
+            a.link.dropdown__link_apply.link_color_bright Применить
 
         .option-wrap.slider
           h3 Диапазон цены
-          div(class="slider-range")
-            div(class="slider-wrapper")
-              div(id="slider-range")
-            div(class="range-wrapper")
-              div(class="range")
+          .slider-range
+            .slider-wrapper
+              #slider-range
+            .range-wrapper
+              .range
           p.slider__text Стоимость за сутки пребывания в номере
 
         .option-wrap.checkboxes
           h3 Checkbox buttons
-          label(class="label ui-label label_checkbox")
-            input(class="checkbox" type="checkbox")
-            div(class="checkbox__text") Можно курить
-          label(class="label ui-label label_checkbox")
-            input(class="checkbox" type="checkbox" checked)
-            div(class="checkbox__text") Можно с питомцами
-          label(class="label ui-label label_checkbox")
-            input(class="checkbox" type="checkbox" checked)
-            div(class="checkbox__text") Можно пригласить гостей </br>(до 10 человек)
+          label.label.ui-label.label_checkbox
+            input.checkbox(type="checkbox")
+            .checkbox__text Можно курить
+          label.label.ui-label.label_checkbox
+            input.checkbox(type="checkbox" checked)
+            .checkbox__text Можно с питомцами
+          label.label.ui-label.label_checkbox
+            input.checkbox(type="checkbox" checked)
+            .checkbox__text Можно пригласить гостей </br>(до 10 человек)
         
         .option-wrap.rich-checkbox-list
           h3 Доступность
           ul
             li
-              label(class="label label_checkbox")
-                input(class="checkbox" type="checkbox")
-                div(class="checkbox__text") Широкий коридор
+              label.label.label_checkbox
+                input.checkbox(type="checkbox")
+                .checkbox__text Широкий коридор
                 p Ширина коридоров в номере</br>не менее 91 см.
             li
-              label(class="label label_checkbox")
-                input(class="checkbox" type="checkbox")
-                div(class="checkbox__text") Помощник для инвалидов
+              label.label.label_checkbox
+                input.checkbox(type="checkbox")
+                .checkbox__text Помощник для инвалидов
                 p На 1 этаже вас встретит специалист и проводит до номера
 
         
-        div(class="option-wrap dropdown dropdown_size_middle dropdown_choice_furniture")
+        .option-wrap.dropdown.dropdown_size_middle.dropdown_choice_furniture
           h3 Удобства номера
-          div(class="dropdown__field") <span>2 спальни, 2 кровати...</span>
-            div(class="dropdown__arrow arrow")
-              i(class="material-icons") expand_more
-          div(class="dropdown-ul-wrap")
+          .dropdown__field <span>2 спальни, 2 кровати...</span>
+            .dropdown__arrow.arrow
+              i.material-icons expand_more
+          .dropdown-ul-wrap
             ul
               li 
-                span(class="dropdown__button dropdown__button_plus") +
-                span(class="dropdown__num") 2
-                span(class="dropdown__button dropdown__button_minus") -
+                span.dropdown__button.dropdown__button_plus +
+                span.dropdown__num 2
+                span.dropdown__button.dropdown__button_minus -
                 |Спальни
               li 
-                span(class="dropdown__button dropdown__button_plus") +
-                span(class="dropdown__num") 2
-                span(class="dropdown__button dropdown__button_minus") -
+                span.dropdown__button.dropdown__button_plus +
+                span.dropdown__num 2
+                span.dropdown__button.dropdown__button_minus -
                 |Кровати
               li 
-                span(class="dropdown__button dropdown__button_plus") +
-                span(class="dropdown__num") 0
-                span(class="dropdown__button dropdown__button_minus dropdown__button_not-active") -
+                span.dropdown__button.dropdown__button_plus +
+                span.dropdown__num 0
+                span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
                 |Ванные комнаты
 
-        div(class="option-wrap checkbox-list")
+        .option-wrap.checkbox-list
           h3 Дополнительные удобства
-          div(class="checkbox-list__arrow arrow")
-            i(class="material-icons") expand_more
+          .checkbox-list__arrow.arrow
+            i.material-icons.expand_more
           ul
             li
-              label(class="label label_checkbox")
-                input(class="checkbox" type="checkbox")
-                div(class="checkbox__text") Завтрак
+              label.label.label_checkbox
+                input.checkbox(type="checkbox")
+                .checkbox__text Завтрак
             li
-              label(class="label label_checkbox")
-                input(class="checkbox" type="checkbox" checked)
-                div(class="checkbox__text") Письменный стол
+              label.label.label_checkbox
+                input.checkbox(type="checkbox" checked)
+                .checkbox__text Письменный стол
             li
-              label(class="label label_checkbox")
-                input(class="checkbox" type="checkbox" checked)
-                div(class="checkbox__text") Стул для кормления
+              label.label.label_checkbox
+                input.checkbox(type="checkbox" checked)
+                .checkbox__text Стул для кормления
             li
-              label(class="label label_checkbox")
-                input(class="checkbox" type="checkbox" checked)
-                div(class="checkbox__text") Кроватка
+              label.label.label_checkbox
+                input.checkbox(type="checkbox" checked)
+                .checkbox__text Кроватка
             li
-              label(class="label label_checkbox")
-                input(class="checkbox" type="checkbox")
-                div(class="checkbox__text") Телевизор
+              label.label.label_checkbox
+                input.checkbox(type="checkbox")
+                .checkbox__text Телевизор
             li
-              label(class="label label_checkbox")
-                input(class="checkbox" type="checkbox")
-                div(class="checkbox__text") Шампунь
+              label.label.label_checkbox
+                input.checkbox(type="checkbox")
+                .checkbox__text Шампунь
             li
-              label(class="label label_checkbox")
-                input(class="checkbox" type="checkbox")
-                div(class="checkbox__text") Телевизор
+              label.label.label_checkbox
+                input.checkbox(type="checkbox")
+                .checkbox__text Телевизор
             li
-              label(class="label label_checkbox")
-                input(class="checkbox" type="checkbox")
-                div(class="checkbox__text") Шампунь
+              label.label.label_checkbox
+                input.checkbox(type="checkbox")
+                .checkbox__text Шампунь
 
       .rooms-wrap
         h1 Номера, которые мы для вас подобрали
@@ -170,10 +170,10 @@ html(lang="ru")
           +room("search-room__room-card", `background-image: url( ${require('./images/12.jpg')})`, 352, 5000, 3, "rating12_", 55)
 
         .paginator-wrap
-          div(class="pagination")
-          div(class="pagination__arrow arrow")
-            i(class="material-icons") arrow_forward
-          div(class="pagination__text") <span>1 – 12 из 100+</span> вариантов аренды
+          .pagination
+          .pagination__arrow.arrow
+            i.material-icons arrow_forward
+          .pagination__text <span>1 – 12 из 100+</span> вариантов аренды
 
     hr
     include ../../components/footer/footer.pug

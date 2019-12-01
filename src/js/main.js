@@ -21,6 +21,7 @@ import "../common.blocks/checkbox-list/checkbox-list.js";
 //import "../common.blocks/calendar/calendar.js";
 import "../common.blocks/pagination/pagination.js";
 import "../common.blocks/like-button/like-button.js";
+import "../common.blocks/donut/donut.js";
 
 //------------------ import components scripts -----------------------------
 

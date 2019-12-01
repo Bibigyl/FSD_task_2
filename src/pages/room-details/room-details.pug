@@ -30,39 +30,44 @@ html(lang="ru")
       .details
         .details__info
           h2 Сведения о номере
-          ul(class="advantages")
+          ul.advantages
             li
-              i(class="material-icons advantage__icon") insert_emoticon
-              span(class="advantage__title") Комфорт
+              i.material-icons.advantage__icon insert_emoticon
+              span.advantage__title Комфорт
               span Шумопоглащаюшие стены
             li
-              i(class="material-icons advantage__icon") location_city
-              span(class="advantage__title") Удобство
+              i.material-icons.advantage__icon location_city
+              span.advantage__title Удобство
               span Окно в каждой из спален
             li
-              i(class="material-icons advantage__icon") whatshot
-              span(class="advantage__title") Уют
+              i.material-icons.advantage__icon whatshot
+              span.advantage__title Уют
               span Номер оснащён камином
+              
         .details__impressions
           h2 Впечатления от номера
-          .diagram(style=`background-image: url( ${require('./images/diagram.svg')})`)
-            span.diagram__number 260
-            span.diagram__text голосов
-          .diagram__items
-            ul.bullet-list
-              li Великолепно
-              li Хорошо
-              li Удовлетворительно
-              li Разочарован
+          include ../../common.blocks/donut/donut.pug
+
         .details__reviews
           h2 Отзывы посетителей номера
           span.reviews__num 2 отзыва
           include ../../common.blocks/review/review.pug
-          +review(`background-image: url( ${require('./images/room-details__avatar-1.jpg')})`, 12, "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
-          +review(`background-image: url( ${require('./images/room-details__avatar-2.jpg')})`, 12, "Патрисия Стёклышкова", "Неделю назад", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
+
+          +review(`background-image: url( ${require('./images/room-details__avatar-2.jpg')})`, 
+          12, 
+          "Мурад Сарафанов", 
+          "5 дней назад", 
+          "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
+
+          +review(`background-image: url( ${require('./images/room-details__avatar-1.jpg')})`,
+           12,
+           "Патрисия Стёклышкова",
+           "Неделю назад", 
+           "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
+
         .details__rules
           h2 Правила
-          ul(class="bullet-list")
+          ul.bullet-list
             li Нельзя с питомцами
             li Без вечеринок и мероприятий
             li Время прибытия — после 13:00, а выезд до 12:00

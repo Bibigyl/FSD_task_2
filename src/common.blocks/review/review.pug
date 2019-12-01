@@ -1,13 +1,13 @@
 mixin review(avatar, likes, name, when, text)
-	div.review
+	.review
 		div.review__avatar.ui-review__avatar(style=avatar)
 		div.like-button-wrap.review__like-button
 			label.label.label_like-button
 				input.like-button(type="checkbox")
-				div.like-button__text= likes
-					div.material-icons
+				.like-button__text= likes
+					.material-icons
 		span.review__name= name
 		span= when
 		p.review__text= text
 
-// .ui-review__avatar is a temp class for this layout, not full picktures
+// .ui-review__avatar временный класс, чтобы кругные картинки с макета нормально отображались

@@ -1,9 +1,36 @@
-//------------------ Imports ------------------------
+//--------------- import libs -----------------------------
 
-import "../../scss/main.scss";
-import "../../js/main.js";
+import "../../libs/jquery.maskedinput/jquery.maskedinput.min.js";
+import "../../libs/jquery-ui-1.12.1.custom/jquery-ui.min.js";
+import "../../libs/daterangepicker-master/moment.min.js";
+import "../../libs/daterangepicker-master/daterangepicker.js";
+import "../../libs/jquery.daterangepicker/jquery.daterangepicker.js";
+
+
+import moment from 'moment'
+import 'moment/locale/ru' 
+moment.locale('ru');
+
+//------------------ import blocks scripts -----------------------------
+
+import "../../common.blocks/input/input.js";
+import "../../common.blocks/slider-range/slider-range.js";
+import "../../common.blocks/dropdown/dropdown.js";
+import "../../common.blocks/checkbox-list/checkbox-list.js";
+import "../../common.blocks/pagination/pagination.js";
+import "../../common.blocks/like-button/like-button.js";
+
+//------------------ import components scripts -----------------------------
+
+import "../../components/booking-card/booking-card.js";
+import "../../components/search-card/search-card.js";
+import "../../components/header/header.js";
+
+
 
 $( document ).ready(function() {
+
+  // Открытый календарь в карточках
   
   $('#ui-calendar').dateRangePicker({
     language: 'ru',
@@ -21,10 +48,9 @@ $( document ).ready(function() {
     alwaysOpen: true, 
   });
 
-
   $('#ui-calendar').data('dateRangePicker').setDateRange('2019/08/19','2019/08/23');
 
-  var calendarDayClickCounter = 0;
+/*   var calendarDayClickCounter = 0;
 
   $(".day").on("click", function() {
 
@@ -35,15 +61,17 @@ $( document ).ready(function() {
       $(this).parent().parent().parent().find(".td-first-day-selected-temp").removeClass("td-first-day-selected-temp");
       calendarDayClickCounter = 0;
     }
-  });
+  }); */
 
-  $('.calendar__link_clear').click(function(evt)
-  {
+  $('.calendar__link_clear').click(function(evt) {
     evt.stopPropagation();
     $('#ui-calendar').data('dateRangePicker').clear();
-    $(".td-checked").removeClass("td-checked td-first-day-selected-temp");
+    $(".td-checked").removeClass("td-checked");
   });
 
+
+
+  // Календарь на компонентах, два инпута
 
   $('#ui-date-search').dateRangePicker({
     language: 'ru',
@@ -67,9 +95,13 @@ $( document ).ready(function() {
     },
     customArrowPrevSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_back</i></div>',
     customArrowNextSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_forward</i></div>',
-  }).bind('datepicker-opened', function() {
+  })
+  
 
-    var dayClickCounter = 0;
+  // Здесь события "принять" и "очистить" создаются только после открытия
+  .bind('datepicker-opened', function() {
+
+/*     var dayClickCounter = 0;
 
     $(".month-wrapper .day").on("click", function() {
       dayClickCounter += 1;
@@ -79,17 +111,15 @@ $( document ).ready(function() {
         $(this).parent().parent().parent().find(".td-first-day-selected-temp").removeClass("td-first-day-selected-temp");
         dayClickCounter = 0;
       }
-    });
+    });  */
 
-    $('.calendar__link_clear').click(function(evt)
-    {
+    $('.calendar__link_clear').click(function(evt) {
       evt.stopPropagation();
       $('#ui-date-search').data('dateRangePicker').clear();
       $("#ui-date-search .td-checked").removeClass("td-checked td-first-day-selected-temp");
     });
 
-    $('.calendar__link_apply').click(function(evt)
-    {
+    $('.calendar__link_apply').click(function(evt) {
       evt.stopPropagation();
       $('#ui-date-search').data('dateRangePicker').close();
       $("#ui-date-search .td-checked").removeClass("td-checked td-first-day-selected-temp");

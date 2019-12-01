@@ -1,19 +1,19 @@
 mixin header(header_class, menu, button_color_empty__text, button_color_field__text, user)
-	div(class="header wide-block header_main" class=header_class)
-		div(class="container")
-			div(class="header__logo")
+	.header.wide-block.header_main(class=header_class)
+		.container
+			.header__logo
 				include ../../common.blocks/logo/logo-with-name.svg
-			ul(class="header__menu menu")
+			ul.header__menu.menu
 				each item in menu
 					li
 						a(href=item.href class=item.class target=item.target)= item.name
 							if item.arrow
-								i(class="material-icons") expand_more
+								i.material-icons expand_more
 
-			div(class="button-wrap button-wrap_color_empty" class=button_color_empty__text.class)
-				div(class="button")= button_color_empty__text.name
-			div(class="button button_color_filled button_size_middle" class=button_color_field__text.class)= button_color_field__text.name
-			span(class="header__user-name" class=user.class)= user.name
+			.button-wrap.button-wrap_color_empty(class=button_color_empty__text.class)
+				.button= button_color_empty__text.name
+			.button.button_color_filled.button_size_middle(class=button_color_field__text.class)= button_color_field__text.name
+			span.header__user-name(class=user.class)= user.name
 
 			input#menu__button(type="checkbox")
 			label(for="menu__button")
@@ -21,13 +21,13 @@ mixin header(header_class, menu, button_color_empty__text, button_color_field__t
 				div
 				div
 			.mobil-menu
-				ul(class="header__menu menu")
+				ul.header__menu.menu
 					each item in menu
 						li
 							a(href=item.href class=item.class target=item.target)= item.name
 								if item.arrow
-									i(class="material-icons") expand_more
-				div(class="button-wrap button-wrap_color_empty" class=button_color_empty__text.class)
-					div(class="button")= button_color_empty__text.name
-				div(class="button button_color_filled button_size_middle" class=button_color_field__text.class)= button_color_field__text.name
-				span(class="header__user-name" class=user.class) <i class="fa fa-user-circle-o icons_colored " aria-hidden="true"></i>#{user.name}
+									i.material-icons expand_more
+				.button-wrap.button-wrap_color_empty(class=button_color_empty__text.class)
+					.button= button_color_empty__text.name
+				.button.button_color_filled.button_size_middle(class=button_color_field__text.class)= button_color_field__text.name
+				span.header__user-name(class=user.class) <i class="fa fa-user-circle-o icons_colored " aria-hidden="true"></i>#{user.name}

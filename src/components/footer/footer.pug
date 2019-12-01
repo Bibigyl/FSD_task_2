@@ -1,32 +1,32 @@
 mixin footer(footer_class, info, uls, subscribe, copyright)
-	div(class="footer wide-block" class=footer_class)
-		div(class="container")
-			div(class="footer__info")
-				a(class="footer__logo")
+	.footer.wide-block(class=footer_class)
+		.container
+			.footer__info
+				a.footer__logo
 					include ../../common.blocks/logo/logo-with-name.svg
 				p= info 
 			
 			each ul in uls
-				div(class="footer__ul ")
+				.footer__ul 
 					h3= ul.title
 					ul
 						each item in ul.items
 							li= item
 
-			div(class="footer__subscribe") 
+			.footer__subscribe 
 				h3= subscribe.title
 				p= subscribe.text
-				label(class="label")
-					input(class="input input_size_middle" type="email" placeholder=subscribe.button_text)
-					div(class="input__arrow arrow")
-						i(class="material-icons icons_colored") arrow_forward
+				label.label
+					input.input.input_size_middle(type="email" placeholder=subscribe.button_text)
+					.input__arrow.arrow
+						i.material-icons.icons_colored arrow_forward
 		hr
-		div(class="container")
-			span(class="footer__copyright")= copyright
-			div(class="footer__social-icons social-icons ")
-				a(class="social-icon")
-					i(class="fa fa-twitter icons_colored")
-				a(class="social-icon")
-					i(class="fa fa-facebook-official icons_colored")
-				a(class="social-icon")
-					i(class="fa fa-instagram icons_colored")
+		.container
+			span.footer__copyright= copyright
+			.footer__social-icons.social-icons 
+				a.social-icon
+					i.fa.fa-twitter.icons_colored
+				a.social-icon
+					i.fa.fa-facebook-official.icons_colored
+				a.social-icon
+					i.fa.fa-instagram.icons_colored

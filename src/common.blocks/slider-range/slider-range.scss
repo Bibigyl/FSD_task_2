@@ -24,8 +24,8 @@
   position: absolute;
 }
 .ui-slider-horizontal .ui-slider-range {
-	height: 6px;	
-	top: -1px;	
+  height: 6px;  
+  top: -1px;  
 }
 .ui-slider .ui-slider-handle {
   background: #6FCF97;
@@ -42,7 +42,7 @@
   cursor: move; /* fallback if grab cursor is unsupported */
   cursor: grab;
   &:active{
-    cursor: grabbing;
+  cursor: grabbing;
   }
 }
 
@@ -51,14 +51,14 @@
 .range-wrapper{
   position: absolute;
   top: -32px;
-	right: 0;
+  right: 0;
 }
 .range {
   white-space: nowrap;
   z-index: 10;
   position: relative;
   font-size: 12px;
-  font-family: "Montserrat-Regular";
+  font-family: 'Montserrat-Regular';
 }
 .range-value{
   display: inline-block;
@@ -68,6 +68,6 @@
   text-align: center;
   display: inline-block;
   &:after{
-    content: '-';
+  content: '-';
   }
 }

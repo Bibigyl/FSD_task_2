@@ -1,17 +1,17 @@
 .bullet-list {
-	li {
-		margin-bottom: 10px;
-		padding-left: 21px;
-		position: relative;
-		&:before {
-			content: '';
-			position: absolute;
-			width: 10px;
-			height: 10px;
-			left: 0px;
-			top: 6px;
-			background-color: $c25;
-			border-radius: 100px;
-		}
-	}
+  li {
+  margin-bottom: 10px;
+  padding-left: 21px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0px;
+    top: 6px;
+    background-color: $c25;
+    border-radius: 100px;
+  }
+  }
 }
