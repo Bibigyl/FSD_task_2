@@ -1,51 +1,64 @@
 .check-in-card {
   max-width: 380px;
+
   h1 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
   }
+
   .input {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
   }
+
   input[name='surname'] {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
   }
+
   .label_radio {
-  margin-right: 17px;
-  margin-bottom: 22px;
+    margin-right: 17px;
+    margin-bottom: 22px;
   }
+
   input[name='birthday'] {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
   }
-  > h3 {
-  margin-bottom: 5px;
+
+  >h3 {
+    margin-bottom: 5px;
   }
+
   input[name='password'] {
-  margin-bottom: 8px;  
+    margin-bottom: 8px;
   }
+
   .toggle__text {
-  margin-bottom: 24px;
+    margin-bottom: 24px;
   }
+
   .button_size_big {
-  margin-bottom: 29px;
+    margin-bottom: 29px;
   }
-  .button-wrap_color_empty > * {
-  padding: 13px 24px;
+
+  .button-wrap_color_empty>* {
+    padding: 13px 24px;
   }
 }
+
 @media (max-width: 800px) {
   .check-in-card h1 {
-  font-size: 24px;
-  letter-spacing: auto;
+    font-size: 24px;
+    letter-spacing: auto;
   }
 }
+
 @media (max-width: 500px) {
   .check-in-card .label_radio:nth-child(4) {
-  margin-bottom: 5px;  
+    margin-bottom: 5px;
   }
 }
+
 @media (max-width: 400px) {
   .check-in-card h1 {
-  font-size: 20px;
-  letter-spacing: auto;
+    font-size: 20px;
+    letter-spacing: auto;
   }
 }

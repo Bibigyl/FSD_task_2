@@ -10,22 +10,26 @@
   cursor: pointer;
   display: inline-flex;
   position: relative;
+
   &:hover,
   &:active,
   &:focus {
-  border: none;
-  font-style: normal;
-  font-weight: bold;
+    border: none;
+    font-style: normal;
+    font-weight: bold;
   }
 }
+
 .button__arrow {
   position: absolute;
   top: 8px;
   right: 10px;
 }
+
 .button_size_middle {
   padding: 14px 20px;
 }
+
 .button_size_big {
   justify-content: center;
   width: 100%;
@@ -33,45 +37,52 @@
   font-size: 12px;
   padding: 14px 0;
 }
+
 .button_color_filled {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   color: #fff;
   transition: .2s;
+
   &:hover,
   &:active,
   &:focus {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  color: #fff;
-  opacity: .5;
-  transition: .2s;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: #fff;
+    opacity: .5;
+    transition: .2s;
   }
+
   & .material-icons {
-  color: #fff;
+    color: #fff;
   }
 }
+
 .button-wrap_color_empty {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   display: inline-flex;
   border-radius: 100px;
   padding: 0;
   transition: .2s;
+
   &:hover,
   &:active,
   &:focus {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  opacity: .5;
-  transition: .2s;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: .5;
+    transition: .2s;
   }
 }
-.button-wrap_color_empty > * {
+
+.button-wrap_color_empty>* {
   padding: 13px 18px;
   background-color: #fff;
   margin: 1px;
   color: $purple;
+
   &:hover,
   &:active,
   &:focus {
-  background: #fff;
-  color: $purple;
+    background: #fff;
+    color: $purple;
   }
 }

@@ -7,6 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const autoprefixer = require('autoprefixer');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
+//const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const PATHS = {
 	src: path.join(__dirname,'src'),
@@ -69,12 +70,12 @@ module.exports = {
 			}
 		]
 	},
-  resolve: {
-    alias: {
-    	//locale problem: https://github.com/moment/moment/issues/2979
-      moment$: 'moment/moment.js',
-    }
-  },
+	resolve: {
+    	alias: {
+			//locale problem: https://github.com/moment/moment/issues/2979
+			moment$: 'moment/moment.js',
+    	}
+  	},
 	plugins: [ 
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
@@ -116,11 +117,15 @@ module.exports = {
 			jQuery: 'jquery',
 			'window.jQuery': 'jquery'
 		}),
-    new MomentLocalesPlugin({
-        localesToKeep: ['es-us', 'ru'],
-    }),
-    //locale problem: https://github.com/moment/moment/issues/2979
-    new webpack.ContextReplacementPlugin(/\.\/locale$/, 'empty-module', false, /js$/)
+		new MomentLocalesPlugin({
+			localesToKeep: ['es-us', 'ru'],
+		}),
+    	//locale problem: https://github.com/moment/moment/issues/2979
+		new webpack.ContextReplacementPlugin(/\.\/locale$/, 'empty-module', false, /js$/),
+ 		//new StylelintPlugin({
+		//	files: ['src/**/*.scss'],
+		//	exclude: ['src/libs/**/*.scss'],
+		//}), 
 	],
 	devServer: {
 		stats: 'errors-only'

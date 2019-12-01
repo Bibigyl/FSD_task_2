@@ -1,5 +1,5 @@
 .input {
-  font-size: 14px;  
+  font-size: 14px;
   background: #FFFFFF;
   border: 1px solid $c25;
   box-sizing: border-box;
@@ -10,34 +10,42 @@
   font-family: 'Montserrat-Regular';
   position: relative;
   transition: .2s;
+
   &::placeholder {
-  font-family: 'Montserrat-Regular';
-  color: $c25;
+    font-family: 'Montserrat-Regular';
+    color: $c25;
   }
-  &:hover, &:focus {
-  border-color: $c50;
-  color: $c75;
-  transition: .2s;
+
+  &:hover,
+  &:focus {
+    border-color: $c50;
+    color: $c75;
+    transition: .2s;
   }
+
   &:not(empty) {
-  color: $c75;
-  transition: .2s;
+    color: $c75;
+    transition: .2s;
   }
 }
+
 .input__arrow {
   position: absolute;
   font-size: 24px;
   top: -3px;
   right: 9px;
 }
+
 .input_size_big {
-  width: 100%;  
-  max-width: 320px;  
+  width: 100%;
+  max-width: 320px;
 }
+
 .input_size_middle {
-  width: 100%;  
-  max-width: 266px;  
+  width: 100%;
+  max-width: 266px;
 }
+
 .input_size_small {
   max-width: 150px;
   width: 100%;

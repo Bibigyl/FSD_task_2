@@ -2,33 +2,39 @@
   position: relative;
   width: 266px;
   margin-bottom: 20px;
+
   ul {
-  display: block;
-  height: auto;
-  max-height: 0px;
-  background-color: #fff;
-  transition: .4s linear;
-  overflow:hidden; 
+    display: block;
+    height: auto;
+    max-height: 0px;
+    background-color: #fff;
+    transition: .4s linear;
+    overflow: hidden;
   }
+
   h3 {
-  margin-bottom: 17px;
+    margin-bottom: 17px;
   }
 }
+
 .checkbox-list__arrow {
   position: absolute;
   top: -4px;
   right: 10px;
+
   .material-icons {
-  transition: .2s;
+    transition: .2s;
   }
 }
+
 .checkbox-list_state_open {
   ul {
-  max-height: 300px;
-  transition: .4s linear;
+    max-height: 300px;
+    transition: .4s linear;
   }
+
   .material-icons {
-  transform: scale(1, -1);
-  transition: .2s;
+    transform: scale(1, -1);
+    transition: .2s;
   }
 }

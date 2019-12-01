@@ -1,9 +1,11 @@
 .dropdown {
   position: relative;
+
   h3 {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
   }
 }
+
 .dropdown-ul-wrap {
   position: absolute;
   top: 63px;
@@ -17,23 +19,26 @@
   background-color: #fff;
   width: 100%;
   box-sizing: border-box;
+
   li {
-  width: 100%;
-  box-sizing: border-box;
-  display: block;
-  padding: 6px 7px 0px 13px;
-  height: 32px;
-  font-family: 'Montserrat-Bold';
-  font-size: 12px;
-  line-height: 25px;
-  text-transform: uppercase;
-  color: #1F2041;
-  margin-bottom: 5px;
-  &:last-of-type {
-    margin-bottom: 11px;
-  }
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    padding: 6px 7px 0px 13px;
+    height: 32px;
+    font-family: 'Montserrat-Bold';
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #1F2041;
+    margin-bottom: 5px;
+
+    &:last-of-type {
+      margin-bottom: 11px;
+    }
   }
 }
+
 .dropdown__field {
   height: 44px;
   border: 1px solid $c25;
@@ -46,16 +51,19 @@
   text-overflow: hidden;
   overflow: hidden;
   width: 100%;
+
   span {
-  white-space: nowrap;
-  word-wrap: break-word;
+    white-space: nowrap;
+    word-wrap: break-word;
   }
 }
+
 .dropdown__arrow {
   position: absolute;
   top: 9px;
   right: 10px;
 }
+
 .dropdown__num {
   display: inline-block;
   float: right;
@@ -63,6 +71,7 @@
   width: 32px;
   text-align: center;
 }
+
 .dropdown__button {
   display: inline-block;
   float: right;
@@ -78,47 +87,58 @@
   font-family: 'Montserrat-Regular';
   cursor: pointer;
 }
+
 .dropdown__button_not-active {
   opacity: .5;
 }
+
 .dropdown__link_apply {
   display: inline-block;
   float: right;
-  padding: 9px 7px 7px 0px;  
+  padding: 9px 7px 7px 0px;
 }
+
 .dropdown__link_clear {
   display: inline-block;
   float: left;
-  padding: 9px 7px 0px 14px;  
+  padding: 9px 7px 0px 14px;
 }
+
 .dropdown_size_middle {
   width: 100%;
   max-width: 266px;
+
   .dropdown__field {
-  width: 100%;
+    width: 100%;
   }
+
   ul {
-  width: 100%;
+    width: 100%;
   }
 }
+
 .dropdown_size_big {
   width: 100%;
   max-width: 320px;
+
   .dropdown__field {
-  width: 100%;
+    width: 100%;
   }
+
   ul {
-  width: 100%;
+    width: 100%;
   }
 }
+
 .dropdown_state_open {
   .dropdown__field {
-  border-color: $c50;
-  transition: .4s;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
+    border-color: $c50;
+    transition: .4s;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
+
   .dropdown-ul-wrap {
-  display: block;
+    display: block;
   }
 }

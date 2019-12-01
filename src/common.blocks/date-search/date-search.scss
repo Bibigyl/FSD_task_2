@@ -1,24 +1,28 @@
 .date-search {
   label:first-child {
-  margin-right: 20px;
+    margin-right: 20px;
   }
+
   .input__arrow {
-  top: 30px;
-  pointer-events: none;
+    top: 30px;
+    pointer-events: none;
   }
+
   .input {
-  padding-right: 30px;
-  cursor: pointer;
-  color: $c75;
-  text-overflow: ellipsis;
-  text-overflow: hidden;
-  overflow: hidden;
-  span {
-    white-space: nowrap;
-    word-wrap: break-word;
-  }
+    padding-right: 30px;
+    cursor: pointer;
+    color: $c75;
+    text-overflow: ellipsis;
+    text-overflow: hidden;
+    overflow: hidden;
+
+    span {
+      white-space: nowrap;
+      word-wrap: break-word;
+    }
   }
 }
+
 .date-search {
   display: flex;
   width: 100%;

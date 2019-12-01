@@ -4,43 +4,48 @@
   opacity: 0;
   margin: 10px 0 0 20px;
 }
+
 .label_toggle {
-  input:checked + .toggle__text:before {
-  border-color: $purple;
+  input:checked+.toggle__text:before {
+    border-color: $purple;
   }
-  input:checked + .toggle__text:after {
-  left: 24px;
-  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
-  transition: .2s;
+
+  input:checked+.toggle__text:after {
+    left: 24px;
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+    transition: .2s;
   }
 }
+
 .toggle__text {
   position: relative;
   padding: 0 0 0 50px;
   cursor: pointer;
+
   &:before {
-  box-sizing: border-box;
-  content: '';
-  position: absolute;
-  top: 3px;
-  left: 0;
-  width: 40px;
-  height: 20px;
-  border-radius: 10px;
-  background: #fff;
-  transition: .2s;
-  border: 1px solid $c25;
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background: #fff;
+    transition: .2s;
+    border: 1px solid $c25;
   }
+
   &:after {
-  box-sizing: border-box;
-  content: '';
-  position: absolute;
-  top: 7px;
-  left: 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 10px;
-  background: linear-gradient(180deg, $c25 0%, $c25 100%);
-  transition: .2s;
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, $c25 0%, $c25 100%);
+    transition: .2s;
   }
 }

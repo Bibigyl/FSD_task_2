@@ -8,28 +8,31 @@
   color: $c75;
   font-family: 'Montserrat-Regular';
   appearance: none;
-  option[selected][disabled] {
-  // add later
-  }
-  &:not(:checked), &:checked {
-  padding-bottom: 4px;
-  padding-left: 14px;
+
+  &:not(:checked),
+  &:checked {
+    padding-bottom: 4px;
+    padding-left: 14px;
   }
 }
+
 .select__arrow {
   position: absolute;
   top: 28px;
   right: 10px;
   pointer-events: none;
 }
+
 .select_size_big {
-  width: 100%;  
-  max-width: 320px;  
+  width: 100%;
+  max-width: 320px;
 }
+
 .select_size_middle {
-  width: 100%;  
-  max-width: 266px;  
+  width: 100%;
+  max-width: 266px;
 }
+
 .select_size_small {
   width: 100%;
 }
