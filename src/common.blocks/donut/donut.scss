@@ -79,11 +79,11 @@ figure {
   }
 
   &_good {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
   }
 
   &_satisfactorily {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $gradient;
   }
 
   &_badly {

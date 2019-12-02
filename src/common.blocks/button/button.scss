@@ -38,14 +38,14 @@
 }
 
 .button_color_filled {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: $gradient;
   color: #fff;
   transition: .2s;
 
   &:hover,
   &:active,
   &:focus {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $gradient;
     color: #fff;
     opacity: .5;
     transition: .2s;
@@ -57,7 +57,7 @@
 }
 
 .button-wrap_color_empty {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: $gradient;
   display: inline-flex;
   border-radius: 100px;
   padding: 0;
@@ -66,7 +66,7 @@
   &:hover,
   &:active,
   &:focus {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $gradient;
     opacity: .5;
     transition: .2s;
   }
