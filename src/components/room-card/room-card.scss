@@ -34,7 +34,7 @@
   .material-icons {
     margin: auto;
     color: #fff;
-    font-size: 24px;
+    font-size: rem(24px);
     transform: rotate(90deg);
   }
 
@@ -73,11 +73,11 @@
   }
 
   h2 {
-    font-size: 14px;
+    font-size: rem(14px);
   }
 
   .room__number {
-    font-size: 19px;
+    font-size: rem(19px);
     margin: 0 5px;
   }
 }
@@ -93,13 +93,13 @@
   }
 
   h3 {
-    font-size: 14px;
+    font-size: rem(14px);
     margin-right: 4px;
     color: $c50;
   }
 
   >span {
-    font-size: 12px;
+    font-size: rem(12px);
   }
 }
 
@@ -131,7 +131,7 @@
   }
 
   h3 {
-    font-size: 14px;
+    font-size: rem(14px);
     margin-right: 4px;
     color: $c50;
   }

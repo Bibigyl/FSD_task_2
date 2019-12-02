@@ -9,3 +9,13 @@
     src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
   }
 }
+
+/*------------- px to rem ---------------*/
+
+@function rem($size) {
+  @return $size / 14px * 1rem;
+}
+
+
+// перевод всего подряд в рем
+// https://github.com/pierreburel/sass-rem/blob/master/_rem.scss

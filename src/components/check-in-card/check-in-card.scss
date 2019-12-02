@@ -45,7 +45,7 @@
 
 @media (max-width: 800px) {
   .check-in-card h1 {
-    font-size: 24px;
+    font-size: rem(24px);
     letter-spacing: auto;
   }
 }
@@ -58,7 +58,7 @@
 
 @media (max-width: 400px) {
   .check-in-card h1 {
-    font-size: 20px;
+    font-size: rem(20px);
     letter-spacing: auto;
   }
 }

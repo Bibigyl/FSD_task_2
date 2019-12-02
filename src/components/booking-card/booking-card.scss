@@ -12,11 +12,11 @@
   }
 
   h2 {
-    font-size: 14px;
+    font-size: rem(14px);
   }
 
   .room__number {
-    font-size: 25px;
+    font-size: rem(25px);
     margin: 0 4px;
   }
 }
@@ -29,13 +29,13 @@
   }
 
   h3 {
-    font-size: 14px;
+    font-size: rem(14px);
     margin-right: 4px;
     color: $c50;
   }
 
   >span {
-    font-size: 12px;
+    font-size: rem(12px);
     color: $c50;
   }
 }
@@ -74,7 +74,7 @@
   height: 20px;
   border: 1px solid $c25;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: rem(12px);
   font-weight: bold;
   color: $c25;
   border-radius: 100px;
@@ -111,7 +111,7 @@
     padding-right: 2px;
     float: left;
     font-weight: bold;
-    font-size: 18px;
+    font-size: rem(18px);
     letter-spacing: .1em;
     margin-left: 2px;
   }

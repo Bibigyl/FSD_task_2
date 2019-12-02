@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: rem(12px);
   line-height: 15px;
   border: none;
   cursor: pointer;
@@ -33,7 +33,7 @@
   justify-content: center;
   width: 100%;
   max-width: 320px;
-  font-size: 12px;
+  font-size: rem(12px);
   padding: 14px 0;
 }
 

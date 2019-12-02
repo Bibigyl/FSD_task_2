@@ -54,7 +54,9 @@ function donutDiagram(vals, node) {
     let segs = node.querySelectorAll('.donut-segment');
 
     for (let i = 0; i < 4; i++) {
-        segs[i].setAttribute('stroke-dasharray', pers[i] + ' ' + (100 - pers[i]));
+        let one = pers[i] ? pers[i] - 1 : 0;
+        let two = pers[i] ? (100 - pers[i]) + 1 : (100 - pers[i]);
+        segs[i].setAttribute('stroke-dasharray', one + ' ' + two);
         segs[i].setAttribute('stroke-dashoffset', arSum);
         segs[i].setAttribute('val', vals[i]);
         arSum = arSum + pers[i+1];

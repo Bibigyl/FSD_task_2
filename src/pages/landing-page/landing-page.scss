@@ -44,7 +44,7 @@
   }
 
   .search-card h1 {
-    font-size: 24px;
+    font-size: rem(24px);
     letter-spacing: auto;
   }
 
@@ -63,11 +63,11 @@
   }
 
   .search-card h1 {
-    font-size: 20px;
+    font-size: rem(20px);
     letter-spacing: auto;
   }
 
   .button_size_big {
-    font-size: 10px;
+    font-size: rem(10px);
   }
 }
