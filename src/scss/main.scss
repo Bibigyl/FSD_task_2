@@ -25,21 +25,49 @@ $green: #6FCF97;
 
 @import './_mixins';
 
-@include font-face('Quicksand-Bold', '../fonts/Quicksand-Bold/Quicksand-Bold');
-@include font-face('Quicksand-Regular', '../fonts/Quicksand-Regular/Quicksand-Regular');
-@include font-face('Montserrat-Bold', '../fonts/Montserrat-Bold/Montserrat-Bold');
-@include font-face('Montserrat-Regular', '../fonts/Montserrat-Regular/Montserrat-Regular');
+@include font-face(
+  'Quicksand', 
+  '../fonts/Quicksand-Regular/Quicksand-Regular',
+  400
+);
+@include font-face(
+  'Quicksand', 
+  '../fonts/Quicksand-Bold/Quicksand-Bold',
+  700
+);
+@include font-face(
+  'Montserrat', 
+  '../fonts/Montserrat-Regular/Montserrat-Regular',
+  400
+);
+@include font-face(
+  'Montserrat', 
+  '../fonts/Montserrat-Bold/Montserrat-Bold',
+  700
+);
+@include font-face(
+  'OpenSans', 
+  '../fonts/OpenSans-Regular/OpenSans-Regular',
+  400
+);
+@include font-face(
+  'OpenSans', 
+  '../fonts/OpenSans-Bold/OpenSans-Bold',
+  700
+);
 
 
 body {
-  font-family: 'Montserrat-Regular', sans-serif;
+  font-family: 'Montserrat', 'OpenSans', sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: $c75;
 }
 
 h1 {
-  font-family: 'Quicksand-Bold', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: $c100;
@@ -48,7 +76,8 @@ h1 {
 }
 
 h2 {
-  font-family: 'Quicksand-Bold', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   color: $c100;
@@ -56,7 +85,8 @@ h2 {
 }
 
 h3 {
-  font-family: 'Montserrat-Bold', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;

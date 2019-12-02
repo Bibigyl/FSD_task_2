@@ -7,12 +7,14 @@
   height: 44px;
   padding-left: 14px;
   color: $c25;
-  font-family: 'Montserrat-Regular';
   position: relative;
   transition: .2s;
+  font-family: 'Montserrat';
+  font-weight: 400;
 
   &::placeholder {
-    font-family: 'Montserrat-Regular';
+    font-family: 'Montserrat';
+    font-weight: 400;
     color: $c25;
   }
 

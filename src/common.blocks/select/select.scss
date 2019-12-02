@@ -6,8 +6,9 @@
   height: 44px;
   padding-left: 15px;
   color: $c75;
-  font-family: 'Montserrat-Regular';
   appearance: none;
+  font-family: 'Montserrat';
+  font-weight: 400;
 
   &:not(:checked),
   &:checked {

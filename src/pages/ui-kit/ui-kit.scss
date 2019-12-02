@@ -117,7 +117,7 @@
   }
 
   span {
-    font-family: 'Quicksand-Regular';
+    font-family: 'Quicksand';
     font-weight: 400;
   }
 }
@@ -140,7 +140,8 @@
   width: 50px;
 
   >* {
-    font-family: 'Montserrat-Regular';
+    //font-family: 'Montserrat';
+    //font-weight: 400;
     color: $c25;
   }
 }
