@@ -1,95 +1,96 @@
 doctype html
 html(lang="ru")
-  head
-    meta(charset = 'utf-8')
-    meta(name='viemport', content="initial-scale=1.0, width=device-width")
-    title Room-details
-    link(rel="stylesheet" href="style.css")
-  body.room-details.page_language_ru
-    include ../../components/header/header.pug
-    +header(
-      "room-details__header header_language_ru",
-    [
-      {name: "О нас", href: "#"},
-      {name: "Услуги", href: "#", arrow: true},
-      {name: "Вакансии", href: "#"},
-      {name: "Новости", href: "#"},
-      {name: "Соглашения", href: "#", arrow: true},
-    ],
-      {name: "Войти"}, 
-      {name: "Зарегистрироваться"}, 
-      {name: "Cosmin Negoita", class: "hidden"}
-    )
-    .room-photos
-      .room-photo_wide.background-image(style=`background-image: url( ${require('./images/room-details__front-1.jpg')})`)
-      .room-photos-wrap
-        .room-photo_slim.background-image(style=`background-image: url( ${require('./images/room-details__front-2.jpg')})`)
-        .room-photo_slim.background-image(style=`background-image: url( ${require('./images/room-details__front-3.jpg')})`)
+    head
+        meta(charset = 'utf-8')
+        meta(name='viemport', content="initial-scale=1.0, width=device-width")
+        title Room-details
+        link(rel="stylesheet" href="style.css")
+    body.room-details.page_language_ru
+        include ../../components/header/header.pug
+        +header(
+            "room-details__header header_language_ru",
+        [
+            {name: "О нас", href: "#"},
+            {name: "Услуги", href: "#", arrow: true},
+            {name: "Вакансии", href: "#"},
+            {name: "Новости", href: "#"},
+            {name: "Соглашения", href: "#", arrow: true},
+        ],
+            {name: "Войти"}, 
+            {name: "Зарегистрироваться"}, 
+            {name: "Cosmin Negoita", class: "hidden"}
+        )
+        .room-photos
+            .room-photo_wide.background-image(style=`background-image: url( ${require('./images/room-details__front-1.jpg')})`)
+            .room-photos-wrap
+                .room-photo_slim.background-image(style=`background-image: url( ${require('./images/room-details__front-2.jpg')})`)
+                .room-photo_slim.background-image(style=`background-image: url( ${require('./images/room-details__front-3.jpg')})`)
 
-    .details-and-room-card-wrap.container
-      .details
-        .details__info
-          h2 Сведения о номере
-          ul.advantages
-            li
-              i.material-icons.advantage__icon insert_emoticon
-              span.advantage__title Комфорт
-              span Шумопоглащаюшие стены
-            li
-              i.material-icons.advantage__icon location_city
-              span.advantage__title Удобство
-              span Окно в каждой из спален
-            li
-              i.material-icons.advantage__icon whatshot
-              span.advantage__title Уют
-              span Номер оснащён камином
-              
-        .details__impressions
-          h2 Впечатления от номера
-          include ../../common.blocks/donut/donut.pug
+        .details-and-room-card-wrap.container
+            .details
+                .details__info
+                    header
+                        h2 Сведения о номере
+                    ul.advantages
+                        li
+                            i.material-icons.advantage__icon insert_emoticon
+                            span.advantage__title Комфорт
+                            span Шумопоглащаюшие стены
+                        li
+                            i.material-icons.advantage__icon location_city
+                            span.advantage__title Удобство
+                            span Окно в каждой из спален
+                        li
+                            i.material-icons.advantage__icon whatshot
+                            span.advantage__title Уют
+                            span Номер оснащён камином
+                            
+                .details__impressions
+                    h2 Впечатления от номера
+                    include ../../common.blocks/donut/donut.pug
 
-        .details__reviews
-          h2 Отзывы посетителей номера
-          span.reviews__num 2 отзыва
-          include ../../common.blocks/review/review.pug
+                .details__reviews
+                    h2 Отзывы посетителей номера
+                    span.reviews__num 2 отзыва
+                    include ../../common.blocks/review/review.pug
 
-          +review(`background-image: url( ${require('./images/room-details__avatar-2.jpg')})`, 
-          12, 
-          "Мурад Сарафанов", 
-          "5 дней назад", 
-          "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
+                    +review(`background-image: url( ${require('./images/room-details__avatar-2.jpg')})`, 
+                    12, 
+                    "Мурад Сарафанов", 
+                    "5 дней назад", 
+                    "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
 
-          +review(`background-image: url( ${require('./images/room-details__avatar-1.jpg')})`,
-           12,
-           "Патрисия Стёклышкова",
-           "Неделю назад", 
-           "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
+                    +review(`background-image: url( ${require('./images/room-details__avatar-1.jpg')})`,
+                     12,
+                     "Патрисия Стёклышкова",
+                     "Неделю назад", 
+                     "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
 
-        .details__rules
-          h2 Правила
-          ul.bullet-list
-            li Нельзя с питомцами
-            li Без вечеринок и мероприятий
-            li Время прибытия — после 13:00, а выезд до 12:00
-        .details__cancellation
-          h2 Отмена
-          p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-      .room-card-wrap
-        include ../../components/booking-card/booking-card.pug
+                .details__rules
+                    h2 Правила
+                    ul.bullet-list
+                        li Нельзя с питомцами
+                        li Без вечеринок и мероприятий
+                        li Время прибытия — после 13:00, а выезд до 12:00
+                .details__cancellation
+                    h2 Отмена
+                    p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+            .room-card-wrap
+                include ../../components/booking-card/booking-card.pug
 
-    hr
-    include ../../components/footer/footer.pug
-    +footer(
-      "landing-page__footer",
-      "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
-      [
-        {title: "Навигация", items: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
-        {title: "О нас", items: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
-        {title: "Служба поддержки", items: ["Соглашения", "Сообщества", "Связь с нами"]}
-      ],
-      {title: "Подписка", text: "Получайте специальные предложения и новости сервиса", button_text: "Email"},
-      "Copyright © 2018 Toxin отель. Все права зачищены."
-    )
+        hr
+        include ../../components/footer/footer.pug
+        +footer(
+            "landing-page__footer",
+            "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+            [
+                {title: "Навигация", items: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
+                {title: "О нас", items: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
+                {title: "Служба поддержки", items: ["Соглашения", "Сообщества", "Связь с нами"]}
+            ],
+            {title: "Подписка", text: "Получайте специальные предложения и новости сервиса", button_text: "Email"},
+            "Copyright © 2018 Toxin отель. Все права зачищены."
+        )
 
-    script(src="room-details.js")
-    script(src="http://localhost:35729/livereload.js")
+        script(src="room-details.js")
+        script(src="http://localhost:35729/livereload.js")

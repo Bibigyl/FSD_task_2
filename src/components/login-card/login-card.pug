@@ -1,17 +1,18 @@
 .card.login-card
 	
-	h1 Войти
+	header
+		h1 Войти
 
 	label.label
-		input.input.input_size_big(type="email" name="email" placeholder="Email")
+		input.input.input_big(type="email" name="email" placeholder="Email")
 	label.label
-		input.input.input_size_big(type="password" name="password" placeholder="Пароль")
+		input.input.input_big(type="password" name="password" placeholder="Пароль")
 
-	.button.button_color_filled.button_size_big Войти
+	.button.button_colored.button_big Войти
 		.button__arrow.arrow
 			i.material-icons arrow_forward
 
 	.card__information
 		span Нет аккаунта на Toxin?
-		.button-wrap.button_size_middle.button-wrap_color_empty.button_check-in
+		.button-wrap.button_middle.button-wrap_not-colored.button_check-in
 			.button Создать

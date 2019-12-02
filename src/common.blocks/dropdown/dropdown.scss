@@ -103,7 +103,7 @@
   padding: 9px 7px 0px 14px;
 }
 
-.dropdown_size_middle {
+.dropdown_middle {
   width: 100%;
   max-width: 266px;
 
@@ -116,7 +116,7 @@
   }
 }
 
-.dropdown_size_big {
+.dropdown_big {
   width: 100%;
   max-width: 320px;
 
@@ -129,7 +129,7 @@
   }
 }
 
-.dropdown_state_open {
+.dropdown_open {
   .dropdown__field {
     border-color: $c50;
     transition: .4s;

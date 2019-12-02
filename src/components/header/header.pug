@@ -1,4 +1,5 @@
-mixin header(header_class, menu, button_color_empty__text, button_color_field__text, user)
+// проблема с заменой, ошибка, 14 строка
+mixin header(header_class, menu, button_color_empty__text, button_colored__text, user)
 	.header.wide-block.header_main(class=header_class)
 		.container
 			.header__logo
@@ -10,9 +11,9 @@ mixin header(header_class, menu, button_color_empty__text, button_color_field__t
 							if item.arrow
 								i.material-icons expand_more
 
-			.button-wrap.button-wrap_color_empty(class=button_color_empty__text.class)
+			.button-wrap.button-wrap_not-colored(class=button_color_empty__text.class)
 				.button= button_color_empty__text.name
-			.button.button_color_filled.button_size_middle(class=button_color_field__text.class)= button_color_field__text.name
+			.button.button_colored.button_middle(class=button_colored__text.class)= button_colored__text.name
 			span.header__user-name(class=user.class)= user.name
 
 			input#menu__button(type="checkbox")
@@ -27,7 +28,7 @@ mixin header(header_class, menu, button_color_empty__text, button_color_field__t
 							a(href=item.href class=item.class target=item.target)= item.name
 								if item.arrow
 									i.material-icons expand_more
-				.button-wrap.button-wrap_color_empty(class=button_color_empty__text.class)
+				.button-wrap.button-wrap_not-colored(class=button_color_empty__text.class)
 					.button= button_color_empty__text.name
-				.button.button_color_filled.button_size_middle(class=button_color_field__text.class)= button_color_field__text.name
+				.button.button_colored.button_middle(class=button_colored__text.class)= button_colored__text.name
 				span.header__user-name(class=user.class) <i class="fa fa-user-circle-o icons_colored " aria-hidden="true"></i>#{user.name}

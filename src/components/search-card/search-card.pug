@@ -1,18 +1,19 @@
 .card.search-card
-	h1 Найдём номера под ваши пожелания
+	header
+		h1 Найдём номера под ваши пожелания
 	.date-search#search-card__date-search
 		label.label
 			h3 Прибытие
-			input.input.input_masked_date.input_size_small#search-card__first-date(placeholder="ДД.ММ.ГГГГ")
+			input.input.input_with-mask-date.input_small#search-card__first-date(placeholder="ДД.ММ.ГГГГ")
 			.input__arrow.arrow
 				i.material-icons expand_more
 		label.label
 			h3 Выезд
-			input.input.input_masked_date.input_size_small#search-card__last-date(placeholder="ДД.ММ.ГГГГ")
+			input.input.input_with-mask-date.input_small#search-card__last-date(placeholder="ДД.ММ.ГГГГ")
 			.input__arrow.arrow
 				i.material-icons expand_more
 
-	.dropdown.dropdown_size_big.dropdown_choice_guests
+	.dropdown.dropdown_big.dropdown_guests
 		h3 Гости
 		.dropdown__field <span>Сколько гостей</span>
 			.dropdown__arrow.arrow
@@ -34,8 +35,8 @@
 					span.dropdown__num 0
 					span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
 					|Младенцы
-			a.link.dropdown__link_clear.link_color_grey.hidden Очистить
-			a.link.dropdown__link_apply.link_color_bright Применить
-	.button.button_color_filled.button_size_big Подобрать номер
+			a.link.dropdown__link_clear.link_grey.hidden Очистить
+			a.link.dropdown__link_apply.link_colored Применить
+	.button.button_colored.button_big Подобрать номер
 		.button__arrow.arrow
 			i.material-icons arrow_forward

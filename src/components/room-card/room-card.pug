@@ -15,7 +15,7 @@ mixin room(room_class, image, number, price, rating, star_name, reviews, lux)
 			h2 №
 				span.room__number= number
 			if lux
-				a.link.link_color_bright люкс
+				a.link.link_colored люкс
 		.room-card__price-per-day
 			h3= Math.floor(price / 1000) + " " + ("00" + price % 1000).slice(-3) + "₽"
 			span в сутки

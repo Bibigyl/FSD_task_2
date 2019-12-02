@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
     $(".dropdown__arrow").on("click", function() {
-        $(this).parent().parent().children(".dropdown-ul-wrap").slideToggle(200, "linear").parent().toggleClass("dropdown_state_open");
+        $(this).parent().parent().children(".dropdown-ul-wrap").slideToggle(200, "linear").parent().toggleClass("dropdown_open");
 
     });
 
@@ -21,7 +21,7 @@ $( document ).ready(function() {
 
     
     $(".dropdown__link_apply").on("click", function() {
-        $(this).parent().slideToggle(200, "linear").parent().toggleClass("dropdown_state_open");
+        $(this).parent().slideToggle(200, "linear").parent().toggleClass("dropdown_open");
     });
 
 
@@ -67,10 +67,10 @@ $( document ).ready(function() {
             }
         }
 
-        if ( $dropdown.hasClass("dropdown_choice_guests") ) {
+        if ( $dropdown.hasClass("dropdown_guests") ) {
             text = guestsCount();
         }
-        if ( $dropdown.hasClass("dropdown_choice_furniture") ) {
+        if ( $dropdown.hasClass("dropdown_furniture") ) {
             text = furnitureText();
         }
 

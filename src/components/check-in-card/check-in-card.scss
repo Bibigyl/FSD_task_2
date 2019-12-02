@@ -13,7 +13,7 @@
     margin-bottom: 8px;
   }
 
-  .label_radio {
+  .label_for-radio {
     margin-right: 17px;
     margin-bottom: 22px;
   }
@@ -34,11 +34,11 @@
     margin-bottom: 24px;
   }
 
-  .button_size_big {
+  .button_big {
     margin-bottom: 29px;
   }
 
-  .button-wrap_color_empty>* {
+  .button-wrap_not-colored>* {
     padding: 13px 24px;
   }
 }
@@ -51,7 +51,7 @@
 }
 
 @media (max-width: 500px) {
-  .check-in-card .label_radio:nth-child(4) {
+  .check-in-card .label_for-radio:nth-child(4) {
     margin-bottom: 5px;
   }
 }

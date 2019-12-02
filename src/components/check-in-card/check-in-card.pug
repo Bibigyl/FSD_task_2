@@ -1,37 +1,38 @@
 div.card.check-in-card
-	h1 Регистрация аккаунта
+	header 
+		h1 Регистрация аккаунта
 
 	label.label
-		input.input.input_size_big(placeholder="Имя" type="text" name="name")
+		input.input.input_big(placeholder="Имя" type="text" name="name")
 	label.label
-		input.input.input_size_big(placeholder="Фамилия" type="text" name="surname")
+		input.input.input_big(placeholder="Фамилия" type="text" name="surname")
 
-	label.label.label_radio
+	label.label.label_for-radio
 		input.radio(type="radio" name="gender" value="man" checked)
 		div.radio__text Мужчина
-	label.label.label_radio
+	label.label.label_for-radio
 		input.radio(type="radio" name="gender" value="woman")
 		div.radio__text Женщина
 
 	label.label
 		h3 Дата рождения
-		input.input.input_size_big.input_masked_date(name="birthday" placeholder="ДД.ММ.ГГГГ")
+		input.input.input_big.input_with-mask-date(name="birthday" placeholder="ДД.ММ.ГГГГ")
 
 	h3 Данные для входа в сервис
 	label.label
-		input.input.input_size_big(type="email" name="email" placeholder="Email")
+		input.input.input_big(type="email" name="email" placeholder="Email")
 	label.label
-		input.input.input_size_big(type="password" name="password" placeholder="Пароль")
+		input.input.input_big(type="password" name="password" placeholder="Пароль")
 
 	label.label.label_toggle
 		input.toggle(type="checkbox" name="promotions")
 		div.toggle__text Получать спецпредложения
 
-	div.button.button_color_filled.button_size_big Перейти к оплате
+	div.button.button_colored.button_big Перейти к оплате
 		div.button__arrow.arrow
 			i.material-icons arrow_forward
 
 	div.card__information
 		span Уже есть аккаунт на Toxin
-		div.button-wrap.button-wrap_color_empty.button_login
+		div.button-wrap.button-wrap_not-colored.button_for-login
 			div.button Войти

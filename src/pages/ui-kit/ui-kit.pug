@@ -68,12 +68,12 @@ html(lang="ru")
             .block-wrap
               label.label.ui-label
                 h3 Text field
-                input.input.input_size_big(placeholder="Email")
+                input.input.input_big(placeholder="Email")
                 span.ui-field-state Default
             .block-wrap
               label.label.ui-label
                 h3 Text field
-                input.input.ui-input_hover.input_size_big(placeholder="This is pretty awesome")
+                input.input.ui-input_hover.input_big(placeholder="This is pretty awesome")
                 span.ui-field-state Hover / Focus
             .block-wrap
               label.label.ui-label
@@ -90,19 +90,19 @@ html(lang="ru")
             .block-wrap
               label.label.ui-label
                 h3 Masked text field
-                input.input.input_size_big.input_masked_date(placeholder="ДД.ММ.ГГГГ.")
+                input.input.input_big.input_with-mask-date(placeholder="ДД.ММ.ГГГГ.")
                 span.ui-field-state Default
 
           .ui-form-block
             .date-search#ui-date-search
               label.label.ui-label
                 h3 Date dropdown
-                input.input.input_size_small.calendar#ui-first-date(placeholder="ДД.ММ.ГГГГ.")
+                input.input.input_small.calendar#ui-first-date(placeholder="ДД.ММ.ГГГГ.")
                 .input__arrow.arrow
                   i.material-icons expand_more
               label.label.ui-label
                 h3 Date dropdown
-                input.input.input_size_small.calendar#ui-last-date(placeholder="19.08.2019.")
+                input.input.input_small.calendar#ui-last-date(placeholder="19.08.2019.")
                 .input__arrow.arrow
                   i.material-icons expand_more
 
@@ -121,9 +121,9 @@ html(lang="ru")
           .ui-form-block
             label.label.ui-label
               h3 Subscription text field
-              input.input.input_size_middle(type="email" placeholder="Email")
+              input.input.input_middle(type="email" placeholder="Email")
               .input__arrow.arrow
-                i.material-icons.icons_colored.arrow_forward
+                i.material-icons.icons_colored arrow_forward
 
         .ui-column
           .ui-form-block
@@ -140,10 +140,10 @@ html(lang="ru")
 
           .ui-form-block
             h3 Radio buttons
-            label.label.ui-label.label_radio
+            label.label.ui-label.label_for-radio
               input.radio(type="radio" name="ui-radio" checked)
               .radio__text Мужчина
-            label.label.ui-label.label_radio
+            label.label.ui-label.label_for-radio
               input.radio(type="radio" name="ui-radio")
               .radio__text Женщина
 
@@ -159,12 +159,12 @@ html(lang="ru")
           .ui-form-block
             h3 Like button
             .like-button-wrap
-              label.label.ui-label.label_like-button
+              label.label.ui-label.label_for-like-button
                 input.like-button(type="checkbox")
                 .like-button__text 2
                   .material-icons
             .like-button-wrap.like-button-wrap_active
-              label.label.ui-label.label_like-button
+              label.label.ui-label.label_for-like-button
                 input.like-button(type="checkbox" checked)
                 .like-button__text 12
                   .material-icons
@@ -207,15 +207,15 @@ html(lang="ru")
           .ui-form-block
             h3 Buttons
             .ui-buttons-wrap
-              .ui-button.button.button_color_filled.button_size_middle Click me
-              .ui-button.button.button_color_filled.button_size_middle.ui-button_state_not-active Click me
-              .ui-button.button-wrap.ui-button-wrap.button-wrap_color_empty
+              .ui-button.button.button_colored.button_middle Click me
+              .ui-button.button.button_colored.button_middle.ui-button_not-active Click me
+              .ui-button.button-wrap.ui-button-wrap.button-wrap_not-colored
                 .button Click me
-              .ui-button.button-wrap.ui-button-wrap.ui-button_state_not-active.button-wrap_color_empty
+              .ui-button.button-wrap.ui-button-wrap.ui-button_not-active.button-wrap_not-colored
                 .button Click me
-              a.ui-link.link.link_color_bright Click me
-              a.ui-link.link.link_color_grey Click me
-              .ui-button.button.button_color_filled.button_size_big Перейти к оплате
+              a.ui-link.link.link_colored Click me
+              a.ui-link.link.link_grey Click me
+              .ui-button.button.button_colored.button_big Перейти к оплате
                 .button__arrow.arrow
                   i.material-icons arrow_forward
 
@@ -229,7 +229,7 @@ html(lang="ru")
       container.ui-container.ui-form-blocks-2
         .ui-column
           .ui-form-block
-            .ui-dropdown.dropdown.dropdown_size_middle.dropdown_choice_furniture
+            .ui-dropdown.dropdown.dropdown_middle.dropdown_furniture
               h3 Dropdown
               .dropdown__field <span>2 спальни, 2 кровати...</span>
                 .dropdown__arrow.arrow
@@ -253,7 +253,7 @@ html(lang="ru")
                     span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
                     |Ванные комнаты
 
-            .ui-dropdown.dropdown.dropdown_size_middle.dropdown_choice_furniture.dropdown_state_open
+            .ui-dropdown.dropdown.dropdown_middle.dropdown_furniture.dropdown_open
               h3 Dropdown
               .dropdown__field <span>2 спальни, 2 кровати...</span>
                 .dropdown__arrow.arrow
@@ -280,7 +280,7 @@ html(lang="ru")
 
         .ui-column
           .ui-form-block
-            .ui-dropdown.dropdown.dropdown_size_big.dropdown_choice_guests.dropdown_state_open
+            .ui-dropdown.dropdown.dropdown_big.dropdown_guests.dropdown_open
               h3 Dropdown
               .dropdown__field <span>Сколько гостей</span>
                 .dropdown__arrow.arrow
@@ -302,13 +302,13 @@ html(lang="ru")
                     span.dropdown__num 0
                     span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
                     |Младенцы
-                a.link.dropdown__link_clear.link_color_grey.hidden Очистить
-                a.link.dropdown__link_apply.link_color_bright Применить
+                a.link.dropdown__link_clear.link_grey.hidden Очистить
+                a.link.dropdown__link_apply.link_colored Применить
 
 
         .ui-column
           .ui-form-block
-            .ui-dropdown.dropdown.dropdown_size_big.dropdown_choice_guests.dropdown_state_open
+            .ui-dropdown.dropdown.dropdown_big.dropdown_guests.dropdown_open
               h3 Dropdown
               .dropdown__field <span>3 гостя</span>
                 .dropdown__arrow.arrow
@@ -330,8 +330,8 @@ html(lang="ru")
                     span.dropdown__num 0
                     span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
                     |Младенцы
-                a.link.dropdown__link_clear.link_color_grey Очистить
-                a.link.dropdown__link_apply.link_color_bright Применить
+                a.link.dropdown__link_clear.link_grey Очистить
+                a.link.dropdown__link_apply.link_colored Применить
 
       container.ui-container.ui-form-blocks-3
         .ui-column
@@ -374,7 +374,7 @@ html(lang="ru")
                     input.checkbox(type="checkbox" checked)
                     .checkbox__text Шампунь
 
-            .checkbox-list.ui-checkbox-list.checkbox-list_state_open
+            .checkbox-list.ui-checkbox-list.checkbox-list_open
               h3 Expandable checkbox list
               .checkbox-list__arrow.arrow
                 i.material-icons expand_more
@@ -453,7 +453,7 @@ html(lang="ru")
             .review.ui-review
               .review__avatar.ui-review__avatar(style=`background-image: url( ${require('./images/avatar.png')})`)
               .like-button-wrap.review__like-button.like-button-wrap_active 
-                label.label.ui-label.label_like-button
+                label.label.ui-label.label_for-like-button
                   input.like-button(type="checkbox" checked)
                   .like-button__text 12
                     .material-icons

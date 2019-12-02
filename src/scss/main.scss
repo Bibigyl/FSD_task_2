@@ -8,8 +8,9 @@ $c5: rgba(31, 32, 65, 0.05);
 $purple: #BC9CFF;
 $green: #6FCF97;
 $gradient: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+$HTMLsize: 14px;
 
-/*------------------------- CSS normalize (reset) -----------------------------------*/
+/*------------------------- CSS reset -----------------------------------------------*/
 
 @import './_reset';
 
@@ -58,7 +59,7 @@ $gradient: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
 );
 
 html {
-  font-size: 14px;
+  font-size: $HTMLsize;
 }
 
 body {
@@ -122,7 +123,7 @@ h3 {
     font-size: rem(26px);
   }
 
-  .button-wrap_color_empty>* {
+  .button-wrap_not-colored>* {
     margin: 2px;
   }
 }

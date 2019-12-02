@@ -389,7 +389,7 @@
   }
 }
 
-.ui-button_state_not-active {
+.ui-button_not-active {
   opacity: .5;
 
   &.button_color_empty {
@@ -416,11 +416,11 @@
     right: 1px;
   }
 
-  &.dropdown_choice_furniture.dropdown_state_open {
+  &.dropdown_furniture.dropdown_open {
     height: 182px;
   }
 
-  &.dropdown_choice_guests.dropdown_state_open {
+  &.dropdown_guests.dropdown_open {
     height: 223px;
   }
 }
