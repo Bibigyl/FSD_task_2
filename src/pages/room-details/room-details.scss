@@ -89,6 +89,8 @@
     .review__avatar {
       top: 0;
       left: 0;
+      // временный, потому что картинки уже обрезанные
+      background-position: -22px -12px;
     }
 
     .review__like-button {

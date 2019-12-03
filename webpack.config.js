@@ -24,7 +24,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].js'
+		filename: '[name]/[name].js'
 	},
 	module: {
 		rules: [
@@ -78,37 +78,37 @@ module.exports = {
 	plugins: [ 
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
-			filename: '[name].css',
+			filename: '[name]/[name].css',
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/landing-page/landing-page.pug',
-			filename: 'landing-page.html'
+			filename: 'landing-page/index.html'
 		}),
  		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/room-details/room-details.pug',
-			filename: 'room-details.html'
+			filename: 'room-details/index.html'
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/search-room/search-room.pug',
-			filename: 'search-room.html'
+			filename: 'search-room/index.html'
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/registration/registration.pug',
-			filename: 'registration.html'
+			filename: 'registration/index.html'
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/ui-kit/ui-kit.pug',
-			filename: 'ui-kit.html'
+			filename: 'ui-kit/index.html'
 		}),
 		new LiveReloadPlugin(),
 		new webpack.ProvidePlugin({
@@ -127,6 +127,8 @@ module.exports = {
 		//}), 
 	],
 	devServer: {
-		stats: 'errors-only'
+		stats: 'errors-only',
+		index: 'ui-kit/index.html',
+		open: true,
 	}
 };
