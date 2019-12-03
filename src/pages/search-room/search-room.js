@@ -1,10 +1,33 @@
-//------------------ Imports ------------------------
+//--------------- import libs -----------------------------
 
-import "../../scss/main.scss";
+import "../../libs/jquery.maskedinput/jquery.maskedinput.min.js";
+import "../../libs/jquery-ui-1.12.1.custom/jquery-ui.min.js";
+import "../../libs/daterangepicker-master/moment.min.js";
+import "../../libs/daterangepicker-master/daterangepicker.js";
+import "../../libs/jquery.daterangepicker/jquery.daterangepicker.js";
+
+
+import moment from 'moment'
+import 'moment/locale/ru' 
+moment.locale('ru');
+
+//--------------- import common js -----------------------------
+
 import "../../js/main.js";
 
-$( document ).ready(function() {
+//------------------ import blocks scripts -----------------------------
 
+import "../../common.blocks/input/input.js";
+import "../../common.blocks/slider-range/slider-range.js";
+import "../../common.blocks/dropdown/dropdown.js";
+import "../../common.blocks/checkbox-list/checkbox-list.js";
+import "../../common.blocks/pagination/pagination.js";
+
+//------------------ import components scripts -----------------------------
+
+import "../../components/header/header.js";
+
+$( document ).ready(function() {
 
   $('#search-room__date-search').dateRangePicker({
     language: 'ru',

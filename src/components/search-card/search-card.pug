@@ -1,42 +1,43 @@
 .card.search-card
-	header
-		h1 Найдём номера под ваши пожелания
-	.date-search#search-card__date-search
-		label.label
-			h3 Прибытие
-			input.input.input_with-mask-date.input_small#search-card__first-date(placeholder="ДД.ММ.ГГГГ")
-			.input__arrow.arrow
-				i.material-icons expand_more
-		label.label
-			h3 Выезд
-			input.input.input_with-mask-date.input_small#search-card__last-date(placeholder="ДД.ММ.ГГГГ")
-			.input__arrow.arrow
-				i.material-icons expand_more
+	form(name="search" action="search" method="get")
+		header
+			h1 Найдём номера под ваши пожелания
+		.date-search#search-card__date-search
+			label.label
+				h3 Прибытие
+				input.input.input_with-mask-date.input_small#search-card__first-date(placeholder="ДД.ММ.ГГГГ")
+				.input__arrow.arrow
+					i.material-icons expand_more
+			label.label
+				h3 Выезд
+				input.input.input_with-mask-date.input_small#search-card__last-date(placeholder="ДД.ММ.ГГГГ")
+				.input__arrow.arrow
+					i.material-icons expand_more
 
-	.dropdown.dropdown_big.dropdown_guests
-		h3 Гости
-		.dropdown__field <span>Сколько гостей</span>
-			.dropdown__arrow.arrow
-				i.material-icons expand_more
-		.dropdown-ul-wrap
-			ul
-				li 
-					span.dropdown__button.dropdown__button_plus +
-					span.dropdown__num 0
-					span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
-					|Взрослые
-				li 
-					span.dropdown__button.dropdown__button_plus +
-					span.dropdown__num 0
-					span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
-					|Дети
-				li 
-					span.dropdown__button.dropdown__button_plus +
-					span.dropdown__num 0
-					span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
-					|Младенцы
-			a.link.dropdown__link_clear.link_grey.hidden Очистить
-			a.link.dropdown__link_apply.link_colored Применить
-	.button.button_colored.button_big Подобрать номер
-		.button__arrow.arrow
-			i.material-icons arrow_forward
+		.dropdown.dropdown_big.dropdown_guests
+			h3 Гости
+			.dropdown__field <span>Сколько гостей</span>
+				.dropdown__arrow.arrow
+					i.material-icons expand_more
+			.dropdown-ul-wrap
+				ul
+					li 
+						span.dropdown__button.dropdown__button_plus +
+						span.dropdown__num 0
+						span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
+						|Взрослые
+					li 
+						span.dropdown__button.dropdown__button_plus +
+						span.dropdown__num 0
+						span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
+						|Дети
+					li 
+						span.dropdown__button.dropdown__button_plus +
+						span.dropdown__num 0
+						span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
+						|Младенцы
+				a.link.dropdown__link_clear.link_grey.hidden Очистить
+				a.link.dropdown__link_apply.link_colored Применить
+		.button.button_colored.button_big Подобрать номер
+			.button__arrow.arrow
+				i.material-icons arrow_forward

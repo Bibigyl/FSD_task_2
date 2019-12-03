@@ -67,6 +67,10 @@
     margin-bottom: 14px;
     cursor: pointer;
     color: $c50;
+
+    &:hover {
+      color: $c75;
+    }
   }
 }
 

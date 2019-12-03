@@ -17,9 +17,9 @@ const PATHS = {
 module.exports = {
 	entry: {
 		'landing-page': './src/pages/landing-page/landing-page.js',
-		'room-details': './src/pages/room-details/room-details.js',
-		'search-room': './src/pages/search-room/search-room.js',
-		'registration': './src/pages/registration/registration.js',
+		//'room-details': './src/pages/room-details/room-details.js',
+		//'search-room': './src/pages/search-room/search-room.js',
+		//'registration': './src/pages/registration/registration.js',
 		'ui-kit': './src/pages/ui-kit/ui-kit.js'
 	},
 	output: {
@@ -44,8 +44,7 @@ module.exports = {
 							overrideBrowserslist: ['last 3 versions', '> 1%']
 						})
 					}
-				}, 
-			'sass-loader']
+				}, 'sass-loader']
 			},
 			{
 				test: /\.pug$/,

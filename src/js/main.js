@@ -1,4 +1,4 @@
-//--------------- import libs -----------------------------
+/* //--------------- import libs -----------------------------
 
 import "../libs/jquery.maskedinput/jquery.maskedinput.min.js";
 import "../libs/jquery-ui-1.12.1.custom/jquery-ui.min.js";
@@ -31,10 +31,10 @@ import "../components/header/header.js";
 
 $( document ).ready(function() {
  
-});
+}); */
 
-
-
+import '../images/favicon/favicon.js';
+import '../scss/main.scss';
 
 
 

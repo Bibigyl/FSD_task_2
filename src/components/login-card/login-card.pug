@@ -1,18 +1,19 @@
-.card.login-card
-	
-	header
-		h1 Войти
+form(name="login" action="login" method="post")
+	.card.login-card
+		
+		header
+			h1 Войти
 
-	label.label
-		input.input.input_big(type="email" name="email" placeholder="Email")
-	label.label
-		input.input.input_big(type="password" name="password" placeholder="Пароль")
+		label.label
+			input.input.input_big(type="email" name="email" placeholder="Email")
+		label.label
+			input.input.input_big(type="password" name="password" placeholder="Пароль")
 
-	.button.button_colored.button_big Войти
-		.button__arrow.arrow
-			i.material-icons arrow_forward
+		.button.button_colored.button_big Войти
+			.button__arrow.arrow
+				i.material-icons arrow_forward
 
-	.card__information
-		span Нет аккаунта на Toxin?
-		.button-wrap.button_middle.button-wrap_not-colored.button_check-in
-			.button Создать
+		.card__information
+			span Нет аккаунта на Toxin?
+			.button-wrap.button_middle.button-wrap_not-colored.button_check-in
+				.button Создать

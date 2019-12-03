@@ -1,38 +1,39 @@
-div.card.check-in-card
-	header 
-		h1 Регистрация аккаунта
+form(name="check-in" action="check-in" method="post")
+	.card.check-in-card
+		header 
+			h1 Регистрация аккаунта
 
-	label.label
-		input.input.input_big(placeholder="Имя" type="text" name="name")
-	label.label
-		input.input.input_big(placeholder="Фамилия" type="text" name="surname")
+		label.label
+			input.input.input_big(placeholder="Имя" type="text" name="name")
+		label.label
+			input.input.input_big(placeholder="Фамилия" type="text" name="surname")
 
-	label.label.label_for-radio
-		input.radio(type="radio" name="gender" value="man" checked)
-		div.radio__text Мужчина
-	label.label.label_for-radio
-		input.radio(type="radio" name="gender" value="woman")
-		div.radio__text Женщина
+		label.label.label_for-radio
+			input.radio(type="radio" name="gender" value="man" checked)
+			.radio__text Мужчина
+		label.label.label_for-radio
+			input.radio(type="radio" name="gender" value="woman")
+			.radio__text Женщина
 
-	label.label
-		h3 Дата рождения
-		input.input.input_big.input_with-mask-date(name="birthday" placeholder="ДД.ММ.ГГГГ")
+		label.label
+			h3 Дата рождения
+			input.input.input_big.input_with-mask-date(name="birthday" placeholder="ДД.ММ.ГГГГ")
 
-	h3 Данные для входа в сервис
-	label.label
-		input.input.input_big(type="email" name="email" placeholder="Email")
-	label.label
-		input.input.input_big(type="password" name="password" placeholder="Пароль")
+		h3 Данные для входа в сервис
+		label.label
+			input.input.input_big(type="email" name="email" placeholder="Email")
+		label.label
+			input.input.input_big(type="password" name="password" placeholder="Пароль")
 
-	label.label.label_toggle
-		input.toggle(type="checkbox" name="promotions")
-		div.toggle__text Получать спецпредложения
+		label.label.label_toggle
+			input.toggle(type="checkbox" name="promotions")
+			.toggle__text Получать спецпредложения
 
-	div.button.button_colored.button_big Перейти к оплате
-		div.button__arrow.arrow
-			i.material-icons arrow_forward
+		.button.button_colored.button_big Перейти к оплате
+			.button__arrow.arrow
+				i.material-icons arrow_forward
 
-	div.card__information
-		span Уже есть аккаунт на Toxin
-		div.button-wrap.button-wrap_not-colored.button_for-login
-			div.button Войти
+		.card__information
+			span Уже есть аккаунт на Toxin
+			.button-wrap.button-wrap_not-colored.button_for-login
+				.button Войти

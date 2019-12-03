@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack --mode development",
     "start": "webpack-dev-server --open --mode development",
-    "serv": "static dist"
+    "temp": "webpack-dev-server --host 192.168.0.178 --mode development"
   },
   "author": "",
   "license": "ISC",

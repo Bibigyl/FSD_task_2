@@ -4,12 +4,13 @@ mixin header(header_class, menu, button_color_empty__text, button_colored__text,
 		.container
 			.header__logo
 				include ../../common.blocks/logo/logo-with-name.svg
-			ul.header__menu.menu
-				each item in menu
-					li
-						a(href=item.href class=item.class target=item.target)= item.name
-							if item.arrow
-								i.material-icons expand_more
+			nav.header__menu.menu
+				ul
+					each item in menu
+						li
+							a(href=item.href class=item.class target=item.target)= item.name
+								if item.arrow
+									i.material-icons expand_more
 
 			.button-wrap.button-wrap_not-colored(class=button_color_empty__text.class)
 				.button= button_color_empty__text.name
@@ -22,12 +23,13 @@ mixin header(header_class, menu, button_color_empty__text, button_colored__text,
 				div
 				div
 			.mobil-menu
-				ul.header__menu.menu
-					each item in menu
-						li
-							a(href=item.href class=item.class target=item.target)= item.name
-								if item.arrow
-									i.material-icons expand_more
+				nav.header__menu.menu
+					ul
+						each item in menu
+							li
+								a(href=item.href class=item.class target=item.target)= item.name
+									if item.arrow
+										i.material-icons expand_more
 				.button-wrap.button-wrap_not-colored(class=button_color_empty__text.class)
 					.button= button_color_empty__text.name
 				.button.button_colored.button_middle(class=button_colored__text.class)= button_colored__text.name
