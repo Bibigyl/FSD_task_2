@@ -12,6 +12,8 @@
 
 /*------------- px to rem ---------------*/
 
+@import './_vars';
+
 @function rem($size) {
   @return $size / $HTMLsize * 1rem;
 }

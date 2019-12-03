@@ -27,14 +27,11 @@ import "../common.blocks/donut/donut.js";
 
 import "../components/booking-card/booking-card.js";
 import "../components/search-card/search-card.js";
-import "../components/header/header.js";
-
-$( document ).ready(function() {
+/*$( document ).ready(function() {
  
 }); */
 
 import '../images/favicon/favicon.js';
-import '../scss/main.scss';
 
 
 

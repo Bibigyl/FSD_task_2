@@ -17,9 +17,9 @@ const PATHS = {
 module.exports = {
 	entry: {
 		'landing-page': './src/pages/landing-page/landing-page.js',
-		//'room-details': './src/pages/room-details/room-details.js',
-		//'search-room': './src/pages/search-room/search-room.js',
-		//'registration': './src/pages/registration/registration.js',
+		'room-details': './src/pages/room-details/room-details.js',
+		'search-room': './src/pages/search-room/search-room.js',
+		'registration': './src/pages/registration/registration.js',
 		'ui-kit': './src/pages/ui-kit/ui-kit.js'
 	},
 	output: {
@@ -78,7 +78,7 @@ module.exports = {
 	plugins: [ 
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
-			filename: 'style.css',
+			filename: '[name].css',
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
@@ -86,7 +86,7 @@ module.exports = {
 			template: './src/pages/landing-page/landing-page.pug',
 			filename: 'landing-page.html'
 		}),
-		new HtmlWebpackPlugin({
+ 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/room-details/room-details.pug',

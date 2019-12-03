@@ -1,3 +1,8 @@
+//--------------- import scss -----------------------------
+
+import '../../scss/main.scss';
+import './landing-page.scss';
+
 //--------------- import libs -----------------------------
 
 import "../../libs/jquery.maskedinput/jquery.maskedinput.min.js";
@@ -9,7 +14,7 @@ import moment from 'moment'
 import 'moment/locale/ru' 
 moment.locale('ru');
 
-//--------------- import common js -----------------------------
+//--------------- import common scripts -----------------------------
 
 import "../../js/main.js";
 
@@ -21,3 +26,5 @@ import "../../common.blocks/dropdown/dropdown.js";
 
 import "../../components/search-card/search-card.js";
 import "../../components/header/header.js";
+
+

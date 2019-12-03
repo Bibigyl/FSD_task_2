@@ -1,3 +1,8 @@
+//--------------- import scss -----------------------------
+
+import '../../scss/main.scss';
+import './ui-kit.scss';
+
 //--------------- import libs -----------------------------
 
 import "../../libs/jquery.maskedinput/jquery.maskedinput.min.js";

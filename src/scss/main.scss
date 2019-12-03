@@ -1,6 +1,7 @@
 /*-------- Variables -------------*/
 
-$c100: #1F2041;
+@import './_vars';
+/* $c100: #1F2041;
 $c75: rgba(31, 32, 65, 0.75);
 $c50: rgba(31, 32, 65, 0.50);
 $c25: rgba(31, 32, 65, 0.25);
@@ -8,7 +9,7 @@ $c5: rgba(31, 32, 65, 0.05);
 $purple: #BC9CFF;
 $green: #6FCF97;
 $gradient: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
-$HTMLsize: 14px;
+$HTMLsize: 14px; */
 
 /*------------------------- CSS reset -----------------------------------------------*/
 
@@ -269,8 +270,8 @@ hr {
 
 /*--------- Pages styles -------------*/
 
-@import '../pages/ui-kit/ui-kit.scss';
+/* @import '../pages/ui-kit/ui-kit.scss';
 @import '../pages/landing-page/landing-page.scss';
 @import '../pages/search-room/search-room.scss';
 @import '../pages/room-details/room-details.scss';
-@import '../pages/registration/registration.scss';
+@import '../pages/registration/registration.scss'; */
