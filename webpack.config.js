@@ -24,7 +24,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name]/[name].js'
+		filename: '[name].js'
 	},
 	module: {
 		rules: [
@@ -78,37 +78,37 @@ module.exports = {
 	plugins: [ 
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
-			filename: '[name]/[name].css',
+			filename: '[name].css',
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/landing-page/landing-page.pug',
-			filename: 'landing-page/index.html'
+			filename: 'landing-page.html'
 		}),
  		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/room-details/room-details.pug',
-			filename: 'room-details/index.html'
+			filename: 'room-details.html'
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/search-room/search-room.pug',
-			filename: 'search-room/index.html'
+			filename: 'search-room.html'
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/registration/registration.pug',
-			filename: 'registration/index.html'
+			filename: 'registration.html'
 		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/ui-kit/ui-kit.pug',
-			filename: 'ui-kit/index.html'
+			filename: 'ui-kit.html'
 		}),
 		new LiveReloadPlugin(),
 		new webpack.ProvidePlugin({
@@ -126,9 +126,13 @@ module.exports = {
 		//	exclude: ['src/libs/**/*.scss'],
 		//}), 
 	],
+	devtool: 'inline-source-map',
 	devServer: {
 		stats: 'errors-only',
-		index: 'ui-kit/index.html',
+		index: 'ui-kit.html',
 		open: true,
 	}
 };
+
+var ghpages = require('gh-pages');
+ghpages.publish('dist', function(err) {});

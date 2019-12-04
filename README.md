@@ -1,14 +1,29 @@
-# FSD_task_2
-FSD education program. The 2nd task.
+# Отель TOXIN
 
-Github Pages:
+### [UI-KIT](https://bibigyl.github.io/FSD_task_2/ui-kit)
 
-UI-Kit - https://bibigyl.github.io/FSD_task_2/dist/ui-kit
+### [Landing Page](https://bibigyl.github.io/FSD_task_2/landing-page)
 
-Landing Page - https://bibigyl.github.io/FSD_task_2/dist/landing-page
+### [Search room](https://bibigyl.github.io/FSD_task_2/search-room)
 
-Search room - https://bibigyl.github.io/FSD_task_2/dist/search-room
+### [Room details](https://bibigyl.github.io/FSD_task_2/room-details)
 
-Room details - https://bibigyl.github.io/FSD_task_2/dist/room-details
+### [Registration and Sign in](https://bibigyl.github.io/FSD_task_2/registration)
 
-Registration and Sign in - https://bibigyl.github.io/FSD_task_2/dist/registration
+
+
+## Установка
+```
+npm install
+```
+### Режим работы
+```
+// develop
+npm run start
+
+// production
+npm run build
+
+// deploy
+npm run deploy
+```
