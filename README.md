@@ -24,20 +24,21 @@ npm install
 npm run start
 ```
 Команда запускает dev-server и открывает страницу UI-KIT. При сохранении изменений в коде, страница обновляется.
-Для перехода на другую страницу, используйте ``` http://localhost:8080/название-страницы.html ```:
-```
-UI-KIT http://localhost:8080/ui-kit.html
-Landing Page http://localhost:8080/landing-page.html
-Search room http://localhost:8080/search-room.html
-Room details http://localhost:8080/room-details.html
-Registration and Sign in http://localhost:8080/registration.html
-```
+Для перехода на другую страницу, используйте **http://localhost:8080/название-страницы.html**:
+
+**UI-KIT**                      http://localhost:8080/ui-kit.html
+**Landing Page**                http://localhost:8080/landing-page.html
+**Search room**                 http://localhost:8080/search-room.html
+**Room details**                http://localhost:8080/room-details.html
+**Registration and Sign in**    http://localhost:8080/registration.html
+
 
 ### production
 ```
 npm run build
 ```
 По этой команде происходит сборка проекта. В папке dist для каждой страницы создаются html, css и js файлы. Так же создаются папки images, fonts, favicon. 
+
 
 ### deploy
 ```
