@@ -4,7 +4,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const LiveReloadPlugin = require('webpack-livereload-plugin');
 const autoprefixer = require('autoprefixer');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 //const StylelintPlugin = require('stylelint-webpack-plugin');
@@ -110,7 +109,6 @@ module.exports = {
 			template: './src/pages/ui-kit/ui-kit.pug',
 			filename: 'ui-kit.html'
 		}),
-		new LiveReloadPlugin(),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery',

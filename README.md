@@ -1,4 +1,4 @@
-# Отель TOXIN
+# TOXIN - Бронирование отелей
 
 ### [UI-KIT](https://bibigyl.github.io/FSD_task_2/ui-kit)
 
@@ -19,7 +19,7 @@ npm install
 
 ## Режимы работы
 
-### develop
+### Develop
 ```
 npm run start
 ```
@@ -37,14 +37,14 @@ npm run start
 **Registration and Sign in**    http://localhost:8080/registration.html
 
 
-### production
+### Production
 ```
 npm run build
 ```
 По этой команде происходит сборка проекта. В папке dist для каждой страницы создаются html, css и js файлы. Так же создаются папки images, fonts, favicon. 
 
 
-### deploy
+### Deploy
 ```
 npm run deploy
 ```
