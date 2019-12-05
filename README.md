@@ -27,9 +27,13 @@ npm run start
 Для перехода на другую страницу, используйте **http://localhost:8080/название-страницы.html**:
 
 **UI-KIT**                      http://localhost:8080/ui-kit.html
+
 **Landing Page**                http://localhost:8080/landing-page.html
+
 **Search room**                 http://localhost:8080/search-room.html
+
 **Room details**                http://localhost:8080/room-details.html
+
 **Registration and Sign in**    http://localhost:8080/registration.html
 
 
