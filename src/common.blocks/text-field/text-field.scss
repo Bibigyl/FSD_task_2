@@ -1,4 +1,4 @@
-.input {
+.text-field {
   background: #FFFFFF;
   border: 1px solid $c25;
   box-sizing: border-box;
@@ -10,6 +10,8 @@
   transition: .2s;
   font-family: 'Montserrat';
   font-weight: 400;
+  width: 100%;
+  max-width: 320px;
 
   &::placeholder {
     font-family: 'Montserrat';
@@ -29,7 +31,7 @@
     transition: .2s;
   }
 }
-
+/*
 .input__arrow {
   position: absolute;
   font-size: rem(24px);
@@ -51,3 +53,4 @@
   max-width: 150px;
   width: 100%;
 }
+*/

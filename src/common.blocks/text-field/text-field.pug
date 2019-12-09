@@ -1,3 +1,17 @@
+mixin text-field(masked)
+	label.text-field__label(for=attributes.name)
+	if masked==true
+		input.text-field.text-field_masked(placeholder="ДД.ММ.ГГГГ")&attributes(attributes)
+	else
+		input.text-field()&attributes(attributes)
+
+
+
+
+
+
+<!--
+
 label(class="label")
 	h3 Text field
 	input(class="input input_big" placeholder="Email")
@@ -25,4 +39,4 @@ label(class="label")
 	h3 Subscription text field
 	input(class="input input_middle" placeholder="Email")
 	div(class="input__arrow  arrow")
-		i(class="material-icons icons_colored") arrow_forward
+		i(class="material-icons icons_colored") arrow_forward -->

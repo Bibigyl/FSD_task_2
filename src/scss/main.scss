@@ -229,13 +229,9 @@ hr {
 
 /*------------------------------ Import styles ----------------------------------------*/
 
-/*------- Common styles ------------*/
-
-@import '../common.blocks/input/input.scss';
-@import '../common.blocks/select/select.scss';
-
 /*------- Blocks styles -------------*/
 
+@import '../common.blocks/text-field/text-field.scss';
 @import '../common.blocks/checkbox/checkbox.scss';
 @import '../common.blocks/radio/radio.scss';
 @import '../common.blocks/toggle/toggle.scss';

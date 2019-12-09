@@ -7,6 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 //const StylelintPlugin = require('stylelint-webpack-plugin');
+const ghpages = require('gh-pages');
 
 const PATHS = {
 	src: path.join(__dirname,'src'),
@@ -19,7 +20,10 @@ module.exports = {
 		'room-details': './src/pages/room-details/room-details.js',
 		'search-room': './src/pages/search-room/search-room.js',
 		'registration': './src/pages/registration/registration.js',
-		'ui-kit': './src/pages/ui-kit/ui-kit.js'
+		'colors-and-types': './src/pages/colors-and-types/colors-and-types.js',
+		'form-elements': './src/pages/form-elements/form-elements.js',
+		'cards': './src/pages/cards/cards.js',
+		'headers-and-footers': './src/pages/headers-and-footers/headers-and-footers.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -106,8 +110,26 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
-			template: './src/pages/ui-kit/ui-kit.pug',
-			filename: 'ui-kit.html'
+			template: './src/pages/colors-and-types/colors-and-types.pug',
+			filename: 'colors-and-types.html'
+		}),
+		new HtmlWebpackPlugin({
+			inject: false,
+			hash: true,
+			template: './src/pages/form-elements/form-elements.pug',
+			filename: 'form-elements.html'
+		}),
+		new HtmlWebpackPlugin({
+			inject: false,
+			hash: true,
+			template: './src/pages/cards/cards.pug',
+			filename: 'cards.html'
+		}),
+		new HtmlWebpackPlugin({
+			inject: false,
+			hash: true,
+			template: './src/pages/headers-and-footers/headers-and-footers.pug',
+			filename: 'headers-and-footers.html'
 		}),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
@@ -127,10 +149,9 @@ module.exports = {
 	devtool: 'inline-source-map',
 	devServer: {
 		stats: 'errors-only',
-		index: 'ui-kit.html',
+		index: 'colors-and-types.html',
 		open: true,
 	}
 };
 
-var ghpages = require('gh-pages');
 ghpages.publish('dist', function(err) {});

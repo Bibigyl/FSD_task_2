@@ -22,7 +22,7 @@ import "../../js/main.js";
 
 //------------------ import blocks scripts -----------------------------
 
-import "../../common.blocks/input/input.js";
+import "../../common.blocks/text-field/text-field.js";
 import "../../common.blocks/slider-range/slider-range.js";
 import "../../common.blocks/dropdown/dropdown.js";
 import "../../common.blocks/checkbox-list/checkbox-list.js";

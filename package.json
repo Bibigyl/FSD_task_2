@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode development",
-    "deploy": "gh-pages -d dist",
-    "temp": "webpack-dev-server --host 192.168.0.178 --mode development"
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +37,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+    "cleave.js": "^1.5.3",
     "empty-module": "0.0.2",
     "jquery": "^3.4.1",
     "material-design-icons": "^3.0.1",

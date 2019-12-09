@@ -5,7 +5,6 @@ import './ui-kit.scss';
 
 //--------------- import libs -----------------------------
 
-import "../../libs/jquery.maskedinput/jquery.maskedinput.min.js";
 import "../../libs/jquery-ui-1.12.1.custom/jquery-ui.min.js";
 import "../../libs/daterangepicker-master/moment.min.js";
 import "../../libs/daterangepicker-master/daterangepicker.js";
@@ -22,7 +21,7 @@ import "../../js/main.js";
 
 //------------------ import blocks scripts -----------------------------
 
-import "../../common.blocks/input/input.js";
+import "../../common.blocks/text-field/text-field.js";
 import "../../common.blocks/slider-range/slider-range.js";
 import "../../common.blocks/dropdown/dropdown.js";
 import "../../common.blocks/checkbox-list/checkbox-list.js";

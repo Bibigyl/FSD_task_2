@@ -73,6 +73,8 @@ html(lang="ru")
                 .ui-column
                     .ui-form-block
                         .block-wrap
+                            include ../../common.blocks/text-field/text-field
+                            +text-field()(name='ui-text-field', type='email', placeholder='Email')
                             label.label.ui-label
                                 h3 Text field
                                 input.input.input_big(placeholder="Email")

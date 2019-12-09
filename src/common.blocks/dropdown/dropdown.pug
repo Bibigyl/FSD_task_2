@@ -1,4 +1,21 @@
-.dropdown.dropdown_middle.dropdown_furniture
+mixin dropdown(type, text, options, buttons)
+	if type=='furniture'
+		.dropdown.dropdown_furniture
+			.dropdown__field
+				span
+				i.dropdown__arrow.material-icons expand_more
+
+			ul.dropdown__ul
+			- for (var i = 0; i < options.length; i++)
+				li 
+					span.dropdown__button.dropdown__button_plus +
+					span.dropdown__num options.number
+					span.dropdown__button.dropdown__button_minus -
+					|options.name
+
+
+
+<!--.dropdown.dropdown_middle.dropdown_furniture
 	h3.dropdown
 	.dropdown__field <span>2 спальни, 2 кровати...</span>
 		.dropdown__arrow arrow
@@ -46,4 +63,4 @@
 				span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
 				|Младенцы
 		a.link.dropdown__link_clear.link_grey.hidden Очистить
-		a.link.dropdown__link_apply.link_colored Применить
+		a.link.dropdown__link_apply.link_colored Применить -->
