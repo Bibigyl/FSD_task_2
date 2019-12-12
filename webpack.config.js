@@ -7,7 +7,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 //const StylelintPlugin = require('stylelint-webpack-plugin');
-const ghpages = require('gh-pages');
 
 const PATHS = {
 	src: path.join(__dirname,'src'),
@@ -21,9 +20,9 @@ module.exports = {
 		'search-room': './src/pages/search-room/search-room.js',
 		'registration': './src/pages/registration/registration.js',
 		'colors-and-types': './src/pages/colors-and-types/colors-and-types.js',
-		'form-elements': './src/pages/form-elements/form-elements.js'
-		//'cards': './src/pages/cards/cards.js',
-		//'headers-and-footers': './src/pages/headers-and-footers/headers-and-footers.js'
+		'form-elements': './src/pages/form-elements/form-elements.js',
+		'cards': './src/pages/cards/cards.js',
+		'headers-and-footers': './src/pages/headers-and-footers/headers-and-footers.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -119,18 +118,18 @@ module.exports = {
 			template: './src/pages/form-elements/form-elements.pug',
 			filename: 'form-elements.html'
 		}),
-/* 		new HtmlWebpackPlugin({
+		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/cards/cards.pug',
 			filename: 'cards.html'
-		}), */
-/* 		new HtmlWebpackPlugin({
+		}),
+		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/headers-and-footers/headers-and-footers.pug',
 			filename: 'headers-and-footers.html'
-		}), */
+		}),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery',
@@ -153,5 +152,3 @@ module.exports = {
 		open: true,
 	}
 };
-
-ghpages.publish('dist', function(err) {});
