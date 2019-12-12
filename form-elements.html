@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Form elements</title>
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="form-elements.css">
+  </head>
+  <body><!--
+    <label class="label">
+      <h3>Text field</h3>
+      <input class="input input_big" placeholder="Email">
+    </label>
+    <label class="label">
+      <h3>Masked text field</h3>
+      <input class="input input_big input_with-mask-date" placeholder="ДД.ММ.ГГГГ">
+    </label>
+    <div class="date-search" id="date-search">
+      <label class="label">
+        <h3>Date dropdown</h3>
+        <input class="input input_small calendar" id="first-date" placeholder="ДД.ММ.ГГГГ">
+        <div class="input__arrow arrow"><i class="material-icons">expand_more</i></div>
+      </label>
+      <label class="label">
+        <h3>Date dropdown</h3>
+        <input class="input input_small calendar" id="last-date" placeholder="ДД.ММ.ГГГГ">
+        <div class="input__arrow arrow"><i class="material-icons">expand_more</i></div>
+      </label>
+    </div>
+    <label class="label">
+      <h3>Subscription text field</h3>
+      <input class="input input_middle" placeholder="Email">
+      <div class="input__arrow  arrow"><i class="material-icons icons_colored">arrow_forward --></i></div>
+    </label>
+    <section class="form-elements">
+      <div class="form-elements__logo"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"/>
+</svg>
+
+      </div>
+      <div class="form-elements__container form-elements__container-1">
+        <div class="form-elements__column-1-1">
+          <div class="text-field-wrap text-field-wrap-1">
+            <h3 class="text-field-wrap__title">Text field</h3>
+            <div class="text-field-wrap__state">Default</div>
+                <label class="text-field__label" for="ui-text-field"></label>
+                <input class="text-field" name="ui-text-field" type="email" placeholder="Email">
+          </div>
+          <div class="text-field-wrap text-field-wrap_hover text-field-wrap-2">
+            <h3 class="text-field-wrap__title">Text field</h3>
+            <div class="text-field-wrap__state">Hover / Focus</div>
+                <label class="text-field__label" for="ui-text-field_hover"></label>
+                <input class="text-field" name="ui-text-field_hover" type="text" value="This is pretty awesome">
+          </div>
+          <div class="dropdown-wrap dropdown-wrap-1">
+            <h3 class="dropdown-wrap__title">Dropdown</h3>
+            <div class="dropdown-wrap__state">Default</div>
+                <div class="dropdown dropdown_guests">
+                  <div class="dropdown__field"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">expand_more</i></div>
+                  <div class="dropdown__list">
+                    <ul>
+                      <li class="dropdown__item">Взрослые<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item">Дети<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                    </ul>
+                        <div class="text-button text-button_not-colored dropdown__button_to-clear hidden"></div>
+                        <div class="text-button text-button_colored dropdown__button_to-apply"></div>
+                  </div>
+                </div>
+          </div>
+          <div class="text-field-wrap text-field-wrap-3">
+            <h3 class="text-field-wrap__title">Masked text field</h3>
+            <div class="text-field-wrap__state">Default</div>
+                <label class="text-field__label" for="ui-text-field_masked"></label>
+                <input class="text-field text-field_masked" placeholder="ДД.ММ.ГГГГ" name="ui-text-field_masked" type="text">
+          </div>
+          <div class="date-dropdown-wrap">
+                <div class="date-dropdown" id="ui-date-dropdown-1">
+                  <div class="date-dropdown__first-day date-dropdown__day">
+                    <h3 class="date-dropdown__title">Date dropdown</h3>
+                    <div class="date-dropdown__text-field-wrap">
+                      <label for="ui-date-dropdown-1__first-day"></label>
+                      <input class="date-dropdown__text-field text-field_masked" name="ui-date-dropdown-1__first-day" type="text" placeholder="ДД.ММ.ГГГГ" value=""><i class="date-dropdown__arrow material-icons">expand_more</i>
+                    </div>
+                  </div>
+                  <div class="date-dropdown__last-day date-dropdown__day">
+                    <h3 class="date-dropdown__title">Date dropdown</h3>
+                    <div class="date-dropdown__text-field-wrap">
+                      <label for="ui-date-dropdown-1__last-day"></label>
+                      <input class="date-dropdown__text-field text-field_masked" name="ui-date-dropdown-1__last-day" type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019"><i class="date-dropdown__arrow material-icons">expand_more</i>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="filter-date-dropdown-wrap">
+                <div class="filter-date-dropdown">
+                  <h3 class="filter-date-dropdown__title">Filter date dropdown</h3>
+                  <div class="date-dropdown__text-field-wrap">
+                    <label for="ui-filter-date-dropdown-1"></label>
+                    <input class="filter-date-dropdown__text-field" id="ui-filter-date-dropdown-1" name="ui-filter-date-dropdown-1" value="19 авг - 23 авг"><i class="date-dropdown__arrow material-icons">expand_more</i>
+                  </div>
+                </div>
+          </div>
+          <div class="subscription-text-field-wrap">
+            <h3 class="subscription-text-field__title">Subscription text field</h3>
+                <div class="subscription-text-field">
+                  <label class="subscription-text-field__label" for="ui-subscription-text-field"></label>
+                  <input class="subscription-text-field__text-field" name="ui-subscription-text-field" type="email" placeholder="Email"><i class="material-icons subscription-text-field__arrow">arrow_forward</i>
+                </div>
+          </div>
+        </div>
+        <div class="form-elements__column-1-2">
+          <div class="checkbox-buttons-wrap">
+                <div class="checkbox-buttons">
+                  <h3 class="checkbox-buttons__title">Checkbox buttons</h3>
+                  <ul></ul>
+                  <li class="checkbox-button">
+                    <label class="checkbox-button__label">
+                      <input class="checkbox-button__input" type="checkbox" name="smoking">
+                      <div class="checkbox-button__text">Можно курить</div>
+                    </label>
+                  </li>
+                  <li class="checkbox-button">
+                    <label class="checkbox-button__label">
+                      <input class="checkbox-button__input" type="checkbox" name="pets" checked>
+                      <div class="checkbox-button__text">Можно с питомцами</div>
+                    </label>
+                  </li>
+                  <li class="checkbox-button">
+                    <label class="checkbox-button__label">
+                      <input class="checkbox-button__input" type="checkbox" name="guests" checked>
+                      <div class="checkbox-button__text">Можно пригласить гостей (до 10 человек)</div>
+                    </label>
+                  </li>
+                </div>
+          </div>
+          <div class="radio-buttons-wrap">
+                <div class="radio-buttons">
+                  <h3 class="radio-buttons__title">Radio buttons</h3>
+                  <label class="radio-button__label">
+                    <input class="radio-button" type="radio" name="gender" checked>
+                    <div class="radio-button__text">Мужчина</div>
+                  </label>
+                  <label class="radio-button__label">
+                    <input class="radio-button" type="radio" name="gender">
+                    <div class="radio-button__text">Женщина</div>
+                  </label>
+                </div>
+          </div>
+          <div class="toggles-wrap">
+            <h3 class="toggles-wrap__title">Toggle</h3>
+            <div class="toggle-wrap">
+                  <label class="toggle__label">
+                    <input class="toggle" type="checkbox" checked>
+                    <div class="toggle__text">Получать спецпредложения</div>
+                  </label>
+            </div>
+            <div class="toggle-wrap">
+                  <label class="toggle__label">
+                    <input class="toggle" type="checkbox">
+                    <div class="toggle__text">Получать спецпредложения</div>
+                  </label>
+            </div>
+          </div>
+          <div class="like-buttons-wrap">
+            <h3 class="like-buttons-wrap__title">Like button</h3>
+            <div class="like-button-wrap">
+                  <div class="like-button">
+                    <label class="like-button__label">
+                      <input class="like-button__input" type="checkbox">
+                      <div class="like-button__text">2
+                        <div class="like-button__icon material-icons"></div>
+                      </div>
+                    </label>
+                  </div>
+            </div>
+            <div class="like-button-wrap">
+                  <div class="like-button like-button_checked">
+                    <label class="like-button__label">
+                      <input class="like-button__input" type="checkbox" checked>
+                      <div class="like-button__text">12
+                        <div class="like-button__icon material-icons"></div>
+                      </div>
+                    </label>
+                  </div>
+            </div>
+          </div>
+          <div class="rate-buttons-wrap">
+            <h3 class="rate-buttons-wrap__title">Rate button</h3>
+            <div class="rate-button-wrap">
+                  <div class="rate-button">
+                    <input class="rate-button__input" value="5" id="ui-rate-1_5" name="ui-rate-1" type="radio">
+                    <label class="rate-button__label material-icons" for="ui-rate-1_5"></label>
+                    <input class="rate-button__input" value="4" id="ui-rate-1_4" name="ui-rate-1" type="radio" checked>
+                    <label class="rate-button__label material-icons" for="ui-rate-1_4"></label>
+                    <input class="rate-button__input" value="3" id="ui-rate-1_3" name="ui-rate-1" type="radio">
+                    <label class="rate-button__label material-icons" for="ui-rate-1_3"></label>
+                    <input class="rate-button__input" value="2" id="ui-rate-1_2" name="ui-rate-1" type="radio">
+                    <label class="rate-button__label material-icons" for="ui-rate-1_2"></label>
+                    <input class="rate-button__input" value="1" id="ui-rate-1_1" name="ui-rate-1" type="radio">
+                    <label class="rate-button__label material-icons" for="ui-rate-1_1"></label>
+                  </div>
+            </div>
+            <div class="rate-button-wrap">
+                  <div class="rate-button">
+                    <input class="rate-button__input" value="5" id="ui-rate-2_5" name="ui-rate-2" type="radio" checked>
+                    <label class="rate-button__label material-icons" for="ui-rate-2_5"></label>
+                    <input class="rate-button__input" value="4" id="ui-rate-2_4" name="ui-rate-2" type="radio">
+                    <label class="rate-button__label material-icons" for="ui-rate-2_4"></label>
+                    <input class="rate-button__input" value="3" id="ui-rate-2_3" name="ui-rate-2" type="radio">
+                    <label class="rate-button__label material-icons" for="ui-rate-2_3"></label>
+                    <input class="rate-button__input" value="2" id="ui-rate-2_2" name="ui-rate-2" type="radio">
+                    <label class="rate-button__label material-icons" for="ui-rate-2_2"></label>
+                    <input class="rate-button__input" value="1" id="ui-rate-2_1" name="ui-rate-2" type="radio">
+                    <label class="rate-button__label material-icons" for="ui-rate-2_1"></label>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-elements__column-1-3">
+          <div class="slider-range-wrap">
+                <div class="slider-range">
+                  <h3 class="slider-range__title">Slider range</h3>
+                  <div class="slider-range__text-wrap">
+                    <div class="slider-range__text"></div>
+                  </div>
+                  <div class="slider-range__slider"></div>
+                </div>
+          </div>
+          <h3 class="buttons-wrap__title">Buttons</h3>
+          <div class="colored-buttons-wrap buttons-wrap">
+            <div class="button-wrap">
+                  <div class="button button_colored">Click me</div>
+            </div>
+            <div class="button-wrap">
+                  <div class="button button_colored button_on-hover">Click me</div>
+            </div>
+          </div>
+          <div class="not-colored-buttons-wrap buttons-wrap">
+            <div class="button-wrap">
+                  <div class="button__border">
+                    <div class="button button_not-colored">Click me</div>
+                  </div>
+            </div>
+            <div class="button-wrap">
+                  <div class="button__border">
+                    <div class="button button_not-colored button_on-hover">Click me</div>
+                  </div>
+            </div>
+          </div>
+          <div class="textual-buttons-wrap buttons-wrap">
+            <div class="button-wrap">
+                  <div class="text-button text-button_colored">Click me</div>
+            </div>
+            <div class="button-wrap">
+                  <div class="text-button text-button_not-colored button_on-hover">Click me</div>
+            </div>
+          </div>
+          <div class="big-buttons-wrap buttons-wrap">
+            <div class="button-wrap">
+                  <div class="button button_big">Перейти к оплате<i class="button__arrow material-icons">arrow_forward</i></div>
+            </div>
+          </div>
+          <div class="pagination-wrap">
+            <h3 class="pagination-wrap__title">Pagination</h3>
+                <div class="pagination"></div><i class="pagination__arrow material-icons">arrow_forward</i>
+                <div class="pagination__text">1 - 12 из 100+ вариантов аренды</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__container form-elements__container-2">
+        <div class="form-elements__column-2-1">
+          <div class="dropdown-wrap dropdown-wrap-2">
+            <h3 class="dropdown-wrap__title">Dropdown</h3>
+            <div class="dropdown-wrap__state">Default</div>
+                <div class="dropdown dropdown_furniture">
+                  <div class="dropdown__field"><span class="dropdown__text">Удобства</span><i class="dropdown__arrow material-icons">expand_more</i></div>
+                  <div class="dropdown__list">
+                    <ul>
+                      <li class="dropdown__item">Спальни<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item">Кровати<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item">Ванные комнаты<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                    </ul>
+                  </div>
+                </div>
+          </div>
+          <div class="dropdown-wrap dropdown-wrap-3">
+            <h3 class="dropdown-wrap__title">Dropdown</h3>
+            <div class="dropdown-wrap__state">Expanded</div>
+                <div class="dropdown dropdown_furniture dropdown_open">
+                  <div class="dropdown__field"><span class="dropdown__text">Удобства</span><i class="dropdown__arrow material-icons">expand_more</i></div>
+                  <div class="dropdown__list">
+                    <ul>
+                      <li class="dropdown__item">Спальни<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item">Кровати<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item">Ванные комнаты<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                    </ul>
+                  </div>
+                </div>
+          </div>
+        </div>
+        <div class="form-elements__column-2-2">
+          <div class="dropdown-wrap dropdown-wrap-4">
+            <h3 class="dropdown-wrap__title">Dropdown</h3>
+                <div class="dropdown dropdown_guests dropdown_open">
+                  <div class="dropdown__field"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">expand_more</i></div>
+                  <div class="dropdown__list">
+                    <ul>
+                      <li class="dropdown__item">Взрослые<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item">Дети<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                    </ul>
+                        <div class="text-button text-button_not-colored dropdown__button_to-clear hidden">Очистить</div>
+                        <div class="text-button text-button_colored dropdown__button_to-apply">Применить</div>
+                  </div>
+                </div>
+          </div>
+        </div>
+        <div class="form-elements__column-2-3">
+          <div class="dropdown-wrap dropdown-wrap-5">
+            <h3 class="dropdown-wrap__title">Dropdown</h3>
+                <div class="dropdown dropdown_guests dropdown_open">
+                  <div class="dropdown__field"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">expand_more</i></div>
+                  <div class="dropdown__list">
+                    <ul>
+                      <li class="dropdown__item">Взрослые<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item">Дети<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                    </ul>
+                        <div class="text-button text-button_not-colored dropdown__button_to-clear hidden">Очистить</div>
+                        <div class="text-button text-button_colored dropdown__button_to-apply">Применить</div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__container form-elements__container-3">
+        <div class="form-elements__column-3-1">
+          <div class="expandable-checkbox-list-wrap">
+                <div class="expandable-checkbox-list">
+                  <h3 class="expandable-checkbox-list__title">Expandable checkbox list</h3>
+                  <div class="expandable-checkbox-list__arrow material-icons">expand_more</div>
+                        <div class="checkbox-buttons">
+                          <ul></ul>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Завтрак</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox" checked>
+                              <div class="checkbox-button__text">Письменный стол</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox" checked>
+                              <div class="checkbox-button__text">Стул для кормления</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox" checked>
+                              <div class="checkbox-button__text">Кроватка</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Телевизор</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Шампунь</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Телевизор</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Шампунь</div>
+                            </label>
+                          </li>
+                        </div>
+                </div>
+          </div>
+        </div>
+        <div class="form-elements__column-3-2"></div>
+        <div class="form-elements__column-3-3"></div>
+      </div>
+      <div class="form-elements__container form-elements__container-4">
+        <div class="form-elements__column-4-1"></div>
+        <div class="form-elements__column-4-2"></div>
+      </div>
+    </section>
+    <script src="./form-elements.js"></script>
+  </body>
+</html>
