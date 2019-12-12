@@ -1,82 +1,92 @@
 .slider-range {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  position: relative;
-}
+  width: 100%;
+  max-width: 266px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-// Slider
+  &__slider {
+    position: relative;
+    width: 100%;
+    margin-top: 23px; 
+  }
 
-.slider-wrapper {
-  width: 266px;
-  display: inline-block;
-  position: relative;
-}
+  &__title {
+    //margin-bottom: 20px;
+    width: 50%;
+    min-width: 100px;
+  }
 
-.ui-slider {
-  border: 1px solid $c25;
-  height: 4px;
-  position: relative;
-  border-radius: 100px;
-}
+  &__text-wrap {
+    width: 50%;    
+    min-width: 100px;
+  }
 
-.ui-slider-range {
-  background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
-  height: 20px;
-  position: absolute;
-}
-
-.ui-slider-horizontal .ui-slider-range {
-  height: 6px;
-  top: -1px;
-}
-
-.ui-slider .ui-slider-handle {
-  background: $green;
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  top: 50%;
-  display: block;
-  transform: translateY(-50%);
-  border-radius: 100px;
-  z-index: 10;
-  background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
-  border: 2px solid #fff;
-  cursor: move;
-  /* fallback if grab cursor is unsupported */
-  cursor: grab;
-
-  &:active {
-    cursor: grabbing;
+  &__text {
+    white-space: nowrap;
+    z-index: 10;
+    font-size: rem(12px);
+    text-align: right;
+    line-height: 15px;
   }
 }
 
-// Range Indicator
 
-.range-wrapper {
-  position: absolute;
-  top: -32px;
-  right: 0;
-}
+// lib styles
 
-.range {
-  white-space: nowrap;
-  z-index: 10;
-  position: relative;
-  font-size: rem(12px);
-}
+.slider-range {
 
-.range-value {
-  display: inline-block;
-}
-
-.range-divider {
-  width: 10px;
-  text-align: center;
-  display: inline-block;
-
-  &:after {
-    content: '-';
+  .ui-slider {
+    border: 1px solid $c25;
+    height: 6px;
+    position: relative;
+    border-radius: 100px;
   }
+
+  .ui-slider-range {
+    background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+    height: 20px;
+    position: absolute;
+  }
+
+  .ui-slider-horizontal .ui-slider-range {
+    height: 6px;
+    top: -1px;
+  }
+
+  .ui-slider .ui-slider-handle {
+    background: $green;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    display: block;
+    transform: translateY(-50%);
+    border-radius: 100px;
+    z-index: 10;
+    background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+    border: 2px solid #fff;
+    cursor: move;
+    /* fallback if grab cursor is unsupported */
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .range-value {
+    display: inline-block;
+  }
+
+  .range-divider {
+    width: 10px;
+    text-align: center;
+    display: inline-block;
+
+    &:after {
+      content: '-';
+    }
+  }
+
 }

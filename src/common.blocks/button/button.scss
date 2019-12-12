@@ -17,71 +17,101 @@
     font-style: normal;
     font-weight: bold;
   }
+
+  &__border {
+    background: $gradient;
+    display: inline-flex;
+    border-radius: 100px;
+    padding: 0;
+    transition: .2s;
+  
+    &:hover,
+    &:active,
+    &:focus {
+      background: $gradient;
+      opacity: .5;
+      transition: .2s;
+    }
+
+    .button {
+      padding: 12px 18px;
+      background-color: #fff;
+      margin: 2px;
+      color: $purple;
+    
+      &:hover,
+      &:active,
+      &:focus {
+        background: #fff;
+        color: $purple;
+      }
+    }
+  }
+
+  &__arrow {
+    color: #fff;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+  }
+
+  &_colored {
+    padding: 14px 20px;
+    background: $gradient;
+    color: #fff;
+    transition: .2s;
+  
+    &:hover,
+    &:active,
+    &:focus {
+      background: $gradient;
+      color: #fff;
+      opacity: .5;
+      transition: .2s;
+    }
+  }
+
+  &_big {
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    font-size: rem(12px);
+    position: relative;
+    padding: 14px 20px;
+    background: $gradient;
+    color: #fff;
+    transition: .2s;
+  
+    &:hover,
+    &:active,
+    &:focus {
+      background: $gradient;
+      color: #fff;
+      opacity: .5;
+      transition: .2s;
+    }
+  }
 }
 
-.button__arrow {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-}
-
-.button_middle {
-  padding: 14px 20px;
-}
-
-.button_big {
-  justify-content: center;
-  width: 100%;
-  max-width: 320px;
+.text-button {
+  text-transform: uppercase;
+  font-weight: 700;
   font-size: rem(12px);
-  padding: 14px 0;
-}
-
-.button_colored {
-  background: $gradient;
-  color: #fff;
+  cursor: pointer;
   transition: .2s;
 
+  &_colored {
+    color: $purple;    
+  }
+
+  &_not-colored {
+    color: $c50;
+  }
+
   &:hover,
   &:active,
   &:focus {
-    background: $gradient;
-    color: #fff;
     opacity: .5;
     transition: .2s;
-  }
-
-  & .material-icons {
-    color: #fff;
-  }
-}
-
-.button-wrap_not-colored {
-  background: $gradient;
-  display: inline-flex;
-  border-radius: 100px;
-  padding: 0;
-  transition: .2s;
-
-  &:hover,
-  &:active,
-  &:focus {
-    background: $gradient;
-    opacity: .5;
-    transition: .2s;
-  }
-}
-
-.button-wrap_not-colored>* {
-  padding: 13px 18px;
-  background-color: #fff;
-  margin: 1px;
-  color: $purple;
-
-  &:hover,
-  &:active,
-  &:focus {
-    background: #fff;
-    color: $purple;
   }
 }

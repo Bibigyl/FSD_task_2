@@ -1,0 +1,119 @@
+@import '../../scss/_vars';
+@import '../../scss/_mixins';
+
+.colors-and-types {
+  padding: 145px 0;
+}
+
+.colors-and-types__logo {
+  position: absolute;
+  top: 30px;
+  left: 6.5%;
+}
+
+.colors-and-types__container {
+  width: 100%;
+  max-width: 1324px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.colors-and-types__colors,
+.colors-and-types__fonts {
+  width: 50%;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.color-item__square {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+}
+
+.color-item:nth-child(1) .color-item__square {
+  background-color: $c100;
+}
+
+.color-item:nth-child(2) .color-item__square {
+  background-color: $c75;
+}
+
+.color-item:nth-child(3) .color-item__square {
+  background-color: $c50;
+}
+
+.color-item:nth-child(4) .color-item__square {
+  background-color: $c25;
+}
+
+.color-item:nth-child(5) .color-item__square {
+  background-color: $c5;
+}
+
+.color-item:nth-child(6) .color-item__square {
+  background-color: $purple;
+}
+
+.color-item:nth-child(7) .color-item__square {
+  background-color: $green;
+}
+
+.color-item__description {
+  padding-left: 40px;
+  max-width: 310px;
+}
+
+.color-item__title {
+  margin-bottom: 5px;
+}
+
+.color-item__text {
+  font-family: 'Quicksand';
+  font-weight: 400;
+  font-size: rem(19px);
+}
+
+.colors-and-types__fonts {
+  padding-left: 41px;
+}
+
+.font-item {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.font-item:nth-child(3) {
+  margin-bottom: 47px;
+}
+
+.font-item__title {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  color: $c25;
+}
+
+.font-item__tag {
+  text-align: right;
+  width: 50px;
+}
+
+.font-item__description {
+  padding-left: 30px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.font-item:last-child {
+  .font-item__description {
+    max-width: 340px;
+  }
+}

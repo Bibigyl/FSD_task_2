@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	
-	$(".like-button").on("click", function() {
-		$(this).parent().parent().toggleClass("like-button-wrap_active");
+	$(".like-button__input").on("change", function() {
+		$(this).parent().parent().toggleClass("like-button_checked");
 	});
 });

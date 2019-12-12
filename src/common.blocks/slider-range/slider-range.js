@@ -1,33 +1,37 @@
 $( document ).ready(function() {
 
-// Initiate Slider
-  $('#slider-range').slider({
-    range: true,
-    min: 200,
-    max: 15500,
-    step: 200,
-    values: [5000, 10000]
-  });
+  $('.slider-range__slider').each(function() {
 
-// Apply initial values to the range container
-  $('.range').html('<span class="range-value">' + $('#slider-range').slider("values", 0).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span><span class="range-divider"></span><span class="range-value">' + $("#slider-range").slider("values", 1).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span>');
+    // Initiate Slider
+    $(this).slider({
+      range: true,
+      min: 200,
+      max: 15500,
+      step: 200,
+      values: [5000, 10000]
+    });
 
-  $('#slider-range').slider({
-    slide: function(event, ui) {
+    // Apply initial values to the range container
+    $('.slider-range__text').html('<span class="range-value">' + $(this).slider("values", 0).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span><span class="range-divider"></span><span class="range-value">' + $(this).slider("values", 1).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span>');
 
-      // Update the range container values upon sliding
+    $(this).slider({
+      slide: function(event, ui) {
 
-      $('.range').html('<span class="range-value">' + ui.values[0].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span><span class="range-divider"></span><span class="range-value">' + ui.values[1].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span>');
+        // Update the range container values upon sliding
 
-      // Get old value
-      var previousVal = parseInt($(this).data('value'));
+        $('.slider-range__text').html('<span class="range-value">' + ui.values[0].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span><span class="range-divider"></span><span class="range-value">' + ui.values[1].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span>');
 
-      // Save new value
-      $(this).data({
-        'value': parseInt(ui.value)
-      });
+        // Get old value
+        var previousVal = parseInt($(this).data('value'));
 
-    }
+        // Save new value
+        $(this).data({
+          'value': parseInt(ui.value)
+        });
+
+      }
+
+    });
 
   });
 

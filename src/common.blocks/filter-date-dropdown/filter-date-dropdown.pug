@@ -1,0 +1,8 @@
+mixin filter-date-dropdown(id, value, title)
+    .filter-date-dropdown
+        if title
+            h3.filter-date-dropdown__title= title
+        .date-dropdown__text-field-wrap
+            label(for=id)
+            input.filter-date-dropdown__text-field(id=id name=id value=value)
+            i.date-dropdown__arrow.material-icons expand_more

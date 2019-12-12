@@ -1,10 +1,10 @@
-.like-button {
+.like-button__input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-.label_for-like-button {
+.like-button__label {
   & input:checked+.like-button__text {
     color: $purple;
     transition: .2s;
@@ -16,7 +16,7 @@
   }
 }
 
-.like-button-wrap {
+.like-button {
   box-sizing: border-box;
   width: 40px;
   height: 20px;
@@ -26,7 +26,7 @@
   display: inline-block;
 }
 
-.like-button-wrap_active {
+.like-button_checked {
   box-sizing: border-box;
   width: 40px;
   height: 20px;

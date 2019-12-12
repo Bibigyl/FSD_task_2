@@ -1,0 +1,192 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name='viewport' content="initial-scale=1.0, width=device-width")
+        title Form elements
+        link(rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png")
+        link(rel="manifest" href="favicon/site.webmanifest")
+        link(rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ffffff")
+        link(rel="stylesheet" href="form-elements.css")
+    body
+        -let options;
+
+        include ../../common.blocks/text-field/text-field
+        include ../../common.blocks/dropdown/dropdown
+        include ../../common.blocks/date-dropdown/date-dropdown
+        include ../../common.blocks/filter-date-dropdown/filter-date-dropdown
+        include ../../common.blocks/subscription-text-field/subscription-text-field
+
+        include ../../common.blocks/checkbox-buttons/checkbox-buttons
+        include ../../common.blocks/radio-buttons/radio-buttons
+        include ../../common.blocks/toggle/toggle
+        include ../../common.blocks/like-button/like-button
+        include ../../common.blocks/rate-button/rate-button
+
+
+        include ../../common.blocks/slider-range/slider-range
+        include ../../common.blocks/button/button
+        include ../../common.blocks/pagination/pagination
+        include ../../common.blocks/expandable-checkbox-list/expandable-checkbox-list
+
+        section.form-elements
+            .form-elements__logo
+                include ../../common.blocks/logo/ui-logo.svg
+            .form-elements__container.form-elements__container-1
+                .form-elements__column-1-1
+
+                    .text-field-wrap.text-field-wrap-1
+                        h3.text-field-wrap__title Text field
+                        .text-field-wrap__state Default
+                        +text-field()(name='ui-text-field', type='email', placeholder='Email')
+
+                    .text-field-wrap.text-field-wrap_hover.text-field-wrap-2
+                        h3.text-field-wrap__title Text field
+                        .text-field-wrap__state Hover / Focus
+                        +text-field()(name='ui-text-field_hover', type='text', value='This is pretty awesome')
+
+                    .dropdown-wrap.dropdown-wrap-1
+                        h3.dropdown-wrap__title Dropdown
+                        .dropdown-wrap__state Default
+                        +dropdown('guests', true)
+
+                    .text-field-wrap.text-field-wrap-3
+                        h3.text-field-wrap__title Masked text field
+                        .text-field-wrap__state Default
+                        +text-field(true)(name='ui-text-field_masked', type='text')
+
+                    .date-dropdown-wrap
+                        +date-dropdown('ui-date-dropdown-1', '', '19.08.2019', 'Date dropdown','Date dropdown')
+
+                    .filter-date-dropdown-wrap
+                        +filter-date-dropdown('ui-filter-date-dropdown-1', '19 авг - 23 авг', 'Filter date dropdown')
+
+                    .subscription-text-field-wrap
+                        h3.subscription-text-field__title Subscription text field
+                        +subscription-text-field()(name='ui-subscription-text-field', type='email' placeholder='Email')
+
+                .form-elements__column-1-2
+
+                    .checkbox-buttons-wrap
+                        -options = [
+                        -    {text: 'Можно курить', name: 'smoking', checked: false},
+                        -    {text: 'Можно с питомцами', name: 'pets', checked: true},
+                        -    {text: 'Можно пригласить гостей (до 10 человек)', name: 'guests', checked: true}
+                        -]
+
+                        +checkbox-buttons('Checkbox buttons', options)
+
+                    .radio-buttons-wrap
+                        -options = [
+                        -    {text: 'Мужчина', checked: true},
+                        -    {text: 'Женщина', checked: false}
+                        -]
+
+                        +radio-buttons('Radio buttons', 'gender', options)
+
+                    .toggles-wrap
+                        h3.toggles-wrap__title Toggle
+                        .toggle-wrap
+                            +toggle(false,'Получать спецпредложения', true)
+                        .toggle-wrap
+                            +toggle(false,'Получать спецпредложения', false)
+
+                    .like-buttons-wrap
+                        h3.like-buttons-wrap__title Like button
+                        .like-button-wrap
+                            +like-button(2, false)
+                        .like-button-wrap
+                            +like-button(12, true)
+
+                    .rate-buttons-wrap
+                        h3.rate-buttons-wrap__title Rate button
+                        .rate-button-wrap
+                            +rate-button('ui-rate-1', 4)
+                        .rate-button-wrap
+                            +rate-button('ui-rate-2', 5)
+
+                .form-elements__column-1-3
+
+                    .slider-range-wrap
+                        +slider-range('Slider range')
+
+                    h3.buttons-wrap__title Buttons
+                    .colored-buttons-wrap.buttons-wrap
+                        .button-wrap
+                            +button('Click me', 'colored')
+                        .button-wrap
+                            +button('Click me', 'colored')(class='button_on-hover')
+                    .not-colored-buttons-wrap.buttons-wrap
+                        .button-wrap
+                            +button('Click me', 'not-colored')
+                        .button-wrap
+                            +button('Click me', 'not-colored')(class='button_on-hover')
+                    .textual-buttons-wrap.buttons-wrap
+                        .button-wrap
+                            +button('Click me', 'textual', true)
+                        .button-wrap
+                            +button('Click me', 'textual', false)(class='button_on-hover')
+                    .big-buttons-wrap.buttons-wrap
+                        .button-wrap
+                            +button('Перейти к оплате', 'big')
+
+                    .pagination-wrap
+                        h3.pagination-wrap__title Pagination
+                        +pagination(12, 101, 1)
+
+
+
+            .form-elements__container.form-elements__container-2
+                .form-elements__column-2-1
+
+                    .dropdown-wrap.dropdown-wrap-2
+                        h3.dropdown-wrap__title Dropdown
+                        .dropdown-wrap__state Default
+                        +dropdown('furniture', false, false)
+
+                    .dropdown-wrap.dropdown-wrap-3
+                        h3.dropdown-wrap__title Dropdown
+                        .dropdown-wrap__state Expanded
+                        +dropdown('furniture', false, true)
+
+                .form-elements__column-2-2
+                    .dropdown-wrap.dropdown-wrap-4
+                        h3.dropdown-wrap__title Dropdown
+                        +dropdown('guests', ['Очистить', 'Применить'], true)
+
+                .form-elements__column-2-3
+                    .dropdown-wrap.dropdown-wrap-5
+                        h3.dropdown-wrap__title Dropdown
+                        +dropdown('guests', ['Очистить', 'Применить'], true)
+
+
+
+            .form-elements__container.form-elements__container-3
+                .form-elements__column-3-1
+                    .expandable-checkbox-list-wrap
+                        -options = [
+                        -    {text: 'Завтрак', checked: false},
+                        -    {text: 'Письменный стол', checked: true},
+                        -    {text: 'Стул для кормления', checked: true},
+                        -    {text: 'Кроватка', checked: true},
+                        -    {text: 'Телевизор', checked: false},
+                        -    {text: 'Шампунь', checked: false},
+                        -    {text: 'Телевизор', checked: false},
+                        -    {text: 'Шампунь', checked: false},
+                        -]
+                        +expandable-checkbox-list('Expandable checkbox list', options)
+                .form-elements__column-3-2
+                .form-elements__column-3-3
+
+
+
+            .form-elements__container.form-elements__container-4
+                .form-elements__column-4-1
+                .form-elements__column-4-2
+
+        
+        script(src='./form-elements.js')

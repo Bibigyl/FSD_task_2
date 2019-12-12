@@ -1,66 +1,37 @@
-mixin dropdown(type, text, options, buttons)
-	if type=='furniture'
-		.dropdown.dropdown_furniture
-			.dropdown__field
-				span
-				i.dropdown__arrow.material-icons expand_more
-
-			ul.dropdown__ul
-			- for (var i = 0; i < options.length; i++)
-				li 
-					span.dropdown__button.dropdown__button_plus +
-					span.dropdown__num options.number
-					span.dropdown__button.dropdown__button_minus -
-					|options.name
-
-
-
-<!--.dropdown.dropdown_middle.dropdown_furniture
-	h3.dropdown
-	.dropdown__field <span>2 спальни, 2 кровати...</span>
-		.dropdown__arrow arrow
-			i.material-icons expand_more
-		span.ui-field-state Default
-	.dropdown-ul-wrap
-		ul
-			li 
-				span.dropdown__button.dropdown__button_plus +
-				span.dropdown__num 2
-				span.dropdown__button.dropdown__button_minus -
-				|Спальни
-			li 
-				span.dropdown__button.dropdown__button_plus +
-				span.dropdown__num 2
-				span.dropdown__button.dropdown__button_minus -
-				|Кровати
-			li 
-				span.dropdown__button.dropdown__button_plus +
-				span.dropdown__num 0
-				span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
-				|Ванные комнаты
+include ../button/button
+mixin dropdown(type, buttons, opened=false, itemsNames)
+	- let items;
+	- let dropClass;
+	- let text;
+	- if (type == 'furniture') {
+	-	items = ['Спальни', 'Кровати', 'Ванные комнаты'];
+	-	dropClass = 'dropdown_furniture';
+	-	text = 'Удобства';		
+	- } else if (type == 'guests') {
+	-	items = ['Взрослые', 'Дети', 'Младенцы'];
+	-	dropClass = 'dropdown_guests';
+	-	text = 'Сколько гостей';		
+	- } else {
+	-	items = itemsNames;
+	-	dropClass = 'dropdown_custom';
+	-	text = 'Choose options';	
+	- }
+	- dropClass = opened ? dropClass + ' dropdown_open' : dropClass;
 
 
-.dropdown.dropdown_big .dropdown_guests.dropdown_open
-	h3.dropdown
-	.dropdown__field <span>Сколько гостей</span>
-		.dropdown__arrow arrow
-			i.material-icons expand_more
-	.dropdown-ul-wrap
-		ul
-			li 
-				span.dropdown__button.dropdown__button_plus +
-				span.dropdown__num 0
-				span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
-				|Взрослые
-			li 
-				span.dropdown__button.dropdown__button_plus +
-				span.dropdown__num 0
-				span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
-				|Дети
-			li 
-				span.dropdown__button.dropdown__button_plus +
-				span.dropdown__num 0
-				span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
-				|Младенцы
-		a.link.dropdown__link_clear.link_grey.hidden Очистить
-		a.link.dropdown__link_apply.link_colored Применить -->
+	.dropdown(class=dropClass)
+		.dropdown__field
+			span.dropdown__text= text
+			i.dropdown__arrow.material-icons expand_more
+
+		.dropdown__list
+			ul
+				- for (var i = 0; i < 3; i++)
+					li.dropdown__item= items[i] 
+						span.dropdown__button.dropdown__button_plus +
+						span.dropdown__num 0
+						span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
+			
+			if buttons
+				+button(buttons[0], 'textual', false)(class='dropdown__button_to-clear hidden')
+				+button(buttons[1], 'textual', true)(class='dropdown__button_to-apply')

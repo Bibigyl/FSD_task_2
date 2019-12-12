@@ -1,0 +1,7 @@
+mixin rate-button(id, rate)
+	.rate-button
+		-let checked = false; 
+		-for (let i = 5; i > 0; i--)
+			-checked = (i == rate) ? true : false;
+			input.rate-button__input(value=i id=id+'_'+i name=id type="radio" checked=checked)
+			label.rate-button__label.material-icons(for=id+'_'+i)

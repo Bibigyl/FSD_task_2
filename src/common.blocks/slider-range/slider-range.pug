@@ -1,6 +1,7 @@
-h3 Range slider
-.slider-range
-	.slider-wrapper
-		#slider-range
-	.range-wrapper
-		.range
+mixin slider-range(title)
+	.slider-range
+		if title
+			h3.slider-range__title= title
+			.slider-range__text-wrap
+				.slider-range__text
+			.slider-range__slider

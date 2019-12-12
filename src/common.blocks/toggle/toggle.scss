@@ -5,7 +5,7 @@
   margin: 10px 0 0 20px;
 }
 
-.label_toggle {
+.toggle__label{
   input:checked+.toggle__text:before {
     border-color: $purple;
   }

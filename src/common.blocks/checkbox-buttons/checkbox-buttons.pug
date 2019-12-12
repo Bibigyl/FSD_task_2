@@ -1,0 +1,11 @@
+mixin checkbox-buttons(title, items)
+	.checkbox-buttons
+		if title
+			h3.checkbox-buttons__title= title
+
+		ul
+		-for (let i = 0; i < items.length; i++)
+			li.checkbox-button
+				label.checkbox-button__label
+					input.checkbox-button__input(type="checkbox" name=items[i].name checked=items[i].checked)
+					.checkbox-button__text= items[i].text

@@ -1,0 +1,6 @@
+mixin toggle(title, text, checked)
+	if title
+		h3= title
+	label.toggle__label
+		input.toggle(type="checkbox" checked=checked)
+		div.toggle__text= text

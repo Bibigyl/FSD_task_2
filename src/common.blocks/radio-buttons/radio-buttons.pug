@@ -1,0 +1,9 @@
+mixin radio-buttons(title, name, options)
+	.radio-buttons
+		if title
+			h3.radio-buttons__title= title
+
+		-for (let i = 0; i < options.length; i++)
+			label.radio-button__label
+				input.radio-button(type="radio" name=name checked=options[i].checked)
+				div.radio-button__text= options[i].text

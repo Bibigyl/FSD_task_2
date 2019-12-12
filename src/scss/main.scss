@@ -63,11 +63,15 @@ html {
   font-size: $HTMLsize;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Montserrat', 'OpenSans', sans-serif;
   font-weight: 400;
   font-size: rem(14px);
-  line-height: 24px;
+  line-height: rem(24px);
   color: $c75;
 }
 
@@ -163,10 +167,6 @@ h3 {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-
-  >* {
-    box-sizing: border-box;
-  }
 }
 
 hr {
@@ -232,17 +232,19 @@ hr {
 /*------- Blocks styles -------------*/
 
 @import '../common.blocks/text-field/text-field.scss';
-@import '../common.blocks/checkbox/checkbox.scss';
-@import '../common.blocks/radio/radio.scss';
+@import '../common.blocks/date-dropdown/date-dropdown.scss';
+@import '../common.blocks/filter-date-dropdown/filter-date-dropdown.scss';
+@import '../common.blocks/subscription-text-field/subscription-text-field.scss';
+@import '../common.blocks/checkbox-buttons/checkbox-buttons.scss';
+@import '../common.blocks/radio-buttons/radio-buttons.scss';
 @import '../common.blocks/toggle/toggle.scss';
 @import '../common.blocks/like-button/like-button.scss';
-@import '../common.blocks/rating/rating.scss';
+@import '../common.blocks/rate-button/rate-button.scss';
 @import '../common.blocks/slider-range/slider-range.scss';
 @import '../common.blocks/button/button.scss';
-@import '../common.blocks/link/link.scss';
 @import '../common.blocks/pagination/pagination.scss';
 @import '../common.blocks/dropdown/dropdown.scss';
-@import '../common.blocks/checkbox-list/checkbox-list.scss';
+@import '../common.blocks/expandable-checkbox-list/expandable-checkbox-list.scss';
 @import '../common.blocks/rich-checkbox-list/rich-checkbox-list.scss';
 @import '../common.blocks/advantages/advantages.scss';
 @import '../common.blocks/review/review.scss';

@@ -1,0 +1,18 @@
+mixin date-dropdown(id, firstDay, lastDay, firstDayTitle, lastDayTitle)
+    .date-dropdown(id=id)
+
+        .date-dropdown__first-day.date-dropdown__day
+            if firstDayTitle 
+                h3.date-dropdown__title= firstDayTitle
+            .date-dropdown__text-field-wrap
+                label(for=id + '__first-day')
+                input.date-dropdown__text-field.text-field_masked(name=id + '__first-day' type='text' placeholder='ДД.ММ.ГГГГ' value=firstDay)
+                i.date-dropdown__arrow.material-icons expand_more
+
+        .date-dropdown__last-day.date-dropdown__day
+            if lastDayTitle
+                h3.date-dropdown__title= lastDayTitle
+            .date-dropdown__text-field-wrap
+                label(for=id + '__last-day')
+                input.date-dropdown__text-field.text-field_masked(name=id + '__last-day' type='text' placeholder='ДД.ММ.ГГГГ' value=lastDay)
+                i.date-dropdown__arrow.material-icons expand_more

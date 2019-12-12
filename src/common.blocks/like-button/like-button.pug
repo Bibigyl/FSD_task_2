@@ -1,0 +1,8 @@
+mixin like-button(number, checked)
+	-let icon = checked ? favorite : favorite_border;
+	-let lbClass = checked ? 'like-button_checked' : '';
+	.like-button(class=lbClass)
+		label.like-button__label
+			input.like-button__input(type="checkbox" checked=checked)
+			.like-button__text= number
+				.like-button__icon.material-icons= icon

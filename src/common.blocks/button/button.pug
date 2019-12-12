@@ -1,0 +1,17 @@
+mixin button(text, type, colored)
+	case type
+		when 'colored'
+			.button.button_colored()&attributes(attributes)= text
+		when 'not-colored'
+			.button__border
+				.button.button_not-colored()&attributes(attributes)= text
+		when 'textual'
+			if colored 
+				.text-button.text-button_colored()&attributes(attributes)= text
+			else 
+				.text-button.text-button_not-colored()&attributes(attributes)= text
+		when 'big'
+			.button.button_big()&attributes(attributes)= text
+				i.button__arrow.material-icons arrow_forward
+
+		

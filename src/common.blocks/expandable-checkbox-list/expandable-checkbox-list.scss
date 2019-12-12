@@ -1,0 +1,70 @@
+.expandable-checkbox-list {
+  position: relative;
+  width: 266px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .checkbox-buttons {
+    background-color: #fff;
+    transition: .4s linear;
+    display: none;
+  }
+
+  &__title {
+    margin-bottom: 17px;
+    padding: 10px 0;
+  }
+
+  &__arrow {
+    padding: 10px;
+    transition: .2s;
+    line-height: 30px;
+    cursor: pointer;
+  }
+
+  &_open {
+    .checkbox-buttons {
+      display: block;  
+    }
+
+    .expandable-checkbox-list {
+      max-height: 300px;
+      transition: .4s linear;
+
+      &__arrow {
+        transform: scale(1, -1);
+        transition: .2s;
+      }
+    }
+  }
+
+}
+
+
+
+.checkbox-list {
+  position: relative;
+  width: 266px;
+  margin-bottom: 20px;
+
+  ul {
+    display: block;
+    height: auto;
+    max-height: 0px;
+    background-color: #fff;
+    transition: .4s linear;
+    overflow: hidden;
+  }
+
+}
+
+.checkbox-list__arrow {
+  position: absolute;
+  top: -4px;
+  right: 10px;
+
+  .material-icons {
+    
+  }
+}
