@@ -1,0 +1,7 @@
+mixin bullet-list(title, items)
+	.bullet-list
+		if title
+			h3.bullet-list__title= title
+		ul.bullet-list__list
+			-for (let i = 0; i < items.length; i++)
+				li.bullet-list__item= items[i]

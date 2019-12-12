@@ -9,8 +9,8 @@ $( document ).ready(function() {
 
     $(".dropdown__button_to-clear").on("click", function() {
         let $dropdown = $(this).closest('.dropdown');
-        let $list = $dropdown.children(".dropdown__list");
-        let $liArr = $list.children('li');
+        let $list = $dropdown.find(".dropdown__list");
+        let $liArr = $list.find('li');
 
         for ( let i = 0; i < $liArr.length; i++ ) {
             $liArr.eq(i).children(".dropdown__num").text("0");

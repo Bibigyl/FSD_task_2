@@ -7,64 +7,33 @@
 
   .checkbox-buttons {
     background-color: #fff;
-    transition: .4s linear;
     display: none;
   }
 
   &__title {
     margin-bottom: 17px;
-    padding: 10px 0;
   }
 
   &__arrow {
-    padding: 10px;
+    padding: 0 10px;
     transition: .2s;
-    line-height: 30px;
+    line-height: 15px;
     cursor: pointer;
+    margin-bottom: 17px;
   }
 
   &_open {
     .checkbox-buttons {
-      display: block;  
+      display: block;
     }
 
     .expandable-checkbox-list {
       max-height: 300px;
-      transition: .4s linear;
 
       &__arrow {
         transform: scale(1, -1);
         transition: .2s;
       }
     }
-  }
-
-}
-
-
-
-.checkbox-list {
-  position: relative;
-  width: 266px;
-  margin-bottom: 20px;
-
-  ul {
-    display: block;
-    height: auto;
-    max-height: 0px;
-    background-color: #fff;
-    transition: .4s linear;
-    overflow: hidden;
-  }
-
-}
-
-.checkbox-list__arrow {
-  position: absolute;
-  top: -4px;
-  right: 10px;
-
-  .material-icons {
-    
   }
 }

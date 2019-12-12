@@ -32,6 +32,9 @@ html(lang="ru")
         include ../../common.blocks/button/button
         include ../../common.blocks/pagination/pagination
         include ../../common.blocks/expandable-checkbox-list/expandable-checkbox-list
+        include ../../common.blocks/rich-checkbox-buttons/rich-checkbox-buttons
+        include ../../common.blocks/bullet-list/bullet-list
+        
 
         section.form-elements
             .form-elements__logo
@@ -167,20 +170,40 @@ html(lang="ru")
 
             .form-elements__container.form-elements__container-3
                 .form-elements__column-3-1
-                    .expandable-checkbox-list-wrap
-                        -options = [
-                        -    {text: 'Завтрак', checked: false},
-                        -    {text: 'Письменный стол', checked: true},
-                        -    {text: 'Стул для кормления', checked: true},
-                        -    {text: 'Кроватка', checked: true},
-                        -    {text: 'Телевизор', checked: false},
-                        -    {text: 'Шампунь', checked: false},
-                        -    {text: 'Телевизор', checked: false},
-                        -    {text: 'Шампунь', checked: false},
-                        -]
+                    -options = [
+                    -    {text: 'Завтрак', checked: false},
+                    -    {text: 'Письменный стол', checked: true},
+                    -    {text: 'Стул для кормления', checked: true},
+                    -    {text: 'Кроватка', checked: true},
+                    -    {text: 'Телевизор', checked: false},
+                    -    {text: 'Шампунь', checked: false},
+                    -    {text: 'Телевизор', checked: false},
+                    -    {text: 'Шампунь', checked: false},
+                    -]
+
+                    .expandable-checkbox-list-wrap-1
                         +expandable-checkbox-list('Expandable checkbox list', options)
+
+                    .expandable-checkbox-list-wrap-2
+                        +expandable-checkbox-list('Expandable checkbox list', options, true)
+
                 .form-elements__column-3-2
+                    .rich-checkbox-buttons-wrap
+                        -options = [
+                        -    {title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.'},
+                        -    {title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.'}
+                        -]
+
+                        +rich-checkbox-buttons('Rich checkbox buttons', options)
+
                 .form-elements__column-3-3
+                    .bullet-list-wrap
+                        -options = [
+                        -    'Нельзя с питомцами',
+                        -    'Без вечеринок и мероприятий',
+                        -    'Время прибытия — после 13:00, а выезд до 12:00'
+                        -]
+                        +bullet-list('Bullet list', options)
 
 
 

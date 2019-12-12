@@ -1,11 +1,10 @@
 mixin expandable-checkbox-list(title, items, open=false)
-	if open
-		.expandable-checkbox-list.expandable-checkbox-list_open
-	else
-		.expandable-checkbox-list
 
-			h3.expandable-checkbox-list__title= title
-			.expandable-checkbox-list__arrow.material-icons expand_more
-				
-			include ../checkbox-buttons/checkbox-buttons
-			+checkbox-buttons(false, items)
+	-let cl = open ? 'expandable-checkbox-list_open' : ''
+
+	.expandable-checkbox-list(class=cl)
+		h3.expandable-checkbox-list__title= title
+		.expandable-checkbox-list__arrow.material-icons expand_more
+			
+		include ../checkbox-buttons/checkbox-buttons
+		+checkbox-buttons(false, items)

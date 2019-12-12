@@ -27,7 +27,7 @@
   }
   &__container-2 {
     max-width: 1343px;
-    margin-bottom: 146px;
+    margin-bottom: 156px;
   }
   &__container-3 {
     max-width: 1343px;
@@ -245,4 +245,20 @@
 .dropdown-wrap-3 {
   max-width: 266px;
   margin-bottom: 16px;
+}
+
+.expandable-checkbox-list-wrap-1 {
+  margin-bottom: 33px;
+}
+
+.rich-checkbox-buttons-wrap {
+  .rich-checkbox-button:first-child .rich-checkbox-button__text {
+    max-width: 200px;
+  }
+}
+
+.bullet-list-wrap {
+  .bullet-list__item:nth-child(3) {
+    max-width: 260px;
+  }
 }

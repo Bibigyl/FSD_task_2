@@ -1,0 +1,13 @@
+mixin rich-checkbox-buttons(title, items)
+
+	.rich-checkbox-buttons
+		if title
+			h3.rich-checkbox-buttons__title= title
+
+		ul
+			-for (let i = 0; i < items.length; i++)
+				li.rich-checkbox-button
+					label.rich-checkbox-button__label
+						input.rich-checkbox-button__input(type="checkbox" checked=items.checked name=items.name)
+						p.rich-checkbox-button__title= items[i].title
+						p.rich-checkbox-button__text= items[i].text

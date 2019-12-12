@@ -1,5 +1,9 @@
 .bullet-list {
-  li {
+  &__title {
+    margin-bottom: 13px;
+  }
+  
+  &__item {
     margin-bottom: 10px;
     padding-left: 21px;
     position: relative;
