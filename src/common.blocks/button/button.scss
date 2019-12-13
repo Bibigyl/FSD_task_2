@@ -1,117 +1,135 @@
 .button {
-  border-radius: 100px;
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
   font-size: rem(12px);
-  line-height: 15px;
   border: none;
   cursor: pointer;
   display: inline-flex;
   position: relative;
+  transition: .2s;
+  justify-content: center;
+  border-radius: 100px;
+  font-family: 'Montserrat';
 
   &:hover,
   &:active,
   &:focus {
-    border: none;
     font-style: normal;
     font-weight: bold;
-  }
-
-  &__border {
-    background: $gradient;
-    display: inline-flex;
-    border-radius: 100px;
-    padding: 0;
     transition: .2s;
-  
-    &:hover,
-    &:active,
-    &:focus {
-      background: $gradient;
-      opacity: .5;
-      transition: .2s;
-    }
-
-    .button {
-      padding: 12px 18px;
-      background-color: #fff;
-      margin: 2px;
-      color: $purple;
-    
-      &:hover,
-      &:active,
-      &:focus {
-        background: #fff;
-        color: $purple;
-      }
-    }
   }
 
   &__arrow {
     color: #fff;
     position: absolute;
-    top: 8px;
+    top: 10px;
     right: 10px;
   }
 
-  &_colored {
-    padding: 14px 20px;
+  &_filled {
     background: $gradient;
     color: #fff;
-    transition: .2s;
-  
+
     &:hover,
     &:active,
     &:focus {
-      background: $gradient;
-      color: #fff;
       opacity: .5;
-      transition: .2s;
+    }
+  }
+
+  &_empty {
+    color: $purple;
+    background: #fff;
+    background-clip: padding-box;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: inherit;
+      background: $gradient;
+      transition: inherit;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: rgba($purple, .5);
+
+      &:before {
+        opacity: 0.5;
+        transition: inherit;
+      }
+    }
+  }
+
+  &_textual {
+    background-color: transparent;
+    padding: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: .5;
     }
   }
 
   &_big {
-    justify-content: center;
     width: 100%;
     max-width: 320px;
-    font-size: rem(12px);
-    position: relative;
     padding: 14px 20px;
     background: $gradient;
     color: #fff;
-    transition: .2s;
-  
+
     &:hover,
     &:active,
     &:focus {
-      background: $gradient;
-      color: #fff;
       opacity: .5;
-      transition: .2s;
     }
   }
-}
 
-.text-button {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: rem(12px);
-  cursor: pointer;
-  transition: .2s;
+  &_standard {
+    &.button_filled {
+      padding: 14px 20px;
+    }
 
-  &_colored {
-    color: $purple;    
+    &.button_empty {
+      padding: 12px 18px;
+      $border: 2px;
+      border: solid $border transparent;
+
+      &:before {
+        margin: -$border;
+      }
+    }
   }
 
-  &_not-colored {
+  &_small {
+    &.button_filled {
+      padding: 12px 18px;
+    }
+
+    &.button_empty {
+      padding: 11px 17px;
+      $border: 1px;
+      border: solid $border transparent;
+
+      &:before {
+        margin: -$border;
+      }
+    }
+  }
+
+  &_bright-text {
+    color: $purple;
+  }
+
+  &_grey-text {
     color: $c50;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    opacity: .5;
-    transition: .2s;
   }
 }

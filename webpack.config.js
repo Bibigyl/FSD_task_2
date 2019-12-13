@@ -7,6 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 //const StylelintPlugin = require('stylelint-webpack-plugin');
+const ghpages = require('gh-pages');
 
 const PATHS = {
 	src: path.join(__dirname,'src'),
@@ -152,3 +153,5 @@ module.exports = {
 		open: true,
 	}
 };
+
+ghpages.publish('dist', function(err) {});

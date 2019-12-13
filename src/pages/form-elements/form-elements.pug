@@ -120,22 +120,22 @@ html(lang="ru")
                     h3.buttons-wrap__title Buttons
                     .colored-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button('Click me', 'colored')
+                            +button()
                         .button-wrap
-                            +button('Click me', 'colored')(class='button_on-hover')
+                            +button()
                     .not-colored-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button('Click me', 'not-colored')
+                            +button({type: 'empty'})
                         .button-wrap
-                            +button('Click me', 'not-colored')(class='button_on-hover')
+                            +button({type: 'empty'})
                     .textual-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button('Click me', 'textual', true)
+                            +button({type: 'textual'})
                         .button-wrap
-                            +button('Click me', 'textual', false)(class='button_on-hover')
+                            +button({type: 'textual', textColor: 'grey'})
                     .big-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button('Перейти к оплате', 'big')
+                            +button({type: 'big', text: 'Перейти к оплате'})
 
                     .pagination-wrap
                         h3.pagination-wrap__title Pagination
