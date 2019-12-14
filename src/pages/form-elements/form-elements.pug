@@ -120,9 +120,9 @@ html(lang="ru")
                     h3.buttons-wrap__title Buttons
                     .colored-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button()
+                            +button({type: 'filled'})
                         .button-wrap
-                            +button()
+                            +button({type: 'filled'})
                     .not-colored-buttons-wrap.buttons-wrap
                         .button-wrap
                             +button({type: 'empty'})
@@ -130,12 +130,23 @@ html(lang="ru")
                             +button({type: 'empty'})
                     .textual-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button({type: 'textual'})
+                            +button()
                         .button-wrap
-                            +button({type: 'textual', textColor: 'grey'})
+                            +button({textColor: 'grey'})
                     .big-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button({type: 'big', text: 'Перейти к оплате'})
+                            +button({type: 'empty', extended: true, text: 'Перейти к оплате'})
+                    .big-buttons-wrap.buttons-wrap
+                        .button-wrap
+                            +button({type: 'filled', extended: true, size: 'small', text: 'Перейти к оплате'})
+                    .big-buttons-wrap.buttons-wrap
+                        .button-wrap
+                            +button({type: 'empty', extended: true, size: 'small', text: 'Перейти к оплате'})
+                    .big-buttons-wrap.buttons-wrap
+                        .button-wrap
+                            +button({type: 'filled', extended: true, text: 'Перейти к оплате'})
+
+
 
                     .pagination-wrap
                         h3.pagination-wrap__title Pagination

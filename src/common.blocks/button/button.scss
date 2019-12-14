@@ -1,3 +1,8 @@
+button {
+  background-color: transparent;
+  padding: 0;
+}
+
 .button {
   font-style: normal;
   font-weight: bold;
@@ -21,10 +26,11 @@
   }
 
   &__arrow {
-    color: #fff;
     position: absolute;
-    top: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     right: 10px;
+    color: inherit;
   }
 
   &_filled {
@@ -56,11 +62,13 @@
       transition: inherit;
     }
 
+    .button__arrow {
+      //color: $purple;
+    }
+
     &:hover,
     &:active,
     &:focus {
-      color: rgba($purple, .5);
-
       &:before {
         opacity: 0.5;
         transition: inherit;
@@ -68,29 +76,9 @@
     }
   }
 
-  &_textual {
-    background-color: transparent;
-    padding: 0;
-
-    &:hover,
-    &:active,
-    &:focus {
-      opacity: .5;
-    }
-  }
-
-  &_big {
+  &_extended {
     width: 100%;
     max-width: 320px;
-    padding: 14px 20px;
-    background: $gradient;
-    color: #fff;
-
-    &:hover,
-    &:active,
-    &:focus {
-      opacity: .5;
-    }
   }
 
   &_standard {
@@ -125,11 +113,11 @@
     }
   }
 
-  &_bright-text {
+  &_with-bright-text {
     color: $purple;
   }
 
-  &_grey-text {
+  &_with-grey-text {
     color: $c50;
   }
 }

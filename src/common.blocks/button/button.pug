@@ -1,26 +1,16 @@
--
-	var config = {
-		'filled': 'button_filled',
-		'empty': 'button_empty',
-		'textual': 'button_textual',
-		'big': 'button_big',
-		'bright': 'button_bright-text',
-		'grey': 'button_grey-text',
-		'standard': 'button_standard',
-		'small': 'button_small'
-	}
-
-mixin button(args = {text, type, textColor, size})
+mixin button(args = {text, type, extended, textColor, size})
 	- let text = args.text || 'Click me';
-	- let type = config[args.type] || 'button_filled';
-	- let textColor = config[args.textColor] || 'button_bright-text';
-	- let size = config[args.size] || 'button_standard';
+	- let type = args.type ? 'button_' + args.type : false;
+	- let extended = args.extended ? 'button_extended' : false;
+	- let textColor = args.textColor ? 'button_with-' + args.textColor + '-text' : 'button_with-bright-text';
+	- let size = args.size ? 'button_' + args.size : 'button_standard';
 
-	- textColor = type == 'button_textual' ? textColor : false;
-	- size = type == 'button_empty' || type == 'button_filled' ? size : false;
+	- extended = type ? extended : false;
+	- textColor = !type ? textColor : false;
+	- size = type ? size : false;
 
-	button.button(class=[type, textColor, size])= text
-		if (type == 'button_big')
+	button.button(class=[type, extended, textColor, size])= text
+		if (extended != false)
 			i.button__arrow.material-icons arrow_forward
 
 		
