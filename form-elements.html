@@ -27,14 +27,18 @@
           <div class="text-field-wrap text-field-wrap-1">
             <h3 class="text-field-wrap__title">Text field</h3>
             <div class="text-field-wrap__state">Default</div>
-                <label class="text-field__label"></label>
-                <input class="text-field text-field_masked">
+                <div class="text-field">
+                  <label class="text-field__label"></label>
+                  <input class="text-field__input" type="email" placeholder="Email">
+                </div>
           </div>
           <div class="text-field-wrap text-field-wrap_hover text-field-wrap-2">
             <h3 class="text-field-wrap__title">Text field</h3>
             <div class="text-field-wrap__state">Hover / Focus</div>
-                <label class="text-field__label"></label>
-                <input class="text-field text-field_masked">
+                <div class="text-field">
+                  <label class="text-field__label"></label>
+                  <input class="text-field__input" type="text" value="This is pretty awesome">
+                </div>
           </div>
           <div class="dropdown-wrap dropdown-wrap-1">
             <h3 class="dropdown-wrap__title">Dropdown</h3>
@@ -47,18 +51,24 @@
                       <li class="dropdown__item">Дети<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
                       <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
                     </ul>
-                        <button class="button button_with-bright-text">Click me
-                        </button>
-                        <button class="button button_with-bright-text">Click me
-                        </button>
+                    <div class="dropdown__button_to-clear hidden">
+                          <button class="button button_with-grey-text">Очистить
+                          </button>
+                    </div>
+                    <div class="dropdown__button_to-apply">
+                          <button class="button button_with-bright-text">Применить
+                          </button>
+                    </div>
                   </div>
                 </div>
           </div>
           <div class="text-field-wrap text-field-wrap-3">
             <h3 class="text-field-wrap__title">Masked text field</h3>
             <div class="text-field-wrap__state">Default</div>
-                <label class="text-field__label"></label>
-                <input class="text-field text-field_masked">
+                <div class="text-field">
+                  <label class="text-field__label"></label>
+                  <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
+                </div>
           </div>
           <div class="date-dropdown-wrap">
                 <div class="date-dropdown" id="ui-date-dropdown-1">
@@ -88,10 +98,10 @@
                 </div>
           </div>
           <div class="subscription-text-field-wrap">
-            <h3 class="subscription-text-field__title">Subscription text field</h3>
-                <div class="subscription-text-field">
-                  <label class="subscription-text-field__label" for="ui-subscription-text-field"></label>
-                  <input class="subscription-text-field__text-field" name="ui-subscription-text-field" type="email" placeholder="Email"><i class="material-icons subscription-text-field__arrow">arrow_forward</i>
+            <h3 class="subscription-text-field-wrap__title">Subscription text field</h3>
+                <div class="text-field text-field_subscription">
+                  <label class="text-field__label"></label>
+                  <input class="text-field__input" type="email" placeholder="Email"><i class="material-icons text-field__arrow">arrow_forward</i>
                 </div>
           </div>
         </div>
@@ -108,13 +118,13 @@
                     </li>
                     <li class="checkbox-button">
                       <label class="checkbox-button__label">
-                        <input class="checkbox-button__input" type="checkbox" name="pets" checked>
+                        <input class="checkbox-button__input" type="checkbox" name="pets">
                         <div class="checkbox-button__text">Можно с питомцами</div>
                       </label>
                     </li>
                     <li class="checkbox-button">
                       <label class="checkbox-button__label">
-                        <input class="checkbox-button__input" type="checkbox" name="guests" checked>
+                        <input class="checkbox-button__input" type="checkbox" name="guests">
                         <div class="checkbox-button__text">Можно пригласить гостей (до 10 человек)</div>
                       </label>
                     </li>
@@ -125,12 +135,10 @@
                 <div class="radio-buttons">
                   <h3 class="radio-buttons__title">Radio buttons</h3>
                   <label class="radio-button__label">
-                    <input class="radio-button" type="radio" name="gender" checked>
-                    <div class="radio-button__text">Мужчина</div>
+                    <input class="radio-button" type="radio" name="gender" checked><span class="radio-button__text">Мужчина</span>
                   </label>
                   <label class="radio-button__label">
-                    <input class="radio-button" type="radio" name="gender">
-                    <div class="radio-button__text">Женщина</div>
+                    <input class="radio-button" type="radio" name="gender"><span class="radio-button__text">Женщина</span>
                   </label>
                 </div>
           </div>
@@ -207,7 +215,7 @@
         <div class="form-elements__column-1-3">
           <div class="slider-range-wrap">
                 <div class="slider-range">
-                  <h3 class="slider-range__title">Slider range</h3>
+                  <h3 class="slider-range__title">Range slider</h3>
                   <div class="slider-range__text-wrap">
                     <div class="slider-range__text"></div>
                   </div>
@@ -242,24 +250,6 @@
             </div>
             <div class="button-wrap">
                   <button class="button button_with-grey-text">Click me
-                  </button>
-            </div>
-          </div>
-          <div class="big-buttons-wrap buttons-wrap">
-            <div class="button-wrap">
-                  <button class="button button_bordered button_extended button_standard">Перейти к оплате<i class="button__arrow material-icons">arrow_forward</i>
-                  </button>
-            </div>
-          </div>
-          <div class="big-buttons-wrap buttons-wrap">
-            <div class="button-wrap">
-                  <button class="button button_filled button_extended button_small">Перейти к оплате<i class="button__arrow material-icons">arrow_forward</i>
-                  </button>
-            </div>
-          </div>
-          <div class="big-buttons-wrap buttons-wrap">
-            <div class="button-wrap">
-                  <button class="button button_bordered button_extended button_small">Перейти к оплате<i class="button__arrow material-icons">arrow_forward</i>
                   </button>
             </div>
           </div>
@@ -318,10 +308,14 @@
                       <li class="dropdown__item">Дети<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
                       <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
                     </ul>
-                        <button class="button button_with-bright-text">Click me
-                        </button>
-                        <button class="button button_with-bright-text">Click me
-                        </button>
+                    <div class="dropdown__button_to-clear hidden">
+                          <button class="button button_with-grey-text">Очистить
+                          </button>
+                    </div>
+                    <div class="dropdown__button_to-apply">
+                          <button class="button button_with-bright-text">Применить
+                          </button>
+                    </div>
                   </div>
                 </div>
           </div>
@@ -337,10 +331,14 @@
                       <li class="dropdown__item">Дети<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
                       <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
                     </ul>
-                        <button class="button button_with-bright-text">Click me
-                        </button>
-                        <button class="button button_with-bright-text">Click me
-                        </button>
+                    <div class="dropdown__button_to-clear hidden">
+                          <button class="button button_with-grey-text">Очистить
+                          </button>
+                    </div>
+                    <div class="dropdown__button_to-apply">
+                          <button class="button button_with-bright-text">Применить
+                          </button>
+                    </div>
                   </div>
                 </div>
           </div>
@@ -502,8 +500,36 @@
         </div>
       </div>
       <div class="form-elements__container form-elements__container-4">
-        <div class="form-elements__column-4-1"></div>
-        <div class="form-elements__column-4-2"></div>
+        <div class="form-elements__column-4-1">
+          <div class="advantages-wrap">
+                <ul class="advantages">
+                  <li class="advantage"><i class="material-icons advantage__icon">insert_emoticon</i><span class="advantage__title">Комфорт</span><br><span class="advantage__text">Шумопоглощающие стены</span></li>
+                  <li class="advantage"><i class="material-icons advantage__icon">location_city</i><span class="advantage__title">Удобство</span><br><span class="advantage__text">Окно в каждой из спален</span></li>
+                </ul>
+          </div>
+        </div>
+        <div class="form-elements__column-4-2">
+          <div class="review-wrap">
+                <div class="review">
+                  <div class="review__left-part">
+                    <div class="review__avatar ui-review__avatar" style="background-image: url( images/form-elements__avatar.png)"></div>
+                    <div class="review__like-button">
+                          <div class="like-button like-button_checked">
+                            <label class="like-button__label">
+                              <input class="like-button__input" type="checkbox" checked>
+                              <div class="like-button__text">12
+                                <div class="like-button__icon material-icons"></div>
+                              </div>
+                            </label>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="review__right-part"><span class="review__name">Мурад Сарафанов</span><span class="review__time">5 дней назад</span>
+                    <p class="review__comment">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+                  </div>
+                </div>
+          </div>
+        </div>
       </div>
     </section>
     <script src="./form-elements.js"></script>
