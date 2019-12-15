@@ -1,15 +1,31 @@
-mixin button(args = {text, type, extended, textColor, size})
+-
+	var config = {
+		appearance : {
+			filled: 'button_filled',
+			bordered: 'button_bordered'			
+		},
+		size : {
+			standard: 'button_standard',
+			small: 'button_small'
+		},
+		textColor : {
+			bright: 'button_with-bright-text',
+			grey: 'button_with-grey-text'
+		}
+	}
+
+mixin button(args = {text, appearance, isExtended, size, textColor})
 	- let text = args.text || 'Click me';
-	- let type = args.type ? 'button_' + args.type : false;
-	- let extended = args.extended ? 'button_extended' : false;
-	- let textColor = args.textColor ? 'button_with-' + args.textColor + '-text' : 'button_with-bright-text';
-	- let size = args.size ? 'button_' + args.size : 'button_standard';
+	- let appearance = config.appearance[args.appearance] || false;
+	- let extended = args.isExtended ? 'button_extended' : false;
+	- let size = config.size[args.size] || 'button_standard';
+	- let textColor = config.textColor[args.textColor] || 'button_with-bright-text';
 
-	- extended = type ? extended : false;
-	- textColor = !type ? textColor : false;
-	- size = type ? size : false;
+	- extended = appearance ? extended : false;
+	- size = appearance ? size : false;
+	- textColor = !appearance ? textColor : false;
 
-	button.button(class=[type, extended, textColor, size])= text
+	button.button(class=[appearance, extended, size, textColor])= text
 		if (extended != false)
 			i.button__arrow.material-icons arrow_forward
 

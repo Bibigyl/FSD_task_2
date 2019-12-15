@@ -120,31 +120,31 @@ html(lang="ru")
                     h3.buttons-wrap__title Buttons
                     .colored-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button({type: 'filled'})
+                            +button({appearance: 'filled'})
                         .button-wrap
-                            +button({type: 'filled'})
+                            +button({appearance: 'filled'})
                     .not-colored-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button({type: 'empty'})
+                            +button({appearance: 'bordered'})
                         .button-wrap
-                            +button({type: 'empty'})
+                            +button({appearance: 'bordered'})
                     .textual-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button()
+                            +button({isExtended: true})
                         .button-wrap
                             +button({textColor: 'grey'})
                     .big-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button({type: 'empty', extended: true, text: 'Перейти к оплате'})
+                            +button({appearance: 'bordered', isExtended: true, text: 'Перейти к оплате'})
                     .big-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button({type: 'filled', extended: true, size: 'small', text: 'Перейти к оплате'})
+                            +button({appearance: 'filled', isExtended: true, size: 'small', text: 'Перейти к оплате'})
                     .big-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button({type: 'empty', extended: true, size: 'small', text: 'Перейти к оплате'})
+                            +button({appearance: 'bordered', isExtended: true, size: 'small', text: 'Перейти к оплате'})
                     .big-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button({type: 'filled', extended: true, text: 'Перейти к оплате'})
+                            +button({appearance: 'filled', isExtended: true, text: 'Перейти к оплате'})
 
 
 

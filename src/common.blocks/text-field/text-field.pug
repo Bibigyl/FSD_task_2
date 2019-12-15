@@ -1,42 +1,5 @@
-mixin text-field(masked)
-	label.text-field__label(for=attributes.name)
-	if masked==true
-		input.text-field.text-field_masked(placeholder="ДД.ММ.ГГГГ")&attributes(attributes)
-	else
-		input.text-field()&attributes(attributes)
-
-
-
-
-
-
-<!--
-
-label(class="label")
-	h3 Text field
-	input(class="input input_big" placeholder="Email")
-
-
-label(class="label")
-	h3 Masked text field
-	input(class="input input_big input_with-mask-date" placeholder="ДД.ММ.ГГГГ")
-
-
-div(class="date-search" id="date-search" )
-	label(class="label")
-		h3 Date dropdown
-		input(class="input input_small calendar" id="first-date" placeholder="ДД.ММ.ГГГГ")
-		div(class="input__arrow arrow")
-			i(class="material-icons") expand_more
-	label(class="label")
-		h3 Date dropdown
-		input(class="input input_small calendar" id="last-date" placeholder="ДД.ММ.ГГГГ")
-		div(class="input__arrow arrow")
-			i(class="material-icons") expand_more
-
-
-label(class="label")
-	h3 Subscription text field
-	input(class="input input_middle" placeholder="Email")
-	div(class="input__arrow  arrow")
-		i(class="material-icons icons_colored") arrow_forward -->
+mixin text-field(args = {masked, type:'text', placeholder:false, value:false, id:false})
+	- let mask = masked ? "ДД.ММ.ГГГГ" : false;
+	- let maskClass = masked ? 'input_masked' : false
+	label.text-field__label(for=id)
+	input.text-field.text-field_masked(class=maskClass type=type placeholder=mask id=id value=value)

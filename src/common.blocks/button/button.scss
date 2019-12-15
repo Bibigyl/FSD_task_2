@@ -44,7 +44,7 @@ button {
     }
   }
 
-  &_empty {
+  &_bordered {
     color: $purple;
     background: #fff;
     background-clip: padding-box;
@@ -60,10 +60,6 @@ button {
       border-radius: inherit;
       background: $gradient;
       transition: inherit;
-    }
-
-    .button__arrow {
-      //color: $purple;
     }
 
     &:hover,
@@ -86,7 +82,7 @@ button {
       padding: 14px 20px;
     }
 
-    &.button_empty {
+    &.button_bordered {
       padding: 12px 18px;
       $border: 2px;
       border: solid $border transparent;
@@ -99,12 +95,12 @@ button {
 
   &_small {
     &.button_filled {
-      padding: 12px 18px;
+      padding: 9px 13px;
     }
 
-    &.button_empty {
-      padding: 11px 17px;
-      $border: 1px;
+    &.button_bordered {
+      padding: 7px 13px;
+      $border: 2px;
       border: solid $border transparent;
 
       &:before {
