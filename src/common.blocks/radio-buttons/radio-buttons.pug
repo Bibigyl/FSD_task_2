@@ -1,9 +1,11 @@
-mixin radio-buttons(title, name, options)
+mixin radio-buttons(title, name, items)
 	.radio-buttons
 		if title
 			h3.radio-buttons__title= title
 
-		-for (let i = 0; i < options.length; i++)
+		each item in items
 			label.radio-button__label
-				input.radio-button(type="radio" name=name checked=options[i].checked)
-				div.radio-button__text= options[i].text
+				input.radio-button(type="radio" name=name checked=item.checked)
+				span.radio-button__text= item.text
+
+//- нужна ли обертка

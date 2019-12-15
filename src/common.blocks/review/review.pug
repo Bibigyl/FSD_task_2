@@ -1,13 +1,18 @@
-mixin review(avatar, likes, name, when, text)
-	.review
-		div.review__avatar.ui-review__avatar(style=avatar)
-		div.like-button-wrap.review__like-button
-			label.label.label_for-like-button
-				input.like-button(type="checkbox")
-				.like-button__text= likes
-					.material-icons
-		span.review__name= name
-		span= when
-		p.review__text= text
+include ../../common.blocks/like-button/like-button
 
-// .ui-review__avatar временный класс, чтобы кругные картинки с макета нормально отображались
+mixin review({avatar, likeButton, name, time, comment})
+	.review
+		.review__left-part
+			.review__avatar.ui-review__avatar(style=`background-image: url( ${require('./images/' + avatar)})`)
+			.review__like-button
+				+like-button(likeButton.number, likeButton.isChecked)
+
+		.review__right-part
+			span.review__name= name
+			span.review__time= time
+			p.review__comment= comment
+
+
+
+
+//- .ui-review__avatar временный класс, чтобы кругные картинки с макета нормально отображались

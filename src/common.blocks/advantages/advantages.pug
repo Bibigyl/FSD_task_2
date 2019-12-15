@@ -1,0 +1,8 @@
+mixin advantages(items)
+	ul.advantages
+		each item in items
+			li.advantage
+				i.material-icons.advantage__icon= item.icon
+				span.advantage__title= item.title
+				br
+				span.advantage__text= item.text

@@ -1,56 +1,53 @@
 .text-field {
-  background: #FFFFFF;
-  border: 1px solid $c25;
-  box-sizing: border-box;
-  border-radius: 4px;
-  height: 44px;
-  padding-left: 14px;
-  color: $c25;
-  position: relative;
-  transition: .2s;
-  font-family: 'Montserrat';
-  font-weight: 400;
   width: 100%;
   max-width: 320px;
 
-  &::placeholder {
+  &__input {
+    background: #FFFFFF;
+    border: 1px solid $c25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 44px;
+    padding-left: 14px;
+    color: $c25;
+    position: relative;
+    transition: .2s;
     font-family: 'Montserrat';
     font-weight: 400;
-    color: $c25;
+    width: 100%;
+
+    &::placeholder {
+      font-family: 'Montserrat';
+      font-weight: 400;
+      color: $c25;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $c50;
+      color: $c75;
+      transition: .2s;
+    }
+
+    &:not(empty) {
+      color: $c75;
+      transition: .2s;
+    }
   }
 
-  &:hover,
-  &:focus {
-    border-color: $c50;
-    color: $c75;
-    transition: .2s;
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    background: $gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  &:not(empty) {
-    color: $c75;
-    transition: .2s;
+  &_subscription {
+    position: relative;
+    max-width: 266px;
   }
 }
-/*
-.input__arrow {
-  position: absolute;
-  font-size: rem(24px);
-  top: -3px;
-  right: 9px;
-}
-
-.input_big {
-  width: 100%;
-  max-width: 320px;
-}
-
-.input_middle {
-  width: 100%;
-  max-width: 266px;
-}
-
-.input_small {
-  max-width: 150px;
-  width: 100%;
-}
-*/

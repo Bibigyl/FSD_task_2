@@ -1,8 +1,8 @@
-mixin expandable-checkbox-list(title, items, open=false)
+mixin expandable-checkbox-list(title, items, isOpen=false)
 
-	-let cl = open ? 'expandable-checkbox-list_open' : ''
+	-let open = isOpen ? 'expandable-checkbox-list_open' : ''
 
-	.expandable-checkbox-list(class=cl)
+	.expandable-checkbox-list(class=open)
 		h3.expandable-checkbox-list__title= title
 		.expandable-checkbox-list__arrow.material-icons expand_more
 			

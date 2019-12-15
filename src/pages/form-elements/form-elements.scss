@@ -31,6 +31,10 @@
   }
   &__container-3 {
     max-width: 1343px;
+    margin-bottom: 10px;
+  }
+  &__container-4 {
+    max-width: 1343px;
   }
 
 
@@ -71,6 +75,15 @@
   &__column-3-3 {
     width: 37%;
     padding-left: 18px;
+  }
+
+  &__column-4-1 {
+    width: 33%;
+  }
+  &__column-4-2 {
+    width: 67%;
+    padding-left: 17px;
+    padding-top: 31px;
   }
 }
 
@@ -139,6 +152,12 @@
 
 .filter-date-dropdown-wrap {
   margin-bottom: 41px;
+}
+
+.subscription-text-field-wrap {
+  &__title {
+    margin-bottom: 5px;
+  }
 }
 
 .checkbox-buttons-wrap {
@@ -261,4 +280,8 @@
   .bullet-list__item:nth-child(3) {
     max-width: 260px;
   }
+}
+
+.review-wrap {
+  max-width: 710px;
 }

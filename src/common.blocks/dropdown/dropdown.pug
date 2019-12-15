@@ -1,37 +1,49 @@
 include ../button/button
-mixin dropdown(type, buttons, opened=false, itemsNames)
-	- let items;
-	- let dropClass;
-	- let text;
-	- if (type == 'furniture') {
-	-	items = ['Спальни', 'Кровати', 'Ванные комнаты'];
-	-	dropClass = 'dropdown_furniture';
-	-	text = 'Удобства';		
-	- } else if (type == 'guests') {
-	-	items = ['Взрослые', 'Дети', 'Младенцы'];
-	-	dropClass = 'dropdown_guests';
-	-	text = 'Сколько гостей';		
-	- } else {
-	-	items = itemsNames;
-	-	dropClass = 'dropdown_custom';
-	-	text = 'Choose options';	
-	- }
-	- dropClass = opened ? dropClass + ' dropdown_open' : dropClass;
 
+mixin dropdown(content, isOpen)
+	- 
+		let config;
+		config = {
+			guests: {
+				text: 'Сколько гостей',
+				class: 'dropdown_guests',
+				items: ['Взрослые', 'Дети', 'Младенцы'],
+				buttons: ['Очистить', 'Применить']
+			},
+			furniture: {
+				text: 'Удобства',
+				class: 'dropdown_furniture',
+				items: ['Спальни', 'Кровати', 'Ванные комнаты'],
+				buttons: false
+			}
+		};
+		
+		content = config[content] || content || config.guests;
+		let open = isOpen ? 'dropdown_open' : false;
 
-	.dropdown(class=dropClass)
+	.dropdown(class=[content.class, open])
 		.dropdown__field
-			span.dropdown__text= text
+			span.dropdown__text= content.text
 			i.dropdown__arrow.material-icons expand_more
 
 		.dropdown__list
 			ul
-				- for (var i = 0; i < 3; i++)
-					li.dropdown__item= items[i] 
+				each item in content.items
+					li.dropdown__item= item
 						span.dropdown__button.dropdown__button_plus +
 						span.dropdown__num 0
 						span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
 			
-			if buttons
-				+button(buttons[0], 'textual', false)(class='dropdown__button_to-clear hidden')
-				+button(buttons[1], 'textual', true)(class='dropdown__button_to-apply')
+			if content.buttons
+				.dropdown__button_to-clear.hidden
+					+button({text: content.buttons[0], textColor: 'grey'})
+				.dropdown__button_to-apply
+					+button({text: content.buttons[1], textColor: 'bright'})
+
+
+//- как называть конфиги
+//- где они должны быть - в миксине или до него
+
+
+			
+

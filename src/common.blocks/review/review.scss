@@ -1,36 +1,35 @@
 .review {
-  position: relative;
+  display: flex;
 
-  >span,
-  >p {
-    margin-left: 58px;
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+    border-radius: 48px;
+    margin-bottom: 7px;
+  }
+
+  &__like-button {
+    text-align: center;
+  }
+
+  &__name {
     display: block;
+    font-weight: 700;
+  }
+
+  &__time {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__left-part {
+    margin-right: 10px;
   }
 }
 
-.review__avatar {
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  left: 1px;
-  top: 1px;
-  border: 2px solid #FFFFFF;
-  box-sizing: border-box;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
-  border-radius: 32px;
-}
-
-.review__like-button {
-  position: absolute;
-  top: 60px;
-  left: 5px;
-}
-
-.review__name {
-  margin-top: 10px;
-  font-weight: 700;
-}
-
-.review__text {
-  margin-top: 10px;
+.ui-review__avatar {
+  background-position: -22px -12px;
 }

@@ -1,6 +1,6 @@
 mixin rate-button(id, rate)
 	.rate-button
-		-let checked = false; 
+		-let checked; 
 		-for (let i = 5; i > 0; i--)
 			-checked = (i == rate) ? true : false;
 			input.rate-button__input(value=i id=id+'_'+i name=id type="radio" checked=checked)
