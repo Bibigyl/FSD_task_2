@@ -13,32 +13,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="form-elements.css">
   </head>
-  <body><!--
-    <label class="label">
-      <h3>Text field</h3>
-      <input class="input input_big" placeholder="Email">
-    </label>
-    <label class="label">
-      <h3>Masked text field</h3>
-      <input class="input input_big input_with-mask-date" placeholder="ДД.ММ.ГГГГ">
-    </label>
-    <div class="date-search" id="date-search">
-      <label class="label">
-        <h3>Date dropdown</h3>
-        <input class="input input_small calendar" id="first-date" placeholder="ДД.ММ.ГГГГ">
-        <div class="input__arrow arrow"><i class="material-icons">expand_more</i></div>
-      </label>
-      <label class="label">
-        <h3>Date dropdown</h3>
-        <input class="input input_small calendar" id="last-date" placeholder="ДД.ММ.ГГГГ">
-        <div class="input__arrow arrow"><i class="material-icons">expand_more</i></div>
-      </label>
-    </div>
-    <label class="label">
-      <h3>Subscription text field</h3>
-      <input class="input input_middle" placeholder="Email">
-      <div class="input__arrow  arrow"><i class="material-icons icons_colored">arrow_forward --></i></div>
-    </label>
+  <body>
     <section class="form-elements">
       <div class="form-elements__logo"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"/>
@@ -52,14 +27,14 @@
           <div class="text-field-wrap text-field-wrap-1">
             <h3 class="text-field-wrap__title">Text field</h3>
             <div class="text-field-wrap__state">Default</div>
-                <label class="text-field__label" for="ui-text-field"></label>
-                <input class="text-field" name="ui-text-field" type="email" placeholder="Email">
+                <label class="text-field__label"></label>
+                <input class="text-field text-field_masked">
           </div>
           <div class="text-field-wrap text-field-wrap_hover text-field-wrap-2">
             <h3 class="text-field-wrap__title">Text field</h3>
             <div class="text-field-wrap__state">Hover / Focus</div>
-                <label class="text-field__label" for="ui-text-field_hover"></label>
-                <input class="text-field" name="ui-text-field_hover" type="text" value="This is pretty awesome">
+                <label class="text-field__label"></label>
+                <input class="text-field text-field_masked">
           </div>
           <div class="dropdown-wrap dropdown-wrap-1">
             <h3 class="dropdown-wrap__title">Dropdown</h3>
@@ -82,8 +57,8 @@
           <div class="text-field-wrap text-field-wrap-3">
             <h3 class="text-field-wrap__title">Masked text field</h3>
             <div class="text-field-wrap__state">Default</div>
-                <label class="text-field__label" for="ui-text-field_masked"></label>
-                <input class="text-field text-field_masked" placeholder="ДД.ММ.ГГГГ" name="ui-text-field_masked" type="text">
+                <label class="text-field__label"></label>
+                <input class="text-field text-field_masked">
           </div>
           <div class="date-dropdown-wrap">
                 <div class="date-dropdown" id="ui-date-dropdown-1">
@@ -252,11 +227,11 @@
           </div>
           <div class="not-colored-buttons-wrap buttons-wrap">
             <div class="button-wrap">
-                  <button class="button button_empty button_standard">Click me
+                  <button class="button button_bordered button_standard">Click me
                   </button>
             </div>
             <div class="button-wrap">
-                  <button class="button button_empty button_standard">Click me
+                  <button class="button button_bordered button_standard">Click me
                   </button>
             </div>
           </div>
@@ -272,7 +247,7 @@
           </div>
           <div class="big-buttons-wrap buttons-wrap">
             <div class="button-wrap">
-                  <button class="button button_empty button_extended button_standard">Перейти к оплате<i class="button__arrow material-icons">arrow_forward</i>
+                  <button class="button button_bordered button_extended button_standard">Перейти к оплате<i class="button__arrow material-icons">arrow_forward</i>
                   </button>
             </div>
           </div>
@@ -284,7 +259,7 @@
           </div>
           <div class="big-buttons-wrap buttons-wrap">
             <div class="button-wrap">
-                  <button class="button button_empty button_extended button_small">Перейти к оплате<i class="button__arrow material-icons">arrow_forward</i>
+                  <button class="button button_bordered button_extended button_small">Перейти к оплате<i class="button__arrow material-icons">arrow_forward</i>
                   </button>
             </div>
           </div>
