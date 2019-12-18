@@ -1,18 +1,24 @@
-mixin date-dropdown(id, firstDay, lastDay, firstDayTitle, lastDayTitle)
-    .date-dropdown(id=id)
+include ../text-field/text-field
+
+mixin date-dropdown(firstDay, lastDay)
+    -
+        let firstVal = firstDay.date || false;
+        let lastVal = lastDay.date || false;
+        let first = firstVal ? {value: firstVal} : {isMasked: true};
+        let last = lastVal ? {value: lastVal} : {isMasked: true};
+
+    .date-dropdown
 
         .date-dropdown__first-day.date-dropdown__day
-            if firstDayTitle 
-                h3.date-dropdown__title= firstDayTitle
-            .date-dropdown__text-field-wrap
-                label(for=id + '__first-day')
-                input.date-dropdown__text-field.text-field_masked(name=id + '__first-day' type='text' placeholder='ДД.ММ.ГГГГ' value=firstDay)
+            if firstDay.title
+                h3.date-dropdown__title= firstDay.title
+            .date-dropdown__text-field
+                +text-field(first)
                 i.date-dropdown__arrow.material-icons expand_more
 
         .date-dropdown__last-day.date-dropdown__day
-            if lastDayTitle
-                h3.date-dropdown__title= lastDayTitle
-            .date-dropdown__text-field-wrap
-                label(for=id + '__last-day')
-                input.date-dropdown__text-field.text-field_masked(name=id + '__last-day' type='text' placeholder='ДД.ММ.ГГГГ' value=lastDay)
+            if lastDay.title
+                h3.date-dropdown__title= lastDay.title
+            .date-dropdown__text-field
+                +text-field(last)
                 i.date-dropdown__arrow.material-icons expand_more

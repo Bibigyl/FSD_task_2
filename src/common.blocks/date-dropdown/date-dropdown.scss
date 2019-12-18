@@ -1,46 +1,25 @@
 .date-dropdown {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 320px;
+  display: flex;
+  width: 100%;
+  max-width: 320px;
 
-    &__text-field-wrap {
-        position: relative;
-    }
+  &__text-field {
+    position: relative;
+  }
 
-    &__text-field {
-        background: #FFFFFF;
-        border: 1px solid $c25;
-        box-sizing: border-box;
-        border-radius: 4px;
-        height: 44px;
-        padding-left: 14px;
-        color: $c75;
-        position: relative;
-        transition: .2s;
-        font-family: 'Montserrat';
-        font-weight: 400;
-        width: 100%;
-        max-width: 320px;
-        &:hover {
-            border-color: $c50;
-            transition: .2s;
-        }
-    }
+  &__first-day {
+    margin-right: 20px;
+  }
 
-    &__first-day {
-        margin-right: 20px;
-    }
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+  }
 
-    &__arrow {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    &__title {
-        margin-bottom: 6px;
-    }
+  &__title {
+    margin-bottom: 6px;
+  }
 }

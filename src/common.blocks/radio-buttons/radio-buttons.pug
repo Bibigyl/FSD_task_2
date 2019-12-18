@@ -1,11 +1,10 @@
-mixin radio-buttons(title, name, items)
+mixin radio-buttons({title, name, items})
 	.radio-buttons
 		if title
 			h3.radio-buttons__title= title
 
 		each item in items
-			label.radio-button__label
-				input.radio-button(type="radio" name=name checked=item.checked)
-				span.radio-button__text= item.text
-
-//- нужна ли обертка
+			.radio-button
+				label.radio-button__label
+					input.radio-button__input(type="radio" name=name checked=item.isChecked)
+					span.radio-button__text= item.text

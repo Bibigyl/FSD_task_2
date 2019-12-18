@@ -1,6 +1,7 @@
 @import '../../scss/_vars';
 @import '../../scss/_mixins';
 
+
 .form-elements {
   position: relative;
   padding: 140px 0;
@@ -11,6 +12,7 @@
     left: 6.5%;
   }
 
+
   &__container {
     width: 100%;
     padding: 0 20px;
@@ -18,72 +20,61 @@
     margin-right: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
   }
 
+
   &__container-1 {
-    max-width: 1342px;
-    margin-bottom: 97px;
+    max-width: 1198px;
+    margin-bottom: 77px;
   }
   &__container-2 {
-    max-width: 1343px;
-    margin-bottom: 156px;
+    max-width: 1198px;
+    margin-bottom: 34px;
   }
   &__container-3 {
-    max-width: 1343px;
+    max-width: 1198px;
     margin-bottom: 10px;
   }
   &__container-4 {
-    max-width: 1343px;
+    max-width: 1198px;
+    flex-wrap: nowrap;
   }
 
 
-  &__column-1-1 {
-    width: 33%;
+  &__column {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    min-width: 280px;
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
+
+
   &__column-1-2 {
-    width: 30%;
     padding-top: 3px;
-    padding-left: 17px;
+    margin-left: 35px;
   }
   &__column-1-3 {
-    width: 37%;
     padding-top: 4px;
-    padding-left: 18px;
   }
 
 
-  &__column-2-1 {
-    width: 33%;
-  }
   &__column-2-2 {
-    width: 30%;
-    padding-left: 17px;
-  }
-  &__column-2-3 {
-    width: 37%;
-    padding-left: 18px;
+    margin-left: 75px;
   }
 
-  &__column-3-1 {
-    width: 33%;
-  }
+
   &__column-3-2 {
-    width: 30%;
-    padding-left: 17px;
-  }
-  &__column-3-3 {
-    width: 37%;
-    padding-left: 18px;
+    margin-left: 54px;
   }
 
-  &__column-4-1 {
-    width: 33%;
-  }
+
   &__column-4-2 {
-    width: 67%;
-    padding-left: 17px;
-    padding-top: 31px;
+    padding-top: 11px;
+    padding-right: 2px;
   }
 }
 
@@ -230,7 +221,7 @@
 }
 
 .not-colored-buttons-wrap {
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 }
 
 .textual-buttons-wrap {
@@ -263,8 +254,15 @@
 
 .dropdown-wrap-3 {
   max-width: 266px;
-  margin-bottom: 16px;
+  margin-bottom: 118px;
 }
+
+.dropdown-wrap-4,
+.dropdown-wrap-5 {
+  margin-bottom: 158px;
+}
+
+/*------------------- 3 block -------------------------*/
 
 .expandable-checkbox-list-wrap-1 {
   margin-bottom: 33px;
@@ -282,6 +280,33 @@
   }
 }
 
+/*------------------- 4 block -------------------------*/
+
 .review-wrap {
   max-width: 710px;
+}
+
+
+@media (max-width: 1199.98px) {
+  .form-elements__column {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 30px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .form-elements__container-4 {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .form-elements__column {
+    padding-right: 0;
+  }
 }

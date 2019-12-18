@@ -1,64 +1,59 @@
 .check-in-card {
+  padding: 40px 30px 30px 30px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  min-width: 320px;
   max-width: 380px;
 
-  h1 {
+  &__title {
     margin-bottom: 20px;
+    letter-spacing: 1.3px;
   }
 
-  .input {
+  &__name {
     margin-bottom: 10px;
   }
 
-  input[name='surname'] {
-    margin-bottom: 8px;
+  &__surname {
+    margin-bottom: 7px;
   }
 
-  .label_for-radio {
-    margin-right: 17px;
-    margin-bottom: 22px;
+  &__radio-buttons {
+    margin-bottom: 23px;
   }
 
-  input[name='birthday'] {
+  &__birthday {
     margin-bottom: 20px;
   }
 
-  >h3 {
+  &__birthday-title {
     margin-bottom: 5px;
   }
 
-  input[name='password'] {
-    margin-bottom: 8px;
+  &__credentials {
+    margin-bottom: 7px;
   }
 
-  .toggle__text {
-    margin-bottom: 24px;
-  }
-
-  .button_big {
-    margin-bottom: 29px;
-  }
-
-  .button-wrap_not-colored>* {
-    padding: 13px 24px;
-  }
-}
-
-@media (max-width: 800px) {
-  .check-in-card h1 {
-    font-size: rem(24px);
-    letter-spacing: auto;
-  }
-}
-
-@media (max-width: 500px) {
-  .check-in-card .label_for-radio:nth-child(4) {
+  &__credentials-title {
     margin-bottom: 5px;
   }
-}
 
-@media (max-width: 400px) {
-  .check-in-card h1 {
-    font-size: rem(20px);
-    letter-spacing: auto;
+  &__email {
+    margin-bottom: 10px;
+  }
+
+  &__toggle {
+    margin-bottom: 23px;
+  }
+
+  &__button {
+    margin-bottom: 30px;
+  }
+
+  &__enter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

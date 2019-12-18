@@ -1,15 +1,25 @@
 .search-card {
+  padding: 40px 30px 30px 30px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  min-width: 320px;
   max-width: 380px;
 
-  h1 {
+  &__title {
+    letter-spacing: rem(1.4px);
     margin-bottom: 20px;
   }
 
-  .dropdown {
+  &__date-dropdown {
+    margin-bottom: 20px;
+  }
+
+  &__dropdown {
     margin-bottom: 31px;
   }
 
-  .date-search {
-    margin-bottom: 21px;
+  &__dropdown-title {
+    margin-bottom: 5px;
   }
 }

@@ -1,5 +1,5 @@
 
-mixin button(args = {text, appearance, isExtended, size, textColor})
+mixin button({text, appearance, isExtended, size, textColor})
 	-
 		let config;
 		config = {
@@ -17,11 +17,11 @@ mixin button(args = {text, appearance, isExtended, size, textColor})
 			}
 		};
 		
-		let text = args.text || 'Click me';
-		let appearance = config.appearance[args.appearance] || false;
-		let extended = args.isExtended ? 'button_extended' : false;
-		let size = config.size[args.size] || 'button_standard';
-		let textColor = config.textColor[args.textColor] || 'button_with-bright-text';
+		text = text || 'Click me';
+		appearance = config.appearance[appearance] || false;
+		let extended = isExtended ? 'button_extended' : false;
+		size = config.size[size] || 'button_standard';
+		textColor = config.textColor[textColor] || 'button_with-bright-text';
 
 		extended = appearance ? extended : false;
 		size = appearance ? size : false;

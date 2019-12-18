@@ -13,5 +13,139 @@ html(lang="ru")
         meta(name="theme-color" content="#ffffff")
         link(rel="stylesheet" href="cards.css")
     body
+        - let options;
+        - let items;
+        include ../../components/search-card/search-card
+        include ../../components/check-in-card/check-in-card
+        include ../../components/booking-card/booking-card
+        include ../../components/login-card/login-card
 
-        script(src='./form-elements.js')
+
+        section.cards
+            .cards__logo
+                include ../../common.blocks/logo/ui-logo.svg
+            .cards__container
+                .cards__column.cards__column-1
+                    .search-card-wrap.card-wrap
+                        - 
+                            options = {
+                                title: 'Найдём номера под ваши пожелания',
+                                dateDropdown: {
+                                    firstDay: {
+                                        title: 'Прибытие'
+                                    },
+                                    lastDay: {
+                                        title: 'Выезд'
+                                    }
+                                },
+                                dropdownTitle: 'Гости',
+                                dropdown: 'guests',
+                                button: {
+                                    text: 'Подобрать номер',
+                                    appearance: 'filled',
+                                    isExtended: true
+                                }
+                            }
+
+                        +search-card(options)
+
+                    .check-in-card-wrap.card-wrap
+                        -
+                            options = {
+                                title: 'Регистрация аккаунта',
+                                textFieldName: {placeholder: 'Имя'},
+                                textFieldSurname: {placeholder: 'Фамилия'},
+                                radioButtons: {
+                                    name: 'gender',
+                                    items: [
+                                        {text: 'Мужчина', isChecked: true},
+                                        {text: 'Женщина'}
+                                    ]
+                                },
+                                birthdayTitle: 'Дата рождения', 
+                                textFieldBirthday: {isMasked: true}, 
+                                credentialsTitle: 'Данные для входа в сервис', 
+                                textFieldEmail: {placeholder: 'Email', type: 'email'}, 
+                                textFieldPassword: {placeholder: 'Password'}, 
+                                toggle: {text: 'Получать спецпредложения'}, 
+                                button: {
+                                    text: 'Перейти к оплате',
+                                    appearance: 'filled',
+                                    isExtended: true
+                                }, 
+                                enter: {
+                                    text: 'Уже есть аккаунт на Toxin',
+                                    button: {
+                                        appearance: 'bordered', 
+                                        text: 'Войти'
+                                    }
+                                }
+                            }
+
+                        +check-in-card(options)
+
+                .cards__column.cards__column-2
+                    .booking-card-wrap.card-wrap
+                        -
+                            options = {
+                                room: {
+                                    number: '888',
+                                    class: 'люкс',
+                                    term: 'в сутки',
+                                    price: '9 990₽'
+                                },
+                                dateDropdown: {
+                                    firstDay: {
+                                        title: 'Прибытие',
+                                        date: '19.08.2019'
+                                    },
+                                    lastDay: {
+                                        title: 'Выезд',
+                                        date: '23.08.2019'
+                                    }
+                                },
+                                dropdownTitle: 'Гости',
+                                dropdown: { content: 'guests'},
+                                infoItems: [
+                                    {text: '9 990₽ х 4 суток', sum: '39 960₽'},
+                                    {text: 'Сбор за услуги: скидка 2 179₽', sum: '0₽', hasIcon: true},
+                                    {text: 'Сбор за дополнительные услуги', sum: '300₽', hasIcon: true}
+                                ],
+                                total: {text: 'Итого', sum: '38 081₽'},
+                                button: {text: 'Забронировать', appearance: 'filled', isExtended: true}
+                            }
+                        
+                        +booking-card(options)
+
+                    .login-card-wrap.card-wrap
+
+                        -
+                            options = {
+                                title: 'Войти',
+                                textFieldEmail: {
+                                    placeholder: 'Email', type: 'email'
+                                },
+                                textFieldPassword: {
+                                    placeholder: 'Password', type: 'password'
+                                },
+                                button: {text: 'Войти', appearance: 'filled', isExtended: true},
+                                enter: {
+                                    text: 'Нет аккаунта на Toxin?',
+                                    button: {
+                                        text: 'Создать',
+                                        appearance: 'bordered'
+                                    }
+                                }
+                            }
+
+                        +login-card(options)
+
+                    
+
+                .cards__column.cards__column-3
+                    .calendar-wrap.card-wrap
+                        
+                    .room-card-wrap-1.card-wrap
+                    .room-card-wrap-2.card-wrap
+
+        script(src='./cards.js')

@@ -1,168 +1,117 @@
-.num-and-price-wrap {
-  display: flex;
-  margin-bottom: 18px;
-  justify-content: space-between;
-}
-
-.booking-card__room {
-  padding-top: 3px;
-
-  >* {
-    display: inline;
-  }
-
-  h2 {
-    font-size: rem(14px);
-  }
-
-  .room__number {
-    font-size: rem(25px);
-    margin: 0 4px;
-  }
-}
-
-.booking-card__price-per-day {
-  padding-top: 7px;
-
-  >* {
-    display: inline;
-  }
-
-  h3 {
-    font-size: rem(14px);
-    margin-right: 4px;
-    color: $c50;
-  }
-
-  >span {
-    font-size: rem(12px);
-    color: $c50;
-  }
-}
-
 .booking-card {
+  padding: 40px 30px 30px 30px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  min-width: 320px;
   max-width: 380px;
 
-  .dropdown {
-    margin-bottom: 17px;
+  &__main-info {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 3px;
+    margin-bottom: 19px;
   }
 
-  .date-search {
+  &__number {
+    font-size: rem(25px);
+    display: inline;
+    margin-right: 4px;
+  }
+
+  &__simbol-number {
+    font-size: rem(13px);
+    margin-right: 5px;
+  }
+
+  &__class {
+    color: $purple;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: rem(12px);
+  }
+
+  &__price {
+    margin-left: auto;
+    color: $c50;
+    font-size: rem(12px);
+  }
+
+  &__price-number {
+    margin-right: 4px;
+    font-weight: 700;
+    font-size: rem(14px);
+  }
+
+  &__date-dropdown {
     margin-bottom: 20px;
   }
-}
-
-.booking-info-wrap {
-  margin-bottom: 32px;
-}
-
-.booking-info__text {
-  max-width: 215px;
-  line-height: 18px;
-  margin-top: 3px;
-}
-
-.booking-info__price {
-  float: right;
-  width: 74px;
-  text-align: right;
-}
-
-.booking-info__icon {
-  margin-top: 2px;
-  width: 20px;
-  height: 20px;
-  border: 1px solid $c25;
-  box-sizing: border-box;
-  font-size: rem(12px);
-  font-weight: bold;
-  color: $c25;
-  border-radius: 100px;
-  text-align: center;
-  line-height: 20px;
-  cursor: pointer;
-}
-
-.booking-card__booking-info {
-  margin-bottom: 10px;
-  padding-left: 1px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.booking-card__total {
-  margin-bottom: 20px;
-  overflow: hidden;
-
-  >* {
-    display: block;
-    z-index: 2;
+  
+  &__dropdown-title {
+    margin-bottom: 5px;
   }
 
-  &:after {
-    content: '';
-    display: block;
-    overflow: hidden;
-    height: 18px;
-    border-bottom: 1px dotted $c25;
+  &__dropdown {
+    margin-bottom: 20px;
   }
 
-  h2:first-child {
-    padding-right: 2px;
-    float: left;
+  &__info {
+    margin-bottom: 30px;
+  }
+
+  &__info-item {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    flex: 1;
+    line-height: 18px;
+  }
+
+  &__icon-i {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $c25;
+    font-size: rem(12px);
     font-weight: bold;
-    font-size: rem(18px);
-    letter-spacing: .1em;
-    margin-left: 2px;
+    color: $c25;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;  
   }
-}
 
-.total__price {
-  float: right;
-  padding-left: 4px;
-}
-
-.date-picker-wrapper {
-  padding: 12px 7px;
-}
-
-@media(max-width: 700px) {
-  .details-and-room-card-wrap .room-card-wrap {
-    margin-left: auto;
-    margin-right: auto;
+  &__sum {
+    flex: none;
+    width: 80px;
+    text-align: right;
+    line-height: rem(18px);
   }
-}
 
-@media(max-width: 500px) {
-  .booking-card {
-    width: 100%;
-    box-sizing: border-box;
+  &__total {
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: rem(20px);
 
-    * {
-      box-sizing: border-box;
+    &:after {
+      content: '';
+      display: block;
+      overflow: hidden;
+      height: rem(18px);
+      border-bottom: 1px dotted $c25;
     }
   }
 
-  .details-and-room-card-wrap .room-card-wrap {
-    box-sizing: border-box;
-    min-width: 200px;
-  }
-}
-
-@media(max-width: 450px) {
-  .booking-card {
-    box-shadow: none;
-    background: none;
-    padding: 0;
+  &__total-text {
+    float: left;
+    margin-right: 2px;
   }
 
-  .advantages span {
-    margin-left: 50px;
-  }
-}
-
-@media(max-width: 350px) {
-  .details-and-room-card-wrap {
-    padding: 20px 20px 40px;
+  &__total-sum {
+    font-family: 'Quicksand';
+    float: right;
+    margin-left: 2px;
   }
 }

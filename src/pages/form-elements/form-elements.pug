@@ -37,12 +37,12 @@ html(lang="ru")
         include ../../common.blocks/advantages/advantages
         include ../../common.blocks/review/review
         
-
+        
         section.form-elements
             .form-elements__logo
                 include ../../common.blocks/logo/ui-logo.svg
             .form-elements__container.form-elements__container-1
-                .form-elements__column-1-1
+                .form-elements__column-1-1.form-elements__column
 
                     .text-field-wrap.text-field-wrap-1
                         h3.text-field-wrap__title Text field
@@ -63,9 +63,22 @@ html(lang="ru")
                         h3.text-field-wrap__title Masked text field
                         .text-field-wrap__state Default
                         +text-field({isMasked: true})
+                    
+                    -
+                        options = {
+                            firstDay: {
+                                title: 'Date dropdown',
+                            },
+                            lastDay: {
+                                title: 'Date dropdown',
+                                textField: {
+                                    value: '19.08.2019'
+                                }
+                            }
+                        }
 
                     .date-dropdown-wrap
-                        +date-dropdown('ui-date-dropdown-1', '', '19.08.2019', 'Date dropdown','Date dropdown')
+                        +date-dropdown(options.firstDay, options.lastDay)
 
                     .filter-date-dropdown-wrap
                         +filter-date-dropdown('ui-filter-date-dropdown-1', '19 авг - 23 авг', 'Filter date dropdown')
@@ -74,33 +87,37 @@ html(lang="ru")
                         h3.subscription-text-field-wrap__title Subscription text field
                         +text-field({isSubscription: true, type: 'email', placeholder: 'Email'})
 
-                .form-elements__column-1-2
+                .form-elements__column-1-2.form-elements__column
 
                     .checkbox-buttons-wrap
                         -
                             items = [
-                                {text: 'Можно курить', name: 'smoking', checked: false},
-                                {text: 'Можно с питомцами', name: 'pets', checked: true},
-                                {text: 'Можно пригласить гостей (до 10 человек)', name: 'guests', checked: true}
+                                {text: 'Можно курить', name: 'smoking'},
+                                {text: 'Можно с питомцами', name: 'pets', isChecked: true},
+                                {text: 'Можно пригласить гостей (до 10 человек)', name: 'guests', isChecked: true}
                             ]
 
                         +checkbox-buttons('Checkbox buttons', items)
 
                     .radio-buttons-wrap
                         -
-                            items = [
-                                {text: 'Мужчина', checked: true},
-                                {text: 'Женщина', checked: false}
-                            ]
+                            options = {
+                                title: 'Radio buttons',
+                                name: 'gender',
+                                items: [
+                                    {text: 'Мужчина', isChecked: true},
+                                    {text: 'Женщина', isChecked: false}
+                                ]
+                            }
 
-                        +radio-buttons('Radio buttons', 'gender', items)
+                        +radio-buttons(options)
 
                     .toggles-wrap
                         h3.toggles-wrap__title Toggle
                         .toggle-wrap
-                            +toggle(false,'Получать спецпредложения', true)
+                            +toggle({text: 'Получать спецпредложения', isChecked: true})
                         .toggle-wrap
-                            +toggle(false,'Получать спецпредложения', false)
+                            +toggle({text: 'Получать спецпредложения', isChecked: false})
 
                     .like-buttons-wrap
                         h3.like-buttons-wrap__title Like button
@@ -116,7 +133,7 @@ html(lang="ru")
                         .rate-button-wrap
                             +rate-button('ui-rate-2', 5)
 
-                .form-elements__column-1-3
+                .form-elements__column-1-3.form-elements__column
 
                     .slider-range-wrap
                         +slider-range('Range slider')
@@ -138,8 +155,7 @@ html(lang="ru")
                         .button-wrap
                             +button({textColor: 'grey'})
                     .big-buttons-wrap.buttons-wrap
-                        .button-wrap
-                            +button({appearance: 'filled', isExtended: true, text: 'Перейти к оплате'})
+                        +button({appearance: 'filled', isExtended: true, text: 'Перейти к оплате'})
 
                     .pagination-wrap
                         h3.pagination-wrap__title Pagination
@@ -148,7 +164,7 @@ html(lang="ru")
 
 
             .form-elements__container.form-elements__container-2
-                .form-elements__column-2-1
+                .form-elements__column-2-1.form-elements__column
 
                     .dropdown-wrap.dropdown-wrap-2
                         h3.dropdown-wrap__title Dropdown
@@ -160,12 +176,12 @@ html(lang="ru")
                         .dropdown-wrap__state Expanded
                         +dropdown('furniture', true)
 
-                .form-elements__column-2-2
+                .form-elements__column-2-2.form-elements__column
                     .dropdown-wrap.dropdown-wrap-4
                         h3.dropdown-wrap__title Dropdown
                         +dropdown('guests', true)
 
-                .form-elements__column-2-3
+                .form-elements__column-2-3.form-elements__column
                     .dropdown-wrap.dropdown-wrap-5
                         h3.dropdown-wrap__title Dropdown
                         +dropdown('guests', true)
@@ -173,7 +189,7 @@ html(lang="ru")
 
 
             .form-elements__container.form-elements__container-3
-                .form-elements__column-3-1
+                .form-elements__column-3-1.form-elements__column
                     -
                         items = [
                             {text: 'Завтрак'},
@@ -192,7 +208,7 @@ html(lang="ru")
                     .expandable-checkbox-list-wrap-2
                         +expandable-checkbox-list('Expandable checkbox list', items, true)
 
-                .form-elements__column-3-2
+                .form-elements__column-3-2.form-elements__column
                     .rich-checkbox-buttons-wrap
                         -
                             items = [
@@ -202,7 +218,7 @@ html(lang="ru")
 
                         +rich-checkbox-buttons('Rich checkbox buttons', items)
 
-                .form-elements__column-3-3
+                .form-elements__column-3-3.form-elements__column
                     .bullet-list-wrap
                         -
                             items = [
@@ -215,7 +231,7 @@ html(lang="ru")
 
 
             .form-elements__container.form-elements__container-4
-                .form-elements__column-4-1
+                .form-elements__column-4-1.form-elements__column
                     .advantages-wrap
                         -
                             items = [
@@ -225,7 +241,7 @@ html(lang="ru")
 
                         +advantages(items)
 
-                .form-elements__column-4-2
+                .form-elements__column-4-2.form-elements__column
                     .review-wrap
                         -
                             options = {
@@ -238,6 +254,6 @@ html(lang="ru")
 
                         +review(options)
                         
-                        
+    
         
         script(src='./form-elements.js')

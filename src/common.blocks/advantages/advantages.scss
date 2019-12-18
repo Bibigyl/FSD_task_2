@@ -8,6 +8,10 @@
   width: 100%;
   padding: 20px 0;
 
+  &:first-child {
+    padding-top: 0;
+  }
+
   &__icon {
     float: left;
     margin-right: 10px;

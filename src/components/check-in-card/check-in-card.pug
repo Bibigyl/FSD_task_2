@@ -1,39 +1,43 @@
-form(name="check-in" action="check-in" method="post")
-	.card.check-in-card
-		header 
-			h1 Регистрация аккаунта
+include ../../common.blocks/text-field/text-field
+include ../../common.blocks/radio-buttons/radio-buttons
+include ../../common.blocks/toggle/toggle
+include ../../common.blocks/button/button
 
-		label.label
-			input.input.input_big(placeholder="Имя" type="text" name="name")
-		label.label
-			input.input.input_big(placeholder="Фамилия" type="text" name="surname")
+mixin check-in-card({title, textFieldName, textFieldSurname, radioButtons, birthdayTitle, textFieldBirthday, credentialsTitle, textFieldEmail, textFieldPassword, toggle, button, enter})
+	.check-in-card
+		form
 
-		label.label.label_for-radio
-			input.radio(type="radio" name="gender" value="man" checked)
-			.radio__text Мужчина
-		label.label.label_for-radio
-			input.radio(type="radio" name="gender" value="woman")
-			.radio__text Женщина
+			h1.check-in-card__title= title
 
-		label.label
-			h3 Дата рождения
-			input.input.input_big.input_with-mask-date(name="birthday" placeholder="ДД.ММ.ГГГГ")
+			.check-in-card__name
+				+text-field(textFieldName)
 
-		h3 Данные для входа в сервис
-		label.label
-			input.input.input_big(type="email" name="email" placeholder="Email")
-		label.label
-			input.input.input_big(type="password" name="password" placeholder="Пароль")
+			.check-in-card__surname
+				+text-field(textFieldSurname)
 
-		label.label.label_toggle
-			input.toggle(type="checkbox" name="promotions")
-			.toggle__text Получать спецпредложения
+			.check-in-card__radio-buttons
+				+radio-buttons(radioButtons)
 
-		.button.button_colored.button_big Перейти к оплате
-			.button__arrow.arrow
-				i.material-icons arrow_forward
+			.check-in-card__birthday
+				h3.check-in-card__birthday-title= birthdayTitle
+				+text-field(textFieldBirthday)
 
-		.card__information
-			span Уже есть аккаунт на Toxin
-			.button-wrap.button-wrap_not-colored.button_for-login
-				.button Войти
+			.check-in-card__credentials
+				h3.check-in-card__credentials-title= credentialsTitle 
+				.check-in-card__email
+					+text-field(textFieldEmail)
+				.check-in-card__password
+					+text-field(textFieldPassword)
+
+			.check-in-card__toggle
+				+toggle(toggle)
+
+			.check-in-card__button
+				+button(button)
+
+			.check-in-card__enter
+				span.check-in-card__enter-text= enter.text
+				.check-in-card__enter-button
+					+button(enter.button)
+
+
