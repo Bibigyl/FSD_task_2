@@ -23,7 +23,7 @@
 
       </div>
       <div class="form-elements__container form-elements__container-1">
-        <div class="form-elements__column-1-1">
+        <div class="form-elements__column-1-1 form-elements__column">
           <div class="text-field-wrap text-field-wrap-1">
             <h3 class="text-field-wrap__title">Text field</h3>
             <div class="text-field-wrap__state">Default</div>
@@ -52,12 +52,10 @@
                       <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
                     </ul>
                     <div class="dropdown__button_to-clear hidden">
-                          <button class="button button_with-grey-text">Очистить
-                          </button>
+                          <button class="icon-link">Очистить</button>
                     </div>
                     <div class="dropdown__button_to-apply">
-                          <button class="button button_with-bright-text">Применить
-                          </button>
+                          <button class="icon-link icon-link_primary">Применить</button>
                     </div>
                   </div>
                 </div>
@@ -71,19 +69,23 @@
                 </div>
           </div>
           <div class="date-dropdown-wrap">
-                <div class="date-dropdown" id="ui-date-dropdown-1">
+                <div class="date-dropdown">
                   <div class="date-dropdown__first-day date-dropdown__day">
                     <h3 class="date-dropdown__title">Date dropdown</h3>
-                    <div class="date-dropdown__text-field-wrap">
-                      <label for="ui-date-dropdown-1__first-day"></label>
-                      <input class="date-dropdown__text-field text-field_masked" name="ui-date-dropdown-1__first-day" type="text" placeholder="ДД.ММ.ГГГГ" value=""><i class="date-dropdown__arrow material-icons">expand_more</i>
+                    <div class="date-dropdown__text-field">
+                          <div class="text-field">
+                            <label class="text-field__label"></label>
+                            <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
+                          </div><i class="date-dropdown__arrow material-icons">expand_more</i>
                     </div>
                   </div>
                   <div class="date-dropdown__last-day date-dropdown__day">
                     <h3 class="date-dropdown__title">Date dropdown</h3>
-                    <div class="date-dropdown__text-field-wrap">
-                      <label for="ui-date-dropdown-1__last-day"></label>
-                      <input class="date-dropdown__text-field text-field_masked" name="ui-date-dropdown-1__last-day" type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019"><i class="date-dropdown__arrow material-icons">expand_more</i>
+                    <div class="date-dropdown__text-field">
+                          <div class="text-field">
+                            <label class="text-field__label"></label>
+                            <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
+                          </div><i class="date-dropdown__arrow material-icons">expand_more</i>
                     </div>
                   </div>
                 </div>
@@ -105,7 +107,7 @@
                 </div>
           </div>
         </div>
-        <div class="form-elements__column-1-2">
+        <div class="form-elements__column-1-2 form-elements__column">
           <div class="checkbox-buttons-wrap">
                 <div class="checkbox-buttons">
                   <h3 class="checkbox-buttons__title">Checkbox buttons</h3>
@@ -118,13 +120,13 @@
                     </li>
                     <li class="checkbox-button">
                       <label class="checkbox-button__label">
-                        <input class="checkbox-button__input" type="checkbox" name="pets">
+                        <input class="checkbox-button__input" type="checkbox" name="pets" checked>
                         <div class="checkbox-button__text">Можно с питомцами</div>
                       </label>
                     </li>
                     <li class="checkbox-button">
                       <label class="checkbox-button__label">
-                        <input class="checkbox-button__input" type="checkbox" name="guests">
+                        <input class="checkbox-button__input" type="checkbox" name="guests" checked>
                         <div class="checkbox-button__text">Можно пригласить гостей (до 10 человек)</div>
                       </label>
                     </li>
@@ -134,12 +136,16 @@
           <div class="radio-buttons-wrap">
                 <div class="radio-buttons">
                   <h3 class="radio-buttons__title">Radio buttons</h3>
-                  <label class="radio-button__label">
-                    <input class="radio-button" type="radio" name="gender" checked><span class="radio-button__text">Мужчина</span>
-                  </label>
-                  <label class="radio-button__label">
-                    <input class="radio-button" type="radio" name="gender"><span class="radio-button__text">Женщина</span>
-                  </label>
+                  <div class="radio-button">
+                    <label class="radio-button__label">
+                      <input class="radio-button__input" type="radio" name="gender" checked><span class="radio-button__text">Мужчина</span>
+                    </label>
+                  </div>
+                  <div class="radio-button">
+                    <label class="radio-button__label">
+                      <input class="radio-button__input" type="radio" name="gender"><span class="radio-button__text">Женщина</span>
+                    </label>
+                  </div>
                 </div>
           </div>
           <div class="toggles-wrap">
@@ -212,7 +218,7 @@
             </div>
           </div>
         </div>
-        <div class="form-elements__column-1-3">
+        <div class="form-elements__column-1-3 form-elements__column">
           <div class="slider-range-wrap">
                 <div class="slider-range">
                   <h3 class="slider-range__title">Range slider</h3>
@@ -225,39 +231,40 @@
           <h3 class="buttons-wrap__title">Buttons</h3>
           <div class="colored-buttons-wrap buttons-wrap">
             <div class="button-wrap">
-                  <button class="button button_filled button_standard">Click me
+                  <button class="button">
+                    <div class="button__content">Click me</div>
                   </button>
             </div>
             <div class="button-wrap">
-                  <button class="button button_filled button_standard">Click me
+                  <button class="button">
+                    <div class="button__content">Click me</div>
                   </button>
             </div>
           </div>
           <div class="not-colored-buttons-wrap buttons-wrap">
             <div class="button-wrap">
-                  <button class="button button_bordered button_standard">Click me
+                  <button class="button button_bordered">
+                    <div class="button__content">Click me</div>
                   </button>
             </div>
             <div class="button-wrap">
-                  <button class="button button_bordered button_standard">Click me
+                  <button class="button button_bordered">
+                    <div class="button__content">Click me</div>
                   </button>
             </div>
           </div>
           <div class="textual-buttons-wrap buttons-wrap">
             <div class="button-wrap">
-                  <button class="button button_with-bright-text">Click me
-                  </button>
+                  <button class="icon-link icon-link_primary">Click me</button>
             </div>
             <div class="button-wrap">
-                  <button class="button button_with-grey-text">Click me
-                  </button>
+                  <button class="icon-link">Click me</button>
             </div>
           </div>
           <div class="big-buttons-wrap buttons-wrap">
-            <div class="button-wrap">
-                  <button class="button button_filled button_extended button_standard">Перейти к оплате<i class="button__arrow material-icons">arrow_forward</i>
-                  </button>
-            </div>
+                <button class="button button_extended">
+                  <div class="button__content">Click me</div><i class="button__arrow material-icons">arrow_forward</i>
+                </button>
           </div>
           <div class="pagination-wrap">
             <h3 class="pagination-wrap__title">Pagination</h3>
@@ -267,7 +274,7 @@
         </div>
       </div>
       <div class="form-elements__container form-elements__container-2">
-        <div class="form-elements__column-2-1">
+        <div class="form-elements__column-2-1 form-elements__column">
           <div class="dropdown-wrap dropdown-wrap-2">
             <h3 class="dropdown-wrap__title">Dropdown</h3>
             <div class="dropdown-wrap__state">Default</div>
@@ -297,7 +304,7 @@
                 </div>
           </div>
         </div>
-        <div class="form-elements__column-2-2">
+        <div class="form-elements__column-2-2 form-elements__column">
           <div class="dropdown-wrap dropdown-wrap-4">
             <h3 class="dropdown-wrap__title">Dropdown</h3>
                 <div class="dropdown dropdown_guests dropdown_open">
@@ -309,18 +316,16 @@
                       <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
                     </ul>
                     <div class="dropdown__button_to-clear hidden">
-                          <button class="button button_with-grey-text">Очистить
-                          </button>
+                          <button class="icon-link">Очистить</button>
                     </div>
                     <div class="dropdown__button_to-apply">
-                          <button class="button button_with-bright-text">Применить
-                          </button>
+                          <button class="icon-link icon-link_primary">Применить</button>
                     </div>
                   </div>
                 </div>
           </div>
         </div>
-        <div class="form-elements__column-2-3">
+        <div class="form-elements__column-2-3 form-elements__column">
           <div class="dropdown-wrap dropdown-wrap-5">
             <h3 class="dropdown-wrap__title">Dropdown</h3>
                 <div class="dropdown dropdown_guests dropdown_open">
@@ -332,12 +337,10 @@
                       <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
                     </ul>
                     <div class="dropdown__button_to-clear hidden">
-                          <button class="button button_with-grey-text">Очистить
-                          </button>
+                          <button class="icon-link">Очистить</button>
                     </div>
                     <div class="dropdown__button_to-apply">
-                          <button class="button button_with-bright-text">Применить
-                          </button>
+                          <button class="icon-link icon-link_primary">Применить</button>
                     </div>
                   </div>
                 </div>
@@ -345,125 +348,125 @@
         </div>
       </div>
       <div class="form-elements__container form-elements__container-3">
-        <div class="form-elements__column-3-1">
+        <div class="form-elements__column-3-1 form-elements__column">
           <div class="expandable-checkbox-list-wrap-1">
                 <div class="expandable-checkbox-list">
                   <h3 class="expandable-checkbox-list__title">Expandable checkbox list</h3>
                   <div class="expandable-checkbox-list__arrow material-icons">expand_more</div>
-                        <div class="checkbox-buttons">
-                          <ul>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox">
-                                <div class="checkbox-button__text">Завтрак</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox" checked>
-                                <div class="checkbox-button__text">Письменный стол</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox" checked>
-                                <div class="checkbox-button__text">Стул для кормления</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox" checked>
-                                <div class="checkbox-button__text">Кроватка</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox">
-                                <div class="checkbox-button__text">Телевизор</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox">
-                                <div class="checkbox-button__text">Шампунь</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox">
-                                <div class="checkbox-button__text">Телевизор</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox">
-                                <div class="checkbox-button__text">Шампунь</div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
+                      <div class="checkbox-buttons">
+                        <ul>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Завтрак</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox" checked>
+                              <div class="checkbox-button__text">Письменный стол</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox" checked>
+                              <div class="checkbox-button__text">Стул для кормления</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox" checked>
+                              <div class="checkbox-button__text">Кроватка</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Телевизор</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Шампунь</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Телевизор</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Шампунь</div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
                 </div>
           </div>
           <div class="expandable-checkbox-list-wrap-2">
                 <div class="expandable-checkbox-list expandable-checkbox-list_open">
                   <h3 class="expandable-checkbox-list__title">Expandable checkbox list</h3>
                   <div class="expandable-checkbox-list__arrow material-icons">expand_more</div>
-                        <div class="checkbox-buttons">
-                          <ul>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox">
-                                <div class="checkbox-button__text">Завтрак</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox" checked>
-                                <div class="checkbox-button__text">Письменный стол</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox" checked>
-                                <div class="checkbox-button__text">Стул для кормления</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox" checked>
-                                <div class="checkbox-button__text">Кроватка</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox">
-                                <div class="checkbox-button__text">Телевизор</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox">
-                                <div class="checkbox-button__text">Шампунь</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox">
-                                <div class="checkbox-button__text">Телевизор</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-button">
-                              <label class="checkbox-button__label">
-                                <input class="checkbox-button__input" type="checkbox">
-                                <div class="checkbox-button__text">Шампунь</div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
+                      <div class="checkbox-buttons">
+                        <ul>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Завтрак</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox" checked>
+                              <div class="checkbox-button__text">Письменный стол</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox" checked>
+                              <div class="checkbox-button__text">Стул для кормления</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox" checked>
+                              <div class="checkbox-button__text">Кроватка</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Телевизор</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Шампунь</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Телевизор</div>
+                            </label>
+                          </li>
+                          <li class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text">Шампунь</div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
                 </div>
           </div>
         </div>
-        <div class="form-elements__column-3-2">
+        <div class="form-elements__column-3-2 form-elements__column">
           <div class="rich-checkbox-buttons-wrap">
                 <div class="rich-checkbox-buttons">
                   <h3 class="rich-checkbox-buttons__title">Rich checkbox buttons</h3>
@@ -486,7 +489,7 @@
                 </div>
           </div>
         </div>
-        <div class="form-elements__column-3-3">
+        <div class="form-elements__column-3-3 form-elements__column">
           <div class="bullet-list-wrap">
                 <div class="bullet-list">
                   <h3 class="bullet-list__title">Bullet list</h3>
@@ -500,7 +503,7 @@
         </div>
       </div>
       <div class="form-elements__container form-elements__container-4">
-        <div class="form-elements__column-4-1">
+        <div class="form-elements__column-4-1 form-elements__column">
           <div class="advantages-wrap">
                 <ul class="advantages">
                   <li class="advantage"><i class="material-icons advantage__icon">insert_emoticon</i><span class="advantage__title">Комфорт</span><br><span class="advantage__text">Шумопоглощающие стены</span></li>
@@ -508,7 +511,7 @@
                 </ul>
           </div>
         </div>
-        <div class="form-elements__column-4-2">
+        <div class="form-elements__column-4-2 form-elements__column">
           <div class="review-wrap">
                 <div class="review">
                   <div class="review__left-part">
