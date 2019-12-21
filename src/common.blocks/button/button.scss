@@ -12,7 +12,7 @@ button {
   justify-content: center;
   border-radius: 100px;
   background: $gradient;
-  padding: 14px 19px;
+  padding: 2px;
 
   &:hover,
   &:active,
@@ -31,6 +31,7 @@ button {
     line-height: 16px;
     font-family: 'Montserrat';
     color: #fff;
+    padding: 12px 17px;
   }
 
   &__arrow {
@@ -43,12 +44,9 @@ button {
   }
 
   &_bordered {
-    padding: 2px;
-
     .button__content {
       border-radius: inherit;
       background: #fff;
-      padding: 12px 17px;
       color: $purple;
     }
   }
@@ -59,16 +57,10 @@ button {
   }
 
   &_small {
-    &.button_filled {
-      padding: 9px 13px;
-    }
-
-    &.button_bordered {
-      padding: 1px;
-
-      .button__content {
-        padding: 7px 13px;
-      }
-    }
+    padding: 1px;
+    
+    .button__content {
+      padding: 7px 13px;
+    }    
   }
 }
