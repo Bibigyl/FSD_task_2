@@ -1,22 +1,18 @@
 button {
   background-color: transparent;
   padding: 0;
-  line-height: 16px;
+  border: none;
 }
 
 .button {
-  font-style: normal;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: rem(12px);
-  border: none;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   position: relative;
   transition: .2s;
   justify-content: center;
   border-radius: 100px;
-  font-family: 'Montserrat';
+  background: $gradient;
+  padding: 14px 19px;
 
   &:hover,
   &:active,
@@ -24,6 +20,17 @@ button {
     font-style: normal;
     font-weight: bold;
     transition: .2s;
+    opacity: 0.5;
+  }
+
+  &__content {
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: rem(12px);
+    line-height: 16px;
+    font-family: 'Montserrat';
+    color: #fff;
   }
 
   &__arrow {
@@ -32,44 +39,17 @@ button {
     transform: translateY(-50%);
     right: 10px;
     color: inherit;
-  }
-
-  &_filled {
-    background: $gradient;
     color: #fff;
-
-    &:hover,
-    &:active,
-    &:focus {
-      opacity: .5;
-    }
   }
 
   &_bordered {
-    color: $purple;
-    background: #fff;
-    background-clip: padding-box;
-    
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      border-radius: inherit;
-      background: $gradient;
-      transition: inherit;
-    }
+    padding: 2px;
 
-    &:hover,
-    &:active,
-    &:focus {
-      &:before {
-        opacity: 0.5;
-        transition: inherit;
-      }
+    .button__content {
+      border-radius: inherit;
+      background: #fff;
+      padding: 12px 17px;
+      color: $purple;
     }
   }
 
@@ -78,43 +58,17 @@ button {
     max-width: 320px;
   }
 
-  &_standard {
-    &.button_filled {
-      padding: 14px 19px;
-    }
-
-    &.button_bordered {
-      padding: 12px 17px;
-      $border: 2px;
-      border: solid $border transparent;
-
-      &:before {
-        margin: -$border;
-      }
-    }
-  }
-
   &_small {
     &.button_filled {
       padding: 9px 13px;
     }
 
     &.button_bordered {
-      padding: 7px 13px;
-      $border: 2px;
-      border: solid $border transparent;
+      padding: 1px;
 
-      &:before {
-        margin: -$border;
+      .button__content {
+        padding: 7px 13px;
       }
     }
-  }
-
-  &_with-bright-text {
-    color: $purple;
-  }
-
-  &_with-grey-text {
-    color: $c50;
   }
 }

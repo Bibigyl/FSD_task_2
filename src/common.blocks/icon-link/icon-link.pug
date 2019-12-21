@@ -1,0 +1,6 @@
+mixin icon-link({text, isPrimary} = {})
+	-
+		text = text || 'Click me';
+		let primary = isPrimary ? 'icon-link_primary' : false;
+
+	button.icon-link(class=primary)= text

@@ -36,9 +36,9 @@ mixin dropdown(content, isOpen)
 			
 			if content.buttons
 				.dropdown__button_to-clear.hidden
-					+button({text: content.buttons[0], textColor: 'grey'})
+					+icon-link({text: content.buttons[0]})
 				.dropdown__button_to-apply
-					+button({text: content.buttons[1], textColor: 'bright'})
+					+icon-link({text: content.buttons[1], isPrimary: true})
 
 
 //- как называть конфиги

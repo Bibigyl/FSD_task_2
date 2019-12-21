@@ -1,33 +1,12 @@
-
-mixin button({text, appearance, isExtended, size, textColor})
+mixin button({text, isBordered, isExtended, isSmall} = {})
 	-
-		let config;
-		config = {
-			appearance : {
-				filled: 'button_filled',
-				bordered: 'button_bordered'			
-			},
-			size : {
-				standard: 'button_standard',
-				small: 'button_small'
-			},
-			textColor : {
-				bright: 'button_with-bright-text',
-				grey: 'button_with-grey-text'
-			}
-		};
-		
 		text = text || 'Click me';
-		appearance = config.appearance[appearance] || false;
+		let bordered = isBordered ? 'button_bordered' : false;
 		let extended = isExtended ? 'button_extended' : false;
-		size = config.size[size] || 'button_standard';
-		textColor = config.textColor[textColor] || 'button_with-bright-text';
+		let small = isSmall ? 'button_small' : false;
 
-		extended = appearance ? extended : false;
-		size = appearance ? size : false;
-		textColor = !appearance ? textColor : false;
-
-	button.button(class=[appearance, extended, size, textColor])= text
+	button.button(class=[bordered, extended, small])
+		.button__content= text
 		if (extended != false)
 			i.button__arrow.material-icons arrow_forward
 

@@ -29,6 +29,7 @@ html(lang="ru")
 
         include ../../common.blocks/slider-range/slider-range
         include ../../common.blocks/button/button
+        include ../../common.blocks/icon-link/icon-link
         include ../../common.blocks/pagination/pagination
         include ../../common.blocks/expandable-checkbox-list/expandable-checkbox-list
         include ../../common.blocks/rich-checkbox-buttons/rich-checkbox-buttons
@@ -141,21 +142,21 @@ html(lang="ru")
                     h3.buttons-wrap__title Buttons
                     .colored-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button({appearance: 'filled'})
+                            +button()
                         .button-wrap
-                            +button({appearance: 'filled'})
+                            +button()
                     .not-colored-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button({appearance: 'bordered'})
+                            +button({isBordered: true})
                         .button-wrap
-                            +button({appearance: 'bordered'})
+                            +button({isBordered: true})
                     .textual-buttons-wrap.buttons-wrap
                         .button-wrap
-                            +button({isExtended: true})
+                            +icon-link({isPrimary: true})
                         .button-wrap
-                            +button({textColor: 'grey'})
+                            +icon-link()
                     .big-buttons-wrap.buttons-wrap
-                        +button({appearance: 'filled', isExtended: true, text: 'Перейти к оплате'})
+                        +button({isExtended: true})
 
                     .pagination-wrap
                         h3.pagination-wrap__title Pagination

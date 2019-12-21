@@ -1,0 +1,20 @@
+button {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+.icon-link {
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: rem(12px);
+  line-height: 16px;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  color: $c50;
+
+  &_primary {
+    color: $purple;
+  }
+}
