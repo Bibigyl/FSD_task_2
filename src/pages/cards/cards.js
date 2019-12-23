@@ -24,6 +24,7 @@ import "../../js/main.js";
 import "../../common.blocks/text-field/text-field.js";
 //import "../../common.blocks/slider-range/slider-range.js";
 import "../../common.blocks/dropdown/dropdown.js";
+import "../../common.blocks/date-dropdown/date-dropdown.js";
 import {setDropdownValues} from "../../common.blocks/dropdown/dropdown.js";
 //import "../../common.blocks/expandable-checkbox-list/expandable-checkbox-list.js";
 //import "../../common.blocks/pagination/pagination.js";
@@ -40,10 +41,8 @@ import {setDropdownValues} from "../../common.blocks/dropdown/dropdown.js";
 $( document ).ready(function() {
 
     // Открытый календарь в карточках
-
-    //$('.cards__calendar').dateRangePicker();
     
-    $('.cards__calendar').dateRangePicker({
+/*     $('.cards__calendar').dateRangePicker({
         language: 'ru',
         singleMonth: true,
         showShortcuts: false,
@@ -59,15 +58,13 @@ $( document ).ready(function() {
         alwaysOpen: true, 
     });
 
-    $('.date-picker-wrapper .day').each
-
     $('.cards__calendar').data('dateRangePicker').setDateRange('2019/08/19','2019/08/23');
 
     $('.calendar__link_clear').click(function(evt) {
         evt.stopPropagation();
         $('.cards__calendar').data('dateRangePicker').clear();
         $(".td-checked").removeClass("td-checked");
-    });
+    }); */
 
     
 });

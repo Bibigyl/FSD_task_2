@@ -13,6 +13,12 @@
   z-index: 2;
 }
 
+.dp-clearfix {
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+
 .date-picker-wrapper {
   background-color: #fff;
   position: absolute;
@@ -23,15 +29,7 @@
   box-shadow: 0px 10px 20px $c5;
   border-radius: 4px;
   width: 320px;
-}
 
-.dp-clearfix {
-  clear: both;
-  height: 0;
-  font-size: 0;
-}
-
-.date-picker-wrapper {
   &.inline-wrapper {
     position: relative;
     box-shadow: none;
@@ -68,18 +66,6 @@
     font-size: rem(19px);
     line-height: 24px;
   }
-
-/*   .week-name {
-    height: 30px;
-    line-height: 20px;
-    text-transform: capitalize;
-    font-family: 'Montserrat-Bold', sans-serif;
-    font-size: 12px;
-    color: $purple;
-    & th {
-      height: 36px;
-    }
-  }  */ 
 
   .select-wrapper {
     position: relative;
@@ -279,46 +265,68 @@
       }
     }
   }
-}
-
-.date-picker-wrapper {
 
   .first-date-selected,
   .last-date-selected {
     background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%) !important;
     color: white !important;
   }
+
+  .tbody tr {
+    vertical-align: middle;
+  }
+
+  .prev {
+    text-align-last: left;
+  }
+
+  .next {
+    text-align-last: right;
+  }
+
+  .calendar__link-wrap>* {
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: rem(12px);
+    line-height: 16px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    margin: 0 7px 6px 7px;
+  }
+
+  .calendar__link_clear {
+    float: left;
+    color: $c50;
+  }
+
+  .calendar__link_apply {
+    float: right;
+    color: $purple;
+  }
+
+  .drp_top-bar {
+    display: none;
+  }
 }
 
-.date-picker-wrapper .tbody tr {
-  vertical-align: middle;
-}
+@media (max-width: 410px) {
 
-.date-picker-wrapper .prev {
-  text-align-last: left;
-}
+  .date-picker-wrapper {
+    width: 280px;
+  }
+  .date-picker-wrapper .month-wrapper table td {
+    height: 30px;
+    width: 30px;
+  }
 
-.date-picker-wrapper .next {
-  text-align-last: right;
-}
+  .date-picker-wrapper .month-wrapper table .day {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+  }
 
-.date-picker-wrapper .calendar__link-wrap > * {
-  font-style: normal;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: rem(12px);
-  line-height: 16px;
-  cursor: pointer;
-  font-family: 'Montserrat';
-  margin: 0 7px 6px 7px;
-}
-
-.date-picker-wrapper .calendar__link_clear {
-  float: left;
-  color: $c50;
-}
-
-.date-picker-wrapper .calendar__link_apply {
-  float: right;
-  color: $purple;
+  .date-picker-wrapper .month-wrapper table {
+    width: 240px;
+  }
 }

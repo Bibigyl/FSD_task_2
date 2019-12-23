@@ -28,12 +28,12 @@ html(lang="ru")
                     buttons: false
                 }
             };
+
         include ../../components/search-card/search-card
         include ../../components/check-in-card/check-in-card
         include ../../components/booking-card/booking-card
         include ../../components/login-card/login-card
         include ../../components/room-card/room-card
-
 
         section.cards
             .cards__logo
@@ -61,19 +61,6 @@ html(lang="ru")
                                 }
                             }
 
-                            dropdownContent = {
-                                guests: {
-                                    text: 'Сколько гостей',
-                                    items: ['Взрослые', 'Дети', 'Младенцы'],
-                                    buttons: ['Очистить', 'Применить']
-                                },
-                                furniture: {
-                                    text: 'Удобства',
-                                    items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-                                    buttons: false
-                                }
-                            };
-
                         +search-card(options)
 
                     .check-in-card-wrap.card-wrap
@@ -93,7 +80,7 @@ html(lang="ru")
                                 textFieldBirthday: {isMasked: true}, 
                                 credentialsTitle: 'Данные для входа в сервис', 
                                 textFieldEmail: {placeholder: 'Email', type: 'email'}, 
-                                textFieldPassword: {placeholder: 'Password'}, 
+                                textFieldPassword: {placeholder: 'Пароль'}, 
                                 toggle: {text: 'Получать спецпредложения'}, 
                                 button: {
                                     text: 'Перейти к оплате',
@@ -152,7 +139,7 @@ html(lang="ru")
                                     placeholder: 'Email', type: 'email'
                                 },
                                 textFieldPassword: {
-                                    placeholder: 'Password', type: 'password'
+                                    placeholder: 'Пароль', type: 'password'
                                 },
                                 button: {text: 'Войти', appearance: 'filled', isExtended: true},
                                 enter: {
@@ -168,8 +155,9 @@ html(lang="ru")
 
 
                 .cards__column.cards__column-3
-                    .calendar-wrap.card-wrap
-                        input.cards__calendar
+                    //-
+                        .calendar-wrap.card-wrap
+                            input.cards__calendar
                         
                     .room-card-wrap-1.card-wrap
                         -

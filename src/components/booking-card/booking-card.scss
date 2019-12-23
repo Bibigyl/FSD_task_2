@@ -3,7 +3,7 @@
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  min-width: 320px;
+  min-width: 260px;
   max-width: 380px;
 
   &__main-info {
@@ -114,5 +114,11 @@
     float: right;
     margin-left: 2px;
     font-size: 19px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .booking-card {
+    padding: 25px 20px 20px 20px;
   }
 }

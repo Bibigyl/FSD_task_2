@@ -1438,12 +1438,8 @@
         function clearSelection() {
             opt.start = false;
             opt.end = false;
-            box.find('.day.checked').removeClass('checked');
-            box.find('.day.checked').parent().removeClass('td-checked');
-            box.find('.day.last-date-selected').removeClass('last-date-selected');
-            box.find('.day.last-date-selected').parent().removeClass('td-last-date-selected');
-            box.find('.day.first-date-selected').removeClass('first-date-selected');
-            box.find('.day.first-date-selected').parent().removeClass('td-first-date-selected');
+            box.find('.day.checked').removeClass('checked last-date-selected first-date-selected')
+            .parent().removeClass('td-checked td-last-date-selected td-first-date-selected');
             opt.setValue.call(selfDom, '');
             checkSelectionValid();
             showSelectedInfo();
