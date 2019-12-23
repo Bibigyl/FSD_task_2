@@ -1,4 +1,4 @@
-mixin text-field( {isMasked, isSubscription, placeholder = false, type = 'text', value = false, id = false} )
+mixin text-field({isMasked, isSubscription, placeholder = false, type = 'text', value = false, id = false} = {})
 	- let mask = isMasked ? "ДД.ММ.ГГГГ" : false;
 	- let maskClass = mask ? 'text-field__input_masked' : false;
 	- let subscription = isSubscription ? 'text-field_subscription' : false;
@@ -13,6 +13,5 @@ mixin text-field( {isMasked, isSubscription, placeholder = false, type = 'text',
 
 //- есть id - можно ли их использовать
 //- нужен ли label
-//- нужно ли использовать аттрибут type==date для masked 
-//-	textFieldEmail: {placeholder: 'Email', type: 'email'}, 
-//-	textFieldPassword: {placeholder: 'Password', type: 'password'},
+//- оборачивать инпут в label?
+//- нужно ли использовать аттрибут type==date для masked
