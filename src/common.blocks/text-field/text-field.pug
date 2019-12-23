@@ -5,8 +5,8 @@ mixin text-field({isMasked, isSubscription, placeholder = false, type = 'text', 
 	- placeholder = mask || placeholder;
 
 	.text-field(class=subscription)
-		label.text-field__label(for=id)
-		input.text-field__input(class=maskClass type=type placeholder=placeholder id=id value=value)
+		label.text-field__label
+			input.text-field__input(class=maskClass type=type placeholder=placeholder id=id value=value)
 		if subscription
 			i.material-icons.text-field__arrow arrow_forward
 

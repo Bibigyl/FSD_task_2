@@ -95,11 +95,11 @@ $( document ).ready(function() {
 function setDropdownValues($node, vals) {
     let $items = $node.find('.dropdown__item');
 
-    for (let i = 0; i < vals.length; i++) {
-        for (let r = 1; r <= vals[i]; r++) {
+    vals.forEach(function(item, i) {
+        for (let r = 1; r <= +item; r++) {
             $items.eq(i).find('.dropdown__button_plus').trigger('click');
-        }
-    }
+        }        
+    })
 }
 
 export {setDropdownValues};
