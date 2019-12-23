@@ -42,7 +42,7 @@ $( document ).ready(function() {
 
     // Открытый календарь в карточках
     
-/*     $('.cards__calendar').dateRangePicker({
+    $('.cards__calendar').dateRangePicker({
         language: 'ru',
         singleMonth: true,
         showShortcuts: false,
@@ -63,8 +63,6 @@ $( document ).ready(function() {
     $('.calendar__link_clear').click(function(evt) {
         evt.stopPropagation();
         $('.cards__calendar').data('dateRangePicker').clear();
-        $(".td-checked").removeClass("td-checked");
-    }); */
+    });
 
-    
 });

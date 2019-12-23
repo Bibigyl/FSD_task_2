@@ -2,9 +2,9 @@ $( document ).ready(function() {
 
     $('.date-dropdown').each( function() {
 
-        $this = $(this);
-        $first = $(this).find('.date-dropdown__first-day').find('input');
-        $last = $(this).find('.date-dropdown__last-day').find('input');
+        let $this = $(this);
+        let $first = $(this).find('.date-dropdown__first-day').find('input');
+        let $last = $(this).find('.date-dropdown__last-day').find('input');
 
         $(this).dateRangePicker({
             language: 'ru',
@@ -22,18 +22,17 @@ $( document ).ready(function() {
             customArrowNextSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_forward</i></div>',
         })
         
-    
-        // Cобытия "принять" и "очистить" создаются только после открытия
+        // Cобытия "принять" и "очистить" создаются после открытия
         .bind('datepicker-opened', function() {
     
             $('.date-picker-wrapper').find('.calendar__link_clear').click(function(evt) {
                 evt.stopPropagation();
-                $('.date-dropdown').data('dateRangePicker').clear();
+                $this.data('dateRangePicker').clear();
             });
     
             $('.date-picker-wrapper').find('.calendar__link_apply').click(function(evt) {
                 evt.stopPropagation();
-                $('.date-dropdown').data('dateRangePicker').close();
+                $this.data('dateRangePicker').close();
             });
         });
     });
