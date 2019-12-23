@@ -5,6 +5,7 @@
   position: relative;
   padding: 150px 0;
   background-color: #F4F4F6;
+  justify-content: space-between;
 /*   * {
     border: 1px solid #f00 !important;
   } */
@@ -30,18 +31,18 @@
     margin: 0 20px;
     
     &-1 {
-      flex-grow: 7;
-      min-width: 340px;
+      width: 100%;
+      max-width: 380px;
     }
 
     &-2 {
-      flex-grow: 7;
-      min-width: 340px;
+      width: 100%;
+      max-width: 380px;
     }
 
     &-3 {
-      flex-grow: 6;
-      min-width: 320px;
+      width: 100%;
+      max-width: 320px;
     }
   }
 }
@@ -60,4 +61,17 @@
 
 .login-card-wrap {
   margin-bottom: 40px;
+}
+
+.cards__calendar {
+  display: none;
+}
+
+.calendar-wrap {
+  margin-bottom: 33px;
+}
+
+.room-card-wrap-1,
+.room-card-wrap-2 {
+  max-width: 270px;
 }

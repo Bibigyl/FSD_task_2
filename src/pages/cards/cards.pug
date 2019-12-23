@@ -13,12 +13,26 @@ html(lang="ru")
         meta(name="theme-color" content="#ffffff")
         link(rel="stylesheet" href="cards.css")
     body
-        - let options;
-        - let items;
+        - 
+            let options;
+            let items;
+            let dropdownContent = {
+                guests: {
+                    text: 'Сколько гостей',
+                    items: ['Взрослые', 'Дети', 'Младенцы'],
+                    buttons: ['Очистить', 'Применить']
+                },
+                furniture: {
+                    text: 'Удобства',
+                    items: ['Спальни', 'Кровати', 'Ванные комнаты'],
+                    buttons: false
+                }
+            };
         include ../../components/search-card/search-card
         include ../../components/check-in-card/check-in-card
         include ../../components/booking-card/booking-card
         include ../../components/login-card/login-card
+        include ../../components/room-card/room-card
 
 
         section.cards
@@ -39,13 +53,26 @@ html(lang="ru")
                                     }
                                 },
                                 dropdownTitle: 'Гости',
-                                dropdown: 'guests',
+                                dropdown: {content: dropdownContent.guests},
                                 button: {
                                     text: 'Подобрать номер',
                                     appearance: 'filled',
                                     isExtended: true
                                 }
                             }
+
+                            dropdownContent = {
+                                guests: {
+                                    text: 'Сколько гостей',
+                                    items: ['Взрослые', 'Дети', 'Младенцы'],
+                                    buttons: ['Очистить', 'Применить']
+                                },
+                                furniture: {
+                                    text: 'Удобства',
+                                    items: ['Спальни', 'Кровати', 'Ванные комнаты'],
+                                    buttons: false
+                                }
+                            };
 
                         +search-card(options)
 
@@ -76,7 +103,7 @@ html(lang="ru")
                                 enter: {
                                     text: 'Уже есть аккаунт на Toxin',
                                     button: {
-                                        appearance: 'bordered', 
+                                        isBordered: true, 
                                         text: 'Войти'
                                     }
                                 }
@@ -105,20 +132,19 @@ html(lang="ru")
                                     }
                                 },
                                 dropdownTitle: 'Гости',
-                                dropdown: { content: 'guests'},
+                                dropdown: {content: dropdownContent.guests},
                                 infoItems: [
                                     {text: '9 990₽ х 4 суток', sum: '39 960₽'},
                                     {text: 'Сбор за услуги: скидка 2 179₽', sum: '0₽', hasIcon: true},
                                     {text: 'Сбор за дополнительные услуги', sum: '300₽', hasIcon: true}
                                 ],
                                 total: {text: 'Итого', sum: '38 081₽'},
-                                button: {text: 'Забронировать', appearance: 'filled', isExtended: true}
+                                button: {text: 'Забронировать', isExtended: true}
                             }
                         
                         +booking-card(options)
 
                     .login-card-wrap.card-wrap
-
                         -
                             options = {
                                 title: 'Войти',
@@ -133,19 +159,40 @@ html(lang="ru")
                                     text: 'Нет аккаунта на Toxin?',
                                     button: {
                                         text: 'Создать',
-                                        appearance: 'bordered'
+                                        isBordered: true
                                     }
                                 }
                             }
 
                         +login-card(options)
 
-                    
 
                 .cards__column.cards__column-3
                     .calendar-wrap.card-wrap
+                        input.cards__calendar
                         
                     .room-card-wrap-1.card-wrap
+                        -
+                            options = {
+                                image: 'cards__room-card-1.jpg',
+                                number: 800,
+                                lux: 'люкс',
+                                price: {
+                                    number: '9 990₽',
+                                    text: 'в сутки'
+                                },
+                                rateButton: {
+                                    id: 'cards__room-card-1',
+                                    rate: 5
+                                },
+                                reviews: {
+                                    number: 145,
+                                    text: 'Отзывов'
+                                }
+                            }
+
+                        +room-card(options)
+                        
                     .room-card-wrap-2.card-wrap
 
         script(src='./cards.js')

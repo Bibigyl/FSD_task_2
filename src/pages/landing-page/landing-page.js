@@ -5,10 +5,10 @@ import './landing-page.scss';
 
 //--------------- import libs -----------------------------
 
-import "../../libs/jquery.maskedinput/jquery.maskedinput.min.js";
-import "../../libs/daterangepicker-master/moment.min.js";
-import "../../libs/daterangepicker-master/daterangepicker.js";
-import "../../libs/jquery.daterangepicker/jquery.daterangepicker.js";
+//import "../../libs/jquery.maskedinput/jquery.maskedinput.min.js";
+//import "../../libs/daterangepicker-master/moment.min.js";
+//import "../../libs/daterangepicker-master/daterangepicker.js";
+//import "../../libs/jquery.daterangepicker/jquery.daterangepicker.js";
 
 import moment from 'moment'
 import 'moment/locale/ru' 
@@ -20,11 +20,11 @@ import "../../js/main.js";
 
 //------------------ import blocks scripts -----------------------------
 
-import "../../common.blocks/dropdown/dropdown.js";
+//import "../../common.blocks/dropdown/dropdown.js";
 
 //------------------ import components scripts -----------------------------
 
-import "../../components/search-card/search-card.js";
-import "../../components/header/header.js";
+//import "../../components/search-card/search-card.js";
+//import "../../components/header/header.js";
 
 

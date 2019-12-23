@@ -20,7 +20,7 @@ mixin booking-card({room, dateDropdown, dropdownTitle, dropdown, infoItems, tota
 				
 			.booking-card__dropdown
 				h3.booking-card__dropdown-title= dropdownTitle
-				+dropdown(dropdown.content)
+				+dropdown(dropdown)
 
 			.booking-card__info
 				each item in infoItems

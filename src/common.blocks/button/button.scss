@@ -1,9 +1,3 @@
-button {
-  background-color: transparent;
-  padding: 0;
-  border: none;
-}
-
 .button {
   cursor: pointer;
   display: flex;
@@ -43,7 +37,7 @@ button {
     color: #fff;
   }
 
-  &_bordered {
+  &_secondary {
     .button__content {
       border-radius: inherit;
       background: #fff;

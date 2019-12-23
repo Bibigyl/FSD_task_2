@@ -10,8 +10,9 @@
 
 @import '~material-design-icons/iconfont/material-icons.css';
 @import '../libs/jquery-ui-1.12.1.custom/jquery-ui.min.css';
-@import '../libs/font-awesome/scss/font-awesome.scss';
-@import '../libs/jquery.daterangepicker/daterangepicker.scss';
+@import '../libs/daterangepicker/daterangepicker.scss';
+//@import '../libs/font-awesome/scss/font-awesome.scss';
+//@import '../libs/jquery.daterangepicker/daterangepicker.scss';
 
 /*------------------------------ Common styles ----------------------------------------*/
 
@@ -91,63 +92,8 @@ h3 {
   color: $c100;
 }
 
-.material-icons {
-  font-size: rem(24px);
-  color: $c75;
-}
-
 .hidden {
-  display: none !important;
-}
-
-.clearfix {
-  clear: both;
-}
-
-.arrow {
-  cursor: pointer;
-}
-
-.card {
-  background-color: #fff;
-  padding: 40px 30px 30px 30px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-
-  h1 {
-    font-size: rem(26px);
-  }
-
-  .button-wrap_not-colored>* {
-    margin: 2px;
-  }
-}
-
-.icons_colored {
-  background: $gradient;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.label {
-  position: relative;
-
-  h3 {
-    margin-bottom: 5px;
-  }
-}
-
-.social-icon {
-  cursor: pointer;
-  margin: 0 11px;
-  font-size: rem(26px);
-}
-
-.wide-block {
-  max-width: 1920px;
-  background-color: #fff;
-  width: 100%;
+  display: none;
 }
 
 .container {
@@ -171,52 +117,6 @@ hr {
   position: relative;
 }
 
-.card__information {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  span {
-    width: 60%;
-    min-width: 193px;
-    box-sizing: border-box;
-    line-height: 40px;
-  }
-
-  .button {
-    min-width: 50px;
-  }
-}
-
-
-@media (max-width: 1200px) {
-  .container {
-    padding: 0 30px;
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 800px) {
-  .page_language_ru h1 {
-    font-size: rem(24px);
-    letter-spacing: auto;
-  }
-}
-
-@media (max-width: 400px) {
-  .page_language_ru h1 {
-    font-size: rem(20px);
-    letter-spacing: auto;
-  }
-}
-
-@media (max-width: 370px) {
-  .card__information>* {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 /*------------------------------ Import styles ----------------------------------------*/
 
@@ -241,8 +141,6 @@ hr {
 @import '../common.blocks/review/review.scss';
 @import '../common.blocks/bullet-list/bullet-list.scss';
 @import '../common.blocks/donut/donut.scss';
-/* Styles for calendar and inputs - date-search */
-@import '../common.blocks/calendar/calendar.scss';
 @import '../common.blocks/date-search/date-search.scss';
 
 /*--------- Components styles -------------*/
@@ -255,12 +153,3 @@ hr {
 @import '../components/header/header.scss';
 @import '../components/footer/footer.scss';
 @import '../components/footer-min/footer-min.scss';
-
-
-/*--------- Pages styles -------------*/
-
-/* @import '../pages/ui-kit/ui-kit.scss';
-@import '../pages/landing-page/landing-page.scss';
-@import '../pages/search-room/search-room.scss';
-@import '../pages/room-details/room-details.scss';
-@import '../pages/registration/registration.scss'; */

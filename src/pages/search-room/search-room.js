@@ -5,11 +5,11 @@ import './search-room.scss';
 
 //--------------- import libs -----------------------------
 
-import "../../libs/jquery.maskedinput/jquery.maskedinput.min.js";
+//import "../../libs/jquery.maskedinput/jquery.maskedinput.min.js";
 import "../../libs/jquery-ui-1.12.1.custom/jquery-ui.min.js";
-import "../../libs/daterangepicker-master/moment.min.js";
-import "../../libs/daterangepicker-master/daterangepicker.js";
-import "../../libs/jquery.daterangepicker/jquery.daterangepicker.js";
+//import "../../libs/daterangepicker-master/moment.min.js";
+//import "../../libs/daterangepicker-master/daterangepicker.js";
+//import "../../libs/jquery.daterangepicker/jquery.daterangepicker.js";
 
 
 import moment from 'moment'
@@ -22,15 +22,15 @@ import "../../js/main.js";
 
 //------------------ import blocks scripts -----------------------------
 
-import "../../common.blocks/text-field/text-field.js";
-import "../../common.blocks/slider-range/slider-range.js";
-import "../../common.blocks/dropdown/dropdown.js";
-import "../../common.blocks/expandable-checkbox-list/expandable-checkbox-list.js";
-import "../../common.blocks/pagination/pagination.js";
+//import "../../common.blocks/text-field/text-field.js";
+//import "../../common.blocks/slider-range/slider-range.js";
+//import "../../common.blocks/dropdown/dropdown.js";
+//import "../../common.blocks/expandable-checkbox-list/expandable-checkbox-list.js";
+//import "../../common.blocks/pagination/pagination.js";
 
 //------------------ import components scripts -----------------------------
 
-import "../../components/header/header.js";
+/* import "../../components/header/header.js";
 
 $( document ).ready(function() {
 
@@ -76,4 +76,4 @@ $( document ).ready(function() {
 
   $('#search-room__date-search').data('dateRangePicker').setDateRange('19 авг.','23 авг.');
 
-});
+}); */

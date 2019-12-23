@@ -9,6 +9,7 @@ $( document ).ready(function() {
 
     $(".dropdown__button_to-clear").on("click", function() {
         let $dropdown = $(this).closest('.dropdown');
+        let initialText = $dropdown.attr('initialText');
         let $list = $dropdown.find(".dropdown__list");
         let $liArr = $list.find('li');
 
@@ -17,7 +18,7 @@ $( document ).ready(function() {
             $liArr.eq(i).children(".dropdown__button_minus").addClass("dropdown__button_not-active"); 
         }
 
-        $dropdown.find(".dropdown__field span").text("Сколько гостей")
+        $dropdown.find(".dropdown__field span").text(initialText)
         $(this).addClass("hidden");
     });
 
@@ -32,9 +33,8 @@ $( document ).ready(function() {
     $(".dropdown__button").on("click", function() {
 
         let $dropdown = $(this).closest('.dropdown');
+        let initialText = $dropdown.attr('initialText');
         let $textField = $dropdown.find(".dropdown__text");
-        let text = "";
-        let t = "";
         let count = 0;
         let $numNode = $(this).parent().find(".dropdown__num");
         let num = $numNode.text() * 1;
@@ -72,109 +72,23 @@ $( document ).ready(function() {
             }
         }
 
-        if ( $dropdown.hasClass("dropdown_guests") ) {
-            text = guestsText();
-        }
-        if ( $dropdown.hasClass("dropdown_furniture") ) {
-            text = furnitureText();
-        }
-
-        $textField.text(text);
+        $textField.text(newText());
 
 
-    //-------functions fot text------
+        function newText() {
+            let $li;
+            let newText = '';
 
-        function furnitureText() {
-            for ( let i = 0; i < 3; i++ ) {
-                t = $ul.children().eq(i).find(".dropdown__num").text();
-                if (t != 0) {
-                    if ( t > 4 && t < 21  ) {
-                        switch (i) {
-                            case 0:
-                                text = text + t + " спален, ";
-                                break;
-                            case 1:
-                                text = text + t + " кроватей, ";
-                                break;
-                            case 2:
-                                text = text + t + " ванных комнат, ";
-                                break;
-                        }
-                    } else if ( t % 10 == 1 ) {
-                        switch (i) {
-                            case 0:
-                                text = text + t + " спальня, ";
-                                break;
-                            case 1:
-                                text = text + t + " кровать, ";
-                                break;
-                            case 2:
-                                text = text + t + " ванная комната, ";
-                                break;
-                        }
-                    } else if ( t % 10 >= 2 && t % 10 <= 4 ) {
-                        switch (i) {
-                            case 0:
-                                text = text + t + " спальни, ";
-                                break;
-                            case 1:
-                                text = text + t + " кровати, ";
-                                break;
-                            case 2:
-                                text = text + t + " ванные комнаты, ";
-                                break;
-                        }
-                    } else {
-                        switch (i) {
-                            case 0:
-                                text = text + t + " спален, ";
-                                break;
-                            case 1:
-                                text = text + t + " кроватей, ";
-                                break;
-                            case 2:
-                                text = text + t + " ванных комнат, ";
-                                break;
-                        }
-                    }
+            $ul.children(".dropdown__item").each(function() {
+                $li = $(this);
+                if ($li.find('.dropdown__num').text() != '0') {
+                    newText = newText + $li.find('.dropdown__num').text() + ' ' + $li.attr('item') + ', ';
                 }
-            }
-            text = text.slice(0, text.length - 2);
-            return text;
-        }
+            });
 
-        function guestsText() {
-            
-            let count = $ul.children().eq(0).find(".dropdown__num").text()*1 + $ul.children().eq(1).find(".dropdown__num").text()*1;
-            let n = $ul.children().eq(2).find(".dropdown__num").text()*1;
-
-            if ( count >= 5 && count <= 20 ) {
-                count = count + " гостей";
-            } else if ( count % 10 == 1 ) {
-                count = count + " гость";
-            } else if ( count % 10 >= 2 && count % 10 <= 4 ) {
-                count = count + " гостя";
-            } else if ( count == 0 && n == 0 ) {
-                count = "Сколько гостей";
-                return count;
-            } else {
-                count = count + " гостей";
-            }
-
-            if (n == 0 ) {
-                return count; 
-            } else if ( n % 10 == 1 ) {
-                n = n + " младенец";
-            } else if ( n % 10 >= 2 && n % 10 <= 4 ) {
-                n = n + " младенца";
-            } else {
-                n = n + " младенцев";
-            }
-
-            count = count + ", " + n;
-
-            return count; 
-        }
+            newText = newText.slice(0, -2) || initialText;
+            return newText;
+        } 
     });
 });
 

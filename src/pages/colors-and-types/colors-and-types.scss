@@ -13,18 +13,27 @@
 
 .colors-and-types__container {
   width: 100%;
-  max-width: 1324px;
+  max-width: 1180px;
   padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.colors-and-types__colors,
+.colors-and-types__colors {
+  width: 100%;
+  min-width: 280px;
+  max-width: 320px;
+  padding-bottom: 40px;
+}
+
 .colors-and-types__fonts {
-  width: 50%;
+  width: 100%;
+  min-width: 280px;
+  max-width: 457px;
+  padding-bottom: 40px;
 }
 
 .color-item {
@@ -82,10 +91,6 @@
   font-size: rem(19px);
 }
 
-.colors-and-types__fonts {
-  padding-left: 41px;
-}
-
 .font-item {
   display: flex;
   margin-bottom: 50px;
@@ -115,5 +120,11 @@
 .font-item:last-child {
   .font-item__description {
     max-width: 340px;
+  }
+}
+
+@media (max-width: 600px) {
+  .colors-and-types__fonts {
+    padding-left: 0;
   }
 }

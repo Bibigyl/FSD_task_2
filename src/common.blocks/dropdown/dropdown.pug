@@ -1,27 +1,11 @@
-include ../button/button
+include ../icon-link/icon-link
 
-mixin dropdown(content, isOpen)
-	- 
-		let config;
-		config = {
-			guests: {
-				text: 'Сколько гостей',
-				class: 'dropdown_guests',
-				items: ['Взрослые', 'Дети', 'Младенцы'],
-				buttons: ['Очистить', 'Применить']
-			},
-			furniture: {
-				text: 'Удобства',
-				class: 'dropdown_furniture',
-				items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-				buttons: false
-			}
-		};
-		
-		content = config[content] || content || config.guests;
+mixin dropdown({content = {text, items, buttons}, isOpen, isSmall})
+	-	
 		let open = isOpen ? 'dropdown_open' : false;
+		let small = isSmall ? 'dropdown_small' : false;
 
-	.dropdown(class=[content.class, open])
+	.dropdown(class=[open, small] initialText=content.text)
 		.dropdown__field
 			span.dropdown__text= content.text
 			i.dropdown__arrow.material-icons expand_more
@@ -29,10 +13,11 @@ mixin dropdown(content, isOpen)
 		.dropdown__list
 			ul
 				each item in content.items
-					li.dropdown__item= item
-						span.dropdown__button.dropdown__button_plus +
+					li.dropdown__item(item=item)= item
+						button.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
 						span.dropdown__num 0
-						span.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
+						button.dropdown__button.dropdown__button_plus +
+
 			
 			if content.buttons
 				.dropdown__button_to-clear.hidden
@@ -40,9 +25,6 @@ mixin dropdown(content, isOpen)
 				.dropdown__button_to-apply
 					+icon-link({text: content.buttons[1], isPrimary: true})
 
-
-//- как называть конфиги
-//- где они должны быть - в миксине или до него
 
 
 			

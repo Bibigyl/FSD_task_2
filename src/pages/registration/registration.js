@@ -5,15 +5,15 @@ import './registration.scss';
 
 //--------------- import libs -----------------------------
 
-import "../../libs/jquery.maskedinput/jquery.maskedinput.min.js";
+//import "../../libs/jquery.maskedinput/jquery.maskedinput.min.js";
 
 //--------------- import common js -----------------------------
 
-import "../../js/main.js";
+//import "../../js/main.js";
 
 //------------------ import components scripts ------------------------
 
-import "../../components/header/header.js";
+//import "../../components/header/header.js";
 
 
 

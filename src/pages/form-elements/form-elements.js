@@ -29,13 +29,6 @@ import "../../common.blocks/expandable-checkbox-list/expandable-checkbox-list.js
 import "../../common.blocks/pagination/pagination.js";
 import "../../common.blocks/like-button/like-button.js";
 
-//------------------ import components scripts -----------------------------
-
-//import "../../components/booking-card/booking-card.js";
-//import "../../components/search-card/search-card.js";
-//import "../../components/header/header.js";
-
-
 
 
 $(document).ready(function() {

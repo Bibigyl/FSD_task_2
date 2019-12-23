@@ -20,7 +20,6 @@
     line-height: 42px;
     white-space: nowrap;
     overflow: hidden;
-    //padding: 5px;
     text-overflow: ellipsis;
   }
 
@@ -45,9 +44,8 @@
 
   &__item {
     width: 100%;
-    box-sizing: border-box;
-    display: block;
-    padding: 6px 7px 0px 13px;
+    display: flex;
+    padding: 7px 7px 0px 13px;
     height: 32px;
     font-weight: 700;
     font-size: rem(12px);
@@ -62,26 +60,25 @@
   }
 
   &__num {
-    display: inline-block;
-    float: right;
     right: 35px;
     width: 32px;
     text-align: center;
   }
 
   &__button {
-    display: inline-block;
-    float: right;
     width: 30px;
     height: 30px;
     border: 1px solid $c25;
     box-sizing: border-box;
     border-radius: 22px;
     text-align: center;
-    line-height: 28px;
     font-size: rem(18px);
     color: $c50;
     cursor: pointer;
+
+    &_minus {
+      margin-left: auto;
+    }
 
     &_not-active {
       opacity: .5;
@@ -113,7 +110,7 @@
     }
   }
 
-  &_furniture {
+  &_small {
     max-width: 266px;
   }
 }

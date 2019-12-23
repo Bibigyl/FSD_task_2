@@ -1,31 +1,30 @@
-mixin room(room_class, image, number, price, rating, star_name, reviews, lux)
-	.card.room-card(class=room_class)
-		//- var img = ${require('./images/avatar.png')};
-		.room-card__image.background-image(style=image)
-			.room-card__arrow.arrow 
+include ../../common.blocks/rate-button/rate-button
+
+mixin room-card({image, number, lux, price, rateButton, reviews})
+	.room-card
+		.room-card__image(style=`background-image: url( ${require('./images/' + image)})`)
+			.room-card__arrow.room-card__arrow_prev
 				i.material-icons expand_more
-			.room-card__arrow.arrow
+			.room-card__arrow.room-card__arrow_next
 				i.material-icons expand_more
 			.room-card__dots
-				.room__dot.room__dot_active
-				.room__dot
-				.room__dot
-				.room__dot
+				.room-card__dot.room-card__dot_active
+				.room-card__dot
+				.room-card__dot
+				.room-card__dot
 		.room-card__room
 			h2 №
-				span.room__number= number
+				span.room-card__number= number
 			if lux
-				a.link.link_colored люкс
+				a.room-card__class= lux
 		.room-card__price-per-day
-			h3= Math.floor(price / 1000) + " " + ("00" + price % 1000).slice(-3) + "₽"
-			span в сутки
-		.clearfix.room-card__line
+			h3= price.number
+			span= price.text
+		.room-card__line
 		.room-card__rating-wrap
-			.rating.room-card__rating
-				-for (var i = 5; i > 0; i--)
-					input.rating__star( name=(star_name) value=i id=(star_name + i) type="radio" checked= rating == i )
-					label.label.label_rating.material-icons( for=(star_name + i) )
+			.room-card__rate-button
+				+rate-button(rateButton.id, rateButton.rate)
 
 			.room-card__reviews
-				h3= reviews
-				span Отзывов
+				h3= reviews.number
+				span= reviews.text
