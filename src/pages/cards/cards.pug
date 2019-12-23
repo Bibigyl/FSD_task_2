@@ -175,7 +175,7 @@ html(lang="ru")
                         -
                             options = {
                                 image: 'cards__room-card-1.jpg',
-                                number: 800,
+                                number: 888,
                                 lux: 'люкс',
                                 price: {
                                     number: '9 990₽',
@@ -194,5 +194,24 @@ html(lang="ru")
                         +room-card(options)
                         
                     .room-card-wrap-2.card-wrap
+                        -
+                            options = {
+                                image: 'cards__room-card-2.jpg',
+                                number: 840,
+                                price: {
+                                    number: '9 900₽',
+                                    text: 'в сутки'
+                                },
+                                rateButton: {
+                                    id: 'cards__room-card-2',
+                                    rate: 4
+                                },
+                                reviews: {
+                                    number: 65,
+                                    text: 'Отзывов'
+                                }
+                            }
+
+                        +room-card(options)
 
         script(src='./cards.js')

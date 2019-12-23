@@ -12,19 +12,22 @@ mixin room-card({image, number, lux, price, rateButton, reviews})
 				.room-card__dot
 				.room-card__dot
 				.room-card__dot
-		.room-card__room
-			h2 №
-				span.room-card__number= number
-			if lux
-				a.room-card__class= lux
-		.room-card__price-per-day
-			h3= price.number
-			span= price.text
-		.room-card__line
-		.room-card__rating-wrap
+
+		.room-card__content
+			.room-card__room
+				h2.room-card__room-number 
+					span.room-card__number-simbol №
+					| #{number}
+				if lux
+					span.room-card__class= lux
+			.room-card__price
+				h3.room-card__price-number= price.number
+				span.room-card__price-text= price.text
+
+			.room-card__line
+
 			.room-card__rate-button
 				+rate-button(rateButton.id, rateButton.rate)
-
 			.room-card__reviews
-				h3= reviews.number
-				span= reviews.text
+				h3.room-card__reviews-number= reviews.number
+				span.room-card__reviews-text= reviews.text
