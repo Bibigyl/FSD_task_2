@@ -4,16 +4,15 @@ mixin text-field({isSubscription, maskParameters = false, placeholder = false, t
 	- let classMasked = maskParameters ? 'text-field_masked' : false;
 
 	.text-field(class=[subscription, classMasked])
-		label.text-field__label
-			input.text-field__input(
-				type=type 
-				placeholder=placeholder 
-				value=value 
-				'data-type'=maskParameters.type 
-				'data-pattern'=maskParameters.pattern 
-				'data-delimiter'=maskParameters.delimiter 
-				'data-blocks'=maskParameters.blocks
-			)
+		input.text-field__input(
+			type=type 
+			placeholder=placeholder 
+			value=value 
+			data-type=maskParameters.type 
+			data-pattern=maskParameters.pattern 
+			data-delimiter=maskParameters.delimiter 
+			data-blocks=maskParameters.blocks
+		)
 		if subscription
 			i.material-icons.text-field__arrow arrow_forward
 
