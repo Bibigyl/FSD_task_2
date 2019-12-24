@@ -76,7 +76,17 @@ html(lang="ru")
                     .text-field-wrap.text-field-wrap-3
                         h3.text-field-wrap__title Masked text field
                         .text-field-wrap__state Default
-                        +text-field({isMasked: true})
+                        -
+                            options = {
+                                maskParameters: {
+                                    type: 'date',
+                                    delimiter: '.',
+                                    pattern: ['d', 'm', 'Y']
+                                },
+                                placeholder: 'ДД.ММ.ГГГГ'
+                            }
+
+                        +text-field(options)
 
                     .date-dropdown-wrap
                         -

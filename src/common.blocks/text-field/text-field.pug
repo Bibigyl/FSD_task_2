@@ -1,17 +1,21 @@
-mixin text-field({isMasked, isSubscription, placeholder = false, type = 'text', value = false, id = false} = {})
-	- let mask = isMasked ? "ДД.ММ.ГГГГ" : false;
-	- let maskClass = mask ? 'text-field__input_masked' : false;
-	- let subscription = isSubscription ? 'text-field_subscription' : false;
-	- placeholder = mask || placeholder;
+mixin text-field({isSubscription, maskParameters = false, placeholder = false, type = 'text', value = false} = {})
 
-	.text-field(class=subscription)
+	- let subscription = isSubscription ? 'text-field_subscription' : false;
+	- let classMasked = maskParameters ? 'text-field_masked' : false;
+
+	.text-field(class=[subscription, classMasked])
 		label.text-field__label
-			input.text-field__input(class=maskClass type=type placeholder=placeholder id=id value=value)
+			input.text-field__input(
+				type=type 
+				placeholder=placeholder 
+				value=value 
+				'data-type'=maskParameters.type 
+				'data-pattern'=maskParameters.pattern 
+				'data-delimiter'=maskParameters.delimiter 
+				'data-blocks'=maskParameters.blocks
+			)
 		if subscription
 			i.material-icons.text-field__arrow arrow_forward
 
 
-//- есть id - можно ли их использовать
-//- нужен ли label
-//- оборачивать инпут в label?
-//- нужно ли использовать аттрибут type==date для masked
+
