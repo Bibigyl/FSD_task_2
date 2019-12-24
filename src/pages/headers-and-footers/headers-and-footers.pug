@@ -13,5 +13,68 @@ html(lang="ru")
         meta(name="theme-color" content="#ffffff")
         link(rel="stylesheet" href="headers-and-footers.css")
     body
+        - 
+            let options;
+            let items;
+            let dropdownContent = {
+                guests: {
+                    text: 'Сколько гостей',
+                    items: ['Взрослые', 'Дети', 'Младенцы'],
+                    buttons: ['Очистить', 'Применить']
+                },
+                furniture: {
+                    text: 'Удобства',
+                    items: ['Спальни', 'Кровати', 'Ванные комнаты'],
+                    buttons: false
+                }
+            };
+
+        include ../../components/header/header
+
+
+        section.headers-and-footers
+            .headers-and-footers__logo
+                include ../../common.blocks/logo/ui-logo.svg
+
+            .headers-and-footers__header
+                -
+                    options = {
+                        items: [
+                            {text: 'Home', isActive: true},
+                            {text: 'About Us'},
+                            {text: 'Services', hasSubmenu: true},
+                            {text: 'Careers'},
+                            {text: 'News'},
+                            {text: 'Documentation'}
+                        ],
+                        loginButton: {
+                            text: 'Login', isSecondary: true, isSmall: true
+                        },
+                        registerButton: {
+                            text: 'Register', isSmall: true 
+                        }
+                    }
+
+                +header(options)
+
+            .headers-and-footers__header-2
+                -
+                    options = {
+                        items: [
+                            {text: 'Home', isActive: true},
+                            {text: 'About Us'},
+                            {text: 'Services', hasSubmenu: true},
+                            {text: 'Careers'},
+                            {text: 'News'},
+                            {text: 'Documentation'}
+                        ],
+                        user: 'Cosmin Negoita'
+                    }
+
+                +header(options)
+
+
+
+
 
         script(src='./headers-and-footers.js')

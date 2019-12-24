@@ -24,3 +24,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 $("#menu__button").on("click", function() {
 	$(this).parent().children(".mobil-menu").slideToggle(300, "linear").css("display", "flex");
 })
+
+
+$(document).ready(function(){
+  $(".header__hamburger").click(function(){
+    $(this).toggleClass("header__hamburger_active");
+  });
+});

@@ -1,28 +1,67 @@
-// проблема с заменой, ошибка, 14 строка
-mixin header(header_class, menu, button_color_empty__text, button_colored__text, user)
-	.header.wide-block.header_main(class=header_class)
-		.container
+include ../../common.blocks/button/button
+
+mixin header({items, loginButton, registerButton, user=false})
+	header.header
+		.header__container
 			.header__logo
 				include ../../common.blocks/logo/logo-with-name.svg
-			nav.header__menu.menu
-				ul
-					each item in menu
-						li
-							a(href=item.href class=item.class target=item.target)= item.name
-								if item.arrow
-									i.material-icons expand_more
+			.header__menu
+				ul.header__menu-items
+					each item in items
+						- let active = item.isActive ? 'header__menu-item_active' : false;
+						- let withArrow = item.hasSubmenu ? 'header__menu-item_with-arrow' : false;
+						li.header__menu-item(class=[active, withArrow])= item.text
+							if item.hasSubmenu
+								i.header__menu-arrow.material-icons expand_more
+				if !user
+					.header__buttons
+						.header__button.header__login-button
+							+button(loginButton)
+						.header__button.header__register-button
+							+button(registerButton)
 
-			.button-wrap.button-wrap_not-colored(class=button_color_empty__text.class)
-				.button= button_color_empty__text.name
-			.button.button_colored.button_middle(class=button_colored__text.class)= button_colored__text.name
-			span.header__user-name(class=user.class)= user.name
+				if user
+					.header__user
+						.header__user-name= user
 
-			input#menu__button(type="checkbox")
-			label(for="menu__button")
-				div
-				div
-				div
-			.mobil-menu
+			.header__hamburger
+				span.header__hamburger-line
+				span.header__hamburger-line
+				span.header__hamburger-line
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//-	
+	// проблема с заменой, ошибка, 14 строка
+	mixin header(header_class, menu, button_color_empty__text, button_colored__text, user)
+		.header.wide-block.header_main(class=header_class)
+			.container
+				.header__logo
+					include ../../common.blocks/logo/logo-with-name.svg
 				nav.header__menu.menu
 					ul
 						each item in menu
@@ -30,7 +69,26 @@ mixin header(header_class, menu, button_color_empty__text, button_colored__text,
 								a(href=item.href class=item.class target=item.target)= item.name
 									if item.arrow
 										i.material-icons expand_more
+
 				.button-wrap.button-wrap_not-colored(class=button_color_empty__text.class)
 					.button= button_color_empty__text.name
 				.button.button_colored.button_middle(class=button_colored__text.class)= button_colored__text.name
-				span.header__user-name(class=user.class) <i class="fa fa-user-circle-o icons_colored " aria-hidden="true"></i>#{user.name}
+				span.header__user-name(class=user.class)= user.name
+
+				input#menu__button(type="checkbox")
+				label(for="menu__button")
+					div
+					div
+					div
+				.mobil-menu
+					nav.header__menu.menu
+						ul
+							each item in menu
+								li
+									a(href=item.href class=item.class target=item.target)= item.name
+										if item.arrow
+											i.material-icons expand_more
+					.button-wrap.button-wrap_not-colored(class=button_color_empty__text.class)
+						.button= button_color_empty__text.name
+					.button.button_colored.button_middle(class=button_colored__text.class)= button_colored__text.name
+					span.header__user-name(class=user.class) <i class="fa fa-user-circle-o icons_colored " aria-hidden="true"></i>#{user.name}
