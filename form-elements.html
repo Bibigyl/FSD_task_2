@@ -28,28 +28,39 @@
             <h3 class="text-field-wrap__title">Text field</h3>
             <div class="text-field-wrap__state">Default</div>
                 <div class="text-field">
-                  <label class="text-field__label"></label>
-                  <input class="text-field__input" type="email" placeholder="Email">
+                  <label class="text-field__label">
+                    <input class="text-field__input" type="email" placeholder="Email">
+                  </label>
                 </div>
           </div>
           <div class="text-field-wrap text-field-wrap_hover text-field-wrap-2">
             <h3 class="text-field-wrap__title">Text field</h3>
             <div class="text-field-wrap__state">Hover / Focus</div>
                 <div class="text-field">
-                  <label class="text-field__label"></label>
-                  <input class="text-field__input" type="text" value="This is pretty awesome">
+                  <label class="text-field__label">
+                    <input class="text-field__input" type="text" value="This is pretty awesome">
+                  </label>
                 </div>
           </div>
           <div class="dropdown-wrap dropdown-wrap-1">
             <h3 class="dropdown-wrap__title">Dropdown</h3>
             <div class="dropdown-wrap__state">Default</div>
-                <div class="dropdown dropdown_guests">
+                <div class="dropdown" initialText="Сколько гостей">
                   <div class="dropdown__field"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">expand_more</i></div>
                   <div class="dropdown__list">
                     <ul>
-                      <li class="dropdown__item">Взрослые<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
-                      <li class="dropdown__item">Дети<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
-                      <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item" item="Взрослые">Взрослые
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
+                      <li class="dropdown__item" item="Дети">Дети
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
+                      <li class="dropdown__item" item="Младенцы">Младенцы
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
                     </ul>
                     <div class="dropdown__button_to-clear hidden">
                           <button class="icon-link">Очистить</button>
@@ -64,8 +75,9 @@
             <h3 class="text-field-wrap__title">Masked text field</h3>
             <div class="text-field-wrap__state">Default</div>
                 <div class="text-field">
-                  <label class="text-field__label"></label>
-                  <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
+                  <label class="text-field__label">
+                    <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
+                  </label>
                 </div>
           </div>
           <div class="date-dropdown-wrap">
@@ -74,8 +86,9 @@
                     <h3 class="date-dropdown__title">Date dropdown</h3>
                     <div class="date-dropdown__text-field">
                           <div class="text-field">
-                            <label class="text-field__label"></label>
-                            <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
+                            <label class="text-field__label">
+                              <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
+                            </label>
                           </div><i class="date-dropdown__arrow material-icons">expand_more</i>
                     </div>
                   </div>
@@ -83,8 +96,9 @@
                     <h3 class="date-dropdown__title">Date dropdown</h3>
                     <div class="date-dropdown__text-field">
                           <div class="text-field">
-                            <label class="text-field__label"></label>
-                            <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
+                            <label class="text-field__label">
+                              <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
+                            </label>
                           </div><i class="date-dropdown__arrow material-icons">expand_more</i>
                     </div>
                   </div>
@@ -93,7 +107,7 @@
           <div class="filter-date-dropdown-wrap">
                 <div class="filter-date-dropdown">
                   <h3 class="filter-date-dropdown__title">Filter date dropdown</h3>
-                  <div class="date-dropdown__text-field-wrap">
+                  <div class="filter-date-dropdown__text-field-wrap">
                     <label for="ui-filter-date-dropdown-1"></label>
                     <input class="filter-date-dropdown__text-field" id="ui-filter-date-dropdown-1" name="ui-filter-date-dropdown-1" value="19 авг - 23 авг"><i class="date-dropdown__arrow material-icons">expand_more</i>
                   </div>
@@ -102,8 +116,9 @@
           <div class="subscription-text-field-wrap">
             <h3 class="subscription-text-field-wrap__title">Subscription text field</h3>
                 <div class="text-field text-field_subscription">
-                  <label class="text-field__label"></label>
-                  <input class="text-field__input" type="email" placeholder="Email"><i class="material-icons text-field__arrow">arrow_forward</i>
+                  <label class="text-field__label">
+                    <input class="text-field__input" type="email" placeholder="Email">
+                  </label><i class="material-icons text-field__arrow">arrow_forward</i>
                 </div>
           </div>
         </div>
@@ -243,12 +258,12 @@
           </div>
           <div class="not-colored-buttons-wrap buttons-wrap">
             <div class="button-wrap">
-                  <button class="button button_bordered">
+                  <button class="button button_secondary">
                     <div class="button__content">Click me</div>
                   </button>
             </div>
             <div class="button-wrap">
-                  <button class="button button_bordered">
+                  <button class="button button_secondary">
                     <div class="button__content">Click me</div>
                   </button>
             </div>
@@ -278,13 +293,22 @@
           <div class="dropdown-wrap dropdown-wrap-2">
             <h3 class="dropdown-wrap__title">Dropdown</h3>
             <div class="dropdown-wrap__state">Default</div>
-                <div class="dropdown dropdown_furniture">
+                <div class="dropdown dropdown_small" initialText="Удобства">
                   <div class="dropdown__field"><span class="dropdown__text">Удобства</span><i class="dropdown__arrow material-icons">expand_more</i></div>
                   <div class="dropdown__list">
                     <ul>
-                      <li class="dropdown__item">Спальни<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
-                      <li class="dropdown__item">Кровати<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
-                      <li class="dropdown__item">Ванные комнаты<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item" item="Спальни">Спальни
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
+                      <li class="dropdown__item" item="Кровати">Кровати
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
+                      <li class="dropdown__item" item="Ванные комнаты">Ванные комнаты
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -292,13 +316,22 @@
           <div class="dropdown-wrap dropdown-wrap-3">
             <h3 class="dropdown-wrap__title">Dropdown</h3>
             <div class="dropdown-wrap__state">Expanded</div>
-                <div class="dropdown dropdown_furniture dropdown_open">
+                <div class="dropdown dropdown_open dropdown_small" initialText="Удобства">
                   <div class="dropdown__field"><span class="dropdown__text">Удобства</span><i class="dropdown__arrow material-icons">expand_more</i></div>
                   <div class="dropdown__list">
                     <ul>
-                      <li class="dropdown__item">Спальни<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
-                      <li class="dropdown__item">Кровати<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
-                      <li class="dropdown__item">Ванные комнаты<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item" item="Спальни">Спальни
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
+                      <li class="dropdown__item" item="Кровати">Кровати
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
+                      <li class="dropdown__item" item="Ванные комнаты">Ванные комнаты
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -307,13 +340,22 @@
         <div class="form-elements__column-2-2 form-elements__column">
           <div class="dropdown-wrap dropdown-wrap-4">
             <h3 class="dropdown-wrap__title">Dropdown</h3>
-                <div class="dropdown dropdown_guests dropdown_open">
+                <div class="dropdown dropdown_open" initialText="Сколько гостей">
                   <div class="dropdown__field"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">expand_more</i></div>
                   <div class="dropdown__list">
                     <ul>
-                      <li class="dropdown__item">Взрослые<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
-                      <li class="dropdown__item">Дети<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
-                      <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item" item="Взрослые">Взрослые
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
+                      <li class="dropdown__item" item="Дети">Дети
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
+                      <li class="dropdown__item" item="Младенцы">Младенцы
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
                     </ul>
                     <div class="dropdown__button_to-clear hidden">
                           <button class="icon-link">Очистить</button>
@@ -328,13 +370,22 @@
         <div class="form-elements__column-2-3 form-elements__column">
           <div class="dropdown-wrap dropdown-wrap-5">
             <h3 class="dropdown-wrap__title">Dropdown</h3>
-                <div class="dropdown dropdown_guests dropdown_open">
+                <div class="dropdown dropdown_open" initialText="Сколько гостей">
                   <div class="dropdown__field"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">expand_more</i></div>
                   <div class="dropdown__list">
                     <ul>
-                      <li class="dropdown__item">Взрослые<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
-                      <li class="dropdown__item">Дети<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
-                      <li class="dropdown__item">Младенцы<span class="dropdown__button dropdown__button_plus">+</span><span class="dropdown__num">0</span><span class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</span></li>
+                      <li class="dropdown__item" item="Взрослые">Взрослые
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
+                      <li class="dropdown__item" item="Дети">Дети
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
+                      <li class="dropdown__item" item="Младенцы">Младенцы
+                        <button class="dropdown__button dropdown__button_minus dropdown__button_not-active">-</button><span class="dropdown__num">0</span>
+                        <button class="dropdown__button dropdown__button_plus">+</button>
+                      </li>
                     </ul>
                     <div class="dropdown__button_to-clear hidden">
                           <button class="icon-link">Очистить</button>
