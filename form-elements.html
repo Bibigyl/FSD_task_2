@@ -28,18 +28,14 @@
             <h3 class="text-field-wrap__title">Text field</h3>
             <div class="text-field-wrap__state">Default</div>
                 <div class="text-field">
-                  <label class="text-field__label">
-                    <input class="text-field__input" type="email" placeholder="Email">
-                  </label>
+                  <input class="text-field__input" type="email" placeholder="Email">
                 </div>
           </div>
           <div class="text-field-wrap text-field-wrap_hover text-field-wrap-2">
             <h3 class="text-field-wrap__title">Text field</h3>
             <div class="text-field-wrap__state">Hover / Focus</div>
                 <div class="text-field">
-                  <label class="text-field__label">
-                    <input class="text-field__input" type="text" value="This is pretty awesome">
-                  </label>
+                  <input class="text-field__input" type="text" value="This is pretty awesome">
                 </div>
           </div>
           <div class="dropdown-wrap dropdown-wrap-1">
@@ -74,10 +70,8 @@
           <div class="text-field-wrap text-field-wrap-3">
             <h3 class="text-field-wrap__title">Masked text field</h3>
             <div class="text-field-wrap__state">Default</div>
-                <div class="text-field">
-                  <label class="text-field__label">
-                    <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
-                  </label>
+                <div class="text-field text-field_masked">
+                  <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
                 </div>
           </div>
           <div class="date-dropdown-wrap">
@@ -86,9 +80,7 @@
                     <h3 class="date-dropdown__title">Date dropdown</h3>
                     <div class="date-dropdown__text-field">
                           <div class="text-field">
-                            <label class="text-field__label">
-                              <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
-                            </label>
+                            <input class="text-field__input" type="text">
                           </div><i class="date-dropdown__arrow material-icons">expand_more</i>
                     </div>
                   </div>
@@ -96,12 +88,11 @@
                     <h3 class="date-dropdown__title">Date dropdown</h3>
                     <div class="date-dropdown__text-field">
                           <div class="text-field">
-                            <label class="text-field__label">
-                              <input class="text-field__input text-field__input_masked" type="text" placeholder="ДД.ММ.ГГГГ">
-                            </label>
+                            <input class="text-field__input" type="text">
                           </div><i class="date-dropdown__arrow material-icons">expand_more</i>
                     </div>
                   </div>
+                  <div class="date-dropdown__calendar"></div>
                 </div>
           </div>
           <div class="filter-date-dropdown-wrap">
@@ -116,9 +107,7 @@
           <div class="subscription-text-field-wrap">
             <h3 class="subscription-text-field-wrap__title">Subscription text field</h3>
                 <div class="text-field text-field_subscription">
-                  <label class="text-field__label">
-                    <input class="text-field__input" type="email" placeholder="Email">
-                  </label><i class="material-icons text-field__arrow">arrow_forward</i>
+                  <input class="text-field__input" type="email" placeholder="Email"><i class="material-icons text-field__arrow">arrow_forward</i>
                 </div>
           </div>
         </div>
