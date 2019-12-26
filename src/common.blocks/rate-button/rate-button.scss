@@ -1,33 +1,11 @@
 .rate-button {
-  width: 120px;
 
-  &__label {
-    position: relative;
-    float: right;
-    cursor: pointer;
-
-    &:before {
-      content: 'star_border';
-      top: 0;
-      left: 0;
-      font-size: rem(24px);
-      background: $gradient;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }    
-  }
-
-  &__input {
-    display: none;
-    box-sizing: border-box;
-    padding: 0; 
-  }
-}
-
-.rate-button__label:hover,
-.rate-button__label:hover~.rate-button__label,
-.rate-button__input:checked~.rate-button__label {
-  &:before {
-    content: 'star';
+  &__icon {
+    display: inline-block;
+    font-size: rem(24px);
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
   }
 }

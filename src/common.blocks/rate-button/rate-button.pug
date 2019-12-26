@@ -1,7 +1,6 @@
-mixin rate-button(id, rate)
+mixin rate-button({rate, iconPositive = 'star', iconNegative = 'star_border'})
 	.rate-button
-		-let checked; 
-		-for (let i = 5; i > 0; i--)
-			-checked = (i == rate) ? true : false;
-			input.rate-button__input(value=i id=id+'_'+i name=id type="radio" checked=checked)
-			label.rate-button__label.material-icons(for=id+'_'+i)
+		-let icon;
+		-for (let i = 0; i < 5; i++)
+			-icon = i < rate ? iconPositive : iconNegative;
+			i.rate-button__icon.material-icons= icon
