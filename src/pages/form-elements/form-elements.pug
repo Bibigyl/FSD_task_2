@@ -92,7 +92,7 @@ html(lang="ru")
                                 firstDate: {
                                     title: 'Date dropdown'
                                 },
-                                lastDay: {
+                                lastDate: {
                                     title: 'Date dropdown',
                                     date: '19.08.2019'
                                 },
@@ -102,7 +102,14 @@ html(lang="ru")
                         +date-dropdown(options)
 
                     .filter-date-dropdown-wrap
-                        +filter-date-dropdown('ui-filter-date-dropdown-1', '19 авг - 23 авг', 'Filter date dropdown')
+                        -
+                            options = {
+                                title: 'Filter date dropdown',
+                                firstDate: '19.08.2019',
+                                lastDate: '23.08.2019',
+                                textField: {placeholder: '19 авг - 23 авг'}
+                            }
+                        +filter-date-dropdown(options)
 
                     .subscription-text-field-wrap
                         h3.subscription-text-field-wrap__title Subscription text field

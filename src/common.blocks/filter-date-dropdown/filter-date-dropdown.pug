@@ -1,8 +1,16 @@
-mixin filter-date-dropdown(id, value, title)
-    .filter-date-dropdown
+include ../text-field/text-field
+
+mixin filter-date-dropdown({title=false, firstDate=false, lastDate=false, textField})
+
+    .filter-date-dropdown.js-filter-date-dropdown(data-first-date=firstDate data-last-date=lastDate)
         if title
             h3.filter-date-dropdown__title= title
-        .filter-date-dropdown__text-field-wrap
-            label(for=id)
-            input.filter-date-dropdown__text-field(id=id name=id value=value)
-            i.date-dropdown__arrow.material-icons expand_more
+        .filter-date-dropdown__text-field
+            +text-field(textField)
+            i.filter-date-dropdown__arrow.material-icons expand_more
+
+        .filter-date-dropdown__calendar
+
+
+//- title?
+//- когда открыто несколько дропдаунов и ни наезжают друг на друга, как лучше сделать? По клику на любой дропдаун закрывать все остальные на странице? 

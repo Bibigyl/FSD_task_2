@@ -14,6 +14,7 @@ import "../../libs/daterangepicker/jquery.daterangepicker.js";
 import moment from 'moment'
 import 'moment/locale/ru' 
 moment.locale('ru');
+moment().format();
 
 //--------------- import common js -----------------------------
 
@@ -25,6 +26,7 @@ import "../../common.blocks/text-field/text-field.js";
 import "../../common.blocks/slider-range/slider-range.js";
 import "../../common.blocks/dropdown/dropdown.js";
 import "../../common.blocks/date-dropdown/date-dropdown.js";
+import "../../common.blocks/filter-date-dropdown/filter-date-dropdown.js";
 import {setDropdownValues} from "../../common.blocks/dropdown/dropdown.js";
 import "../../common.blocks/expandable-checkbox-list/expandable-checkbox-list.js";
 import "../../common.blocks/pagination/pagination.js";

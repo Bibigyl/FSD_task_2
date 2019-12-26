@@ -7,7 +7,7 @@ $( document ).ready(function() {
         let $last = $this.find('.date-dropdown__last-day input');
         let $calendar = $this.find('.date-dropdown__calendar');
         let firstDate = $this.find('.date-dropdown__first-day').attr('data-date') || false;
-        let lastDay = $this.find('.date-dropdown__last-day').attr('data-date') || false;
+        let lastDate = $this.find('.date-dropdown__last-day').attr('data-date') || false;
 
         $this.dateRangePicker({
             language: 'ru',
@@ -52,9 +52,9 @@ $( document ).ready(function() {
         });
 
         // если возможно, устанавливаем дату
-        if (firstDate && lastDay) {
+        if (firstDate && lastDate) {
             try {
-                $this.data('dateRangePicker').setDateRange(firstDate, lastDay);
+                $this.data('dateRangePicker').setDateRange(firstDate, lastDate);
             } catch(e) {
                 console.warn('Wrong date format');
             }            

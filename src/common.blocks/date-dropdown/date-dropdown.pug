@@ -1,11 +1,11 @@
 include ../text-field/text-field
 
-mixin date-dropdown({firstDate = false, lastDay = false, mask} = {})
+mixin date-dropdown({firstDate = false, lastDate = false, mask} = {})
     -
         let firstTextField = mask ? Object.assign({}, mask) : {};
         let lastTextField = mask ? Object.assign({}, mask) : {};
         firstTextField['value'] = firstDate.date || false;
-        lastTextField['value'] = lastDay.date || false;
+        lastTextField['value'] = lastDate.date || false;
 
     .date-dropdown.js-date-dropdown
 
@@ -17,10 +17,13 @@ mixin date-dropdown({firstDate = false, lastDay = false, mask} = {})
                 i.date-dropdown__arrow.material-icons expand_more
 
         .date-dropdown__last-day.date-dropdown__day(data-date=lastTextField.value)
-            if lastDay.title
-                h3.date-dropdown__title= lastDay.title
+            if lastDate.title
+                h3.date-dropdown__title= lastDate.title
             .date-dropdown__text-field
                 +text-field(lastTextField)
                 i.date-dropdown__arrow.material-icons expand_more
 
         .date-dropdown__calendar
+
+
+//- во многих местах добавляю title, здесь мне кажется он точно необходим
