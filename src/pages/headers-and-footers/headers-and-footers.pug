@@ -30,6 +30,8 @@ html(lang="ru")
             };
 
         include ../../components/header/header
+        include ../../components/footer/footer
+        include ../../components/footer-min/footer-min
 
 
         section.headers-and-footers
@@ -73,8 +75,41 @@ html(lang="ru")
 
                 +header(options)
 
+            .headers-and-footers__footer
+                -
+                    options = {
+                        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+                        items: [
+                            {title: 'Navigation', subitems: ['About Us', 'News', 'Support', 'Products']},
+                            {title: 'About us', subitems: ['Who we are', 'Our team', 'Careers', 'Investors']},
+                            {title: 'Support', subitems: ['Documentation', 'Community', 'Get in Touch']},
+                        ],
+                        subscription: {
+                            title: 'Subscribe to our newsletter',
+                            text: 'Receive our latest news and promotions in your inbox!',
+                            textField: {isSubscription: true, placeholder: 'Your email address'}
+                        },
+                        copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
+                        links: [
+                            {name: 'twitter'},
+                            {name: 'facebook-square'},
+                            {name: 'instagram'}
+                        ]
+                    }
 
+                +footer(options)
 
+            .headers-and-footers__footer-min
+                -
+                    options = {
+                        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis',
+                        links: [
+                            {name: 'twitter'},
+                            {name: 'facebook-square'},
+                            {name: 'instagram'}
+                        ]
+                    }
 
+                +footer-min(options)
 
         script(src='./headers-and-footers.js')

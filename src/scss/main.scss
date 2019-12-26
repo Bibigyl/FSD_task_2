@@ -9,9 +9,14 @@
 /*------------------------------ Import libs ----------------------------------------*/
 
 @import '~material-design-icons/iconfont/material-icons.css';
+
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+
 @import '../libs/jquery-ui-1.12.1.custom/jquery-ui.min.css';
 @import '../libs/daterangepicker/daterangepicker.scss';
-//@import '../libs/font-awesome/scss/font-awesome.scss';
+
 //@import '../libs/jquery.daterangepicker/daterangepicker.scss';
 
 /*------------------------------ Common styles ----------------------------------------*/

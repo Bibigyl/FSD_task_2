@@ -1,12 +1,10 @@
-.wide-block.footer-min
-	.footer-min-wrap.container
-		a.footer__logo
-			include ../../common.blocks/logo/logo-with-name.svg
-		p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-		.social-icons 
-			a.social-icon
-				i.fa.fa-twitter.icons_colored
-			a.social-icon
-				i.fa.fa-facebook-official.icons_colored
-			a.social-icon
-				i.fa.fa-instagram.icons_colored
+mixin footer-min({text, links})
+	footer.footer-min
+		.footer-min__container
+			.footer-min__logo
+				include ../../common.blocks/logo/logo-with-name.svg
+			.footer-min__text= text
+			.footer-min__links
+				each link in links
+					a.footer-min__link(href=link.href)
+						i.footer-min__link-icon.fab(class='fa-' + link.name)

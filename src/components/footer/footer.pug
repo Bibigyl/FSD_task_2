@@ -1,6 +1,6 @@
-include ../../common.blocks/button/button
+include ../../common.blocks/text-field/text-field
 
-mixin footer({text, items, subscription})
+mixin footer({text, items, subscription, copyright, links})
 	footer.footer
 		.footer__container
 			.footer__main-info
@@ -12,56 +12,22 @@ mixin footer({text, items, subscription})
 				each item in items
 					.footer__item
 						h3.footer__item-title= item.title
-						ul
-							each subitem in subitems
-								li.footer__subitem= subitem
+						nav
+							ul
+								each subitem in item.subitems
+									li.footer__subitem
+										a= subitem
 
 			.footer__subscription
 				h3.footer__subscription-title= subscription.title
 				p.footer__subscription-text= subscription.text
 				.footer__subscription-text-field
-					+button(subscription.button)
+					+text-field(subscription.textField)
 
 		.footer__line
-		.footer__container.footer__container
-
-
-
-
-
-
-
-
-//-
-	mixin footer(footer_class, info, uls, subscribe, copyright)
-		.footer.wide-block(class=footer_class)
-			.container
-				.footer__info
-					a.footer__logo
-						include ../../common.blocks/logo/logo-with-name.svg
-					p= info 
-				
-				each ul in uls
-					.footer__ul 
-						h3= ul.title
-						ul
-							each item in ul.items
-								li= item
-
-				.footer__subscribe 
-					h3= subscribe.title
-					p= subscribe.text
-					label.label
-						input.input.input_middle(type="email" placeholder=subscribe.button_text)
-						.input__arrow.arrow
-							i.material-icons.icons_colored arrow_forward
-			hr
-			.container
-				span.footer__copyright= copyright
-				.footer__social-icons.social-icons 
-					a.social-icon
-						i.fa.fa-twitter.icons_colored
-					a.social-icon
-						i.fa.fa-facebook-official.icons_colored
-					a.social-icon
-						i.fa.fa-instagram.icons_colored
+		.footer__bottom-container
+			p.footer__copyright= copyright
+			.footer__links
+				each link in links
+					a.footer__link(href=link.href)
+						i.footer__link-icon.fab(class='fa-' + link.name)

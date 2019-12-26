@@ -7,13 +7,15 @@ mixin header({items, loginButton, registerButton, user=false})
 				include ../../common.blocks/logo/logo-with-name.svg
 				
 			.header__menu
-				ul.header__menu-items
-					each item in items
-						- let active = item.isActive ? 'header__menu-item_active' : false;
-						- let withArrow = item.hasSubmenu ? 'header__menu-item_with-arrow' : false;
-						li.header__menu-item(class=[active, withArrow])= item.text
-							if item.hasSubmenu
-								i.header__menu-arrow.material-icons expand_more
+				nav
+					ul.header__menu-items
+						each item in items
+							- let active = item.isActive ? 'header__menu-item_active' : false;
+							- let withArrow = item.hasSubmenu ? 'header__menu-item_with-arrow' : false;
+							li.header__menu-item(class=[active, withArrow])
+								a(href=item.href)= item.text
+								if item.hasSubmenu
+									i.header__menu-arrow.material-icons expand_more
 
 				if !user
 					.header__buttons
@@ -30,3 +32,6 @@ mixin header({items, loginButton, registerButton, user=false})
 				span.header__hamburger-line
 				span.header__hamburger-line
 				span.header__hamburger-line
+
+
+//- здесь никак не сделаны подменю. Добавить? 

@@ -1,4 +1,114 @@
 .footer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  box-shadow: 0px 10px 20px $c5;
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 100px 20px 83px 20px;
+  }
+
+  &__logo {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__main-info {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 550px;
+    margin-right: 29px;
+    padding-top: 4px;
+  }
+
+  &__item {
+    padding: 0 20px;
+  }
+
+  &__item-title {
+    margin-bottom: 18px;
+  }
+
+  &__subitem {
+    margin-bottom: 14px;
+    color: $c50;
+    cursor: pointer;
+
+    &:hover {
+      color: $c75;
+    }
+  }
+
+  &__subscription {
+    width: 100%;
+    max-width: 260px;
+    margin-left: 20px;
+    padding-top: 4px;
+  }
+
+  &__subscription-title {
+    margin-bottom: 18px;
+  }
+
+  &__subscription-text {
+    margin-bottom: 23px;
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: $c25;
+  }
+
+  &__bottom-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding: 23px 21px 19px 20px;
+    flex-wrap: wrap;
+  }
+
+  &__copyright {
+    min-width: 150px;
+  }
+
+  &__link {
+    margin-left: 22px;
+  }
+
+  &__link-icon {
+    font-size: 24px;
+    cursor: pointer;
+    background: $gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;    
+  }
+}
+
+
+
+
+
+/* .footer {
   padding-top: 100px;
 
   .container {
@@ -143,4 +253,4 @@
       text-align: center;
     }
   }
-}
+} */
