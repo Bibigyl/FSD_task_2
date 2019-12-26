@@ -1,0 +1,13 @@
+mixin checkbox-button({text, richText, isChecked=false, name=false})
+
+	-let rich = richText ? 'checkbox-button_rich' : false;
+	.checkbox-button(class=rich data-name=name)
+		label.checkbox-button__label
+			input.checkbox-button__input(type="checkbox" checked=isChecked)
+			.checkbox-button__text-block
+				if richText
+					span.checkbox-button__rich-text= richText
+				span.checkbox-button__text= text
+
+
+//- rich-text подходит? или main-text, title-text, accent-text 

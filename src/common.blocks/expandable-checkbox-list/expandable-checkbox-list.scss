@@ -1,14 +1,10 @@
 .expandable-checkbox-list {
   position: relative;
-  width: 266px;
+  width: 100%;
+  min-width: 250px;
+  max-width: 266px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-
-  .checkbox-buttons {
-    background-color: #fff;
-    display: none;
-  }
 
   &__title {
     margin-bottom: 17px;
@@ -20,20 +16,30 @@
     line-height: 15px;
     cursor: pointer;
     margin-bottom: 17px;
+    margin-left: auto;
+  }
+
+  &__list {
+    background-color: #fff;
+    display: none;
+    width: 100%;
+  }
+
+  &__item {
+    display: block;
+    list-style-type: none;
+    margin-bottom: 10px;
+    width: 100%;
   }
 
   &_open {
-    .checkbox-buttons {
+    .expandable-checkbox-list__list {
       display: block;
     }
 
-    .expandable-checkbox-list {
-      max-height: 300px;
-
-      &__arrow {
-        transform: scale(1, -1);
-        transition: .2s;
-      }
+    .expandable-checkbox-list__arrow {
+      transform: scale(1, -1);
+      transition: .2s;
     }
   }
 }

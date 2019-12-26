@@ -19,7 +19,7 @@ html(lang="ru")
         include ../../common.blocks/date-dropdown/date-dropdown
         include ../../common.blocks/filter-date-dropdown/filter-date-dropdown
 
-        include ../../common.blocks/checkbox-buttons/checkbox-buttons
+        include ../../common.blocks/checkbox-button/checkbox-button
         include ../../common.blocks/radio-buttons/radio-buttons
         include ../../common.blocks/toggle/toggle
         include ../../common.blocks/like-button/like-button
@@ -30,7 +30,6 @@ html(lang="ru")
         include ../../common.blocks/icon-link/icon-link
         include ../../common.blocks/pagination/pagination
         include ../../common.blocks/expandable-checkbox-list/expandable-checkbox-list
-        include ../../common.blocks/rich-checkbox-buttons/rich-checkbox-buttons
         include ../../common.blocks/bullet-list/bullet-list
 
         include ../../common.blocks/advantages/advantages
@@ -42,12 +41,12 @@ html(lang="ru")
             let dropdownContent = {
                 guests: {
                     text: 'Сколько гостей',
-                    items: ['Взрослые', 'Дети', 'Младенцы'],
+                    items: ['взрослые', 'дети', 'младенцы'],
                     buttons: ['Очистить', 'Применить']
                 },
                 furniture: {
                     text: 'Удобства',
-                    items: ['Спальни', 'Кровати', 'Ванные комнаты'],
+                    items: ['спальни', 'кровати', 'ванные комнаты'],
                     buttons: false
                 }
             };
@@ -111,14 +110,17 @@ html(lang="ru")
                 .form-elements__column-1-2.form-elements__column
 
                     .checkbox-buttons-wrap
+                        h3.checkbox-buttons-wrap__title Checkbox-buttons
                         -
                             items = [
-                                {text: 'Можно курить', name: 'smoking'},
-                                {text: 'Можно с питомцами', name: 'pets', isChecked: true},
-                                {text: 'Можно пригласить гостей (до 10 человек)', name: 'guests', isChecked: true}
+                                {text: 'Можно курить'},
+                                {text: 'Можно с питомцами', isChecked: true},
+                                {text: 'Можно пригласить гостей (до 10 человек)', isChecked: true}
                             ]
 
-                        +checkbox-buttons('Checkbox buttons', items)
+                        each item in items
+                            .checkbox-button-wrap
+                                +checkbox-button(item)
 
                     .radio-buttons-wrap
                         -
@@ -183,7 +185,6 @@ html(lang="ru")
                         +pagination(12, 101, 1)
 
 
-
             .form-elements__container.form-elements__container-2
                 .form-elements__column-2-1.form-elements__column
 
@@ -224,20 +225,44 @@ html(lang="ru")
                         ]
 
                     .expandable-checkbox-list-wrap-1
-                        +expandable-checkbox-list('Expandable checkbox list', items)
+                        -
+                            options = {
+                                title: 'Expandable checkbox list',
+                                items: items
+                            }
+
+                        +expandable-checkbox-list(options)
 
                     .expandable-checkbox-list-wrap-2
-                        +expandable-checkbox-list('Expandable checkbox list', items, true)
+                        -
+                            options = {
+                                title: 'Expandable checkbox list',
+                                items: items,
+                                isOpen: true
+                            }
+
+                        +expandable-checkbox-list(options)
 
                 .form-elements__column-3-2.form-elements__column
                     .rich-checkbox-buttons-wrap
-                        -
-                            items = [
-                                {title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.'},
-                                {title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.'}
-                            ]
+                        h3.rich-checkbox-buttons-wrap__title Rich checkbox buttons
+                        .rich-checkbox-button-wrap
+                            -
+                                options = {
+                                    richText: 'Широкий коридор',
+                                    text: 'Ширина коридоров в номере не менее 91 см.'
+                                }
 
-                        +rich-checkbox-buttons('Rich checkbox buttons', items)
+                            +checkbox-button(options)
+
+                        .rich-checkbox-button-wrap
+                            -
+                                options = {
+                                    richText: 'Помощник для инвалидов',
+                                    text: 'На 1 этаже вас встретит специалист и проводит до номера.'
+                                }
+
+                            +checkbox-button(options)
 
                 .form-elements__column-3-3.form-elements__column
                     .bullet-list-wrap
@@ -251,30 +276,5 @@ html(lang="ru")
                         +bullet-list('Bullet list', items)
 
 
-            .form-elements__container.form-elements__container-4
-                .form-elements__column-4-1.form-elements__column
-                    .advantages-wrap
-                        -
-                            items = [
-                                {title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'},
-                                {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}
-                            ]
 
-                        +advantages(items)
-
-                .form-elements__column-4-2.form-elements__column
-                    .review-wrap
-                        -
-                            options = {
-                                avatar: 'form-elements__avatar.png', 
-                                likeButton: {number: 12, isChecked: true}, 
-                                name: 'Мурад Сарафанов', 
-                                time: '5 дней назад', 
-                                comment: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
-                            }
-
-                        +review(options)
-                        
-    
-        
         script(src='./form-elements.js')

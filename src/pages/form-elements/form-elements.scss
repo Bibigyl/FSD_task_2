@@ -176,7 +176,7 @@
 }
 
 .date-dropdown-wrap {
-  margin-bottom: 41px;
+  margin-bottom: 36px;
 }
 
 .filter-date-dropdown-wrap {
@@ -190,11 +190,19 @@
 }
 
 .checkbox-buttons-wrap {
-  .checkbox-button__label:last-child .checkbox-button__text {
-    max-width: 240px;
+  &__title {
+    margin-bottom: 16px;
   }
 
   margin-bottom: 38px;
+}
+
+.checkbox-button-wrap {
+  margin-bottom: 10px;
+
+  &:last-child {
+    max-width: 240px;
+  }
 }
 
 .radio-buttons-wrap {
@@ -308,8 +316,20 @@
 }
 
 .rich-checkbox-buttons-wrap {
-  .rich-checkbox-button:first-child .rich-checkbox-button__text {
-    max-width: 200px;
+  &__title {
+    margin-bottom: 16px;
+  }
+}
+
+.rich-checkbox-button-wrap {
+  margin-bottom: 8px;
+
+  &:nth-child(2) {
+    max-width: 230px;
+  }
+
+  &:nth-child(3) {
+    max-width: 260px;
   }
 }
 
