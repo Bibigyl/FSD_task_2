@@ -1,0 +1,32 @@
+.icon-text {
+  width: 100%;
+  display: flex;
+
+  &__icon {
+    margin-right: 10px;
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 48px;
+    cursor: default;
+  }
+
+  &__text-block {
+    width: 100%;
+    min-width: 150px;
+  }
+
+  &__text {
+    display: block;
+  }
+
+  &__rich-text {
+    display: block;
+    font-weight: 700;
+  }
+
+  &_underlined {
+    padding-bottom: 20px;    
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);  
+  }
+}
