@@ -30,8 +30,8 @@ $( document ).ready(function() {
             customArrowPrevSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_back</i></div>',
             customArrowNextSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_forward</i></div>',
             container: $calendar
-        });
-        
+            
+        })
         .bind('datepicker-opened', function() {
     
             $calendar.addClass('filter-date-dropdown__calendar_open');
