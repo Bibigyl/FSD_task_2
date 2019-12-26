@@ -29,7 +29,7 @@ $( document ).ready(function() {
         // Cобытия "принять" и "очистить" создаются после открытия
         .bind('datepicker-opened', function() {
 
-            $calendar.addClass('dropdown__calendar_open');
+            $calendar.addClass('.date-dropdown__calendar_open');
     
             $this.find('.calendar__link_clear').click(function(evt) {
                 evt.stopPropagation();
@@ -39,14 +39,14 @@ $( document ).ready(function() {
             $this.find('.calendar__link_apply').click(function(evt) {
                 evt.stopPropagation();
                 $this.data('dateRangePicker').close();
-                $calendar.removeClass('dropdown__calendar_open');
+                $calendar.removeClass('.date-dropdown__calendar_open');
             });
 
             $this.find('.date-dropdown__arrow').click(function(evt) {
-                if ($calendar.hasClass('dropdown__calendar_open')) {
+                if ($calendar.hasClass('.date-dropdown__calendar_open')) {
                     evt.stopPropagation();
                     $this.data('dateRangePicker').close();
-                    $calendar.removeClass('dropdown__calendar_open');        
+                    $calendar.removeClass('.date-dropdown__calendar_open');        
                 }
             });
         });
