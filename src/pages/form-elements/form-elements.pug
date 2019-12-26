@@ -51,6 +51,14 @@ html(lang="ru")
                     buttons: false
                 }
             };
+            let dateTextField = {
+                maskParameters: {
+                    type: 'date',
+                    delimiter: '.',
+                    pattern: ['d', 'm', 'Y']
+                },
+                placeholder: 'ДД.ММ.ГГГГ'   
+            }
         
         section.form-elements
             .form-elements__logo

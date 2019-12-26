@@ -8,11 +8,27 @@ $( document ).ready(function() {
 		if ( $(this).attr('data-type') ) {
 			let type = $(this).attr('data-type');
 			params[type] = true;
-			params[type + 'Pattern'] = JSON.parse( $(this).attr('data-pattern') );
+
+			try {
+				params[type + 'Pattern'] = $(this).attr('data-pattern') ?
+				JSON.parse( $(this).attr('data-pattern') ) :
+				false;				
+			} catch(e) {
+				console.warn(e.stack);
+			}
 		}
 
-		params['delimiter'] = $(this).attr('data-delimiter');
-		params['blocks'] = $(this).attr('data-blocks');
+		params['delimiter'] = $(this).attr('data-delimiter') ?
+		$(this).attr('data-delimiter') :
+		false;
+
+		try {
+			params['blocks'] = $(this).attr('data-blocks') ?
+			JSON.parse( $(this).attr('data-blocks') ) :
+			false;				
+		} catch(e) {
+			console.warn(e.stack);
+		}
 
 		let cleave = new Cleave($(this), params);	
 	});
