@@ -3,7 +3,7 @@ mixin text-field({isSubscription, maskParameters = false, placeholder = false, t
 	- let subscription = isSubscription ? 'text-field_subscription' : false;
 	- let classMasked = maskParameters ? 'text-field_masked' : false;
 
-	.text-field(class=[subscription, classMasked])
+	.text-field.js-text-field(class=[subscription, classMasked])
 		input.text-field__input(
 			type=type 
 			placeholder=placeholder 
