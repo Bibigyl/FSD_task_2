@@ -1,12 +1,15 @@
 $( document ).ready(function() {
 
-    $('.date-dropdown').each( function() {
+    $('.js-date-dropdown').each( function() {
 
         let $this = $(this);
-        let $first = $(this).find('.date-dropdown__first-day').find('input');
-        let $last = $(this).find('.date-dropdown__last-day').find('input');
+        let $first = $this.find('.date-dropdown__first-day input');
+        let $last = $this.find('.date-dropdown__last-day input');
+        let $calendar = $this.find('.date-dropdown__calendar');
+        let firstDate = $this.find('.date-dropdown__first-day').attr('data-date') || false;
+        let lastDay = $this.find('.date-dropdown__last-day').attr('data-date') || false;
 
-        $(this).dateRangePicker({
+        $this.dateRangePicker({
             language: 'ru',
             singleMonth: true,
             showShortcuts: false,
@@ -20,20 +23,41 @@ $( document ).ready(function() {
             },
             customArrowPrevSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_back</i></div>',
             customArrowNextSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_forward</i></div>',
+            container: $calendar
         })
         
         // Cобытия "принять" и "очистить" создаются после открытия
         .bind('datepicker-opened', function() {
+
+            $calendar.addClass('dropdown__calendar_open');
     
-            $('.date-picker-wrapper').find('.calendar__link_clear').click(function(evt) {
+            $this.find('.calendar__link_clear').click(function(evt) {
                 evt.stopPropagation();
                 $this.data('dateRangePicker').clear();
             });
     
-            $('.date-picker-wrapper').find('.calendar__link_apply').click(function(evt) {
+            $this.find('.calendar__link_apply').click(function(evt) {
                 evt.stopPropagation();
                 $this.data('dateRangePicker').close();
+                $calendar.removeClass('dropdown__calendar_open');
+            });
+
+            $this.find('.date-dropdown__arrow').click(function(evt) {
+                if ($calendar.hasClass('dropdown__calendar_open')) {
+                    evt.stopPropagation();
+                    $this.data('dateRangePicker').close();
+                    $calendar.removeClass('dropdown__calendar_open');        
+                }
             });
         });
+
+        // если возможно, устанавливаем дату
+        if (firstDate && lastDay) {
+            try {
+                $this.data('dateRangePicker').setDateRange(firstDate, lastDay);
+            } catch(e) {
+                console.warn('Wrong date format');
+            }            
+        }
     });
 });

@@ -1,26 +1,26 @@
 include ../text-field/text-field
 
-mixin date-dropdown(firstDay, lastDay)
+mixin date-dropdown({firstDate = false, lastDay = false, mask} = {})
     -
-        let firstVal = firstDay.date || false;
-        let lastVal = lastDay.date || false;
-        let first = firstVal ? {value: firstVal} : {isMasked: true};
-        let last = lastVal ? {value: lastVal} : {isMasked: true};
+        let firstTextField = mask ? Object.assign({}, mask) : {};
+        let lastTextField = mask ? Object.assign({}, mask) : {};
+        firstTextField['value'] = firstDate.date || false;
+        lastTextField['value'] = lastDay.date || false;
 
-    .date-dropdown
+    .date-dropdown.js-date-dropdown
 
-        .date-dropdown__first-day.date-dropdown__day
-            if firstDay.title
-                h3.date-dropdown__title= firstDay.title
+        .date-dropdown__first-day.date-dropdown__day(data-date=firstTextField.value)
+            if firstDate.title
+                h3.date-dropdown__title= firstDate.title
             .date-dropdown__text-field
-                +text-field(first)
+                +text-field(firstTextField)
                 i.date-dropdown__arrow.material-icons expand_more
 
-        .date-dropdown__last-day.date-dropdown__day
+        .date-dropdown__last-day.date-dropdown__day(data-date=lastTextField.value)
             if lastDay.title
                 h3.date-dropdown__title= lastDay.title
             .date-dropdown__text-field
-                +text-field(last)
+                +text-field(lastTextField)
                 i.date-dropdown__arrow.material-icons expand_more
 
         .date-dropdown__calendar
