@@ -6,15 +6,11 @@ import './form-elements.scss';
 //--------------- import libs -----------------------------
 
 import "../../libs/jquery-ui-1.12.1.custom/jquery-ui.min.js";
-//import "../../libs/daterangepicker-master/moment.min.js";
-//import "../../libs/daterangepicker-master/daterangepicker.js";
 import "../../libs/daterangepicker/jquery.daterangepicker.js";
-
 
 import moment from 'moment'
 import 'moment/locale/ru' 
 moment.locale('ru');
-moment().format();
 
 //--------------- import common js -----------------------------
 

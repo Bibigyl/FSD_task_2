@@ -44,7 +44,7 @@
   }
 
   &__date-dropdown {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
   &__dropdown-title {
@@ -114,6 +114,10 @@
     float: right;
     margin-left: 2px;
     font-size: 19px;
+  }
+
+  .date-picker-wrapper {
+    margin-left: -10px;
   }
 }
 

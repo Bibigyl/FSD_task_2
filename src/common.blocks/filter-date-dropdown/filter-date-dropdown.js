@@ -39,6 +39,7 @@ $( document ).ready(function() {
             $this.find('.calendar__link_clear').click(function(evt) {
                 evt.stopPropagation();
                 $this.data('dateRangePicker').clear();
+                $input.val('');
             });
     
             $this.find('.calendar__link_apply').click(function(evt) {

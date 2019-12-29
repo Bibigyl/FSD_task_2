@@ -27,7 +27,7 @@ mixin room-card({image, number, lux, price, rateButton, reviews})
 			.room-card__line
 
 			.room-card__rate-button
-				+rate-button(rateButton.id, rateButton.rate)
+				+rate-button(rateButton)
 			.room-card__reviews
 				h3.room-card__reviews-number= reviews.number
 				span.room-card__reviews-text= reviews.text

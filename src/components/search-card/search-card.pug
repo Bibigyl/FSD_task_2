@@ -8,7 +8,7 @@ mixin search-card({title, dateDropdown, dropdownTitle, dropdown, button})
 			h1.search-card__title= title
 
 			.search-card__date-dropdown
-				+date-dropdown(dateDropdown.firstDate, dateDropdown.lastDate)
+				+date-dropdown(dateDropdown)
 
 			.search-card__dropdown
 				h3.search-card__dropdown-title= dropdownTitle

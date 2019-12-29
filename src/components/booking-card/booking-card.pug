@@ -16,7 +16,7 @@ mixin booking-card({room, dateDropdown, dropdownTitle, dropdown, infoItems, tota
 					| #{room.term}
 
 			.booking-card__date-dropdown
-				+date-dropdown(dateDropdown.firstDate, dateDropdown.lastDate)
+				+date-dropdown(dateDropdown)
 				
 			.booking-card__dropdown
 				h3.booking-card__dropdown-title= dropdownTitle
