@@ -2,12 +2,12 @@ include ../../common.blocks/date-dropdown/date-dropdown
 include ../../common.blocks/dropdown/dropdown
 include ../../common.blocks/button/button
 
-mixin booking-card({room, dateDropdown, dropdownTitle, dropdown, infoItems, total, button})
+mixin booking-card({room, dateDropdown, dropdown, infoItems, total, button})
 	.booking-card
 		form
 
 			.booking-card__main-info
-				h2.booking-card__number 
+				span.booking-card__number 
 					span.booking-card__simbol-number №
 					| #{room.number}
 				span.booking-card__class= room.class
@@ -19,7 +19,6 @@ mixin booking-card({room, dateDropdown, dropdownTitle, dropdown, infoItems, tota
 				+date-dropdown(dateDropdown)
 				
 			.booking-card__dropdown
-				h3.booking-card__dropdown-title= dropdownTitle
 				+dropdown(dropdown)
 
 			.booking-card__info

@@ -15,13 +15,13 @@ mixin room-card({image, number, lux, price, rateButton, reviews})
 
 		.room-card__content
 			.room-card__room
-				h2.room-card__room-number 
+				.room-card__room-number 
 					span.room-card__number-simbol №
 					| #{number}
 				if lux
 					span.room-card__class= lux
 			.room-card__price
-				h3.room-card__price-number= price.number
+				.room-card__price-number= price.number
 				span.room-card__price-text= price.text
 
 			.room-card__line

@@ -2,6 +2,10 @@
   width: 100%;
   max-width: 320px;
 
+  &__title {
+    margin-bottom: 5px;
+  }
+
   &__input {
     background: #FFFFFF;
     border: 1px solid $c25;

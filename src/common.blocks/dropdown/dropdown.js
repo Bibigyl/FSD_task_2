@@ -22,7 +22,7 @@ $( document ).ready(function() {
             }
 
             $dropdown.find(".dropdown__field span").text(initialText)
-            $(this).addClass("hidden");
+            $(this).addClass("dropdown__button_hidden");
         });
     });
 
@@ -71,13 +71,13 @@ $( document ).ready(function() {
             }
     
             if ( $(this).hasClass("dropdown__button_plus") ) {
-                $dropdown.find(".dropdown__button_to-clear").removeClass("hidden");
+                $dropdown.find(".dropdown__button_to-clear").removeClass("dropdown__button_hidden");
             } else {
                 for ( let i = 0; i < $ul.children().length; i++ ) {
                     count = count + $ul.children().eq(i).find(".dropdown__num").text()*1;
                 }
                 if ( count == 0 ) {
-                    $dropdown.find(".dropdown__button_to-clear").addClass("hidden");
+                    $dropdown.find(".dropdown__button_to-clear").addClass("dropdown__button_hidden");
                 }
             }
     

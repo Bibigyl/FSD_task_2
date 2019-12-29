@@ -62,8 +62,10 @@ html(lang="ru")
                                     },
                                     mask: dateTextField
                                 },
-                                dropdownTitle: 'Гости',
-                                dropdown: {content: dropdownContent.guests},
+                                dropdown: {
+                                    content: dropdownContent.guests, 
+                                    title: 'Гости'
+                                },
                                 button: {
                                     text: 'Подобрать номер',
                                     appearance: 'filled',
@@ -75,6 +77,7 @@ html(lang="ru")
 
                     .check-in-card-wrap.card-wrap
                         -
+                            let birthdayTextField = Object.assign({}, dateTextField, {title: 'Дата рождения'});
                             options = {
                                 title: 'Регистрация аккаунта',
                                 textFieldName: {placeholder: 'Имя', name: 'Name'},
@@ -86,8 +89,7 @@ html(lang="ru")
                                         {text: 'Женщина'}
                                     ]
                                 },
-                                birthdayTitle: 'Дата рождения', 
-                                textFieldBirthday: dateTextField, 
+                                textFieldBirthday: birthdayTextField, 
                                 credentialsTitle: 'Данные для входа в сервис', 
                                 textFieldEmail: {placeholder: 'Email', type: 'email', name: 'Email'}, 
                                 textFieldPassword: {placeholder: 'Пароль', type: 'password', name: "Password"}, 
@@ -130,7 +132,10 @@ html(lang="ru")
                                     mask: dateTextField
                                 },
                                 dropdownTitle: 'Гости',
-                                dropdown: {content: dropdownContent.guests},
+                                dropdown: {
+                                    content: dropdownContent.guests,
+                                    title: 'Гости'
+                                },
                                 infoItems: [
                                     {text: '9 990₽ х 4 суток', sum: '39 960₽'},
                                     {text: 'Сбор за услуги: скидка 2 179₽', sum: '0₽', hasIcon: true},

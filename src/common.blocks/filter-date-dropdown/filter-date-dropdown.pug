@@ -1,10 +1,12 @@
 include ../text-field/text-field
+include ../../common.blocks/title/title
 
-mixin filter-date-dropdown({title=false, firstDate=false, lastDate=false, textField = {}})
+mixin filter-date-dropdown({title=false, firstDate=false, lastDate=false, textField = {}} = {})
 
     .filter-date-dropdown.js-filter-date-dropdown(data-first-date=firstDate data-last-date=lastDate)
         if title
-            h3.filter-date-dropdown__title= title
+            .filter-date-dropdown__title
+                +title(title)
         .filter-date-dropdown__text-field
             +text-field(textField)
             i.filter-date-dropdown__arrow.material-icons expand_more
@@ -12,6 +14,5 @@ mixin filter-date-dropdown({title=false, firstDate=false, lastDate=false, textFi
         .filter-date-dropdown__calendar
 
 
-//- title?
 //- когда открыто несколько дропдаунов и они наезжают друг на друга, как лучше сделать? По клику на любой дропдаун закрывать все остальные на странице?
 //- на filter-date-dropdown и на date-dropdown можно добавить язык в атрибуты, чтоб менять его в функции, добавить?

@@ -14,6 +14,8 @@ html(lang="ru")
         link(rel="stylesheet" href="form-elements.css")
     body
 
+        include ../../common.blocks/title/title
+
         include ../../common.blocks/text-field/text-field
         include ../../common.blocks/dropdown/dropdown
         include ../../common.blocks/date-dropdown/date-dropdown
@@ -279,7 +281,7 @@ html(lang="ru")
                                 'Время прибытия — после 13:00, а выезд до 12:00'
                             ]
 
-                        +bullet-list('Bullet list', items)
+                        +bullet-list({title: 'Bullet list', items: items})
 
 
             .form-elements__container.form-elements__container-4

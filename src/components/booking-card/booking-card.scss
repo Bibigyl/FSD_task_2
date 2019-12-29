@@ -17,6 +17,10 @@
     font-size: rem(25px);
     display: inline;
     margin-right: 4px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    line-height: 24px;
+    color: $c100;
   }
 
   &__simbol-number {
@@ -45,10 +49,6 @@
 
   &__date-dropdown {
     margin-bottom: 15px;
-  }
-  
-  &__dropdown-title {
-    margin-bottom: 5px;
   }
 
   &__dropdown {

@@ -127,6 +127,8 @@ hr {
 
 /*------- Blocks styles -------------*/
 
+@import '../common.blocks/title/title.scss';
+
 @import '../common.blocks/text-field/text-field.scss';
 @import '../common.blocks/date-dropdown/date-dropdown.scss';
 @import '../common.blocks/filter-date-dropdown/filter-date-dropdown.scss';

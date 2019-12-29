@@ -4,6 +4,10 @@
   max-width: 320px;
   min-width: 240px;
 
+  &__title {
+    margin-bottom: 5px;
+  }
+
   &__field {
     width: 100%;
     display: flex;
@@ -95,6 +99,10 @@
       display: inline-block;
       float: right;
       padding: 9px 7px 7px 14px;
+    }
+
+    &_hidden {
+      display: none;
     }
   }
 

@@ -1,7 +1,11 @@
-mixin bullet-list(title, items)
+include ../title/title
+
+mixin bullet-list({title, items})
 	.bullet-list
 		if title
-			h3.bullet-list__title= title
+			.bullet-list__title
+				+title(title)
+
 		ul.bullet-list__list
-			-for (let i = 0; i < items.length; i++)
-				li.bullet-list__item= items[i]
+			each item in items
+				li.bullet-list__item= item

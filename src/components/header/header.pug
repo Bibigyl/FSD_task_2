@@ -7,7 +7,7 @@ mixin header({items, loginButton, registerButton, user=false})
 				include ../../common.blocks/logo/logo-with-name.svg
 				
 			.header__menu
-				nav
+				nav.header__menu-nav
 					ul.header__menu-items
 						each item in items
 							- let active = item.isActive ? 'header__menu-item_active' : false;
@@ -26,6 +26,7 @@ mixin header({items, loginButton, registerButton, user=false})
 
 				if user
 					.header__user
+						.header__user-icon.material-icons person
 						.header__user-name= user
 
 			.header__hamburger

@@ -1,9 +1,14 @@
-mixin text-field({isSubscription, maskParameters = false, placeholder = false, type = 'text', value = false} = {})
+include ../../common.blocks/title/title
+
+mixin text-field({title, isSubscription, maskParameters = false, placeholder = false, type = 'text', value = false} = {})
 
 	- let subscription = isSubscription ? 'text-field_subscription' : false;
 	- let classMasked = maskParameters ? 'text-field_masked' : false;
 
 	.text-field.js-text-field(class=[subscription, classMasked])
+		if title
+			.text-field__title
+				+title(title)
 		input.text-field__input(
 			type=type 
 			placeholder=placeholder 

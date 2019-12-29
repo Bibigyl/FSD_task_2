@@ -2,7 +2,7 @@ include ../../common.blocks/date-dropdown/date-dropdown
 include ../../common.blocks/dropdown/dropdown
 include ../../common.blocks/button/button
 
-mixin search-card({title, dateDropdown, dropdownTitle, dropdown, button})
+mixin search-card({title, dateDropdown, dropdown, button})
 	.search-card
 		form
 			h1.search-card__title= title
@@ -11,7 +11,6 @@ mixin search-card({title, dateDropdown, dropdownTitle, dropdown, button})
 				+date-dropdown(dateDropdown)
 
 			.search-card__dropdown
-				h3.search-card__dropdown-title= dropdownTitle
 				+dropdown(dropdown)
 				
 			.search-card__button

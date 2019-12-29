@@ -1,6 +1,9 @@
-mixin toggle({title = false, text, isChecked = false})
+include ../../common.blocks/title/title
+
+mixin toggle({title, text, isChecked = false})
 	if title
-		h3= title
+		.toggle__title
+			+title(title)
 	label.toggle__label
 		input.toggle(type="checkbox" checked=isChecked)
 		div.toggle__text= text
