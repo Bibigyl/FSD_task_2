@@ -40,3 +40,11 @@
     top: 5px;
   }
 }
+
+@media (max-width: 340px) {
+  .date-dropdown {
+    &__calendar {
+      left: -20px;
+    }
+  }
+}

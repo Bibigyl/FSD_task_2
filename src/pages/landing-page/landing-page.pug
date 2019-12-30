@@ -57,7 +57,8 @@ html(lang="ru")
                     },
                     registerButton: {
                         text: 'Зарегистрироваться', isSmall: true 
-                    }
+                    },
+                    isMenuItemSlim: true
                 }
 
             +header(options)
@@ -91,6 +92,9 @@ html(lang="ru")
                     
                     +search-card(options)
 
+                .landing-page__tagline
+                    p Лучшие номера для вашей работы, отдыха и просто вдохновения
+
         .landing-page__footer
             -
                 options = {
@@ -117,38 +121,3 @@ html(lang="ru")
 
 
         script(src="landing-page.js")
-        
-
-//-
-            .landing-page__front.background-image(style=`background-image: url( ${require('./images/landing-page__front.jpg')})`)
-            include ../../components/header/header.pug
-            +header(
-                "landing-page__header header_language_ru",
-            [
-                {name: "О нас", href: "#"},
-                {name: "Услуги", href: "#", arrow: true},
-                {name: "Вакансии", href: "#"},
-                {name: "Новости", href: "#"},
-                {name: "Соглашения", href: "#", arrow: true},
-            ],
-                {name: "Войти"}, 
-                {name: "Зарегистрироваться"}, 
-                {name: "Cosmin Negoita", class: "hidden"}
-            )
-            .container.front__container
-                include ../../components/search-card/search-card.pug
-                .front__text
-                    p Лучшие номера для вашей работы, отдыха и просто вдохновения
-        
-            include ../../components/footer/footer.pug
-            +footer(
-                "landing-page__footer",
-                "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
-                [
-                    {title: "Навигация", items: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
-                    {title: "О нас", items: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
-                    {title: "Служба поддержки", items: ["Соглашения", "Сообщества", "Связь с нами"]}
-                ],
-                {title: "Подписка", text: "Получайте специальные предложения и новости сервиса", button_text: "Email"},
-                "Copyright © 2018 Toxin отель. Все права зачищены."
-            )

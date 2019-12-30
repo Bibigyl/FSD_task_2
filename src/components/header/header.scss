@@ -31,13 +31,15 @@
   &__menu-items {
     display: flex;
     margin-right: 17px;
+    align-self: flex-end;
+    height: 100%;
   }
 
   &__menu-item {
     display: flex;
     align-self: center;
     padding: 4px 5.9px;
-    margin: 6px 8px;
+    margin: 0px 8px;
     cursor: pointer;
     color: $c50;
     transition: .2s;
@@ -45,6 +47,11 @@
     &:hover {
       color: $c75;
       transition: .2s;
+    }
+
+    &_slim {
+      padding: 4px 5.9px;
+      margin: 0px 5px;
     }
 
     &_active {
@@ -85,7 +92,8 @@
 
   &__user-name {
     padding: 4px 0px 4px 5.9px;
-    margin: 6px 0px 6px 25px;
+    line-height: 30px;
+    margin-left: 25px;
     cursor: pointer;
     color: $c50;
     transition: .2s;
@@ -189,7 +197,11 @@
 
     &__buttons {
       justify-content: center;
-      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    &__button {
+      margin: 10px;
     }
 
     &__user {
