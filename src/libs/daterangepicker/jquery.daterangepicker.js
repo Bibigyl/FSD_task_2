@@ -1295,17 +1295,20 @@
                         left: offset.left - containerOffset.left - leftIndent
                     });
                 } else {
-                    if (offset.left < 460) //left to right
-                    {
-                        box.css({
-                            top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
-                            left: offset.left
-                        });
-                    } else {
-                        box.css({
-                            top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
-                            left: offset.left + $(self).width() - box.width() - 16
-                        });
+                    // !!! if offset
+                    if (offset) {
+                        if (offset.left < 460) //left to right
+                        {
+                            box.css({
+                                top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
+                                left: offset.left
+                            });
+                        } else {
+                            box.css({
+                                top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
+                                left: offset.left + $(self).width() - box.width() - 16
+                            });
+                        }                        
                     }
                 }
             }
@@ -2612,9 +2615,10 @@
         }
 
         function outsideClickClose(evt) {
-            if (!IsOwnDatePickerClicked(evt, self[0])) {
+            // !!!
+/*             if (!IsOwnDatePickerClicked(evt, self[0])) {
                 if (box.is(':visible')) closeDatePicker();
-            }
+            } */
         }
 
     };

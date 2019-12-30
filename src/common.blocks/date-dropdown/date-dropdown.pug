@@ -11,23 +11,25 @@ mixin date-dropdown({firstDate = false, lastDate = false, mask} = {})
 
     .date-dropdown.js-date-dropdown
 
-        .date-dropdown__first-day.date-dropdown__day(data-date=firstTextField.value)
-            if firstDate.title
-                .date-dropdown__title
-                    +title(firstDate.title)
-            .date-dropdown__text-field
-                +text-field(firstTextField)
-                i.date-dropdown__arrow.material-icons expand_more
+        .date-dropdown__dates
+            .date-dropdown__first-date.date-dropdown__date(data-date=firstTextField.value)
+                if firstDate.title
+                    .date-dropdown__title
+                        +title(firstDate.title)
+                .date-dropdown__text-field
+                    +text-field(firstTextField)
+                    i.date-dropdown__arrow.material-icons expand_more
 
-        .date-dropdown__last-day.date-dropdown__day(data-date=lastTextField.value)
-            if lastDate.title
-                .date-dropdown__title
-                    +title(lastDate.title)
-            .date-dropdown__text-field
-                +text-field(lastTextField)
-                i.date-dropdown__arrow.material-icons expand_more
+            .date-dropdown__last-day.date-dropdown__date(data-date=lastTextField.value)
+                if lastDate.title
+                    .date-dropdown__title
+                        +title(lastDate.title)
+                .date-dropdown__text-field
+                    +text-field(lastTextField)
+                    i.date-dropdown__arrow.material-icons expand_more
 
-        .date-dropdown__calendar
+        .date-dropdown__calendar-wrap
+            .date-dropdown__calendar
 
 
 //- когда открыто несколько дропдаунов и они наезжают друг на друга, как лучше сделать? По клику на любой дропдаун закрывать все остальные на странице?

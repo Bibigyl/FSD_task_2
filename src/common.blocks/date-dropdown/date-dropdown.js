@@ -3,10 +3,10 @@ $( document ).ready(function() {
     $('.js-date-dropdown').each( function() {
 
         let $this = $(this);
-        let $first = $this.find('.date-dropdown__first-day input');
+        let $first = $this.find('.date-dropdown__first-date input');
         let $last = $this.find('.date-dropdown__last-day input');
         let $calendar = $this.find('.date-dropdown__calendar');
-        let firstDate = $this.find('.date-dropdown__first-day').attr('data-date') || false;
+        let firstDate = $this.find('.date-dropdown__first-date').attr('data-date') || false;
         let lastDate = $this.find('.date-dropdown__last-day').attr('data-date') || false;
 
         $this.dateRangePicker({
@@ -21,6 +21,7 @@ $( document ).ready(function() {
                 $first.val(s1);
                 $last.val(s2);
             },
+            inline: true,
             customArrowPrevSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_back</i></div>',
             customArrowNextSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_forward</i></div>',
             container: $calendar
