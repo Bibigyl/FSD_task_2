@@ -1,38 +1,50 @@
-@import '../../scss/_vars';
+.registration {
+  &__front {
+    width: 100%;
+    background: center, center no-repeat;
+    background-size: cover;
+    position: relative;
+  }
 
-.registration__front {
-  height: 702px;
-  display: flex;
-  justify-content: center;
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    height: 700px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  .card-wrap {
-    align-self: center;
+    &_small {
+      height: 682px;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    max-width: 380px;
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &__check-in-card {
+    margin-top: 3px;
   }
 }
 
-.login-card {
-  margin-top: 12px;
-}
+@media(max-width: 600px) {
+  .registration {
+    &__container {
+      height: 700px;
 
-.check-in-card {
-  margin-top: 5px;
-}
-
-@media (max-width: 700px) {
-  .registration__front {
-    background-image: $gradient !important;
-    height: 778px;
-  }
-}
-
-@media (max-width: 400px) {
-  .registration__front {
-    height: 750px;
-    background-image: none !important;
-  }
-
-  .registration .card {
-    box-shadow: none;
-    background: none;
+      &_small {
+        height: 500px;
+      }
+    }
   }
 }

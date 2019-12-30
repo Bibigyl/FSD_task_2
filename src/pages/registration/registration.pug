@@ -1,51 +1,138 @@
-//-
-    doctype html
-    html(lang="ru")
-        head
-            meta(charset = 'utf-8')
-            meta(name='viewport' content="initial-scale=1.0, width=device-width")
-            title Registration
-            link(rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon.png")
-            link(rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png")
-            link(rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png")
-            link(rel="manifest" href="favicon/site.webmanifest")
-            link(rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5")
-            meta(name="msapplication-TileColor" content="#da532c")
-            meta(name="theme-color" content="#ffffff")
-            link(rel="stylesheet" href="registration.css")
-        body.registration.page_language_ru
-            include ../../components/header/header.pug
-            +header(
-                "registration__header header_language_ru",
-            [
-                {name: "О нас", href: "#"},
-                {name: "Услуги", href: "#", arrow: true},
-                {name: "Вакансии", href: "#"},
-                {name: "Новости", href: "#"},
-                {name: "Соглашения", href: "#", arrow: true},
-            ],
-                {name: "Войти"}, 
-                {name: "Зарегистрироваться"}, 
-                {name: "Cosmin Negoita", class: "hidden"}
-            )
-            
-            .registration__front.background-image(style=`background-image: url( ${require('./images/registration__front.jpg')})`)
-                .card-wrap.check-in-card-wrap.card_active
-                    include ../../components/check-in-card/check-in-card.pug
-                .card-wrap.login-card-wrap.hidden
-                    include ../../components/login-card/login-card.pug
+doctype html
+html(lang="ru")
+    head
+        meta(charset = 'utf-8')
+        meta(name='viewport' content="initial-scale=1.0, width=device-width")
+        title Registration
+        link(rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png")
+        link(rel="manifest" href="favicon/site.webmanifest")
+        link(rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ffffff")
+        link(rel="stylesheet" href="registration.css")
 
-            include ../../components/footer/footer.pug
-            +footer(
-                "registration__footer",
-                "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
-                [
-                    {title: "Навигация", items: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
-                    {title: "О нас", items: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
-                    {title: "Служба поддержки", items: ["Соглашения", "Сообщества", "Связь с нами"]}
-                ],
-                {title: "Подписка", text: "Получайте специальные предложения и новости сервиса", button_text: "Email"},
-                "Copyright © 2018 Toxin отель. Все права зачищены."
-            )
+    body.registration
+
+        include ../../components/header/header
+        include ../../components/footer/footer
+        include ../../components/login-card/login-card
+        include ../../components/check-in-card/check-in-card
+        -
+            let options;
+            let items;
+            let dateTextField = {
+                maskParameters: {
+                    type: 'date',
+                    delimiter: '.',
+                    pattern: ['d', 'm', 'Y']
+                },
+                placeholder: 'ДД.ММ.ГГГГ'   
+            }  
+
+        .registration__header
+            -
+                options = {
+                    items: [
+                        {text: 'О нас'},
+                        {text: 'Услуги', hasSubmenu: true},
+                        {text: 'Вакансии'},
+                        {text: 'Новости'},
+                        {text: 'Соглашения', hasSubmenu: true},
+                    ],
+                    loginButton: {
+                        text: 'Войти', isSecondary: true, isSmall: true
+                    },
+                    registerButton: {
+                        text: 'Зарегистрироваться', isSmall: true 
+                    },
+                    isMenuItemSlim: true
+                }
+
+            +header(options)
+
+        .registration__front(style=`background-image: url( ${require('./images/registration__front.jpg')})`)
+            .registration__container
+                .registration__check-in-card.registration__card.js-registration__card
+                    -
+                        let birthdayTextField = Object.assign({}, dateTextField, {title: 'Дата рождения'});
+                        options = {
+                            title: 'Регистрация аккаунта',
+                            textFieldName: {placeholder: 'Имя', name: 'Name'},
+                            textFieldSurname: {placeholder: 'Фамилия', type: 'Surname'},
+                            radioButtons: {
+                                name: 'gender',
+                                items: [
+                                    {text: 'Мужчина', isChecked: true},
+                                    {text: 'Женщина'}
+                                ]
+                            },
+                            textFieldBirthday: birthdayTextField, 
+                            credentialsTitle: 'Данные для входа в сервис', 
+                            textFieldEmail: {placeholder: 'Email', type: 'email', name: 'Email'}, 
+                            textFieldPassword: {placeholder: 'Пароль', type: 'password', name: "Password"}, 
+                            toggle: {text: 'Получать спецпредложения'}, 
+                            button: {
+                                text: 'Перейти к оплате',
+                                appearance: 'filled',
+                                isExtended: true
+                            }, 
+                            enter: {
+                                text: 'Уже есть аккаунт на Toxin',
+                                button: {
+                                    isSecondary: true, 
+                                    text: 'Войти'
+                                }
+                            }
+                        }
+
+                    +check-in-card(options)
+
+                .registration__login-card.registration__card.registration__card_hidden.js-registration__card
+                    -
+                        options = {
+                            title: 'Войти',
+                            textFieldEmail: {
+                                placeholder: 'Email', type: 'email', name: 'Email'
+                            },
+                            textFieldPassword: {
+                                placeholder: 'Пароль', type: 'password', name: 'Password'
+                            },
+                            button: {text: 'Войти', appearance: 'filled', isExtended: true},
+                            enter: {
+                                text: 'Нет аккаунта на Toxin?',
+                                button: {
+                                    text: 'Создать',
+                                    isSecondary: true
+                                }
+                            }
+                        }
+
+                    +login-card(options)
+
+        .registration__footer
+            -
+                options = {
+                    text: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+                    items: [
+                        {title: 'Навигация', subitems: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
+                        {title: 'О нас', subitems: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
+                        {title: 'Служба поддержки', subitems: ["Соглашения", "Сообщества", "Связь с нами"]},
+                    ],
+                    subscription: {
+                        title: 'Подписка',
+                        text: 'Получайте специальные предложения и новости сервиса',
+                        textField: {isSubscription: true, placeholder: 'Email'}
+                    },
+                    copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+                    links: [
+                        {name: 'twitter'},
+                        {name: 'facebook-square'},
+                        {name: 'instagram'}
+                    ]
+                }
+                
+            +footer(options)
 
             script(src="registration.js")
