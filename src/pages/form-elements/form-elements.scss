@@ -284,6 +284,14 @@
 
 .button-wrap {
   margin-right: 20px;
+
+  &-on-hover {
+    opacity: 0.5;
+
+    &:hover > *{
+      opacity: 1;
+    }
+  }
 }
 
 .pagination-wrap {

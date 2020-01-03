@@ -154,9 +154,9 @@ html(lang="ru")
                     .like-buttons-wrap
                         h3.like-buttons-wrap__title Like button
                         .like-button-wrap
-                            +like-button(2, false)
+                            +like-button({number: 2})
                         .like-button-wrap
-                            +like-button(12, true)
+                            +like-button({number: 12, isChecked: true})
 
                     .rate-buttons-wrap
                         h3.rate-buttons-wrap__title Rate button
@@ -174,12 +174,12 @@ html(lang="ru")
                     .colored-buttons-wrap.buttons-wrap
                         .button-wrap
                             +button()
-                        .button-wrap
+                        .button-wrap.button-wrap-on-hover
                             +button()
                     .not-colored-buttons-wrap.buttons-wrap
                         .button-wrap
                             +button({isSecondary: true})
-                        .button-wrap
+                        .button-wrap.button-wrap-on-hover
                             +button({isSecondary: true})
                     .textual-buttons-wrap.buttons-wrap
                         .button-wrap
