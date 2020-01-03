@@ -1,8 +1,8 @@
-mixin like-button(number, isChecked)
+mixin like-button({number, isChecked=false})
 	-let icon = isChecked ? favorite : favorite_border;
-	-let lbClass = isChecked ? 'like-button_checked' : '';
+	-let likeButtonClass = isChecked ? 'like-button_checked' : '';
 	
-	.like-button(class=lbClass)
+	.like-button(class=likeButtonClass)
 		label.like-button__label
 			input.like-button__input(type="checkbox" checked=isChecked)
 			.like-button__text= number

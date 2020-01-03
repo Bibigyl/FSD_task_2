@@ -5,7 +5,7 @@ mixin review({avatar, likeButton, name, time, comment})
 		.review__left-part
 			.review__avatar.ui-review__avatar(style=`background-image: url( ${require('./images/' + avatar)})`)
 			.review__like-button
-				+like-button(likeButton.number, likeButton.isChecked)
+				+like-button(likeButton)
 
 		.review__right-part
 			span.review__name= name

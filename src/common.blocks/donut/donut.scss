@@ -41,6 +41,7 @@ figure {
 .figure-content {
   margin-right: 10px;
   margin-top: -13px;
+  max-width: 160px;
 }
 
 .figure-content svg {
@@ -97,4 +98,8 @@ figure {
 
 .donut__mark {
   cursor: default
+}
+
+.donut-segment {
+  transition: .6s;
 }
