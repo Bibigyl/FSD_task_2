@@ -189,18 +189,10 @@
   }
 }
 
-.checkbox-buttons-wrap {
-  &__title {
-    margin-bottom: 16px;
-  }
-
+.checkbox-button-list-wrap {
   margin-bottom: 38px;
-}
 
-.checkbox-button-wrap {
-  margin-bottom: 10px;
-
-  &:last-child {
+  .checkbox-button-list__checkbox-button:last-child {
     max-width: 240px;
   }
 }
@@ -324,20 +316,14 @@
 }
 
 .rich-checkbox-buttons-wrap {
-  &__title {
-    margin-bottom: 16px;
-  }
-}
+  .checkbox-button-list__checkbox-button{
+    &:nth-child(1) {
+      max-width: 230px;
+    }
 
-.rich-checkbox-button-wrap {
-  margin-bottom: 8px;
-
-  &:nth-child(2) {
-    max-width: 230px;
-  }
-
-  &:nth-child(3) {
-    max-width: 260px;
+    &:nth-child(2) {
+      max-width: 260px;
+    }
   }
 }
 

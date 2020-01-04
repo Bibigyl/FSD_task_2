@@ -270,6 +270,7 @@
   .last-date-selected {
     background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%) !important;
     color: white !important;
+    font-weight: bold;
   }
 
   .tbody tr {
@@ -307,6 +308,13 @@
 
   .drp_top-bar {
     display: none;
+  }
+
+  .calendar__arrow i {
+    cursor: pointer;
+    background: $gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 

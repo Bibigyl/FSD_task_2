@@ -30,6 +30,8 @@
     width: 42px;
     height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     transition: .4s;
     cursor: pointer;
 
@@ -43,7 +45,7 @@
     }
 
     .material-icons {
-      margin: auto;
+      margin: 0;
       color: #fff;
       font-size: rem(24px);
       transform: rotate(90deg);
@@ -162,5 +164,4 @@
     margin-left: 4px;
     margin-right: 1px;
   }
-
 }

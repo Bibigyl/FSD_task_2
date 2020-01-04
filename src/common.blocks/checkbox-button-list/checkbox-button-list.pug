@@ -1,0 +1,13 @@
+include ../checkbox-button/checkbox-button
+include ../title/title
+
+mixin checkbox-button-list({title, items})
+    .checkbox-button-list
+        if title
+            .checkbox-button-list__title
+                +title(title)
+
+        ul.checkbox-button-list__list
+            each item in items
+                li.checkbox-button-list__checkbox-button
+                    +checkbox-button(item)

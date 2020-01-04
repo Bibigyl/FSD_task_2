@@ -1,10 +1,13 @@
-mixin slider-range(title)
+include ../title/title
+
+mixin slider-range(title=false)
 	.slider-range
 		if title
-			h3.slider-range__title= title
-			.slider-range__text-wrap
-				.slider-range__text
-			.slider-range__slider
+			.slider-range__title
+				+title(title)
+		.slider-range__text-wrap
+			.slider-range__text
+		.slider-range__slider
 
 
 //- передавать параметры js в атрибуты?

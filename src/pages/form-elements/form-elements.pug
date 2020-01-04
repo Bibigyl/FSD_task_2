@@ -22,6 +22,7 @@ html(lang="ru")
         include ../../common.blocks/filter-date-dropdown/filter-date-dropdown
 
         include ../../common.blocks/checkbox-button/checkbox-button
+        include ../../common.blocks/checkbox-button-list/checkbox-button-list
         include ../../common.blocks/radio-buttons/radio-buttons
         include ../../common.blocks/toggle/toggle
         include ../../common.blocks/like-button/like-button
@@ -118,18 +119,18 @@ html(lang="ru")
 
                 .form-elements__column-1-2.form-elements__column
 
-                    .checkbox-buttons-wrap
-                        h3.checkbox-buttons-wrap__title Checkbox-buttons
+                    .checkbox-button-list-wrap
                         -
-                            items = [
-                                {text: 'Можно курить'},
-                                {text: 'Можно с питомцами', isChecked: true},
-                                {text: 'Можно пригласить гостей (до 10 человек)', isChecked: true}
-                            ]
+                            options = {
+                                title: 'Checkbox Buttons',
+                                items: [
+                                    {text: 'Можно курить'},
+                                    {text: 'Можно с питомцами', isChecked: true},
+                                    {text: 'Можно пригласить гостей (до 10 человек)', isChecked: true}
+                                ]
+                            }
 
-                        each item in items
-                            .checkbox-button-wrap
-                                +checkbox-button(item)
+                        +checkbox-button-list(options)
 
                     .radio-buttons-wrap
                         -
@@ -187,7 +188,7 @@ html(lang="ru")
                         .button-wrap
                             +icon-link()
                     .big-buttons-wrap.buttons-wrap
-                        +button({isExtended: true})
+                        +button({isExtended: true, text: 'Перейти к оплате'})
 
                     .pagination-wrap
                         h3.pagination-wrap__title Pagination
@@ -253,24 +254,22 @@ html(lang="ru")
 
                 .form-elements__column-3-2.form-elements__column
                     .rich-checkbox-buttons-wrap
-                        h3.rich-checkbox-buttons-wrap__title Rich checkbox buttons
-                        .rich-checkbox-button-wrap
-                            -
-                                options = {
-                                    richText: 'Широкий коридор',
-                                    text: 'Ширина коридоров в номере не менее 91 см.'
-                                }
-
-                            +checkbox-button(options)
-
-                        .rich-checkbox-button-wrap
-                            -
-                                options = {
-                                    richText: 'Помощник для инвалидов',
-                                    text: 'На 1 этаже вас встретит специалист и проводит до номера.'
-                                }
-
-                            +checkbox-button(options)
+                        -
+                            options = {
+                                title: 'Rich checkbox buttons',
+                                items: [
+                                    {
+                                        richText: 'Широкий коридор',
+                                        text: 'Ширина коридоров в номере не менее 91 см.'   
+                                    },
+                                    {
+                                        richText: 'Помощник для инвалидов',
+                                        text: 'На 1 этаже вас встретит специалист и проводит до номера.'                                        
+                                    }
+                                ]
+                            }
+                        
+                        +checkbox-button-list(options)
 
                 .form-elements__column-3-3.form-elements__column
                     .bullet-list-wrap

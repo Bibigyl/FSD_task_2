@@ -50,7 +50,6 @@
   }
 
   &__icon-text-list {
-
     &-wrap {
       width: 100%;
       max-width: 300px;
@@ -63,7 +62,6 @@
   }
 
   &__diagram {
-
     &-wrap {
       margin-right: 44px;
       margin-bottom: 20px;
@@ -75,7 +73,6 @@
   }
 
   &__reviews {
-
     &-wrap {
       margin-bottom: 10px;
     }
@@ -95,7 +92,6 @@
   }
 
   &__rules {
-
     &-wrap {
       width: 100%;
       max-width: 260px;
@@ -108,7 +104,6 @@
   }
 
   &__cancellation {
-
     &-wrap {
       width: 100%;
       max-width: 349px;
@@ -127,9 +122,6 @@
     margin-bottom: 50px;
   }
 
-
-
-
   &__footer {
     border-top: 1px solid rgba(31, 32, 65, 0.1);
   }
@@ -138,7 +130,7 @@
 
 @media(max-width: 800px) {
   .room-details {
-    
+
     &__photos {
       height: 300px;
     }
@@ -155,10 +147,6 @@
 
     &__cancellation-wrap {
       padding-left: 20px;
-    }
-
-    &__booking-card {
-      //order: 1;
     }
   }
 }
@@ -199,13 +187,12 @@
     &__photo-2,
     &__photo-3 {
       display: none;
-    }    
+    }
   }
 }
 
 @media(max-width: 440px) {
   .room-details {
-
 
     &__reviews-title {
       margin-bottom: 10px;
@@ -218,210 +205,3 @@
     }
   }
 }
-/* @import '../../scss/_vars';
-
-.room-photos {
-  display: flex;
-}
-
-.room-photo_wide {
-  height: 485px;
-  width: 64%;
-}
-
-.room-photos-wrap {
-  width: 36%;
-}
-
-.room-photo_slim {
-  width: 100%;
-  height: 50%;
-}
-
-.details-and-room-card-wrap {
-  padding-top: 70px;
-  padding-bottom: 62px;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
-
-.room-card-wrap {
-  min-width: 380px;
-  margin-left: 20px;
-}
-
-.details {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-
-  * {
-    box-sizing: border-box;
-  }
-
-  h2 {
-    margin-bottom: 20px;
-    letter-spacing: 0.6px;
-    font-stretch: expanded;
-  }
-
-  &__info {
-    width: 47%;
-    margin-bottom: -8px;
-    min-width: 280px;
-  }
-
-  &__impressions {
-    padding-left: 6px;
-    padding-bottom: 40px;
-    width: 53%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    min-width: 280px;
-
-    h2 {
-      width: 100%;
-      letter-spacing: 0.8px;
-    }
-  }
-
-  &__reviews {
-    width: 100%;
-    padding-right: 50px;
-    margin-bottom: 10px;
-    min-width: 280px;
-
-    h2 {
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-
-    .reviews__num {
-      display: inline-block;
-      float: right;
-    }
-
-    .review {
-      margin-bottom: 23px;
-    }
-
-    .review__avatar {
-      top: 0;
-      left: 0;
-      // временный, потому что картинки уже обрезанные
-      background-position: -22px -12px;
-    }
-
-    .review__like-button {
-      left: 3px;
-    }
-  }
-
-  &__rules {
-    width: 47%;
-    padding-right: 100px;
-    min-width: 280px;
-
-    h2 {
-      padding-left: 20px;
-      margin-bottom: 17px;
-    }
-  }
-
-  &__cancellation {
-    width: 53%;
-    padding-right: 60px;
-    padding-left: 5px;
-    min-width: 280px;
-
-    h2 {
-      margin-bottom: 17px;
-    }
-  }
-}
-
-
-@media(max-width: 1200px) {
-  .details__rules {
-    padding-right: 20px;
-  }
-
-  .details>* {
-    width: 100%;
-    padding-right: 30px;
-  }
-
-  .details__rules {
-    margin-bottom: 20px;
-
-    h2 {
-      padding-left: 0;
-    }
-  }
-}
-
-@media(max-width: 940px) {
-  .details-and-room-card-wrap {
-    flex-direction: column-reverse;
-
-    >* {
-      align-self: center;
-    }
-  }
-
-  .room-card-wrap {
-    margin-bottom: 50px;
-  }
-
-  .details__info {
-    width: 50%;
-  }
-
-  .details__impressions {
-    width: 50%;
-  }
-}
-
-@media(max-width: 800px) {
-  .room-photo_wide {
-    height: 300px;
-  }
-}
-
-@media(max-width: 660px) {
-  .details {
-    >* {
-      width: 100%;
-      margin-left: 15%;
-    }
-  }
-}
-
-@media(max-width: 500px) {
-  .details {
-    >* {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  .details__reviews .reviews__num {
-    float: none;
-    display: block;
-    margin-bottom: 20px;
-  }
-
-  .room-photos-wrap {
-    display: none;
-  }
-
-  .room-photo_wide {
-    height: 200px;
-    width: 100%;
-  }
-
-  .details-and-room-card-wrap {
-    padding-top: 30px;
-  }
-} */

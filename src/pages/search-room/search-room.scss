@@ -1,176 +1,156 @@
-@import '../../scss/_vars';
+@import "../../scss/_vars.scss";
 
-/* * {
-   border: 1px solid #f00 !important;
-} */
-body,
-html {
-  overflow-x: hidden;
-}
+.search-room {
 
-.search-room-container {
-  padding-top: 30px;
-  padding-bottom: 71px;
-}
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 29px 20px 73px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+  }
 
-.option-wrap {
-  width: 100%;
-  max-width: 266px;
-  margin-bottom: 20px;
+  &__parameters {
+    min-width: 286px;
+    max-width: 286px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+  }
 
-  &.dropdown_guests {
+  &__filter-date-dropdown {
+    margin-bottom: 15px;
+  }
+
+  &__dropdown-guests {
     margin-bottom: 30px;
   }
 
-  &.slider {
+  &__slider-range-text {
+    font-size: 12px;
+    color: $c50;
+    margin-top: 10px;
+  }
+
+  &__slider-range {
     margin-bottom: 24px;
-
-    h3 {
-      margin-bottom: 12px;
-    }
-
-    .slider__text {
-      font-size: rem(12px);
-      margin-top: 3px;
-    }
   }
 
-  &.checkboxes {
-    h3 {
-      margin-bottom: 17px;
-    }
-
+  &__checkbox-buttons {
     margin-bottom: 29px;
+
+    li {
+      &:nth-child(3) .checkbox-button__text {
+        max-width: 210px;
+      }
+    }
   }
 
-  &.rich-checkbox-list {
-    margin-bottom: 29px;
+  &__rich-checkbox-buttons {
+    margin-bottom: 30px;
+
+    li {
+      &:first-child .checkbox-button__text {
+        max-width: 200px;
+      }
+
+      &:nth-child(2) .checkbox-button__text {
+        max-width: 230px;
+      }
+    }
   }
 
-  &.dropdown_furniture {
+  &__dropdown-furniture {
     margin-bottom: 30px;
   }
-}
 
-.options {
-  flex: 0 0 266px;
-  box-sizing: border-box;
-
-  .dropdown {
+  &__room-cards-field {
+    text-align: center;
     width: 100%;
+    max-width: 834px;
   }
 
-  .dropdown-ul-wrap {
+  &__title {
     width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-.rooms-wrap {
-  flex: 1 1 50%;
-  padding-left: 60px;
-  box-sizing: border-box;
-
-  * {
-    box-sizing: border-box;
-  }
-
-  h1 {
-    letter-spacing: 0.65px;
+    text-align: left;
     margin-bottom: 20px;
   }
 
-  .paginator-wrap {
-    text-align: center;
-    margin-right: 17px;
-  }
-}
-
-.rooms {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 20px;
-
-  .search-room__room-card {
-    margin-bottom: 21px;
+  &__room-cards {
     width: 100%;
-    min-width: 270px;
-    max-width: 270px;
-  }
-}
-
-.search-room__room-card {
-  .room__dot {
-    width: 7px;
-    height: 7px;
-  }
-}
-
-.date-search-option {
-  .input__arrow {
-    top: 30px;
-  }
-}
-
-@media(max-width: 1200px) {
-  .rooms {
-    justify-content: space-around;
-  }
-}
-
-@media(max-width: 970px) {
-  .options {
-    flex: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    height: 390px;
-    align-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 21px;
   }
 
-  .rooms-wrap {
-    flex: 100%;
-    padding-left: 0;
-  }
-}
-
-@media(max-width: 920px) {
-  .options {
-    height: 570px;
-    align-content: space-around;
+  &__room-card {
+    max-width: 270px;
+    margin-bottom: 19.5px;
   }
 
-  .rooms .room-card {
-    margin-right: 5px;
-    margin-left: 5px;
+  &__pagination {
+    margin-right: 12px;
+  }
+
+  &__footer {
+    border-top: 1px solid rgba(31, 32, 65, 0.1);
   }
 }
 
-@media(max-width: 665px) {
-  .options {
-    height: auto;
-    margin-bottom: 20px;
+@media (max-width: 1155px) {
+  .search-room {
+    &__room-card {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    
+    &__room-cards {
+      justify-content: space-around;
+    }
   }
 }
 
-@media(max-width: 450px) {
-  .room-card {
-    width: 100%;
+@media (max-width: 875px) {
+  .search-room {
+    &__container {
+      flex-wrap: wrap;
+    }
+
+    &__parameters {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: none;
+      width: 100%; 
+      padding-right: 0;
+      justify-content: center;
+
+      >* {
+        width: 100%;
+        max-width: 266px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__pagination {
+      margin-right: 0;
+    }
   }
 }
 
-@media(max-width: 370px) {
-  .slider-wrapper {
-    width: 230px;
-  }
-
-  .rooms .room-card {
-    min-width: 230px;
-  }
-
-  .search-room-container {
-    padding: 70px 10px;
+@media (max-width: 450px) {
+  .search-room {
+    &__parameters {
+      >* {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
   }
 }
