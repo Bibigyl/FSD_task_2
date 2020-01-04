@@ -58,7 +58,7 @@
                         <button class="dropdown__button dropdown__button_plus">+</button>
                       </li>
                     </ul>
-                    <div class="dropdown__button_to-clear hidden">
+                    <div class="dropdown__button_to-clear dropdown__button_hidden">
                           <button class="icon-link">Очистить</button>
                     </div>
                     <div class="dropdown__button_to-apply">
@@ -76,28 +76,38 @@
           </div>
           <div class="date-dropdown-wrap">
                 <div class="date-dropdown js-date-dropdown">
-                  <div class="date-dropdown__first-day date-dropdown__day">
-                    <h3 class="date-dropdown__title">Date dropdown</h3>
-                    <div class="date-dropdown__text-field">
-                          <div class="text-field js-text-field text-field_masked">
-                            <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
-                          </div><i class="date-dropdown__arrow material-icons">expand_more</i>
+                  <div class="date-dropdown__dates">
+                    <div class="date-dropdown__first-date date-dropdown__date">
+                      <div class="date-dropdown__title">
+                            <h3 class="title">Date dropdown</h3>
+                      </div>
+                      <div class="date-dropdown__text-field">
+                            <div class="text-field js-text-field text-field_masked">
+                              <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
+                            </div><i class="date-dropdown__arrow material-icons">expand_more</i>
+                      </div>
+                    </div>
+                    <div class="date-dropdown__last-day date-dropdown__date" data-date="19.08.2019">
+                      <div class="date-dropdown__title">
+                            <h3 class="title">Date dropdown</h3>
+                      </div>
+                      <div class="date-dropdown__text-field">
+                            <div class="text-field js-text-field text-field_masked">
+                              <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
+                            </div><i class="date-dropdown__arrow material-icons">expand_more</i>
+                      </div>
                     </div>
                   </div>
-                  <div class="date-dropdown__last-day date-dropdown__day" data-date="19.08.2019">
-                    <h3 class="date-dropdown__title">Date dropdown</h3>
-                    <div class="date-dropdown__text-field">
-                          <div class="text-field js-text-field text-field_masked">
-                            <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
-                          </div><i class="date-dropdown__arrow material-icons">expand_more</i>
-                    </div>
+                  <div class="date-dropdown__calendar-wrap">
+                    <div class="date-dropdown__calendar"></div>
                   </div>
-                  <div class="date-dropdown__calendar"></div>
                 </div>
           </div>
           <div class="filter-date-dropdown-wrap">
                 <div class="filter-date-dropdown js-filter-date-dropdown" data-first-date="19.08.2019" data-last-date="23.08.2019">
-                  <h3 class="filter-date-dropdown__title">Filter date dropdown</h3>
+                  <div class="filter-date-dropdown__title">
+                        <h3 class="title">Filter date dropdown</h3>
+                  </div>
                   <div class="filter-date-dropdown__text-field">
                         <div class="text-field js-text-field">
                           <input class="text-field__input" type="text">
@@ -114,39 +124,47 @@
           </div>
         </div>
         <div class="form-elements__column-1-2 form-elements__column">
-          <div class="checkbox-buttons-wrap">
-            <h3 class="checkbox-buttons-wrap__title">Checkbox-buttons</h3>
-            <div class="checkbox-button-wrap">
-                  <div class="checkbox-button">
-                    <label class="checkbox-button__label">
-                      <input class="checkbox-button__input" type="checkbox">
-                      <div class="checkbox-button__text-block"><span class="checkbox-button__text">Можно курить</span>
-                      </div>
-                    </label>
+          <div class="checkbox-button-list-wrap">
+                <div class="checkbox-button-list">
+                  <div class="checkbox-button-list__title">
+                        <h3 class="title">Checkbox Buttons</h3>
                   </div>
-            </div>
-            <div class="checkbox-button-wrap">
-                  <div class="checkbox-button">
-                    <label class="checkbox-button__label">
-                      <input class="checkbox-button__input" type="checkbox" checked>
-                      <div class="checkbox-button__text-block"><span class="checkbox-button__text">Можно с питомцами</span>
-                      </div>
-                    </label>
-                  </div>
-            </div>
-            <div class="checkbox-button-wrap">
-                  <div class="checkbox-button">
-                    <label class="checkbox-button__label">
-                      <input class="checkbox-button__input" type="checkbox" checked>
-                      <div class="checkbox-button__text-block"><span class="checkbox-button__text">Можно пригласить гостей (до 10 человек)</span>
-                      </div>
-                    </label>
-                  </div>
-            </div>
+                  <ul class="checkbox-button-list__list">
+                    <li class="checkbox-button-list__checkbox-button">
+                          <div class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text-block"><span class="checkbox-button__text">Можно курить</span>
+                              </div>
+                            </label>
+                          </div>
+                    </li>
+                    <li class="checkbox-button-list__checkbox-button">
+                          <div class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox" checked>
+                              <div class="checkbox-button__text-block"><span class="checkbox-button__text">Можно с питомцами</span>
+                              </div>
+                            </label>
+                          </div>
+                    </li>
+                    <li class="checkbox-button-list__checkbox-button">
+                          <div class="checkbox-button">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox" checked>
+                              <div class="checkbox-button__text-block"><span class="checkbox-button__text">Можно пригласить гостей (до 10 человек)</span>
+                              </div>
+                            </label>
+                          </div>
+                    </li>
+                  </ul>
+                </div>
           </div>
           <div class="radio-buttons-wrap">
                 <div class="radio-buttons">
-                  <h3 class="radio-buttons__title">Radio buttons</h3>
+                  <div class="radio-buttons__title">
+                        <h3 class="title">Radio buttons</h3>
+                  </div>
                   <div class="radio-button">
                     <label class="radio-button__label">
                       <input class="radio-button__input" type="radio" name="gender" checked><span class="radio-button__text">Мужчина</span>
@@ -179,8 +197,8 @@
             <div class="like-button-wrap">
                   <div class="like-button">
                     <label class="like-button__label">
-                      <input class="like-button__input" type="checkbox">
-                      <div class="like-button__text">2
+                      <input class="like-button__input js-like-button__input" type="checkbox">
+                      <div class="like-button__text"><span class="like-button__number js-like-button__number">2</span>
                         <div class="like-button__icon material-icons"></div>
                       </div>
                     </label>
@@ -189,8 +207,8 @@
             <div class="like-button-wrap">
                   <div class="like-button like-button_checked">
                     <label class="like-button__label">
-                      <input class="like-button__input" type="checkbox" checked>
-                      <div class="like-button__text">12
+                      <input class="like-button__input js-like-button__input" type="checkbox" checked>
+                      <div class="like-button__text"><span class="like-button__number js-like-button__number">12</span>
                         <div class="like-button__icon material-icons"></div>
                       </div>
                     </label>
@@ -212,7 +230,9 @@
         <div class="form-elements__column-1-3 form-elements__column">
           <div class="slider-range-wrap">
                 <div class="slider-range">
-                  <h3 class="slider-range__title">Range slider</h3>
+                  <div class="slider-range__title">
+                        <h3 class="title">Range slider</h3>
+                  </div>
                   <div class="slider-range__text-wrap">
                     <div class="slider-range__text"></div>
                   </div>
@@ -226,7 +246,7 @@
                     <div class="button__content">Click me</div>
                   </button>
             </div>
-            <div class="button-wrap">
+            <div class="button-wrap button-wrap-on-hover">
                   <button class="button">
                     <div class="button__content">Click me</div>
                   </button>
@@ -238,7 +258,7 @@
                     <div class="button__content">Click me</div>
                   </button>
             </div>
-            <div class="button-wrap">
+            <div class="button-wrap button-wrap-on-hover">
                   <button class="button button_secondary">
                     <div class="button__content">Click me</div>
                   </button>
@@ -254,7 +274,7 @@
           </div>
           <div class="big-buttons-wrap buttons-wrap">
                 <button class="button button_extended">
-                  <div class="button__content">Click me</div><i class="button__arrow material-icons">arrow_forward</i>
+                  <div class="button__content">Перейти к оплате</div><i class="button__arrow material-icons">arrow_forward</i>
                 </button>
           </div>
           <div class="pagination-wrap">
@@ -333,7 +353,7 @@
                         <button class="dropdown__button dropdown__button_plus">+</button>
                       </li>
                     </ul>
-                    <div class="dropdown__button_to-clear hidden">
+                    <div class="dropdown__button_to-clear dropdown__button_hidden">
                           <button class="icon-link">Очистить</button>
                     </div>
                     <div class="dropdown__button_to-apply">
@@ -363,7 +383,7 @@
                         <button class="dropdown__button dropdown__button_plus">+</button>
                       </li>
                     </ul>
-                    <div class="dropdown__button_to-clear hidden">
+                    <div class="dropdown__button_to-clear dropdown__button_hidden">
                           <button class="icon-link">Очистить</button>
                     </div>
                     <div class="dropdown__button_to-apply">
@@ -378,7 +398,9 @@
         <div class="form-elements__column-3-1 form-elements__column">
           <div class="expandable-checkbox-list-wrap-1">
                 <div class="expandable-checkbox-list">
-                  <h3 class="expandable-checkbox-list__title">Expandable checkbox list</h3>
+                  <div class="expandable-checkbox-list__title">
+                        <h3 class="title">Expandable checkbox list</h3>
+                  </div>
                   <div class="expandable-checkbox-list__arrow material-icons">expand_more</div>
                   <ul class="expandable-checkbox-list__list">
                     <li class="expandable-checkbox-list__item">
@@ -458,7 +480,9 @@
           </div>
           <div class="expandable-checkbox-list-wrap-2">
                 <div class="expandable-checkbox-list expandable-checkbox-list_open">
-                  <h3 class="expandable-checkbox-list__title">Expandable checkbox list</h3>
+                  <div class="expandable-checkbox-list__title">
+                        <h3 class="title">Expandable checkbox list</h3>
+                  </div>
                   <div class="expandable-checkbox-list__arrow material-icons">expand_more</div>
                   <ul class="expandable-checkbox-list__list">
                     <li class="expandable-checkbox-list__item">
@@ -539,31 +563,39 @@
         </div>
         <div class="form-elements__column-3-2 form-elements__column">
           <div class="rich-checkbox-buttons-wrap">
-            <h3 class="rich-checkbox-buttons-wrap__title">Rich checkbox buttons</h3>
-            <div class="rich-checkbox-button-wrap">
-                  <div class="checkbox-button checkbox-button_rich">
-                    <label class="checkbox-button__label">
-                      <input class="checkbox-button__input" type="checkbox">
-                      <div class="checkbox-button__text-block"><span class="checkbox-button__rich-text">Широкий коридор</span><span class="checkbox-button__text">Ширина коридоров в номере не менее 91 см.</span>
-                      </div>
-                    </label>
+                <div class="checkbox-button-list">
+                  <div class="checkbox-button-list__title">
+                        <h3 class="title">Rich checkbox buttons</h3>
                   </div>
-            </div>
-            <div class="rich-checkbox-button-wrap">
-                  <div class="checkbox-button checkbox-button_rich">
-                    <label class="checkbox-button__label">
-                      <input class="checkbox-button__input" type="checkbox">
-                      <div class="checkbox-button__text-block"><span class="checkbox-button__rich-text">Помощник для инвалидов</span><span class="checkbox-button__text">На 1 этаже вас встретит специалист и проводит до номера.</span>
-                      </div>
-                    </label>
-                  </div>
-            </div>
+                  <ul class="checkbox-button-list__list">
+                    <li class="checkbox-button-list__checkbox-button">
+                          <div class="checkbox-button checkbox-button_rich">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text-block"><span class="checkbox-button__rich-text">Широкий коридор</span><span class="checkbox-button__text">Ширина коридоров в номере не менее 91 см.</span>
+                              </div>
+                            </label>
+                          </div>
+                    </li>
+                    <li class="checkbox-button-list__checkbox-button">
+                          <div class="checkbox-button checkbox-button_rich">
+                            <label class="checkbox-button__label">
+                              <input class="checkbox-button__input" type="checkbox">
+                              <div class="checkbox-button__text-block"><span class="checkbox-button__rich-text">Помощник для инвалидов</span><span class="checkbox-button__text">На 1 этаже вас встретит специалист и проводит до номера.</span>
+                              </div>
+                            </label>
+                          </div>
+                    </li>
+                  </ul>
+                </div>
           </div>
         </div>
         <div class="form-elements__column-3-3 form-elements__column">
           <div class="bullet-list-wrap">
                 <div class="bullet-list">
-                  <h3 class="bullet-list__title">Bullet list</h3>
+                  <div class="bullet-list__title">
+                        <h3 class="title">Bullet list</h3>
+                  </div>
                   <ul class="bullet-list__list">
                     <li class="bullet-list__item">Нельзя с питомцами</li>
                     <li class="bullet-list__item">Без вечеринок и мероприятий</li>
@@ -598,8 +630,8 @@
                     <div class="review__like-button">
                           <div class="like-button like-button_checked">
                             <label class="like-button__label">
-                              <input class="like-button__input" type="checkbox" checked>
-                              <div class="like-button__text">12
+                              <input class="like-button__input js-like-button__input" type="checkbox" checked>
+                              <div class="like-button__text"><span class="like-button__number js-like-button__number">12</span>
                                 <div class="like-button__icon material-icons"></div>
                               </div>
                             </label>
