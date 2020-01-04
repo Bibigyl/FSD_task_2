@@ -30,6 +30,7 @@
   &__arrow {
     padding: 10px;
     cursor: pointer;
+    color: $c50;
   }
 
   &__list {
@@ -71,19 +72,23 @@
   }
 
   &__button {
-    background-color: #fff;
-    width: 30px;
-    height: 30px;
-    border: 1px solid $c25;
-    box-sizing: border-box;
-    border-radius: 22px;
-    text-align: center;
-    font-size: rem(18px);
-    color: $c50;
-    cursor: pointer;
+
+    &_round {
+      background-color: #fff;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $c25;
+      box-sizing: border-box;
+      border-radius: 22px;
+      text-align: center;
+      font-size: rem(18px);
+      color: $c50;
+      cursor: pointer;
+    }
 
     &_minus {
       margin-left: auto;
+      padding-bottom: 5px;
     }
 
     &_not-active {

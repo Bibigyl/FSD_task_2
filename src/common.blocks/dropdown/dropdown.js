@@ -12,7 +12,7 @@ $( document ).ready(function() {
     $(".dropdown__button_to-clear").each(function() {
         $(this).on("click", function() {
             let $dropdown = $(this).closest('.dropdown');
-            let initialText = $dropdown.attr('initialText');
+            let initialText = $dropdown.attr('data-initial-text');
             let $list = $dropdown.find(".dropdown__list");
             let $liArr = $list.find('li');
 
@@ -38,11 +38,11 @@ $( document ).ready(function() {
 
 
 
-    $(".dropdown__button").each(function() {
+    $(".dropdown__button_round").each(function() {
         $(this).on("click", function() {
 
             let $dropdown = $(this).closest('.dropdown');
-            let initialText = $dropdown.attr('initialText');
+            let initialText = $dropdown.attr('data-initial-text');
             let $textField = $dropdown.find(".dropdown__text");
             let count = 0;
             let $numNode = $(this).parent().find(".dropdown__num");

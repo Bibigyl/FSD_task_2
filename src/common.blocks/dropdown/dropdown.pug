@@ -6,7 +6,7 @@ mixin dropdown({title, content = {text, items, buttons}, isOpen, isSmall})
 		let open = isOpen ? 'dropdown_open' : false;
 		let small = isSmall ? 'dropdown_small' : false;
 
-	.dropdown(class=[open, small] initialText=content.text)
+	.dropdown(class=[open, small] data-initial-text=content.text)
 		if title
 			.dropdown__title
 				+title(title)
@@ -19,9 +19,9 @@ mixin dropdown({title, content = {text, items, buttons}, isOpen, isSmall})
 			ul
 				each item in content.items
 					li.dropdown__item(item=item)= item
-						button.dropdown__button.dropdown__button_minus.dropdown__button_not-active -
+						button.dropdown__button_round.dropdown__button_minus.dropdown__button_not-active(type='button') -
 						span.dropdown__num 0
-						button.dropdown__button.dropdown__button_plus +
+						button.dropdown__button_round.dropdown__button_plus(type='button') +
 			
 			if content.buttons
 				.dropdown__button_to-clear.dropdown__button_hidden

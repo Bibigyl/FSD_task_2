@@ -1,6 +1,7 @@
-mixin icon-link({text, isPrimary} = {})
+mixin icon-link({text, isPrimary, type} = {})
 	-
 		text = text || 'Click me';
+		type = type || 'button';
 		let primary = isPrimary ? 'icon-link_primary' : false;
 
-	button.icon-link(class=primary)= text
+	button.icon-link(class=primary type=type)= text

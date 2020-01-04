@@ -23,7 +23,6 @@ import "../../common.blocks/date-dropdown/date-dropdown.js";
 
 //------------------ import components scripts -----------------------------
 
-import "../../components/search-card/search-card.js";
 import "../../components/header/header.js";
 
 
