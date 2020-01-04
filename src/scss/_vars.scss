@@ -5,6 +5,6 @@ $c25: rgba(31, 32, 65, 0.25);
 $c5: rgba(31, 32, 65, 0.05);
 $primary: #BC9CFF;
 $secondary: #6FCF97;
-$gradientPrimary: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
-$gradientSecondary: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+$gradientPrimary: linear-gradient(180deg, $primary 0%, #8BA4F9 100%);
+$gradientSecondary: linear-gradient(180deg, $secondary 0%, #66D2EA 100%);
 $HTMLsize: 14px;

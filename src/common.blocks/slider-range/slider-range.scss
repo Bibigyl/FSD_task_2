@@ -43,7 +43,7 @@
   }
 
   .ui-slider-range {
-    background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+    background: $gradientSecondary;
     height: 20px;
     position: absolute;
   }
@@ -54,7 +54,7 @@
   }
 
   .ui-slider .ui-slider-handle {
-    background: $green;
+    background: $secondary;
     position: absolute;
     width: 16px;
     height: 16px;
@@ -63,7 +63,7 @@
     transform: translateY(-50%);
     border-radius: 100px;
     z-index: 10;
-    background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+    background: $gradientSecondary;
     border: 2px solid #fff;
     cursor: move;
     /* fallback if grab cursor is unsupported */

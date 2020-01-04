@@ -80,11 +80,11 @@ figure {
   }
 
   &_good {
-    background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+    background: $gradientSecondary;
   }
 
   &_satisfactorily {
-    background: $gradient;
+    background: $gradientPrimary;
   }
 
   &_badly {

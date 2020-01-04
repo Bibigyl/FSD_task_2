@@ -39,6 +39,13 @@
     position: absolute;
     top: 5px;
   }
+
+  .text-field__input {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 27px;
+  }
 }
 
 @media (max-width: 340px) {

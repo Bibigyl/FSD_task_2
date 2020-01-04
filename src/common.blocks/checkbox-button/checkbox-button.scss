@@ -16,7 +16,7 @@
     }
 
     &:checked+.checkbox-button__text-block:before {
-      border-color: $purple;
+      border-color: $primary;
     }    
   }
 
@@ -51,7 +51,7 @@
       height: 6px;
       border-left: 2px solid;
       border-bottom: 2px solid;
-      border-image: linear-gradient(0deg, $purple 0%, #8BA4F9 100%);
+      border-image: linear-gradient(0deg, $primary 0%, #8BA4F9 100%);
       border-image-slice: 1;
       transform: rotate(-45deg);
     }

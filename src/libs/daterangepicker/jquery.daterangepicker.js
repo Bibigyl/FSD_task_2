@@ -1442,7 +1442,7 @@
             opt.start = false;
             opt.end = false;
             box.find('.day.checked').removeClass('checked last-date-selected first-date-selected')
-            .parent().removeClass('td-checked td-last-date-selected td-first-date-selected');
+            .parent().removeClass('td-checked td-last-date-selected td-first-date-selected td-hovering');
             opt.setValue.call(selfDom, '');
             checkSelectionValid();
             showSelectedInfo();

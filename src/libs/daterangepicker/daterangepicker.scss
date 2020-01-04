@@ -175,7 +175,7 @@
           height: 100%;
           top: 0;
           left: -50%;
-          background-color: rgba($purple, .25);
+          background-color: rgba($primary, .25);
           position: absolute;
           z-index: -1;
           transition: background-color .1s;
@@ -187,7 +187,7 @@
           height: 100%;
           top: 0;
           right: -50%;
-          background-color: rgba($purple, .25);
+          background-color: rgba($primary, .25);
           position: absolute;
           z-index: -1;
           transition: background-color .1s;
@@ -225,7 +225,7 @@
         font-family: 'Montserrat';
         font-weight: 700;
         font-size: 12px;
-        color: $purple;
+        color: $primary;
 
         & th {
           height: 36px;
@@ -247,11 +247,11 @@
       border-radius: 100px;
       font-weight: bold;
       color: #fff;
-      background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+      background: $gradientSecondary;
     }
 
     &:hover {
-      background: linear-gradient(180deg, lighten($purple, 5%) 0%, lighten(#8BA4F9, 5%) 100%);
+      background: linear-gradient(180deg, lighten($primary, 5%) 0%, lighten(#8BA4F9, 5%) 100%);
     }
   }
 
@@ -270,7 +270,7 @@
 
   .first-date-selected,
   .last-date-selected {
-    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%) !important;
+    background: linear-gradient(180deg, $primary 0%, #8BA4F9 100%) !important;
     color: white !important;
     font-weight: bold;
   }
@@ -305,7 +305,7 @@
 
   .calendar__link_apply {
     float: right;
-    color: $purple;
+    color: $primary;
   }
 
   .drp_top-bar {
@@ -314,7 +314,7 @@
 
   .calendar__arrow i {
     cursor: pointer;
-    background: $gradient;
+    background: $gradientPrimary;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }

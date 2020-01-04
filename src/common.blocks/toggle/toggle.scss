@@ -7,12 +7,12 @@
 
 .toggle__label{
   input:checked+.toggle__text:before {
-    border-color: $purple;
+    border-color: $primary;
   }
 
   input:checked+.toggle__text:after {
     left: 24px;
-    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+    background: linear-gradient(180deg, $primary 0%, #8BA4F9 100%);
     transition: .2s;
   }
 }

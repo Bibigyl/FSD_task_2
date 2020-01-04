@@ -5,7 +5,7 @@
   transition: .2s;
   justify-content: center;
   border-radius: 100px;
-  background: $gradient;
+  background: $gradientPrimary;
   padding: 2px;
   border: none;
 
@@ -43,7 +43,7 @@
     .button__content {
       border-radius: inherit;
       background: #fff;
-      color: $purple;
+      color: $primary;
     }
   }
 
