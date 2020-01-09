@@ -1,73 +1,71 @@
-doctype html
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name='viewport' content="initial-scale=1.0, width=device-width")
-        title Colors and Types
-        link(rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon.png")
-        link(rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png")
-        link(rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png")
-        link(rel="manifest" href="favicon/site.webmanifest")
-        link(rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5")
-        meta(name="msapplication-TileColor" content="#da532c")
-        meta(name="theme-color" content="#ffffff")
-        link(rel="stylesheet" href="colors-and-types.css")
-    body
-        section.colors-and-types
-            .colors-and-types__logo
-                include ../../common.blocks/logo/ui-logo.svg
-            .colors-and-types__container
-                .colors-and-types__colors
-                    .color-item
-                        .color-item__square
-                        .color-item__description
-                            h2.color-item__title Dark Shade 100%
-                            span.color-item__text #1F2041
-                    .color-item
-                        .color-item__square
-                        .color-item__description
-                            h2.color-item__title Dark Shade 75%
-                            span.color-item__text #1F2041
-                    .color-item
-                        .color-item__square
-                        .color-item__description
-                            h2.color-item__title Dark Shade 50%
-                            span.color-item__text #1F2041
-                    .color-item
-                        .color-item__square
-                        .color-item__description
-                            h2.color-item__title Dark Shade 25%
-                            span.color-item__text #1F2041
-                    .color-item
-                        .color-item__square
-                        .color-item__description
-                            h2.color-item__title Dark Shade 5%
-                            span.color-item__text #1F2041
-                    .color-item
-                        .color-item__square
-                        .color-item__description
-                            h2.color-item__title Purple
-                            span.color-item__text #BC9CFF
-                    .color-item
-                        .color-item__square
-                        .color-item__description
-                            h2.color-item__title Green
-                            span.color-item__text #6FCF97
+extends ../../templates/ui-kit
 
-                .colors-and-types__fonts
-                    .font-item
-                        .font-item__tag
-                            h1.font-item__title H1
-                        h1.font-item__description This one is the sub-section or widget title
-                    .font-item
-                        .font-item__tag
-                            h2.font-item__title H2
-                        h2.font-item__description Next one is the item title inside widgets
-                    .font-item
-                        .font-item__tag
-                            h3.font-item__title H3
-                        h3.font-item__description This is a label or cta text
-                    .font-item
-                        .font-item__tag
-                            span.font-item__title Body
-                        span.font-item__description This is the body text which is used for most of the design, like paragraphs, lists, etc.
+block vars
+    - mainClass = 'colors-and-types';
+
+
+block head
+    title Colors and Types
+    link(rel="stylesheet" href="colors-and-types.css")
+
+
+block content
+    .colors-and-types__container
+        .colors-and-types__colors
+            .color-item
+                .color-item__square
+                .color-item__description
+                    h2.color-item__title Dark Shade 100%
+                    span.color-item__text #1F2041
+            .color-item
+                .color-item__square
+                .color-item__description
+                    h2.color-item__title Dark Shade 75%
+                    span.color-item__text #1F2041
+            .color-item
+                .color-item__square
+                .color-item__description
+                    h2.color-item__title Dark Shade 50%
+                    span.color-item__text #1F2041
+            .color-item
+                .color-item__square
+                .color-item__description
+                    h2.color-item__title Dark Shade 25%
+                    span.color-item__text #1F2041
+            .color-item
+                .color-item__square
+                .color-item__description
+                    h2.color-item__title Dark Shade 5%
+                    span.color-item__text #1F2041
+            .color-item
+                .color-item__square
+                .color-item__description
+                    h2.color-item__title Purple
+                    span.color-item__text #BC9CFF
+            .color-item
+                .color-item__square
+                .color-item__description
+                    h2.color-item__title Green
+                    span.color-item__text #6FCF97
+
+        .colors-and-types__fonts
+            .font-item
+                .font-item__tag
+                    h1.font-item__title H1
+                h1.font-item__description This one is the sub-section or widget title
+            .font-item
+                .font-item__tag
+                    h2.font-item__title H2
+                h2.font-item__description Next one is the item title inside widgets
+            .font-item
+                .font-item__tag
+                    h3.font-item__title H3
+                h3.font-item__description This is a label or cta text
+            .font-item
+                .font-item__tag
+                    span.font-item__title Body
+                span.font-item__description This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+
+block script
+    script(src='./colors-and-types.js')
