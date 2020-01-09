@@ -20,24 +20,22 @@
     }    
   }
 
-  &__label {
-    position: relative;
-  }
-
   &__text-block {
-    margin-left: 30px;
+    margin-left: 29px;
+    position: relative;
 
     &:before {
       box-sizing: border-box;
       content: '';
       position: absolute;
-      left: 0px;
+      left: -29px;
       top: 0px;
       width: 20px;
       height: 20px;
       border: 1px solid $c25;
       background-color: #fff;
       border-radius: 4px;
+      cursor: pointer;
     }
 
     &:after {
@@ -45,7 +43,7 @@
       content: '';
       position: absolute;
       transition: all 0.15s ease;
-      left: 6px;
+      left: -23px;
       top: 6px;
       width: 8px;
       height: 6px;
@@ -54,6 +52,7 @@
       border-image: linear-gradient(0deg, $primary 0%, #8BA4F9 100%);
       border-image-slice: 1;
       transform: rotate(-45deg);
+      cursor: pointer;
     }
   }
 
