@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var visibleLinks = 4; // how many links need to be visible;
 
   var linksCount = Math.ceil(totalElements / perPage); // pagination links count;
-  var paginationContainer = $(".pagination");
+  var paginationContainer = $(".js-pagination__pages");
   var paginationBody = $(".paginationBody"); // where the pagination will be append
 
   // create the first array of links

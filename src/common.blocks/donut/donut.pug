@@ -52,19 +52,24 @@ mixin donut({marksNames, dataName})
 
       <figcaption class="figure-key">
         <ul class="figure-key-list" aria-hidden="true" role="presentation">
-          <li class='donut__mark'>
+          <li class='donut__mark js-donut__mark'>
             <span class="shape-circle shape-circle_excellent" mark='excellent'></span> #{marksNames[0]}
           </li>
-          <li class='donut__mark'>
+          <li class='donut__mark js-donut__mark'>
             <span class="shape-circle shape-circle_good" mark='good'></span> #{marksNames[1]}
           </li>
-          <li class='donut__mark'>
+          <li class='donut__mark js-donut__mark'>
             <span class="shape-circle shape-circle_satisfactorily" mark='satisfactorily'></span> #{marksNames[2]}
           </li>
-          <li class='donut__mark'>
+          <li class='donut__mark js-donut__mark'>
             <span class="shape-circle shape-circle_badly" mark='badly'></span> #{marksNames[3]}
           </li>
         </ul>
       </figcaption>
     </figure>
   </div>
+
+
+//- код скопирован с сайта, немного изменен. нужно его переводить в pug?
+//- тот же вопрос про scss
+//- js-названиеКласса

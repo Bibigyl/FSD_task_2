@@ -1,122 +1,70 @@
-doctype html
-html(lang="ru")
-    head
-        meta(charset = 'utf-8')
-        meta(name='viewport' content="initial-scale=1.0, width=device-width")
-        title Landing page
-        link(rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon.png")
-        link(rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png")
-        link(rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png")
-        link(rel="manifest" href="favicon/site.webmanifest")
-        link(rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5")
-        meta(name="msapplication-TileColor" content="#da532c")
-        meta(name="theme-color" content="#ffffff")
-        link(rel="stylesheet" href="landing-page.css")
+extends ../../templates/main
 
-    body.landing-page
+block vars
+    - mainClass = 'landing-page';
 
-        include ../../components/header/header
-        include ../../components/footer/footer
-        include ../../components/search-card/search-card
-        -
-            let options;
-            let items;
-            let dropdownContent = {
-                guests: {
-                    text: 'Сколько гостей',
-                    items: ['взрослые', 'дети', 'младенцы'],
-                    buttons: ['Очистить', 'Применить']
-                },
-                furniture: {
-                    text: 'Удобства',
-                    items: ['спальни', 'кровати', 'ванные комнаты'],
-                    buttons: false
-                }
-            };
-            let dateTextField = {
-                maskParameters: {
-                    type: 'date',
-                    delimiter: '.',
-                    pattern: ['d', 'm', 'Y']
-                },
-                placeholder: 'ДД.ММ.ГГГГ'   
+
+block head
+    title Landing page
+    link(rel="stylesheet" href="landing-page.css")
+
+
+block content
+    include ../../components/search-card/search-card
+    -
+        let dropdownContent = {
+            guests: {
+                text: 'Сколько гостей',
+                items: ['взрослые', 'дети', 'младенцы'],
+                buttons: ['Очистить', 'Применить']
+            },
+            furniture: {
+                text: 'Удобства',
+                items: ['спальни', 'кровати', 'ванные комнаты'],
+                buttons: false
             }
+        };
+        let dateTextField = {
+            maskParameters: {
+                type: 'date',
+                delimiter: '.',
+                pattern: ['d', 'm', 'Y']
+            },
+            placeholder: 'ДД.ММ.ГГГГ'   
+        }
 
-        .landing-page__header
-            -
-                options = {
-                    items: [
-                        {text: 'О нас'},
-                        {text: 'Услуги', hasSubmenu: true},
-                        {text: 'Вакансии'},
-                        {text: 'Новости'},
-                        {text: 'Соглашения', hasSubmenu: true},
-                    ],
-                    loginButton: {
-                        text: 'Войти', isSecondary: true, isSmall: true
-                    },
-                    registerButton: {
-                        text: 'Зарегистрироваться', isSmall: true 
-                    },
-                    isMenuItemSlim: true
-                }
-
-            +header(options)
-
-        .landing-page__front(style=`background-image: url( ${require('./images/landing-page__front.jpg')})`)
-            .landing-page__container
-                .landing-page__search-card
-                    -
-                        options = {
-                            title: 'Найдём номера под ваши пожелания',
-                            dateDropdown: {
-                                firstDate: {
-                                    title: 'Прибытие',
-                                    textField: dateTextField
-                                },
-                                lastDate: {
-                                    title: 'Выезд',
-                                },
-                                mask: dateTextField
+    .landing-page__front(style=`background-image: url( ${require('./images/landing-page__front.jpg')})`)
+        .landing-page__container
+            .landing-page__search-card
+                -
+                    options = {
+                        title: 'Найдём номера под ваши пожелания',
+                        dateDropdown: {
+                            firstDate: {
+                                title: 'Прибытие',
+                                textField: dateTextField
                             },
-                            dropdown: {
-                                content: dropdownContent.guests, 
-                                title: 'Гости'
+                            lastDate: {
+                                title: 'Выезд',
                             },
-                            button: {
-                                text: 'Подобрать номер',
-                                appearance: 'filled',
-                                isExtended: true
-                            }    
-                        }
-                    
-                    +search-card(options)
-
-                .landing-page__tagline
-                    p Лучшие номера для вашей работы, отдыха и просто вдохновения
-
-        .landing-page__footer
-            -
-                options = {
-                    text: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
-                    items: [
-                        {title: 'Навигация', subitems: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
-                        {title: 'О нас', subitems: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
-                        {title: 'Служба поддержки', subitems: ["Соглашения", "Сообщества", "Связь с нами"]},
-                    ],
-                    subscription: {
-                        title: 'Подписка',
-                        text: 'Получайте специальные предложения и новости сервиса',
-                        textField: {isSubscription: true, placeholder: 'Email'}
-                    },
-                    copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
-                    links: [
-                        {name: 'twitter'},
-                        {name: 'facebook-square'},
-                        {name: 'instagram'}
-                    ]
-                }
+                            mask: dateTextField
+                        },
+                        dropdown: {
+                            content: dropdownContent.guests, 
+                            title: 'Гости'
+                        },
+                        button: {
+                            text: 'Подобрать номер',
+                            appearance: 'filled',
+                            isExtended: true
+                        }    
+                    }
                 
-            +footer(options)
+                +search-card(options)
 
-        script(src="landing-page.js")
+            .landing-page__tagline
+                p Лучшие номера для вашей работы, отдыха и просто вдохновения
+
+
+block script
+    script(src="landing-page.js")

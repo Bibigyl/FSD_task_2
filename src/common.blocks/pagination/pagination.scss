@@ -1,32 +1,40 @@
 .pagination {
-  position: relative;
-  display: inline-block;
 
-  a {
-    text-decoration: none;
-    font-size: rem(12px);
-    margin: 0 17px;
-    color: $c50;
+  &__pages {
+    position: relative;
+    display: inline-block;
 
-    &:first-child {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: $gradientPrimary;
-      border-radius: 100px;
-      line-height: 40px;
-      text-align: center;
-      color: #fff;
-      margin: 0;
+    a {
+      text-decoration: none;
+      font-size: rem(12px);
+      margin: 0 17px;
+      color: $c50;
 
-      &:hover {
-        opacity: 0.5;
-        transition: .2s;
+      &:first-child {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: $gradientPrimary;
+        border-radius: 100px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        margin: 0;
+
+        &:hover {
+          opacity: 0.5;
+          transition: .2s;
+        }
+      }
+
+      &:last-child {
+        margin-right: 11px;
       }
     }
-
-    &:last-child {
-      margin-right: 11px;
+    
+    span {
+      margin: 0 16px;
+      cursor: pointer;
     }
   }
 
@@ -50,11 +58,6 @@
 
   &__text {
     margin: 7px 0 0 7px;
-  }
-
-  span {
-    margin: 0 16px;
-    cursor: pointer;
   }
 }
 

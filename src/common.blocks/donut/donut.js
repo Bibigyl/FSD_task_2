@@ -5,7 +5,7 @@ let donutColors = {
     badly: '#919191'
 }
 
-$('.donut__mark').on('mouseenter', function() {
+$('.js-donut__mark').on('mouseenter', function() {
      
     let mark = $(this).find('.shape-circle').attr('mark');
     let $donut = $(this).closest('.donut-wrap');
@@ -22,7 +22,7 @@ $('.donut__mark').on('mouseenter', function() {
     $chartLabel.attr('fill', donutColors[mark]);
 });
 
-$('.donut__mark').on('mouseleave', function() {
+$('.js-donut__mark').on('mouseleave', function() {
     let mark = $(this).find('.shape-circle').attr('mark');
     let $donut = $(this).closest('.donut-wrap');
     let $seg = $donut.find('.donut-segment[mark='+ mark + ']');

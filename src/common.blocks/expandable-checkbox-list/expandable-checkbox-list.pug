@@ -1,6 +1,6 @@
 include ../checkbox-button/checkbox-button
 
-mixin expandable-checkbox-list({title, items, isOpen=false})
+mixin expandable-checkbox-list({title, items, isOpen})
 
 	-let open = isOpen ? 'expandable-checkbox-list_open' : '';
 
@@ -14,4 +14,5 @@ mixin expandable-checkbox-list({title, items, isOpen=false})
 				li.expandable-checkbox-list__item
 					+checkbox-button(item)
 			
+//- js-названиеКласса
 

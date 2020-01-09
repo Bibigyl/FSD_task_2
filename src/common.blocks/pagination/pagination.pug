@@ -1,11 +1,16 @@
-mixin pagination(items, max, page)
-	-let text = ''
-	-let num = items*(page - 1) + 1;
-	-text = text + num + ' - ';
-	-num = num + items - 1;
-	-text = text + num + ' из ';
-	-num = max < 100 ? num : '100+';
-	-text = text + num;
+mixin pagination({items, max, page, text})
+	-
+		let fullText = ''
+		let num = items*(page - 1) + 1;
+		fullText = fullText + num + ' - ';
+		num = num + items - 1;
+		fullText = fullText + num + ' ' + text[0] + ' ';
+		num = max < 100 ? num : '100+';
+		fullText = fullText + num + ' ' + text[1];
+
 	.pagination
-	i.pagination__arrow.material-icons arrow_forward
-	.pagination__text #{text} вариантов аренды
+		.pagination__pages.js-pagination__pages
+		i.pagination__arrow.material-icons arrow_forward
+		.pagination__text #{fullText}
+
+//- код с интернета, js без изменений

@@ -1,5 +1,4 @@
-mixin like-button({number, isChecked=false} = {})
-	-let icon = isChecked ? favorite : favorite_border;
+mixin like-button({number, isChecked} = {})
 	-let likeButtonClass = isChecked ? 'like-button_checked' : '';
 	-number = number || 0;
 	
@@ -8,4 +7,6 @@ mixin like-button({number, isChecked=false} = {})
 			input.like-button__input.js-like-button__input(type="checkbox" checked=isChecked)
 			.like-button__text
 				span.like-button__number.js-like-button__number= number
-				.like-button__icon.material-icons= icon
+				.like-button__icon.material-icons
+
+//- js-названиеКласса

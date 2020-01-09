@@ -1,215 +1,161 @@
-doctype html
-html(lang="ru")
-    head
-        meta(charset = 'utf-8')
-        meta(name='viewport' content="initial-scale=1.0, width=device-width")
-        title Search-room
-        link(rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon.png")
-        link(rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png")
-        link(rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png")
-        link(rel="manifest" href="favicon/site.webmanifest")
-        link(rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5")
-        meta(name="msapplication-TileColor" content="#da532c")
-        meta(name="theme-color" content="#ffffff")
-        link(rel="stylesheet" href="search-room.css")
+extends ../../templates/main
 
-    body.search-room
+block vars
+    - mainClass = 'search-room';
 
-        include ../../components/header/header
-        include ../../components/footer/footer
-        include ../../components/room-card/room-card
 
-        include ../../common.blocks/dropdown/dropdown
-        include ../../common.blocks/filter-date-dropdown/filter-date-dropdown
-        include ../../common.blocks/checkbox-button-list/checkbox-button-list
-        include ../../common.blocks/slider-range/slider-range
-        include ../../common.blocks/pagination/pagination
-        include ../../common.blocks/expandable-checkbox-list/expandable-checkbox-list
-        - 
-            let options;
-            let items;
-            let dropdownContent = {
-                guests: {
-                    text: 'Сколько гостей',
-                    items: ['Взрослые', 'Дети', 'Младенцы'],
-                    buttons: ['Очистить', 'Применить']
-                },
-                furniture: {
-                    text: 'Удобства',
-                    items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-                    buttons: false
-                }
-            };
-            let dateTextField = {
-                maskParameters: {
-                    type: 'date',
-                    delimiter: '.',
-                    pattern: ['d', 'm', 'Y']
-                },
-                placeholder: 'ДД.ММ.ГГГГ'   
-            };
+block head
+    title Search-room
+    link(rel="stylesheet" href="search-room.css")
 
-        .search-room__header
-            -
-                options = {
-                    items: [
-                        {text: 'О нас'},
-                        {text: 'Услуги', hasSubmenu: true},
-                        {text: 'Вакансии'},
-                        {text: 'Новости'},
-                        {text: 'Соглашения', hasSubmenu: true},
-                    ],
-                    loginButton: {
-                        text: 'Войти', isSecondary: true, isSmall: true
-                    },
-                    registerButton: {
-                        text: 'Зарегистрироваться', isSmall: true 
-                    },
-                    isMenuItemSlim: true
-                }
 
-            +header(options)
+block content
+    include ../../components/room-card/room-card
 
-        .search-room__container
-            .search-room__parameters
-                .search-room__filter-date-dropdown
-                    -
-                        options = {
-                            title: 'Даты пребывания в отеле',
-                            firstDate: '19.08.2019',
-                            lastDate: '23.08.2019'
-                        }
+    include ../../common.blocks/dropdown/dropdown
+    include ../../common.blocks/filter-date-dropdown/filter-date-dropdown
+    include ../../common.blocks/checkbox-button-list/checkbox-button-list
+    include ../../common.blocks/slider-range/slider-range
+    include ../../common.blocks/pagination/pagination
+    include ../../common.blocks/expandable-checkbox-list/expandable-checkbox-list
+    - 
+        let dropdownContent = {
+            guests: {
+                text: 'Сколько гостей',
+                items: ['Взрослые', 'Дети', 'Младенцы'],
+                buttons: ['Очистить', 'Применить']
+            },
+            furniture: {
+                text: 'Удобства',
+                items: ['Спальни', 'Кровати', 'Ванные комнаты'],
+                buttons: false
+            }
+        };
+        let dateTextField = {
+            maskParameters: {
+                type: 'date',
+                delimiter: '.',
+                pattern: ['d', 'm', 'Y']
+            },
+            placeholder: 'ДД.ММ.ГГГГ'   
+        };
 
-                    +filter-date-dropdown(options)
+    .search-room__container
+        .search-room__parameters
+            .search-room__filter-date-dropdown
+                -
+                    options = {
+                        title: 'Даты пребывания в отеле',
+                        firstDate: '19.08.2019',
+                        lastDate: '23.08.2019'
+                    }
 
-                .search-room__dropdown-guests
-                    +dropdown({title: 'Гости', content: dropdownContent.guests})
+                +filter-date-dropdown(options)
 
-                .search-room__slider-range
-                    +slider-range('Диапазон цены')
-                    p.search-room__slider-range-text Стоимость за сутки пребывания в номере
+            .search-room__dropdown-guests
+                +dropdown({title: 'Гости', content: dropdownContent.guests})
 
-                .search-room__checkbox-buttons
-                    -
-                        options = {
-                            title: 'Checkbox Buttons',
-                            items: [
-                                {text: 'Можно курить'},
-                                {text: 'Можно с питомцами', isChecked: true},
-                                {text: 'Можно пригласить гостей (до 10 человек)', isChecked: true}
-                            ]
-                        }
+            .search-room__slider-range
+                +slider-range('Диапазон цены')
+                p.search-room__slider-range-text Стоимость за сутки пребывания в номере
 
-                    +checkbox-button-list(options)
-
-                .search-room__rich-checkbox-buttons
-                    -
-                        options = {
-                            title: 'Доступность',
-                            items: [
-                                {
-                                    richText: 'Широкий коридор',
-                                    text: 'Ширина коридоров в номере не менее 91 см.'   
-                                },
-                                {
-                                    richText: 'Помощник для инвалидов',
-                                    text: 'На 1 этаже вас встретит специалист и проводит до номера.'                                        
-                                }
-                            ]
-                        }
-                        
-                    +checkbox-button-list(options)
-
-                .search-room__dropdown-furniture
-                    +dropdown({title: 'Удобства номера', content: dropdownContent.furniture})
-
-                .search-room__expandable-checkbox-list
-                    -
-                        options = {
-                            title: 'Дополнительные удобства',
-                            items: [
-                                {text: 'Завтрак'},
-                                {text: 'Письменный стол', isChecked: true},
-                                {text: 'Стул для кормления', isChecked: true},
-                                {text: 'Кроватка', isChecked: true},
-                                {text: 'Телевизор'},
-                                {text: 'Шампунь'},
-                                {text: 'Телевизор'},
-                                {text: 'Шампунь'}
-                            ]
-                        }
-
-                    +expandable-checkbox-list(options)
-
-            .search-room__room-cards-field
-                h1.search-room__title Номера, которые мы для вас подобрали
-                .search-room__room-cards
-                    -
-                        items = [
-                            [1, 888, true, 9990, 5, 145],
-                            [2, 840, false, 9900, 4, 65],
-                            [3, 980, true, 8500, 3, 35],
-                            [4, 856, false, 7300, 5, 19],
-                            [5, 740, false, 6000, 4, 44],
-                            [6, 982, false, 5800, 3, 56],
-                            [7, 678, false, 5500, 5, 45],
-                            [8, 450, false, 5300, 4, 39],
-                            [9, 350, false, 5000, 3, 77],
-                            [10, 666, false, 5000, 5, 25],
-                            [11, 444, false, 5000, 3, 15],
-                            [12, 352, false, 5000, 3, 55]
+            .search-room__checkbox-buttons
+                -
+                    options = {
+                        title: 'Checkbox Buttons',
+                        items: [
+                            {text: 'Можно курить'},
+                            {text: 'Можно с питомцами', isChecked: true},
+                            {text: 'Можно пригласить гостей (до 10 человек)', isChecked: true}
                         ]
-                    
-                    each item in items
-                        -
-                            let price = ('' + item[3]).slice(0, 1) + 
-                                ' ' + ('' + item[3]).slice(1) + '₽';
-                            let lux = item[2] ? 'люкс' : false;
+                    }
 
-                            options = {
-                                image:  'search-room__room-' + item[0] + '.jpg',
-                                number: item[1],
-                                lux: lux,
-                                price: {
-                                    number: price,
-                                    text: 'в сутки'
-                                },
-                                rateButton: {'rate': item[4]},
-                                reviews: {
-                                    number: item[5],
-                                    text: 'Отзывов'
-                                }
+                +checkbox-button-list(options)
+
+            .search-room__rich-checkbox-buttons
+                -
+                    options = {
+                        title: 'Доступность',
+                        items: [
+                            {
+                                richText: 'Широкий коридор',
+                                text: 'Ширина коридоров в номере не менее 91 см.'   
+                            },
+                            {
+                                richText: 'Помощник для инвалидов',
+                                text: 'На 1 этаже вас встретит специалист и проводит до номера.'                                        
                             }
-                        
-                        .search-room__room-card
-                            +room-card(options)
+                        ]
+                    }
+                    
+                +checkbox-button-list(options)
 
-                .search-room__pagination
-                    +pagination(12, 101, 1)
+            .search-room__dropdown-furniture
+                +dropdown({title: 'Удобства номера', content: dropdownContent.furniture})
 
-                
-        .search-room__footer
-            -
-                options = {
-                    text: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
-                    items: [
-                        {title: 'Навигация', subitems: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
-                        {title: 'О нас', subitems: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
-                        {title: 'Служба поддержки', subitems: ["Соглашения", "Сообщества", "Связь с нами"]},
-                    ],
-                    subscription: {
-                        title: 'Подписка',
-                        text: 'Получайте специальные предложения и новости сервиса',
-                        textField: {isSubscription: true, placeholder: 'Email'}
-                    },
-                    copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
-                    links: [
-                        {name: 'twitter'},
-                        {name: 'facebook-square'},
-                        {name: 'instagram'}
+            .search-room__expandable-checkbox-list
+                -
+                    options = {
+                        title: 'Дополнительные удобства',
+                        items: [
+                            {text: 'Завтрак'},
+                            {text: 'Письменный стол', isChecked: true},
+                            {text: 'Стул для кормления', isChecked: true},
+                            {text: 'Кроватка', isChecked: true},
+                            {text: 'Телевизор'},
+                            {text: 'Шампунь'},
+                            {text: 'Телевизор'},
+                            {text: 'Шампунь'}
+                        ]
+                    }
+
+                +expandable-checkbox-list(options)
+
+        .search-room__room-cards-field
+            h1.search-room__title Номера, которые мы для вас подобрали
+            .search-room__room-cards
+                -
+                    items = [
+                        [1, 888, true, 9990, 5, 145],
+                        [2, 840, false, 9900, 4, 65],
+                        [3, 980, true, 8500, 3, 35],
+                        [4, 856, false, 7300, 5, 19],
+                        [5, 740, false, 6000, 4, 44],
+                        [6, 982, false, 5800, 3, 56],
+                        [7, 678, false, 5500, 5, 45],
+                        [8, 450, false, 5300, 4, 39],
+                        [9, 350, false, 5000, 3, 77],
+                        [10, 666, false, 5000, 5, 25],
+                        [11, 444, false, 5000, 3, 15],
+                        [12, 352, false, 5000, 3, 55]
                     ]
-                }
                 
-            +footer(options)
+                each item in items
+                    -
+                        let price = ('' + item[3]).slice(0, 1) + 
+                            ' ' + ('' + item[3]).slice(1) + '₽';
+                        let lux = item[2] ? 'люкс' : false;
 
-        script(src="search-room.js")
+                        options = {
+                            image:  'search-room__room-' + item[0] + '.jpg',
+                            number: item[1],
+                            lux: lux,
+                            price: {
+                                number: price,
+                                text: 'в сутки'
+                            },
+                            rateButton: {'rate': item[4]},
+                            reviews: {
+                                number: item[5],
+                                text: 'Отзывов'
+                            }
+                        }
+                    
+                    .search-room__room-card
+                        +room-card(options)
+
+            .search-room__pagination
+                +pagination({items: 12, max: 101, page: 1, text: ['из', 'вариантов аренды']})
+
+block script
+    script(src="search-room.js")

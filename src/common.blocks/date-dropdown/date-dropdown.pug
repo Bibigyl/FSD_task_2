@@ -2,7 +2,7 @@ include ../../common.blocks/text-field/text-field
 include ../../common.blocks/title/title
 
 
-mixin date-dropdown({firstDate = false, lastDate = false, mask} = {})
+mixin date-dropdown({firstDate, lastDate, mask} = {})
     -
         let firstTextField = mask ? Object.assign({}, mask) : {};
         let lastTextField = mask ? Object.assign({}, mask) : {};
@@ -20,7 +20,7 @@ mixin date-dropdown({firstDate = false, lastDate = false, mask} = {})
                     +text-field(firstTextField)
                     i.date-dropdown__arrow.material-icons expand_more
 
-            .date-dropdown__last-day.date-dropdown__date(data-date=lastTextField.value)
+            .date-dropdown__last-date.date-dropdown__date(data-date=lastTextField.value)
                 if lastDate.title
                     .date-dropdown__title
                         +title(lastDate.title)
@@ -34,3 +34,4 @@ mixin date-dropdown({firstDate = false, lastDate = false, mask} = {})
 
 //- когда открыто несколько дропдаунов и они наезжают друг на друга, как лучше сделать? По клику на любой дропдаун закрывать все остальные на странице?
 //- на filter-date-dropdown и на date-dropdown можно добавить язык в атрибуты, чтоб менять его в функции, добавить?
+//- вопрос с js-названиеКласса
