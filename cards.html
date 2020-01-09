@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Cards</title>
     <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -11,6 +10,7 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <title>Cards</title>
     <link rel="stylesheet" href="cards.css">
   </head>
   <body>
@@ -25,268 +25,270 @@
       <div class="cards__container">
         <div class="cards__column cards__column-1">
           <div class="search-card-wrap card-wrap">
-                <div class="search-card">
-                  <form>
-                    <h1 class="search-card__title">Найдём номера под ваши пожелания</h1>
-                    <div class="search-card__date-dropdown">
-                          <div class="date-dropdown js-date-dropdown">
-                            <div class="date-dropdown__dates">
-                              <div class="date-dropdown__first-date date-dropdown__date">
-                                <div class="date-dropdown__title">
-                                      <h3 class="title">Прибытие</h3>
+                  <div class="search-card">
+                    <form>
+                      <h1 class="search-card__title">Найдём номера под ваши пожелания</h1>
+                      <div class="search-card__date-dropdown">
+                              <div class="date-dropdown js-date-dropdown">
+                                <div class="date-dropdown__dates">
+                                  <div class="date-dropdown__first-date date-dropdown__date">
+                                    <div class="date-dropdown__title">
+                                            <h3 class="title">Прибытие</h3>
+                                    </div>
+                                    <div class="date-dropdown__text-field">
+                                            <div class="text-field js-text-field text-field_masked">
+                                              <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
+                                            </div><i class="date-dropdown__arrow material-icons">expand_more</i>
+                                    </div>
+                                  </div>
+                                  <div class="date-dropdown__last-date date-dropdown__date">
+                                    <div class="date-dropdown__title">
+                                            <h3 class="title">Выезд</h3>
+                                    </div>
+                                    <div class="date-dropdown__text-field">
+                                            <div class="text-field js-text-field text-field_masked">
+                                              <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
+                                            </div><i class="date-dropdown__arrow material-icons">expand_more</i>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="date-dropdown__text-field">
-                                      <div class="text-field js-text-field text-field_masked">
-                                        <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
-                                      </div><i class="date-dropdown__arrow material-icons">expand_more</i>
+                                <div class="date-dropdown__calendar-wrap">
+                                  <div class="date-dropdown__calendar"></div>
                                 </div>
                               </div>
-                              <div class="date-dropdown__last-day date-dropdown__date">
-                                <div class="date-dropdown__title">
-                                      <h3 class="title">Выезд</h3>
+                      </div>
+                      <div class="search-card__dropdown">
+                              <div class="dropdown" data-initial-text="Сколько гостей">
+                                <div class="dropdown__title">
+                                        <h3 class="title">Гости</h3>
                                 </div>
-                                <div class="date-dropdown__text-field">
-                                      <div class="text-field js-text-field text-field_masked">
-                                        <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
-                                      </div><i class="date-dropdown__arrow material-icons">expand_more</i>
+                                <div class="dropdown__field"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">expand_more</i></div>
+                                <div class="dropdown__list">
+                                  <ul>
+                                    <li class="dropdown__item" item="Взрослые">Взрослые
+                                      <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
+                                      <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
+                                    </li>
+                                    <li class="dropdown__item" item="Дети">Дети
+                                      <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
+                                      <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
+                                    </li>
+                                    <li class="dropdown__item" item="Младенцы">Младенцы
+                                      <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
+                                      <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
+                                    </li>
+                                  </ul>
+                                  <div class="dropdown__button_to-clear dropdown__button_hidden">
+                                          <button class="icon-link" type="button">Очистить</button>
+                                  </div>
+                                  <div class="dropdown__button_to-apply">
+                                          <button class="icon-link icon-link_primary" type="button">Применить</button>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                            <div class="date-dropdown__calendar-wrap">
-                              <div class="date-dropdown__calendar"></div>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="search-card__dropdown">
-                          <div class="dropdown" data-initial-text="Сколько гостей">
-                            <div class="dropdown__title">
-                                  <h3 class="title">Гости</h3>
-                            </div>
-                            <div class="dropdown__field"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">expand_more</i></div>
-                            <div class="dropdown__list">
-                              <ul>
-                                <li class="dropdown__item" item="Взрослые">Взрослые
-                                  <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
-                                  <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
-                                </li>
-                                <li class="dropdown__item" item="Дети">Дети
-                                  <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
-                                  <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
-                                </li>
-                                <li class="dropdown__item" item="Младенцы">Младенцы
-                                  <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
-                                  <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
-                                </li>
-                              </ul>
-                              <div class="dropdown__button_to-clear dropdown__button_hidden">
-                                    <button class="icon-link" type="button">Очистить</button>
-                              </div>
-                              <div class="dropdown__button_to-apply">
-                                    <button class="icon-link icon-link_primary" type="button">Применить</button>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="search-card__button">
-                          <button class="button button_extended" type="button">
-                            <div class="button__content">Подобрать номер</div><i class="button__arrow material-icons">arrow_forward</i>
-                          </button>
-                    </div>
-                  </form>
-                </div>
+                      </div>
+                      <div class="search-card__button">
+                              <button class="button button_extended" type="button">
+                                <div class="button__content">Подобрать номер</div><i class="button__arrow material-icons">arrow_forward</i>
+                              </button>
+                      </div>
+                    </form>
+                  </div>
           </div>
           <div class="check-in-card-wrap card-wrap">
-                <div class="check-in-card">
-                  <form>
-                    <h1 class="check-in-card__title">Регистрация аккаунта</h1>
-                    <div class="check-in-card__name">
-                          <div class="text-field js-text-field">
-                            <input class="text-field__input" type="text" placeholder="Имя">
-                          </div>
-                    </div>
-                    <div class="check-in-card__surname">
-                          <div class="text-field js-text-field">
-                            <input class="text-field__input" type="Surname" placeholder="Фамилия">
-                          </div>
-                    </div>
-                    <div class="check-in-card__radio-buttons">
-                          <div class="radio-buttons">
-                            <div class="radio-button">
-                              <label class="radio-button__label">
-                                <input class="radio-button__input" type="radio" name="gender" checked><span class="radio-button__text">Мужчина</span>
-                              </label>
-                            </div>
-                            <div class="radio-button">
-                              <label class="radio-button__label">
-                                <input class="radio-button__input" type="radio" name="gender"><span class="radio-button__text">Женщина</span>
-                              </label>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="check-in-card__birthday">
-                      <h3 class="check-in-card__birthday-title"></h3>
-                          <div class="text-field js-text-field text-field_masked">
-                            <div class="text-field__title">
-                                  <h3 class="title">Дата рождения</h3>
-                            </div>
-                            <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
-                          </div>
-                    </div>
-                    <div class="check-in-card__credentials">
-                      <h3 class="check-in-card__credentials-title">Данные для входа в сервис</h3>
-                      <div class="check-in-card__email">
-                            <div class="text-field js-text-field">
-                              <input class="text-field__input" type="email" placeholder="Email">
-                            </div>
+                  <div class="check-in-card">
+                    <form>
+                      <h1 class="check-in-card__title">Регистрация аккаунта</h1>
+                      <div class="check-in-card__name">
+                              <div class="text-field js-text-field">
+                                <input class="text-field__input" type="text" placeholder="Имя">
+                              </div>
                       </div>
-                      <div class="check-in-card__password">
-                            <div class="text-field js-text-field">
-                              <input class="text-field__input" type="password" placeholder="Пароль">
-                            </div>
+                      <div class="check-in-card__surname">
+                              <div class="text-field js-text-field">
+                                <input class="text-field__input" type="Surname" placeholder="Фамилия">
+                              </div>
                       </div>
-                    </div>
-                    <div class="check-in-card__toggle">
-                          <label class="toggle__label">
-                            <input class="toggle" type="checkbox">
-                            <div class="toggle__text">Получать спецпредложения</div>
-                          </label>
-                    </div>
-                    <div class="check-in-card__button">
-                          <button class="button button_extended" type="button">
-                            <div class="button__content">Перейти к оплате</div><i class="button__arrow material-icons">arrow_forward</i>
-                          </button>
-                    </div>
-                  </form>
-                  <div class="check-in-card__enter"><span class="check-in-card__enter-text">Уже есть аккаунт на Toxin</span>
-                    <div class="check-in-card__enter-button">
-                          <button class="button button_secondary" type="button">
-                            <div class="button__content">Войти</div>
-                          </button>
+                      <div class="check-in-card__radio-buttons">
+                              <div class="radio-buttons">
+                                <div class="radio-button">
+                                  <label class="radio-button__label">
+                                    <input class="radio-button__input" type="radio" name="gender" checked><span class="radio-button__text">Мужчина</span>
+                                  </label>
+                                </div>
+                                <div class="radio-button">
+                                  <label class="radio-button__label">
+                                    <input class="radio-button__input" type="radio" name="gender"><span class="radio-button__text">Женщина</span>
+                                  </label>
+                                </div>
+                              </div>
+                      </div>
+                      <div class="check-in-card__birthday">
+                        <h3 class="check-in-card__birthday-title"></h3>
+                              <div class="text-field js-text-field text-field_masked">
+                                <div class="text-field__title">
+                                        <h3 class="title">Дата рождения</h3>
+                                </div>
+                                <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
+                              </div>
+                      </div>
+                      <div class="check-in-card__credentials">
+                        <h3 class="check-in-card__credentials-title">Данные для входа в сервис</h3>
+                        <div class="check-in-card__email">
+                                <div class="text-field js-text-field">
+                                  <input class="text-field__input" type="email" placeholder="Email">
+                                </div>
+                        </div>
+                        <div class="check-in-card__password">
+                                <div class="text-field js-text-field">
+                                  <input class="text-field__input" type="password" placeholder="Пароль">
+                                </div>
+                        </div>
+                      </div>
+                      <div class="check-in-card__toggle">
+                              <div class="toggle">
+                                <label class="toggle__label">
+                                  <input class="toggle__input" type="checkbox">
+                                  <div class="toggle__text">Получать спецпредложения</div>
+                                </label>
+                              </div>
+                      </div>
+                      <div class="check-in-card__button">
+                              <button class="button button_extended" type="button">
+                                <div class="button__content">Перейти к оплате</div><i class="button__arrow material-icons">arrow_forward</i>
+                              </button>
+                      </div>
+                    </form>
+                    <div class="check-in-card__enter"><span class="check-in-card__enter-text">Уже есть аккаунт на Toxin</span>
+                      <div class="check-in-card__enter-button">
+                              <button class="button button_secondary" type="button">
+                                <div class="button__content">Войти</div>
+                              </button>
+                      </div>
                     </div>
                   </div>
-                </div>
           </div>
         </div>
         <div class="cards__column cards__column-2">
           <div class="booking-card-wrap card-wrap">
-                <div class="booking-card">
-                  <form>
-                    <div class="booking-card__main-info"><span class="booking-card__number"> <span class="booking-card__simbol-number">№</span>888</span><span class="booking-card__class">люкс</span><span class="booking-card__price"><span class="booking-card__price-number">9 990₽</span>в сутки</span></div>
-                    <div class="booking-card__date-dropdown">
-                          <div class="date-dropdown js-date-dropdown">
-                            <div class="date-dropdown__dates">
-                              <div class="date-dropdown__first-date date-dropdown__date" data-date="19.08.2019">
-                                <div class="date-dropdown__title">
-                                      <h3 class="title">Прибытие</h3>
+                  <div class="booking-card">
+                    <form>
+                      <div class="booking-card__main-info"><span class="booking-card__number"> <span class="booking-card__simbol-number">№</span>888</span><span class="booking-card__class">люкс</span><span class="booking-card__price"><span class="booking-card__price-number">9 990₽</span>в сутки</span></div>
+                      <div class="booking-card__date-dropdown">
+                              <div class="date-dropdown js-date-dropdown">
+                                <div class="date-dropdown__dates">
+                                  <div class="date-dropdown__first-date date-dropdown__date" data-date="19.08.2019">
+                                    <div class="date-dropdown__title">
+                                            <h3 class="title">Прибытие</h3>
+                                    </div>
+                                    <div class="date-dropdown__text-field">
+                                            <div class="text-field js-text-field text-field_masked">
+                                              <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
+                                            </div><i class="date-dropdown__arrow material-icons">expand_more</i>
+                                    </div>
+                                  </div>
+                                  <div class="date-dropdown__last-date date-dropdown__date" data-date="23.08.2019">
+                                    <div class="date-dropdown__title">
+                                            <h3 class="title">Выезд</h3>
+                                    </div>
+                                    <div class="date-dropdown__text-field">
+                                            <div class="text-field js-text-field text-field_masked">
+                                              <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" value="23.08.2019" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
+                                            </div><i class="date-dropdown__arrow material-icons">expand_more</i>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="date-dropdown__text-field">
-                                      <div class="text-field js-text-field text-field_masked">
-                                        <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
-                                      </div><i class="date-dropdown__arrow material-icons">expand_more</i>
+                                <div class="date-dropdown__calendar-wrap">
+                                  <div class="date-dropdown__calendar"></div>
                                 </div>
                               </div>
-                              <div class="date-dropdown__last-day date-dropdown__date" data-date="23.08.2019">
-                                <div class="date-dropdown__title">
-                                      <h3 class="title">Выезд</h3>
-                                </div>
-                                <div class="date-dropdown__text-field">
-                                      <div class="text-field js-text-field text-field_masked">
-                                        <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" value="23.08.2019" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
-                                      </div><i class="date-dropdown__arrow material-icons">expand_more</i>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="date-dropdown__calendar-wrap">
-                              <div class="date-dropdown__calendar"></div>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="booking-card__dropdown">
-                          <div class="dropdown" data-initial-text="Сколько гостей">
-                            <div class="dropdown__title">
-                                  <h3 class="title">Гости</h3>
-                            </div>
-                            <div class="dropdown__field"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">expand_more</i></div>
-                            <div class="dropdown__list">
-                              <ul>
-                                <li class="dropdown__item" item="Взрослые">Взрослые
-                                  <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
-                                  <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
-                                </li>
-                                <li class="dropdown__item" item="Дети">Дети
-                                  <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
-                                  <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
-                                </li>
-                                <li class="dropdown__item" item="Младенцы">Младенцы
-                                  <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
-                                  <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
-                                </li>
-                              </ul>
-                              <div class="dropdown__button_to-clear dropdown__button_hidden">
-                                    <button class="icon-link" type="button">Очистить</button>
-                              </div>
-                              <div class="dropdown__button_to-apply">
-                                    <button class="icon-link icon-link_primary" type="button">Применить</button>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="booking-card__info">
-                      <div class="booking-card__info-item">
-                        <div class="booking-card__text">9 990₽ х 4 суток</div>
-                        <div class="booking-card__sum">39 960₽</div>
                       </div>
-                      <div class="booking-card__info-item">
-                        <div class="booking-card__text">Сбор за услуги: скидка 2 179₽</div>
-                        <div class="booking-card__icon-i">i</div>
-                        <div class="booking-card__sum">0₽</div>
+                      <div class="booking-card__dropdown">
+                              <div class="dropdown" data-initial-text="Сколько гостей">
+                                <div class="dropdown__title">
+                                        <h3 class="title">Гости</h3>
+                                </div>
+                                <div class="dropdown__field"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">expand_more</i></div>
+                                <div class="dropdown__list">
+                                  <ul>
+                                    <li class="dropdown__item" item="Взрослые">Взрослые
+                                      <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
+                                      <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
+                                    </li>
+                                    <li class="dropdown__item" item="Дети">Дети
+                                      <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
+                                      <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
+                                    </li>
+                                    <li class="dropdown__item" item="Младенцы">Младенцы
+                                      <button class="dropdown__button_round dropdown__button_minus dropdown__button_not-active" type="button">-</button><span class="dropdown__num">0</span>
+                                      <button class="dropdown__button_round dropdown__button_plus" type="button">+</button>
+                                    </li>
+                                  </ul>
+                                  <div class="dropdown__button_to-clear dropdown__button_hidden">
+                                          <button class="icon-link" type="button">Очистить</button>
+                                  </div>
+                                  <div class="dropdown__button_to-apply">
+                                          <button class="icon-link icon-link_primary" type="button">Применить</button>
+                                  </div>
+                                </div>
+                              </div>
                       </div>
-                      <div class="booking-card__info-item">
-                        <div class="booking-card__text">Сбор за дополнительные услуги</div>
-                        <div class="booking-card__icon-i">i</div>
-                        <div class="booking-card__sum">300₽</div>
+                      <div class="booking-card__info">
+                        <div class="booking-card__info-item">
+                          <div class="booking-card__text">9 990₽ х 4 суток</div>
+                          <div class="booking-card__sum">39 960₽</div>
+                        </div>
+                        <div class="booking-card__info-item">
+                          <div class="booking-card__text">Сбор за услуги: скидка 2 179₽</div>
+                          <div class="booking-card__icon-i">i</div>
+                          <div class="booking-card__sum">0₽</div>
+                        </div>
+                        <div class="booking-card__info-item">
+                          <div class="booking-card__text">Сбор за дополнительные услуги</div>
+                          <div class="booking-card__icon-i">i</div>
+                          <div class="booking-card__sum">300₽</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="booking-card__total">
-                      <div class="booking-card__total-text">Итого</div>
-                      <div class="booking-card__total-sum">38 081₽</div>
-                    </div>
-                    <div class="booking-card__button">
-                          <button class="button button_extended" type="button">
-                            <div class="button__content">Забронировать</div><i class="button__arrow material-icons">arrow_forward</i>
-                          </button>
-                    </div>
-                  </form>
-                </div>
+                      <div class="booking-card__total">
+                        <div class="booking-card__total-text">Итого</div>
+                        <div class="booking-card__total-sum">38 081₽</div>
+                      </div>
+                      <div class="booking-card__button">
+                              <button class="button button_extended" type="button">
+                                <div class="button__content">Забронировать</div><i class="button__arrow material-icons">arrow_forward</i>
+                              </button>
+                      </div>
+                    </form>
+                  </div>
           </div>
           <div class="login-card-wrap card-wrap">
-                <div class="login-card">
-                  <form>
-                    <h1 class="login-card__title">Войти</h1>
-                    <div class="login-card__email">
-                          <div class="text-field js-text-field">
-                            <input class="text-field__input" type="email" placeholder="Email">
-                          </div>
-                    </div>
-                    <div class="login-card__password">
-                          <div class="text-field js-text-field">
-                            <input class="text-field__input" type="password" placeholder="Пароль">
-                          </div>
-                    </div>
-                    <div class="login-card__button">
-                          <button class="button button_extended" type="button">
-                            <div class="button__content">Войти</div><i class="button__arrow material-icons">arrow_forward</i>
-                          </button>
-                    </div>
-                  </form>
-                  <div class="login-card__enter"><span class="login-card__enter-text">Нет аккаунта на Toxin?</span>
-                    <div class="login-card__enter-button">
-                          <button class="button button_secondary" type="button">
-                            <div class="button__content">Создать</div>
-                          </button>
+                  <div class="login-card">
+                    <form>
+                      <h1 class="login-card__title">Войти</h1>
+                      <div class="login-card__email">
+                              <div class="text-field js-text-field">
+                                <input class="text-field__input" type="email" placeholder="Email">
+                              </div>
+                      </div>
+                      <div class="login-card__password">
+                              <div class="text-field js-text-field">
+                                <input class="text-field__input" type="password" placeholder="Пароль">
+                              </div>
+                      </div>
+                      <div class="login-card__button">
+                              <button class="button button_extended" type="button">
+                                <div class="button__content">Войти</div><i class="button__arrow material-icons">arrow_forward</i>
+                              </button>
+                      </div>
+                    </form>
+                    <div class="login-card__enter"><span class="login-card__enter-text">Нет аккаунта на Toxin?</span>
+                      <div class="login-card__enter-button">
+                              <button class="button button_secondary" type="button">
+                                <div class="button__content">Создать</div>
+                              </button>
+                      </div>
                     </div>
                   </div>
-                </div>
           </div>
         </div>
         <div class="cards__column cards__column-3">
@@ -294,64 +296,64 @@
             <input class="cards__calendar">
           </div>
           <div class="room-card-wrap-1 card-wrap">
-                <div class="room-card">
-                  <div class="room-card__image" style="background-image: url( images/cards__room-card-1.jpg)">
-                    <div class="room-card__arrow room-card__arrow_prev"><i class="material-icons">expand_more</i></div>
-                    <div class="room-card__arrow room-card__arrow_next"><i class="material-icons">expand_more</i></div>
-                    <div class="room-card__dots">
-                      <div class="room-card__dot room-card__dot_active"></div>
-                      <div class="room-card__dot"></div>
-                      <div class="room-card__dot"></div>
-                      <div class="room-card__dot"></div>
+                  <div class="room-card">
+                    <div class="room-card__image" style="background-image: url( images/cards__room-card-1.jpg)">
+                      <div class="room-card__arrow room-card__arrow_prev"><i class="material-icons">expand_more</i></div>
+                      <div class="room-card__arrow room-card__arrow_next"><i class="material-icons">expand_more</i></div>
+                      <div class="room-card__dots">
+                        <div class="room-card__dot room-card__dot_active"></div>
+                        <div class="room-card__dot"></div>
+                        <div class="room-card__dot"></div>
+                        <div class="room-card__dot"></div>
+                      </div>
+                    </div>
+                    <div class="room-card__content">
+                      <div class="room-card__room">
+                        <div class="room-card__room-number"> <span class="room-card__number-simbol">№</span>888</div><span class="room-card__class">люкс</span>
+                      </div>
+                      <div class="room-card__price">
+                        <div class="room-card__price-number">9 990₽</div><span class="room-card__price-text">в сутки</span>
+                      </div>
+                      <div class="room-card__line"></div>
+                      <div class="room-card__rate-button">
+                              <div class="rate-button"><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i>
+                              </div>
+                      </div>
+                      <div class="room-card__reviews">
+                        <h3 class="room-card__reviews-number">145</h3><span class="room-card__reviews-text">Отзывов</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="room-card__content">
-                    <div class="room-card__room">
-                      <div class="room-card__room-number"> <span class="room-card__number-simbol">№</span>888</div><span class="room-card__class">люкс</span>
-                    </div>
-                    <div class="room-card__price">
-                      <div class="room-card__price-number">9 990₽</div><span class="room-card__price-text">в сутки</span>
-                    </div>
-                    <div class="room-card__line"></div>
-                    <div class="room-card__rate-button">
-                          <div class="rate-button"><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i>
-                          </div>
-                    </div>
-                    <div class="room-card__reviews">
-                      <h3 class="room-card__reviews-number">145</h3><span class="room-card__reviews-text">Отзывов</span>
-                    </div>
-                  </div>
-                </div>
           </div>
           <div class="room-card-wrap-2 card-wrap">
-                <div class="room-card">
-                  <div class="room-card__image" style="background-image: url( images/cards__room-card-2.jpg)">
-                    <div class="room-card__arrow room-card__arrow_prev"><i class="material-icons">expand_more</i></div>
-                    <div class="room-card__arrow room-card__arrow_next"><i class="material-icons">expand_more</i></div>
-                    <div class="room-card__dots">
-                      <div class="room-card__dot room-card__dot_active"></div>
-                      <div class="room-card__dot"></div>
-                      <div class="room-card__dot"></div>
-                      <div class="room-card__dot"></div>
+                  <div class="room-card">
+                    <div class="room-card__image" style="background-image: url( images/cards__room-card-2.jpg)">
+                      <div class="room-card__arrow room-card__arrow_prev"><i class="material-icons">expand_more</i></div>
+                      <div class="room-card__arrow room-card__arrow_next"><i class="material-icons">expand_more</i></div>
+                      <div class="room-card__dots">
+                        <div class="room-card__dot room-card__dot_active"></div>
+                        <div class="room-card__dot"></div>
+                        <div class="room-card__dot"></div>
+                        <div class="room-card__dot"></div>
+                      </div>
+                    </div>
+                    <div class="room-card__content">
+                      <div class="room-card__room">
+                        <div class="room-card__room-number"> <span class="room-card__number-simbol">№</span>840</div>
+                      </div>
+                      <div class="room-card__price">
+                        <div class="room-card__price-number">9 900₽</div><span class="room-card__price-text">в сутки</span>
+                      </div>
+                      <div class="room-card__line"></div>
+                      <div class="room-card__rate-button">
+                              <div class="rate-button"><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star_border</i>
+                              </div>
+                      </div>
+                      <div class="room-card__reviews">
+                        <h3 class="room-card__reviews-number">65</h3><span class="room-card__reviews-text">Отзывов</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="room-card__content">
-                    <div class="room-card__room">
-                      <div class="room-card__room-number"> <span class="room-card__number-simbol">№</span>840</div>
-                    </div>
-                    <div class="room-card__price">
-                      <div class="room-card__price-number">9 900₽</div><span class="room-card__price-text">в сутки</span>
-                    </div>
-                    <div class="room-card__line"></div>
-                    <div class="room-card__rate-button">
-                          <div class="rate-button"><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star</i><i class="rate-button__icon material-icons">star_border</i>
-                          </div>
-                    </div>
-                    <div class="room-card__reviews">
-                      <h3 class="room-card__reviews-number">65</h3><span class="room-card__reviews-text">Отзывов</span>
-                    </div>
-                  </div>
-                </div>
           </div>
         </div>
       </div>
