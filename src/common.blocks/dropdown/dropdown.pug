@@ -19,17 +19,18 @@ mixin dropdown({title, content = {text, items, buttons}, isOpen, isSmall})
 			ul
 				each item in content.items
 					li.dropdown__item(item=item)= item
-						button.dropdown__button_round.dropdown__button_minus.dropdown__button_not-active(type='button') -
-						span.dropdown__num 0
-						button.dropdown__button_round.dropdown__button_plus(type='button') +
+						button.dropdown__button_to-change-quantity.dropdown__button_action_subtrack.dropdown__button_not-active(type='button') -
+						span.dropdown__number 0
+						button.dropdown__button_to-change-quantity.dropdown__button_action_add(type='button') +
 			
 			if content.buttons
-				.dropdown__button_to-clear.dropdown__button_hidden
+				.dropdown__button_action_clear.dropdown__button_hidden
 					+icon-link({text: content.buttons[0]})
-				.dropdown__button_to-apply
+				.dropdown__button_action_apply
 					+icon-link({text: content.buttons[1], isPrimary: true})
 
 //- js-названиеКласса
+//- поменять класс dropdown__button_hidden на атрибут hidden?
 
 
 			

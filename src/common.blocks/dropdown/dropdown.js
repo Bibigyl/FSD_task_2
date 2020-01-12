@@ -9,7 +9,7 @@ $( document ).ready(function() {
     });
 
 
-    $(".dropdown__button_to-clear").each(function() {
+    $(".dropdown__button_action_clear").each(function() {
         $(this).on("click", function() {
             let $dropdown = $(this).closest('.dropdown');
             let initialText = $dropdown.attr('data-initial-text');
@@ -17,8 +17,8 @@ $( document ).ready(function() {
             let $liArr = $list.find('li');
 
             for ( let i = 0; i < $liArr.length; i++ ) {
-                $liArr.eq(i).children(".dropdown__num").text("0");
-                $liArr.eq(i).children(".dropdown__button_minus").addClass("dropdown__button_not-active"); 
+                $liArr.eq(i).children(".dropdown__number").text("0");
+                $liArr.eq(i).children(".dropdown__button_action_subtrack").addClass("dropdown__button_not-active"); 
             }
 
             $dropdown.find(".dropdown__field span").text(initialText)
@@ -28,7 +28,7 @@ $( document ).ready(function() {
 
 
     
-    $(".dropdown__button_to-apply").each(function() {
+    $(".dropdown__button_action_apply").each(function() {
         $(this).on("click", function() {
             let $dropdown = $(this).closest('.dropdown');
 
@@ -38,46 +38,46 @@ $( document ).ready(function() {
 
 
 
-    $(".dropdown__button_round").each(function() {
+    $(".dropdown__button_to-change-quantity").each(function() {
         $(this).on("click", function() {
 
             let $dropdown = $(this).closest('.dropdown');
             let initialText = $dropdown.attr('data-initial-text');
             let $textField = $dropdown.find(".dropdown__text");
             let count = 0;
-            let $numNode = $(this).parent().find(".dropdown__num");
+            let $numNode = $(this).parent().find(".dropdown__number");
             let num = $numNode.text() * 1;
             let $list = $dropdown.find(".dropdown__list");
             let $ul = $list.children('ul');
     
             if ( !$(this).hasClass("dropdown__button_not-active") ) {
-                if ( $(this).hasClass("dropdown__button_minus") ) {
+                if ( $(this).hasClass("dropdown__button_action_subtrack") ) {
                     num = num - 1;
                     $numNode.text(num);
                     if ( num == 0 ) { $(this).addClass("dropdown__button_not-active") }
                     if ( num == 98 ) { 
-                        $(this).parent().find(".dropdown__button_plus").removeClass("dropdown__button_not-active"); 
+                        $(this).parent().find(".dropdown__button_action_add").removeClass("dropdown__button_not-active"); 
                     }
                 } else {
                     num = num + 1;
                     $numNode.text(num);
                     if ( num == 99 ) { $(this).addClass("dropdown__button_not-active") }
                     if ( num == 1 ) { 
-                        $(this).parent().find(".dropdown__button_minus").removeClass("dropdown__button_not-active"); 
+                        $(this).parent().find(".dropdown__button_action_subtrack").removeClass("dropdown__button_not-active"); 
                     }
                 }
             } else {
                 return;
             }
     
-            if ( $(this).hasClass("dropdown__button_plus") ) {
-                $dropdown.find(".dropdown__button_to-clear").removeClass("dropdown__button_hidden");
+            if ( $(this).hasClass("dropdown__button_action_add") ) {
+                $dropdown.find(".dropdown__button_action_clear").removeClass("dropdown__button_hidden");
             } else {
                 for ( let i = 0; i < $ul.children().length; i++ ) {
-                    count = count + $ul.children().eq(i).find(".dropdown__num").text()*1;
+                    count = count + $ul.children().eq(i).find(".dropdown__number").text()*1;
                 }
                 if ( count == 0 ) {
-                    $dropdown.find(".dropdown__button_to-clear").addClass("dropdown__button_hidden");
+                    $dropdown.find(".dropdown__button_action_clear").addClass("dropdown__button_hidden");
                 }
             }
     
@@ -90,8 +90,8 @@ $( document ).ready(function() {
     
                 $ul.children(".dropdown__item").each(function() {
                     $li = $(this);
-                    if ($li.find('.dropdown__num').text() != '0') {
-                        newText = newText + $li.find('.dropdown__num').text() + ' ' + $li.attr('item') + ', ';
+                    if ($li.find('.dropdown__number').text() != '0') {
+                        newText = newText + $li.find('.dropdown__number').text() + ' ' + $li.attr('item') + ', ';
                     }
                 });
     
@@ -107,7 +107,7 @@ function setDropdownValues($node, vals) {
 
     vals.forEach(function(item, i) {
         for (let r = 1; r <= +item; r++) {
-            $items.eq(i).find('.dropdown__button_plus').trigger('click');
+            $items.eq(i).find('.dropdown__button_action_add').trigger('click');
         }        
     })
 }

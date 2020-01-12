@@ -65,15 +65,14 @@
     }
   }
 
-  &__num {
+  &__number {
     right: 35px;
     width: 32px;
     text-align: center;
   }
 
   &__button {
-
-    &_round {
+    &_to-change-quantity {
       background-color: #fff;
       width: 30px;
       height: 30px;
@@ -86,25 +85,27 @@
       cursor: pointer;
     }
 
-    &_minus {
-      margin-left: auto;
-      padding-bottom: 5px;
+    &_action {
+      &_subtrack {
+        margin-left: auto;
+        padding-bottom: 5px;
+      }
+  
+      &_clear {
+        display: inline-block;
+        float: left;
+        padding: 9px 7px 7px 14px;
+      }
+  
+      &_apply {
+        display: inline-block;
+        float: right;
+        padding: 9px 7px 7px 14px;
+      }
     }
 
     &_not-active {
       opacity: .5;
-    }
-
-    &_to-clear {
-      display: inline-block;
-      float: left;
-      padding: 9px 7px 7px 14px;
-    }
-
-    &_to-apply {
-      display: inline-block;
-      float: right;
-      padding: 9px 7px 7px 14px;
     }
 
     &_hidden {
