@@ -28,14 +28,6 @@ block content
                 buttons: false
             }
         };
-        let dateTextField = {
-            maskParameters: {
-                type: 'date',
-                delimiter: '.',
-                pattern: ['d', 'm', 'Y']
-            },
-            placeholder: 'ДД.ММ.ГГГГ'   
-        };
 
     .room-details__photos
         .room-details__photo.room-details__photo-1(style=`background-image: url( ${require('./images/room-details__front-1.jpg')})`)
@@ -127,7 +119,7 @@ block content
                             title: 'Выезд',
                             date: '23.08.2019'
                         },
-                        mask: dateTextField
+                        placeholder: 'ДД.ММ.ГГГГ'
                     },
                     dropdownTitle: 'Гости',
                     dropdown: {

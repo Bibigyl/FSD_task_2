@@ -12,21 +12,11 @@ block head
 block content
     include ../../components/login-card/login-card
     include ../../components/check-in-card/check-in-card
-    -
-        let dateTextField = {
-            maskParameters: {
-                type: 'date',
-                delimiter: '.',
-                pattern: ['d', 'm', 'Y']
-            },
-            placeholder: 'ДД.ММ.ГГГГ'   
-        }  
 
     .registration__front(style=`background-image: url( ${require('./images/registration__front.jpg')})`)
         .registration__container
             .registration__check-in-card.registration__card.js-registration__card
                 -
-                    let birthdayTextField = Object.assign({}, dateTextField, {title: 'Дата рождения'});
                     options = {
                         title: 'Регистрация аккаунта',
                         textFieldName: {placeholder: 'Имя', name: 'Name'},
@@ -38,7 +28,15 @@ block content
                                 {text: 'Женщина'}
                             ]
                         },
-                        textFieldBirthday: birthdayTextField, 
+                        textFieldBirthday: {
+                            maskParameters: {
+                                type: 'date',
+                                delimiter: '.',
+                                pattern: ['d', 'm', 'Y']
+                            },
+                            placeholder: 'ДД.ММ.ГГГГ',
+                            title: 'Дата рождения'
+                        }, 
                         credentialsTitle: 'Данные для входа в сервис', 
                         textFieldEmail: {placeholder: 'Email', type: 'email', name: 'Email'}, 
                         textFieldPassword: {placeholder: 'Пароль', type: 'password', name: "Password"}, 

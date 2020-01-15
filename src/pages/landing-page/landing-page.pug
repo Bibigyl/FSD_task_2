@@ -24,14 +24,6 @@ block content
                 buttons: false
             }
         };
-        let dateTextField = {
-            maskParameters: {
-                type: 'date',
-                delimiter: '.',
-                pattern: ['d', 'm', 'Y']
-            },
-            placeholder: 'ДД.ММ.ГГГГ'   
-        }
 
     .landing-page__front(style=`background-image: url( ${require('./images/landing-page__front.jpg')})`)
         .landing-page__container
@@ -41,13 +33,12 @@ block content
                         title: 'Найдём номера под ваши пожелания',
                         dateDropdown: {
                             firstDate: {
-                                title: 'Прибытие',
-                                textField: dateTextField
+                                title: 'Прибытие'
                             },
                             lastDate: {
-                                title: 'Выезд',
+                                title: 'Выезд'
                             },
-                            mask: dateTextField
+                            placeholder: 'ДД.ММ.ГГГГ'
                         },
                         dropdown: {
                             content: dropdownContent.guests, 
