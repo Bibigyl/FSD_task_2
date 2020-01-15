@@ -2367,7 +2367,7 @@
 
             //------------------------------Custom code/ Adding buttons-----------------------!
 
-            html += '<div class="calendar__link-wrap"><a class="link calendar__link_clear link_grey">Очистить</a><a class="link calendar__link_apply link_colored">Применить</a>';
+/*             html += '<div class="calendar__link-wrap"><a class="link calendar__link_clear link_grey">Очистить</a><a class="link calendar__link_apply link_colored">Применить</a>'; */
 
             html += '</div></div>';
 

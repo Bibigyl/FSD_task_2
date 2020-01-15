@@ -3,14 +3,17 @@ $( document ).ready(function() {
     $('.js-date-dropdown').each( function() {
 
         let $this = $(this);
-        let $first = $this.find('.date-dropdown__first-date input');
-        let $last = $this.find('.date-dropdown__last-date input');
-        let $calendar = $this.find('.date-dropdown__calendar');
-        let firstDate = $this.find('.date-dropdown__first-date').attr('data-date') || false;
-        let lastDate = $this.find('.date-dropdown__last-date').attr('data-date') || false;
+        let $first = $this.find('.js-date-dropdown__date_order_first input');
+        let $last = $this.find('.js-date-dropdown__date_order_last input');
+        let $calendar = $this.find('.js-date-dropdown__calendar');
+        let firstDate = $this.find('.js-date-dropdown__date_order_first').attr('data-date') || false;
+        let lastDate = $this.find('.js-date-dropdown__date_order_last').attr('data-date') || false;
+        let language = $this.attr('data-language');
+        let buttonClear = $this.attr('data-button-to-clear');
+        let buttonApply = $this.attr('data-button-to-apply');
 
         $this.dateRangePicker({
-            language: 'ru',
+            language: language,
             singleMonth: true,
             showShortcuts: false,
             showTopbar: true,
@@ -22,22 +25,22 @@ $( document ).ready(function() {
                 $last.val(s2);
             },
             inline: true,
-            customArrowPrevSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_back</i></div>',
-            customArrowNextSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_forward</i></div>',
+            customArrowPrevSymbol: '<div class="calendar__arrow js-calendar__arrow"><i class="material-icons">arrow_back</i></div>',
+            customArrowNextSymbol: '<div class="calendar__arrow js-calendar__arrow"><i class="material-icons">arrow_forward</i></div>',
             container: $calendar
-        })
+        });
         
         // Cобытия "принять" и "очистить" создаются после открытия
-        .bind('datepicker-opened', function() {
+        $this.bind('datepicker-opened', function() {
 
             $calendar.addClass('.date-dropdown__calendar_open');
     
-            $this.find('.calendar__link_clear').click(function(evt) {
+            $this.find('.js-calendar__icon-link_action_clear').click(function(evt) {
                 evt.stopPropagation();
                 $this.data('dateRangePicker').clear();
             });
     
-            $this.find('.calendar__link_apply').click(function(evt) {
+            $this.find('.js-calendar__icon-link_action_apply').click(function(evt) {
                 evt.stopPropagation();
                 $this.data('dateRangePicker').close();
                 $calendar.removeClass('.date-dropdown__calendar_open');
@@ -52,7 +55,15 @@ $( document ).ready(function() {
             });
         });
 
-        // если возможно, устанавливаем дату
+        // Создаем кнопки "очистить" и "принять"
+        $calendar.find('.date-picker-wrapper').append(
+            '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear">' +
+            buttonClear + 
+            '</button><button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply">' + 
+            buttonApply + '</button>');
+
+
+        // Если возможно, устанавливаем дату
         if (firstDate && lastDate) {
             try {
                 $this.data('dateRangePicker').setDateRange(firstDate, lastDate);

@@ -42,9 +42,14 @@ $(document).ready(function() {
         alwaysOpen: true, 
     });
 
+    // Создаем кнопки "очистить" и "принять"
+    $('.calendar-wrap').find('.date-picker-wrapper').append(
+        '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear">Очистить</button><button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply">Применить</button>'
+    );
+
     $('.cards__calendar').data('dateRangePicker').setDateRange('2019/08/19','2019/08/23');
 
-    $('.calendar__link_clear').click(function(evt) {
+    $('.js-calendar__icon-link_action_clear').click(function(evt) {
         evt.stopPropagation();
         $('.cards__calendar').data('dateRangePicker').clear();
     });

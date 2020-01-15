@@ -8,12 +8,12 @@
     width: 100%;
   }
 
-  &__text-field {
-    position: relative;
+  &__date_order_first {
+    margin-right: 20px; 
   }
 
-  &__first-date {
-    margin-right: 20px;
+  &__text-field {
+    position: relative;
   }
 
   &__arrow {
@@ -50,8 +50,7 @@
 
 @media (max-width: 340px) {
   .date-dropdown {
-
-    &__first-date {
+    &__date_order_first {
       margin-right: 5px;
     }
   }
