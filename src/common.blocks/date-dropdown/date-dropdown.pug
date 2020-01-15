@@ -9,7 +9,7 @@ mixin date-dropdown({firstDate, lastDate, placeholder, language, buttons} = {})
             delimiter: '.',
             pattern: ['d', 'm', 'Y']
         };
-        
+
         placeholder = placeholder || 'DD.MM.YYYY';
         language = language || 'en';
         buttons = buttons || ['clear', 'apply'];
@@ -49,4 +49,5 @@ mixin date-dropdown({firstDate, lastDate, placeholder, language, buttons} = {})
 
 
 //- вопрос с js-названиеКласса
+//- в js я ищу инпуты, нужно ли в миксин text-field добавлять js-text-field__input
 //- нужен ли js-date-dropdown__calendar_open и прочие состояния

@@ -1,6 +1,6 @@
 import moment from 'moment'
-import 'moment/locale/ru' 
-moment.locale('ru');
+import 'moment/locale/ru'
+import 'moment/locale/es-us'
 moment().format();
 
 $( document ).ready(function() {
@@ -9,12 +9,16 @@ $( document ).ready(function() {
 
         let $this = $(this);
         let $input = $this.find('input');
-        let $calendar = $this.find('.filter-date-dropdown__calendar');
+        let $calendar = $this.find('.js-filter-date-dropdown__calendar');
         let firstDate = $this.attr('data-first-date') || false;
+
         let lastDate = $this.attr('data-last-date') || false;
+        let language = $this.attr('data-language');
+        let buttonClear = $this.attr('data-button-to-clear');
+        let buttonApply = $this.attr('data-button-to-apply');
 
         $this.dateRangePicker({
-            language: 'ru',
+            language: language,
             singleMonth: true,
             showShortcuts: false,
             showTopbar: true,
@@ -27,28 +31,29 @@ $( document ).ready(function() {
                     $input.val(s);
                 }
             },
-            customArrowPrevSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_back</i></div>',
-            customArrowNextSymbol: '<div class="calendar__arrow arrow"><i class="material-icons">arrow_forward</i></div>',
+            customArrowPrevSymbol: '<div class="calendar__arrow js-calendar__arrow"><i class="material-icons">arrow_back</i></div>',
+            customArrowNextSymbol: '<div class="calendar__arrow js-calendar__arrow"><i class="material-icons">arrow_forward</i></div>',
             container: $calendar
             
-        })
-        .bind('datepicker-opened', function() {
+        });
+
+        $this.bind('datepicker-opened', function() {
     
             $calendar.addClass('filter-date-dropdown__calendar_open');
     
-            $this.find('.calendar__link_clear').click(function(evt) {
+            $this.find('.js-calendar__icon-link_action_clear').click(function(evt) {
                 evt.stopPropagation();
                 $this.data('dateRangePicker').clear();
                 $input.val('');
             });
     
-            $this.find('.calendar__link_apply').click(function(evt) {
+            $this.find('.js-calendar__icon-link_action_apply').click(function(evt) {
                 evt.stopPropagation();
                 $this.data('dateRangePicker').close();
                 $calendar.removeClass('filter-date-dropdown__calendar_open');
             });
 
-            $this.find('.filter-date-dropdown__arrow').click(function(evt) {
+            $this.find('.js-filter-date-dropdown__arrow').click(function(evt) {
                 if ($calendar.hasClass('filter-date-dropdown__calendar_open')) {
                     evt.stopPropagation();
                     $this.data('dateRangePicker').close();
@@ -56,9 +61,17 @@ $( document ).ready(function() {
                 }
             });
         });
+
+        $calendar.find('.date-picker-wrapper').append(
+            '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear" type="button">' +
+            buttonClear + 
+            '</button><button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply" type="button">' + 
+            buttonApply + '</button>');
     
         if (firstDate && lastDate) {
             try {
+                moment.locale(language);
+
                 firstDate = moment(firstDate, 'DD.MM.YYYY').format('D MMM');
                 lastDate = moment(lastDate, 'DD.MM.YYYY').format('D MMM');
 

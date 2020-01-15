@@ -6,6 +6,7 @@ $( document ).ready(function() {
         let $first = $this.find('.js-date-dropdown__date_order_first input');
         let $last = $this.find('.js-date-dropdown__date_order_last input');
         let $calendar = $this.find('.js-date-dropdown__calendar');
+        
         let firstDate = $this.find('.js-date-dropdown__date_order_first').attr('data-date') || false;
         let lastDate = $this.find('.js-date-dropdown__date_order_last').attr('data-date') || false;
         let language = $this.attr('data-language');
@@ -57,9 +58,9 @@ $( document ).ready(function() {
 
         // Создаем кнопки "очистить" и "принять"
         $calendar.find('.date-picker-wrapper').append(
-            '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear">' +
+            '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear" type="button">' +
             buttonClear + 
-            '</button><button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply">' + 
+            '</button><button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply" type="button">' + 
             buttonApply + '</button>');
 
 
