@@ -1,17 +1,16 @@
 include ../../common.blocks/like-button/like-button
 
-mixin review({avatar, likeButton, name, time, comment})
+mixin review({avatar, likeButton, name, time, text})
 	.review
-		.review__left-part
+		.review__person
 			.review__avatar.ui-review__avatar(style=`background-image: url( ${require('./images/' + avatar)})`)
-			.review__like-button
-				+like-button(likeButton)
-
-		.review__right-part
 			span.review__name= name
 			span.review__time= time
-			p.review__comment= comment
 
+		.review__comment
+			.review__like-button
+				+like-button(likeButton)
+			p.review__text= text
 
 
 
