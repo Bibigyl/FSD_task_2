@@ -35,6 +35,8 @@ block content
     include ../../common.blocks/icon-text-list/icon-text-list
     include ../../common.blocks/review/review
 
+    include ../../common.blocks/titled-block/titled-block
+
     -
         let dropdownContent = {
             guests: {
@@ -64,6 +66,7 @@ block content
                 h3.text-field-wrap__title Text field
                 .text-field-wrap__state Default
                 +text-field({type: 'email', placeholder: 'Email'})
+
 
             .text-field-wrap.text-field-wrap_hover.text-field-wrap-2
                 h3.text-field-wrap__title Text field

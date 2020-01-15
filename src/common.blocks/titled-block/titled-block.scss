@@ -1,0 +1,9 @@
+.titled-block {
+  &__title {
+    margin-bottom: 5px;
+
+    &_with-big-margin {
+      margin-bottom: 16px;
+    }
+  }
+}
