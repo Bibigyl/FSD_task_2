@@ -1,5 +1,5 @@
 mixin donut({marksNames, dataName})  
-  <div class="donut-wrap">
+  <div class="donut-wrap js-donut-wrap">
     <figure>
       <div class="figure-content">
         <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut" aria-labelledby="beers-title beers-desc" role="img">
@@ -28,22 +28,22 @@ mixin donut({marksNames, dataName})
           </linearGradient>
 
 
-          <circle class="donut-segment" mark='excellent' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#excellent)" stroke-width="1">
+          <circle class="donut-segment js-donut-segment" mark='excellent' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#excellent)" stroke-width="1">
           </circle>
 
-          <circle class="donut-segment" mark='good' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#good)" stroke-width="1">
+          <circle class="donut-segment js-donut-segment" mark='good' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#good)" stroke-width="1">
           </circle>
 
-          <circle class="donut-segment" mark='satisfactorily' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#satisfactorily)" stroke-width="1">
+          <circle class="donut-segment js-donut-segment" mark='satisfactorily' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#satisfactorily)" stroke-width="1">
           </circle>
 
-          <circle class="donut-segment" mark='badly' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#badly)" stroke-width="1">
+          <circle class="donut-segment js-donut-segment" mark='badly' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#badly)" stroke-width="1">
           </circle>
 
 
           <g class="chart-text">
-            <text x="50%" y="50%" fill='grey' class="chart-number"></text>
-            <text x="50%" y="50%" fill='grey' class="chart-label">#{dataName}</text>
+            <text x="50%" y="50%" fill='grey' class="chart-number js-chart-number"></text>
+            <text x="50%" y="50%" fill='grey' class="chart-label js-chart-label">#{dataName}</text>
           </g>
         </svg>
       </div>
@@ -53,16 +53,16 @@ mixin donut({marksNames, dataName})
       <figcaption class="figure-key">
         <ul class="figure-key-list" aria-hidden="true" role="presentation">
           <li class='donut__mark js-donut__mark'>
-            <span class="shape-circle shape-circle_excellent" mark='excellent'></span> #{marksNames[0]}
+            <span class="shape-circle js-shape-circle shape-circle_excellent" mark='excellent'></span> #{marksNames[0]}
           </li>
           <li class='donut__mark js-donut__mark'>
-            <span class="shape-circle shape-circle_good" mark='good'></span> #{marksNames[1]}
+            <span class="shape-circle js-shape-circle shape-circle_good" mark='good'></span> #{marksNames[1]}
           </li>
           <li class='donut__mark js-donut__mark'>
-            <span class="shape-circle shape-circle_satisfactorily" mark='satisfactorily'></span> #{marksNames[2]}
+            <span class="shape-circle js-shape-circle shape-circle_satisfactorily" mark='satisfactorily'></span> #{marksNames[2]}
           </li>
           <li class='donut__mark js-donut__mark'>
-            <span class="shape-circle shape-circle_badly" mark='badly'></span> #{marksNames[3]}
+            <span class="shape-circle js-shape-circle shape-circle_badly" mark='badly'></span> #{marksNames[3]}
           </li>
         </ul>
       </figcaption>

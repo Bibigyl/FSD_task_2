@@ -7,14 +7,14 @@ let donutColors = {
 
 $('.js-donut__mark').on('mouseenter', function() {
      
-    let mark = $(this).find('.shape-circle').attr('mark');
-    let $donut = $(this).closest('.donut-wrap');
-    let $seg = $donut.find('.donut-segment[mark='+ mark + ']');
+    let mark = $(this).find('.js-shape-circle').attr('mark');
+    let $donut = $(this).closest('.js-donut-wrap');
+    let $seg = $donut.find('.js-donut-segment[mark='+ mark + ']');
 
     $seg.attr('stroke-width', 3);
     $seg.attr('stroke', donutColors[mark]);
 
-    let $chartNumber = $donut.find('.chart-number');
+    let $chartNumber = $donut.find('.js-chart-number');
     let $chartLabel = $donut.find('.chart-label');
 
     $chartNumber.text($seg.attr('val'));
@@ -23,15 +23,15 @@ $('.js-donut__mark').on('mouseenter', function() {
 });
 
 $('.js-donut__mark').on('mouseleave', function() {
-    let mark = $(this).find('.shape-circle').attr('mark');
-    let $donut = $(this).closest('.donut-wrap');
-    let $seg = $donut.find('.donut-segment[mark='+ mark + ']');
+    let mark = $(this).find('.js-shape-circle').attr('mark');
+    let $donut = $(this).closest('.js-donut-wrap');
+    let $seg = $donut.find('.js-donut-segment[mark='+ mark + ']');
 
     $seg.attr('stroke-width', 1);
     $seg.attr('stroke', 'url(#' + mark + ')');
 
-    let $chartNumber = $donut.find('.chart-number');
-    let $chartLabel = $donut.find('.chart-label');
+    let $chartNumber = $donut.find('.js-chart-number');
+    let $chartLabel = $donut.find('.js-chart-label');
 
     $chartNumber.text($chartNumber.attr('sum'));
     $chartNumber.attr('fill', 'grey');
@@ -51,7 +51,7 @@ function donutDiagram(vals, node) {
     });
 
     let arSum = -25;
-    let segs = node.querySelectorAll('.donut-segment');
+    let segs = node.querySelectorAll('.js-donut-segment');
 
     for (let i = 0; i < 4; i++) {
         let one = pers[i] ? pers[i] - 1 : 0;
@@ -62,7 +62,7 @@ function donutDiagram(vals, node) {
         arSum = arSum + pers[i+1];
     }
 
-    let chart = node.querySelector('.chart-number');
+    let chart = node.querySelector('.js-chart-number');
     chart.setAttribute('sum', sum);
     chart.textContent = sum;
 }
