@@ -6,27 +6,27 @@ mixin dropdown({title, content = {text, items, buttons}, isOpen, isSmall})
 		let open = isOpen ? 'dropdown_open' : false;
 		let small = isSmall ? 'dropdown_small' : false;
 
-	.dropdown(class=[open, small] data-initial-text=content.text)
+	.dropdown.js-dropdown(class=[open, small] data-initial-text=content.text)
 		if title
 			.dropdown__title
 				+title(title)
 
 		.dropdown__field
-			span.dropdown__text= content.text
-			i.dropdown__arrow.material-icons expand_more
+			span.dropdown__text.js-dropdown__text= content.text
+			i.dropdown__arrow.js-dropdown__arrow.material-icons expand_more
 
-		.dropdown__list
-			ul
+		.dropdown__list.js-dropdown__list
+			ul.js-dropdown__items
 				each item in content.items
-					li.dropdown__item(item=item)= item
-						button.dropdown__button_to-change-quantity.dropdown__button_action_subtrack.dropdown__button_not-active(type='button') -
-						span.dropdown__number 0
-						button.dropdown__button_to-change-quantity.dropdown__button_action_add(type='button') +
+					li.dropdown__item.js-dropdown__item(item=item)= item
+						button.dropdown__button_to-change-quantity.js-dropdown__button_to-change-quantity.dropdown__button_action_subtrack.js-dropdown__button_action_subtrack.dropdown__button_not-active(type='button') -
+						span.dropdown__number.js-dropdown__number 0
+						button.dropdown__button_to-change-quantity.js-dropdown__button_to-change-quantity.dropdown__button_action_add(type='button') +
 			
 			if content.buttons
-				.dropdown__button_action_clear.dropdown__button_hidden
+				.dropdown__button_action_clear.js-dropdown__button_action_clear.dropdown__button_hidden
 					+icon-link({text: content.buttons[0]})
-				.dropdown__button_action_apply
+				.dropdown__button_action_apply.js-dropdown__button_action_apply
 					+icon-link({text: content.buttons[1], isPrimary: true})
 
 //- js-названиеКласса
