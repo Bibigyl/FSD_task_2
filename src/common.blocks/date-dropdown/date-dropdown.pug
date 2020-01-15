@@ -2,12 +2,25 @@ include ../../common.blocks/text-field/text-field
 include ../../common.blocks/title/title
 
 
-mixin date-dropdown({firstDate, lastDate, mask} = {})
+mixin date-dropdown({firstDate, lastDate, placeholder} = {})
     -
-        let firstTextField = mask ? Object.assign({}, mask) : {};
-        let lastTextField = mask ? Object.assign({}, mask) : {};
+        let maskParameters = {
+            type: 'date',
+            delimiter: '.',
+            pattern: ['d', 'm', 'Y']
+        };
+        placeholder = placeholder || 'DD.MM.YYYY';
+
+        let firstTextField = {};
+        firstTextField['maskParameters'] = maskParameters;
         firstTextField['value'] = firstDate.date || false;
+        firstTextField['placeholder'] = placeholder;
+
+        let lastTextField = {};
+        lastTextField['maskParameters'] = maskParameters;
         lastTextField['value'] = lastDate.date || false;
+        lastTextField['placeholder'] = placeholder;
+
 
     .date-dropdown.js-date-dropdown
 
@@ -32,6 +45,4 @@ mixin date-dropdown({firstDate, lastDate, mask} = {})
             .date-dropdown__calendar
 
 
-//- когда открыто несколько дропдаунов и они наезжают друг на друга, как лучше сделать? По клику на любой дропдаун закрывать все остальные на странице?
-//- на filter-date-dropdown и на date-dropdown можно добавить язык в атрибуты, чтоб менять его в функции, добавить?
 //- вопрос с js-названиеКласса
