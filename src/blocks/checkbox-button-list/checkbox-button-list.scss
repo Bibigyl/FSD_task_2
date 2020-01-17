@@ -1,4 +1,10 @@
 .checkbox-button-list {
+  box-sizing: border-box;
+  
+  * {
+    box-sizing: border-box;
+  }
+
   &__title {
     margin-bottom: 16px;
   }

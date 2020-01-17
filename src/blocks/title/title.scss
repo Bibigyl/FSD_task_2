@@ -5,4 +5,9 @@
   line-height: 15px;
   text-transform: uppercase;
   color: $c100;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 }

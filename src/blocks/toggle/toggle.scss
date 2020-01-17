@@ -1,4 +1,10 @@
 .toggle {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
   &__input {
     position: absolute;
     z-index: -1;

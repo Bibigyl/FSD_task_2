@@ -5,6 +5,11 @@
   background: $c25;
   padding: 1px;
   display: inline-block;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   &__input {
     position: absolute;

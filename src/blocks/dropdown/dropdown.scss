@@ -3,6 +3,11 @@
   width: 100%;
   max-width: 320px;
   min-width: 240px;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   &__title {
     margin-bottom: 5px;

@@ -5,6 +5,11 @@
   max-width: 266px;
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   &__title {
     margin-bottom: 17px;

@@ -2,6 +2,11 @@
   width: 100%;
   max-width: 320px;
   padding-bottom: 5px;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   &__dates {
     display: flex;

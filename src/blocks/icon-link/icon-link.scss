@@ -10,6 +10,11 @@
   cursor: pointer;
   font-family: 'Montserrat';
   color: $c50;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   &_primary {
     color: $primary;

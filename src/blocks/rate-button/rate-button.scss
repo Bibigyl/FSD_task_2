@@ -1,4 +1,9 @@
 .rate-button {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   &__icon {
     display: inline-block;

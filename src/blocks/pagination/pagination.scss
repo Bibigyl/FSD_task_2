@@ -1,4 +1,9 @@
 .pagination {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   &__pages {
     position: relative;

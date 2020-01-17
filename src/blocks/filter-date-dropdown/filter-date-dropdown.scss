@@ -2,6 +2,11 @@
   width: 100%;
   max-width: 266px;
   padding-bottom: 5px;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   &__text-field {
     position: relative;
@@ -28,7 +33,7 @@
 @media (max-width: 340px) {
   .filter-date-dropdown {
     &__calendar {
-      //margin-left: -20px;
+      margin-left: -20px;
     }
   }
 }

@@ -1,6 +1,11 @@
 .icon-text {
   width: 100%;
   display: flex;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   &__icon {
     margin-right: 10px;
