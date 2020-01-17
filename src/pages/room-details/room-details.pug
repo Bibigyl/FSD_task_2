@@ -1,7 +1,7 @@
 extends ../../templates/main
 
 block vars
-    - mainClass = 'Room-details';
+    - mainClass = 'room-details';
 
 
 block head
@@ -10,11 +10,11 @@ block head
 
 
 block content
-    include ../../components/booking-card/booking-card
-    include ../../common.blocks/icon-text-list/icon-text-list
-    include ../../common.blocks/review/review
-    include ../../common.blocks/bullet-list/bullet-list
-    include ../../common.blocks/donut/donut
+    include ../../pages-blocks/booking-card/booking-card
+    include ../../blocks/icon-text-list/icon-text-list
+    include ../../blocks/review/review
+    include ../../blocks/bullet-list/bullet-list
+    include ../../blocks/donut/donut
     - 
         let dropdownContent = {
             guests: {

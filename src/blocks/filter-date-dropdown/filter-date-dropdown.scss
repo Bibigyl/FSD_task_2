@@ -1,0 +1,34 @@
+.filter-date-dropdown {
+  width: 100%;
+  max-width: 266px;
+  padding-bottom: 5px;
+
+  &__text-field {
+    position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    color: $c50;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__calendar_open {
+    z-index: 100;
+  }
+}
+
+@media (max-width: 340px) {
+  .filter-date-dropdown {
+    &__calendar {
+      //margin-left: -20px;
+    }
+  }
+}

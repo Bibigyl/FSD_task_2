@@ -1,0 +1,20 @@
+include ../../blocks/text-field/text-field
+include ../../blocks/button/button
+
+mixin login-card({title, textFieldEmail, textFieldPassword, button, enter})
+	.login-card
+		form
+			h1.login-card__title= title
+
+			.login-card__email
+				+text-field(textFieldEmail)
+			.login-card__password
+				+text-field(textFieldPassword)
+			
+			.login-card__button
+				+button(button)
+
+		.login-card__enter
+			span.login-card__enter-text= enter.text
+			.login-card__enter-button
+				+button(enter.button)

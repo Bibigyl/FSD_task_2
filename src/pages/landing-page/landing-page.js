@@ -17,12 +17,12 @@ moment.locale('ru');
 
 //------------------ import blocks scripts -----------------------------
 
-import "../../common.blocks/text-field/text-field.js";
-import "../../common.blocks/dropdown/dropdown.js";
-import "../../common.blocks/date-dropdown/date-dropdown.js";
+import "../../blocks/text-field/text-field.js";
+import "../../blocks/dropdown/dropdown.js";
+import "../../blocks/date-dropdown/date-dropdown.js";
 
 //------------------ import components scripts -----------------------------
 
-import "../../components/header/header.js";
+import "../../pages-blocks/header/header.js";
 
 

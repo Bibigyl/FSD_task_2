@@ -1,0 +1,37 @@
+include ../../blocks/date-dropdown/date-dropdown
+include ../../blocks/dropdown/dropdown
+include ../../blocks/button/button
+
+mixin booking-card({room, dateDropdown, dropdown, infoItems, total, button})
+	.booking-card
+		form
+
+			.booking-card__main-info
+				span.booking-card__number 
+					span.booking-card__simbol-number №
+					| #{room.number}
+				span.booking-card__class= room.class
+				span.booking-card__price
+					span.booking-card__price-number= room.price
+					| #{room.term}
+
+			.booking-card__date-dropdown
+				+date-dropdown(dateDropdown)
+				
+			.booking-card__dropdown
+				+dropdown(dropdown)
+
+			.booking-card__info
+				each item in infoItems
+					.booking-card__info-item
+						.booking-card__text= item.text
+						if item.hasIcon
+							.booking-card__icon-i i
+						.booking-card__sum= item.sum
+			
+			.booking-card__total
+				.booking-card__total-text= total.text
+				.booking-card__total-sum= total.sum
+
+			.booking-card__button
+				+button(button)

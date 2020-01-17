@@ -21,7 +21,7 @@ import "../../js/main.js";
 
 //------------------ import components scripts -----------------------------
 
-import "../../components/header/header.js"
-//import "../../components/footer/footer.js"
+import "../../pages-blocks/header/header.js"
+//import "../../pages-blocks/footer/footer.js"
 
 //import 'fortawesome/fontawesome-free/scss/font-awesome.scss';

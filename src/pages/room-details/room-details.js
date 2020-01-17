@@ -17,15 +17,15 @@ import "../../js/main.js";
 
 //------------------ import blocks scripts -----------------------------
 
-import "../../common.blocks/dropdown/dropdown.js";
-import "../../common.blocks/date-dropdown/date-dropdown.js";
-import "../../common.blocks/like-button/like-button.js";
-import "../../common.blocks/donut/donut.js";
-import {donutDiagram} from '../../common.blocks/donut/donut.js'
+import "../../blocks/dropdown/dropdown.js";
+import "../../blocks/date-dropdown/date-dropdown.js";
+import "../../blocks/like-button/like-button.js";
+import "../../blocks/donut/donut.js";
+import {donutDiagram} from '../../blocks/donut/donut.js'
 
 //------------------ import components scripts -----------------------------
 
-import "../../components/header/header.js";
+import "../../pages-blocks/header/header.js";
 
 
 

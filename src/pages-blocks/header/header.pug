@@ -1,0 +1,39 @@
+include ../../blocks/button/button
+
+mixin header({items, loginButton, registerButton, user, isMenuItemSlim})
+	- let slim = isMenuItemSlim ? 'header__menu-item_slim' : false;
+	header.header
+		.header__container
+			a.header__logo
+				include ../../blocks/logo/logo-with-name.svg
+				
+			.header__menu(class=menuClass)
+				nav.header__menu-nav
+					ul.header__menu-items
+						each item in items
+							- let active = item.isActive ? 'header__menu-item_active' : false;
+							- let withArrow = item.hasSubmenu ? 'header__menu-item_with-arrow' : false;
+							li.header__menu-item(class=[slim, active, withArrow])
+								a(href=item.href)= item.text
+								if item.hasSubmenu
+									i.header__menu-arrow.material-icons expand_more
+
+				if !user
+					.header__buttons
+						.header__button.header__login-button
+							+button(loginButton)
+						.header__button.header__register-button
+							+button(registerButton)
+
+				if user
+					.header__user
+						.header__user-icon.material-icons person
+						.header__user-name= user
+
+			.header__hamburger
+				span.header__hamburger-line
+				span.header__hamburger-line
+				span.header__hamburger-line
+
+
+//- здесь никак не сделаны подменю. Добавить? 

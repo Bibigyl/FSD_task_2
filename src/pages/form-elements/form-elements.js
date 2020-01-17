@@ -18,15 +18,15 @@ import "../../js/main.js";
 
 //------------------ import blocks scripts -----------------------------
 
-import "../../common.blocks/text-field/text-field.js";
-import "../../common.blocks/slider-range/slider-range.js";
-import "../../common.blocks/dropdown/dropdown.js";
-import "../../common.blocks/date-dropdown/date-dropdown.js";
-import "../../common.blocks/filter-date-dropdown/filter-date-dropdown.js";
-import {setDropdownValues} from "../../common.blocks/dropdown/dropdown.js";
-import "../../common.blocks/expandable-checkbox-list/expandable-checkbox-list.js";
-import "../../common.blocks/pagination/pagination.js";
-import "../../common.blocks/like-button/like-button.js";
+import "../../blocks/text-field/text-field.js";
+import "../../blocks/slider-range/slider-range.js";
+import "../../blocks/dropdown/dropdown.js";
+import "../../blocks/date-dropdown/date-dropdown.js";
+import "../../blocks/filter-date-dropdown/filter-date-dropdown.js";
+import {setDropdownValues} from "../../blocks/dropdown/dropdown.js";
+import "../../blocks/expandable-checkbox-list/expandable-checkbox-list.js";
+import "../../blocks/pagination/pagination.js";
+import "../../blocks/like-button/like-button.js";
 
 
 

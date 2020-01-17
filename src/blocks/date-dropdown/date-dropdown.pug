@@ -1,0 +1,53 @@
+include ../../blocks/text-field/text-field
+include ../../blocks/title/title
+
+
+mixin date-dropdown({firstDate, lastDate, placeholder, language, buttons} = {})
+    -
+        let maskParameters = {
+            type: 'date',
+            delimiter: '.',
+            pattern: ['d', 'm', 'Y']
+        };
+
+        placeholder = placeholder || 'DD.MM.YYYY';
+        language = language || 'en';
+        buttons = buttons || ['clear', 'apply'];
+
+        let firstTextField = {};
+        firstTextField['maskParameters'] = maskParameters;
+        firstTextField['value'] = firstDate.date || false;
+        firstTextField['placeholder'] = placeholder;
+
+        let lastTextField = {};
+        lastTextField['maskParameters'] = maskParameters;
+        lastTextField['value'] = lastDate.date || false;
+        lastTextField['placeholder'] = placeholder;
+
+
+    .date-dropdown.js-date-dropdown('data-language'=language 'data-button-to-clear'=buttons[0] 'data-button-to-apply'=buttons[1])
+
+        .date-dropdown__dates
+            .date-dropdown__date.date-dropdown__date_order_first.js-date-dropdown__date_order_first(data-date=firstTextField.value)
+                if firstDate.title
+                    .date-dropdown__title
+                        +title(firstDate.title)
+                .date-dropdown__text-field
+                    +text-field(firstTextField)
+                    i.date-dropdown__arrow.js-date-dropdown__arrow.material-icons expand_more
+
+            .date-dropdown__date.date-dropdown__date_order_last.js-date-dropdown__date_order_last(data-date=lastTextField.value)
+                if lastDate.title
+                    .date-dropdown__title
+                        +title(lastDate.title)
+                .date-dropdown__text-field
+                    +text-field(lastTextField)
+                    i.date-dropdown__arrow.js-date-dropdown__arrow.material-icons expand_more
+
+        .date-dropdown__calendar-wrap
+            .date-dropdown__calendar.js-date-dropdown__calendar
+
+
+//- вопрос с js-названиеКласса
+//- в js я ищу инпуты, нужно ли в миксин text-field добавлять js-text-field__input
+//- нужен ли js-date-dropdown__calendar_open и прочие состояния

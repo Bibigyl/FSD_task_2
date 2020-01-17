@@ -1,0 +1,19 @@
+include ../text-field/text-field
+include ../../blocks/title/title
+
+mixin filter-date-dropdown({title, firstDate, lastDate, textField = {}, language, buttons} = {})
+    -
+        language = language || 'en';
+        buttons = buttons || ['clear', 'apply'];
+
+    .filter-date-dropdown.js-filter-date-dropdown(data-first-date=firstDate data-last-date=lastDate 'data-language'=language 'data-button-to-clear'=buttons[0] 'data-button-to-apply'=buttons[1])
+        if title
+            .filter-date-dropdown__title
+                +title(title)
+        .filter-date-dropdown__text-field
+            +text-field(textField)
+            i.filter-date-dropdown__arrow.js-filter-date-dropdown__arrow.material-icons expand_more
+
+        .filter-date-dropdown__calendar.js-filter-date-dropdown__calendar
+
+

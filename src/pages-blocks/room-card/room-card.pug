@@ -1,0 +1,33 @@
+include ../../blocks/rate-button/rate-button
+
+mixin room-card({image, number, lux, price, rateButton, reviews})
+	.room-card
+		.room-card__image(style=`background-image: url( ${require('./images/' + image)})`)
+			.room-card__arrow.room-card__arrow_prev
+				i.material-icons expand_more
+			.room-card__arrow.room-card__arrow_next
+				i.material-icons expand_more
+			.room-card__dots
+				.room-card__dot.room-card__dot_active
+				.room-card__dot
+				.room-card__dot
+				.room-card__dot
+
+		.room-card__content
+			.room-card__room
+				.room-card__room-number 
+					span.room-card__number-simbol №
+					| #{number}
+				if lux
+					span.room-card__class= lux
+			.room-card__price
+				.room-card__price-number= price.number
+				span.room-card__price-text= price.text
+
+			.room-card__line
+
+			.room-card__rate-button
+				+rate-button(rateButton)
+			.room-card__reviews
+				h3.room-card__reviews-number= reviews.number
+				span.room-card__reviews-text= reviews.text

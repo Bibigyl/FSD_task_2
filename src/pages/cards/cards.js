@@ -17,9 +17,9 @@ import "../../js/main.js";
 
 //---------------- import blocks scripts -----------------------------
 
-import "../../common.blocks/text-field/text-field.js";
-import "../../common.blocks/dropdown/dropdown.js";
-import "../../common.blocks/date-dropdown/date-dropdown.js";
+import "../../blocks/text-field/text-field.js";
+import "../../blocks/dropdown/dropdown.js";
+import "../../blocks/date-dropdown/date-dropdown.js";
 
 
 $(document).ready(function() {
