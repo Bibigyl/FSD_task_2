@@ -1,16 +1,11 @@
-* {
-  box-sizing: border-box;
-}
-
-.radio-buttons {
-  &__title {
-    margin-bottom: 14px;
-  }
-}
-
 .radio-button {
   display: inline-block;
   margin-right: 17px;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 
   &__input {
     position: absolute;
@@ -59,7 +54,7 @@
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: linear-gradient(180deg, $primary 0%, #8BA4F9 100%);
+      background: $gradientPrimary;
       opacity: 0;
       transition: .2s;
     }

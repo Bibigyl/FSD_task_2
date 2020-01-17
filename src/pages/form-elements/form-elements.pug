@@ -19,7 +19,8 @@ block content
 
     include ../../blocks/checkbox-button/checkbox-button
     include ../../blocks/checkbox-button-list/checkbox-button-list
-    include ../../blocks/radio-buttons/radio-buttons
+    //include ../../blocks/radio-buttons/radio-buttons
+    include ../../blocks/twin-radio-buttons/twin-radio-buttons
     include ../../blocks/toggle/toggle
     include ../../blocks/like-button/like-button
     include ../../blocks/rate-button/rate-button
@@ -136,11 +137,12 @@ block content
                         name: 'gender',
                         items: [
                             {text: 'Мужчина', isChecked: true},
-                            {text: 'Женщина', isChecked: false}
+                            {text: 'Женщина'}
                         ]
                     }
 
-                +radio-buttons(options)
+                //-+twin-radio-buttons(options)
+                +twin-radio-buttons(options)
 
             .toggles-wrap
                 h3.toggles-wrap__title Toggle

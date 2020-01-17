@@ -1,0 +1,19 @@
+.twin-radio-buttons {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &__title {
+      margin-bottom: 14px;
+  }
+
+  &__button {
+    display: inline-block;
+
+    &:first-child {
+      margin-right: 17px;
+    }
+  }
+}

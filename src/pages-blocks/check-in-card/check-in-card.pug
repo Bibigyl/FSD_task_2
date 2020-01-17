@@ -1,5 +1,5 @@
 include ../../blocks/text-field/text-field
-include ../../blocks/radio-buttons/radio-buttons
+include ../../blocks/twin-radio-buttons/twin-radio-buttons
 include ../../blocks/toggle/toggle
 include ../../blocks/button/button
 
@@ -16,7 +16,7 @@ mixin check-in-card({title, textFieldName, textFieldSurname, radioButtons, birth
 				+text-field(textFieldSurname)
 
 			.check-in-card__radio-buttons
-				+radio-buttons(radioButtons)
+				+twin-radio-buttons(radioButtons)
 
 			.check-in-card__birthday
 				h3.check-in-card__birthday-title= birthdayTitle

@@ -1,0 +1,12 @@
+include ../../blocks/radio-button/radio-button
+
+mixin twin-radio-buttons({title, name, items})
+    .twin-radio-buttons
+        if title
+            .twin-radio-buttons__title
+                +title(title)
+
+        each item in items
+            - item['name'] = name;
+            .twin-radio-buttons__button
+                +radio-button(item)
