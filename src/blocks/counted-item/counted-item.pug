@@ -1,0 +1,11 @@
+mixin counted-item({text, num=0})
+    -let attr = num > 0 ? '#{num} #{text}' : '';
+
+    .counted-item.js-counted-item(data-counted-item=attr)
+        .counted-item__text.js-counted-item__text= text
+
+        button.counted-item__operation.counted-item__operation_dec.counted-item__operation_not-active.js-counted-item__operation.js-counted-item__operation_dec(type='button') -
+
+        span.counted-item__number.js-counted-item__number 0
+
+        button.counted-item__operation.counted-item__operation_inc.js-counted-item__operation.js-counted-item__operation_inc(type='button') +

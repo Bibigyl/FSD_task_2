@@ -21,17 +21,19 @@ import "../../js/main.js";
 import "../../blocks/text-field/text-field.js";
 import "../../blocks/slider-range/slider-range.js";
 import "../../blocks/dropdown/dropdown.js";
+//import "../../blocks/counted-item/counted-item.js";
 import "../../blocks/date-dropdown/date-dropdown.js";
 import "../../blocks/filter-date-dropdown/filter-date-dropdown.js";
-import {setDropdownValues} from "../../blocks/dropdown/dropdown.js";
+//import {setDropdownValues} from "../../blocks/dropdown/dropdown.js";
 import "../../blocks/expandable-checkbox-list/expandable-checkbox-list.js";
 import "../../blocks/pagination/pagination.js";
 import "../../blocks/like-button/like-button.js";
 
 
-
+/* 
 $(document).ready(function() {
     setDropdownValues($('.dropdown-wrap-2 .dropdown'), [2, 2, 0]);
     setDropdownValues($('.dropdown-wrap-3 .dropdown'), [2, 2, 0]);
     setDropdownValues($('.dropdown-wrap-5 .dropdown'), [2, 1, 0]);
 })
+ */

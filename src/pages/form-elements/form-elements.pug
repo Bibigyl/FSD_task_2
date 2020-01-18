@@ -42,6 +42,22 @@ block content
         let dropdownContent = {
             guests: {
                 text: 'Сколько гостей',
+                items: [
+                    {text: 'взрослые'}, 
+                    {text: 'дети'}, 
+                    {text: 'младенцы'}
+                ],
+                buttons: ['Очистить', 'Применить']
+            },
+            furniture: {
+                text: 'Удобства',
+                items: ['спальни', 'кровати', 'ванные комнаты'],
+                buttons: false
+            }
+        };
+        let dropdownContent1 = {
+            guests: {
+                text: 'Сколько гостей',
                 items: ['взрослые', 'дети', 'младенцы'],
                 buttons: ['Очистить', 'Применить']
             },

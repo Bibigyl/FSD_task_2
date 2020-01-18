@@ -38,7 +38,7 @@
     color: $c50;
   }
 
-  &__list {
+  &__popup {
     display: none;
     position: absolute;
     left: 0px;
@@ -76,41 +76,39 @@
     text-align: center;
   }
 
-  &__button {
-    &_to-change-quantity {
-      background-color: #fff;
-      width: 30px;
-      height: 30px;
-      border: 1px solid $c25;
-      box-sizing: border-box;
-      border-radius: 22px;
-      text-align: center;
-      font-size: rem(18px);
-      color: $c50;
-      cursor: pointer;
+  &__operation {
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $c25;
+    box-sizing: border-box;
+    border-radius: 22px;
+    text-align: center;
+    font-size: rem(18px);
+    color: $c50;
+    cursor: pointer;
+
+    &_dec {
+      margin-left: auto;
+      padding-bottom: 5px;
     }
 
-    &_action {
-      &_subtrack {
-        margin-left: auto;
-        padding-bottom: 5px;
-      }
-  
-      &_clear {
-        display: inline-block;
-        float: left;
-        padding: 9px 7px 7px 14px;
-      }
-  
-      &_apply {
-        display: inline-block;
-        float: right;
-        padding: 9px 7px 7px 14px;
-      }
-    }
-
-    &_not-active {
+    &_disabled {
       opacity: .5;
+    }
+  }
+
+  &__action {
+    &_clear {
+      display: inline-block;
+      float: left;
+      padding: 9px 7px 7px 14px;
+    }
+
+    &_apply {
+      display: inline-block;
+      float: right;
+      padding: 9px 7px 7px 14px;
     }
 
     &_hidden {
@@ -119,7 +117,7 @@
   }
 
   &_open {
-    .dropdown__list {
+    .dropdown__popup {
       display: block;
       border-color: $c50;
       transition: border .4s;
