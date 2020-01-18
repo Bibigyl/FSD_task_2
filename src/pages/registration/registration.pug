@@ -10,74 +10,27 @@ block head
 
 
 block content
+
+    - let data = require('./registration.json');
+
     include ../../pages-blocks/login-card/login-card
     include ../../pages-blocks/check-in-card/check-in-card
 
-    .registration__front(style=`background-image: url( ${require('./images/registration__front.jpg')})`)
+    .registration__front(style=`background-image: url( ${require('./images/' + data.image)})`)
+
         .registration__container
-            .registration__check-in-card.registration__card.js-registration__card
-                -
-                    options = {
-                        title: 'Регистрация аккаунта',
-                        textFieldName: {placeholder: 'Имя', name: 'Name'},
-                        textFieldSurname: {placeholder: 'Фамилия', type: 'Surname'},
-                        radioButtons: {
-                            name: 'gender',
-                            items: [
-                                {text: 'Мужчина', isChecked: true},
-                                {text: 'Женщина'}
-                            ]
-                        },
-                        textFieldBirthday: {
-                            maskParameters: {
-                                type: 'date',
-                                delimiter: '.',
-                                pattern: ['d', 'm', 'Y']
-                            },
-                            placeholder: 'ДД.ММ.ГГГГ',
-                            title: 'Дата рождения'
-                        }, 
-                        credentialsTitle: 'Данные для входа в сервис', 
-                        textFieldEmail: {placeholder: 'Email', type: 'email', name: 'Email'}, 
-                        textFieldPassword: {placeholder: 'Пароль', type: 'password', name: "Password"}, 
-                        toggle: {text: 'Получать спецпредложения'}, 
-                        button: {
-                            text: 'Перейти к оплате',
-                            appearance: 'filled',
-                            isExtended: true
-                        }, 
-                        enter: {
-                            text: 'Уже есть аккаунт на Toxin',
-                            button: {
-                                isSecondary: true, 
-                                text: 'Войти'
-                            }
-                        }
-                    }
 
-                +check-in-card(options)
+            - 
+                let checkIn = data.isLogin ? 'registration__card_hidden' : false;
+                let login = !data.isLogin ? 'registration__card_hidden' : false;
 
-            .registration__login-card.registration__card.registration__card_hidden.js-registration__card
-                -
-                    options = {
-                        title: 'Войти',
-                        textFieldEmail: {
-                            placeholder: 'Email', type: 'email', name: 'Email'
-                        },
-                        textFieldPassword: {
-                            placeholder: 'Пароль', type: 'password', name: 'Password'
-                        },
-                        button: {text: 'Войти', appearance: 'filled', isExtended: true},
-                        enter: {
-                            text: 'Нет аккаунта на Toxin?',
-                            button: {
-                                text: 'Создать',
-                                isSecondary: true
-                            }
-                        }
-                    }
+            .registration__card.js-registration__card
 
-                +login-card(options)
+                .registration__check-in-card(class=checkIn)
+                    +check-in-card(data.checkInCard)
+
+                .registration__login-card(class=login)
+                    +login-card(data.loginCard)
 
 
 block script

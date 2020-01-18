@@ -1,0 +1,79 @@
+{
+    "checkInCard": {
+        "title": "Регистрация аккаунта",
+        "textFieldName": {
+            "placeholder": "Имя", 
+            "name": "Name"
+        },
+        "textFieldSurname": {
+            "placeholder": "Фамилия", 
+            "type": "Surname"
+        },
+        "radioButtons": {
+            "name": "gender",
+            "items": [
+                {"text": "Мужчина", "isChecked": true},
+                {"text": "Женщина"}
+            ]
+        },
+        "textFieldBirthday": {
+            "maskParameters": {
+                "type": "date",
+                "delimiter": ".",
+                "pattern": ["d", "m", "Y"]
+            },
+            "placeholder": "ДД.ММ.ГГГГ",
+            "title": "Дата рождения"
+        }, 
+        "credentialsTitle": "Данные для входа в сервис", 
+        "textFieldEmail": {
+            "placeholder": "Email", 
+            "type": "email", 
+            "name": "Email"
+        }, 
+        "textFieldPassword": {
+            "placeholder": "Пароль", 
+            "type": "password", 
+            "name": "Password"
+        }, 
+        "toggle": {"text": "Получать спецпредложения"}, 
+        "button": {
+            "text": "Перейти к оплате",
+            "appearance": "filled",
+            "isExtended": true
+        }, 
+        "enter": {
+            "text": "Уже есть аккаунт на Toxin",
+            "button": {
+                "isSecondary": true, 
+                "text": "Войти"
+            }
+        }
+    },
+
+    "loginCard": {
+        "title": "Войти",
+        "textFieldEmail": {
+            "placeholder": "Email", 
+            "type": "email", 
+            "name": "Email"
+        },
+        "textFieldPassword": {
+            "placeholder": "Пароль", 
+            "type": "password", 
+            "name": "Password"
+        },
+        "button": {"text": "Войти", 
+            "appearance": "filled", 
+            "isExtended": true},
+        "enter": {
+            "text": "Нет аккаунта на Toxin?",
+            "button": {
+                "text": "Создать",
+                "isSecondary": true
+            }
+        }
+    },
+
+    "image": "registration__front.jpg"
+}
