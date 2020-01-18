@@ -3,6 +3,9 @@
 import '../../scss/main.scss';
 import './cards.scss';
 
+//var cards = require('./cards.json');
+//console.log(cards.searchCard);
+
 //--------------- import libs -----------------------------
 
 import "../../libs/daterangepicker/jquery.daterangepicker.js";

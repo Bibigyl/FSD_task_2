@@ -1,5 +1,6 @@
 extends ../../templates/ui-kit
 
+
 block vars
     - mainClass = 'cards';
 
@@ -10,193 +11,45 @@ block head
 
 
 block content
+
+    -
+        let cards = require('./cards.json');
+
     include ../../pages-blocks/search-card/search-card
     include ../../pages-blocks/check-in-card/check-in-card
     include ../../pages-blocks/booking-card/booking-card
     include ../../pages-blocks/login-card/login-card
     include ../../pages-blocks/room-card/room-card
-    -
-        let dropdownContent = {
-            guests: {
-                text: 'Сколько гостей',
-                items: ['Взрослые', 'Дети', 'Младенцы'],
-                buttons: ['Очистить', 'Применить']
-            },
-            furniture: {
-                text: 'Удобства',
-                items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-                buttons: false
-            }
-        };
 
     .cards__container
-        .cards__column.cards__column-1
-            .search-card-wrap.card-wrap
-                - 
-                    options = {
-                        title: 'Найдём номера под ваши пожелания',
-                        dateDropdown: {
-                            firstDate: {
-                                title: 'Прибытие',
-                                textField: dateTextField
-                            },
-                            lastDate: {
-                                title: 'Выезд',
-                            },
-                            placeholder: 'ДД.ММ.ГГГГ',
-                            language: 'ru',
-                            buttons: ['Очистить', 'Принять']
-                        },
-                        dropdown: {
-                            content: dropdownContent.guests, 
-                            title: 'Гости'
-                        },
-                        button: {
-                            text: 'Подобрать номер',
-                            appearance: 'filled',
-                            isExtended: true
-                        }
-                    }
 
-                +search-card(options)
+        .cards__column.cards__column-1
+
+            .search-card-wrap.card-wrap
+                +search-card(cards.searchCard)
 
             .check-in-card-wrap.card-wrap
-                -
-                    let birthdayTextField = Object.assign({}, dateTextField, {title: 'Дата рождения'});
-                    options = {
-                        title: 'Регистрация аккаунта',
-                        textFieldName: {placeholder: 'Имя', name: 'Name'},
-                        textFieldSurname: {placeholder: 'Фамилия', type: 'Surname'},
-                        radioButtons: {
-                            name: 'gender',
-                            items: [
-                                {text: 'Мужчина', isChecked: true},
-                                {text: 'Женщина'}
-                            ]
-                        },
-                        textFieldBirthday: birthdayTextField, 
-                        credentialsTitle: 'Данные для входа в сервис', 
-                        textFieldEmail: {placeholder: 'Email', type: 'email', name: 'Email'}, 
-                        textFieldPassword: {placeholder: 'Пароль', type: 'password', name: "Password"}, 
-                        toggle: {text: 'Получать спецпредложения'}, 
-                        button: {
-                            text: 'Перейти к оплате',
-                            appearance: 'filled',
-                            isExtended: true
-                        }, 
-                        enter: {
-                            text: 'Уже есть аккаунт на Toxin',
-                            button: {
-                                isSecondary: true, 
-                                text: 'Войти'
-                            }
-                        }
-                    }
-
-                +check-in-card(options)
+                +check-in-card(cards.checkInCard)
 
         .cards__column.cards__column-2
-            .booking-card-wrap.card-wrap
-                -
-                    options = {
-                        room: {
-                            number: '888',
-                            class: 'люкс',
-                            term: 'в сутки',
-                            price: '9 990₽'
-                        },
-                        dateDropdown: {
-                            firstDate: {
-                                title: 'Прибытие',
-                                date: '19.08.2019'
-                            },
-                            lastDate: {
-                                title: 'Выезд',
-                                date: '23.08.2019'
-                            },
-                            placeholder: 'ДД.ММ.ГГГГ',
-                            language: 'ru',
-                            buttons: ['Очистить', 'Принять']
-                        },
-                        dropdownTitle: 'Гости',
-                        dropdown: {
-                            content: dropdownContent.guests,
-                            title: 'Гости'
-                        },
-                        infoItems: [
-                            {text: '9 990₽ х 4 суток', sum: '39 960₽'},
-                            {text: 'Сбор за услуги: скидка 2 179₽', sum: '0₽', hasIcon: true},
-                            {text: 'Сбор за дополнительные услуги', sum: '300₽', hasIcon: true}
-                        ],
-                        total: {text: 'Итого', sum: '38 081₽'},
-                        button: {text: 'Забронировать', isExtended: true}
-                    }
-                
-                +booking-card(options)
+
+            .booking-card-wrap.card-wrap              
+                +booking-card(cards.bookingCard)
 
             .login-card-wrap.card-wrap
-                -
-                    options = {
-                        title: 'Войти',
-                        textFieldEmail: {
-                            placeholder: 'Email', type: 'email', name: 'Email'
-                        },
-                        textFieldPassword: {
-                            placeholder: 'Пароль', type: 'password', name: 'Password'
-                        },
-                        button: {text: 'Войти', appearance: 'filled', isExtended: true},
-                        enter: {
-                            text: 'Нет аккаунта на Toxin?',
-                            button: {
-                                text: 'Создать',
-                                isSecondary: true
-                            }
-                        }
-                    }
-
-                +login-card(options)
+                +login-card(cards.loginCard)
 
 
         .cards__column.cards__column-3
+        
             .calendar-wrap.card-wrap
                 input.cards__calendar
                 
             .room-card-wrap-1.card-wrap
-                -
-                    options = {
-                        image: 'cards__room-card-1.jpg',
-                        number: 888,
-                        lux: 'люкс',
-                        price: {
-                            number: '9 990₽',
-                            text: 'в сутки'
-                        },
-                        rateButton: {rate: 5},
-                        reviews: {
-                            number: 145,
-                            text: 'Отзывов'
-                        }
-                    }
-
-                +room-card(options)
+                +room-card(cards.roomCard1)
                 
             .room-card-wrap-2.card-wrap
-                -
-                    options = {
-                        image: 'cards__room-card-2.jpg',
-                        number: 840,
-                        price: {
-                            number: '9 900₽',
-                            text: 'в сутки'
-                        },
-                        rateButton: {rate: 4},
-                        reviews: {
-                            number: 65,
-                            text: 'Отзывов'
-                        }
-                    }
-
-                +room-card(options)
+                +room-card(cards.roomCard2)
 
 
 block script
