@@ -10,53 +10,21 @@ block head
 
 
 block content
-    include ../../pages-blocks/search-card/search-card
-    -
-        let dropdownContent = {
-            guests: {
-                text: 'Сколько гостей',
-                items: ['взрослые', 'дети', 'младенцы'],
-                buttons: ['Очистить', 'Применить']
-            },
-            furniture: {
-                text: 'Удобства',
-                items: ['спальни', 'кровати', 'ванные комнаты'],
-                buttons: false
-            }
-        };
 
-    .landing-page__front(style=`background-image: url( ${require('./images/landing-page__front.jpg')})`)
+    -
+        let data = require('./landing-page.json');
+
+    include ../../pages-blocks/search-card/search-card
+
+    .landing-page__front(style=`background-image: url( ${require('./images/' + data.image)})`)
+
         .landing-page__container
+
             .landing-page__search-card
-                -
-                    options = {
-                        title: 'Найдём номера под ваши пожелания',
-                        dateDropdown: {
-                            firstDate: {
-                                title: 'Прибытие'
-                            },
-                            lastDate: {
-                                title: 'Выезд'
-                            },
-                            placeholder: 'ДД.ММ.ГГГГ',
-                            language: 'ru',
-                            buttons: ['Очистить', 'Принять']
-                        },
-                        dropdown: {
-                            content: dropdownContent.guests, 
-                            title: 'Гости'
-                        },
-                        button: {
-                            text: 'Подобрать номер',
-                            appearance: 'filled',
-                            isExtended: true
-                        }    
-                    }
-                
-                +search-card(options)
+                +search-card(data.searchCard)
 
             .landing-page__tagline
-                p Лучшие номера для вашей работы, отдыха и просто вдохновения
+                p= data.tagline
 
 
 block script

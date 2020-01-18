@@ -1,0 +1,32 @@
+{
+    "searchCard": {
+        "title": "Найдём номера под ваши пожелания",
+        "dateDropdown": {
+            "firstDate": {
+                "title": "Прибытие"
+            },
+            "lastDate": {
+                "title": "Выезд"
+            },
+            "placeholder": "ДД.ММ.ГГГГ",
+            "language": "ru",
+            "buttons": ["Очистить", "Принять"]
+        },
+        "dropdown": {
+            "content": {
+                "text": "Сколько гостей",
+                "items": ["взрослые", "дети", "младенцы"],
+                "buttons": ["Очистить", "Применить"]
+            }, 
+            "title": "Гости"
+        },
+        "button": {
+            "text": "Подобрать номер",
+            "appearance": "filled",
+            "isExtended": true
+        }    
+    },
+
+    "tagline": "Лучшие номера для вашей работы, отдыха и просто вдохновения",
+    "image": "landing-page__front.jpg"
+}

@@ -13,7 +13,7 @@ block head
 block content
 
     -
-        let cards = require('./cards.json');
+        let data = require('./cards.json');
 
     include ../../pages-blocks/search-card/search-card
     include ../../pages-blocks/check-in-card/check-in-card
@@ -26,18 +26,18 @@ block content
         .cards__column.cards__column-1
 
             .search-card-wrap.card-wrap
-                +search-card(cards.searchCard)
+                +search-card(data.searchCard)
 
             .check-in-card-wrap.card-wrap
-                +check-in-card(cards.checkInCard)
+                +check-in-card(data.checkInCard)
 
         .cards__column.cards__column-2
 
             .booking-card-wrap.card-wrap              
-                +booking-card(cards.bookingCard)
+                +booking-card(data.bookingCard)
 
             .login-card-wrap.card-wrap
-                +login-card(cards.loginCard)
+                +login-card(data.loginCard)
 
 
         .cards__column.cards__column-3
@@ -46,10 +46,10 @@ block content
                 input.cards__calendar
                 
             .room-card-wrap-1.card-wrap
-                +room-card(cards.roomCard1)
+                +room-card(data.roomCard1)
                 
             .room-card-wrap-2.card-wrap
-                +room-card(cards.roomCard2)
+                +room-card(data.roomCard2)
 
 
 block script
