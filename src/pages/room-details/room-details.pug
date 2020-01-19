@@ -10,134 +10,54 @@ block head
 
 
 block content
+
+    - let data = require('./room-details.json');
+
     include ../../pages-blocks/booking-card/booking-card
     include ../../blocks/icon-text-list/icon-text-list
     include ../../blocks/review/review
     include ../../blocks/bullet-list/bullet-list
     include ../../blocks/donut/donut
-    - 
-        let dropdownContent = {
-            guests: {
-                text: 'Сколько гостей',
-                items: ['Взрослые', 'Дети', 'Младенцы'],
-                buttons: ['Очистить', 'Применить']
-            },
-            furniture: {
-                text: 'Удобства',
-                items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-                buttons: false
-            }
-        };
 
     .room-details__photos
-        .room-details__photo.room-details__photo-1(style=`background-image: url( ${require('./images/room-details__front-1.jpg')})`)
-        .room-details__photo.room-details__photo-2(style=`background-image: url( ${require('./images/room-details__front-2.jpg')})`)
-        .room-details__photo.room-details__photo-3(style=`background-image: url( ${require('./images/room-details__front-3.jpg')})`)
+        .room-details__photo.room-details__photo-1(style=`background-image: url( ${require('./images/' + data.images[0])})`)
+        .room-details__photo.room-details__photo-2(style=`background-image: url( ${require('./images/' + data.images[1])})`)
+        .room-details__photo.room-details__photo-3(style=`background-image: url( ${require('./images/'  + data.images[2])})`)
     
     .room-details__container
+
         .room-details__information
+
             .room-details__icon-text-list-wrap
-                h2.room-details__icon-text-list-title Сведения о номере
+                h2.room-details__icon-text-list-title= data.informationTitle
                 .room-details__icon-text-list
-                    -
-                        items = [
-                            {richText: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'},
-                            {richText: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'},
-                            {richText: 'Уют', text: 'Номер оснащён камином', icon: 'whatshot', isUnderlined: false}
-                        ]
-                    
-                    +icon-text-list(items)
+                    +icon-text-list(data.iconTextList)
 
             .room-details__diagram-wrap
-                h2.room-details__diagram-title Впечатления от номера
+                h2.room-details__diagram-title= data.advantagesTitle
                 .room-details__diagram
-                    -
-                        options = {
-                            marksNames : ['Великолепно', 'Хорошо', 'Удовлетворительно', 'Разочарован'],
-                            dataName: 'голосов'
-                        }
-
-                    +donut(options)
+                    +donut(data.donut)
 
             .room-details__reviews-wrap
-                h2.room-details__reviews-title Отзывы посетителей номера
-                span.room-details__reviews-number 2 отзыва
+                h2.room-details__reviews-title= data.reviewsTitle
+                span.room-details__reviews-number= data.reviewsNum
                 .room-details__reviews
-                    -
-                        items = [
-                            {
-                                avatar: 'room-details__avatar-2.jpg', 
-                                likeButton: {number: 12, isChecked: true}, 
-                                name: 'Мурад Сарафанов', 
-                                time: '5 дней назад', 
-                                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
-                            },
-                            {
-                                avatar: 'room-details__avatar-1.jpg', 
-                                likeButton: {number: 2}, 
-                                name: 'Патрисия Стёклышкова', 
-                                time: 'Неделю назад', 
-                                text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
-                            }
-                        ]
-
-                    each item in items
+                    each review in data.reviews
                         .room-details__review
-                            +review(item)
+                            +review(review)
 
             .room-details__rules-wrap
-                h2.room-details__rules-title Правила
+                h2.room-details__rules-title= data.rulesTitle
                 .room-details__rules
-                    -
-                        items = [
-                            'Нельзя с питомцами',
-                            'Без вечеринок и мероприятий',
-                            'Время прибытия — после 13:00, а выезд до 12:00'
-                        ]
-
-                    +bullet-list({items: items})
+                    +bullet-list(data.bulletList)
 
             .room-details__cancellation-wrap
-                h2.room-details__cancellation-title Отмена
-                p.room-details__cancellation Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                h2.room-details__cancellation-title= data.cancellationTilte
+                p.room-details__cancellation= data.cancellationText
 
         .room-details__booking-card
-            -
-                options = {
-                    room: {
-                        number: '888',
-                        class: 'люкс',
-                        term: 'в сутки',
-                        price: '9 990₽'
-                    },
-                    dateDropdown: {
-                        firstDate: {
-                            title: 'Прибытие',
-                            date: '19.08.2019'
-                        },
-                        lastDate: {
-                            title: 'Выезд',
-                            date: '23.08.2019'
-                        },
-                        placeholder: 'ДД.ММ.ГГГГ',
-                        language: 'ru',
-                        buttons: ['Очистить', 'Принять']
-                    },
-                    dropdownTitle: 'Гости',
-                    dropdown: {
-                        content: dropdownContent.guests,
-                        title: 'Гости'
-                    },
-                    infoItems: [
-                        {text: '9 990₽ х 4 суток', sum: '39 960₽'},
-                        {text: 'Сбор за услуги: скидка 2 179₽', sum: '0₽', hasIcon: true},
-                        {text: 'Сбор за дополнительные услуги', sum: '300₽', hasIcon: true}
-                    ],
-                    total: {text: 'Итого', sum: '38 081₽'},
-                    button: {text: 'Забронировать', isExtended: true}
-                }
-            
-            +booking-card(options)
+            +booking-card(data.bookingCard)
+
 
 block script
     script(src="room-details.js")
