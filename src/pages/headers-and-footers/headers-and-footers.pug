@@ -10,19 +10,8 @@ block head
 
 
 block content
-    -
-        let dropdownContent = {
-            guests: {
-                text: 'Сколько гостей',
-                items: ['Взрослые', 'Дети', 'Младенцы'],
-                buttons: ['Очистить', 'Применить']
-            },
-            furniture: {
-                text: 'Удобства',
-                items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-                buttons: false
-            }
-        };
+
+    - let data = require('./headers-and-footers.json');
 
     include ../../pages-blocks/header/header
     include ../../pages-blocks/footer/footer
@@ -30,78 +19,16 @@ block content
 
 
     .headers-and-footers__header
-        -
-            options = {
-                items: [
-                    {text: 'Home', isActive: true},
-                    {text: 'About Us'},
-                    {text: 'Services', hasSubmenu: true},
-                    {text: 'Careers'},
-                    {text: 'News'},
-                    {text: 'Documentation'}
-                ],
-                loginButton: {
-                    text: 'Login', isSecondary: true, isSmall: true
-                },
-                registerButton: {
-                    text: 'Register', isSmall: true 
-                }
-            }
-        
-        +header(options)
+        +header(data.header)
         
     .headers-and-footers__header-2
-        -
-            options = {
-                items: [
-                    {text: 'Home', isActive: true},
-                    {text: 'About Us'},
-                    {text: 'Services', hasSubmenu: true},
-                    {text: 'Careers'},
-                    {text: 'News'},
-                    {text: 'Documentation'}
-                ],
-                user: 'Cosmin Negoita'
-            }
-
-        +header(options)
+        +header(data.headerLogined)
 
     .headers-and-footers__footer
-        -
-            options = {
-                text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
-                items: [
-                    {title: 'Navigation', subitems: ['About Us', 'News', 'Support', 'Products']},
-                    {title: 'About us', subitems: ['Who we are', 'Our team', 'Careers', 'Investors']},
-                    {title: 'Support', subitems: ['Documentation', 'Community', 'Get in Touch']},
-                ],
-                subscription: {
-                    title: 'Subscribe to our newsletter',
-                    text: 'Receive our latest news and promotions in your inbox!',
-                    textField: {isSubscription: true, placeholder: 'Your email address'}
-                },
-                copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
-                links: [
-                    {name: 'twitter'},
-                    {name: 'facebook-square'},
-                    {name: 'instagram'}
-                ]
-            }
-
-        +footer(options)
+        +footer(data.footer)
 
     .headers-and-footers__footer-min
-        -
-            options = {
-                text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis',
-                links: [
-                    {name: 'twitter'},
-                    {name: 'facebook-square'},
-                    {name: 'instagram'}
-                ]
-            }
-
-        +footer-min(options)
+        +footer-min(data.footerMin)
 
 
 block script

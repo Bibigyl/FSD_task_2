@@ -1,0 +1,74 @@
+{
+    "header": {
+        "items": [
+            {"text": "Home", "isActive": true},
+            {"text": "About Us"},
+            {"text": "Services", "hasSubmenu": true},
+            {"text": "Careers"},
+            {"text": "News"},
+            {"text": "Documentation"}
+        ],
+        "loginButton": {
+            "text": "Login", 
+            "isSecondary": true, 
+            "isSmall": true
+        },
+        "registerButton": {
+            "text": "Register", 
+            "isSmall": true 
+        }
+    },
+
+    "headerLogined": {
+        "items": [
+            {"text": "Home", "isActive": true},
+            {"text": "About Us"},
+            {"text": "Services", "hasSubmenu": true},
+            {"text": "Careers"},
+            {"text": "News"},
+            {"text": "Documentation"}
+        ],
+        "user": "Cosmin Negoita"
+    },
+
+    "footer": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+        "items": [
+            {
+                "title": "Navigation", 
+                "subitems": ["About Us", "News", "Support", "Products"]
+            },
+            {
+                "title": "About us", 
+                "subitems": ["Who we are", "Our team", "Careers", "Investors"]
+            },
+            {
+                "title": "Support", 
+                "subitems": ["Documentation", "Community", "Get in Touch"]
+            }
+        ],
+        "subscription": {
+            "title": "Subscribe to our newsletter",
+            "text": "Receive our latest news and promotions in your inbox!",
+            "textField": {
+                "isSubscription": true, 
+                "placeholder": "Your email address"
+            }
+        },
+        "copyright": "Copyright © 2018 Toxin UI Kit. All rights reserved.",
+        "links": [
+            {"name": "twitter"},
+            {"name": "facebook-square"},
+            {"name": "instagram"}
+        ]
+    },
+
+    "footerMin": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis",
+        "links": [
+            {"name": "twitter"},
+            {"name": "facebook-square"},
+            {"name": "instagram"}
+        ]
+    }
+}
