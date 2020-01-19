@@ -10,6 +10,9 @@ block head
 
 
 block content
+
+    -let data = require('./search-room.json')
+
     include ../../pages-blocks/room-card/room-card
 
     include ../../blocks/dropdown/dropdown
@@ -18,119 +21,46 @@ block content
     include ../../blocks/slider-range/slider-range
     include ../../blocks/pagination/pagination
     include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
-    - 
-        let dropdownContent = {
-            guests: {
-                text: 'Сколько гостей',
-                items: ['Взрослые', 'Дети', 'Младенцы'],
-                buttons: ['Очистить', 'Применить']
-            },
-            furniture: {
-                text: 'Удобства',
-                items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-                buttons: false
-            }
-        };
 
     .search-room__container
-        .search-room__parameters
-            .search-room__filter-date-dropdown
-                -
-                    options = {
-                        title: 'Даты пребывания в отеле',
-                        firstDate: '19.08.2019',
-                        lastDate: '23.08.2019',
-                        buttons: ['Очистить', 'Применить'],
-                        language: 'ru'
-                    }
 
-                +filter-date-dropdown(options)
+        .search-room__parameters
+
+            .search-room__filter-date-dropdown
+                +filter-date-dropdown(data.filterDateDropdown)
 
             .search-room__dropdown-guests
-                +dropdown({title: 'Гости', content: dropdownContent.guests})
+                +dropdown(data.dropdownGuests)
 
             .search-room__slider-range
-                +slider-range('Диапазон цены')
-                p.search-room__slider-range-text Стоимость за сутки пребывания в номере
+                +slider-range(data.sliderRange)
+                p.search-room__slider-range-text= data.sliderText
 
             .search-room__checkbox-buttons
-                -
-                    options = {
-                        title: 'Checkbox Buttons',
-                        items: [
-                            {text: 'Можно курить'},
-                            {text: 'Можно с питомцами', isChecked: true},
-                            {text: 'Можно пригласить гостей (до 10 человек)', isChecked: true}
-                        ]
-                    }
-
-                +checkbox-button-list(options)
+                +checkbox-button-list(data.checkboxButtonsList)
 
             .search-room__rich-checkbox-buttons
-                -
-                    options = {
-                        title: 'Доступность',
-                        items: [
-                            {
-                                richText: 'Широкий коридор',
-                                text: 'Ширина коридоров в номере не менее 91 см.'   
-                            },
-                            {
-                                richText: 'Помощник для инвалидов',
-                                text: 'На 1 этаже вас встретит специалист и проводит до номера.'                                        
-                            }
-                        ]
-                    }
-                    
-                +checkbox-button-list(options)
+                +checkbox-button-list(data.richCheckboxButtons)
 
             .search-room__dropdown-furniture
-                +dropdown({title: 'Удобства номера', content: dropdownContent.furniture})
+                +dropdown(data.dropdownFurniture)
 
             .search-room__expandable-checkbox-list
-                -
-                    options = {
-                        title: 'Дополнительные удобства',
-                        items: [
-                            {text: 'Завтрак'},
-                            {text: 'Письменный стол', isChecked: true},
-                            {text: 'Стул для кормления', isChecked: true},
-                            {text: 'Кроватка', isChecked: true},
-                            {text: 'Телевизор'},
-                            {text: 'Шампунь'},
-                            {text: 'Телевизор'},
-                            {text: 'Шампунь'}
-                        ]
-                    }
-
-                +expandable-checkbox-list(options)
+                +expandable-checkbox-list(data.expandableCheckboxList)
 
         .search-room__room-cards-field
-            h1.search-room__title Номера, которые мы для вас подобрали
+
+            h1.search-room__title= data.cardsFieldTitle
+
             .search-room__room-cards
-                -
-                    items = [
-                        [1, 888, true, 9990, 5, 145],
-                        [2, 840, false, 9900, 4, 65],
-                        [3, 980, true, 8500, 3, 35],
-                        [4, 856, false, 7300, 5, 19],
-                        [5, 740, false, 6000, 4, 44],
-                        [6, 982, false, 5800, 3, 56],
-                        [7, 678, false, 5500, 5, 45],
-                        [8, 450, false, 5300, 4, 39],
-                        [9, 350, false, 5000, 3, 77],
-                        [10, 666, false, 5000, 5, 25],
-                        [11, 444, false, 5000, 3, 15],
-                        [12, 352, false, 5000, 3, 55]
-                    ]
-                
-                each item in items
+            
+                each item in data.rooms
                     -
                         let price = ('' + item[3]).slice(0, 1) + 
                             ' ' + ('' + item[3]).slice(1) + '₽';
                         let lux = item[2] ? 'люкс' : false;
 
-                        options = {
+                        let options = {
                             image:  'search-room__room-' + item[0] + '.jpg',
                             number: item[1],
                             lux: lux,
@@ -149,7 +79,8 @@ block content
                         +room-card(options)
 
             .search-room__pagination
-                +pagination({items: 12, max: 101, page: 1, text: ['из', 'вариантов аренды']})
+                +pagination(data.pagination)
+
 
 block script
     script(src="search-room.js")
