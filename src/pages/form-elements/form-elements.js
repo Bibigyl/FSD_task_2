@@ -3,14 +3,6 @@
 import '../../scss/main.scss';
 import './form-elements.scss';
 
-//--------------- import libs -----------------------------
-
-import "../../libs/daterangepicker/jquery.daterangepicker.js";
-
-import moment from 'moment'
-import 'moment/locale/ru' 
-moment.locale('ru');
-
 //--------------- import common js -----------------------------
 
 import "../../js/main.js";

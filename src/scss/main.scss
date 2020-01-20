@@ -9,15 +9,10 @@
 /*------------------------------ Import libs ----------------------------------------*/
 
 @import '~material-design-icons/iconfont/material-icons.css';
-
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '~@fortawesome/fontawesome-free/scss/brands.scss';
-
-@import '../libs/jquery-ui-1.12.1.custom/jquery-ui.min.css';
-@import '../libs/daterangepicker/daterangepicker.scss';
-
-//@import '../libs/jquery.daterangepicker/daterangepicker.scss';
+@import '~jquery-date-range-picker/dist/daterangepicker.scss';
 
 /*------------------------------ Common styles ----------------------------------------*/
 
@@ -105,7 +100,7 @@ h3 {
 
 @import '../blocks/text-field/text-field.scss';
 @import '../blocks/date-dropdown/date-dropdown.scss';
-//@import '../blocks/calendar/calendar.scss';
+@import '../blocks/calendar/calendar.scss';
 @import '../blocks/filter-date-dropdown/filter-date-dropdown.scss';
 @import '../blocks/checkbox-button/checkbox-button.scss';
 @import '../blocks/checkbox-button-list/checkbox-button-list.scss';

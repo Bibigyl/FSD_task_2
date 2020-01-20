@@ -72,10 +72,10 @@
     border: 2px solid #fff;
     cursor: move;
     /* fallback if grab cursor is unsupported */
-    cursor: grab;
+    cursor: pointer;
 
     &:active {
-      cursor: grabbing;
+      cursor: pointer;
     }
   }
 

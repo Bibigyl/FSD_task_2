@@ -1,3 +1,10 @@
+import "jquery-date-range-picker/dist/jquery.daterangepicker.js";
+
+import moment from 'moment'
+import 'moment/locale/ru' 
+moment.locale('ru');
+
+
 $( document ).ready(function() {
 
     $('.js-date-dropdown').each( function() {
