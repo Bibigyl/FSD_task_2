@@ -24,9 +24,9 @@
   position: absolute;
   z-index: 100;
   padding: 5px 12px;
-  border: 1px solid $c25;
+  border: 1px solid #ddd;
   box-sizing: border-box;
-  box-shadow: 0px 10px 20px $c5;
+  box-shadow: 0px 10px 20px #ddd;
   border-radius: 4px;
   width: 320px;
 
@@ -58,8 +58,7 @@
   }
 
   .month-name {
-    font-family: 'Quicksand-Bold', sans-serif;
-    color: $c100;
+    color: #333;
     text-transform: capitalize;
     font-style: normal;
     font-weight: bold;
@@ -83,7 +82,6 @@
     vertical-align: middle;
     line-height: 24px;
     font-weight: 700;
-    font-family: 'Quicksand', 'OpenSans', sans-serif;
   }
 
   .select-wrapper select {
@@ -175,7 +173,7 @@
           height: 100%;
           top: 0;
           left: -50%;
-          background-color: rgba($primary, .25);
+          background-color: rgba(#9da0ff, .25);
           position: absolute;
           z-index: -1;
           transition: background-color .1s;
@@ -187,7 +185,7 @@
           height: 100%;
           top: 0;
           right: -50%;
-          background-color: rgba($primary, .25);
+          background-color: rgba(#9da0ff, .25);
           position: absolute;
           z-index: -1;
           transition: background-color .1s;
@@ -213,7 +211,7 @@
 
         &.lastMonth,
         &.nextMonth {
-          color: $c25;
+          color: #ddd;
           cursor: default;
         }
       }
@@ -222,10 +220,9 @@
         height: 30px;
         line-height: 20px;
         text-transform: capitalize;
-        font-family: 'Montserrat';
         font-weight: 700;
         font-size: 12px;
-        color: $primary;
+        color: #9da0ff;
 
         & th {
           height: 36px;
@@ -247,11 +244,11 @@
       border-radius: 100px;
       font-weight: bold;
       color: #fff;
-      background: $gradientSecondary;
+      background: #81ceaa;
     }
 
     &:hover {
-      background: linear-gradient(180deg, lighten($primary, 5%) 0%, lighten(#8BA4F9, 5%) 100%);
+      background: #9da0ff;
     }
   }
 
@@ -270,8 +267,8 @@
 
   .first-date-selected,
   .last-date-selected {
-    background: linear-gradient(180deg, $primary 0%, #8BA4F9 100%) !important;
-    color: white !important;
+    background:  #9da0ff;
+    color: white;
     font-weight: bold;
   }
 
@@ -305,7 +302,7 @@
 
   .calendar__arrow i {
     cursor: pointer;
-    background: $gradientPrimary;
+    background: #d1bbff;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
