@@ -4,32 +4,53 @@ $( document ).ready(function() {
         $(this).on("click", function() {
 
             let $item = $(this).closest('.js-counted-item');
-            let $numNode = $item.find(".js-counted-item__number");
-            let num = $numNode.text() * 1;
+            let $valueNode = $item.find(".js-counted-item__value");
+            let value = $valueNode.text() * 1;
             let text = $item.find(".js-counted-item__text").text();
     
-            if ( !$(this).hasClass("counted-item__operation_not-active") ) {
+            if ( !$(this).hasClass("counted-item__operation_disabled") ) {
                 if ( $(this).hasClass("js-counted-item__operation_dec") ) {
-                    num = num - 1;
-                    $numNode.text(num);
-                    if ( num == 0 ) { $(this).addClass("counted-item__operation_not-active") }
-                    if ( num == 98 ) { 
-                        $(this).parent().find(".js-counted-item__operation_inc").removeClass("counted-item__operation_not-active"); 
+                    value = value - 1;
+                    $valueNode.text(value);
+                    if ( value == 0 ) { $(this).addClass("counted-item__operation_disabled") }
+                    if ( value == 98 ) { 
+                        $(this).parent().find(".js-counted-item__operation_inc").removeClass("counted-item__operation_disabled"); 
                     }
                 } else {
-                    num = num + 1;
-                    $numNode.text(num);
-                    if ( num == 99 ) { $(this).addClass("counted-item__operation_not-active") }
-                    if ( num == 1 ) { 
-                        $(this).parent().find(".js-counted-item__operation_dec").removeClass("counted-item__operation_not-active"); 
+                    value = value + 1;
+                    $valueNode.text(value);
+                    if ( value == 99 ) { $(this).addClass("counted-item__operation_disabled") }
+                    if ( value == 1 ) { 
+                        $(this).parent().find(".js-counted-item__operation_dec").removeClass("counted-item__operation_disabled"); 
                     }
                 }
             } else {
                 return;
             }
 
-            text = num == 0 ? '' : num + ' ' + text;
+            text = value == 0 ? '' : value + ' ' + text;
             $item.attr('data-counted-item', text)
         });
+    });
+
+
+    document.querySelectorAll('.js-counted-item').forEach(function(item) {
+
+        let valueNode = item.querySelector('.js-counted-item__value');
+        let dec = item.querySelector('.js-counted-item__operation_dec');
+
+        let itemObserver = new MutationObserver(function() {
+            let clear = item.hasAttribute('data-clear');
+
+            if ( clear ) { 
+                valueNode.textContent = '0';
+                dec.classList.add('counted-item__operation_disabled');
+
+                item.setAttribute('data-counted-item', '');
+                item.removeAttribute('data-clear');
+            }
+        });
+
+        itemObserver.observe(item, {attributes: true});
     });
 });

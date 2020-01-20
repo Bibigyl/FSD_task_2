@@ -1,14 +1,12 @@
 include ../icon-link/icon-link
 include ../title/title
+include ../counted-item/counted-item
 
 mixin dropdown({title, content = {text, items, buttons}, isOpen, isSmall})
 	-	
 		let open = isOpen ? 'dropdown_open' : false;
 		let small = isSmall ? 'dropdown_small' : false;
-
-		let num;
-		let decDisabled;
-		let incDisabled;
+		let isClearVisible = false;
 
 	.dropdown.js-dropdown(class=[open, small] data-initial-text=content.text)
 		if title
@@ -20,59 +18,19 @@ mixin dropdown({title, content = {text, items, buttons}, isOpen, isSmall})
 			i.dropdown__arrow.js-dropdown__arrow.material-icons expand_more
 
 		.dropdown__popup.js-dropdown__popup
+
 			ul.js-dropdown__items
+
 				each item in content.items
-					-
-						num = item.num || 0;
-						decDisabled = num < 1 ? 'dropdown__operation_disabled' : false;
-						incDisabled = num > 98 ? 'dropdown__operation_disabled' : false;
+					li.dropdown__item
 
-					li.dropdown__item.js-dropdown__item(data-item=item.text)= item.text
+						- item.gettingDataClass = 'js-dropdown__item-data';
+						- isClearVisible = item.value != 0 ? 'dropdown__action_hidden' : isClearVisible;
 
-						button.dropdown__operation.dropdown__operation_dec.js-dropdown__operation.js-dropdown__operation_dec(class=decDisabled type='button') -
-
-						span.dropdown__number.js-dropdown__number= num
-
-						button.dropdown__operation.dropdown__operation_inc.js-dropdown__operation.js-dropdown__operation_inc(class=incDisabled type='button') +
+						+counted-item(item)
 			
 			if content.buttons
-				.dropdown__action_clear.js-dropdown__action_clear.dropdown__action_hidden
+				.dropdown__action.dropdown__action_clear.js-dropdown__action_clear(class=isClearVisible)
 					+icon-link({text: content.buttons[0]})
-				.dropdown__action_apply.js-dropdown__action_apply
+				.dropdown__action.dropdown__action_apply.js-dropdown__action_apply
 					+icon-link({text: content.buttons[1], isPrimary: true})
-					
-
-
-
-//-
-	include ../icon-link/icon-link
-	include ../title/title
-	include ../counted-item/counted-item
-
-	mixin dropdown({title, content = {text, items, buttons}, isOpen, isSmall})
-		-	
-			let open = isOpen ? 'dropdown_open' : false;
-			let small = isSmall ? 'dropdown_small' : false;
-
-		.dropdown.js-dropdown(class=[open, small] data-initial-text=content.text)
-			if title
-				.dropdown__title
-					+title(title)
-
-			.dropdown__field
-				span.dropdown__text.js-dropdown__text= content.text
-				i.dropdown__arrow.js-dropdown__arrow.material-icons expand_more
-
-			.dropdown__popup.js-dropdown__popup
-				ul.js-dropdown__items
-					each item in content.items
-						li.dropdown__item
-							+counted-item(item)
-
-
-				
-				if content.buttons
-					.dropdown__action_clear.js-dropdown__action_clear.dropdown__action_hidden
-						+icon-link({text: content.buttons[0]})
-					.dropdown__action_apply.js-dropdown__action_apply
-						+icon-link({text: content.buttons[1], isPrimary: true})
