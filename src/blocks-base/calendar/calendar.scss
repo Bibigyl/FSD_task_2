@@ -1,333 +1,119 @@
-@import '../../scss/_vars';
-@import '../../scss/_mixins';
+.calendar {
+  
+  .date-picker-wrapper {
+    border: 1px solid $c25;
+    box-shadow: 0px 10px 20px $c5;
 
-.date-picker {
-  width: 170px;
-  height: 25px;
-  padding: 0;
-  border: 0;
-  line-height: 25px;
-  padding-left: 10px;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-}
-
-.dp-clearfix {
-  clear: both;
-  height: 0;
-  font-size: 0;
-}
-
-.date-picker-wrapper {
-  background-color: #fff;
-  position: absolute;
-  z-index: 100;
-  padding: 5px 12px;
-  border: 1px solid $c25;
-  box-sizing: border-box;
-  box-shadow: 0px 10px 20px $c5;
-  border-radius: 4px;
-  width: 320px;
-
-  &.inline-wrapper {
-    position: relative;
-    box-shadow: none;
-    display: inline-block;
-  }
-
-  &.single-date {
-    width: auto;
-  }
-
-  &.no-shortcuts {
-    padding-bottom: 12px;
-  }
-
-  &.no-topbar {
-    padding-top: 12px;
-  }
-
-  .calendar__footer {
-    font-size: 11px;
-  }
-
-  b {
-    color: #666;
-    font-weight: 700;
-  }
-
-  .month-name {
-    font-family: 'Quicksand-Bold', sans-serif;
-    color: $c100;
-    text-transform: capitalize;
-    font-style: normal;
-    font-weight: bold;
-    font-size: rem(19px);
-    line-height: 24px;
-  }
-
-  .select-wrapper {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: middle;
-
-    &:hover {
-      text-decoration: underline;
+    .month-name {
+      font-family: 'Quicksand-Bold', sans-serif;
+      color: $c100;
+      text-transform: capitalize;
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(19px);
+      line-height: 24px;
     }
-  }
-
-  .month-element {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 24px;
-    font-weight: 700;
-    font-family: 'Quicksand', 'OpenSans', sans-serif;
-  }
-
-  .select-wrapper select {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    left: 0;
-    top: -1px;
-    font-size: inherit;
-    font-style: inherit;
-    font-weight: inherit;
-    text-transform: inherit;
-    color: inherit;
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=1)';
-    filter: alpha(opacity=1);
-    opacity: 0.01;
-  }
-
-  .month-wrapper {
-    margin-bottom: 14px;
-    padding: 7px;
-    cursor: default;
-    position: relative;
-    _overflow: hidden;
-
-    table {
-      width: 280px;
-      float: left;
-
-      &.month2 {
-        width: 190px;
-        float: left;
-      }
-
-      th,
-      td {
-        vertical-align: middle;
-        text-align: center;
-        line-height: 14px;
-        margin: 0px;
-        padding: 0px;
-        width: 40px;
-        height: 40px;
-      }
-
-      .td-hovering,
-      .td-checked {
-        background-color: #eee6ff;
-        position: relative;
-
-        &:hover {
-
-          background-color: transparent;
-
-          &:after,
-          &:before {
-            width: 0;
+  
+    .month-element {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 24px;
+      font-weight: 700;
+      font-family: 'Quicksand', 'OpenSans', sans-serif;
+    }
+  
+    .month-wrapper {
+      table {
+        .td-hovering,
+        .td-checked {
+          background-color: #eee6ff;
+  
+          &:hover {
+            background-color: transparent;
+  
+            &:after,
+            &:before {
+              width: 0;
+            }
           }
-        }
-
-        &.td-first-date-selected {
-          background-color: transparent;
-
+  
+          &.td-first-date-selected,
+          &.td-last-date-selected {
+            background-color: transparent;
+  
+            &:before,
+            &:after {
+              width: 0;
+            }
+          }
+  
           &:before,
           &:after {
-            width: 0;
+            background-color: rgba($primary, .25);
           }
         }
+  
+        td:last-child:after,
+        td:first-child:before {
+          width: 0;
+        }
 
-        &.td-last-date-selected {
-          background-color: transparent;
-
-          &:after,
-          &:before {
-            width: 0;
+        div.day {
+          &.lastMonth,
+          &.nextMonth {
+            color: $c25;
           }
         }
-
-        &:before {
-          content: '';
-          width: 50%;
-          height: 100%;
-          top: 0;
-          left: -50%;
-          background-color: rgba($primary, .25);
-          position: absolute;
-          z-index: -1;
-          transition: background-color .1s;
-        }
-
-        &:after {
-          content: '';
-          width: 50%;
-          height: 100%;
-          top: 0;
-          right: -50%;
-          background-color: rgba($primary, .25);
-          position: absolute;
-          z-index: -1;
-          transition: background-color .1s;
-        }
-      }
-
-      td:last-child:after {
-        width: 0;
-      }
-
-      td:first-child:before {
-        width: 0;
-      }
-
-      .day {
-        height: 100%;
-        line-height: 40px;
-        font-size: 12px;
-        cursor: default;
-      }
-
-      div.day {
-
-        &.lastMonth,
-        &.nextMonth {
-          color: $c25;
-          cursor: default;
-        }
-      }
-
-      .week-name {
-        height: 30px;
-        line-height: 20px;
-        text-transform: capitalize;
-        font-family: 'Montserrat';
-        font-weight: 700;
-        font-size: 12px;
-        color: $primary;
-
-        & th {
-          height: 36px;
+  
+        .week-name {
+          font-family: 'Montserrat';
+          color: $primary;
         }
       }
     }
-  }
-
-  .month-wrapper table .day {
-    border-radius: 100px;
-
-    &.toMonth {
-      &.valid {
-        cursor: pointer;
+  
+    .month-wrapper table .day {
+      &.real-today {
+        background: $gradientSecondary;
+      }
+  
+      &:hover {
+        background: linear-gradient(180deg, lighten($primary, 5%) 0%, lighten(#8BA4F9, 5%) 100%);
       }
     }
-
-    &.real-today {
-      border-radius: 100px;
-      font-weight: bold;
-      color: #fff;
-      background: $gradientSecondary;
+  
+    .first-date-selected,
+    .last-date-selected {
+      background: linear-gradient(180deg, $primary 0%, #8BA4F9 100%) !important;
+      color: white !important;
     }
-
-    &:hover {
-      background: linear-gradient(180deg, lighten($primary, 5%) 0%, lighten(#8BA4F9, 5%) 100%);
-    }
-  }
-
-  table .caption {
-    height: 57px;
-
-    >th {
-      vertical-align: top;
-
-      &:first-of-type,
-      &:last-of-type {
-        width: 27px;
-      }
+  
+    .calendar__arrow i {
+      cursor: pointer;
+      background: $gradientPrimary;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
-
-  .first-date-selected,
-  .last-date-selected {
-    background: linear-gradient(180deg, $primary 0%, #8BA4F9 100%) !important;
-    color: white !important;
-    font-weight: bold;
-  }
-
-  .tbody tr {
-    vertical-align: middle;
-  }
-
-  .prev {
-    text-align-last: left;
-  }
-
-  .next {
-    text-align-last: right;
-  }
-
-  .calendar__icon-link_action_clear {
-    float: left;
-    margin-left: 7px;
-    margin-bottom: 6px;
-  }
-
-  .calendar__icon-link_action_apply {
-    float: right;
-    margin-right: 7px;
-    margin-bottom: 6px;
-  }
-
-  .drp_top-bar {
-    display: none;
-  }
-
-  .calendar__arrow i {
-    cursor: pointer;
-    background: $gradientPrimary;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
-@media (max-width: 410px) {
-
-  .date-picker-wrapper {
-    width: 280px;
-  }
-  .date-picker-wrapper .month-wrapper table td {
-    height: 30px;
-    width: 30px;
-  }
-
-  .date-picker-wrapper .month-wrapper table .day {
-    height: 30px;
-    width: 30px;
-    line-height: 30px;
-  }
-
-  .date-picker-wrapper .month-wrapper table {
-    width: 240px;
+  
+  @media (max-width: 410px) {
+  
+    .date-picker-wrapper {
+      width: 280px;
+    }
+    .date-picker-wrapper .month-wrapper table td {
+      height: 30px;
+      width: 30px;
+    }
+  
+    .date-picker-wrapper .month-wrapper table .day {
+      height: 30px;
+      width: 30px;
+      line-height: 30px;
+    }
+  
+    .date-picker-wrapper .month-wrapper table {
+      width: 240px;
+    }
   }
 }

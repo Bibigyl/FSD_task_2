@@ -25,15 +25,27 @@
     margin-bottom: 5px;
   }
 
-  &__calendar_open {
-    z-index: 100;
+  &__calendar-container {
+    position: relative;
+    width: 100%;
+  }
+
+  &__calendar {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+
+    &_open {
+      z-index: 101;
+    }
   }
 }
 
 @media (max-width: 340px) {
   .filter-date-dropdown {
     &__calendar {
-      margin-left: -20px;
+      left: -20px;
     }
   }
 }

@@ -34,6 +34,7 @@ $( document ).ready(function() {
                     $input.val(s);
                 }
             },
+            inline: true,
             customArrowPrevSymbol: '<div class="calendar__arrow js-calendar__arrow"><i class="material-icons">arrow_back</i></div>',
             customArrowNextSymbol: '<div class="calendar__arrow js-calendar__arrow"><i class="material-icons">arrow_forward</i></div>',
             container: $calendar

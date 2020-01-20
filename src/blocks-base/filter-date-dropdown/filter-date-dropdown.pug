@@ -1,5 +1,6 @@
-include ../text-field/text-field
+include ../../blocks-base/text-field/text-field
 include ../../blocks-base/title/title
+include ../../blocks-base/calendar/calendar
 
 mixin filter-date-dropdown({title, firstDate, lastDate, textField = {}, language, buttons} = {})
     -
@@ -14,6 +15,10 @@ mixin filter-date-dropdown({title, firstDate, lastDate, textField = {}, language
             +text-field(textField)
             i.filter-date-dropdown__arrow.js-filter-date-dropdown__arrow.material-icons expand_more
 
-        .filter-date-dropdown__calendar.js-filter-date-dropdown__calendar
+        .filter-date-dropdown__calendar-container
+            +calendar('filter-date-dropdown__calendar js-filter-date-dropdown__calendar')
+        
+        
+        //-.filter-date-dropdown__calendar.js-filter-date-dropdown__calendar
 
 

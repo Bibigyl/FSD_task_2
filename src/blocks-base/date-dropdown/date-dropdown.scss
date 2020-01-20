@@ -43,6 +43,11 @@
     width: 100%;
     position: absolute;
     top: 5px;
+    left: 0;
+
+    &_open {
+      z-index: 101;
+    }
   }
 
   .text-field__input {
