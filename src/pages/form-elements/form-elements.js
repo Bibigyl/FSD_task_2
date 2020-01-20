@@ -18,3 +18,4 @@ import "../../blocks-base/filter-date-dropdown/filter-date-dropdown.js";
 import "../../blocks-base/expandable-checkbox-list/expandable-checkbox-list.js";
 import "../../blocks-base/pagination/pagination.js";
 import "../../blocks-base/like-button/like-button.js";
+import "../../blocks-base/rate-button/rate-button.js";

@@ -13,4 +13,10 @@
     -webkit-text-fill-color: transparent;
     cursor: default;
   }
+
+  &_clickable {
+    .rate-button__icon {
+      cursor: pointer;
+    }
+  }
 }

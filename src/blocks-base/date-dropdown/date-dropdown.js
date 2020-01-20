@@ -91,6 +91,7 @@ $( document ).ready(function() {
             if ( $first.val() && $last.val() ) {
                 try {
                     $this.data('dateRangePicker').setDateRange($first.val(), $last.val());
+                    $this.data('dateRangePicker').close();
                 } catch(e) {
                     console.warn('Incorrect dates');
                 }      
