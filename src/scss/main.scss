@@ -96,40 +96,40 @@ h3 {
 
 /*------- Blocks styles -------------*/
 
-@import '../blocks/title/title.scss';
+@import '../blocks-base/title/title.scss';
 
-@import '../blocks/text-field/text-field.scss';
-@import '../blocks/date-dropdown/date-dropdown.scss';
-@import '../blocks/calendar/calendar.scss';
-@import '../blocks/filter-date-dropdown/filter-date-dropdown.scss';
-@import '../blocks/checkbox-button/checkbox-button.scss';
-@import '../blocks/checkbox-button-list/checkbox-button-list.scss';
-//@import '../blocks/radio-buttons/radio-buttons.scss';
-@import '../blocks/radio-button/radio-button.scss';
-@import '../blocks/twin-radio-buttons/twin-radio-buttons.scss';
-@import '../blocks/toggle/toggle.scss';
-@import '../blocks/like-button/like-button.scss';
-@import '../blocks/rate-button/rate-button.scss';
-@import '../blocks/slider-range/slider-range.scss';
-@import '../blocks/button/button.scss';
-@import '../blocks/icon-link/icon-link.scss';
-@import '../blocks/pagination/pagination.scss';
-@import '../blocks/dropdown/dropdown.scss';
-@import '../blocks/counted-item/counted-item.scss';
-@import '../blocks/expandable-checkbox-list/expandable-checkbox-list.scss';
-@import '../blocks/icon-text/icon-text.scss';
-@import '../blocks/icon-text-list/icon-text-list.scss';
-@import '../blocks/review/review.scss';
-@import '../blocks/bullet-list/bullet-list.scss';
-@import '../blocks/donut/donut.scss';
+@import '../blocks-base/text-field/text-field.scss';
+@import '../blocks-base/date-dropdown/date-dropdown.scss';
+@import '../blocks-base/calendar/calendar.scss';
+@import '../blocks-base/filter-date-dropdown/filter-date-dropdown.scss';
+@import '../blocks-base/checkbox-button/checkbox-button.scss';
+@import '../blocks-base/checkbox-button-list/checkbox-button-list.scss';
+//@import '../blocks-base/radio-buttons/radio-buttons.scss';
+@import '../blocks-base/radio-button/radio-button.scss';
+@import '../blocks-base/twin-radio-buttons/twin-radio-buttons.scss';
+@import '../blocks-base/toggle/toggle.scss';
+@import '../blocks-base/like-button/like-button.scss';
+@import '../blocks-base/rate-button/rate-button.scss';
+@import '../blocks-base/slider-range/slider-range.scss';
+@import '../blocks-base/button/button.scss';
+@import '../blocks-base/icon-link/icon-link.scss';
+@import '../blocks-base/pagination/pagination.scss';
+@import '../blocks-base/dropdown/dropdown.scss';
+@import '../blocks-base/counted-item/counted-item.scss';
+@import '../blocks-base/expandable-checkbox-list/expandable-checkbox-list.scss';
+@import '../blocks-base/icon-text/icon-text.scss';
+@import '../blocks-base/icon-text-list/icon-text-list.scss';
+@import '../blocks-base/review/review.scss';
+@import '../blocks-base/bullet-list/bullet-list.scss';
+@import '../blocks-base/donut/donut.scss';
 
 /*--------- Components styles -------------*/
 
-@import '../pages-blocks/search-card/search-card.scss';
-@import '../pages-blocks/check-in-card/check-in-card.scss';
-@import '../pages-blocks/booking-card/booking-card.scss';
-@import '../pages-blocks/login-card/login-card.scss';
-@import '../pages-blocks/room-card/room-card.scss';
-@import '../pages-blocks/header/header.scss';
-@import '../pages-blocks/footer/footer.scss';
-@import '../pages-blocks/footer-min/footer-min.scss';
+@import '../blocks-semantic/search-card/search-card.scss';
+@import '../blocks-semantic/check-in-card/check-in-card.scss';
+@import '../blocks-semantic/booking-card/booking-card.scss';
+@import '../blocks-semantic/login-card/login-card.scss';
+@import '../blocks-semantic/room-card/room-card.scss';
+@import '../blocks-semantic/header/header.scss';
+@import '../blocks-semantic/footer/footer.scss';
+@import '../blocks-semantic/footer-min/footer-min.scss';

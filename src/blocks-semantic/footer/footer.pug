@@ -1,11 +1,11 @@
-include ../../blocks/text-field/text-field
+include ../../blocks-base/text-field/text-field
 
 mixin footer({text, items, subscription, copyright, links})
 	footer.footer
 		.footer__container
 			.footer__main-info
 				a.footer__logo
-					include ../../blocks/logo/logo-with-name.svg
+					include ../../blocks-base/logo/logo-with-name.svg
 				p.footer__text= text
 
 			.footer__menu

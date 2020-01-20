@@ -9,11 +9,11 @@ import "../../js/main.js";
 
 //------------------ import blocks scripts -----------------------------
 
-import "../../blocks/text-field/text-field.js";
+import "../../blocks-base/text-field/text-field.js";
 
 //------------------ import components scripts -----------------------------
 
-import "../../pages-blocks/header/header.js";
+import "../../blocks-semantic/header/header.js";
 
 
 

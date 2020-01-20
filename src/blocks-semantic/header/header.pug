@@ -1,11 +1,11 @@
-include ../../blocks/button/button
+include ../../blocks-base/button/button
 
 mixin header({items, loginButton, registerButton, user, isMenuItemSlim})
 	- let slim = isMenuItemSlim ? 'header__menu-item_slim' : false;
 	header.header
 		.header__container
 			a.header__logo
-				include ../../blocks/logo/logo-with-name.svg
+				include ../../blocks-base/logo/logo-with-name.svg
 				
 			.header__menu(class=menuClass)
 				nav.header__menu-nav

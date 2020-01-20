@@ -13,11 +13,11 @@ block content
 
     - let data = require('./room-details.json');
 
-    include ../../pages-blocks/booking-card/booking-card
-    include ../../blocks/icon-text-list/icon-text-list
-    include ../../blocks/review/review
-    include ../../blocks/bullet-list/bullet-list
-    include ../../blocks/donut/donut
+    include ../../blocks-semantic/booking-card/booking-card
+    include ../../blocks-base/icon-text-list/icon-text-list
+    include ../../blocks-base/review/review
+    include ../../blocks-base/bullet-list/bullet-list
+    include ../../blocks-base/donut/donut
 
     .room-details__photos
         .room-details__photo.room-details__photo-1(style=`background-image: url( ${require('./images/' + data.images[0])})`)

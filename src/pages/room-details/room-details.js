@@ -3,29 +3,21 @@
 import '../../scss/main.scss';
 import './room-details.scss';
 
-//--------------- import libs -----------------------------
-
-import "../../libs/daterangepicker/jquery.daterangepicker.js";
-
-import moment from 'moment'
-import 'moment/locale/ru' 
-moment.locale('ru');
-
 //--------------- import common js -----------------------------
 
 import "../../js/main.js";
 
 //------------------ import blocks scripts -----------------------------
 
-import "../../blocks/dropdown/dropdown.js";
-import "../../blocks/date-dropdown/date-dropdown.js";
-import "../../blocks/like-button/like-button.js";
-import "../../blocks/donut/donut.js";
-import {donutDiagram} from '../../blocks/donut/donut.js'
+import "../../blocks-base/dropdown/dropdown.js";
+import "../../blocks-base/date-dropdown/date-dropdown.js";
+import "../../blocks-base/like-button/like-button.js";
+import "../../blocks-base/donut/donut.js";
+import {donutDiagram} from '../../blocks-base/donut/donut.js'
 
 //------------------ import components scripts -----------------------------
 
-import "../../pages-blocks/header/header.js";
+import "../../blocks-semantic/header/header.js";
 
 
 
