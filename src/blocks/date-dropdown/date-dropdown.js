@@ -72,5 +72,28 @@ $( document ).ready(function() {
                 console.warn('Wrong date format');
             }            
         }
+
+        // Ввод даты вручную
+        $first.on('blur', inputOnBlur);
+        $last.on('blur', inputOnBlur);
+
+        $first.on('keypress', inputOnKeypress);
+        $last.on('keypress', inputOnKeypress);
+
+        function inputOnBlur() {
+            if ( $first.val() && $last.val() ) {
+                try {
+                    $this.data('dateRangePicker').setDateRange($first.val(), $last.val());
+                } catch(e) {
+                    console.warn('Incorrect dates');
+                }      
+            }
+        }
+
+        function inputOnKeypress(event) {
+            if (event.keyCode == 13) {
+                inputOnBlur();
+            }
+        }
     });
 });

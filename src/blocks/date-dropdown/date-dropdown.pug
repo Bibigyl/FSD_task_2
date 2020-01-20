@@ -1,5 +1,6 @@
 include ../../blocks/text-field/text-field
 include ../../blocks/title/title
+include ../../blocks/calendar/calendar
 
 
 mixin date-dropdown({firstDate, lastDate, placeholder, language, buttons} = {})
@@ -44,5 +45,6 @@ mixin date-dropdown({firstDate, lastDate, placeholder, language, buttons} = {})
                     +text-field(lastTextField)
                     i.date-dropdown__arrow.js-date-dropdown__arrow.material-icons expand_more
 
-        .date-dropdown__calendar-wrap
-            .date-dropdown__calendar.js-date-dropdown__calendar
+        .date-dropdown__calendar-container
+            +calendar("date-dropdown__calendar js-date-dropdown__calendar")
+            
