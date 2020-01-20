@@ -63,9 +63,9 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    top: 50%;
+    top: -6px;
     display: block;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
     border-radius: 100px;
     z-index: 10;
     background: $gradientSecondary;
@@ -92,5 +92,4 @@
       content: '-';
     }
   }
-
 }

@@ -16,7 +16,13 @@
         }
     },
 
-    "sliderRange": "Диапазон цены",
+    "sliderRange": {
+        "title": "Диапазон цены",
+        "min": 200,
+        "max": 15500,
+        "step": 200,
+        "values": [5000, 10000]
+    },
     "sliderText": "Стоимость за сутки пребывания в номере",
 
     "checkboxButtonsList": {

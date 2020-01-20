@@ -184,7 +184,15 @@ block content
         .form-elements__column-1-3.form-elements__column
 
             .slider-range-wrap
-                +slider-range('Range slider')
+                -
+                    options = {
+                        title: 'Range slider',
+                        min: 200,
+                        max: 15500,
+                        step: 200,
+                        values: [5000, 10000]
+                    }
+                +slider-range(options)
 
             h3.buttons-wrap__title Buttons
             .colored-buttons-wrap.buttons-wrap

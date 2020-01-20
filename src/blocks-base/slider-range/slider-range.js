@@ -4,13 +4,26 @@ $( document ).ready(function() {
 
   $('.slider-range__slider').each(function() {
 
+    let $slider = $(this).closest('.slider-range');
+    let min = +$slider.attr('data-min');
+    let max = +$slider.attr('data-max');
+    let step = +$slider.attr('data-step');
+    let values;
+
+    try {
+      values = JSON.parse($slider.attr('data-values'));
+    } catch {
+      console.warn('Incorrect data');
+      values = [min, max];
+    }
+
     // Initiate Slider
     $(this).slider({
       range: true,
-      min: 200,
-      max: 15500,
-      step: 200,
-      values: [5000, 10000]
+      min: min,
+      max: max,
+      step: step,
+      values: values
     });
 
     // Apply initial values to the range container
