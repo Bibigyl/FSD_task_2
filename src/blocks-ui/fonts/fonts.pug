@@ -1,0 +1,7 @@
+include ../../blocks-ui/font/font
+
+mixin fonts(fonts)
+    .fonts
+        each font in fonts
+            .fonts__font
+                +font(font)

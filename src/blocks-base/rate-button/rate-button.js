@@ -32,7 +32,7 @@ $(document).ready(function() {
 
             $(this).on('mouseleave', function() {
 
-                let $lastChecked = $('.rate-button__icon_checked').last();
+                let $lastChecked = $rate.find('.rate-button__icon_checked').last();
                 $lastChecked.text(full);
                 $lastChecked.prevAll().each(function() { 
                     $(this).text(full);

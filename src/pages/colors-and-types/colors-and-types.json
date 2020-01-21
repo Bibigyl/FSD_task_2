@@ -1,0 +1,18 @@
+{
+    "colors": [
+        {"color": "#1F2041", "opacity": "1", "title": "Dark Shade 100%"},
+        {"color": "#1F2041", "opacity": ".75", "title": "Dark Shade 75%"},
+        {"color": "#1F2041", "opacity": ".50", "title": "Dark Shade 50%"},
+        {"color": "#1F2041", "opacity": ".25", "title": "Dark Shade 25%"},
+        {"color": "#1F2041", "opacity": ".05", "title": "Dark Shade 5%"},
+        {"color": "#BC9CFF", "opacity": "1", "title": "Purple"},
+        {"color": "#6FCF97", "opacity": "1", "title": "Green"}
+    ],
+
+    "fonts": [
+        {"tag": "H1", "text": "This one is the sub-section or widget title"},
+        {"tag": "H2", "text": "Next one is the item title inside widgets"},
+        {"tag": "H3", "text": "This is a label or cta text"},
+        {"tag": "span", "example": "body", "text": "This is the body text which is used for most of the design, like paragraphs, lists, etc."}
+    ]
+}

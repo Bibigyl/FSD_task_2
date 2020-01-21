@@ -1,0 +1,7 @@
+mixin color({color, opacity, title})
+    - opacity = opacity || 1;
+    .color
+        .color__square(style=`background-color: ${color}; opacity: ${opacity}`)
+        .color__description
+            h2.color__title= title
+            span.color__text= color

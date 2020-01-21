@@ -1,0 +1,27 @@
+@import '../../scss/_mixins';
+
+.color {
+  display: flex;
+  align-items: center;
+
+  &__square {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
+
+  &__description {
+    padding-left: 40px;
+    max-width: 310px;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: rem(19px);
+  }
+}

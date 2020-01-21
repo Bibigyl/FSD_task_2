@@ -10,61 +10,20 @@ block head
 
 
 block content
+
+    - let data = require('./colors-and-types.json');
+
+    include ../../blocks-ui/color/color
+    include ../../blocks-ui/colors/colors
+    include ../../blocks-ui/font/font
+    include ../../blocks-ui/fonts/fonts
+
     .colors-and-types__container
         .colors-and-types__colors
-            .color-item
-                .color-item__square
-                .color-item__description
-                    h2.color-item__title Dark Shade 100%
-                    span.color-item__text #1F2041
-            .color-item
-                .color-item__square
-                .color-item__description
-                    h2.color-item__title Dark Shade 75%
-                    span.color-item__text #1F2041
-            .color-item
-                .color-item__square
-                .color-item__description
-                    h2.color-item__title Dark Shade 50%
-                    span.color-item__text #1F2041
-            .color-item
-                .color-item__square
-                .color-item__description
-                    h2.color-item__title Dark Shade 25%
-                    span.color-item__text #1F2041
-            .color-item
-                .color-item__square
-                .color-item__description
-                    h2.color-item__title Dark Shade 5%
-                    span.color-item__text #1F2041
-            .color-item
-                .color-item__square
-                .color-item__description
-                    h2.color-item__title Purple
-                    span.color-item__text #BC9CFF
-            .color-item
-                .color-item__square
-                .color-item__description
-                    h2.color-item__title Green
-                    span.color-item__text #6FCF97
+            +colors(data.colors)
 
         .colors-and-types__fonts
-            .font-item
-                .font-item__tag
-                    h1.font-item__title H1
-                h1.font-item__description This one is the sub-section or widget title
-            .font-item
-                .font-item__tag
-                    h2.font-item__title H2
-                h2.font-item__description Next one is the item title inside widgets
-            .font-item
-                .font-item__tag
-                    h3.font-item__title H3
-                h3.font-item__description This is a label or cta text
-            .font-item
-                .font-item__tag
-                    span.font-item__title Body
-                span.font-item__description This is the body text which is used for most of the design, like paragraphs, lists, etc.
+            +fonts(data.fonts)
 
 
 block script

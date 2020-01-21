@@ -1,0 +1,20 @@
+.font {
+  display: flex;
+  
+  &__title {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: $c25;
+  }
+
+  &__tag {
+    text-align: right;
+    width: 50px;
+  }
+
+  &__description {
+    padding-left: 30px;
+    width: 100%;
+    max-width: 380px;
+  }
+}

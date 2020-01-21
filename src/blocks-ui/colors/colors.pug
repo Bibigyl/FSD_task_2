@@ -1,0 +1,7 @@
+include ../../blocks-ui/color/color
+
+mixin colors(colors)
+    .colors
+        each color in colors
+            .colors__color
+                +color(color)

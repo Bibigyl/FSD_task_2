@@ -1,0 +1,6 @@
+mixin font({tag, example, text})
+    - example = example || tag;
+    .font
+        .font__tag
+            #{tag}.font__title= example
+        #{tag}.font__description= text
