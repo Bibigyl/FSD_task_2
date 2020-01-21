@@ -1,9 +1,9 @@
 include ../blocks-semantic/header/header
 include ../blocks-semantic/footer/footer
+
 -
-    let options;
-    let items;
     let mainClass;
+    let data;
 
 block vars
     - mainClass = 'body';
@@ -24,57 +24,20 @@ html(lang="ru")
 
         block head
 
-    body(class=mainClass)
+    body
+        div(class=mainClass)
 
-        div(class=mainClass + '__header')
-            -
-                options = {
-                    items: [
-                        {text: 'О нас'},
-                        {text: 'Услуги', hasSubmenu: true},
-                        {text: 'Вакансии'},
-                        {text: 'Новости'},
-                        {text: 'Соглашения', hasSubmenu: true},
-                    ],
-                    loginButton: {
-                        text: 'Войти', isSecondary: true, isSmall: true
-                    },
-                    registerButton: {
-                        text: 'Зарегистрироваться', isSmall: true 
-                    },
-                    isMenuItemSlim: true
-                }
+            div(class=mainClass + '__header')
+                - data = require('../../templates/main-template.json')
+                +header(data.header)
 
-            +header(options)
+            block content
 
-        block content
+            div(class=mainClass + '__footer')
+                - data = require('../../templates/main-template.json') 
+                +footer(data.footer)
 
-        div(class=mainClass + '__footer')
-            -
-                options = {
-                    text: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
-                    items: [
-                        {title: 'Навигация', subitems: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
-                        {title: 'О нас', subitems: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
-                        {title: 'Служба поддержки', subitems: ["Соглашения", "Сообщества", "Связь с нами"]},
-                    ],
-                    subscription: {
-                        title: 'Подписка',
-                        text: 'Получайте специальные предложения и новости сервиса',
-                        textField: {isSubscription: true, placeholder: 'Email'}
-                    },
-                    copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
-                    links: [
-                        {name: 'twitter'},
-                        {name: 'facebook-square'},
-                        {name: 'instagram'}
-                    ]
-                }
-                
-            +footer(options)
-
-        block script
-
+            block script
 
 
 //- добавить keywords, description в страницы?
