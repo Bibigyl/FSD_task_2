@@ -22,7 +22,7 @@ import "../../blocks-semantic/header/header.js";
 
 
 $( document ).ready(function() {
-    let donutNode = document.querySelector('.room-details__diagram');
-    donutDiagram( [520, 260, 260, 0], donutNode);
+    //let donutNode = document.querySelector('.room-details__diagram');
+    //donutDiagram( [520, 260, 260, 0], donutNode);
 });
 

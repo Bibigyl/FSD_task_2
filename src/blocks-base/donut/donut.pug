@@ -1,75 +1,56 @@
-mixin donut({marksNames, dataName})  
-  <div class="donut-wrap js-donut-wrap">
-    <figure>
-      <div class="figure-content">
-        <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut" aria-labelledby="beers-title beers-desc" role="img">
+mixin donut({marks, dataName})
+  .donut.js-donut
+    figure
+      .figure-content
+        svg.donut__figure(width='100%' height='100%' viewbox='0 0 42 42' aria-labelledby='beers-title beers-desc' role='img')
 
-          <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff" role="presentation"></circle>
-          <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" role="presentation"></circle>
+          circle.donut-hole(cx='21' cy='21' r='15.91549430918954' fill='#fff' role='presentation')
 
-          <linearGradient id="excellent" x1="0" y1="0.5" x2="0.5" y2="0" >
-            <stop offset="0%" stop-color="#FFE39C"/>
-            <stop offset="100%" stop-color="#FFBA9C"/>
-          </linearGradient>
+          circle.donut-ring(cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke='#fff' stroke-width='1' role='presentation')
 
-          <linearGradient id="good" x1="0.5" y1="0"  x2="0" y2="0.5">
-            <stop offset="0%" stop-color="#6FCF97" />
-            <stop offset="100%" stop-color="#66D2EA" />
-          </linearGradient>
+          lineargradient#excellent(x1='0' y1='0.5' x2='0.5' y2='0')
+            stop(offset='0%' stop-color='#FFE39C')
+            stop(offset='100%' stop-color='#FFBA9C')
 
-          <linearGradient id="satisfactorily" x1="0" y1="0"  x2="0" y2="0.5">
-            <stop offset="0%" stop-color="#BC9CFF" />
-            <stop offset="100%" stop-color="#8BA4F9" />
-          </linearGradient>
+          lineargradient#good(x1='0.5' y1='0' x2='0' y2='0.5')
+            stop(offset='0%' stop-color='#6FCF97')
+            stop(offset='100%' stop-color='#66D2EA')
 
-          <linearGradient id="badly" x1="0" y1="0"  x2="0.5" y2="0">
-            <stop offset="0%" stop-color="#919191" />
-            <stop offset="100%" stop-color="#3D4975" />
-          </linearGradient>
+          lineargradient#satisfactorily(x1='0' y1='0' x2='0' y2='0.5')
+            stop(offset='0%' stop-color='#BC9CFF')
+            stop(offset='100%' stop-color='#8BA4F9')
 
+          lineargradient#badly(x1='0' y1='0' x2='0.5' y2='0')
+            stop(offset='0%' stop-color='#919191')
+            stop(offset='100%' stop-color='#3D4975')
 
-          <circle class="donut-segment js-donut-segment" mark='excellent' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#excellent)" stroke-width="1">
-          </circle>
+          circle.donut-segment.js-donut-segment(data-mark-name='excellent' cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke='url(#excellent)' stroke-width='1' stroke-dasharray)
 
-          <circle class="donut-segment js-donut-segment" mark='good' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#good)" stroke-width="1">
-          </circle>
+          circle.donut-segment.js-donut-segment(data-mark-name='good' cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke='url(#good)' stroke-width='1' stroke-dasharray)
 
-          <circle class="donut-segment js-donut-segment" mark='satisfactorily' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#satisfactorily)" stroke-width="1">
-          </circle>
+          circle.donut-segment.js-donut-segment(data-mark-name='satisfactorily' cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke='url(#satisfactorily)' stroke-width='1' stroke-dasharray)
 
-          <circle class="donut-segment js-donut-segment" mark='badly' cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#badly)" stroke-width="1">
-          </circle>
+          circle.donut-segment.js-donut-segment(data-mark-name='badly' cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke='url(#badly)' stroke-width='1' stroke-dasharray)
 
+          g.chart-text
+            text.chart-number.js-chart-number(x='50%' y='50%' fill='grey')
+            text.chart-label.js-chart-label(x='50%' y='50%' fill='grey') #{dataName}
 
-          <g class="chart-text">
-            <text x="50%" y="50%" fill='grey' class="chart-number js-chart-number"></text>
-            <text x="50%" y="50%" fill='grey' class="chart-label js-chart-label">#{dataName}</text>
-          </g>
-        </svg>
-      </div>
+      figcaption.figure-key
+        ul.figure-key-list(aria-hidden='true' role='presentation')
 
+          li.donut__mark.js-donut__mark(data-value=marks[0]['value'])
+            span.shape-circle.js-shape-circle.shape-circle_excellent(data-mark-name='excellent')
+            |  #{marks[0]['name']}
 
+          li.donut__mark.js-donut__mark(data-value=marks[1]['value'])
+            span.shape-circle.js-shape-circle.shape-circle_good(data-mark-name='good')
+            |  #{marks[1]['name']}
 
-      <figcaption class="figure-key">
-        <ul class="figure-key-list" aria-hidden="true" role="presentation">
-          <li class='donut__mark js-donut__mark'>
-            <span class="shape-circle js-shape-circle shape-circle_excellent" mark='excellent'></span> #{marksNames[0]}
-          </li>
-          <li class='donut__mark js-donut__mark'>
-            <span class="shape-circle js-shape-circle shape-circle_good" mark='good'></span> #{marksNames[1]}
-          </li>
-          <li class='donut__mark js-donut__mark'>
-            <span class="shape-circle js-shape-circle shape-circle_satisfactorily" mark='satisfactorily'></span> #{marksNames[2]}
-          </li>
-          <li class='donut__mark js-donut__mark'>
-            <span class="shape-circle js-shape-circle shape-circle_badly" mark='badly'></span> #{marksNames[3]}
-          </li>
-        </ul>
-      </figcaption>
-    </figure>
-  </div>
+          li.donut__mark.js-donut__mark(data-value=marks[2]['value'])
+            span.shape-circle.js-shape-circle.shape-circle_satisfactorily(data-mark-name='satisfactorily')
+            |  #{marks[2]['name']}
 
-
-//- код скопирован с сайта, немного изменен. нужно его переводить в pug?
-//- тот же вопрос про scss
-//- js-названиеКласса
+          li.donut__mark.js-donut__mark(data-value=marks[3]['value'])
+            span.shape-circle.js-shape-circle.shape-circle_badly(data-mark-name='badly')
+            |  #{marks[3]['name']}
