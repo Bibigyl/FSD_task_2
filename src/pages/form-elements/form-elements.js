@@ -1,6 +1,7 @@
 //--------------- import scss -----------------------------
 
 import '../../scss/main.scss';
+import '../../scss/ui.scss';
 import './form-elements.scss';
 
 //--------------- import common js -----------------------------

@@ -1,0 +1,7 @@
+include ../../blocks-base/checkbox-button/checkbox-button
+
+mixin checkbox-buttons(buttons)
+    .checkbox-buttons
+        each button in buttons
+            .checkbox-buttons__checkbox-button
+                +checkbox-button(button)

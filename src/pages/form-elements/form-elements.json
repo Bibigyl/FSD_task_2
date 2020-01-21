@@ -1,0 +1,135 @@
+{
+    "fields": {
+        "textFieldDefault": {
+            "title": {
+                "title": "Text field",
+                "explanation": "Default"
+            },
+            "content": {
+                "type": "email", "placeholder": "Email"
+            }
+        },
+        "textFieldHover": {
+            "title": {
+                "title": "Text field",
+                "explanation": "Hover / Focus"
+            },
+            "content": {
+                "value": "This is pretty awesome"
+            }
+        },
+        "dropdown": {
+            "title": {
+                "title": "Dropdown",
+                "explanation": "Default"
+            },
+            "content": {
+                "content": {
+                    "text": "Сколько гостей",
+                    "items": [
+                        {"text": "взрослые"}, 
+                        {"text": "дети"}, 
+                        {"text": "младенцы"}
+                    ],
+                    "buttons": ["Очистить", "Применить"]
+                }
+            }
+        },
+        "textFieldMasked": {
+            "title": {
+                "title": "Masked text field",
+                "explanation": "Default"
+            },
+            "content": {
+                "maskParameters": {
+                    "type": "date",
+                    "delimiter": ".",
+                    "pattern": ["d", "m", "Y"]
+                },
+                "placeholder": "ДД.ММ.ГГГГ"
+            }
+        },
+        "dateDropdown": {
+            "firstDate": {
+                "title": "Date dropdown"
+            },
+            "lastDate": {
+                "title": "Date dropdown",
+                "date": "19.08.2019"
+            },
+            "placeholder": "ДД.ММ.ГГГГ"
+        },
+        "filterDateDropdown": {
+            "title": "Filter date dropdown",
+            "firstDate": "19.08.2019",
+            "lastDate": "23.08.2019",
+            "buttons": ["Очистить", "Применить"],
+            "language": "ru"   
+        },
+        "subscription": {
+            "title": {
+                "title": "Subscription text field"              
+            },
+            "content": {
+                "isSubscription": true, 
+                "type": "email", 
+                "placeholder": "Email"                
+            }
+        }
+    },
+
+    "switches": {
+        "checkboxes": {
+            "title": {
+                "title": "Checkbox Buttons",
+                "isMarginBig": true
+            },
+            "content": [
+                {"text": "Можно курить"},
+                {"text": "Можно с питомцами", "isChecked": true},
+                {"text": "Можно пригласить гостей (до 10 человек)", "isChecked": true}
+            ]
+        },
+        "radios": {
+            "content": {
+                "title": "Radio buttons",
+                "name": "gender",
+                "items": [
+                    {"text": "Мужчина", "isChecked": true},
+                    {"text": "Женщина"}
+                ]
+            }
+        },
+        "toggles": {
+            "title": {
+                "title": "Toggle",
+                "isMarginBig": true
+            },
+            "content": [
+                {"text": "Получать спецпредложения", "isChecked": true},
+                {"text": "Получать спецпредложения", "isChecked": false}
+            ]
+        },
+        "likes": {
+            "title": {
+                "title": "Like button",
+                "isMarginBig": true
+            },
+            "content": [
+                {"number": 2},
+                {"number": 12, "isChecked": true}
+            ]
+        },
+        "rates": {
+            "title": {
+                "title": "Rate button",
+                "isMarginBig": true
+            },
+            "content": [
+                {"rate": 4, "isClickable": true},
+                {"rate": 5, "isClickable": true}
+            ]
+        }
+    }
+
+}

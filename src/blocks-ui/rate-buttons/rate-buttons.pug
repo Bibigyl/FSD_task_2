@@ -1,0 +1,7 @@
+include ../../blocks-base/rate-button/rate-button
+
+mixin rate-buttons(rateButtons)
+    .rate-buttons
+        each rateButton in rateButtons
+            .rate-buttons__rate-button
+                +rate-button(rateButton)

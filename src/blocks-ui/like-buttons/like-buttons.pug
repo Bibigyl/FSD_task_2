@@ -1,0 +1,7 @@
+include ../../blocks-base/like-button/like-button
+
+mixin like-buttons(likeButtons)
+    .like-buttons
+        each likeButton in likeButtons
+            .like-buttons__like-button
+                +like-button(likeButton)

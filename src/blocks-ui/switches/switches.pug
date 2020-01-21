@@ -1,0 +1,27 @@
+include ../../blocks-ui/checkbox-buttons/checkbox-buttons
+include ../../blocks-base/twin-radio-buttons/twin-radio-buttons
+include ../../blocks-ui/toggle-buttons/toggle-buttons
+include ../../blocks-ui/like-buttons/like-buttons
+include ../../blocks-ui/rate-buttons/rate-buttons
+include ../../blocks-ui/titled-block/titled-block
+
+mixin switches({checkboxes, radios, toggles, likes, rates})
+    .switches
+        .switches__switch
+            +titled-block(checkboxes.title)
+                +checkbox-buttons(checkboxes.content)
+
+        .switches__switch
+            +twin-radio-buttons(radios.content)
+
+        .switches__switch
+            +titled-block(toggles.title)
+                +toggle-buttons(toggles.content)
+//-
+        .switches__switch
+            +titled-block(likes.title)
+                +like-buttons(likes.content)
+
+        .switches__switch
+            +titled-block(rates.title)
+                +rate-buttons(rates.content)

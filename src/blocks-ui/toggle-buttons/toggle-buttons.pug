@@ -1,0 +1,7 @@
+include ../../blocks-base/toggle/toggle
+
+mixin toggle-buttons(toggleButtons)
+    .toggle-buttons
+        each toggleButton in toggleButtons
+            .toggle-buttons__toggle-button
+                +toggle(toggleButton)

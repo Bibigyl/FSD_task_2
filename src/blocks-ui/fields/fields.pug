@@ -1,0 +1,37 @@
+include ../../blocks-ui/titled-block/titled-block
+include ../../blocks-base/text-field/text-field
+include ../../blocks-base/dropdown/dropdown
+include ../../blocks-base/date-dropdown/date-dropdown
+include ../../blocks-base/filter-date-dropdown/filter-date-dropdown
+
+
+
+mixin fields({textFieldDefault, textFieldHover, dropdown, textFieldMasked, dateDropdown, filterDateDropdown, subscription})
+    .fields
+        .fields__field
+            +titled-block(textFieldDefault.title)
+                +text-field(textFieldDefault.content)
+
+        .fields__field
+            +titled-block(textFieldHover.title)
+                +text-field(textFieldHover.content)
+
+        .fields__field
+            +titled-block(dropdown.title)
+                +dropdown(dropdown.content)
+
+        .fields__field
+            +titled-block(textFieldMasked.title)
+                +text-field(textFieldMasked.content)
+
+        .fields__field
+            +date-dropdown(dateDropdown)
+
+        .fields__field
+            +filter-date-dropdown(filterDateDropdown)
+
+        .fields__field
+            +titled-block(subscription.title)
+                +text-field(subscription.content)
+
+

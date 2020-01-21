@@ -1,0 +1,18 @@
+.fields {
+  width: 100%;
+  padding-top: 3px;
+
+  &__field {
+    margin-bottom: 21px;
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
