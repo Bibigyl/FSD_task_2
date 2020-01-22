@@ -24,7 +24,7 @@ $(document).ready(function() {
 
     // Открытый календарь в карточках
     
-    $('.cards__calendar').dateRangePicker({
+    $('.js-cards__calendar').dateRangePicker({
         language: 'ru',
         singleMonth: true,
         showShortcuts: false,
@@ -45,11 +45,12 @@ $(document).ready(function() {
         '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear">Очистить</button><button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply">Применить</button>'
     );
 
-    $('.cards__calendar').data('dateRangePicker').setDateRange('2019/08/19','2019/08/23');
+    $('.js-cards__calendar').data('dateRangePicker').setDateRange('2019/08/19','2019/08/23');
 
-    $('.js-calendar__icon-link_action_clear').click(function(evt) {
+    $('.js-cards__calendar-wrap .js-calendar__icon-link_action_clear').click(function(evt) {
+        console.log("dshgjfkgskj,bmx");
         evt.stopPropagation();
-        $('.cards__calendar').data('dateRangePicker').clear();
+        $('.js-cards__calendar').data('dateRangePicker').clear();
     });
 
 });

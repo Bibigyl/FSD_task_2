@@ -22,6 +22,10 @@
     margin-bottom: 10px;
   }
 
+  &__text {
+    letter-spacing: -0.1px;
+  }
+
   &__main-info {
     width: 100%;
     max-width: 260px;
@@ -42,10 +46,12 @@
     width: 100%;
     max-width: 180px;
     min-width: 100px;
+    letter-spacing: -0.1px;
   }
 
   &__item-title {
     margin-bottom: 18px;
+    letter-spacing: -0.3px;
   }
 
   &__subitem {
@@ -63,17 +69,18 @@
   &__subscription {
     width: 100%;
     max-width: 260px;
-    //margin-left: 20px;
     padding-top: 4px;
     margin-left: 10px;
   }
 
   &__subscription-title {
     margin-bottom: 18px;
+    letter-spacing: -0.3px;
   }
 
   &__subscription-text {
     margin-bottom: 23px;
+    letter-spacing: -0.1px;
   }
 
   &__line {
@@ -96,6 +103,7 @@
 
   &__copyright {
     min-width: 150px;
+    letter-spacing: -0.1px;
   }
 
   &__link {

@@ -1,5 +1,5 @@
 .calendar {
-  
+
   .date-picker-wrapper {
     border: 1px solid $c25;
     box-shadow: 0px 10px 20px $c5;
@@ -12,8 +12,12 @@
       font-weight: bold;
       font-size: rem(19px);
       line-height: 24px;
+      
+      > * {
+        font-size: 18px;
+      }
     }
-  
+
     .month-element {
       display: inline-block;
       vertical-align: middle;
@@ -21,73 +25,75 @@
       font-weight: 700;
       font-family: 'Quicksand', 'OpenSans', sans-serif;
     }
-  
+
     .month-wrapper {
       table {
+
         .td-hovering,
         .td-checked {
           background-color: #eee6ff;
-  
+
           &:hover {
             background-color: transparent;
-  
+
             &:after,
             &:before {
               width: 0;
             }
           }
-  
+
           &.td-first-date-selected,
           &.td-last-date-selected {
             background-color: transparent;
-  
+
             &:before,
             &:after {
               width: 0;
             }
           }
-  
+
           &:before,
           &:after {
             background-color: rgba($primary, .25);
           }
         }
-  
+
         td:last-child:after,
         td:first-child:before {
           width: 0;
         }
 
         div.day {
+
           &.lastMonth,
           &.nextMonth {
             color: $c25;
           }
         }
-  
+
         .week-name {
           font-family: 'Montserrat';
           color: $primary;
         }
       }
     }
-  
+
     .month-wrapper table .day {
       &.real-today {
         background: $gradientSecondary;
       }
-  
+
       &:hover {
         background: linear-gradient(180deg, lighten($primary, 5%) 0%, lighten(#8BA4F9, 5%) 100%);
       }
     }
-  
+
     .first-date-selected,
     .last-date-selected {
       background: linear-gradient(180deg, $primary 0%, #8BA4F9 100%) !important;
       color: white !important;
     }
-  
+
     .calendar__arrow i {
       cursor: pointer;
       background: $gradientPrimary;
@@ -95,25 +101,27 @@
       -webkit-text-fill-color: transparent;
     }
   }
-  
-  @media (max-width: 410px) {
-  
-    .date-picker-wrapper {
-      width: 280px;
-    }
-    .date-picker-wrapper .month-wrapper table td {
-      height: 30px;
-      width: 30px;
-    }
-  
-    .date-picker-wrapper .month-wrapper table .day {
-      height: 30px;
-      width: 30px;
-      line-height: 30px;
-    }
-  
-    .date-picker-wrapper .month-wrapper table {
-      width: 240px;
-    }
+
+}
+
+@media (max-width: 410px) {
+
+  .date-picker-wrapper {
+    width: 280px;
+  }
+
+  .date-picker-wrapper .month-wrapper table td {
+    height: 30px;
+    width: 30px;
+  }
+
+  .date-picker-wrapper .month-wrapper table .day {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+  }
+
+  .date-picker-wrapper .month-wrapper table {
+    width: 240px;
   }
 }
