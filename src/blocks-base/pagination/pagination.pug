@@ -1,16 +1,10 @@
-mixin pagination({items, max, page, text})
+mixin pagination({itemsOnPage, itemsNumber, page, text})
 	-
-		let fullText = ''
-		let num = items*(page - 1) + 1;
-		fullText = fullText + num + ' - ';
-		num = num + items - 1;
-		fullText = fullText + num + ' ' + text[0] + ' ';
-		num = max < 100 ? num : '100+';
-		fullText = fullText + num + ' ' + text[1];
+		page = page || 1;
+		let first = itemsOnPage*(page - 1) + 1;
+		let last = first + itemsOnPage - 1;
+		let whole = itemsNumber < 100 ? itemsNumber : '100+';
 
-	.pagination
+	.pagination(data-items-on-page=itemsOnPage data-items-number=itemsNumber data-page=page)
 		.pagination__pages.js-pagination__pages
-		i.pagination__arrow.material-icons arrow_forward
-		.pagination__text #{fullText}
-
-//- код с интернета, js без изменений
+		.pagination__text #{first} - #{last} #{text[0]} #{whole} #{text[1]}

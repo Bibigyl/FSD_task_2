@@ -5,53 +5,14 @@
     box-sizing: border-box;
   }
 
-  &__pages {
-    position: relative;
-    display: inline-block;
-
-    a {
-      text-decoration: none;
-      font-size: rem(12px);
-      margin: 0 17px;
-      color: $c50;
-
-      &:first-child {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        background: $gradientPrimary;
-        border-radius: 100px;
-        line-height: 40px;
-        text-align: center;
-        color: #fff;
-        margin: 0;
-
-        &:hover {
-          opacity: 0.5;
-          transition: .2s;
-        }
-      }
-
-      &:last-child {
-        margin-right: 11px;
-      }
-    }
-    
-    span {
-      margin: 0 16px;
-      cursor: pointer;
-    }
-  }
-
   &__arrow {
-    display: inline-block;
     width: 40px;
     height: 40px;
+    //display: block;
     background: $gradientSecondary;
     border-radius: 100px;
     color: #fff;
     text-align: center;
-    vertical-align: middle;
     cursor: pointer;
     line-height: 40px;
 
@@ -64,12 +25,48 @@
   &__text {
     margin: 7px 0 0 7px;
   }
-}
 
-@media (max-width: 400px) {
-  .pagination {
-    a, span {
-      margin: 0 10px;      
+
+  // libs styles
+  .simple-pagination {
+
+    ul {
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+      > * {
+        margin: 0 7px;
+        padding: 0 10px;
+        text-decoration: none;
+        font-size: rem(12px);
+        color: $c50;
+      }
+    }
+
+    .active {
+      > * {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: $gradientPrimary;
+        border-radius: 100px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        margin: 0;      
+        padding: 0;  
+      }
+    }
+
+    .next {
+      margin: 0;
+      padding: 0;
+    }
+
+    .prev {
+      display: none;
     }
   }
 }

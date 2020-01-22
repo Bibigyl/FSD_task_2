@@ -8,6 +8,10 @@ import './form-elements.scss';
 
 import "../../js/main.js";
 
+//--------------- import libs js -----------------------------
+
+import "simple-pagination.js/jquery.simplePagination.js";
+
 //------------------ import blocks scripts -----------------------------
 
 import "../../blocks-base/text-field/text-field.js";
