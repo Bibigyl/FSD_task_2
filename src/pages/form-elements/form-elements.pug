@@ -43,6 +43,7 @@ block content
 
     include ../../blocks-ui/fields/fields
     include ../../blocks-ui/switches/switches
+    include ../../blocks-ui/buttons-and-other/buttons-and-other
 
 
 
@@ -85,44 +86,10 @@ block content
             +fields(data.fields)
 
         .form-elements__column-1-2.form-elements__column
-
             +switches(data.switches)
 
         .form-elements__column-1-3.form-elements__column
-
-            .slider-range-wrap
-                -
-                    options = {
-                        title: 'Range slider',
-                        min: 200,
-                        max: 15500,
-                        step: 200,
-                        values: [5000, 10000]
-                    }
-                +slider-range(options)
-
-            h3.buttons-wrap__title Buttons
-            .colored-buttons-wrap.buttons-wrap
-                .button-wrap
-                    +button()
-                .button-wrap.button-wrap-on-hover
-                    +button()
-            .not-colored-buttons-wrap.buttons-wrap
-                .button-wrap
-                    +button({isSecondary: true})
-                .button-wrap.button-wrap-on-hover
-                    +button({isSecondary: true})
-            .textual-buttons-wrap.buttons-wrap
-                .button-wrap
-                    +icon-link({isPrimary: true})
-                .button-wrap
-                    +icon-link()
-            .big-buttons-wrap.buttons-wrap
-                +button({isExtended: true, text: 'Перейти к оплате'})
-
-            .pagination-wrap
-                h3.pagination-wrap__title Pagination
-                +pagination({itemsOnPage: 7, itemsNumber: 110, page: 7, text: ['из', 'вариантов аренды']})
+            +buttons-and-other(data.buttonsAndOther)
 
 
     .form-elements__container.form-elements__container-2

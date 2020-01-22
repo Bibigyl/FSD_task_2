@@ -1,0 +1,17 @@
+include ../../blocks-ui/titled-block/titled-block
+include ../../blocks-base/slider-range/slider-range
+include ../../blocks-ui/buttons/buttons
+include ../../blocks-base/pagination/pagination
+
+mixin buttons-and-other({slider, buttons, pagination})
+    .buttons-and-other
+        .buttons-and-other__slider
+            +slider-range(slider)
+
+        .buttons-and-other__buttons
+            +titled-block(buttons.title)
+                +buttons(buttons.content)
+
+        .buttons-and-other__pagination
+            +titled-block(pagination.title)
+                +pagination(pagination.content)

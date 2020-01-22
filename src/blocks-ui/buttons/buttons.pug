@@ -1,0 +1,26 @@
+include ../../blocks-base/button/button
+include ../../blocks-base/icon-link/icon-link
+    
+mixin buttons({primary, secondary, iconLinkSecondary, iconLinkPrimary, extended})
+    .buttons
+        .buttons__type.buttons__type_primary
+            .buttons__button
+                +button(primary)
+            .buttons__button.buttons__button_on-hover
+                +button(primary)
+
+        .buttons__type.buttons__type_secondary
+            .buttons__button
+                +button(secondary)
+            .buttons__button.buttons__button_on-hover
+                +button(secondary)
+
+        .buttons__type.buttons__type_icon-link
+            .buttons__button
+                +icon-link(iconLinkPrimary)
+            .buttons__button
+                +icon-link(iconLinkSecondary)
+
+        .buttons__type.buttons__type_extended
+            .buttons__button
+                +button(extended)

@@ -1,7 +1,6 @@
 @import './_vars';
 @import './_mixins';
 
-/*------------------------------ Import styles ----------------------------------------*/
 
 /*------- Blocks styles -------------*/
 
@@ -19,4 +18,5 @@
 @import '../blocks-ui/rate-buttons/rate-buttons.scss';
 @import '../blocks-ui/switches/switches.scss';
 
-/*--------- Components styles -------------*/
+@import '../blocks-ui/buttons-and-other/buttons-and-other.scss';
+@import '../blocks-ui/buttons/buttons.scss';

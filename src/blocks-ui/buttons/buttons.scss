@@ -1,0 +1,42 @@
+.buttons {
+    width: 100%;
+
+    &__type {
+        display: flex;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &_secondary {
+            margin-bottom: 26px;
+        }
+
+        &_extended {
+            width: 100%;
+
+            > * {
+                width: 100%;
+            }
+        }
+
+        &_icon-link {
+            margin-bottom: 26px;
+        }
+    }
+
+    &__button {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &_on-hover {
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

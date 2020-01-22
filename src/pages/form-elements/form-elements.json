@@ -130,6 +130,43 @@
                 {"rate": 5, "isClickable": true}
             ]
         }
-    }
+    },
 
+    "buttonsAndOther": {
+        "slider": {
+            "title": "Range slider",
+            "min": 200,
+            "max": 15500,
+            "step": 200,
+            "values": [5000, 10000]
+        },
+        "buttons": {
+            "title": {
+                "title": "Buttons",
+                "isMarginBig": true
+            },
+            "content": {
+                "primary": {},
+                "secondary": {"isSecondary": true}, 
+                "iconLinkPrimary": {}, 
+                "iconLinkSecondary": {"isPrimary": true},
+                "extended": {
+                    "isExtended": true, 
+                    "text": "Перейти к оплате"
+                }                
+            }
+        },
+        "pagination": {
+            "title": {
+                "title": "Pagination",
+                "isMarginBig": true
+            },
+            "content": {
+                "itemsOnPage": 12, 
+                "itemsNumber": 170,
+                "page": 1,
+                "text": ["из", "вариантов аренды"]
+            }
+        }
+    }
 }
