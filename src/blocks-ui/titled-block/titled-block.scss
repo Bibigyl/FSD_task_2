@@ -14,7 +14,11 @@
 
     &_with-big-margin {
       margin-bottom: 16px;
-    }    
+    }
+
+    &_single {
+      width: 100%;
+    }
   }
 
   &__explanation {

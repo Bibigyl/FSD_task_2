@@ -1,0 +1,7 @@
+.like-buttons {
+    display: flex;
+
+    &__like-button:first-child {
+        margin-right: 10px;
+    }
+}

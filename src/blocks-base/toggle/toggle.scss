@@ -9,7 +9,6 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
-    margin: 10px 0 0 20px;
 
     &:checked+.toggle__text {
     &:before {
@@ -18,22 +17,27 @@
 
     &:after {
       left: 24px;
-      background: linear-gradient(180deg, $primary 0%, #8BA4F9 100%);
+      background: $gradientPrimary;
       transition: .2s;      
     }
     }
+  }
+
+  &__label {
+    height: 20px;
   }
 
   &__text {
     position: relative;
     padding: 0 0 0 50px;
     cursor: pointer;
+    line-height: 20px;
   
     &:before {
       box-sizing: border-box;
       content: '';
       position: absolute;
-      top: 3px;
+      top: 0;
       left: 0;
       width: 40px;
       height: 20px;
@@ -47,7 +51,7 @@
       box-sizing: border-box;
       content: '';
       position: absolute;
-      top: 7px;
+      top: 4px;
       left: 5px;
       width: 12px;
       height: 12px;
@@ -56,29 +60,4 @@
       transition: .2s;
     }
   }
-}
-
-
-
-
-
-
-
-
-.toggle {
-
-}
-
-.toggle__label{
-  input:checked+.toggle__text:before {
-
-  }
-
-  input:checked+.toggle__text:after {
-
-  }
-}
-
-.toggle__text {
-
 }

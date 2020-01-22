@@ -1,8 +1,10 @@
 mixin titled-block({title, isMarginBig, explanation})
 
     - margin = isMarginBig ? 'titled-block__title_with-big-margin' : false;
+    - singleTitle = !explanation ? 'titled-block__title_single' : false;
+
     .titled-block
-        h3.titled-block__title(class=margin)= title
+        h3.titled-block__title(class=[margin, singleTitle])= title
         if explanation
             span.titled-block__explanation= explanation
         
