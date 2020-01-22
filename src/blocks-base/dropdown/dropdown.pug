@@ -2,19 +2,20 @@ include ../icon-link/icon-link
 include ../title/title
 include ../counted-item/counted-item
 
-mixin dropdown({title, content = {text, items, buttons}, isOpen, isSmall})
+mixin dropdown({title, content = {initialText, text, items, buttons}, isOpen, isSmall})
 	-	
 		let open = isOpen ? 'dropdown_open' : false;
 		let small = isSmall ? 'dropdown_small' : false;
-		let isClearVisible = false;
+		let isClearVisible = 'dropdown__action_hidden';
+		let text = content.text || content.initialText;
 
-	.dropdown.js-dropdown(class=[open, small] data-initial-text=content.text)
+	.dropdown.js-dropdown(class=[open, small] data-initial-text=content.initialText)
 		if title
 			.dropdown__title
 				+title(title)
 
 		.dropdown__field
-			span.dropdown__text.js-dropdown__text= content.text
+			span.dropdown__text.js-dropdown__text= text
 			i.dropdown__arrow.js-dropdown__arrow.material-icons expand_more
 
 		.dropdown__popup.js-dropdown__popup
@@ -23,9 +24,9 @@ mixin dropdown({title, content = {text, items, buttons}, isOpen, isSmall})
 
 				each item in content.items
 					li.dropdown__item
-
+						- item.value = item.value || 0;
 						- item.gettingDataClass = 'js-dropdown__item-data';
-						- isClearVisible = item.value != 0 ? 'dropdown__action_hidden' : isClearVisible;
+						- isClearVisible = item.value > 0 ? false : isClearVisible;
 
 						+counted-item(item)
 			

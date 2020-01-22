@@ -1,0 +1,23 @@
+include ../../blocks-ui/titled-block/titled-block
+include ../../blocks-base/expandable-checkbox-list/expandable-checkbox-list
+include ../../blocks-ui/checkbox-buttons/checkbox-buttons
+include ../../blocks-base/bullet-list/bullet-list
+
+mixin dropdowns({small, smallOpen, wide, wideFilled})
+
+    .dropdowns
+        .dropdowns__column
+            .dropdowns__dropdown.dropdowns__dropdown_default
+                +titled-block(small.title)
+                    +dropdown(small.content)
+            .dropdowns__dropdown
+                +titled-block(smallOpen.title)
+                    +dropdown(smallOpen.content)
+        .dropdowns__column
+            .dropdowns__dropdown
+                +titled-block(wide.title)
+                    +dropdown(wide.content)
+        .dropdowns__column
+            .dropdowns__dropdown
+                +titled-block(wideFilled.title)
+                    +dropdown(wideFilled.content)

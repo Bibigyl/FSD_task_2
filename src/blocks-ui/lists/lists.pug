@@ -1,0 +1,12 @@
+include ../../blocks-base/expandable-checkbox-list/expandable-checkbox-list
+include ../../blocks-ui/checkbox-buttons/checkbox-buttons
+include ../../blocks-base/bullet-list/bullet-list
+
+mixin lists({expandableCheckboxList, richCheckboxButtons, bulletList})
+
+    - let chbListOpen = Object.assign({}, expandableCheckboxList, {isOpen: true})
+
+    .lists
+        .lists__column
+        .lists__column
+        .lists__column

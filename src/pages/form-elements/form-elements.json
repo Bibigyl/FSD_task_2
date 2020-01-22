@@ -168,5 +168,83 @@
                 "text": ["из", "вариантов аренды"]
             }
         }
+    },
+
+    "dropdowns": {
+        "small": {
+            "title": {
+                "title": "Dropdown",
+                "explanation": "Default"
+            },
+            "content": {
+                "content": {
+                    "initialText": "Удобства",
+                    "text": "2 спальни, 2 кровати...",
+                    "items": [
+                        {"text": "спальни", "value": 2}, 
+                        {"text": "кровати", "value": 2}, 
+                        {"text": "ванные комнаты"}
+                    ],
+                    "buttons": false
+                },
+                "isSmall": true
+            }
+        }, 
+        "smallOpen": {
+            "title": {
+                "title": "Dropdown",
+                "explanation": "Expanded"
+            },
+            "content": {
+                "content": {
+                    "initialText": "Удобства",
+                    "text": "2 спальни, 2 кровати...",
+                    "items": [
+                        {"text": "спальни", "value": 2}, 
+                        {"text": "кровати", "value": 2}, 
+                        {"text": "ванные комнаты"}
+                    ],
+                    "buttons": false
+                },
+                "isOpen": true,
+                "isSmall": true
+            }
+        }, 
+        "wide": {
+            "title": {
+                "title": "Dropdown"
+            },
+            "content": {
+                "content": {
+                    "initialText": "Сколько гостей",
+                    "text": "Сколько гостей",
+                    "items": [
+                        {"text": "взрослые"}, 
+                        {"text": "дети"}, 
+                        {"text": "младенцы"}
+                    ],
+                    "buttons": ["Очистить", "Применить"]
+                },
+                "isOpen": true
+            }
+        }, 
+        "wideFilled": {
+            "title": {
+                "title": "Dropdown"
+            },
+            "content": {
+                "content": {
+                    "initialText": "Сколько гостей",
+                    "text": "3 гостя",
+                    "items": [
+                        {"text": "взрослые", "value": 2}, 
+                        {"text": "дети", "value": 1}, 
+                        {"text": "младенцы"}
+                    ],
+                    "buttons": ["Очистить", "Применить"]
+                },
+                "isOpen": true
+            }
+        }
     }
 }

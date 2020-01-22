@@ -1,6 +1,6 @@
 mixin counted-item({text, value, gettingDataClass})
     -
-        let attr = value > 0 ? '#{value} #{text}' : '';
+        let attr = value > 0 ? value + ' ' + text : '';
         value = value || 0;
         decDisabled = value < 1 ? 'counted-item__operation_disabled' : false;
         incDisabled = value > 98 ? 'counted-item__operation_disabled' : false;

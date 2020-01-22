@@ -44,6 +44,8 @@ block content
     include ../../blocks-ui/fields/fields
     include ../../blocks-ui/switches/switches
     include ../../blocks-ui/buttons-and-other/buttons-and-other
+    include ../../blocks-ui/dropdowns/dropdowns
+    include ../../blocks-ui/lists/lists
 
 
 
@@ -62,7 +64,11 @@ block content
             },
             furniture: {
                 text: 'Удобства',
-                items: ['спальни', 'кровати', 'ванные комнаты'],
+                items: [
+                    {text: 'спальни'}, 
+                    {text: 'кровати'}, 
+                    {text: 'ванные комнаты'}
+                ],
                 buttons: false
             }
         };
@@ -93,27 +99,7 @@ block content
 
 
     .form-elements__container.form-elements__container-2
-        .form-elements__column-2-1.form-elements__column
-
-            .dropdown-wrap.dropdown-wrap-2
-                h3.dropdown-wrap__title Dropdown
-                .dropdown-wrap__state Default
-                +dropdown({content: dropdownContent.furniture, isSmall: true})
-
-            .dropdown-wrap.dropdown-wrap-3
-                h3.dropdown-wrap__title Dropdown
-                .dropdown-wrap__state Expanded
-                +dropdown({content: dropdownContent.furniture, isOpen: true, isSmall: true})
-
-        .form-elements__column-2-2.form-elements__column
-            .dropdown-wrap.dropdown-wrap-4
-                h3.dropdown-wrap__title Dropdown
-                +dropdown({content: dropdownContent.guests, isOpen: true})
-
-        .form-elements__column-2-3.form-elements__column
-            .dropdown-wrap.dropdown-wrap-5
-                h3.dropdown-wrap__title Dropdown
-                +dropdown({content: dropdownContent.guests, isOpen: true})
+        +dropdowns(data.dropdowns)
 
 
     .form-elements__container.form-elements__container-3
