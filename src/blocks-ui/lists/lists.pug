@@ -1,5 +1,6 @@
 include ../../blocks-base/expandable-checkbox-list/expandable-checkbox-list
 include ../../blocks-ui/checkbox-buttons/checkbox-buttons
+include ../../blocks-ui/titled-block/titled-block
 include ../../blocks-base/bullet-list/bullet-list
 
 mixin lists({expandableCheckboxList, richCheckboxButtons, bulletList})
@@ -8,5 +9,14 @@ mixin lists({expandableCheckboxList, richCheckboxButtons, bulletList})
 
     .lists
         .lists__column
+            .lists__list.lists__list_close
+                +expandable-checkbox-list(expandableCheckboxList)
+            .lists__list
+                +expandable-checkbox-list(chbListOpen)
         .lists__column
+            .lists__list
+                +titled-block(richCheckboxButtons.title)
+                    +checkbox-buttons(richCheckboxButtons.content)
         .lists__column
+            .lists__list
+                +bullet-list(bulletList)

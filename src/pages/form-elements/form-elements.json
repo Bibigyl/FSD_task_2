@@ -246,5 +246,66 @@
                 "isOpen": true
             }
         }
+    },
+
+    "lists": {
+        "expandableCheckboxList": {
+            "title": "Expandable checkbox list",
+            "items": [
+                {"text": "Завтрак"},
+                {"text": "Письменный стол", "isChecked": true},
+                {"text": "Стул для кормления", "isChecked": true},
+                {"text": "Кроватка", "isChecked": true},
+                {"text": "Телевизор"},
+                {"text": "Шампунь"},
+                {"text": "Телевизор"},
+                {"text": "Шампунь"}
+            ]
+        },
+        "richCheckboxButtons": {
+            "title": {
+                "title": "Rich checkbox buttons",
+                "isMarginBig": true
+            }, 
+            "content": [
+                {
+                    "richText": "Широкий коридор",
+                    "text": "Ширина коридоров в номере</br>не менее 91 см."   
+                },
+                {
+                    "richText": "Помощник для инвалидов",
+                    "text": "На 1 этаже вас встретит специалист</br>и проводит до номера."                                        
+                }
+            ]                
+        },
+        "bulletList": {
+            "title": "Bullet list",
+            "items": [
+                "Нельзя с питомцами",
+                "Без вечеринок и мероприятий",
+                "Время прибытия — после 13:00,</br>а выезд до 12:00" 
+            ]
+        }
+    },
+
+    "iconTextList": [
+        {
+            "richText": "Комфорт", 
+            "text": "Шумопоглощающие стены", 
+            "icon": "insert_emoticon"
+        },
+        {
+            "richText": "Удобство", 
+            "text": "Окно в каждой из спален", 
+            "icon": "location_city"
+        }
+    ],
+
+    "review": {
+        "avatar": "form-elements__avatar.png", 
+        "likeButton": {"number": 12, "isChecked": true}, 
+        "name": "Мурад Сарафанов", 
+        "time": "5 дней назад", 
+        "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
     }
 }
