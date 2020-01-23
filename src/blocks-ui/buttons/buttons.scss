@@ -32,11 +32,20 @@
       margin-right: 20px;
     }
 
-    &_on-hover {
+    &_primary-on-hover {
+      pointer-events: none;
       opacity: .5;
+    }
 
-      &:hover>* {
+    &_secondary-on-hover {
+      pointer-events: none;
+
+      .button {
         opacity: 1;
+
+        &:before {
+          opacity: .5;
+        }
       }
     }
   }
