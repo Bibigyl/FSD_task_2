@@ -1,5 +1,6 @@
-@import '../../scss/_vars';
-@import '../../scss/_mixins';
+@import "../../scss/_vars";
+
+@import "../../scss/_mixins";
 
 .colors-and-types {
   padding: 145px 0;
@@ -27,7 +28,9 @@
 }
 
 @media (max-width: 778px) {
+
   .colors-and-types {
+
     &__fonts {
       padding-left: 0;
     }

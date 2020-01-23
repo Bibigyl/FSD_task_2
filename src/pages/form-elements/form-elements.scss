@@ -1,5 +1,6 @@
-@import '../../scss/_vars';
-@import '../../scss/_mixins';
+@import "../../scss/_vars";
+
+@import "../../scss/_mixins";
 
 
 .form-elements {
@@ -22,8 +23,8 @@
     justify-content: space-between;
 
     &_first {
-    max-width: 1238px;
-    margin-bottom: 71px;
+      max-width: 1238px;
+      margin-bottom: 71px;
     }
 
     &_dropdowns {
@@ -38,8 +39,8 @@
     }
 
     &_last {
-    max-width: 1238px;
-    flex-wrap: nowrap;      
+      max-width: 1238px;
+      flex-wrap: nowrap;      
     }
   }
 
@@ -85,7 +86,9 @@
 }
 
 @media (max-width: 575.98px) {
+
   .form-elements {
+
     &__column {
       min-width: 280px;
       margin-right: 0;

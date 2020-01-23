@@ -1,4 +1,5 @@
 .landing-page {
+
   &__front {
     width: 100%;
     background: center, center no-repeat;
@@ -30,7 +31,9 @@
 }
 
 @media(max-width: 600px) {
+
   .landing-page {
+
     &__container {
       height: 620px;
     }

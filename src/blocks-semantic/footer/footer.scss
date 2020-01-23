@@ -23,7 +23,7 @@
   }
 
   &__text {
-    letter-spacing: -0.1px;
+    letter-spacing: -.1px;
   }
 
   &__main-info {
@@ -46,12 +46,12 @@
     width: 100%;
     max-width: 180px;
     min-width: 100px;
-    letter-spacing: -0.1px;
+    letter-spacing: -.1px;
   }
 
   &__item-title {
     margin-bottom: 18px;
-    letter-spacing: -0.1px;
+    letter-spacing: -.1px;
   }
 
   &__subitem {
@@ -75,12 +75,12 @@
 
   &__subscription-title {
     margin-bottom: 18px;
-    letter-spacing: -0.3px;
+    letter-spacing: -.3px;
   }
 
   &__subscription-text {
     margin-bottom: 23px;
-    letter-spacing: -0.1px;
+    letter-spacing: -.1px;
   }
 
   &__line {
@@ -103,7 +103,7 @@
 
   &__copyright {
     min-width: 150px;
-    letter-spacing: -0.1px;
+    letter-spacing: -.1px;
   }
 
   &__link {
@@ -120,7 +120,9 @@
 }
 
 @media(max-width: 980px) {
+
   .footer {
+
     &__menu {
       order: 1;
       margin-left: auto;
@@ -145,7 +147,9 @@
 }
 
 @media(max-width: 600px) {
+
   .footer {
+
     &__logo,
     &__text {
       text-align: center;
@@ -193,7 +197,9 @@
 }
 
 @media(max-width: 420px) {
+
   .footer {
+
     &__menu {
       display: none;
     }

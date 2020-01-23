@@ -42,7 +42,9 @@
 }
 
 @media (max-width: 410px) {
+
   .filter-date-dropdown {
+
     &__calendar-container {
       z-index: 100;
     }

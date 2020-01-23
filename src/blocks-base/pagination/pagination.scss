@@ -17,7 +17,7 @@
     line-height: 40px;
 
     &:hover {
-      opacity: 0.5;
+      opacity: .5;
       transition: .2s;
     }   
   }
@@ -38,6 +38,7 @@
     }
 
     li {
+
       > * {
         padding: 0 10px;
         text-decoration: none;
@@ -51,6 +52,7 @@
     }
 
     .active {
+
       > * {
         display: block;
         width: 40px;

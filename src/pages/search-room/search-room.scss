@@ -1,6 +1,7 @@
 @import "../../scss/_vars.scss";
 
 .search-room {
+
   &__container {
     width: 100%;
     max-width: 1200px;
@@ -80,12 +81,14 @@
   }
 
   &__footer {
-    border-top: 1px solid rgba(31, 32, 65, 0.1);
+    border-top: 1px solid rgba(31, 32, 65, .1);
   }
 }
 
 @media (max-width: 1155px) {
+
   .search-room {
+
     &__room-card {
       margin-right: 10px;
       margin-left: 10px;
@@ -98,7 +101,9 @@
 }
 
 @media (max-width: 875px) {
+
   .search-room {
+
     &__container {
       flex-wrap: wrap;
     }
@@ -130,8 +135,11 @@
 }
 
 @media (max-width: 450px) {
+
   .search-room {
+
     &__parameters {
+
       >* {
         margin-right: 0;
         margin-left: 0;

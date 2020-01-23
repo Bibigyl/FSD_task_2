@@ -31,7 +31,7 @@
 
     &:before {
       box-sizing: border-box;
-      content: '';
+      content: "";
       position: absolute;
       left: -29px;
       top: 0px;
@@ -45,9 +45,9 @@
 
     &:after {
       box-sizing: border-box;
-      content: '';
+      content: "";
       position: absolute;
-      transition: all 0.15s ease;
+      transition: all .15s ease;
       left: -23px;
       top: 6px;
       width: 8px;
@@ -78,6 +78,7 @@
   }
 
   &_rich {
+
     .checkbox-button__text {
       font-size: rem(12px);
       line-height: 13px;

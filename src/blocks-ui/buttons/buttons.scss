@@ -27,12 +27,13 @@
   }
 
   &__button {
+
     &:not(:last-child) {
       margin-right: 20px;
     }
 
     &_on-hover {
-      opacity: 0.5;
+      opacity: .5;
 
       &:hover>* {
         opacity: 1;

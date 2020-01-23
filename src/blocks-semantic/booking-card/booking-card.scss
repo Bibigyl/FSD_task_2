@@ -2,7 +2,7 @@
   padding: 40px 30px 30px 30px;
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, .2);
   min-width: 260px;
   max-width: 380px;
 
@@ -17,7 +17,7 @@
     font-size: rem(25px);
     display: inline;
     margin-right: 4px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-weight: 700;
     line-height: 24px;
     color: $c100;
@@ -96,7 +96,7 @@
     font-size: rem(20px);
 
     &:after {
-      content: '';
+      content: "";
       display: block;
       overflow: hidden;
       height: rem(18px);
@@ -110,7 +110,7 @@
   }
 
   &__total-sum {
-    font-family: 'Quicksand';
+    font-family: "Quicksand";
     float: right;
     margin-left: 2px;
     font-size: 19px;
@@ -118,6 +118,7 @@
 }
 
 @media (max-width: 575.98px) {
+
   .booking-card {
     padding: 25px 20px 20px 20px;
   }

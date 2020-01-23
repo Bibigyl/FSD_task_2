@@ -21,12 +21,12 @@
     color: $c75;
     position: relative;
     transition: .2s;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 400;
     width: 100%;
 
     &::placeholder {
-      font-family: 'Montserrat';
+      font-family: "Montserrat";
       font-weight: 400;
       color: $c25;
     }

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "lint": "stylelint src/**/*.scss --fix"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "gh-pages": "^2.1.1",
     "stylelint": "^12.0.0",
     "stylelint-config-airbnb": "0.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.13.0",
     "stylelint-webpack-plugin": "^1.1.1"
   },
   "dependencies": {
@@ -44,6 +47,7 @@
     "sass-loader": "^7.3.1",
     "simple-pagination.js": "^1.6.0",
     "style-loader": "^0.23.1",
+    "stylelint-scss": "^3.13.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"

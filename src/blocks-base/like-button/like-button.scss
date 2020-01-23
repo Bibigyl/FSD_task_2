@@ -20,7 +20,7 @@
       transition: .2s;
 
       .like-button__icon:after {
-        content: 'favorite';
+        content: "favorite";
         color: $primary;
       }
     }
@@ -45,7 +45,7 @@
   &__icon:after {
     transition: .2s;
     position: absolute;
-    content: 'favorite_border';
+    content: "favorite_border";
     color: $c25;
     top: 4px;
     left: 4px;

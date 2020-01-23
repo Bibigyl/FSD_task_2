@@ -50,6 +50,7 @@
   }
 
   &__icon-text-list {
+
     &-wrap {
       width: 100%;
       max-width: 300px;
@@ -62,6 +63,7 @@
   }
 
   &__diagram {
+
     &-wrap {
       margin-right: 44px;
       margin-bottom: 20px;
@@ -73,6 +75,7 @@
   }
 
   &__reviews {
+
     &-wrap {
       margin-bottom: 10px;
     }
@@ -92,6 +95,7 @@
   }
 
   &__rules {
+
     &-wrap {
       width: 100%;
       max-width: 260px;
@@ -104,6 +108,7 @@
   }
 
   &__cancellation {
+
     &-wrap {
       width: 100%;
       max-width: 349px;
@@ -123,12 +128,13 @@
   }
 
   &__footer {
-    border-top: 1px solid rgba(31, 32, 65, 0.1);
+    border-top: 1px solid rgba(31, 32, 65, .1);
   }
 
 }
 
 @media(max-width: 800px) {
+
   .room-details {
 
     &__photos {
@@ -152,6 +158,7 @@
 }
 
 @media(max-width: 670px) {
+
   .room-details {
 
     &__rules-wrap {
@@ -174,6 +181,7 @@
 }
 
 @media(max-width: 500px) {
+
   .room-details {
 
     &__photos {
@@ -192,6 +200,7 @@
 }
 
 @media(max-width: 440px) {
+
   .room-details {
 
     &__reviews-title {

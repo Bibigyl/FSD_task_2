@@ -58,7 +58,9 @@
 }
 
 @media (max-width: 410px) {
+
   .date-dropdown {
+
     &__calendar-container {
       z-index: 100;
     }
@@ -71,7 +73,9 @@
 }
 
 @media (max-width: 340px) {
+
   .date-dropdown {
+
     &__date_order_first {
       margin-right: 5px;
     }
