@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	
 	$(".js-like-button__input").on("change", function() {
-		let $btn = $(this).closest('.like-button');
+		let $btn = $(this).closest('.js-like-button');
 		let $btnNum = $btn.find('.js-like-button__number')
 		let num = +$btnNum.text();
 

@@ -2,11 +2,9 @@ mixin like-button({number, isChecked} = {})
 	-let likeButtonClass = isChecked ? 'like-button_checked' : '';
 	-number = number || 0;
 	
-	.like-button(class=likeButtonClass)
+	.like-button.js-like-button(class=likeButtonClass)
 		label.like-button__label
 			input.like-button__input.js-like-button__input(type="checkbox" checked=isChecked)
 			.like-button__text
 				span.like-button__number.js-like-button__number= number
 				.like-button__icon.material-icons
-
-//- js-названиеКласса
