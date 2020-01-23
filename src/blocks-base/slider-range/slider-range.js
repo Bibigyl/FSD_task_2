@@ -1,5 +1,3 @@
-import "jquery-ui/ui/widgets/slider.js";
-
 $( document ).ready(function() {
 
   $('.slider-range__slider').each(function() {

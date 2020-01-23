@@ -10,7 +10,14 @@ import "../../js/main.js";
 
 //--------------- import libs js -----------------------------
 
+import "jquery-date-range-picker/dist/jquery.daterangepicker.js";
+
+import moment from 'moment'
+import 'moment/locale/ru' 
+moment.locale('ru');
+
 import "simple-pagination.js/jquery.simplePagination.js";
+import "jquery-ui/ui/widgets/slider.js";
 
 //------------------ import blocks scripts -----------------------------
 

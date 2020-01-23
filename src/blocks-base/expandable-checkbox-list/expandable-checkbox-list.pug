@@ -4,15 +4,13 @@ mixin expandable-checkbox-list({title, items, isOpen})
 
 	-let open = isOpen ? 'expandable-checkbox-list_open' : '';
 
-	.expandable-checkbox-list(class=open)
+	.expandable-checkbox-list.js-expandable-checkbox-list(class=open)
 		.expandable-checkbox-list__title
 			+title(title)
-		.expandable-checkbox-list__arrow.material-icons expand_more
+		.expandable-checkbox-list__arrow.js-expandable-checkbox-list__arrow.material-icons expand_more
 
-		ul.expandable-checkbox-list__list
+		ul.expandable-checkbox-list__list.js-expandable-checkbox-list__list
 			each item in items
 				li.expandable-checkbox-list__item
 					+checkbox-button(item)
-			
-//- js-названиеКласса
 

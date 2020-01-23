@@ -1,10 +1,7 @@
-import "jquery-date-range-picker/dist/jquery.daterangepicker.js";
-
 import moment from 'moment';
 import 'moment/locale/ru';
 import 'moment/locale/es-us';
 moment.locale('ru');
-
 
 $( document ).ready(function() {
 

@@ -5,6 +5,8 @@ import './cards.scss';
 
 //--------------- import libs -----------------------------
 
+import "jquery-date-range-picker/dist/jquery.daterangepicker.js";
+
 import moment from 'moment'
 import 'moment/locale/ru' 
 moment.locale('ru');
@@ -16,6 +18,7 @@ import "../../js/main.js";
 //---------------- import blocks scripts -----------------------------
 
 import "../../blocks-base/text-field/text-field.js";
+import "../../blocks-base/counted-item/counted-item.js";
 import "../../blocks-base/dropdown/dropdown.js";
 import "../../blocks-base/date-dropdown/date-dropdown.js";
 
@@ -48,7 +51,6 @@ $(document).ready(function() {
     $('.js-cards__calendar').data('dateRangePicker').setDateRange('2019/08/19','2019/08/23');
 
     $('.js-cards__calendar-wrap .js-calendar__icon-link_action_clear').click(function(evt) {
-        console.log("dshgjfkgskj,bmx");
         evt.stopPropagation();
         $('.js-cards__calendar').data('dateRangePicker').clear();
     });

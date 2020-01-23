@@ -41,3 +41,16 @@
     }
   }
 }
+
+@media (max-width: 410px) {
+  .filter-date-dropdown {
+    &__calendar-container {
+      z-index: 100;
+    }
+
+    &__calendar {
+      left: 50%;
+      transform: translateX(-140px);
+    }
+  }
+}

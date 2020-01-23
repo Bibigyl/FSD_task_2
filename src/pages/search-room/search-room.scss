@@ -1,7 +1,6 @@
 @import "../../scss/_vars.scss";
 
 .search-room {
-
   &__container {
     width: 100%;
     max-width: 1200px;
@@ -20,7 +19,7 @@
   }
 
   &__filter-date-dropdown {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   &__dropdown-guests {
@@ -39,26 +38,10 @@
 
   &__checkbox-buttons {
     margin-bottom: 29px;
-
-    li {
-      &:nth-child(3) .checkbox-button__text {
-        max-width: 210px;
-      }
-    }
   }
 
   &__rich-checkbox-buttons {
     margin-bottom: 30px;
-
-    li {
-      &:first-child .checkbox-button__text {
-        max-width: 200px;
-      }
-
-      &:nth-child(2) .checkbox-button__text {
-        max-width: 230px;
-      }
-    }
   }
 
   &__dropdown-furniture {
@@ -91,7 +74,9 @@
   }
 
   &__pagination {
-    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    margin-right: 22px;
   }
 
   &__footer {

@@ -3,4 +3,4 @@ mixin font({tag, example, text})
     .font
         .font__tag
             #{tag}.font__title= example
-        #{tag}.font__description= text
+        #{tag}.font__description!= text

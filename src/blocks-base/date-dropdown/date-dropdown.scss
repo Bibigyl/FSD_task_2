@@ -1,7 +1,6 @@
 .date-dropdown {
   width: 100%;
   max-width: 320px;
-  //padding-bottom: 5px;
   box-sizing: border-box;
 
   * {
@@ -55,6 +54,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
     padding-right: 27px;
+  }
+}
+
+@media (max-width: 410px) {
+  .date-dropdown {
+    &__calendar-container {
+      z-index: 100;
+    }
+
+    &__calendar {
+      left: 50%;
+      transform: translateX(-140px);
+    }
   }
 }
 

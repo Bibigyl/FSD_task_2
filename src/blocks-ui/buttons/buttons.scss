@@ -33,11 +33,9 @@
 
     &_on-hover {
       opacity: 0.5;
-      transition: none;
 
-      &:hover {
+      &:hover>* {
         opacity: 1;
-        transition: none;
       }
     }
   }

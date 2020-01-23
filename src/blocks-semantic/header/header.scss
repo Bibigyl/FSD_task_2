@@ -38,7 +38,7 @@
   &__menu-item {
     display: flex;
     align-self: center;
-    padding: 4px 5.9px;
+    padding: 3px 5.9px 4px;
     margin: 0px 8px;
     cursor: pointer;
     color: $c50;
@@ -50,7 +50,6 @@
     }
 
     &_slim {
-      padding: 4px 5.9px;
       margin: 0px 5px;
     }
 
@@ -91,7 +90,7 @@
   }
 
   &__user-name {
-    padding: 4px 0px 4px 5.9px;
+    padding: 3px 0px 4px 5.9px;
     line-height: 30px;
     margin-left: 25px;
     cursor: pointer;
