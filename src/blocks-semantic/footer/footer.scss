@@ -117,6 +117,19 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;    
   }
+
+  &_ru {
+    .footer {
+      &__text,
+      &__item,
+      &__item-title,
+      &__subscription-title,
+      &__subscription-text,
+      &__copyright {
+        letter-spacing: 0px;
+      }
+    }
+  }
 }
 
 @media(max-width: 980px) {

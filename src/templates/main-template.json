@@ -48,6 +48,7 @@
             {"name": "twitter"},
             {"name": "facebook-square"},
             {"name": "instagram"}
-        ]
+        ],
+        "isRussian": true
     }
 }

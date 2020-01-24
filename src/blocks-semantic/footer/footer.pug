@@ -1,7 +1,9 @@
 include ../../blocks-base/text-field/text-field
 
-mixin footer({text, items, subscription, copyright, links})
-	footer.footer
+mixin footer({text, items, subscription, copyright, links, isRussian})
+	- let ru = isRussian ? "footer_ru" : false;
+
+	footer.footer(class=ru)
 		.footer__container
 			.footer__main-info
 				a.footer__logo
@@ -31,6 +33,3 @@ mixin footer({text, items, subscription, copyright, links})
 				each link in links
 					a.footer__link(href=link.href)
 						i.footer__link-icon.fab(class='fa-' + link.name)
-
-//- на русских и английских страницах разный letter-spacing
-	Передать аргумент(и как его назвать) или забить?
