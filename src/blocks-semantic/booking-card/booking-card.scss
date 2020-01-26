@@ -17,7 +17,7 @@
     font-size: rem(25px);
     display: inline;
     margin-right: 4px;
-    font-family: "Quicksand", sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     line-height: 24px;
     color: $c100;
@@ -96,7 +96,7 @@
     font-size: rem(20px);
 
     &:after {
-      content: "";
+      content: '';
       display: block;
       overflow: hidden;
       height: rem(18px);
@@ -110,7 +110,7 @@
   }
 
   &__total-sum {
-    font-family: "Quicksand";
+    font-family: 'Quicksand';
     float: right;
     margin-left: 2px;
     font-size: 19px;

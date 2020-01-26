@@ -1,4 +1,4 @@
-@import "../../scss/_mixins";
+@import '../../scss/_mixins';
 
 .color {
   display: flex;
@@ -20,7 +20,7 @@
   }
 
   &__text {
-    font-family: "Quicksand";
+    font-family: 'Quicksand';
     font-weight: 400;
     font-size: rem(19px);
   }

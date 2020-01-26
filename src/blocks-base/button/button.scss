@@ -29,7 +29,7 @@
     text-transform: uppercase;
     font-size: rem(12px);
     line-height: 16px;
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     color: #fff;
     padding: 12px 17px;
     min-width: 95px;
@@ -54,7 +54,7 @@
     }
 
     &:before {
-      content: "";
+      content: '';
       border-radius: 100px;
       background-color: #fff;
       position: absolute;

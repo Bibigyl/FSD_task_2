@@ -1,61 +1,61 @@
 /*-------- Variables -------------*/
 
-@import "./_vars";
+@import './_vars';
 
 /*------------------------- CSS reset -----------------------------------------------*/
 
-@import "./_reset";
+@import './_reset';
 
 /*------------------------------ Import libs ----------------------------------------*/
 
-@import "~material-design-icons/iconfont/material-icons.css";
-$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import '~material-design-icons/iconfont/material-icons.css';
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
-@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 
-@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
 
-@import "~jquery-date-range-picker/dist/daterangepicker.scss";
+@import '~jquery-date-range-picker/dist/daterangepicker.scss';
 
 /*------------------------------ Common styles ----------------------------------------*/
 
-@import "./_mixins";
+@import './_mixins';
 
 /*------- Add fonts ------------*/
 
 @include font-face(
-  "Quicksand", 
-  "../fonts/Quicksand-Regular/Quicksand-Regular",
+  'Quicksand', 
+  '../fonts/Quicksand-Regular/Quicksand-Regular',
   400
 );
 
 @include font-face(
-  "Quicksand", 
-  "../fonts/Quicksand-Bold/Quicksand-Bold",
+  'Quicksand', 
+  '../fonts/Quicksand-Bold/Quicksand-Bold',
   700
 );
 
 @include font-face(
-  "Montserrat", 
-  "../fonts/Montserrat-Regular/Montserrat-Regular",
+  'Montserrat', 
+  '../fonts/Montserrat-Regular/Montserrat-Regular',
   400
 );
 
 @include font-face(
-  "Montserrat", 
-  "../fonts/Montserrat-Bold/Montserrat-Bold",
+  'Montserrat', 
+  '../fonts/Montserrat-Bold/Montserrat-Bold',
   700
 );
 
 @include font-face(
-  "OpenSans", 
-  "../fonts/OpenSans-Regular/OpenSans-Regular",
+  'OpenSans', 
+  '../fonts/OpenSans-Regular/OpenSans-Regular',
   400
 );
 
 @include font-face(
-  "OpenSans", 
-  "../fonts/OpenSans-Bold/OpenSans-Bold",
+  'OpenSans', 
+  '../fonts/OpenSans-Bold/OpenSans-Bold',
   700
 );
 
@@ -68,7 +68,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", "OpenSans", sans-serif;
+  font-family: 'Montserrat', 'OpenSans', sans-serif;
   font-weight: 400;
   font-size: rem(14px);
   line-height: rem(24px);
@@ -76,7 +76,7 @@ body {
 }
 
 h1 {
-  font-family: "Quicksand", "OpenSans", sans-serif;
+  font-family: 'Quicksand', 'OpenSans', sans-serif;
   font-weight: 700;
   font-size: rem(24px);
   line-height: 30px;
@@ -84,7 +84,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Quicksand", "OpenSans", sans-serif;
+  font-family: 'Quicksand', 'OpenSans', sans-serif;
   font-weight: 700;
   font-size: rem(19px);
   line-height: 24px;
@@ -92,7 +92,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Montserrat", "OpenSans", sans-serif;
+  font-family: 'Montserrat', 'OpenSans', sans-serif;
   font-weight: 700;
   font-size: rem(12px);
   line-height: 15px;
@@ -104,68 +104,68 @@ h3 {
 
 /*------- Blocks styles -------------*/
 
-@import "../blocks-base/title/title.scss";
+@import '../blocks-base/title/title.scss';
 
-@import "../blocks-base/text-field/text-field.scss";
+@import '../blocks-base/text-field/text-field.scss';
 
-@import "../blocks-base/date-dropdown/date-dropdown.scss";
+@import '../blocks-base/date-dropdown/date-dropdown.scss';
 
-@import "../blocks-base/calendar/calendar.scss";
+@import '../blocks-base/calendar/calendar.scss';
 
-@import "../blocks-base/filter-date-dropdown/filter-date-dropdown.scss";
+@import '../blocks-base/filter-date-dropdown/filter-date-dropdown.scss';
 
-@import "../blocks-base/checkbox-button/checkbox-button.scss";
+@import '../blocks-base/checkbox-button/checkbox-button.scss';
 
-@import "../blocks-base/checkbox-button-list/checkbox-button-list.scss";
+@import '../blocks-base/checkbox-button-list/checkbox-button-list.scss';
 
-@import "../blocks-base/radio-button/radio-button.scss";
+@import '../blocks-base/radio-button/radio-button.scss';
 
-@import "../blocks-base/twin-radio-buttons/twin-radio-buttons.scss";
+@import '../blocks-base/twin-radio-buttons/twin-radio-buttons.scss';
 
-@import "../blocks-base/toggle/toggle.scss";
+@import '../blocks-base/toggle/toggle.scss';
 
-@import "../blocks-base/like-button/like-button.scss";
+@import '../blocks-base/like-button/like-button.scss';
 
-@import "../blocks-base/rate-button/rate-button.scss";
+@import '../blocks-base/rate-button/rate-button.scss';
 
-@import "../blocks-base/slider-range/slider-range.scss";
+@import '../blocks-base/slider-range/slider-range.scss';
 
-@import "../blocks-base/button/button.scss";
+@import '../blocks-base/button/button.scss';
 
-@import "../blocks-base/icon-link/icon-link.scss";
+@import '../blocks-base/icon-link/icon-link.scss';
 
-@import "../blocks-base/pagination/pagination.scss";
+@import '../blocks-base/pagination/pagination.scss';
 
-@import "../blocks-base/dropdown/dropdown.scss";
+@import '../blocks-base/dropdown/dropdown.scss';
 
-@import "../blocks-base/counted-item/counted-item.scss";
+@import '../blocks-base/counted-item/counted-item.scss';
 
-@import "../blocks-base/expandable-checkbox-list/expandable-checkbox-list.scss";
+@import '../blocks-base/expandable-checkbox-list/expandable-checkbox-list.scss';
 
-@import "../blocks-base/icon-text/icon-text.scss";
+@import '../blocks-base/icon-text/icon-text.scss';
 
-@import "../blocks-base/icon-text-list/icon-text-list.scss";
+@import '../blocks-base/icon-text-list/icon-text-list.scss';
 
-@import "../blocks-base/review/review.scss";
+@import '../blocks-base/review/review.scss';
 
-@import "../blocks-base/bullet-list/bullet-list.scss";
+@import '../blocks-base/bullet-list/bullet-list.scss';
 
-@import "../blocks-base/donut/donut.scss";
+@import '../blocks-base/donut/donut.scss';
 
 /*--------- Components styles -------------*/
 
-@import "../blocks-semantic/search-card/search-card.scss";
+@import '../blocks-semantic/search-card/search-card.scss';
 
-@import "../blocks-semantic/check-in-card/check-in-card.scss";
+@import '../blocks-semantic/check-in-card/check-in-card.scss';
 
-@import "../blocks-semantic/booking-card/booking-card.scss";
+@import '../blocks-semantic/booking-card/booking-card.scss';
 
-@import "../blocks-semantic/login-card/login-card.scss";
+@import '../blocks-semantic/login-card/login-card.scss';
 
-@import "../blocks-semantic/room-card/room-card.scss";
+@import '../blocks-semantic/room-card/room-card.scss';
 
-@import "../blocks-semantic/header/header.scss";
+@import '../blocks-semantic/header/header.scss';
 
-@import "../blocks-semantic/footer/footer.scss";
+@import '../blocks-semantic/footer/footer.scss';
 
-@import "../blocks-semantic/footer-min/footer-min.scss";
+@import '../blocks-semantic/footer-min/footer-min.scss';

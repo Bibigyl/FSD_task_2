@@ -5,14 +5,14 @@
     font-family: $font-family;
     font-weight: $weight;
     font-style: $style;
-    src: url("#{$file-path}.eot");
-    src: url("#{$file-path}.eot?#iefix") format("embedded-opentype"), url("#{$file-path}.woff") format("woff"), url("#{$file-path}.ttf") format("truetype");
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
   }
 }
 
 /*------------- px to rem ---------------*/
 
-@import "./_vars";
+@import './_vars';
 
 @function rem($size) {
   @return $size / $HTMLsize * 1rem;
