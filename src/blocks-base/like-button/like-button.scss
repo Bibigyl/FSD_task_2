@@ -3,7 +3,7 @@
   height: rem(20px);
   border-radius: rem(10px);
   box-sizing: border-box;
-  border: solid 1px transparent;
+  border: solid rem(1px) transparent;
   background-image: linear-gradient(white, white), linear-gradient(180deg, $c25 0%, $c25 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;

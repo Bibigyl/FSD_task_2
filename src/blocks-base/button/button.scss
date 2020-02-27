@@ -1,18 +1,18 @@
 .button {
   display: flex;
   justify-content: center;
-  border-radius: 22px;
+  border-radius: rem(22px);
   background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   color: white;
-  padding: 14px 20px;
+  padding: rem(14px) rem(20px);
   box-sizing: border-box;
   background-clip: border-box;
-  border: 0px;
+  border: rem(0px);
   text-transform: uppercase;
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
+  font-size: rem(12px);
   transition: .2s;
 
   &:hover {
@@ -42,8 +42,8 @@
     background-origin: border-box;
     background-clip: padding-box, border-box;
     -webkit-background-clip: padding-box, border-box;
-    border: solid 2px transparent;
-    padding: 12px 18px;
+    border: solid rem(2px) transparent;
+    padding: rem(12px) rem(18px);
 
     &:hover {
       opacity: 1;
@@ -56,15 +56,15 @@
     width: 100%;
     max-width: rem(320px);
     position: relative;
-    padding-right: 20px;
+    padding-right: rem(20px);
   }
 
   &_small {
     &.button {
-      padding: 10px 19px;
+      padding: rem(10px) rem(19px);
 
       &_secondary {
-        padding: 8px 18px;
+        padding: rem(8px) rem(18px);
       }
     }
   }
