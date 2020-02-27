@@ -16,7 +16,7 @@
   transition: .2s;
 
   &:hover {
-    opacity: 0.5;
+    opacity: .5;
     transition: .2s;
   }
 
@@ -60,6 +60,7 @@
   }
 
   &_small {
+
     &.button {
       padding: rem(10px) rem(19px);
 

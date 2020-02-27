@@ -6,13 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
-//const StylelintPlugin = require('stylelint-webpack-plugin');
 const ghpages = require('gh-pages');
-
-const PATHS = {
-	src: path.join(__dirname,'src'),
-	dist: path.join(__dirname, 'dist')
-};
 
 module.exports = {
 	entry: {
@@ -141,10 +135,6 @@ module.exports = {
 		}),
     	//locale problem: https://github.com/moment/moment/issues/2979
 		new webpack.ContextReplacementPlugin(/\.\/locale$/, 'empty-module', false, /js$/),
- 		//new StylelintPlugin({
-		//	files: ['src/**/*.scss'],
-		//	exclude: ['src/libs/**/*.scss'],
-		//}), 
 	],
 	devtool: 'inline-source-map',
 	devServer: {

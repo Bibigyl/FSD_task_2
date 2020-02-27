@@ -17,7 +17,3 @@
 @function rem($size) {
   @return $size / $HTMLsize * 1rem;
 }
-
-
-// перевод всего подряд в рем
-// https://github.com/pierreburel/sass-rem/blob/master/_rem.scss

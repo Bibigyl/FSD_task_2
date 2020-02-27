@@ -7,5 +7,5 @@ $primary: #BC9CFF;
 $secondary: #6FCF97;
 $gradientPrimary: linear-gradient(180deg, $primary 0%, #8BA4F9 100%);
 $gradientSecondary: linear-gradient(180deg, $secondary 0%, #66D2EA 100%);
-$gradientPrimarySemitransparent: linear-gradient(180deg, rgba($primary, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+$gradientPrimarySemitransparent: linear-gradient(180deg, rgba($primary, .5) 0%, rgba(139, 164, 249, .5) 100%);
 $HTMLsize: 14px;
