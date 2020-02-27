@@ -44,6 +44,7 @@
     -webkit-background-clip: padding-box, border-box;
     border: solid rem(2px) transparent;
     padding: rem(12px) rem(18px);
+    min-width: rem(100px);
 
     &:hover {
       opacity: 1;
@@ -60,13 +61,11 @@
   }
 
   &_small {
+    padding: rem(10px) rem(19px);
+    min-width: 0;
 
-    &.button {
-      padding: rem(10px) rem(19px);
-
-      &_secondary {
-        padding: rem(8px) rem(18px);
-      }
+    &.button_secondary {
+      padding: rem(8px) rem(18px);
     }
   }
 }

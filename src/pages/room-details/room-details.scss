@@ -69,12 +69,13 @@
   &__diagram {
 
     &-wrap {
-      margin-right: rem(44px);
+      margin-right: rem(28px);
       margin-bottom: rem(20px);
     }
 
     &-title {
       margin-bottom: rem(20px);
+      margin-left: rem(20px);
     }
   }
 
@@ -183,6 +184,13 @@
     }
   }
 }
+@media(max-width: rem(1100px)) {
+  .room-details {
+    &__diargam-wrap {
+      margin-right: 0;
+    }
+  }
+}
 
 @media(max-width: rem(500px)) {
 
@@ -215,6 +223,10 @@
       float: none;
       display: block;
       margin-bottom: rem(20px);
+    }
+
+    &__diagram-title {
+      margin-left: 0;
     }
   }
 }

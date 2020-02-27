@@ -1,10 +1,4 @@
 .donut {
-  @media (min-width: rem(768px)) {
-
-    figure {
-      flex-direction: row;
-    }
-  }
 
   .chart-text {
     fill: #000;
@@ -29,9 +23,7 @@
   figure {
     display: flex;
     justify-content: space-around;
-    flex-direction: column;
-    margin-left: rem(-15px);
-    margin-right: rem(-15px);
+    flex-wrap: wrap;
   }
   
   .figure-content,
@@ -44,6 +36,7 @@
     margin-right: rem(10px);
     margin-top: rem(-13px);
     max-width: rem(160px);
+    min-width: rem(140px);
   }
   
   .figure-content svg {
