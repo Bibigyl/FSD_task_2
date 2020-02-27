@@ -1,43 +1,29 @@
 .button {
-  cursor: pointer;
   display: flex;
-  position: relative;
-  transition: .2s;
-  transition: outline 0s;
   justify-content: center;
-  border-radius: rem(100px);
-  background: $gradientPrimary;
-  padding: rem(2px);
-  border: none;
+  border-radius: 22px;
+  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: white;
+  padding: 14px 20px;
   box-sizing: border-box;
-
-  * {
-    box-sizing: border-box;
-  }  
+  background-clip: border-box;
+  border: 0px;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  transition: .2s;
 
   &:hover {
-    font-style: normal;
-    font-weight: bold;
+    opacity: 0.5;
     transition: .2s;
-    opacity: .5;
   }
 
   &:active,
   &:focus {
     outline: rem(2px) solid rgba($secondary, .3);
     transition: outline 0s;
-  }
-
-  &__content {
-    font-style: normal;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: rem(12px);
-    line-height: rem(16px);
-    font-family: 'Montserrat';
-    color: #fff;
-    padding: rem(12px) rem(17px);
-    min-width: rem(95px);
   }
 
   &__arrow {
@@ -50,48 +36,36 @@
   }
 
   &_secondary {
-
-    .button__content {
-      border-radius: inherit;
-      background: #fff;
-      color: $primary;
-      z-index: 1;
-    }
-
-    &:before {
-      content: '';
-      border-radius: rem(100px);
-      background-color: #fff;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      opacity: 0;
-      transition: .2s;
-    }
+    padding: 0;
+    color: #BC9CFF;
+    background-image: linear-gradient(white, white), $gradientPrimary;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    -webkit-background-clip: padding-box, border-box;
+    border: solid 2px transparent;
+    padding: 12px 18px;
 
     &:hover {
       opacity: 1;
-
-      &:before {
-        opacity: .5;
-        transition: .2s;
-      }
+      background-image: linear-gradient(white, white), $gradientPrimarySemitransparent;
+      transition: .2s;
     }
   }
 
   &_extended {
     width: 100%;
     max-width: rem(320px);
+    position: relative;
+    padding-right: 20px;
   }
 
   &_small {
-    padding: rem(2px);
-    
-    .button__content {
-      padding: rem(7px) rem(17px);
-      min-width: 0;
-    }    
+    &.button {
+      padding: 10px 19px;
+
+      &_secondary {
+        padding: 8px 18px;
+      }
+    }
   }
 }

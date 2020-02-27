@@ -3,7 +3,7 @@
 
   &__type {
     display: flex;
-    margin-bottom: rem(30px);
+    margin-bottom: rem(32px);
 
     &:last-child {
       margin-bottom: 0;
@@ -42,10 +42,7 @@
 
       .button {
         opacity: 1;
-
-        &:before {
-          opacity: .5;
-        }
+        background-image: linear-gradient(white, white), $gradientPrimarySemitransparent;
       }
     }
   }
