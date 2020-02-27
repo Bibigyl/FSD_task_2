@@ -3,6 +3,7 @@
   display: flex;
   position: relative;
   transition: .2s;
+  transition: outline 0s;
   justify-content: center;
   border-radius: 100px;
   background: $gradientPrimary;
@@ -14,13 +15,17 @@
     box-sizing: border-box;
   }  
 
-  &:hover,
-  &:active,
-  &:focus {
+  &:hover {
     font-style: normal;
     font-weight: bold;
     transition: .2s;
     opacity: .5;
+  }
+
+  &:active,
+  &:focus {
+    outline: 2px solid rgba($secondary, .3);
+    transition: outline 0s;
   }
 
   &__content {
@@ -66,9 +71,7 @@
       transition: .2s;
     }
 
-    &:hover,
-    &:active,
-    &:focus {
+    &:hover {
       opacity: 1;
 
       &:before {
