@@ -8,23 +8,23 @@
 
     &:nth-child(1) {
       width: 100%;
-      max-width: 320px;
-      margin-right: 75px;
-      padding-right: 54px;
-      margin-bottom: 150px;
+      max-width: rem(320px);
+      margin-right: rem(75px);
+      padding-right: rem(54px);
+      margin-bottom: rem(150px);
     }
 
     &:nth-child(2) {
       width: 100%;
-      max-width: 320px;
-      margin-right: 20px;
-      margin-bottom: 190px;
+      max-width: rem(320px);
+      margin-right: rem(20px);
+      margin-bottom: rem(190px);
     }
 
     &:nth-child(3) {
       width: 100%;
-      max-width: 320px;
-      margin-bottom: 190px;
+      max-width: rem(320px);
+      margin-bottom: rem(190px);
     }
 
     >* {
@@ -35,24 +35,24 @@
   &__dropdown {
 
     &_default {
-      margin-bottom: 20px;
+      margin-bottom: rem(20px);
     }
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: rem(1150px)) {
 
   .dropdowns {
 
     &__column:first-child {
-      margin-right: 20px;
+      margin-right: rem(20px);
       padding-right: 0;
-      max-width: 266px;
+      max-width: rem(266px);
     }
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: rem(600px)) {
 
   .dropdowns {
 

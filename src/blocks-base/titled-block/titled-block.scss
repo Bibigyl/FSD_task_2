@@ -6,10 +6,10 @@
   }
 
   &__title {
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
 
     &_with-big-margin {
-      margin-bottom: 16px;
+      margin-bottom: rem(16px);
     }
   }
 }

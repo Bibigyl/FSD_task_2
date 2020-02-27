@@ -1,8 +1,8 @@
 .dropdown {
   position: relative;
   width: 100%;
-  max-width: 320px;
-  min-width: 240px;
+  max-width: rem(320px);
+  min-width: rem(240px);
   box-sizing: border-box;
 
   * {
@@ -10,30 +10,30 @@
   }
 
   &__title {
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
   }
 
   &__field {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 44px;
-    border: 1px solid $c25;
-    border-radius: 4px;
+    height: rem(44px);
+    border: rem(1px) solid $c25;
+    border-radius: rem(4px);
     transition: .4s;
-    padding-left: 14px;
+    padding-left: rem(14px);
     background-color: #fff;
   }
 
   &__text {
-    line-height: 42px;
+    line-height: rem(42px);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   &__arrow {
-    padding: 10px;
+    padding: rem(10px);
     cursor: pointer;
     color: $c50;
   }
@@ -41,31 +41,31 @@
   &__popup {
     display: none;
     position: absolute;
-    left: 0px;
-    border: 1px solid $c25;
+    left: rem(0px);
+    border: rem(1px) solid $c25;
     border-top: none;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    box-shadow: 0px 2px 10px $c5;
+    border-bottom-right-radius: rem(4px);
+    border-bottom-left-radius: rem(4px);
+    box-shadow: rem(0px) rem(2px) rem(10px) $c5;
     z-index: 100;
     background-color: #fff;
     width: 100%;
     transition: border .4s;
-    padding: 7px 6px 4px 14px;
+    padding: rem(7px) rem(6px) rem(4px) rem(14px);
   }
 
   &__item {
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
 
     &:last-of-type {
-      margin-bottom: 0px;
+      margin-bottom: rem(0px);
     }
   }
 
   &__action {
-    margin-top: 10px;
-    padding: 2px 0px 3px 0px;
+    margin-top: rem(10px);
+    padding: rem(2px) rem(0px) rem(3px) rem(0px);
 
     &_clear {
       display: inline-block;
@@ -93,13 +93,13 @@
     .dropdown__field {
       border-color: $c50;
       transition: .4s;
-      border-bottom-right-radius: 0px;
-      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: rem(0px);
+      border-bottom-left-radius: rem(0px);
     }
   }
 
   &_small {
-    max-width: 266px;
+    max-width: rem(266px);
   }
 }
 

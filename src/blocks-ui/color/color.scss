@@ -5,18 +5,18 @@
   align-items: center;
 
   &__square {
-    width: 70px;
-    height: 70px;
-    border-radius: 6px;
+    width: rem(70px);
+    height: rem(70px);
+    border-radius: rem(6px);
   }
 
   &__description {
-    padding-left: 40px;
-    max-width: 310px;
+    padding-left: rem(40px);
+    max-width: rem(310px);
   }
 
   &__title {
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
   }
 
   &__text {

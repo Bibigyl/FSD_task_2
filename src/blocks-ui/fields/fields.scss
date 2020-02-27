@@ -1,14 +1,14 @@
 .fields {
   width: 100%;
-  padding-top: 3px;
+  padding-top: rem(3px);
 
   &__field {
-    margin-bottom: 21px;
+    margin-bottom: rem(21px);
 
     &:nth-child(4),
     &:nth-child(5),
     &:nth-child(6) {
-      margin-bottom: 40px;
+      margin-bottom: rem(40px);
     }
 
     &:last-child {

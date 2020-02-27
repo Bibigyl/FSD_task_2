@@ -1,3 +1,7 @@
+@import '../../scss/_vars';
+
+@import '../../scss/_mixins';
+
 .registration {
 
   &__front {
@@ -9,9 +13,9 @@
 
   &__container {
     width: 100%;
-    max-width: 1200px;
-    height: 700px;
-    padding: 20px;
+    max-width: rem(1200px);
+    height: rem(700px);
+    padding: rem(20px);
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -20,13 +24,13 @@
     align-items: center;
 
     &_small {
-      height: 682px;
+      height: rem(682px);
     }
   }
 
   &__card {
     width: 100%;
-    max-width: 380px;
+    max-width: rem(380px);
 
     &_hidden {
       display: none;
@@ -34,19 +38,19 @@
   }
 
   &__check-in-card {
-    margin-top: 3px;
+    margin-top: rem(3px);
   }  
 }
 
-@media(max-width: 600px) {
+@media(max-width: rem(600px)) {
 
   .registration {
 
     &__container {
-      height: 700px;
+      height: rem(700px);
 
       &_small {
-        height: 500px;
+        height: rem(500px);
       }
     }
   }

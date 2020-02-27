@@ -1,6 +1,6 @@
 .filter-date-dropdown {
   width: 100%;
-  max-width: 266px;
+  max-width: rem(266px);
   box-sizing: border-box;
 
   * {
@@ -15,13 +15,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 10px;
+    padding: rem(10px);
     cursor: pointer;
     color: $c50;
   }
 
   &__title {
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
   }
 
   &__calendar-container {
@@ -31,7 +31,7 @@
 
   &__calendar {
     position: absolute;
-    top: 5px;
+    top: rem(5px);
     left: 0;
     width: 100%;
 
@@ -41,7 +41,7 @@
   }
 }
 
-@media (max-width: 410px) {
+@media (max-width: rem(410px)) {
 
   .filter-date-dropdown {
 

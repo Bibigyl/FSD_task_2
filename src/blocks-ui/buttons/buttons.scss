@@ -3,14 +3,14 @@
 
   &__type {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
 
     &:last-child {
       margin-bottom: 0;
     }
 
     &_secondary {
-      margin-bottom: 26px;
+      margin-bottom: rem(26px);
     }
 
     &_extended {
@@ -22,14 +22,14 @@
     }
 
     &_icon-link {
-      margin-bottom: 26px;
+      margin-bottom: rem(26px);
     }
   }
 
   &__button {
 
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: rem(20px);
     }
 
     &_primary-on-hover {

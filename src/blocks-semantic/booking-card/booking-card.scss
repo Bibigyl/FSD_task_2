@@ -1,31 +1,31 @@
 .booking-card {
-  padding: 40px 30px 30px 30px;
+  padding: rem(40px) rem(30px) rem(30px) rem(30px);
   background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, .2);
-  min-width: 260px;
-  max-width: 380px;
+  border-radius: rem(4px);
+  box-shadow: rem(0px) rem(0px) rem(25px) rgba(0, 0, 0, .2);
+  min-width: rem(260px);
+  max-width: rem(380px);
 
   &__main-info {
     display: flex;
     align-items: flex-end;
-    padding-top: 3px;
-    margin-bottom: 19px;
+    padding-top: rem(3px);
+    margin-bottom: rem(19px);
   }
 
   &__number {
     font-size: rem(25px);
     display: inline;
-    margin-right: 4px;
+    margin-right: rem(4px);
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
-    line-height: 24px;
+    line-height: rem(24px);
     color: $c100;
   }
 
   &__simbol-number {
     font-size: rem(13px);
-    margin-right: 5px;
+    margin-right: rem(5px);
   }
 
   &__class {
@@ -42,56 +42,56 @@
   }
 
   &__price-number {
-    margin-right: 4px;
+    margin-right: rem(4px);
     font-weight: 700;
     font-size: rem(14px);
   }
 
   &__date-dropdown {
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
   }
 
   &__dropdown {
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
   }
 
   &__info {
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
   }
 
   &__info-item {
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: rem(16px);
   }
 
   &__text {
     flex: 1;
-    line-height: 18px;
+    line-height: rem(18px);
   }
 
   &__icon-i {
     flex: none;
-    width: 20px;
-    height: 20px;
-    border: 1px solid $c25;
+    width: rem(20px);
+    height: rem(20px);
+    border: rem(1px) solid $c25;
     font-size: rem(12px);
     font-weight: bold;
     color: $c25;
-    border-radius: 100px;
+    border-radius: rem(100px);
     text-align: center;
-    line-height: 20px;
+    line-height: rem(20px);
     cursor: pointer;  
   }
 
   &__sum {
     flex: none;
-    width: 80px;
+    width: rem(80px);
     text-align: right;
     line-height: rem(18px);
   }
 
   &__total {
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
     font-weight: 700;
     font-size: rem(20px);
 
@@ -100,26 +100,26 @@
       display: block;
       overflow: hidden;
       height: rem(18px);
-      border-bottom: 1px dotted $c25;
+      border-bottom: rem(1px) dotted $c25;
     }
   }
 
   &__total-text {
     float: left;
-    margin-right: 2px;
+    margin-right: rem(2px);
   }
 
   &__total-sum {
     font-family: 'Quicksand';
     float: right;
-    margin-left: 2px;
-    font-size: 19px;
+    margin-left: rem(2px);
+    font-size: rem(19px);
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: rem(575.98px)) {
 
   .booking-card {
-    padding: 25px 20px 20px 20px;
+    padding: rem(25px) rem(20px) rem(20px) rem(20px);
   }
 }

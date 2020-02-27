@@ -5,17 +5,17 @@
 
 .form-elements {
   position: relative;
-  padding: 140px 0;
+  padding: rem(140px) 0;
 
   &__logo {
     position: absolute;
-    top: 30px;
+    top: rem(30px);
     left: 6.5%;
   }
 
   &__container {
     width: 100%;
-    padding: 0 40px;
+    padding: 0 rem(40px);
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -23,79 +23,79 @@
     justify-content: space-between;
 
     &_first {
-      max-width: 1238px;
-      margin-bottom: 71px;
+      max-width: rem(1238px);
+      margin-bottom: rem(71px);
     }
 
     &_dropdowns {
       width: 100%;
-      max-width: 1239px;
-      margin-bottom: 22px;
+      max-width: rem(1239px);
+      margin-bottom: rem(22px);
     }
   
     &_lists {
-      max-width: 1238px;
-      margin-bottom: 10px;
+      max-width: rem(1238px);
+      margin-bottom: rem(10px);
     }
 
     &_last {
-      max-width: 1238px;
+      max-width: rem(1238px);
       flex-wrap: nowrap;      
     }
   }
 
   &__fields {
     width: 100%;
-    max-width: 320px;
-    margin-right: 40px;
-    margin-bottom: 30px;
+    max-width: rem(320px);
+    margin-right: rem(40px);
+    margin-bottom: rem(30px);
   }
 
   &__switches {
     width: 100%;
-    max-width: 266px;
-    padding-top: 3px;
-    margin-right: 40px;
-    margin-bottom: 30px;
+    max-width: rem(266px);
+    padding-top: rem(3px);
+    margin-right: rem(40px);
+    margin-bottom: rem(30px);
   }
 
   &__buttons-and-other {
     width: 100%;
-    max-width: 320px;
-    padding-top: 4px;
-    margin-bottom: 30px;
+    max-width: rem(320px);
+    padding-top: rem(4px);
+    margin-bottom: rem(30px);
   }
 
   &__advantages {
     width: 100%;
-    max-width: 320px;
-    margin-right: 40px;
-    margin-bottom: 30px;
+    max-width: rem(320px);
+    margin-right: rem(40px);
+    margin-bottom: rem(30px);
   }
 
   &__review {
     width: 100%;
-    max-width: 712px;
-    min-width: 280px;
-    padding-top: 10px;
+    max-width: rem(712px);
+    min-width: rem(280px);
+    padding-top: rem(10px);
   }
 
   &__icon-text-list {
-    margin-right: 20px;
+    margin-right: rem(20px);
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: rem(575.98px)) {
 
   .form-elements {
 
     &__column {
-      min-width: 280px;
+      min-width: rem(280px);
       margin-right: 0;
     }
 
     &__container {
-      padding: 0 20px;
+      padding: 0 rem(20px);
 
       &_first > * {
         margin-right: 0;
@@ -103,7 +103,7 @@
     }
 
     &__icon-text-list {
-      margin-right: 0px;
+      margin-right: rem(0px);
     }
   }
 }

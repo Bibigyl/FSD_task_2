@@ -5,9 +5,9 @@
   transition: .2s;
   transition: outline 0s;
   justify-content: center;
-  border-radius: 100px;
+  border-radius: rem(100px);
   background: $gradientPrimary;
-  padding: 2px;
+  padding: rem(2px);
   border: none;
   box-sizing: border-box;
 
@@ -24,7 +24,7 @@
 
   &:active,
   &:focus {
-    outline: 2px solid rgba($secondary, .3);
+    outline: rem(2px) solid rgba($secondary, .3);
     transition: outline 0s;
   }
 
@@ -33,18 +33,18 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: rem(12px);
-    line-height: 16px;
+    line-height: rem(16px);
     font-family: 'Montserrat';
     color: #fff;
-    padding: 12px 17px;
-    min-width: 95px;
+    padding: rem(12px) rem(17px);
+    min-width: rem(95px);
   }
 
   &__arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 10px;
+    right: rem(10px);
     color: inherit;
     color: #fff;
   }
@@ -60,7 +60,7 @@
 
     &:before {
       content: '';
-      border-radius: 100px;
+      border-radius: rem(100px);
       background-color: #fff;
       position: absolute;
       top: 0;
@@ -83,14 +83,14 @@
 
   &_extended {
     width: 100%;
-    max-width: 320px;
+    max-width: rem(320px);
   }
 
   &_small {
-    padding: 2px;
+    padding: rem(2px);
     
     .button__content {
-      padding: 7px 17px;
+      padding: rem(7px) rem(17px);
       min-width: 0;
     }    
   }

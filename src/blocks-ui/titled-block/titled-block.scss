@@ -10,10 +10,10 @@
     text-transform: uppercase;
     color: $c100;
     width: fit-content;
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
 
     &_with-big-margin {
-      margin-bottom: 16px;
+      margin-bottom: rem(16px);
     }
 
     &_single {
@@ -26,7 +26,7 @@
     text-align: right;
     font-size: rem(12px);
     color: $c50;
-    line-height: 17.5px;
-    margin-top: -4px;
+    line-height: rem(17.5px);
+    margin-top: rem(-4px);
   }
 }

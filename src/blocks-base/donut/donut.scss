@@ -1,5 +1,5 @@
 .donut {
-  @media (min-width: 768px) {
+  @media (min-width: rem(768px)) {
 
     figure {
       flex-direction: row;
@@ -30,8 +30,8 @@
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: rem(-15px);
+    margin-right: rem(-15px);
   }
   
   .figure-content,
@@ -41,9 +41,9 @@
   }
   
   .figure-content {
-    margin-right: 10px;
-    margin-top: -13px;
-    max-width: 160px;
+    margin-right: rem(10px);
+    margin-top: rem(-13px);
+    max-width: rem(160px);
   }
   
   .figure-content svg {
@@ -51,7 +51,7 @@
   }
   
   .figure-key {
-    min-width: 170px;
+    min-width: rem(170px);
   }
   
   .figure-key-list {
@@ -64,15 +64,15 @@
     padding: 0;
   
     span {
-      margin-right: 1px;
+      margin-right: rem(1px);
     }
   }
   
   .shape-circle {
     display: inline-block;
     vertical-align: middle;
-    width: 10px;
-    height: 10px;
+    width: rem(10px);
+    height: rem(10px);
     border-radius: 50%;
   }
   
@@ -96,7 +96,7 @@
   }
   
   .donut-wrap {
-    max-width: 303px;
+    max-width: rem(303px);
   }
   
   .donut__mark {

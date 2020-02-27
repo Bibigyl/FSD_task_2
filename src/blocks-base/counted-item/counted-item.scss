@@ -1,10 +1,10 @@
 .counted-item {
   width: 100%;
   display: flex;
-  height: 32px;
+  height: rem(32px);
   font-weight: 700;
   font-size: rem(12px);
-  line-height: 25px;
+  line-height: rem(25px);
   text-transform: uppercase;
   color: $c100;
   box-sizing: border-box;
@@ -14,17 +14,17 @@
   }
 
   &__value {
-    right: 35px;
-    width: 32px;
+    right: rem(35px);
+    width: rem(32px);
     text-align: center;
   }
 
   &__operation {
     background-color: #fff;
-    width: 30px;
-    height: 30px;
-    border: 1px solid $c25;
-    border-radius: 22px;
+    width: rem(30px);
+    height: rem(30px);
+    border: rem(1px) solid $c25;
+    border-radius: rem(22px);
     text-align: center;
     font-size: rem(18px);
     color: $c50;
@@ -32,7 +32,7 @@
   
     &_dec {
       margin-left: auto;
-      padding-bottom: 5px;
+      padding-bottom: rem(5px);
     }
   
     &_disabled {

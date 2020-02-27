@@ -1,6 +1,6 @@
 .date-dropdown {
   width: 100%;
-  max-width: 320px;
+  max-width: rem(320px);
   box-sizing: border-box;
 
   * {
@@ -13,7 +13,7 @@
   }
 
   &__date_order_first {
-    margin-right: 20px; 
+    margin-right: rem(20px); 
   }
 
   &__text-field {
@@ -24,13 +24,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 10px;
+    padding: rem(10px);
     cursor: pointer;
     color: $c50;
   }
 
   &__title {
-    margin-bottom: 6px;
+    margin-bottom: rem(6px);
   }
 
   &__calendar-container {
@@ -41,7 +41,7 @@
   &__calendar {
     width: 100%;
     position: absolute;
-    top: 5px;
+    top: rem(5px);
     left: 0;
 
     &_open {
@@ -53,11 +53,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-right: 27px;
+    padding-right: rem(27px);
   }
 }
 
-@media (max-width: 410px) {
+@media (max-width: rem(410px)) {
 
   .date-dropdown {
 
@@ -72,12 +72,12 @@
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: rem(340px)) {
 
   .date-dropdown {
 
     &__date_order_first {
-      margin-right: 5px;
+      margin-right: rem(5px);
     }
   }
 }

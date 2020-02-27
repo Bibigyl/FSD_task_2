@@ -4,20 +4,20 @@
 
 .cards {
   position: relative;
-  padding: 150px 0;
+  padding: rem(150px) 0;
   background-color: #F4F4F6;
   justify-content: space-between;
 
   &__logo {
     position: absolute;
-    top: 30px;
+    top: rem(30px);
     left: 6.5%;
   }
 
   &__container {
     width: 100%;
-    max-width: 1240px;
-    padding: 0 20px;
+    max-width: rem(1240px);
+    padding: 0 rem(20px);
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -26,39 +26,39 @@
   }
 
   &__column {
-    margin: 0 20px;
+    margin: 0 rem(20px);
     
     &-1 {
       width: 100%;
-      max-width: 380px;
+      max-width: rem(380px);
     }
 
     &-2 {
       width: 100%;
-      max-width: 380px;
+      max-width: rem(380px);
     }
 
     &-3 {
       width: 100%;
-      max-width: 320px;
+      max-width: rem(320px);
     }
   }
 }
 
 .search-card-wrap {
-  margin-bottom: 41px;
+  margin-bottom: rem(41px);
 }
 
 .check-in-card-wrap {
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
 }
 
 .booking-card-wrap {
-  margin-bottom: 41px;
+  margin-bottom: rem(41px);
 }
 
 .login-card-wrap {
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
 }
 
 .cards__calendar {
@@ -66,22 +66,22 @@
 }
 
 .calendar-wrap {
-  margin-bottom: 33px;
+  margin-bottom: rem(33px);
 }
 
 .room-card-wrap-1,
 .room-card-wrap-2 {
-  max-width: 270px;
+  max-width: rem(270px);
 }
 
 .room-card-wrap-1 {
-  margin-bottom: 38px;
+  margin-bottom: rem(38px);
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: rem(575.98px)) {
 
   .cards__container {
-    padding: 0 20px;
+    padding: 0 rem(20px);
   }
 
   .cards__column {

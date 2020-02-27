@@ -1,9 +1,9 @@
 .colors {
   width: 100%;
-  min-width: 280px;
-  max-width: 320px;
+  min-width: rem(280px);
+  max-width: rem(320px);
 
   &__color {
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
   }
 }

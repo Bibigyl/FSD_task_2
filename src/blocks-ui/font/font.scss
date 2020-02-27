@@ -9,12 +9,12 @@
 
   &__tag {
     text-align: right;
-    width: 50px;
+    width: rem(50px);
   }
 
   &__description {
-    padding-left: 30px;
+    padding-left: rem(30px);
     width: 100%;
-    max-width: 380px;
+    max-width: rem(380px);
   }
 }

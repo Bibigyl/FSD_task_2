@@ -1,6 +1,6 @@
 .text-field {
   width: 100%;
-  max-width: 320px;
+  max-width: rem(320px);
   box-sizing: border-box;
 
   * {
@@ -8,16 +8,16 @@
   }
 
   &__title {
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
   }
 
   &__input {
     background: #FFFFFF;
-    border: 1px solid $c25;
+    border: rem(1px) solid $c25;
     box-sizing: border-box;
-    border-radius: 4px;
-    height: 44px;
-    padding-left: 14px;
+    border-radius: rem(4px);
+    height: rem(44px);
+    padding-left: rem(14px);
     color: $c75;
     position: relative;
     transition: .2s;
@@ -43,7 +43,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 10px;
+    padding: rem(10px);
     cursor: pointer;
     background: $gradientPrimary;
     background-clip: text;
@@ -52,6 +52,6 @@
 
   &_subscription {
     position: relative;
-    max-width: 266px;
+    max-width: rem(266px);
   }
 }

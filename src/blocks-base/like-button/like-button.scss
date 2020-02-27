@@ -1,13 +1,21 @@
 .like-button {
-  width: 40px;
-  height: 20px;
-  border-radius: 10px;
+  width: rem(40.2px);
+  height: rem(20.2px);
+  border-radius: rem(10px);
   background: $c25;
-  padding: 1px;
+  //padding: rem(1.2px);
   box-sizing: border-box;
 
   * {
     box-sizing: border-box;
+  }
+
+  &__label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__input {
@@ -30,12 +38,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 38px;
-    height: 18px;
-    border-radius: 10px;
+    width: rem(38px);
+    height: rem(18px);
+    border-radius: rem(10px);
     background: #fff;
     cursor: pointer;
-    padding-left: 10px;
+    padding-left: rem(10px);
     font-size: rem(10px);
     color: $c25;
     transition: .2s;
@@ -47,8 +55,8 @@
     position: absolute;
     content: 'favorite_border';
     color: $c25;
-    top: 4px;
-    left: 4px;
+    top: rem(4px);
+    left: rem(4px);
     font-size: rem(10px);
   }
 

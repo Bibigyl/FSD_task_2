@@ -8,29 +8,29 @@
     width: 100%;
 
     &:nth-child(1) {
-      max-width: 320px;
-      margin-right: 40px;
-      margin-bottom: 20px;
+      max-width: rem(320px);
+      margin-right: rem(40px);
+      margin-bottom: rem(20px);
     }
 
     &:nth-child(2) {
       width: 100%;
-      max-width: 265px;
-      margin-right: 40px;
-      margin-bottom: 20px;
+      max-width: rem(265px);
+      margin-right: rem(40px);
+      margin-bottom: rem(20px);
     }
 
     &:nth-child(3) {
       width: 100%;
-      max-width: 320px;
-      margin-bottom: 20px;
+      max-width: rem(320px);
+      margin-bottom: rem(20px);
     }
   }
 
   &__list {
 
     &_close {
-      margin-bottom: 33px;
+      margin-bottom: rem(33px);
     }
   }
 }

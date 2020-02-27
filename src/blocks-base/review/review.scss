@@ -6,18 +6,18 @@
   }
 
   &__person {
-    margin-bottom: 8px;
+    margin-bottom: rem(8px);
   }
 
   &__avatar {
-    width: 48px;
-    height: 48px;
-    border: 2px solid #FFFFFF;
+    width: rem(48px);
+    height: rem(48px);
+    border: rem(2px) solid #FFFFFF;
     box-sizing: border-box;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, .1);
-    border-radius: 48px;
+    box-shadow: rem(0px) rem(10px) rem(20px) rgba(31, 32, 65, .1);
+    border-radius: rem(48px);
     float: left;
-    margin-right: 10px;
+    margin-right: rem(10px);
   }
 
   &__name {
@@ -34,16 +34,16 @@
   }
 
   &__like-button {
-    margin-right: 14px;
-    margin-left: 4px;
-    margin-top: 4px;
+    margin-right: rem(14px);
+    margin-left: rem(4px);
+    margin-top: rem(4px);
   }
 
   &__text {
-    padding-top: 2px;
+    padding-top: rem(2px);
   }
 }
 
 .ui-review__avatar {
-  background-position: -22px -12px;
+  background-position: rem(-22px) rem(-12px);
 }

@@ -1,3 +1,7 @@
+@import '../../scss/_vars';
+
+@import '../../scss/_mixins';
+
 .landing-page {
 
   &__front {
@@ -9,33 +13,33 @@
 
   &__container {
     width: 100%;
-    max-width: 1200px;
-    height: 830px;
-    padding: 20px;
+    max-width: rem(1200px);
+    height: rem(830px);
+    padding: rem(20px);
     margin-left: auto;
     margin-right: auto;
     position: relative;
   }
 
   &__search-card {
-    margin-top: 49px;
+    margin-top: rem(49px);
   }
 
   &__tagline {
     position: absolute;
-    bottom: 22px;
-    right: 14px;
-    max-width: 300px;
+    bottom: rem(22px);
+    right: rem(14px);
+    max-width: rem(300px);
     text-align: right;
   }
 }
 
-@media(max-width: 600px) {
+@media(max-width: rem(600px)) {
 
   .landing-page {
 
     &__container {
-      height: 620px;
+      height: rem(620px);
     }
   }
 }

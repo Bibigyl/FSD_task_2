@@ -1,6 +1,6 @@
 .slider-range {
   width: 100%;
-  max-width: 266px;
+  max-width: rem(266px);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -13,17 +13,17 @@
   &__slider {
     position: relative;
     width: 100%;
-    margin-top: 23px; 
+    margin-top: rem(23px); 
   }
 
   &__title {
     width: 50%;
-    min-width: 100px;
+    min-width: rem(100px);
   }
 
   &__text-wrap {
     width: 50%;    
-    min-width: 100px;
+    min-width: rem(100px);
   }
 
   &__text {
@@ -31,7 +31,7 @@
     z-index: 10;
     font-size: rem(12px);
     text-align: right;
-    line-height: 15px;
+    line-height: rem(15px);
   }
 }
 
@@ -41,35 +41,35 @@
 .slider-range {
 
   .ui-slider {
-    border: 1px solid $c25;
-    height: 6px;
+    border: rem(1px) solid $c25;
+    height: rem(6px);
     position: relative;
-    border-radius: 100px;
+    border-radius: rem(100px);
   }
 
   .ui-slider-range {
     background: $gradientSecondary;
-    height: 20px;
+    height: rem(20px);
     position: absolute;
   }
 
   .ui-slider-horizontal .ui-slider-range {
-    height: 6px;
-    top: -1px;
+    height: rem(6px);
+    top: rem(-1px);
   }
 
   .ui-slider .ui-slider-handle {
     background: $secondary;
     position: absolute;
-    width: 16px;
-    height: 16px;
-    top: -6px;
+    width: rem(16px);
+    height: rem(16px);
+    top: rem(-6px);
     display: block;
     transform: translateX(-50%);
-    border-radius: 100px;
+    border-radius: rem(100px);
     z-index: 10;
     background: $gradientSecondary;
-    border: 2px solid #fff;
+    border: rem(2px) solid #fff;
     cursor: pointer;
 
     &:active {
@@ -82,7 +82,7 @@
   }
 
   .range-divider {
-    width: 10px;
+    width: rem(10px);
     text-align: center;
     display: inline-block;
 

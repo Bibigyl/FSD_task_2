@@ -4,19 +4,19 @@
   &__switch {
 
     &:first-child {
-      margin-bottom: 28px;
+      margin-bottom: rem(28px);
     }
 
     &:nth-child(2) {
-      margin-bottom: 39px;
+      margin-bottom: rem(39px);
     }
 
     &:nth-child(3) {
-      margin-bottom: 45px;
+      margin-bottom: rem(45px);
     }
 
     &:nth-child(4) {
-      margin-bottom: 40px;
+      margin-bottom: rem(40px);
     }
   }
 }
