@@ -3,17 +3,21 @@ include ../../blocks-base/title/title
 include ../../blocks-base/calendar/calendar
 
 
-mixin date-dropdown({firstDate, lastDate, placeholder, language, buttons} = {})
+mixin date-dropdown(options = {})
     -
+        let {
+            firstDate, 
+            lastDate, 
+            placeholder = 'DD.MM.YYYY', 
+            language = 'en', 
+            buttons = ['clear', 'apply'],
+        } = options;
+
         let maskParameters = {
             type: 'date',
             delimiter: '.',
             pattern: ['d', 'm', 'Y']
         };
-
-        placeholder = placeholder || 'DD.MM.YYYY';
-        language = language || 'en';
-        buttons = buttons || ['clear', 'apply'];
 
         let firstTextField = {};
         firstTextField['maskParameters'] = maskParameters;

@@ -1,6 +1,6 @@
-mixin like-button({number, isChecked} = {})
+mixin like-button({number = 0, isChecked} = {})
+
 	-let likeButtonClass = isChecked ? 'like-button_checked' : '';
-	-number = number || 0;
 	
 	.like-button.js-like-button(class=likeButtonClass)
 		label.like-button__label

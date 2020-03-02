@@ -2,10 +2,16 @@ include ../../blocks-base/text-field/text-field
 include ../../blocks-base/title/title
 include ../../blocks-base/calendar/calendar
 
-mixin filter-date-dropdown({title, firstDate, lastDate, textField = {}, language, buttons} = {})
+mixin filter-date-dropdown(options = {})
     -
-        language = language || 'en';
-        buttons = buttons || ['clear', 'apply'];
+        let {
+            title, 
+            firstDate, 
+            lastDate, 
+            textField, 
+            language = 'en', 
+            buttons = ['clear', 'apply']
+        } = options;
 
     .filter-date-dropdown.js-filter-date-dropdown(data-first-date=firstDate data-last-date=lastDate 'data-language'=language 'data-button-to-clear'=buttons[0] 'data-button-to-apply'=buttons[1])
         if title

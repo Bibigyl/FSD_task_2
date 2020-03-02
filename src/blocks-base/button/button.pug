@@ -1,7 +1,13 @@
-mixin button({text, isSecondary, isExtended, isSmall, type} = {})
+mixin button(options = {})
 	-
-		text = text || 'Click me';
-		type = type || 'button';
+		let {
+			text = 'Click me', 
+			isSecondary, 
+			isExtended, 
+			isSmall, 
+			type = 'button'
+		} = options;
+
 		let secondary = isSecondary ? 'button_secondary' : false;
 		let extended = isExtended ? 'button_extended' : false;
 		let small = isSmall ? 'button_small' : false;

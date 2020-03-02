@@ -1,14 +1,13 @@
-mixin rate-button({rate, maxRate, isClickable})
+mixin rate-button({rate, maxRate = 5, isClickable})
 	- 
-		isClickable = isClickable ? 'rate-button_clickable js-rate-button_clickable' : false;
-		isIconClickable = isClickable ? 'js-rate-button__icon' : false;
-		maxRate = maxRate || 5;
+		clickable = isClickable ? 'rate-button_clickable js-rate-button_clickable' : false;
+		iconClickable = clickable ? 'js-rate-button__icon' : false;
 
-	.rate-button(class=isClickable)
+	.rate-button(class=clickable)
 		- let icon;
 		- let checked;
 
 		- for (let i = 0; i < maxRate; i++)
 			- icon = i < rate ? 'star' : 'star_border';
 			- checked = i < rate ? 'rate-button__icon_checked' : false;
-			i.rate-button__icon.material-icons(class=[checked, isIconClickable])= icon
+			i.rate-button__icon.material-icons(class=[checked, iconClickable])= icon

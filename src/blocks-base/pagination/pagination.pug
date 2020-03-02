@@ -1,6 +1,5 @@
-mixin pagination({itemsOnPage, itemsNumber, page, text})
+mixin pagination({itemsOnPage, itemsNumber, page = 1, text})
 	-
-		page = page || 1;
 		let first = itemsOnPage*(page - 1) + 1;
 		let last = first + itemsOnPage - 1;
 		let whole = itemsNumber < 100 ? itemsNumber : '100+';

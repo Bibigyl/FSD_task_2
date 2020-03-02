@@ -1,5 +1,4 @@
-mixin color({color, opacity, title})
-    - opacity = opacity || 1;
+mixin color({color, opacity = 1, title})
     .color
         .color__square(style=`background-color: ${color}; opacity: ${opacity}`)
         .color__description

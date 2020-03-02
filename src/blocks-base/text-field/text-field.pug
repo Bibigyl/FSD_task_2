@@ -1,9 +1,18 @@
 include ../../blocks-base/title/title
 
-mixin text-field({title, isSubscription, maskParameters = false, placeholder = false, type = 'text', value = false} = {})
+mixin text-field(options = {})
+	-
+		let {
+			title, 
+			isSubscription, 
+			maskParameters = false, 
+			placeholder = false, 
+			type = 'text', 
+			value = false
+		} = options;
 
-	- let subscription = isSubscription ? 'text-field_subscription' : false;
-	- let classMasked = maskParameters ? 'text-field_masked' : false;
+		let subscription = isSubscription ? 'text-field_subscription' : false;
+		let classMasked = maskParameters ? 'text-field_masked' : false;
 
 	.text-field.js-text-field(class=[subscription, classMasked])
 		if title
