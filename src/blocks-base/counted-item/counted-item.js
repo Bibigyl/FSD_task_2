@@ -11,32 +11,29 @@ $( document ).ready(function() {
             let text = $item.find(".js-counted-item__text").text();
             let min = $item.attr('data-min');
             let max = $item.attr('data-max');
-    
-            if ( !$(this).hasClass("counted-item__operation_disabled") ) {
 
-                if ( $(this).hasClass("js-counted-item__operation_dec") ) {
+            if ($(this).hasClass("counted-item__operation_disabled")) {return;}
 
-                    value = value - 1;
-                    $inc.removeClass("counted-item__operation_disabled");
+            if ( $(this).hasClass("js-counted-item__operation_dec") ) {
 
-                    if ( value == min ) { 
-                        $(this).addClass("counted-item__operation_disabled") 
-                    } 
-                } else {
+                value = value - 1;
+                $inc.removeClass("counted-item__operation_disabled");
 
-                    value = value + 1;
-                    $dec.removeClass("counted-item__operation_disabled");
-
-                    if ( value == max ) { 
-                        $(this).addClass("counted-item__operation_disabled") 
-                    }
+                if ( value == min ) { 
+                    $(this).addClass("counted-item__operation_disabled") 
                 }
-                $value.text(value);
 
             } else {
-                return;
+
+                value = value + 1;
+                $dec.removeClass("counted-item__operation_disabled");
+
+                if ( value == max ) { 
+                    $(this).addClass("counted-item__operation_disabled") 
+                }
             }
 
+            $value.text(value);
             text = value == 0 ? '' : value + ' ' + text;
             $item.attr('data-output', text)
         });
