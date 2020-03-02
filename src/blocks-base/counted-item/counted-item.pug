@@ -1,10 +1,12 @@
-mixin counted-item({text, value = 0, gettingDataClass})
+mixin counted-item({text, value = 0, gettingDataClass, min = 0, max = 99})
     -
-        let attr = value > 0 ? value + ' ' + text : '';
-        decDisabled = value < 1 ? 'counted-item__operation_disabled' : false;
-        incDisabled = value > 98 ? 'counted-item__operation_disabled' : false;
+        value = value < min ? min : value;
+        value = value > max ? max : value;
+        let attr = value > min ? value + ' ' + text : '';
+        decDisabled = value == min ? 'counted-item__operation_disabled' : false;
+        incDisabled = value == max ? 'counted-item__operation_disabled' : false;
 
-    .counted-item.js-counted-item(class=gettingDataClass data-output=attr)
+    .counted-item.js-counted-item(class=gettingDataClass data-output=attr data-min=min data-max=max)
         .counted-item__text.js-counted-item__text= text
 
         button.counted-item__operation.counted-item__operation_dec.js-counted-item__operation.js-counted-item__operation_dec(type='button' class=decDisabled) -
