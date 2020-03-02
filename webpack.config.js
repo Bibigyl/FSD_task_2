@@ -3,7 +3,9 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+	CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 const ghpages = require('gh-pages');
@@ -24,8 +26,7 @@ module.exports = {
 		filename: '[name].js'
 	},
 	module: {
-		rules: [
-			{
+		rules: [{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
@@ -34,7 +35,7 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', {
+				use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', {
 					loader: 'postcss-loader',
 					options: {
 						plugins: () => autoprefixer({
@@ -67,12 +68,12 @@ module.exports = {
 		]
 	},
 	resolve: {
-    	alias: {
+		alias: {
 			//locale problem: https://github.com/moment/moment/issues/2979
 			moment$: 'moment/moment.js',
-    	}
-  	},
-	plugins: [ 
+		}
+	},
+	plugins: [
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
@@ -83,7 +84,7 @@ module.exports = {
 			template: './src/pages/landing-page/landing-page.pug',
 			filename: 'landing-page.html'
 		}),
- 		new HtmlWebpackPlugin({
+		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './src/pages/room-details/room-details.pug',
@@ -133,7 +134,7 @@ module.exports = {
 		new MomentLocalesPlugin({
 			localesToKeep: ['es-us', 'ru'],
 		}),
-    	//locale problem: https://github.com/moment/moment/issues/2979
+		//locale problem: https://github.com/moment/moment/issues/2979
 		new webpack.ContextReplacementPlugin(/\.\/locale$/, 'empty-module', false, /js$/),
 	],
 	devtool: 'inline-source-map',
@@ -144,4 +145,4 @@ module.exports = {
 	}
 };
 
-ghpages.publish('dist', function(err) {});
+ghpages.publish('dist', function (err) {});

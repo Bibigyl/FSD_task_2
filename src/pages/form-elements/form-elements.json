@@ -25,7 +25,7 @@
             },
             "content": {
                 "content": {
-                    "text": "Сколько гостей",
+                    "initialText": "Сколько гостей",
                     "items": [
                         {"text": "взрослые"}, 
                         {"text": "дети"}, 

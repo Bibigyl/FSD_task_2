@@ -29,7 +29,7 @@ $( document ).ready(function() {
             }
 
             text = value == 0 ? '' : value + ' ' + text;
-            $item.attr('data-counted-item', text)
+            $item.attr('data-output', text)
         });
     });
 
@@ -40,17 +40,16 @@ $( document ).ready(function() {
         let dec = item.querySelector('.js-counted-item__operation_dec');
 
         let itemObserver = new MutationObserver(function() {
-            let clear = item.hasAttribute('data-clear');
 
-            if ( clear ) { 
+            if (item.getAttribute('data-input') == 'clear') {
                 valueNode.textContent = '0';
                 dec.classList.add('counted-item__operation_disabled');
-
-                item.setAttribute('data-counted-item', '');
-                item.removeAttribute('data-clear');
+                item.setAttribute('data-output', '');
+                item.setAttribute('data-input', '');
             }
+
         });
 
-        itemObserver.observe(item, {attributes: true});
+        itemObserver.observe(item, {attributeFilter: ['data-input']});
     });
 });

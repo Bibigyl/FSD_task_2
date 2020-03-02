@@ -13,10 +13,10 @@ $(document).ready(function () {
     $(".js-dropdown__action_clear").each(function () {
         $(this).on("click", function () {
             let $dropdown = $(this).closest('.js-dropdown');
-            let $items = $dropdown.find('.js-dropdown__item-data');
+            let $items = $dropdown.find('.js-dropdown__counted-item');
 
             $items.each(function () {
-                $(this).attr('data-clear', true);
+                $(this).attr('data-input', 'clear');
             });
 
             $(this).addClass("dropdown__action_hidden");
@@ -35,24 +35,22 @@ $(document).ready(function () {
 
     document.querySelectorAll('.js-dropdown').forEach(function (dropdown) {
 
-        let items = dropdown.querySelectorAll('.js-dropdown__item-data');
+        let items = dropdown.querySelectorAll('.js-dropdown__counted-item');
         let textField = dropdown.querySelector('.js-dropdown__text');
         let clear = dropdown.querySelector('.js-dropdown__action_clear');
         let initialText = dropdown.getAttribute('data-initial-text');
         let text = '';
 
 
-
         let dropdownObserver = new MutationObserver(function () {
 
             let itemText;
             items.forEach(function (item) {
-                itemText = item.getAttribute('data-counted-item');
+                itemText = item.getAttribute('data-output');
                 text = itemText != '' ? text + itemText + ', ' : text;
             });
 
-
-            if (text.slice(0, -2)) {
+            if (text != '') {
                 if (clear) {clear.classList.remove('dropdown__action_hidden')};
                 text = text.slice(0, -2);
             } else {
@@ -65,9 +63,7 @@ $(document).ready(function () {
         });
 
         items.forEach(function (item) {
-            dropdownObserver.observe(item, {
-                attributes: true
-            });
+            dropdownObserver.observe(item, {attributeFilter: ['data-output']});
         });
 
     });

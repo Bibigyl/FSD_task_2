@@ -5,7 +5,7 @@ mixin counted-item({text, value, gettingDataClass})
         decDisabled = value < 1 ? 'counted-item__operation_disabled' : false;
         incDisabled = value > 98 ? 'counted-item__operation_disabled' : false;
 
-    .counted-item.js-counted-item(class=gettingDataClass data-counted-item=attr)
+    .counted-item.js-counted-item(class=gettingDataClass data-output=attr)
         .counted-item__text.js-counted-item__text= text
 
         button.counted-item__operation.counted-item__operation_dec.js-counted-item__operation.js-counted-item__operation_dec(type='button' class=decDisabled) -

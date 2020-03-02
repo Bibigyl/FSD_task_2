@@ -25,7 +25,7 @@ mixin dropdown({title, content = {initialText, text, items, buttons}, isOpen, is
 				each item in content.items
 					li.dropdown__item
 						- item.value = item.value || 0;
-						- item.gettingDataClass = 'js-dropdown__item-data';
+						- item.gettingDataClass = 'js-dropdown__counted-item';
 						- isClearVisible = item.value > 0 ? false : isClearVisible;
 
 						+counted-item(item)
