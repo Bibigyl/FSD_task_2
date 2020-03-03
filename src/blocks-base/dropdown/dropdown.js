@@ -1,10 +1,12 @@
 $(document).ready(function () {
 
+    const animationDurationInMs = 200;
+
     $(".js-dropdown__arrow").each(function () {
         $(this).on("click", function () {
             let $dropdown = $(this).closest('.js-dropdown');
 
-            $dropdown.children(".js-dropdown__popup").slideToggle(200, "linear");
+            $dropdown.children(".js-dropdown__popup").slideToggle(animationDurationInMs, "linear");
             $dropdown.toggleClass("dropdown_open");
         });
     });
@@ -28,7 +30,7 @@ $(document).ready(function () {
         $(this).on("click", function () {
             let $dropdown = $(this).closest('.js-dropdown');
 
-            $dropdown.find('.js-dropdown__popup').slideToggle(200, "linear").parent().toggleClass("dropdown_open");
+            $dropdown.find('.js-dropdown__popup').slideToggle(animationDurationInMs, "linear").parent().toggleClass("dropdown_open");
         });
     });
 
