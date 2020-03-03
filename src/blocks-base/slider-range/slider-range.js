@@ -3,9 +3,9 @@ $( document ).ready(function() {
   $('.slider-range__slider').each(function() {
 
     let $slider = $(this).closest('.slider-range');
-    let min = parseInt($slider.attr('data-min'));
-    let max = parseInt($slider.attr('data-max'));
-    let step = parseInt($slider.attr('data-step'));
+    let min = parseInt($slider.attr('data-min'), 10);
+    let max = parseInt($slider.attr('data-max'), 10);
+    let step = parseInt($slider.attr('data-step'), 10);
     let values;
 
     try {
@@ -35,11 +35,11 @@ $( document ).ready(function() {
         $('.slider-range__text').html('<span class="range-value">' + ui.values[0].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span><span class="range-divider"></span><span class="range-value">' + ui.values[1].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span>');
 
         // Get old value
-        var previousVal = parseInt($(this).data('value'));
+        var previousVal = parseInt($(this).data('value'), 10);
 
         // Save new value
         $(this).data({
-          'value': parseInt(ui.value)
+          'value': parseInt(ui.value, 10)
         });
 
       }

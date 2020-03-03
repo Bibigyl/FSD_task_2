@@ -7,7 +7,7 @@ $( document ).ready(function() {
             let $value = $item.find(".js-counted-item__value");
             let $inc = $item.find(".js-counted-item__operation_inc");
             let $dec = $item.find(".js-counted-item__operation_dec");
-            let value = parseInt( $value.text() );
+            let value = parseInt($value.text(), 10);
             let text = $item.find(".js-counted-item__text").text();
             let min = $item.attr('data-min');
             let max = $item.attr('data-max');
