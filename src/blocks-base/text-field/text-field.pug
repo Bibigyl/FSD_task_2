@@ -5,14 +5,14 @@ mixin text-field(options = {})
 		let {
 			title, 
 			isSubscription, 
-			maskParameters = {}, 
-			placeholder = '', 
+			maskParameters = {},
+			placeholder,
 			type = 'text', 
-			value = ''
+			value
 		} = options;
 
 		let subscription = isSubscription ? 'text-field_subscription' : '';
-		let classMasked = maskParameters ? 'text-field_masked' : '';
+		let classMasked = Object.keys(maskParameters) != 0 ? 'text-field_masked' : '';
 
 	.text-field.js-text-field(class=[subscription, classMasked])
 		if title
