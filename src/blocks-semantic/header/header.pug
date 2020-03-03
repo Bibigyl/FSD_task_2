@@ -1,7 +1,7 @@
 include ../../blocks-base/button/button
 
 mixin header({items, loginButton, registerButton, user, isMenuItemSlim})
-	- let slim = isMenuItemSlim ? 'header__menu-item_slim' : false;
+	- let slim = isMenuItemSlim ? 'header__menu-item_slim' : '';
 	header.header
 		.header__container
 			a.header__logo
@@ -11,8 +11,8 @@ mixin header({items, loginButton, registerButton, user, isMenuItemSlim})
 				nav.header__menu-nav
 					ul.header__menu-items
 						each item in items
-							- let active = item.isActive ? 'header__menu-item_active' : false;
-							- let withArrow = item.hasSubmenu ? 'header__menu-item_with-arrow' : false;
+							- let active = item.isActive ? 'header__menu-item_active' : '';
+							- let withArrow = item.hasSubmenu ? 'header__menu-item_with-arrow' : '';
 							li.header__menu-item(class=[slim, active, withArrow])
 								a(href=item.href)= item.text
 								if item.hasSubmenu

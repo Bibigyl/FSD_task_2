@@ -4,7 +4,7 @@ $(document).ready(function () {
         $(this).on("click", function () {
             let $dropdown = $(this).closest('.js-dropdown');
 
-            $dropdown.children(".js-dropdown__popup").slideToggle(200, "linear");
+            $dropdown.children(".js-dropdown__popup").slideToggle(500, "linear");
             $dropdown.toggleClass("dropdown_open");
         });
     });

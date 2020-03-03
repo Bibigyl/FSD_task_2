@@ -4,9 +4,9 @@ include ../counted-item/counted-item
 
 mixin dropdown({title, content = {initialText, text, items, buttons}, isOpen, isSmall})
 	-	
-		let open = isOpen ? 'dropdown_open' : false;
-		let small = isSmall ? 'dropdown_small' : false;
-		let isClearVisible = 'dropdown__action_hidden';
+		let open = isOpen ? 'dropdown_open' : '';
+		let small = isSmall ? 'dropdown_small' : '';
+		let clearHidden = 'dropdown__action_hidden';
 		let text = content.text || content.initialText;
 
 	.dropdown.js-dropdown(class=[open, small] data-initial-text=content.initialText)
@@ -26,12 +26,12 @@ mixin dropdown({title, content = {initialText, text, items, buttons}, isOpen, is
 					li.dropdown__item
 						- item.value = item.value || 0;
 						- item.gettingDataClass = 'js-dropdown__counted-item';
-						- isClearVisible = item.value > 0 ? false : isClearVisible;
+						- clearHidden = item.value > 0 ? '' : clearHidden;
 
 						+counted-item(item)
 			
 			if content.buttons
-				.dropdown__action.dropdown__action_clear.js-dropdown__action_clear(class=isClearVisible)
+				.dropdown__action.dropdown__action_clear.js-dropdown__action_clear(class=clearHidden)
 					+icon-link({text: content.buttons[0]})
 				.dropdown__action.dropdown__action_apply.js-dropdown__action_apply
 					+icon-link({text: content.buttons[1], isPrimary: true})

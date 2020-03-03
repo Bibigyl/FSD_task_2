@@ -1,5 +1,5 @@
 mixin titled-block({title, isMarginBig})
-    - let big = isMarginBig ? 'titled-block__title_with-big-margin' : false;
+    - let big = isMarginBig ? 'titled-block__title_with-big-margin' : '';
     .titled-block
         h3.titled-block__title(class=big)= title
         if block

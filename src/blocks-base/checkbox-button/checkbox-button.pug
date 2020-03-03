@@ -1,6 +1,6 @@
-mixin checkbox-button({text, richText, isChecked=false, name=false})
+mixin checkbox-button({text, richText, isChecked=false, name=''})
 
-	-let rich = richText ? 'checkbox-button_rich' : false;
+	-let rich = richText ? 'checkbox-button_rich' : '';
 	.checkbox-button(class=rich data-name=name)
 		label.checkbox-button__label
 			input.checkbox-button__input(type="checkbox" checked=isChecked)
