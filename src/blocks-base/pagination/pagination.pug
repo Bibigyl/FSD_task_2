@@ -4,7 +4,7 @@ mixin pagination({itemsOnPage, itemsNumber, page = 1, text})
 		let last = first + itemsOnPage - 1;
 		let whole = itemsNumber < 100 ? itemsNumber : '100+';
 
-		let fullText = `#{first} - #{last} #{text[0]} #{whole} #{text[1]}`
+		let fullText = `${first} - ${last} ${text[0]} ${whole} ${text[1]}`
 
 	.pagination(data-items-on-page=itemsOnPage data-items-number=itemsNumber data-page=page)
 		.pagination__pages.js-pagination__pages
