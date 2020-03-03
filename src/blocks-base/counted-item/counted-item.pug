@@ -1,4 +1,4 @@
-mixin counted-item({text, value, gettingDataClass, min = 0, max = 99})
+mixin counted-item({text, value, outerAttr, min = 0, max = 99})
     -
         value = Math.max(min, value);
         value = Math.min(max, value);
@@ -6,7 +6,7 @@ mixin counted-item({text, value, gettingDataClass, min = 0, max = 99})
         decDisabled = value == min ? 'counted-item__operation_disabled' : '';
         incDisabled = value == max ? 'counted-item__operation_disabled' : '';
 
-    .counted-item.js-counted-item(class=gettingDataClass data-output=attr data-min=min data-max=max)
+    .counted-item.js-counted-item(data-outer=outerAttr data-output=attr data-min=min data-max=max)
         .counted-item__text.js-counted-item__text= text
 
         button.counted-item__operation.counted-item__operation_dec.js-counted-item__operation.js-counted-item__operation_dec(type='button' class=decDisabled) -

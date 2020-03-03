@@ -37,7 +37,7 @@ $(document).ready(function () {
 
     document.querySelectorAll('.js-dropdown').forEach(function (dropdown) {
 
-        let items = dropdown.querySelectorAll('.js-dropdown__counted-item');
+        let items = dropdown.querySelectorAll('[data-outer="dropdown-item"]');
         let textField = dropdown.querySelector('.js-dropdown__text');
         let clear = dropdown.querySelector('.js-dropdown__action_clear');
         let initialText = dropdown.getAttribute('data-initial-text');
