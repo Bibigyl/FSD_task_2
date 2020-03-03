@@ -16,8 +16,7 @@ mixin room-card({image, number, lux, price, rateButton, reviews})
 		.room-card__content
 			.room-card__room
 				.room-card__room-number 
-					span.room-card__number-simbol №
-					| #{number}
+					span.room-card__number-simbol= `№${number}`
 				if lux
 					span.room-card__class= lux
 			.room-card__price

@@ -34,7 +34,7 @@ $( document ).ready(function() {
             }
 
             $value.text(value);
-            text = value == 0 ? '' : value + ' ' + text;
+            text = value == 0 ? '' : `${value} ${text}`;
             $item.attr('data-output', text)
         });
     });

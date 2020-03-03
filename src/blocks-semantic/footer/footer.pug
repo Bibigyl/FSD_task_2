@@ -32,4 +32,4 @@ mixin footer({text, items, subscription, copyright, links, isRussian})
 			.footer__links
 				each link in links
 					a.footer__link(href=link.href)
-						i.footer__link-icon.fab(class='fa-' + link.name)
+						i.footer__link-icon.fab(class=`fa-${link.name}`)

@@ -10,8 +10,8 @@ $( document ).ready(function() {
         let firstDate = $this.find('.js-date-dropdown__date_order_first').attr('data-date') || false;
         let lastDate = $this.find('.js-date-dropdown__date_order_last').attr('data-date') || false;
         let language = $this.attr('data-language');
-        let buttonClear = $this.attr('data-button-to-clear');
-        let buttonApply = $this.attr('data-button-to-apply');
+        let buttonClearText = $this.attr('data-button-to-clear');
+        let buttonApplyText = $this.attr('data-button-to-apply');
 
         $this.dateRangePicker({
             language: language,
@@ -31,7 +31,7 @@ $( document ).ready(function() {
             container: $calendar
         });
         
-        // Cобытия "принять" и "очистить" создаются после открытия
+
         $this.bind('datepicker-opened', function() {
 
             $calendar.addClass('.date-dropdown__calendar_open');
@@ -56,15 +56,15 @@ $( document ).ready(function() {
             });
         });
 
-        // Создаем кнопки "очистить" и "принять"
+
         $calendar.find('.date-picker-wrapper').append(
             '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear" type="button">' +
-            buttonClear + 
+            buttonClearText + 
             '</button><button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply" type="button">' + 
-            buttonApply + '</button>');
+            buttonApplyText + 
+            '</button>');
 
 
-        // Если возможно, устанавливаем дату
         if (firstDate && lastDate) {
             try {
                 $this.data('dateRangePicker').setDateRange(firstDate, lastDate);
@@ -73,7 +73,7 @@ $( document ).ready(function() {
             }            
         }
 
-        // Ввод даты вручную
+        
         $first.on('blur', inputOnBlur);
         $last.on('blur', inputOnBlur);
 

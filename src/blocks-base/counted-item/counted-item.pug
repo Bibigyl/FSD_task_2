@@ -1,7 +1,7 @@
 mixin counted-item({text, value, outerAttr, min = 0, max = 99})
     -
         value = Math.min(max, Math.max(min, value));
-        let attr = value > min ? value + ' ' + text : '';
+        let attr = value > min ? `${value} ${text}` : '';
         decDisabled = value == min ? 'counted-item__operation_disabled' : '';
         incDisabled = value == max ? 'counted-item__operation_disabled' : '';
 

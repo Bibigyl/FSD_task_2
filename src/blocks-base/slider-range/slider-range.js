@@ -31,21 +31,14 @@ $( document ).ready(function() {
       slide: function(event, ui) {
 
         // Update the range container values upon sliding
-
         $('.slider-range__text').html('<span class="range-value">' + ui.values[0].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span><span class="range-divider"></span><span class="range-value">' + ui.values[1].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + '<sup>₽</sup></span>');
 
-        // Get old value
-        var previousVal = parseInt($(this).data('value'), 10);
 
         // Save new value
         $(this).data({
           'value': parseInt(ui.value, 10)
         });
-
       }
-
     });
-
   });
-
 });

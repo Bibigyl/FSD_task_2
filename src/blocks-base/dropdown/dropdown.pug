@@ -6,7 +6,7 @@ mixin dropdown({title, content = {initialText, text, items, buttons}, isOpen, is
 	-	
 		let open = isOpen ? 'dropdown_open' : '';
 		let small = isSmall ? 'dropdown_small' : '';
-		let clearHidden = 'dropdown__action_hidden';
+		let isClearHidden = true;
 		let text = content.text || content.initialText;
 
 	.dropdown.js-dropdown(class=[open, small] data-initial-text=content.initialText)
@@ -26,11 +26,13 @@ mixin dropdown({title, content = {initialText, text, items, buttons}, isOpen, is
 					li.dropdown__item
 						- item.value = item.value || 0;
 						- item.outerAttr = 'dropdown-item';
-						- clearHidden = item.value > 0 ? '' : clearHidden;
+						- isClearHidden = item.value > 0 ? false : isClearHidden;
 
 						+counted-item(item)
 			
 			if content.buttons
+				- let clearHidden = isClearHidden ? 'dropdown__action_hidden' : '';
+
 				.dropdown__action.dropdown__action_clear.js-dropdown__action_clear(class=clearHidden)
 					+icon-link({text: content.buttons[0]})
 				.dropdown__action.dropdown__action_apply.js-dropdown__action_apply

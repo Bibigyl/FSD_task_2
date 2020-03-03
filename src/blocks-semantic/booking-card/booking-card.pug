@@ -8,12 +8,10 @@ mixin booking-card({room, dateDropdown, dropdown, infoItems, total, button})
 
 			.booking-card__main-info
 				span.booking-card__number 
-					span.booking-card__simbol-number №
-					| #{room.number}
+					span.booking-card__simbol-number= `№${room.number}`
 				span.booking-card__class= room.class
 				span.booking-card__price
-					span.booking-card__price-number= room.price
-					| #{room.term}
+					span.booking-card__price-number= `${room.price} ${room.term}`
 
 			.booking-card__date-dropdown
 				+date-dropdown(dateDropdown)

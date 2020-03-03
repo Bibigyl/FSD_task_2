@@ -67,7 +67,8 @@ $( document ).ready(function() {
             '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear" type="button">' +
             buttonClear + 
             '</button><button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply" type="button">' + 
-            buttonApply + '</button>');
+            buttonApply + 
+            '</button>');
     
         if (firstDate && lastDate) {
             try {
