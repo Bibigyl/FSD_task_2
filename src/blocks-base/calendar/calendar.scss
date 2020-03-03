@@ -1,12 +1,12 @@
 .calendar {
 
   .date-picker-wrapper {
-    border: rem(1px) solid $c25;
-    box-shadow: rem(0px) rem(10px) rem(20px) $c5;
+    border: rem(1px) solid $greyOpacity25;
+    box-shadow: rem(0px) rem(10px) rem(20px) $greyOpacity5;
 
     .month-name {
       font-family: 'Quicksand-Bold', sans-serif;
-      color: $c100;
+      color: $greyOpacity100;
       text-transform: capitalize;
       font-style: normal;
       font-weight: bold;
@@ -64,7 +64,7 @@
 
           &.lastMonth,
           &.nextMonth {
-            color: $c25;
+            color: $greyOpacity25;
           }
         }
 

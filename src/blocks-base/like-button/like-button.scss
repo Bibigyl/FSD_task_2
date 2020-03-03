@@ -4,7 +4,7 @@
   border-radius: rem(10px);
   box-sizing: border-box;
   border: solid rem(1px) transparent;
-  background-image: linear-gradient(white, white), linear-gradient(180deg, $c25 0%, $c25 100%);
+  background-image: linear-gradient(white, white), linear-gradient(180deg, $greyOpacity25 0%, $greyOpacity25 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 
@@ -35,7 +35,7 @@
     cursor: pointer;
     padding-left: rem(10px);
     font-size: rem(10px);
-    color: $c25;
+    color: $greyOpacity25;
     line-height: rem(17px);
     transition: .2s;
     position: relative;
@@ -45,7 +45,7 @@
     transition: .2s;
     position: absolute;
     content: 'favorite_border';
-    color: $c25;
+    color: $greyOpacity25;
     top: rem(4px);
     left: rem(4px);
     font-size: rem(10px);

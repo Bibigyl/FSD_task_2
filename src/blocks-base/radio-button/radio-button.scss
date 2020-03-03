@@ -21,7 +21,7 @@
     }
 
     &:checked+.radio-button__text {
-      color: $c75;
+      color: $greyOpacity75;
     }
   }
 
@@ -29,7 +29,7 @@
     position: relative;
     padding: 0 0 0 rem(30px);
     cursor: pointer;
-    color: $c50;
+    color: $greyOpacity50;
 
     &:before {
       box-sizing: border-box;
@@ -39,7 +39,7 @@
       left: 0;
       width: rem(20px);
       height: rem(20px);
-      border: rem(1px) solid $c25;
+      border: rem(1px) solid $greyOpacity25;
       border-radius: 50%;
       background: #FFF;
     }

@@ -13,12 +13,12 @@
 
   &__input {
     background: #FFFFFF;
-    border: rem(1px) solid $c25;
+    border: rem(1px) solid $greyOpacity25;
     box-sizing: border-box;
     border-radius: rem(4px);
     height: rem(44px);
     padding-left: rem(14px);
-    color: $c75;
+    color: $greyOpacity75;
     position: relative;
     transition: .2s;
     font-family: 'Montserrat';
@@ -28,13 +28,13 @@
     &::placeholder {
       font-family: 'Montserrat';
       font-weight: 400;
-      color: $c25;
+      color: $greyOpacity25;
     }
 
     &:hover,
     &:focus {
-      border-color: $c50;
-      color: $c75;
+      border-color: $greyOpacity50;
+      color: $greyOpacity75;
       transition: .2s;
     }
   }

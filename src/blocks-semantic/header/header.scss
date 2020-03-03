@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
-  box-shadow: rem(0px) rem(10px) rem(20px) $c5;
+  box-shadow: rem(0px) rem(10px) rem(20px) $greyOpacity5;
 
   &__container {
     width: 100%;
@@ -41,11 +41,11 @@
     padding: rem(3px) rem(5.9px) rem(4px);
     margin: rem(0px) rem(8px);
     cursor: pointer;
-    color: $c50;
+    color: $greyOpacity50;
     transition: .2s;
 
     &:hover {
-      color: $c75;
+      color: $greyOpacity75;
       transition: .2s;
     }
 
@@ -85,7 +85,7 @@
       width: rem(1px);
       height: rem(30px);
       margin-top: rem(6px);
-      background-color: $c5;
+      background-color: $greyOpacity5;
     }
   }
 
@@ -94,11 +94,11 @@
     line-height: rem(30px);
     margin-left: rem(25px);
     cursor: pointer;
-    color: $c50;
+    color: $greyOpacity50;
     transition: .2s;
 
     &:hover {
-      color: $c75;
+      color: $greyOpacity75;
       transition: .2s;
     }
   }
@@ -144,7 +144,7 @@
   &__hamburger-line {
     width: rem(30px);
     height: rem(2px);
-    background-color: $c25;
+    background-color: $greyOpacity25;
     display: block;
     margin: rem(10px) auto;
     -webkit-transition: all .3s ease-in-out;
@@ -173,8 +173,8 @@
       max-width: rem(300px);
       flex-wrap: wrap;
       justify-content: center;
-      box-shadow: rem(0px) rem(10px) rem(20px) $c5;
-      border: rem(1px) solid $c25;
+      box-shadow: rem(0px) rem(10px) rem(20px) $greyOpacity5;
+      border: rem(1px) solid $greyOpacity25;
       border-radius: rem(4px);
       display: none;
     }
@@ -192,7 +192,7 @@
 
     &__menu-item {
       width: 100%;
-      border-bottom: rem(1px) solid $c5;
+      border-bottom: rem(1px) solid $greyOpacity5;
       margin-left: 0;
       padding-left: rem(20px);
       margin-bottom: rem(10px);

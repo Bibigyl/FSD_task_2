@@ -37,7 +37,7 @@
       top: rem(0px);
       width: rem(20px);
       height: rem(20px);
-      border: rem(1px) solid $c25;
+      border: rem(1px) solid $greyOpacity25;
       background-color: #fff;
       border-radius: rem(4px);
       cursor: pointer;
@@ -64,12 +64,12 @@
   &__text {
     cursor: pointer;
     line-height: rem(20px);
-    color: $c50;
+    color: $greyOpacity50;
     display: block;
   }
 
   &__title {
-    color: $c75;
+    color: $greyOpacity75;
     font-weight: 700; 
     margin-bottom: rem(6px);
     cursor: pointer;
@@ -82,7 +82,7 @@
     .checkbox-button__text {
       font-size: rem(12px);
       line-height: rem(13.5px);
-      color: $c50;
+      color: $greyOpacity50;
     }
   }
 }

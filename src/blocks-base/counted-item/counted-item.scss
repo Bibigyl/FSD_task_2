@@ -6,7 +6,7 @@
   font-size: rem(12px);
   line-height: rem(25px);
   text-transform: uppercase;
-  color: $c100;
+  color: $greyOpacity100;
   box-sizing: border-box;
 
   * {
@@ -23,11 +23,11 @@
     background-color: #fff;
     width: rem(30px);
     height: rem(30px);
-    border: rem(1px) solid $c25;
+    border: rem(1px) solid $greyOpacity25;
     border-radius: rem(22px);
     text-align: center;
     font-size: rem(18px);
-    color: $c50;
+    color: $greyOpacity50;
     cursor: pointer;
   
     &_dec {

@@ -3,7 +3,7 @@
   max-width: rem(320px);
   min-width: rem(260px);
   border-radius: rem(4px);
-  box-shadow: rem(0px) rem(10px) rem(20px) $c5;
+  box-shadow: rem(0px) rem(10px) rem(20px) $greyOpacity5;
   background-color: #fff;
 
   &__image {
@@ -94,7 +94,7 @@
     font-weight: 700;
     font-size: rem(19px);
     line-height: rem(24px);
-    color: $c100;
+    color: $greyOpacity100;
     margin-right: rem(5px);
   }
 
@@ -119,7 +119,7 @@
   }
 
   &__price-number {
-    color: $c50;
+    color: $greyOpacity50;
     font-size: rem(14px);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -129,7 +129,7 @@
 
   &__price-text {
     font-size: rem(12px);
-    color: $c50;
+    color: $greyOpacity50;
     margin-left: rem(3px);
   }
 
@@ -147,7 +147,7 @@
   }
 
   &__reviews {
-    color: $c50;
+    color: $greyOpacity50;
 
     > * {
       display: inline-block;
@@ -155,7 +155,7 @@
   }
 
   &__reviews-number {
-    color: $c50;
+    color: $greyOpacity50;
     font-size: rem(14px);    
   }
 

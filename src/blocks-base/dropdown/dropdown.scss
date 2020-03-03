@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     height: rem(44px);
-    border: rem(1px) solid $c25;
+    border: rem(1px) solid $greyOpacity25;
     border-radius: rem(4px);
     transition: .4s;
     padding-left: rem(14px);
@@ -35,18 +35,18 @@
   &__arrow {
     padding: rem(10px);
     cursor: pointer;
-    color: $c50;
+    color: $greyOpacity50;
   }
 
   &__popup {
     display: none;
     position: absolute;
     left: rem(0px);
-    border: rem(1px) solid $c25;
+    border: rem(1px) solid $greyOpacity25;
     border-top: none;
     border-bottom-right-radius: rem(4px);
     border-bottom-left-radius: rem(4px);
-    box-shadow: rem(0px) rem(2px) rem(10px) $c5;
+    box-shadow: rem(0px) rem(2px) rem(10px) $greyOpacity5;
     z-index: 100;
     background-color: #fff;
     width: 100%;
@@ -86,12 +86,12 @@
 
     .dropdown__popup {
       display: block;
-      border-color: $c50;
+      border-color: $greyOpacity50;
       transition: border .4s;
     }
 
     .dropdown__field {
-      border-color: $c50;
+      border-color: $greyOpacity50;
       transition: .4s;
       border-bottom-right-radius: rem(0px);
       border-bottom-left-radius: rem(0px);

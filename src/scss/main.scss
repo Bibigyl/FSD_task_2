@@ -72,7 +72,7 @@ body {
   font-weight: 400;
   font-size: rem(14px);
   line-height: rem(24px);
-  color: $c75;
+  color: $greyOpacity75;
 }
 
 h1 {
@@ -80,7 +80,7 @@ h1 {
   font-weight: 700;
   font-size: rem(24px);
   line-height: rem(30px);
-  color: $c100;
+  color: $greyOpacity100;
 }
 
 h2 {
@@ -88,7 +88,7 @@ h2 {
   font-weight: 700;
   font-size: rem(19px);
   line-height: rem(24px);
-  color: $c100;
+  color: $greyOpacity100;
 }
 
 h3 {
@@ -97,7 +97,7 @@ h3 {
   font-size: rem(12px);
   line-height: rem(15px);
   text-transform: uppercase;
-  color: $c100;
+  color: $greyOpacity100;
 }
 
 /*------------------------------ Import styles ----------------------------------------*/

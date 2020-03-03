@@ -20,7 +20,7 @@
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     line-height: rem(24px);
-    color: $c100;
+    color: $greyOpacity100;
   }
 
   &__simbol-number {
@@ -37,7 +37,7 @@
 
   &__price {
     margin-left: auto;
-    color: $c50;
+    color: $greyOpacity50;
     font-size: rem(12px);
   }
 
@@ -73,10 +73,10 @@
     flex: none;
     width: rem(20px);
     height: rem(20px);
-    border: rem(1px) solid $c25;
+    border: rem(1px) solid $greyOpacity25;
     font-size: rem(12px);
     font-weight: bold;
-    color: $c25;
+    color: $greyOpacity25;
     border-radius: rem(100px);
     text-align: center;
     line-height: rem(20px);
@@ -100,7 +100,7 @@
       display: block;
       overflow: hidden;
       height: rem(18px);
-      border-bottom: rem(1px) dotted $c25;
+      border-bottom: rem(1px) dotted $greyOpacity25;
     }
   }
 
