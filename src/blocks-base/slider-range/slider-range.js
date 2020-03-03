@@ -3,9 +3,9 @@ $( document ).ready(function() {
   $('.slider-range__slider').each(function() {
 
     let $slider = $(this).closest('.slider-range');
-    let min = +$slider.attr('data-min');
-    let max = +$slider.attr('data-max');
-    let step = +$slider.attr('data-step');
+    let min = parseInt($slider.attr('data-min'));
+    let max = parseInt($slider.attr('data-max'));
+    let step = parseInt($slider.attr('data-step'));
     let values;
 
     try {
