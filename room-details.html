@@ -18,7 +18,7 @@
   <body>
     <div class="room-details">
       <div class="room-details__header">
-        <header class="header">
+        <header class="header js-header">
           <div class="header__container"><a class="header__logo"><svg width="106" height="40" viewBox="0 0 106 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M62.335 13.368C62.5567 13.368 62.7375 13.4438 62.8775 13.5955C63.0292 13.7355 63.105 13.9163 63.105 14.138C63.105 14.348 63.0292 14.5288 62.8775 14.6805C62.7375 14.8322 62.5567 14.908 62.335 14.908H58.5725V25.408C58.5725 25.6297 58.4967 25.8163 58.345 25.968C58.205 26.108 58.0242 26.178 57.8025 26.178C57.5925 26.178 57.4117 26.108 57.26 25.968C57.1083 25.8163 57.0325 25.6297 57.0325 25.408V14.908H53.27C53.06 14.908 52.8792 14.8322 52.7275 14.6805C52.5758 14.5288 52.5 14.348 52.5 14.138C52.5 13.9163 52.5758 13.7355 52.7275 13.5955C52.8792 13.4438 53.06 13.368 53.27 13.368H62.335Z" fill="#1F2041"/>
 <path d="M68.9076 13.368C69.7943 13.368 70.6285 13.5372 71.4101 13.8755C72.2035 14.2138 72.8918 14.6747 73.4751 15.258C74.0701 15.8413 74.5368 16.5297 74.8751 17.323C75.2134 18.1047 75.3826 18.9388 75.3826 19.8255C75.3826 20.8638 75.1609 21.8205 74.7176 22.6955C74.2743 23.5705 73.6735 24.3055 72.9151 24.9005C72.9151 24.9005 72.9035 24.9122 72.8801 24.9355C72.3201 25.3555 71.7076 25.688 71.0426 25.933C70.3776 26.1663 69.666 26.283 68.9076 26.283C68.0209 26.283 67.1868 26.1138 66.4051 25.7755C65.6234 25.4372 64.9351 24.9763 64.3401 24.393C63.7568 23.8097 63.296 23.1272 62.9576 22.3455C62.6193 21.5638 62.4501 20.7238 62.4501 19.8255C62.4501 18.8455 62.6484 17.9413 63.0451 17.113C63.4418 16.273 63.9843 15.5555 64.6726 14.9605L64.7426 14.8905C64.7543 14.8905 64.7718 14.8788 64.7951 14.8555C65.3551 14.3888 65.9851 14.0272 66.6851 13.7705C67.3851 13.5022 68.1259 13.368 68.9076 13.368ZM68.9076 24.743C69.351 24.743 69.771 24.6905 70.1676 24.5855C70.576 24.4688 70.961 24.3113 71.3226 24.113L65.1801 16.6405C64.8068 17.0722 64.5151 17.5622 64.3051 18.1105C64.0951 18.6472 63.9901 19.2188 63.9901 19.8255C63.9901 20.5022 64.1185 21.138 64.3751 21.733C64.6318 22.328 64.9818 22.853 65.4251 23.308C65.8801 23.7513 66.4051 24.1013 67.0001 24.358C67.5951 24.6147 68.231 24.743 68.9076 24.743ZM72.5301 23.1505C72.9384 22.7072 73.2535 22.2055 73.4751 21.6455C73.7085 21.0738 73.8251 20.4672 73.8251 19.8255C73.8251 19.1488 73.6968 18.513 73.4401 17.918C73.1834 17.323 72.8276 16.8038 72.3726 16.3605C71.9293 15.9055 71.4101 15.5497 70.8151 15.293C70.2201 15.0363 69.5843 14.908 68.9076 14.908C68.4409 14.908 67.9918 14.9722 67.5601 15.1005C67.1284 15.2172 66.7259 15.3922 66.3526 15.6255L72.5301 23.1505Z" fill="#1F2041"/>
@@ -44,7 +44,7 @@
 </defs>
 </svg>
 </a>
-            <div class="header__menu">
+            <div class="header__menu js-header__menu">
               <nav class="header__menu-nav">
                 <ul class="header__menu-items">
                   <li class="header__menu-item header__menu-item_slim"><a>О нас</a>
@@ -70,7 +70,7 @@
                 </div>
               </div>
             </div>
-            <div class="header__hamburger"><span class="header__hamburger-line"></span><span class="header__hamburger-line"></span><span class="header__hamburger-line"></span></div>
+            <div class="header__hamburger js-header__hamburger"><span class="header__hamburger-line"></span><span class="header__hamburger-line"></span><span class="header__hamburger-line"></span></div>
           </div>
         </header>
       </div>
@@ -215,7 +215,7 @@
         <div class="room-details__booking-card">
                 <div class="booking-card">
                   <form>
-                    <div class="booking-card__main-info"><span class="booking-card__number"> <span class="booking-card__simbol-number">№</span>888</span><span class="booking-card__class">люкс</span><span class="booking-card__price"><span class="booking-card__price-number">9 990₽</span>в сутки</span></div>
+                    <div class="booking-card__main-info"><span class="booking-card__number"> <span class="booking-card__simbol-number">№888</span></span><span class="booking-card__class">люкс</span><span class="booking-card__price"><span class="booking-card__price-number">9 990₽ в сутки</span></span></div>
                     <div class="booking-card__date-dropdown">
                             <div class="date-dropdown js-date-dropdown" data-language="ru" data-button-to-clear="Очистить" data-button-to-apply="Принять">
                               <div class="date-dropdown__dates">
@@ -224,7 +224,7 @@
                                           <h3 class="title">Прибытие</h3>
                                   </div>
                                   <div class="date-dropdown__text-field">
-                                          <div class="text-field js-text-field text-field_masked">
+                                          <div class="text-field js-text-field text-field_masked js-text-field_masked">
                                             <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
                                           </div><i class="date-dropdown__arrow js-date-dropdown__arrow material-icons">expand_more</i>
                                   </div>
@@ -234,7 +234,7 @@
                                           <h3 class="title">Выезд</h3>
                                   </div>
                                   <div class="date-dropdown__text-field">
-                                          <div class="text-field js-text-field text-field_masked">
+                                          <div class="text-field js-text-field text-field_masked js-text-field_masked">
                                             <input class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ" value="23.08.2019" data-type="date" data-pattern="[&quot;d&quot;,&quot;m&quot;,&quot;Y&quot;]" data-delimiter=".">
                                           </div><i class="date-dropdown__arrow js-date-dropdown__arrow material-icons">expand_more</i>
                                   </div>
@@ -254,21 +254,21 @@
                               <div class="dropdown__popup js-dropdown__popup">
                                 <ul class="js-dropdown__items">
                                   <li class="dropdown__item">
-                                          <div class="counted-item js-counted-item js-dropdown__item-data" data-counted-item="2 взрослые">
+                                          <div class="counted-item js-counted-item" data-outer="dropdown-item" data-output="2 взрослые" data-min="0" data-max="99">
                                             <div class="counted-item__text js-counted-item__text">взрослые</div>
                                             <button class="counted-item__operation counted-item__operation_dec js-counted-item__operation js-counted-item__operation_dec" type="button">-</button><span class="counted-item__value js-counted-item__value">2</span>
                                             <button class="counted-item__operation js-counted-item__operation js-counted-item__operation_inc" type="button">+</button>
                                           </div>
                                   </li>
                                   <li class="dropdown__item">
-                                          <div class="counted-item js-counted-item js-dropdown__item-data" data-counted-item="1 дети">
+                                          <div class="counted-item js-counted-item" data-outer="dropdown-item" data-output="1 дети" data-min="0" data-max="99">
                                             <div class="counted-item__text js-counted-item__text">дети</div>
                                             <button class="counted-item__operation counted-item__operation_dec js-counted-item__operation js-counted-item__operation_dec" type="button">-</button><span class="counted-item__value js-counted-item__value">1</span>
                                             <button class="counted-item__operation js-counted-item__operation js-counted-item__operation_inc" type="button">+</button>
                                           </div>
                                   </li>
                                   <li class="dropdown__item">
-                                          <div class="counted-item js-counted-item js-dropdown__item-data" data-counted-item="">
+                                          <div class="counted-item js-counted-item" data-outer="dropdown-item" data-output="" data-min="0" data-max="99">
                                             <div class="counted-item__text js-counted-item__text">младенцы</div>
                                             <button class="counted-item__operation counted-item__operation_dec js-counted-item__operation js-counted-item__operation_dec counted-item__operation_disabled" type="button">-</button><span class="counted-item__value js-counted-item__value">0</span>
                                             <button class="counted-item__operation js-counted-item__operation js-counted-item__operation_inc" type="button">+</button>
