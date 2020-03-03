@@ -15,7 +15,7 @@ $(document).ready(function () {
     $(".js-dropdown__action_clear").each(function () {
         $(this).on("click", function () {
             let $dropdown = $(this).closest('.js-dropdown');
-            let $items = $dropdown.find('.js-dropdown__counted-item');
+            let $items = $dropdown.find('[data-outer="dropdown-item"]');
 
             $items.each(function () {
                 $(this).attr('data-input', 'clear');
