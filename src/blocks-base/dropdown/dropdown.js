@@ -46,15 +46,16 @@ $(document).ready(function () {
 
         let dropdownObserver = new MutationObserver(function () {
 
+            let itemTexts = [];
             let itemText;
             items.forEach(function (item) {
                 itemText = item.getAttribute('data-output');
-                text = itemText != '' ? text + itemText + ', ' : text;
+                if ( itemText != '' ) { itemTexts.push(itemText); }
             });
 
-            if (text != '') {
+            if (itemTexts.length != 0) {
                 if (clear) {clear.classList.remove('dropdown__action_hidden')};
-                text = text.slice(0, -2);
+                text = itemTexts.join(', ');
             } else {
                 if (clear) {clear.classList.add('dropdown__action_hidden')};
                 text = initialText;
