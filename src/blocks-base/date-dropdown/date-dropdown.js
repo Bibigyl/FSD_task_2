@@ -47,7 +47,7 @@ $( document ).ready(function() {
                 $calendar.removeClass('.date-dropdown__calendar_open');
             });
 
-            $this.find('.date-dropdown__arrow').click(function(evt) {
+            $this.find('.js-date-dropdown__arrow').click(function(evt) {
                 if ($calendar.hasClass('.date-dropdown__calendar_open')) {
                     evt.stopPropagation();
                     $this.data('dateRangePicker').close();

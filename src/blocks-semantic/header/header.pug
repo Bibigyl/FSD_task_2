@@ -2,12 +2,12 @@ include ../../blocks-base/button/button
 
 mixin header({items, loginButton, registerButton, user, isMenuItemSlim})
 	- let slim = isMenuItemSlim ? 'header__menu-item_slim' : '';
-	header.header
+	header.header.js-header
 		.header__container
 			a.header__logo
 				include ../../images/logo/logo-with-name.svg
 				
-			.header__menu(class=menuClass)
+			.header__menu.js-header__menu(class=menuClass)
 				nav.header__menu-nav
 					ul.header__menu-items
 						each item in items
@@ -30,7 +30,7 @@ mixin header({items, loginButton, registerButton, user, isMenuItemSlim})
 						.header__user-icon.material-icons person
 						.header__user-name= user
 
-			.header__hamburger
+			.header__hamburger.js-header__hamburger
 				span.header__hamburger-line
 				span.header__hamburger-line
 				span.header__hamburger-line

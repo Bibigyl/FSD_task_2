@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $('.pagination').each(function() {
+    $('.js-pagination').each(function() {
 
         let itemsOnPage = $(this).attr('data-items-on-page');
         let itemsNumber = $(this).attr('data-items-number');

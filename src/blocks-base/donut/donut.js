@@ -19,7 +19,7 @@ $(document).ready(function() {
             $seg.attr('stroke', donutColors[markName]);
         
             let $chartNumber = $donut.find('.js-chart-number');
-            let $chartLabel = $donut.find('.chart-label');
+            let $chartLabel = $donut.find('.js-chart-label');
         
             $chartNumber.text($seg.attr('data-value'));
             $chartNumber.attr('fill', donutColors[markName]);

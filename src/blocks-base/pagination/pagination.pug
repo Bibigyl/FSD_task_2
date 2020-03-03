@@ -6,6 +6,6 @@ mixin pagination({itemsOnPage, itemsNumber, page = 1, text})
 
 		let fullText = `${first} - ${last} ${text[0]} ${whole} ${text[1]}`
 
-	.pagination(data-items-on-page=itemsOnPage data-items-number=itemsNumber data-page=page)
+	.pagination.js-pagination(data-items-on-page=itemsOnPage data-items-number=itemsNumber data-page=page)
 		.pagination__pages.js-pagination__pages
 		.pagination__text= fullText

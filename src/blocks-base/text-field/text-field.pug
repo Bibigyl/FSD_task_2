@@ -12,7 +12,7 @@ mixin text-field(options = {})
 		} = options;
 
 		let subscription = isSubscription ? 'text-field_subscription' : '';
-		let classMasked = Object.keys(maskParameters) != 0 ? 'text-field_masked' : '';
+		let classMasked = Object.keys(maskParameters) != 0 ? 'text-field_masked js-text-field_masked' : '';
 
 	.text-field.js-text-field(class=[subscription, classMasked])
 		if title

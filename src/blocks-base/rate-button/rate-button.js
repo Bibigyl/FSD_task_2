@@ -21,18 +21,18 @@ $(document).ready(function() {
 
             $(this).on('click', function() {
 
-                $(this).addClass('rate-button__icon_checked');
+                $(this).addClass('rate-button__icon_checked js-rate-button__icon_checked');
                 $(this).prevAll().each(function() { 
-                    $(this).addClass('rate-button__icon_checked');
+                    $(this).addClass('rate-button__icon_checked js-rate-button__icon_checked');
                 });
                 $(this).nextAll().each(function() { 
-                    $(this).removeClass('rate-button__icon_checked');
+                    $(this).removeClass('rate-button__icon_checked js-rate-button__icon_checked');
                 });   
             });
 
             $(this).on('mouseleave', function() {
 
-                let $lastChecked = $rate.find('.rate-button__icon_checked').last();
+                let $lastChecked = $rate.find('.js-rate-button__icon_checked').last();
                 $lastChecked.text(full);
                 $lastChecked.prevAll().each(function() { 
                     $(this).text(full);

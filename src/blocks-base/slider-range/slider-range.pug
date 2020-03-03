@@ -1,10 +1,10 @@
 include ../title/title
 
 mixin slider-range({title, min, max, step, values})
-    .slider-range(data-min=min data-max=max data-step=step data-values=values)
+    .slider-range.js-slider-range(data-min=min data-max=max data-step=step data-values=values)
         if title
             .slider-range__title
                 +title(title)
         .slider-range__text-wrap
             .slider-range__text
-        .slider-range__slider
+        .slider-range__slider.js-slider-range__slider

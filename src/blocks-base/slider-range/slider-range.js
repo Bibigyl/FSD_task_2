@@ -1,8 +1,8 @@
 $( document ).ready(function() {
 
-  $('.slider-range__slider').each(function() {
+  $('.js-slider-range__slider').each(function() {
 
-    let $slider = $(this).closest('.slider-range');
+    let $slider = $(this).closest('.js-slider-range');
     let min = parseInt($slider.attr('data-min'), 10);
     let max = parseInt($slider.attr('data-max'), 10);
     let step = parseInt($slider.attr('data-step'), 10);

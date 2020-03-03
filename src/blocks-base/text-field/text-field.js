@@ -1,7 +1,7 @@
 import Cleave from 'cleave.js';
 
 $( document ).ready(function() {
-	$('.js-text-field.text-field_masked input').each(function() {
+	$('.js-text-field_masked input').each(function() {
 
 		let params = {};
 
