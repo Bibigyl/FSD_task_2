@@ -7,6 +7,6 @@ mixin twin-radio-buttons({title, name, items})
                 +title(title)
 
         each item in items
-            - item['name'] = name;
+            - let namedItem = Object.assign({}, item, {name: name});
             .twin-radio-buttons__button
-                +radio-button(item)
+                +radio-button(namedItem)
