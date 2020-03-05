@@ -1,15 +1,15 @@
 mixin counted-item({text, value, outerAttr, min = 0, max = 99})
     -
-        value = Math.min(max, Math.max(min, value));
-        let attr = value > min ? `${value} ${text}` : '';
-        decDisabled = value == min ? 'counted-item__operation_disabled' : '';
-        incDisabled = value == max ? 'counted-item__operation_disabled' : '';
+        let val = Math.min(max, Math.max(min, value));
+        let attr = val > min ? `${val} ${text}` : '';
+        decDisabled = val == min ? 'counted-item__operation_disabled' : '';
+        incDisabled = val == max ? 'counted-item__operation_disabled' : '';
 
     .counted-item.js-counted-item(data-outer=outerAttr data-output=attr data-min=min data-max=max)
         .counted-item__text.js-counted-item__text= text
 
         button.counted-item__operation.counted-item__operation_dec.js-counted-item__operation.js-counted-item__operation_dec(type='button' class=decDisabled) -
 
-        span.counted-item__value.js-counted-item__value= value
+        span.counted-item__value.js-counted-item__value= val
 
         button.counted-item__operation.js-counted-item__operation.js-counted-item__operation_inc(type='button' class=incDisabled) +
