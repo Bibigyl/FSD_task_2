@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     $(this).on('click', function () {
       $(this).closest('.js-header').find('.js-header__menu').slideToggle(ANIMATION_DURATION_MS);
-      $(this).toggleClass("header__hamburger_active");
+      $(this).toggleClass('header__hamburger_active');
     });
 
   });

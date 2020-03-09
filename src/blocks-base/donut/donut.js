@@ -45,7 +45,7 @@ $(document).ready(function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener('DOMContentLoaded', function(event) { 
 
     document.querySelectorAll('.js-donut').forEach(function(elem) {
         let values = [];

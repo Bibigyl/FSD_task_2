@@ -2,18 +2,18 @@ $(document).ready(function () {
 
     const ANIMATION_DURATION_MS = 200;
 
-    $(".js-dropdown__arrow").each(function () {
-        $(this).on("click", function () {
+    $('.js-dropdown__arrow').each(function () {
+        $(this).on('click', function () {
             let $dropdown = $(this).closest('.js-dropdown');
 
-            $dropdown.children(".js-dropdown__popup").slideToggle(ANIMATION_DURATION_MS, "linear");
-            $dropdown.toggleClass("dropdown_open");
+            $dropdown.children('.js-dropdown__popup').slideToggle(ANIMATION_DURATION_MS, 'linear');
+            $dropdown.toggleClass('dropdown_open');
         });
     });
 
 
-    $(".js-dropdown__action_clear").each(function () {
-        $(this).on("click", function () {
+    $('.js-dropdown__action_clear').each(function () {
+        $(this).on('click', function () {
             let $dropdown = $(this).closest('.js-dropdown');
             let $items = $dropdown.find('[data-outer="dropdown-item"]');
 
@@ -21,16 +21,16 @@ $(document).ready(function () {
                 $(this).attr('data-input', 'clear');
             });
 
-            $(this).addClass("dropdown__action_hidden");
+            $(this).addClass('dropdown__action_hidden');
         });
     });
 
 
-    $(".js-dropdown__action_apply").each(function () {
-        $(this).on("click", function () {
+    $('.js-dropdown__action_apply').each(function () {
+        $(this).on('click', function () {
             let $dropdown = $(this).closest('.js-dropdown');
 
-            $dropdown.find('.js-dropdown__popup').slideToggle(ANIMATION_DURATION_MS, "linear").parent().toggleClass("dropdown_open");
+            $dropdown.find('.js-dropdown__popup').slideToggle(ANIMATION_DURATION_MS, 'linear').parent().toggleClass('dropdown_open');
         });
     });
 
