@@ -8,8 +8,8 @@ mixin counted-item({text, value, outerAttr, min = 0, max = 99})
     .counted-item.js-counted-item(data-outer=outerAttr data-output=attr data-min=min data-max=max)
         .counted-item__text.js-counted-item__text= text
 
-        button.counted-item__operation.counted-item__operation_dec.js-counted-item__operation.js-counted-item__operation_dec(type='button' class=decDisabled) -
+        button.counted-item__operation.counted-item__operation_dec.js-counted-item__operation.js-counted-item__operation_dec(type="button" class=decDisabled) -
 
         span.counted-item__value.js-counted-item__value= val
 
-        button.counted-item__operation.js-counted-item__operation.js-counted-item__operation_inc(type='button' class=incDisabled) +
+        button.counted-item__operation.js-counted-item__operation.js-counted-item__operation_inc(type="button" class=incDisabled) +

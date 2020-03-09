@@ -1,7 +1,7 @@
 extends ../../templates/main
 
 block vars
-    - mainClass = "search-room";
+    - mainClass = 'search-room';
 
 
 block head
@@ -11,7 +11,7 @@ block head
 
 block content
 
-    -data = require("./search-room.json")
+    -data = require('./search-room.json')
 
     include ../../blocks-semantic/room-card/room-card
 
@@ -56,8 +56,8 @@ block content
             
                 each item in data.rooms
                     -
-                        let price = item[3].toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + "₽";
-                        let lux = item[2] ? "люкс" : "";
+                        let price = item[3].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + '₽';
+                        let lux = item[2] ? 'люкс' : '';
 
                         let options = {
                             image:  `search-room__room-${item[0]}.jpg`,
@@ -65,12 +65,12 @@ block content
                             lux: lux,
                             price: {
                                 number: price,
-                                text: "в сутки"
+                                text: 'в сутки'
                             },
-                            rateButton: {"rate": item[4]},
+                            rateButton: {'rate': item[4]},
                             reviews: {
                                 number: item[5],
-                                text: "Отзывов"
+                                text: 'Отзывов'
                             }
                         }
                     

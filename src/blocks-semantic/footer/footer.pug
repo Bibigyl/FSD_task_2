@@ -1,7 +1,7 @@
 include ../../blocks-base/text-field/text-field
 
 mixin footer({text, items, subscription, copyright, links, isRussian})
-	- let ru = isRussian ? "footer_ru" : '';
+	- let ru = isRussian ? 'footer_ru' : '';
 
 	footer.footer(class=ru)
 		.footer__container
