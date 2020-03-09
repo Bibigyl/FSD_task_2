@@ -43,7 +43,7 @@
     position: absolute;
     left: rem(0px);
     border: rem(1px) solid $greyOpacity25;
-    border-top: none;
+    border-top: 0;
     border-bottom-right-radius: rem(4px);
     border-bottom-left-radius: rem(4px);
     box-shadow: rem(0px) rem(2px) rem(10px) $greyOpacity5;
