@@ -7,7 +7,7 @@
 
   &__icon {
     display: inline-block;
-    font-size: 24px;
+    font-size: rem(24px);
     background: $gradientPrimary;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

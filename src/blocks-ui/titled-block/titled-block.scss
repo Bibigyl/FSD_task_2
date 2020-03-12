@@ -6,7 +6,7 @@
   &__title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: rem(12px);
     text-transform: uppercase;
     color: $greyOpacity100;
     width: fit-content;
@@ -24,7 +24,7 @@
   &__explanation {
     text-transform: uppercase;
     text-align: right;
-    font-size: 12px;
+    font-size: rem(12px);
     color: $greyOpacity50;
     line-height: 17.5px;
     margin-top: -4px;

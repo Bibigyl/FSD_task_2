@@ -106,7 +106,7 @@
   &__user-icon {
     display: none;
     line-height: 43px;
-    font-size: 24px;
+    font-size: rem(24px);
     background: $gradientPrimary;
     background-clip: text;
     -webkit-text-fill-color: transparent;

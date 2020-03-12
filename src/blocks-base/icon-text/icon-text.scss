@@ -12,7 +12,7 @@
     background: $gradientPrimary;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 48px;
+    font-size: rem(48px);
     cursor: default;
   }
 

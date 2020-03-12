@@ -34,7 +34,7 @@
     border-radius: 10px;
     cursor: pointer;
     padding-left: 10px;
-    font-size: 10px;
+    font-size: rem(10px);
     color: $greyOpacity25;
     line-height: 17px;
     transition: .2s;
@@ -48,7 +48,7 @@
     color: $greyOpacity25;
     top: 4px;
     left: 4px;
-    font-size: 10px;
+    font-size: rem(10px);
   }
 
   &_checked {

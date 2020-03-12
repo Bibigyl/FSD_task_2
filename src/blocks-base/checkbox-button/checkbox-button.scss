@@ -80,7 +80,7 @@
   &_rich {
 
     .checkbox-button__text {
-      font-size: 12px;
+      font-size: rem(12px);
       line-height: 13.5px;
       color: $greyOpacity50;
     }
