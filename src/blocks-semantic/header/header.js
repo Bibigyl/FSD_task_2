@@ -1,14 +1,21 @@
-$(document).ready(function () {
+class Header {
 
-  const ANIMATION_DURATION_MS = 400;
+    constructor($header) {
 
-  $('.js-header__hamburger').each(function () {
+        this.$header = $header;
+        this.ANIMATION_DURATION_MS = 400;
 
-    $(this).on('click', function () {
-      $(this).closest('.js-header').find('.js-header__menu').slideToggle(ANIMATION_DURATION_MS);
-      $(this).toggleClass('header__hamburger_active');
-    });
+        $header.find('.js-header__hamburger').on('click', this.handleHumburgerClick.bind(this));
+    }
 
-  });
-  
+    handleHumburgerClick() {
+        let $humburger = $(event.target);
+        this.$header.find('.js-header__menu').slideToggle(this.ANIMATION_DURATION_MS);
+        $humburger.toggleClass('header__hamburger_active');
+    }
+}
+
+
+$('.js-header').each(function() {
+    let header = new Header($(this));
 });

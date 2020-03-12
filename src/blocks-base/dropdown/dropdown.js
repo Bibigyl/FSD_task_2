@@ -1,73 +1,84 @@
-$(document).ready(function () {
+class Dropdown {
 
-    const ANIMATION_DURATION_MS = 200;
+    constructor($dropdown) {
+        this.ANIMATION_DURATION_MS = 200;
+        this.$dropdown = $dropdown;
 
-    $('.js-dropdown__arrow').each(function () {
-        $(this).on('click', function () {
-            let $dropdown = $(this).closest('.js-dropdown');
+        let $arrows = $dropdown.find('.js-dropdown__arrow');
+        let $clear = $dropdown.find('.js-dropdown__action_clear');
+        let $apply = $dropdown.find('.js-dropdown__action_apply');
 
-            $dropdown.children('.js-dropdown__popup').slideToggle(ANIMATION_DURATION_MS, 'linear');
-            $dropdown.toggleClass('dropdown_open');
+        $arrows.on('click', this.handleArrowClick.bind(this));
+
+        $clear.on('click', this.handleClearClick.bind(this));
+
+        $apply.on('click', this.handleApplyClick.bind(this));
+
+        let dropdownObserve = new DropdownObserve($dropdown);
+    }
+
+    handleArrowClick() {
+        this.$dropdown.children('.js-dropdown__popup').slideToggle(this.ANIMATION_DURATION_MS, 'linear');
+        this.$dropdown.toggleClass('dropdown_open');
+    }
+
+    handleClearClick() {
+        let $items = this.$dropdown.find('[data-outer="dropdown-item"]');
+
+        $items.each(function () {
+            $(this).attr('data-input', 'clear');
         });
-    });
 
+        $(this).addClass('dropdown__action_hidden');
+    }
 
-    $('.js-dropdown__action_clear').each(function () {
-        $(this).on('click', function () {
-            let $dropdown = $(this).closest('.js-dropdown');
-            let $items = $dropdown.find('[data-outer="dropdown-item"]');
+    handleApplyClick() {
+        this.$dropdown.find('.js-dropdown__popup').slideToggle(this.ANIMATION_DURATION_MS, 'linear').parent().toggleClass('dropdown_open');
+    }
+}
 
-            $items.each(function () {
-                $(this).attr('data-input', 'clear');
-            });
+class DropdownObserve {
 
-            $(this).addClass('dropdown__action_hidden');
-        });
-    });
+    constructor($dropdown) {
 
+        this.dropdown = $dropdown.get(0);
+        let items = this.dropdown.querySelectorAll('[data-outer="dropdown-item"]');
 
-    $('.js-dropdown__action_apply').each(function () {
-        $(this).on('click', function () {
-            let $dropdown = $(this).closest('.js-dropdown');
-
-            $dropdown.find('.js-dropdown__popup').slideToggle(ANIMATION_DURATION_MS, 'linear').parent().toggleClass('dropdown_open');
-        });
-    });
-
-
-    document.querySelectorAll('.js-dropdown').forEach(function (dropdown) {
-
-        let items = dropdown.querySelectorAll('[data-outer="dropdown-item"]');
-        let textField = dropdown.querySelector('.js-dropdown__text');
-        let clear = dropdown.querySelector('.js-dropdown__action_clear');
-        let initialText = dropdown.getAttribute('data-initial-text');
-        let text = '';
-
-
-        let dropdownObserver = new MutationObserver(function () {
-
-            let itemTexts = [];
-            let itemText;
-            items.forEach(function (item) {
-                itemText = item.getAttribute('data-output');
-                if ( itemText != '' ) { itemTexts.push(itemText); }
-            });
-
-            if (itemTexts.length != 0) {
-                if (clear) {clear.classList.remove('dropdown__action_hidden')};
-                text = itemTexts.join(', ');
-            } else {
-                if (clear) {clear.classList.add('dropdown__action_hidden')};
-                text = initialText;
-            }
-
-            textField.textContent = text;
-            text = '';
-        });
+        let dropdownObserver = new MutationObserver(this.mutationObserverCallback.bind(this));
 
         items.forEach(function (item) {
             dropdownObserver.observe(item, {attributeFilter: ['data-output']});
         });
+    }
 
-    });
+    mutationObserverCallback() {
+        let items = this.dropdown.querySelectorAll('[data-outer="dropdown-item"]');
+        let textField = this.dropdown.querySelector('.js-dropdown__text');
+        let clear = this.dropdown.querySelector('.js-dropdown__action_clear');
+        let initialText = this.dropdown.getAttribute('data-initial-text');
+        let text = '';
+
+
+        let itemTexts = [];
+        let itemText;
+        items.forEach(function (item) {
+            itemText = item.getAttribute('data-output');
+            if ( itemText != '' ) { itemTexts.push(itemText); }
+        });
+
+        if (itemTexts.length != 0) {
+            if (clear) {clear.classList.remove('dropdown__action_hidden')};
+            text = itemTexts.join(', ');
+        } else {
+            if (clear) {clear.classList.add('dropdown__action_hidden')};
+            text = initialText;
+        }
+
+        textField.textContent = text;
+    }
+}
+
+
+$('.js-dropdown').each(function() {
+    let dropdown = new Dropdown($(this));
 });

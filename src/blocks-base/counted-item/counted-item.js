@@ -1,61 +1,77 @@
-$( document ).ready(function() {
+class CountedItem {
 
-    $('.js-counted-item__operation').each(function() {
-        $(this).on('click', function() {
+    constructor($item) {
+        this.$item = $item;
+        let $operations = $item.find('.js-counted-item__operation');
 
-            let $item = $(this).closest('.js-counted-item');
-            let $value = $item.find('.js-counted-item__value');
-            let $inc = $item.find('.js-counted-item__operation_inc');
-            let $dec = $item.find('.js-counted-item__operation_dec');
-            let value = parseInt($value.text(), 10);
-            let text = $item.find('.js-counted-item__text').text();
-            let min = $item.attr('data-min');
-            let max = $item.attr('data-max');
+        $operations.on('click', this.handleOperationClick.bind(this));
 
-            if ($(this).hasClass('counted-item__operation_disabled')) {return;}
+        let countedItemObserve = new CountedItemObserve($item);
+    }
 
-            if ( $(this).hasClass('js-counted-item__operation_dec') ) {
+    handleOperationClick() {
+        let $item = this.$item;
+        let $operation = $(event.target);
 
-                value = value - 1;
-                $inc.removeClass('counted-item__operation_disabled');
+        let $value = $item.find('.js-counted-item__value');
+        let $inc = $item.find('.js-counted-item__operation_inc');
+        let $dec = $item.find('.js-counted-item__operation_dec');
+        let value = parseInt($value.text(), 10);
+        let text = $item.find('.js-counted-item__text').text();
+        let min = $item.attr('data-min');
+        let max = $item.attr('data-max');
 
-                if ( value == min ) { 
-                    $(this).addClass('counted-item__operation_disabled') 
-                }
+        if ($operation.hasClass('counted-item__operation_disabled')) {return;}
 
-            } else {
+        if ( $operation.hasClass('js-counted-item__operation_dec') ) {
 
-                value = value + 1;
-                $dec.removeClass('counted-item__operation_disabled');
+            value = value - 1;
+            $inc.removeClass('counted-item__operation_disabled');
 
-                if ( value == max ) { 
-                    $(this).addClass('counted-item__operation_disabled') 
-                }
+            if ( value == min ) { 
+                $operation.addClass('counted-item__operation_disabled') 
             }
 
-            $value.text(value);
-            text = value == 0 ? '' : `${value} ${text}`;
-            $item.attr('data-output', text)
-        });
-    });
+        } else {
 
+            value = value + 1;
+            $dec.removeClass('counted-item__operation_disabled');
 
-    document.querySelectorAll('.js-counted-item').forEach(function(item) {
+            if ( value == max ) { 
+                $operation.addClass('counted-item__operation_disabled') 
+            }
+        }
+
+        $value.text(value);
+        text = value == 0 ? '' : `${value} ${text}`;
+        $item.attr('data-output', text)
+    }
+}
+
+class CountedItemObserve {
+
+    constructor($item) {
+
+        this.item = $item.get(0);
+        let itemObserver = new MutationObserver(this.mutationObserverCallback.bind(this));
+        itemObserver.observe(this.item, {attributeFilter: ['data-input']});
+    }
+
+    mutationObserverCallback() {
+        let item = this.item;
+        if (item.getAttribute('data-input') != 'clear') { return }
 
         let valueNode = item.querySelector('.js-counted-item__value');
         let dec = item.querySelector('.js-counted-item__operation_dec');
 
-        let itemObserver = new MutationObserver(function() {
+        valueNode.textContent = '0';
+        dec.classList.add('counted-item__operation_disabled');
+        item.setAttribute('data-output', '');
+        item.setAttribute('data-input', '');
+    }
+}
 
-            if (item.getAttribute('data-input') == 'clear') {
-                valueNode.textContent = '0';
-                dec.classList.add('counted-item__operation_disabled');
-                item.setAttribute('data-output', '');
-                item.setAttribute('data-input', '');
-            }
 
-        });
-
-        itemObserver.observe(item, {attributeFilter: ['data-input']});
-    });
-});
+$('.js-counted-item').each(function() {
+    let countedItem = new CountedItem($(this));
+})

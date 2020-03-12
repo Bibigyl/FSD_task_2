@@ -1,46 +1,60 @@
-$(document).ready(function() {
+class RateButton {
 
-    $('.js-rate-button_clickable').each(function() {
+    constructor($rateButton) {
 
-        let $rate = $(this);
-        let full = 'star';
-        let empty = 'star_border';
+        if ( !$rateButton.hasClass('js-rate-button_clickable') ) { return }
 
-        $(this).find('.js-rate-button__icon').each(function() {
+        this.$rate = $rateButton;
+        this.FULL = 'star';
+        this.EMPTY = 'star_border';
+        this.$enteredIcon = null;
 
-            $(this).on('mouseenter', function() {
+        let $icon = $rateButton.find('.js-rate-button__icon');
+        $icon.on('mouseenter', this.handleIconMouseEnter.bind(this));
+        $icon.on('click', this.handleIconClick.bind(this));
+        $icon.on('mouseleave', this.handleIconMouseLeave.bind(this));
+    }
 
-                $(this).text(full);
-                $(this).prevAll().each(function() { 
-                    $(this).text(full);
-                });
-                $(this).nextAll().each(function() { 
-                    $(this).text(empty); 
-                });               
-            });
+    handleIconMouseEnter() {
+        let $icon = $(event.target);
+        let that = this;
 
-            $(this).on('click', function() {
-
-                $(this).addClass('rate-button__icon_checked js-rate-button__icon_checked');
-                $(this).prevAll().each(function() { 
-                    $(this).addClass('rate-button__icon_checked js-rate-button__icon_checked');
-                });
-                $(this).nextAll().each(function() { 
-                    $(this).removeClass('rate-button__icon_checked js-rate-button__icon_checked');
-                });   
-            });
-
-            $(this).on('mouseleave', function() {
-
-                let $lastChecked = $rate.find('.js-rate-button__icon_checked').last();
-                $lastChecked.text(full);
-                $lastChecked.prevAll().each(function() { 
-                    $(this).text(full);
-                });
-                $lastChecked.nextAll().each(function() { 
-                    $(this).text(empty); 
-                });               
-            });
+        $icon.text(this.FULL);
+        $icon.prevAll().each(function() { 
+            $(this).text(that.FULL);
         });
-    });
-});
+        $icon.nextAll().each(function() { 
+            $(this).text(that.EMPTY); 
+        });               
+    }
+
+    handleIconClick() {
+        let $icon = $(event.target);
+
+        $icon.addClass('rate-button__icon_checked js-rate-button__icon_checked');
+        $icon.prevAll().each(function() { 
+            $(this).addClass('rate-button__icon_checked js-rate-button__icon_checked');
+        });
+        $icon.nextAll().each(function() { 
+            $(this).removeClass('rate-button__icon_checked js-rate-button__icon_checked');
+        });   
+    }
+
+    handleIconMouseLeave() {
+        let that = this;
+        let $lastChecked = this.$rate.find('.js-rate-button__icon_checked').last();
+
+        $lastChecked.text(that.FULL);
+        $lastChecked.prevAll().each(function() { 
+            $(this).text(that.FULL);
+        });
+        $lastChecked.nextAll().each(function() { 
+            $(this).text(that.EMPTY); 
+        });      
+    }
+}
+
+
+$('.js-rate-button').each(function() {
+    let rateButton = new RateButton($(this));
+})

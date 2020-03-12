@@ -1,35 +1,48 @@
 import Cleave from 'cleave.js';
 
-$( document ).ready(function() {
-	$('.js-text-field_masked input').each(function() {
+class TextField {
 
+    constructor($textField) {
+        this.$textField = $textField;
+        if (!$textField.hasClass('js-text-field_masked')) { return }
+
+        this.build();
+    }
+
+    build() {
 		let params = {};
+		let $input = this.$textField.find('input');
 
-		if ( $(this).attr('data-type') ) {
-			let type = $(this).attr('data-type');
-			params[type] = true;
+        if ( $input.attr('data-type') ) {
+            let type = $input.attr('data-type');
+            params[type] = true;
 
-			try {
-				params[type + 'Pattern'] = $(this).attr('data-pattern') ?
-				JSON.parse( $(this).attr('data-pattern') ) :
-				false;				
-			} catch(e) {
-				console.warn(e.stack);
-			}
-		}
+            try {
+                params[type + 'Pattern'] = $input.attr('data-pattern') ?
+                JSON.parse( $input.attr('data-pattern') ) :
+                '';                
+            } catch(e) {
+                console.warn(e.stack);
+            }
+        }
 
-		params['delimiter'] = $(this).attr('data-delimiter') ?
-		$(this).attr('data-delimiter') :
-		false;
+        params['delimiter'] = $input.attr('data-delimiter') ?
+        $input.attr('data-delimiter') :
+        '';
 
-		try {
-			params['blocks'] = $(this).attr('data-blocks') ?
-			JSON.parse( $(this).attr('data-blocks') ) :
-			false;				
-		} catch(e) {
-			console.warn(e.stack);
-		}
+        try {
+            params['blocks'] = $input.attr('data-blocks') ?
+            JSON.parse( $input.attr('data-blocks') ) :
+            '';                
+        } catch(e) {
+            console.warn(e.stack);
+        }
 
-		let cleave = new Cleave($(this), params);	
-	});
+        let cleave = new Cleave($input, params);    
+    }
+}
+
+
+$('.js-text-field').each(function() {
+	let textField = new TextField($(this));
 });

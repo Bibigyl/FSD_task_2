@@ -1,19 +1,34 @@
-$( document ).ready(function() {
+class DateDropdown {
 
-    $('.js-date-dropdown').each( function() {
+    constructor($dateDropdown) {
 
-        let $this = $(this);
-        let $first = $this.find('.js-date-dropdown__date_order_first input');
-        let $last = $this.find('.js-date-dropdown__date_order_last input');
-        let $calendar = $this.find('.js-date-dropdown__calendar');
+        this.$dateDropdown = $dateDropdown;
+        let $first = $dateDropdown.find('.js-date-dropdown__date_order_first input');
+        let $last = $dateDropdown.find('.js-date-dropdown__date_order_last input');
+
+        this.build();
         
-        let firstDate = $this.find('.js-date-dropdown__date_order_first').attr('data-date') || false;
-        let lastDate = $this.find('.js-date-dropdown__date_order_last').attr('data-date') || false;
-        let language = $this.attr('data-language');
-        let buttonClearText = $this.attr('data-button-to-clear');
-        let buttonApplyText = $this.attr('data-button-to-apply');
+        $first.on('blur', this.handleInputOnBlur.bind(this));
+        $last.on('blur', this.handleInputOnBlur.bind(this));
 
-        $this.dateRangePicker({
+        $first.on('keypress', this.handleInputOnKeypress.bind(this));
+        $last.on('keypress', this.handleInputOnKeypress.bind(this));
+    }
+
+
+    build() {
+        let $dateDropdown = this.$dateDropdown;
+        let $first = $dateDropdown.find('.js-date-dropdown__date_order_first input');
+        let $last = $dateDropdown.find('.js-date-dropdown__date_order_last input');
+        let $calendar = $dateDropdown.find('.js-date-dropdown__calendar');
+        
+        let firstDate = $dateDropdown.find('.js-date-dropdown__date_order_first').attr('data-date') || false;
+        let lastDate = $dateDropdown.find('.js-date-dropdown__date_order_last').attr('data-date') || false;
+        let language = $dateDropdown.attr('data-language');
+        let buttonClearText = $dateDropdown.attr('data-button-to-clear');
+        let buttonApplyText = $dateDropdown.attr('data-button-to-apply');
+
+        $dateDropdown.dateRangePicker({
             language: language,
             singleMonth: true,
             showShortcuts: false,
@@ -30,32 +45,8 @@ $( document ).ready(function() {
             customArrowNextSymbol: '<div class="calendar__arrow js-calendar__arrow"><i class="material-icons">arrow_forward</i></div>',
             container: $calendar
         });
-        
 
-        $this.bind('datepicker-opened', function() {
-
-            $calendar.addClass('.date-dropdown__calendar_open');
-    
-            $this.find('.js-calendar__icon-link_action_clear').click(function(evt) {
-                evt.stopPropagation();
-                $this.data('dateRangePicker').clear();
-            });
-    
-            $this.find('.js-calendar__icon-link_action_apply').click(function(evt) {
-                evt.stopPropagation();
-                $this.data('dateRangePicker').close();
-                $calendar.removeClass('.date-dropdown__calendar_open');
-            });
-
-            $this.find('.js-date-dropdown__arrow').click(function(evt) {
-                if ($calendar.hasClass('.date-dropdown__calendar_open')) {
-                    evt.stopPropagation();
-                    $this.data('dateRangePicker').close();
-                    $calendar.removeClass('.date-dropdown__calendar_open');        
-                }
-            });
-        });
-
+        $dateDropdown.bind('datepicker-opened', this.datepickerOpenedCallback.bind(this));
 
         $calendar.find('.date-picker-wrapper').append(
             '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear" type="button">' +
@@ -67,34 +58,61 @@ $( document ).ready(function() {
 
         if (firstDate && lastDate) {
             try {
-                $this.data('dateRangePicker').setDateRange(firstDate, lastDate);
+                $dateDropdown.data('dateRangePicker').setDateRange(firstDate, lastDate);
             } catch(e) {
                 console.warn('Wrong date format');
             }            
         }
+    }
 
-        
-        $first.on('blur', inputOnBlur);
-        $last.on('blur', inputOnBlur);
+    datepickerOpenedCallback() {
+        let $dateDropdown = this.$dateDropdown;
+        let $calendar = $dateDropdown.find('.js-date-dropdown__calendar');
 
-        $first.on('keypress', inputOnKeypress);
-        $last.on('keypress', inputOnKeypress);
+        $calendar.addClass('.date-dropdown__calendar_open');
+    
+        $dateDropdown.find('.js-calendar__icon-link_action_clear').click(function(evt) {
+            evt.stopPropagation();
+            $dateDropdown.data('dateRangePicker').clear();
+        });
 
-        function inputOnBlur() {
-            if ( $first.val() && $last.val() ) {
-                try {
-                    $this.data('dateRangePicker').setDateRange($first.val(), $last.val());
-                    $this.data('dateRangePicker').close();
-                } catch(e) {
-                    console.warn('Incorrect dates');
-                }      
+        $dateDropdown.find('.js-calendar__icon-link_action_apply').click(function(evt) {
+            evt.stopPropagation();
+            $dateDropdown.data('dateRangePicker').close();
+            $calendar.removeClass('.date-dropdown__calendar_open');
+        });
+
+        $dateDropdown.find('.js-date-dropdown__arrow').click(function(evt) {
+            if ($calendar.hasClass('.date-dropdown__calendar_open')) {
+                evt.stopPropagation();
+                $dateDropdown.data('dateRangePicker').close();
+                $calendar.removeClass('.date-dropdown__calendar_open');        
             }
-        }
+        });
+    }
 
-        function inputOnKeypress(event) {
-            if (event.keyCode == 13) {
-                inputOnBlur();
-            }
+    handleInputOnBlur() {
+        let $dateDropdown = this.$dateDropdown;
+        let $first = $dateDropdown.find('.js-date-dropdown__date_order_first input');
+        let $last = $dateDropdown.find('.js-date-dropdown__date_order_last input');
+
+        if ( $first.val() && $last.val() ) {
+            try {
+                $dateDropdown.data('dateRangePicker').setDateRange($first.val(), $last.val());
+                $dateDropdown.data('dateRangePicker').close();
+            } catch(e) {
+                console.warn('Incorrect dates');
+            }      
         }
-    });
-});
+    }
+
+    handleInputOnKeypress(event) {
+        if (event.keyCode == 13) {
+            this.handleInputOnBlur();
+        }
+    }
+}
+
+$('.js-date-dropdown').each(function() {
+    let dateDropdown = new DateDropdown($(this));
+})

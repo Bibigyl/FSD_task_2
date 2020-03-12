@@ -1,12 +1,24 @@
-$(document).ready(function() {
-	
-	$('.js-like-button__input').on('change', function() {
-		let $button = $(this).closest('.js-like-button');
-		let $buttonNum = $button.find('.js-like-button__number')
-		let num = parseInt($buttonNum.text(), 10);
+class LikeButton {
+    constructor($likeButton) {
 
-		$button.toggleClass('like-button_checked');
-		$button.hasClass('like-button_checked') ? num++ : num--;
-		$buttonNum.text(num);
-	});
+        this.$likeButton = $likeButton;
+        let $input = $likeButton.find('.js-like-button__input');
+
+        $input.on('change', this.handleButtonChange.bind(this));
+    }
+
+    handleButtonChange() {
+        let $button = this.$likeButton;;
+        let $buttonNum = $button.find('.js-like-button__number')
+        let num = Number($buttonNum.text());
+
+        $button.toggleClass('like-button_checked');
+        $button.hasClass('like-button_checked') ? num++ : num--;
+        $buttonNum.text(num);
+    }
+}
+
+
+$('.js-like-button').each(function() {
+    let likeButton = new LikeButton($(this));
 });
