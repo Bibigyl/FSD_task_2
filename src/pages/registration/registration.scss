@@ -13,9 +13,9 @@
 
   &__container {
     width: 100%;
-    max-width: rem(1200px);
-    height: rem(700px);
-    padding: rem(20px);
+    max-width: 1200px;
+    height: 700px;
+    padding: 20px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -24,13 +24,13 @@
     align-items: center;
 
     &_small {
-      height: rem(682px);
+      height: 682px;
     }
   }
 
   &__card {
     width: 100%;
-    max-width: rem(380px);
+    max-width: 380px;
 
     &_hidden {
       display: none;
@@ -38,19 +38,19 @@
   }
 
   &__check-in-card {
-    margin-top: rem(3px);
+    margin-top: 3px;
   }  
 }
 
-@media(max-width: rem(600px)) {
+@media(max-width: 600px) {
 
   .registration {
 
     &__container {
-      height: rem(700px);
+      height: 700px;
 
       &_small {
-        height: rem(500px);
+        height: 500px;
       }
     }
   }

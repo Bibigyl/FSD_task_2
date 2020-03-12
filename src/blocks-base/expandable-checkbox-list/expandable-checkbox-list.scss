@@ -1,8 +1,8 @@
 .expandable-checkbox-list {
   position: relative;
   width: 100%;
-  min-width: rem(250px);
-  max-width: rem(266px);
+  min-width: 250px;
+  max-width: 266px;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -12,15 +12,15 @@
   }
 
   &__title {
-    margin-bottom: rem(17px);
+    margin-bottom: 17px;
   }
 
   &__arrow {
-    padding: 0 rem(10px);
+    padding: 0 10px;
     transition: .2s;
-    line-height: rem(15px);
+    line-height: 15px;
     cursor: pointer;
-    margin-bottom: rem(17px);
+    margin-bottom: 17px;
     margin-left: auto;
   }
 
@@ -33,7 +33,7 @@
   &__item {
     display: block;
     list-style-type: none;
-    margin-bottom: rem(11px);
+    margin-bottom: 11px;
     width: 100%;
   }
 

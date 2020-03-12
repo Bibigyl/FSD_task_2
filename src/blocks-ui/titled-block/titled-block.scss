@@ -6,14 +6,14 @@
   &__title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: rem(12px);
+    font-size: 12px;
     text-transform: uppercase;
     color: $greyOpacity100;
     width: fit-content;
-    margin-bottom: rem(5px);
+    margin-bottom: 5px;
 
     &_with-big-margin {
-      margin-bottom: rem(16px);
+      margin-bottom: 16px;
     }
 
     &_single {
@@ -24,9 +24,9 @@
   &__explanation {
     text-transform: uppercase;
     text-align: right;
-    font-size: rem(12px);
+    font-size: 12px;
     color: $greyOpacity50;
-    line-height: rem(17.5px);
-    margin-top: rem(-4px);
+    line-height: 17.5px;
+    margin-top: -4px;
   }
 }

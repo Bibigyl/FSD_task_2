@@ -9,7 +9,7 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
-    margin: rem(10px) 0 0 rem(20px);
+    margin: 10px 0 0 20px;
     padding: 0;
 
     &:not(:checked)+.checkbox-button__text-block:after {
@@ -26,20 +26,20 @@
   }
 
   &__text-block {
-    margin-left: rem(29px);
+    margin-left: 29px;
     position: relative;
 
     &:before {
       box-sizing: border-box;
       content: '';
       position: absolute;
-      left: rem(-29px);
-      top: rem(0px);
-      width: rem(20px);
-      height: rem(20px);
-      border: rem(1px) solid $greyOpacity25;
+      left: -29px;
+      top: 0px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $greyOpacity25;
       background-color: #fff;
-      border-radius: rem(4px);
+      border-radius: 4px;
       cursor: pointer;
     }
 
@@ -48,12 +48,12 @@
       content: '';
       position: absolute;
       transition: all .15s ease;
-      left: rem(-23px);
-      top: rem(6px);
-      width: rem(8px);
-      height: rem(6px);
-      border-left: rem(2px) solid;
-      border-bottom: rem(2px) solid;
+      left: -23px;
+      top: 6px;
+      width: 8px;
+      height: 6px;
+      border-left: 2px solid;
+      border-bottom: 2px solid;
       border-image: linear-gradient(0deg, $primary 0%, #8BA4F9 100%);
       border-image-slice: 1;
       transform: rotate(-45deg);
@@ -63,7 +63,7 @@
 
   &__text {
     cursor: pointer;
-    line-height: rem(20px);
+    line-height: 20px;
     color: $greyOpacity50;
     display: block;
   }
@@ -71,17 +71,17 @@
   &__title {
     color: $greyOpacity75;
     font-weight: 700; 
-    margin-bottom: rem(6px);
+    margin-bottom: 6px;
     cursor: pointer;
-    line-height: rem(20px);
+    line-height: 20px;
     display: block;
   }
 
   &_rich {
 
     .checkbox-button__text {
-      font-size: rem(12px);
-      line-height: rem(13.5px);
+      font-size: 12px;
+      line-height: 13.5px;
       color: $greyOpacity50;
     }
   }

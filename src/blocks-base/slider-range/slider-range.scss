@@ -1,6 +1,6 @@
 .slider-range {
   width: 100%;
-  max-width: rem(266px);
+  max-width: 266px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -13,25 +13,25 @@
   &__slider {
     position: relative;
     width: 100%;
-    margin-top: rem(23px); 
+    margin-top: 23px; 
   }
 
   &__title {
     width: 50%;
-    min-width: rem(100px);
+    min-width: 100px;
   }
 
   &__text-wrap {
     width: 50%;    
-    min-width: rem(100px);
+    min-width: 100px;
   }
 
   &__text {
     white-space: nowrap;
     z-index: 10;
-    font-size: rem(12px);
+    font-size: 12px;
     text-align: right;
-    line-height: rem(15px);
+    line-height: 15px;
   }
 }
 
@@ -41,35 +41,35 @@
 .slider-range {
 
   .ui-slider {
-    border: rem(1px) solid $greyOpacity25;
-    height: rem(6px);
+    border: 1px solid $greyOpacity25;
+    height: 6px;
     position: relative;
-    border-radius: rem(100px);
+    border-radius: 100px;
   }
 
   .ui-slider-range {
     background: $gradientSecondary;
-    height: rem(20px);
+    height: 20px;
     position: absolute;
   }
 
   .ui-slider-horizontal .ui-slider-range {
-    height: rem(6px);
-    top: rem(-1px);
+    height: 6px;
+    top: -1px;
   }
 
   .ui-slider .ui-slider-handle {
     background: $secondary;
     position: absolute;
-    width: rem(16px);
-    height: rem(16px);
-    top: rem(-6px);
+    width: 16px;
+    height: 16px;
+    top: -6px;
     display: block;
     transform: translateX(-50%);
-    border-radius: rem(100px);
+    border-radius: 100px;
     z-index: 10;
     background: $gradientSecondary;
-    border: rem(2px) solid #fff;
+    border: 2px solid #fff;
     cursor: pointer;
 
     &:active {
@@ -82,7 +82,7 @@
   }
 
   .range-divider {
-    width: rem(10px);
+    width: 10px;
     text-align: center;
     display: inline-block;
 

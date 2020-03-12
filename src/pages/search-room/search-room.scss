@@ -6,8 +6,8 @@
 
   &__container {
     width: 100%;
-    max-width: rem(1200px);
-    padding: rem(29px) rem(20px) rem(73px) rem(20px);
+    max-width: 1200px;
+    padding: 29px 20px 73px 20px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -15,52 +15,52 @@
   }
 
   &__parameters {
-    min-width: rem(286px);
-    max-width: rem(286px);
-    padding-right: rem(20px);
-    margin-bottom: rem(50px);
+    min-width: 286px;
+    max-width: 286px;
+    padding-right: 20px;
+    margin-bottom: 50px;
   }
 
   &__filter-date-dropdown {
-    margin-bottom: rem(20px);
+    margin-bottom: 20px;
   }
 
   &__dropdown-guests {
-    margin-bottom: rem(30px);
+    margin-bottom: 30px;
   }
 
   &__slider-range-text {
-    font-size: rem(12px);
+    font-size: 12px;
     color: $greyOpacity50;
-    margin-top: rem(10px);
+    margin-top: 10px;
   }
 
   &__slider-range {
-    margin-bottom: rem(24px);
+    margin-bottom: 24px;
   }
 
   &__checkbox-buttons {
-    margin-bottom: rem(29px);
+    margin-bottom: 29px;
   }
 
   &__rich-checkbox-buttons {
-    margin-bottom: rem(30px);
+    margin-bottom: 30px;
   }
 
   &__dropdown-furniture {
-    margin-bottom: rem(30px);
+    margin-bottom: 30px;
   }
 
   &__room-cards-field {
     text-align: center;
     width: 100%;
-    max-width: rem(834px);
+    max-width: 834px;
   }
 
   &__title {
     width: 100%;
     text-align: left;
-    margin-bottom: rem(20px);
+    margin-bottom: 20px;
   }
 
   &__room-cards {
@@ -68,32 +68,32 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: rem(21px);
+    margin-bottom: 21px;
   }
 
   &__room-card {
-    max-width: rem(270px);
-    margin-bottom: rem(19.5px);
+    max-width: 270px;
+    margin-bottom: 19.5px;
   }
 
   &__pagination {
     display: flex;
     justify-content: center;
-    margin-right: rem(22px);
+    margin-right: 22px;
   }
 
   &__footer {
-    border-top: rem(1px) solid rgba(31, 32, 65, .1);
+    border-top: 1px solid rgba(31, 32, 65, .1);
   }
 }
 
-@media (max-width: rem(1155px)) {
+@media (max-width: 1155px) {
 
   .search-room {
 
     &__room-card {
-      margin-right: rem(10px);
-      margin-left: rem(10px);
+      margin-right: 10px;
+      margin-left: 10px;
     }
     
     &__room-cards {
@@ -102,7 +102,7 @@
   }
 }
 
-@media (max-width: rem(875px)) {
+@media (max-width: 875px) {
 
   .search-room {
 
@@ -120,9 +120,9 @@
 
       >* {
         width: 100%;
-        max-width: rem(266px);
-        margin-left: rem(20px);
-        margin-right: rem(20px);
+        max-width: 266px;
+        margin-left: 20px;
+        margin-right: 20px;
       }
     }
 
@@ -136,7 +136,7 @@
   }
 }
 
-@media (max-width: rem(450px)) {
+@media (max-width: 450px) {
 
   .search-room {
 

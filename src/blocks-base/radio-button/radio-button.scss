@@ -10,7 +10,7 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
-    margin: rem(10px) 0 0 rem(7px);
+    margin: 10px 0 0 7px;
 
     &:checked+.radio-button__text:after {
       opacity: 1;
@@ -27,7 +27,7 @@
 
   &__text {
     position: relative;
-    padding: 0 0 0 rem(30px);
+    padding: 0 0 0 30px;
     cursor: pointer;
     color: $greyOpacity50;
 
@@ -37,9 +37,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: rem(20px);
-      height: rem(20px);
-      border: rem(1px) solid $greyOpacity25;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $greyOpacity25;
       border-radius: 50%;
       background: #FFF;
     }
@@ -48,10 +48,10 @@
       box-sizing: border-box;
       content: '';
       position: absolute;
-      top: rem(4px);
-      left: rem(4px);
-      width: rem(12px);
-      height: rem(12px);
+      top: 4px;
+      left: 4px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background: $gradientPrimary;
       opacity: 0;

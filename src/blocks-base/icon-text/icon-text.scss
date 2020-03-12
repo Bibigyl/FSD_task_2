@@ -8,17 +8,17 @@
   }
 
   &__icon {
-    margin-right: rem(10px);
+    margin-right: 10px;
     background: $gradientPrimary;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: rem(48px);
+    font-size: 48px;
     cursor: default;
   }
 
   &__text-block {
     width: 100%;
-    min-width: rem(150px);
+    min-width: 150px;
   }
 
   &__text {
@@ -31,7 +31,7 @@
   }
 
   &_underlined {
-    padding-bottom: rem(20px);    
-    border-bottom: rem(1px) solid rgba(31, 32, 65, .1);  
+    padding-bottom: 20px;    
+    border-bottom: 1px solid rgba(31, 32, 65, .1);  
   }
 }

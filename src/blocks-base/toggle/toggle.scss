@@ -17,7 +17,7 @@
       }
 
       &:after {
-        left: rem(24px);
+        left: 24px;
         background: $gradientPrimary;
         transition: .2s;      
       }
@@ -25,14 +25,14 @@
   }
 
   &__label {
-    height: rem(20px);
+    height: 20px;
   }
 
   &__text {
     position: relative;
-    padding: 0 0 0 rem(50px);
+    padding: 0 0 0 50px;
     cursor: pointer;
-    line-height: rem(20px);
+    line-height: 20px;
   
     &:before {
       box-sizing: border-box;
@@ -40,23 +40,23 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: rem(40px);
-      height: rem(20px);
-      border-radius: rem(10px);
+      width: 40px;
+      height: 20px;
+      border-radius: 10px;
       background: #fff;
       transition: .2s;
-      border: rem(1px) solid $greyOpacity25;
+      border: 1px solid $greyOpacity25;
     }
   
     &:after {
       box-sizing: border-box;
       content: '';
       position: absolute;
-      top: rem(4px);
-      left: rem(5px);
-      width: rem(12px);
-      height: rem(12px);
-      border-radius: rem(10px);
+      top: 4px;
+      left: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 10px;
       background: linear-gradient(180deg, $greyOpacity25 0%, $greyOpacity25 100%);
       transition: .2s;
     }

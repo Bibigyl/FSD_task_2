@@ -1,54 +1,54 @@
 .check-in-card {
-  padding: rem(40px) rem(30px) rem(30px) rem(30px);
+  padding: 40px 30px 30px 30px;
   background-color: #fff;
-  border-radius: rem(4px);
-  box-shadow: rem(0px) rem(0px) rem(25px) rgba(0, 0, 0, .2);
-  min-width: rem(260px);
-  max-width: rem(380px);
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, .2);
+  min-width: 260px;
+  max-width: 380px;
 
   &__title {
-    margin-bottom: rem(20px);
-    letter-spacing: rem(.1px);
+    margin-bottom: 20px;
+    letter-spacing: .1px;
   }
 
   &__name {
-    margin-bottom: rem(10px);
+    margin-bottom: 10px;
   }
 
   &__surname {
-    margin-bottom: rem(7px);
+    margin-bottom: 7px;
   }
 
   &__radio-buttons {
-    margin-bottom: rem(22px);
+    margin-bottom: 22px;
   }
 
   &__birthday {
-    margin-bottom: rem(20px);
+    margin-bottom: 20px;
   }
 
   &__birthday-title {
-    margin-bottom: rem(5px);
+    margin-bottom: 5px;
   }
 
   &__credentials {
-    margin-bottom: rem(10px);
+    margin-bottom: 10px;
   }
 
   &__credentials-title {
-    margin-bottom: rem(5px);
+    margin-bottom: 5px;
   }
 
   &__email {
-    margin-bottom: rem(10px);
+    margin-bottom: 10px;
   }
 
   &__toggle {
-    margin-bottom: rem(27px);
+    margin-bottom: 27px;
   }
 
   &__button {
-    margin-bottom: rem(30px);
+    margin-bottom: 30px;
   }
 
   &__enter {
@@ -58,13 +58,13 @@
   }
 
   &__enter-text {
-    margin-right: rem(10px);
+    margin-right: 10px;
   }
 }
 
-@media (max-width: rem(575.98px)) {
+@media (max-width: 575.98px) {
 
   .check-in-card {
-    padding: rem(25px) rem(20px) rem(20px) rem(20px);
+    padding: 25px 20px 20px 20px;
   }
 }

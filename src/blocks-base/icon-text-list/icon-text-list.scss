@@ -1,6 +1,6 @@
 .icon-text-list {
   width: 100%;
-  max-width: rem(280px);
+  max-width: 280px;
   box-sizing: border-box;
 
   * {
@@ -8,6 +8,6 @@
   }
 
   &__item {
-    margin-bottom: rem(20px);
+    margin-bottom: 20px;
   }
 }

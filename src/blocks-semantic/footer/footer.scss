@@ -3,59 +3,59 @@
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
-  box-shadow: rem(0px) rem(10px) rem(20px) $greyOpacity5;
+  box-shadow: 0px 10px 20px $greyOpacity5;
 
   &__container {
     width: 100%;
-    max-width: rem(1200px);
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: rem(100px) rem(20px) rem(83px) rem(20px);
+    padding: 100px 20px 83px 20px;
   }
 
   &__logo {
     cursor: pointer;
     display: block;
-    margin-bottom: rem(10px);
+    margin-bottom: 10px;
   }
 
   &__text {
-    letter-spacing: rem(-.1px);
+    letter-spacing: -.1px;
   }
 
   &__main-info {
     width: 100%;
-    max-width: rem(260px);
-    margin-right: rem(10px);
+    max-width: 260px;
+    margin-right: 10px;
   }
 
   &__menu {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: rem(580px);
-    padding-top: rem(4px);
+    max-width: 580px;
+    padding-top: 4px;
   }
 
   &__item {
-    padding: 0 rem(20px);
-    padding: 0 rem(10px);
+    padding: 0 20px;
+    padding: 0 10px;
     width: 100%;
-    max-width: rem(180px);
-    min-width: rem(100px);
-    letter-spacing: rem(-.1px);
+    max-width: 180px;
+    min-width: 100px;
+    letter-spacing: -.1px;
   }
 
   &__item-title {
-    margin-bottom: rem(18px);
-    letter-spacing: rem(-.1px);
+    margin-bottom: 18px;
+    letter-spacing: -.1px;
   }
 
   &__subitem {
-    margin-bottom: rem(14px);
+    margin-bottom: 14px;
     color: $greyOpacity50;
     cursor: pointer;
     transition: .2s;
@@ -68,50 +68,50 @@
 
   &__subscription {
     width: 100%;
-    max-width: rem(260px);
-    padding-top: rem(4px);
-    margin-left: rem(10px);
+    max-width: 260px;
+    padding-top: 4px;
+    margin-left: 10px;
   }
 
   &__subscription-title {
-    margin-bottom: rem(18px);
-    letter-spacing: rem(-.3px);
+    margin-bottom: 18px;
+    letter-spacing: -.3px;
   }
 
   &__subscription-text {
-    margin-bottom: rem(23px);
-    letter-spacing: rem(-.1px);
+    margin-bottom: 23px;
+    letter-spacing: -.1px;
   }
 
   &__line {
     width: 100%;
-    height: rem(1px);
+    height: 1px;
     background-color: $greyOpacity25;
   }
 
   &__bottom-container {
     width: 100%;
-    max-width: rem(1200px);
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: space-between;
     align-self: center;
-    padding: rem(23px) rem(21px) rem(19px) rem(20px);
+    padding: 23px 21px 19px 20px;
     flex-wrap: wrap;
   }
 
   &__copyright {
-    min-width: rem(150px);
-    letter-spacing: rem(-.1px);
+    min-width: 150px;
+    letter-spacing: -.1px;
   }
 
   &__link {
-    margin-left: rem(22px);
+    margin-left: 22px;
   }
 
   &__link-icon {
-    font-size: rem(24px);
+    font-size: 24px;
     cursor: pointer;
     background: $gradientPrimary;
     background-clip: text;
@@ -128,13 +128,13 @@
       &__subscription-title,
       &__subscription-text,
       &__copyright {
-        letter-spacing: rem(0px);
+        letter-spacing: 0px;
       }
     }
   }
 }
 
-@media(max-width: rem(980px)) {
+@media(max-width: 980px) {
 
   .footer {
 
@@ -150,18 +150,18 @@
     }
 
     &__main-info {
-      margin-bottom: rem(40px);
+      margin-bottom: 40px;
       max-width: none;
       width: 50%;
     }
 
     &__subscription {
-      margin-bottom: rem(40px);
+      margin-bottom: 40px;
     }
   }
 }
 
-@media(max-width: rem(600px)) {
+@media(max-width: 600px) {
 
   .footer {
 
@@ -190,7 +190,7 @@
 
     &__subscription-text-field {
       width: 100%;
-      max-width: rem(266px);
+      max-width: 266px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -206,12 +206,12 @@
     }
 
     &__copyright {
-      margin-bottom: rem(20px);
+      margin-bottom: 20px;
     }
   }
 }
 
-@media(max-width: rem(420px)) {
+@media(max-width: 420px) {
 
   .footer {
 
@@ -220,7 +220,7 @@
     }
 
     &__container {
-      padding: rem(50px) rem(20px) rem(26px) rem(20px);
+      padding: 50px 20px 26px 20px;
     }
   }
 }

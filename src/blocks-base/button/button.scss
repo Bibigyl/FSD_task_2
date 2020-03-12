@@ -1,18 +1,18 @@
 .button {
   display: flex;
   justify-content: center;
-  border-radius: rem(22px);
+  border-radius: 22px;
   background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   color: white;
-  padding: rem(14px) rem(20px);
+  padding: 14px 20px;
   box-sizing: border-box;
   background-clip: border-box;
-  border: rem(0px);
+  border: 0px;
   text-transform: uppercase;
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: rem(12px);
+  font-size: 12px;
   transition: .2s;
 
   &:hover {
@@ -22,7 +22,7 @@
 
   &:active,
   &:focus {
-    outline: rem(2px) solid rgba($secondary, .3);
+    outline: 2px solid rgba($secondary, .3);
     transition: outline 0s;
   }
 
@@ -30,7 +30,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: rem(10px);
+    right: 10px;
     color: inherit;
     color: #fff;
   }
@@ -42,9 +42,9 @@
     background-origin: border-box;
     background-clip: padding-box, border-box;
     -webkit-background-clip: padding-box, border-box;
-    border: solid rem(2px) transparent;
-    padding: rem(12px) rem(18px);
-    min-width: rem(100px);
+    border: solid 2px transparent;
+    padding: 12px 18px;
+    min-width: 100px;
 
     &:hover {
       opacity: 1;
@@ -55,17 +55,17 @@
 
   &_extended {
     width: 100%;
-    max-width: rem(320px);
+    max-width: 320px;
     position: relative;
-    padding-right: rem(20px);
+    padding-right: 20px;
   }
 
   &_small {
-    padding: rem(10px) rem(19px);
+    padding: 10px 19px;
     min-width: 0;
 
     &.button_secondary {
-      padding: rem(8px) rem(18px);
+      padding: 8px 18px;
     }
   }
 }

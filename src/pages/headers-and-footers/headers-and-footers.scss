@@ -4,25 +4,25 @@
 
 .headers-and-footers {
   position: relative;
-  padding: rem(150px) 0;
+  padding: 150px 0;
   background-color: #F4F4F6;
   justify-content: space-between;
 
   &__logo {
     position: absolute;
-    top: rem(30px);
+    top: 30px;
     left: 6.5%;
   }
 
   &__header {
-    margin-bottom: rem(39px);
+    margin-bottom: 39px;
   }
 
   &__header-2 {
-    margin-bottom: rem(39px);
+    margin-bottom: 39px;
   }
 
   &__footer {
-    margin-bottom: rem(39px);
+    margin-bottom: 39px;
   }
 }

@@ -3,36 +3,36 @@
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
-  box-shadow: rem(0px) rem(10px) rem(20px) $greyOpacity5;
+  box-shadow: 0px 10px 20px $greyOpacity5;
 
   &__container {
     width: 100%;
-    max-width: rem(1200px);
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: rem(100px) rem(20px) rem(106px) rem(20px);
+    padding: 100px 20px 106px 20px;
     text-align: center;
   }
 
   &__logo {
     cursor: pointer;
     display: block;
-    margin-bottom: rem(10px);
+    margin-bottom: 10px;
   }
 
   &__text {
-    max-width: rem(560px);
+    max-width: 560px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: rem(29px);
+    margin-bottom: 29px;
   }
 
   &__link {
-    margin: 0 rem(11px);
+    margin: 0 11px;
   }
 
   &__link-icon {
-    font-size: rem(24px);
+    font-size: 24px;
     cursor: pointer;
     background: $gradientPrimary;
     background-clip: text;

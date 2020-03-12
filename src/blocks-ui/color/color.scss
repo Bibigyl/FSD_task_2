@@ -5,23 +5,23 @@
   align-items: center;
 
   &__square {
-    width: rem(70px);
-    height: rem(70px);
-    border-radius: rem(6px);
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
   }
 
   &__description {
-    padding-left: rem(40px);
-    max-width: rem(310px);
+    padding-left: 40px;
+    max-width: 310px;
   }
 
   &__title {
-    margin-bottom: rem(5px);
+    margin-bottom: 5px;
   }
 
   &__text {
     font-family: 'Quicksand';
     font-weight: 400;
-    font-size: rem(19px);
+    font-size: 19px;
   }
 }

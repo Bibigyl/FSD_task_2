@@ -1,15 +1,15 @@
 .room-card {
   width: 100%;
-  max-width: rem(320px);
-  min-width: rem(260px);
-  border-radius: rem(4px);
-  box-shadow: rem(0px) rem(10px) rem(20px) $greyOpacity5;
+  max-width: 320px;
+  min-width: 260px;
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px $greyOpacity5;
   background-color: #fff;
 
   &__image {
     width: 100%;
-    height: rem(152px);
-    border-radius: rem(4px) rem(4px) 0 0;
+    height: 152px;
+    border-radius: 4px 4px 0 0;
     background: center, center no-repeat;
     background-size: cover;
     position: relative;
@@ -27,8 +27,8 @@
 
   &__arrow {
     opacity: 0;
-    border-radius: rem(4px) rem(4px) 0 0;
-    width: rem(42px);
+    border-radius: 4px 4px 0 0;
+    width: 42px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -48,24 +48,24 @@
     .material-icons {
       margin: 0;
       color: #fff;
-      font-size: rem(24px);
+      font-size: 24px;
       transform: rotate(90deg);
     }    
   }
 
   &__dots {
     position: absolute;
-    bottom: rem(9px);
-    right: rem(15px);
+    bottom: 9px;
+    right: 15px;
     transition: .4s;
     cursor: default;    
   }
 
   &__dot {
-    width: rem(7px);
-    height: rem(7px);
-    border-radius: rem(100px);
-    border: solid rem(1px) #fff;
+    width: 7px;
+    height: 7px;
+    border-radius: 100px;
+    border: solid 1px #fff;
     display: inline-block;
     cursor: pointer;
     
@@ -79,7 +79,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    padding: rem(20px) rem(18px) rem(13px) rem(20px);
+    padding: 20px 18px 13px 20px;
   }
 
   &__room {
@@ -92,22 +92,22 @@
   &__room-number {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
-    font-size: rem(19px);
-    line-height: rem(24px);
+    font-size: 19px;
+    line-height: 24px;
     color: $greyOpacity100;
-    margin-right: rem(5px);
+    margin-right: 5px;
   }
 
   &__number-simbol {
-    font-size: rem(14px);
-    margin-right: rem(3px);
+    font-size: 14px;
+    margin-right: 3px;
   }
 
   &__class {
     color: $primary;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: rem(12px);
+    font-size: 12px;
   }
 
   &__price {
@@ -120,30 +120,30 @@
 
   &__price-number {
     color: $greyOpacity50;
-    font-size: rem(14px);
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    line-height: rem(15px);
+    line-height: 15px;
     text-transform: uppercase;
   }
 
   &__price-text {
-    font-size: rem(12px);
+    font-size: 12px;
     color: $greyOpacity50;
-    margin-left: rem(3px);
+    margin-left: 3px;
   }
 
   &__line {
     width: 100%;
-    height: rem(2px);
+    height: 2px;
     background: rgba(31, 32, 65, .1);
     opacity: .5;
-    margin: rem(7px) 0;
+    margin: 7px 0;
   }
 
   &__rate-button {
-    width: rem(120px);
-    margin-right: rem(5px);
+    width: 120px;
+    margin-right: 5px;
   }
 
   &__reviews {
@@ -156,13 +156,13 @@
 
   &__reviews-number {
     color: $greyOpacity50;
-    font-size: rem(14px);    
+    font-size: 14px;    
   }
 
   &__reviews-text {
     font-weight: 400;
     text-transform: capitalize;
-    margin-left: rem(4px);
-    margin-right: rem(1px);
+    margin-left: 4px;
+    margin-right: 1px;
   }
 }

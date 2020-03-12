@@ -6,23 +6,23 @@
   }
 
   &__title {
-    margin-bottom: rem(13px);
+    margin-bottom: 13px;
   }
   
   &__item {
-    margin-bottom: rem(10px);
-    padding-left: rem(21px);
+    margin-bottom: 10px;
+    padding-left: 21px;
     position: relative;
 
     &:before {
       content: '';
       position: absolute;
-      width: rem(10px);
-      height: rem(10px);
-      left: rem(0px);
-      top: rem(6px);
+      width: 10px;
+      height: 10px;
+      left: 0px;
+      top: 6px;
       background-color: $greyOpacity25;
-      border-radius: rem(100px);
+      border-radius: 100px;
     }
   }
 }

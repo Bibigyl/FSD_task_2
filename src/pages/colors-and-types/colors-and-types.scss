@@ -3,18 +3,18 @@
 @import '../../scss/_mixins';
 
 .colors-and-types {
-  padding: rem(145px) 0;
+  padding: 145px 0;
 
   &__logo {
     position: absolute;
-    top: rem(30px);
+    top: 30px;
     left: 6.5%;
   }
 
   &__container {
     width: 100%;
-    max-width: rem(1180px);
-    padding: 0 rem(20px);
+    max-width: 1180px;
+    padding: 0 20px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -23,11 +23,11 @@
   }
 
   &__fonts {
-    margin-right: rem(27px);
+    margin-right: 27px;
   }
 }
 
-@media (max-width: rem(778px)) {
+@media (max-width: 778px) {
 
   .colors-and-types {
 
@@ -36,7 +36,7 @@
     }
 
     &__colors {
-      margin-bottom: rem(40px);
+      margin-bottom: 40px;
     }
   }
 }
