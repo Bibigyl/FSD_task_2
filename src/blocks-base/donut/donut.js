@@ -2,12 +2,15 @@ import bind from 'bind-decorator';
 
 class Donut {
 
-    static DONUT_COLORS = {
+    DONUT_COLORS = {
         excellent :'#FFE39C', 
         good: '#6FCF97', 
         satisfactorily: '#BC9CFF', 
         badly: '#919191'
     };
+    NUMBER_OF_MARKS = 4;
+    SEGMENT_WIDTH = 1;
+    ACTIVE_SEGMENT_WIDTH = 3;
 
     constructor($donut) {
 
@@ -37,17 +40,17 @@ class Donut {
         let $donut = (this).$donut;
 
         let markName = $mark.find('.js-shape-circle').attr('data-mark-name');
-        let $seg = $donut.find(`.js-donut-segment[data-mark-name=${markName}]`);
+        let $segment = $donut.find(`.js-donut-segment[data-mark-name=${markName}]`);
     
-        $seg.attr('stroke-width', 3);
-        $seg.attr('stroke', DONUT_COLORS[markName]);
+        $segment.attr('stroke-width', this.ACTIVE_SEGMENT_WIDTH);
+        $segment.attr('stroke', this.DONUT_COLORS[markName]);
     
         let $chartNumber = $donut.find('.js-chart-number');
         let $chartLabel = $donut.find('.js-chart-label');
     
-        $chartNumber.text($seg.attr('data-value'));
-        $chartNumber.attr('fill', DONUT_COLORS[markName]);
-        $chartLabel.attr('fill', DONUT_COLORS[markName]);
+        $chartNumber.text($segment.attr('data-value'));
+        $chartNumber.attr('fill', this.DONUT_COLORS[markName]);
+        $chartLabel.attr('fill', this.DONUT_COLORS[markName]);
     }
 
     @bind
@@ -56,10 +59,10 @@ class Donut {
         let $donut = (this).$donut;
 
         let markName = $mark.find('.js-shape-circle').attr('data-mark-name');
-        let $seg = $donut.find(`.js-donut-segment[data-mark-name=${markName}]`);
+        let $segment = $donut.find(`.js-donut-segment[data-mark-name=${markName}]`);
     
-        $seg.attr('stroke-width', 1);
-        $seg.attr('stroke', `url(#${markName})`);
+        $segment.attr('stroke-width', this.SEGMENT_WIDTH);
+        $segment.attr('stroke', `url(#${markName})`);
     
         let $chartNumber = $donut.find('.js-chart-number');
         let $chartLabel = $donut.find('.js-chart-label');
@@ -69,29 +72,30 @@ class Donut {
         $chartLabel.attr('fill', 'grey');
     }
 
+    @bind
+    buildDonutDiagram(values, node) {
 
-    buildDonutDiagram(vals, node) {
         let sum = 0;
-        vals.forEach(function(el) {
+        values.forEach(function(el) {
             sum += parseInt(el, 10);
         });
     
-        let pers = [];
-        vals.forEach(function(el, i) {
-            pers[i] = parseInt( (el / sum * 100).toFixed(), 10);
+        let percents = [];
+        values.forEach(function(el, i) {
+            percents[i] = Number( (el / sum * 100).toFixed() );
         });
     
         const INITIAL_OFFSET = -25;
-        let arSum = INITIAL_OFFSET;
-        let segs = node.querySelectorAll('.js-donut-segment');
+        let incrementalSum = INITIAL_OFFSET;
+        let segments = node.querySelectorAll('.js-donut-segment');
     
-        for (let i = 0; i < 4; i++) {
-            let one = pers[i] ? pers[i] - 1 : 0;
-            let two = pers[i] ? (100 - pers[i]) + 1 : (100 - pers[i]);
-            segs[i].setAttribute('stroke-dasharray', `${one} ${two}`);
-            segs[i].setAttribute('stroke-dashoffset', arSum);
-            segs[i].setAttribute('data-value', vals[i]);
-            arSum = arSum + pers[i+1];
+        for (let i = 0; i < this.NUMBER_OF_MARKS; i++) {
+            let dash = percents[i] ? percents[i] - 1 : 0;
+            let offset = percents[i] ? (100 - percents[i]) + 1 : (100 - percents[i]);
+            segments[i].setAttribute('stroke-dasharray', `${dash} ${offset}`);
+            segments[i].setAttribute('stroke-dashoffset', incrementalSum);
+            segments[i].setAttribute('data-value', values[i]);
+            incrementalSum = incrementalSum + percents[i+1];
         }
     
         let chart = node.querySelector('.js-chart-number');
