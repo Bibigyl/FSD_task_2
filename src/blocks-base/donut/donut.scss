@@ -1,11 +1,11 @@
 .donut {
 
-  .chart-text {
+  &__chart-text {
     fill: #000;
     transform: translateY(.25em);
   }
   
-  .chart-number {
+  &__chart-number {
     font-size: .5em;
     line-height: 1;
     text-anchor: middle;
@@ -14,46 +14,46 @@
     font-weight: 700;
   }
   
-  .chart-label {
+  &__chart-label {
     font-size: .3em;
     text-anchor: middle;
     transform: translateY(.2em);
   }
   
-  figure {
+  &__figure {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
   }
   
-  .figure-content,
-  .figure-key {
+  &__figure-content,
+  &__figure-key {
     flex: 1;
     align-self: center;
   }
   
-  .figure-content {
+  &__figure-content {
     margin-right: 10px;
     margin-top: -13px;
     max-width: 160px;
     min-width: 140px;
   }
   
-  .donut__figure {
+  &__figure {
     height: auto;
   }
   
-  .figure-key {
+  &__figure-key {
     min-width: 170px;
   }
   
-  .figure-key-list {
+  &__figure-key-list {
     margin: 0;
     padding: 0;
     list-style: none;
   }
   
-  .shape-circle {
+  &__shape-circle {
     display: inline-block;
     vertical-align: middle;
     width: 10px;
@@ -62,16 +62,12 @@
     margin-right: 4px;
   }
   
-  .donut-wrap {
-    max-width: 303px;
-  }
-  
-  .donut__mark {
+  &__mark {
     cursor: default;
     padding: 0;
   }
   
-  .donut-segment {
+  &__segment {
     transition: .6s;
   }
 }
