@@ -1,13 +1,13 @@
-class AttributeMutationObserver {
+class MessageHub {
 
-    constructor($items, attribute, callback, context = {}) {
+    constructor($items, attribute, handleMessage, context = {}) {
 
-        let dropdownObserver = new MutationObserver(callback.bind(context));
+        let mutationObserver = new MutationObserver(handleMessage.bind(context));
 
         $items.each(function () {
-            dropdownObserver.observe($(this).get(0), {attributeFilter: [attribute]});
+            mutationObserver.observe($(this).get(0), {attributeFilter: [attribute]});
         });
     }
 }
 
-export default AttributeMutationObserver;
+export default MessageHub;

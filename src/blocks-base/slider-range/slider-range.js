@@ -53,7 +53,8 @@ class SliderRange {
                 $text.html(
                     `<span class="range-value">${begin}₽</span>
                     <span class="range-divider">
-                    </span><span class="range-value">${end}₽</span>`);
+                    </span><span class="range-value">${end}₽</span>`
+                );
 
                 // Save new value
                 $slider.data({

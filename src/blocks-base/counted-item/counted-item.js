@@ -1,4 +1,4 @@
-import AttributeMutationObserver from '../../js/AttributeMutationObserver.js';
+import MessageHub from '../../js/MessageHub.js';
 import bind from 'bind-decorator';
 
 class CountedItem {
@@ -9,7 +9,7 @@ class CountedItem {
 
         $operations.on('click', this.handleOperationClick);
 
-        let attributeMutationObserver = new AttributeMutationObserver($item, 'data-input', this.handleAttributeChange);
+        let MessageHub = new MessageHub($item, 'data-input', this.handleAttributeChange);
     }
 
     @bind

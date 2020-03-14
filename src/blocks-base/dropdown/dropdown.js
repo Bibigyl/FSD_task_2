@@ -1,4 +1,4 @@
-import AttributeMutationObserver from '../../js/AttributeMutationObserver.js';
+import MessageHub from '../../js/MessageHub.js';
 import bind from 'bind-decorator';
 
 class Dropdown {
@@ -19,7 +19,7 @@ class Dropdown {
         $apply.on('click', this.handleApplyClick);
 
         let $items = $dropdown.find('[data-outer="dropdown-item"]');
-        let attributeMutationObserver = new AttributeMutationObserver($items, 'data-output', this.handleAttributeChange);
+        let MessageHub = new MessageHub($items, 'data-output', this.handleAttributeChange);
     }
 
     @bind
