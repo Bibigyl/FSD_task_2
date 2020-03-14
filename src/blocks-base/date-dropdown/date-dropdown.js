@@ -24,8 +24,8 @@ class DateDropdown {
         let $last = $dateDropdown.find('.js-date-dropdown__date_order_last input');
         let $calendar = $dateDropdown.find('.js-date-dropdown__calendar');
         
-        let firstDate = $dateDropdown.find('.js-date-dropdown__date_order_first').attr('data-date') || false;
-        let lastDate = $dateDropdown.find('.js-date-dropdown__date_order_last').attr('data-date') || false;
+        let firstDate = $dateDropdown.find('.js-date-dropdown__date_order_first').attr('data-date') || '';
+        let lastDate = $dateDropdown.find('.js-date-dropdown__date_order_last').attr('data-date') || '';
         let language = $dateDropdown.attr('data-language');
         let buttonClearText = $dateDropdown.attr('data-button-to-clear');
         let buttonApplyText = $dateDropdown.attr('data-button-to-apply');
@@ -48,14 +48,9 @@ class DateDropdown {
             container: $calendar
         });
 
-        $dateDropdown.bind('datepicker-opened', this.datepickerOpenedCallback);
-
         $calendar.find('.date-picker-wrapper').append(
-            '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear" type="button">' +
-            buttonClearText + 
-            '</button><button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply" type="button">' + 
-            buttonApplyText + 
-            '</button>');
+            `<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear" type="button">${buttonClearText}</button>
+            <button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply" type="button">${buttonApplyText}</button>`);
 
 
         if (firstDate && lastDate) {
@@ -65,34 +60,20 @@ class DateDropdown {
                 console.warn('Wrong date format');
             }            
         }
-    }
 
-    @bind
-    datepickerOpenedCallback() {
-        let $dateDropdown = this.$dateDropdown;
-        let $calendar = $dateDropdown.find('.js-date-dropdown__calendar');
-
-        $calendar.addClass('.date-dropdown__calendar_open');
-    
-        $dateDropdown.find('.js-calendar__icon-link_action_clear').click(function(evt) {
-            evt.stopPropagation();
+        $dateDropdown.find('.js-calendar__icon-link_action_clear').on('click', function() {
             $dateDropdown.data('dateRangePicker').clear();
         });
 
-        $dateDropdown.find('.js-calendar__icon-link_action_apply').click(function(evt) {
-            evt.stopPropagation();
+        $dateDropdown.find('.js-calendar__icon-link_action_apply').on('click', function() {
             $dateDropdown.data('dateRangePicker').close();
-            $calendar.removeClass('.date-dropdown__calendar_open');
         });
 
-        $dateDropdown.find('.js-date-dropdown__arrow').click(function(evt) {
-            if ($calendar.hasClass('.date-dropdown__calendar_open')) {
-                evt.stopPropagation();
-                $dateDropdown.data('dateRangePicker').close();
-                $calendar.removeClass('.date-dropdown__calendar_open');        
-            }
+        $dateDropdown.find('.js-date-dropdown__arrow').on('click', function() {
+            $dateDropdown.data('dateRangePicker').close();
         });
     }
+
 
     @bind
     handleInputOnBlur() {
