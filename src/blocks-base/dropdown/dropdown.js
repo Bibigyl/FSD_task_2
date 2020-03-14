@@ -1,3 +1,5 @@
+import AttributeMutationObserver from '../../js/AttributeMutationObserver.js';
+
 class Dropdown {
 
     constructor($dropdown) {
@@ -14,7 +16,34 @@ class Dropdown {
 
         $apply.on('click', this.handleApplyClick.bind(this));
 
-        let dropdownObserve = new DropdownObserve($dropdown);
+        let $items = $dropdown.find('[data-outer="dropdown-item"]');
+        let attributeMutationObserver = new AttributeMutationObserver($items, 'data-output', this.handleAttributeChange.bind(this));
+    }
+
+    handleAttributeChange() {
+        let $items = this.$dropdown.find('[data-outer="dropdown-item"]');
+        let $textField = this.$dropdown.find('.js-dropdown__text');
+        let $clear = this.$dropdown.find('.js-dropdown__action_clear');
+        let initialText = this.$dropdown.attr('data-initial-text');
+        let text = '';
+
+
+        let itemTexts = [];
+        let itemText;
+        $items.each(function() {
+            itemText = $(this).attr('data-output');
+            if ( itemText != '' ) { itemTexts.push(itemText); }
+        });
+
+        if (itemTexts.length != 0) {
+            if ($clear) {$clear.removeClass('dropdown__action_hidden')};
+            text = itemTexts.join(', ');
+        } else {
+            if ($clear) {$clear.addClass('dropdown__action_hidden')};
+            text = initialText;
+        }
+
+        $textField.text(text);
     }
 
     handleArrowClick() {
@@ -34,47 +63,6 @@ class Dropdown {
 
     handleApplyClick() {
         this.$dropdown.find('.js-dropdown__popup').slideToggle(this.ANIMATION_DURATION_MS, 'linear').parent().toggleClass('dropdown_open');
-    }
-}
-
-class DropdownObserve {
-
-    constructor($dropdown) {
-
-        this.dropdown = $dropdown.get(0);
-        let items = this.dropdown.querySelectorAll('[data-outer="dropdown-item"]');
-
-        let dropdownObserver = new MutationObserver(this.mutationObserverCallback.bind(this));
-
-        items.forEach(function (item) {
-            dropdownObserver.observe(item, {attributeFilter: ['data-output']});
-        });
-    }
-
-    mutationObserverCallback() {
-        let items = this.dropdown.querySelectorAll('[data-outer="dropdown-item"]');
-        let textField = this.dropdown.querySelector('.js-dropdown__text');
-        let clear = this.dropdown.querySelector('.js-dropdown__action_clear');
-        let initialText = this.dropdown.getAttribute('data-initial-text');
-        let text = '';
-
-
-        let itemTexts = [];
-        let itemText;
-        items.forEach(function (item) {
-            itemText = item.getAttribute('data-output');
-            if ( itemText != '' ) { itemTexts.push(itemText); }
-        });
-
-        if (itemTexts.length != 0) {
-            if (clear) {clear.classList.remove('dropdown__action_hidden')};
-            text = itemTexts.join(', ');
-        } else {
-            if (clear) {clear.classList.add('dropdown__action_hidden')};
-            text = initialText;
-        }
-
-        textField.textContent = text;
     }
 }
 

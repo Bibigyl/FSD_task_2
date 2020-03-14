@@ -1,3 +1,5 @@
+import AttributeMutationObserver from '../../js/AttributeMutationObserver.js';
+
 class CountedItem {
 
     constructor($item) {
@@ -6,7 +8,20 @@ class CountedItem {
 
         $operations.on('click', this.handleOperationClick.bind(this));
 
-        let countedItemObserve = new CountedItemObserve($item);
+        let attributeMutationObserver = new AttributeMutationObserver($item, 'data-input', this.handleAttributeChange.bind(this));
+    }
+
+    handleAttributeChange() {
+        let $item = this.$item;
+        if ( $item.attr('data-input') != 'clear' ) { return }
+
+        let $value = $item.find('.js-counted-item__value');
+        let $dec = $item.find('.js-counted-item__operation_dec');
+
+        $value.text('0');
+        $dec.addClass('counted-item__operation_disabled');
+        $item.attr('data-output', '');
+        $item.attr('data-input', '');
     }
 
     handleOperationClick() {
@@ -45,29 +60,6 @@ class CountedItem {
         $value.text(value);
         text = value == 0 ? '' : `${value} ${text}`;
         $item.attr('data-output', text)
-    }
-}
-
-class CountedItemObserve {
-
-    constructor($item) {
-
-        this.item = $item.get(0);
-        let itemObserver = new MutationObserver(this.mutationObserverCallback.bind(this));
-        itemObserver.observe(this.item, {attributeFilter: ['data-input']});
-    }
-
-    mutationObserverCallback() {
-        let item = this.item;
-        if (item.getAttribute('data-input') != 'clear') { return }
-
-        let valueNode = item.querySelector('.js-counted-item__value');
-        let dec = item.querySelector('.js-counted-item__operation_dec');
-
-        valueNode.textContent = '0';
-        dec.classList.add('counted-item__operation_disabled');
-        item.setAttribute('data-output', '');
-        item.setAttribute('data-input', '');
     }
 }
 
