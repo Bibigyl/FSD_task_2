@@ -1,3 +1,5 @@
+import bind from 'bind-decorator';
+
 class Donut {
 
     constructor($donut) {
@@ -12,8 +14,8 @@ class Donut {
         this.$donut = $donut;
         let $mark = $donut.find('.js-donut__mark');
 
-        $mark.on('mouseenter', this.handleMarkMouseEnter.bind(this));
-        $mark.on('mouseleave', this.handleMarkMouseLeave.bind(this));
+        $mark.on('mouseenter', this.handleMarkMouseEnter);
+        $mark.on('mouseleave', this.handleMarkMouseLeave);
 
 
         let values = [];
@@ -29,6 +31,7 @@ class Donut {
 
     }
 
+    @bind
     handleMarkMouseEnter() {
         let $mark = $(event.target);
         let $donut = (this).$donut;
@@ -47,6 +50,7 @@ class Donut {
         $chartLabel.attr('fill', this.DONUT_COLORS[markName]);
     }
 
+    @bind
     handleMarkMouseLeave() {
         let $mark = $(event.target);
         let $donut = (this).$donut;

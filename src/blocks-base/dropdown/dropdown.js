@@ -1,4 +1,5 @@
 import AttributeMutationObserver from '../../js/AttributeMutationObserver.js';
+import bind from 'bind-decorator';
 
 class Dropdown {
 
@@ -10,16 +11,17 @@ class Dropdown {
         let $clear = $dropdown.find('.js-dropdown__action_clear');
         let $apply = $dropdown.find('.js-dropdown__action_apply');
 
-        $arrows.on('click', this.handleArrowClick.bind(this));
+        $arrows.on('click', this.handleArrowClick);
 
-        $clear.on('click', this.handleClearClick.bind(this));
+        $clear.on('click', this.handleClearClick);
 
-        $apply.on('click', this.handleApplyClick.bind(this));
+        $apply.on('click', this.handleApplyClick);
 
         let $items = $dropdown.find('[data-outer="dropdown-item"]');
-        let attributeMutationObserver = new AttributeMutationObserver($items, 'data-output', this.handleAttributeChange.bind(this));
+        let attributeMutationObserver = new AttributeMutationObserver($items, 'data-output', this.handleAttributeChange);
     }
 
+    @bind
     handleAttributeChange() {
         let $items = this.$dropdown.find('[data-outer="dropdown-item"]');
         let $textField = this.$dropdown.find('.js-dropdown__text');
@@ -46,11 +48,13 @@ class Dropdown {
         $textField.text(text);
     }
 
+    @bind
     handleArrowClick() {
         this.$dropdown.children('.js-dropdown__popup').slideToggle(this.ANIMATION_DURATION_MS, 'linear');
         this.$dropdown.toggleClass('dropdown_open');
     }
 
+    @bind
     handleClearClick() {
         let $items = this.$dropdown.find('[data-outer="dropdown-item"]');
 
@@ -61,6 +65,7 @@ class Dropdown {
         $(this).addClass('dropdown__action_hidden');
     }
 
+    @bind
     handleApplyClick() {
         this.$dropdown.find('.js-dropdown__popup').slideToggle(this.ANIMATION_DURATION_MS, 'linear').parent().toggleClass('dropdown_open');
     }

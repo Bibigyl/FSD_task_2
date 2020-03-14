@@ -1,3 +1,5 @@
+import bind from 'bind-decorator';
+
 class DateDropdown {
 
     constructor($dateDropdown) {
@@ -8,11 +10,11 @@ class DateDropdown {
 
         this.build();
         
-        $first.on('blur', this.handleInputOnBlur.bind(this));
-        $last.on('blur', this.handleInputOnBlur.bind(this));
+        $first.on('blur', this.handleInputOnBlur);
+        $last.on('blur', this.handleInputOnBlur);
 
-        $first.on('keypress', this.handleInputOnKeypress.bind(this));
-        $last.on('keypress', this.handleInputOnKeypress.bind(this));
+        $first.on('keypress', this.handleInputOnKeypress);
+        $last.on('keypress', this.handleInputOnKeypress);
     }
 
 
@@ -46,7 +48,7 @@ class DateDropdown {
             container: $calendar
         });
 
-        $dateDropdown.bind('datepicker-opened', this.datepickerOpenedCallback.bind(this));
+        $dateDropdown.bind('datepicker-opened', this.datepickerOpenedCallback);
 
         $calendar.find('.date-picker-wrapper').append(
             '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear" type="button">' +
@@ -65,6 +67,7 @@ class DateDropdown {
         }
     }
 
+    @bind
     datepickerOpenedCallback() {
         let $dateDropdown = this.$dateDropdown;
         let $calendar = $dateDropdown.find('.js-date-dropdown__calendar');
@@ -91,6 +94,7 @@ class DateDropdown {
         });
     }
 
+    @bind
     handleInputOnBlur() {
         let $dateDropdown = this.$dateDropdown;
         let $first = $dateDropdown.find('.js-date-dropdown__date_order_first input');
@@ -106,6 +110,7 @@ class DateDropdown {
         }
     }
 
+    @bind
     handleInputOnKeypress(event) {
         if (event.keyCode == 13) {
             this.handleInputOnBlur();

@@ -1,3 +1,5 @@
+import bind from 'bind-decorator';
+
 class Header {
 
     constructor($header) {
@@ -5,9 +7,10 @@ class Header {
         this.$header = $header;
         this.ANIMATION_DURATION_MS = 400;
 
-        $header.find('.js-header__hamburger').on('click', this.handleHumburgerClick.bind(this));
+        $header.find('.js-header__hamburger').on('click', this.handleHumburgerClick);
     }
 
+    @bind
     handleHumburgerClick() {
         let $humburger = $(event.target);
         this.$header.find('.js-header__menu').slideToggle(this.ANIMATION_DURATION_MS);

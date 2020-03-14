@@ -1,3 +1,6 @@
+import bind from 'bind-decorator';
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 class RateButton {
 
     constructor($rateButton) {
@@ -10,11 +13,12 @@ class RateButton {
         this.$enteredIcon = null;
 
         let $icon = $rateButton.find('.js-rate-button__icon');
-        $icon.on('mouseenter', this.handleIconMouseEnter.bind(this));
-        $icon.on('click', this.handleIconClick.bind(this));
-        $icon.on('mouseleave', this.handleIconMouseLeave.bind(this));
+        $icon.on('mouseenter', this.handleIconMouseEnter);
+        $icon.on('click', this.handleIconClick);
+        $icon.on('mouseleave', this.handleIconMouseLeave);
     }
 
+    @bind
     handleIconMouseEnter() {
         let $icon = $(event.target);
         let that = this;
@@ -28,6 +32,7 @@ class RateButton {
         });               
     }
 
+    @bind
     handleIconClick() {
         let $icon = $(event.target);
 
@@ -40,6 +45,7 @@ class RateButton {
         });   
     }
 
+    @bind
     handleIconMouseLeave() {
         let that = this;
         let $lastChecked = this.$rate.find('.js-rate-button__icon_checked').last();

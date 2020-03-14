@@ -22,10 +22,12 @@
   },
   "dependencies": {
     "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
     "@babel/preset-env": "^7.7.4",
     "@fortawesome/fontawesome-free": "^5.12.0",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
+    "bind-decorator": "^1.0.11",
     "cleave.js": "^1.5.3",
     "css-loader": "^3.2.0",
     "css-mqpacker": "^7.0.0",

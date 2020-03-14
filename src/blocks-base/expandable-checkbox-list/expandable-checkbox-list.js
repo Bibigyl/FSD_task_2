@@ -1,3 +1,5 @@
+import bind from 'bind-decorator';
+
 class ExpandableCheckboxList {
 
   constructor($list) {
@@ -6,9 +8,10 @@ class ExpandableCheckboxList {
     this.$list = $list;
     let $arrow = $list.find('.js-expandable-checkbox-list__arrow');
 
-    $arrow.on('click', this.handleArrowClick.bind(this));
+    $arrow.on('click', this.handleArrowClick);
   }
 
+  @bind
   handleArrowClick() {
     let $checkboxList = this.$list.closest('.js-expandable-checkbox-list');
     $checkboxList.find('.js-expandable-checkbox-list__list').slideToggle(this.ANIMATION_DURATION_MS);

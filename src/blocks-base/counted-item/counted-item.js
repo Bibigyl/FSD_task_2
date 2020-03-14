@@ -1,4 +1,5 @@
 import AttributeMutationObserver from '../../js/AttributeMutationObserver.js';
+import bind from 'bind-decorator';
 
 class CountedItem {
 
@@ -6,11 +7,12 @@ class CountedItem {
         this.$item = $item;
         let $operations = $item.find('.js-counted-item__operation');
 
-        $operations.on('click', this.handleOperationClick.bind(this));
+        $operations.on('click', this.handleOperationClick);
 
-        let attributeMutationObserver = new AttributeMutationObserver($item, 'data-input', this.handleAttributeChange.bind(this));
+        let attributeMutationObserver = new AttributeMutationObserver($item, 'data-input', this.handleAttributeChange);
     }
 
+    @bind
     handleAttributeChange() {
         let $item = this.$item;
         if ( $item.attr('data-input') != 'clear' ) { return }
@@ -24,6 +26,7 @@ class CountedItem {
         $item.attr('data-input', '');
     }
 
+    @bind
     handleOperationClick() {
         let $item = this.$item;
         let $operation = $(event.target);

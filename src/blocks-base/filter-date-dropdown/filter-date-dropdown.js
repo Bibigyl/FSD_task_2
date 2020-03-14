@@ -2,6 +2,7 @@ import moment from 'moment';
 import 'moment/locale/ru';
 import 'moment/locale/es-us';
 moment.locale('ru');
+import bind from 'bind-decorator';
 
 
 class FilterDateDropdown {
@@ -10,7 +11,7 @@ class FilterDateDropdown {
 
         this.$dropdown = $filterDateDropdown;
         this.build();
-        this.$dropdown.bind('datepicker-opened', this.datepickerOpenedCallback.bind(this));
+        this.$dropdown.bind('datepicker-opened', this.datepickerOpenedCallback);
     }
 
 
@@ -68,6 +69,7 @@ class FilterDateDropdown {
     }
 
 
+    @bind
     datepickerOpenedCallback() {
         let $dropdown = this.$dropdown;
         let $input = $dropdown.find('input');
