@@ -3,7 +3,7 @@ mixin rate-button({rate, maxRate = 5, isClickable})
 		let clickable = isClickable ? 'rate-button_clickable js-rate-button_clickable' : '';
 		let iconClickable = clickable ? 'js-rate-button__icon' : '';
 
-	.rate-button(class=clickable)
+	.rate-button.js-rate-button(class=clickable)
 		- let icon;
 		- let checked;
 

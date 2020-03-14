@@ -3,8 +3,9 @@ import bind from 'bind-decorator';
 
 class Dropdown {
 
+    static ANIMATION_DURATION_MS = 200;
+
     constructor($dropdown) {
-        this.ANIMATION_DURATION_MS = 200;
         this.$dropdown = $dropdown;
 
         let $arrows = $dropdown.find('.js-dropdown__arrow');
@@ -50,7 +51,7 @@ class Dropdown {
 
     @bind
     handleArrowClick() {
-        this.$dropdown.children('.js-dropdown__popup').slideToggle(this.ANIMATION_DURATION_MS, 'linear');
+        this.$dropdown.children('.js-dropdown__popup').slideToggle(ANIMATION_DURATION_MS, 'linear');
         this.$dropdown.toggleClass('dropdown_open');
     }
 
@@ -67,7 +68,7 @@ class Dropdown {
 
     @bind
     handleApplyClick() {
-        this.$dropdown.find('.js-dropdown__popup').slideToggle(this.ANIMATION_DURATION_MS, 'linear').parent().toggleClass('dropdown_open');
+        this.$dropdown.find('.js-dropdown__popup').slideToggle(ANIMATION_DURATION_MS, 'linear').parent().toggleClass('dropdown_open');
     }
 }
 

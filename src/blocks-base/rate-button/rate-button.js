@@ -1,21 +1,21 @@
 import bind from 'bind-decorator';
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 class RateButton {
+
+    FULL = 'star';
+    EMPTY = 'star_border';
 
     constructor($rateButton) {
 
         if ( !$rateButton.hasClass('js-rate-button_clickable') ) { return }
 
         this.$rate = $rateButton;
-        this.FULL = 'star';
-        this.EMPTY = 'star_border';
-        this.$enteredIcon = null;
 
-        let $icon = $rateButton.find('.js-rate-button__icon');
-        $icon.on('mouseenter', this.handleIconMouseEnter);
-        $icon.on('click', this.handleIconClick);
-        $icon.on('mouseleave', this.handleIconMouseLeave);
+        let $icons = $rateButton.find('.js-rate-button__icon');
+
+        $icons.on('mouseenter', this.handleIconMouseEnter);
+        $icons.on('click', this.handleIconClick);
+        $icons.on('mouseleave', this.handleIconMouseLeave);   
     }
 
     @bind

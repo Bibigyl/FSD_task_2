@@ -2,14 +2,14 @@ import bind from 'bind-decorator';
 
 class Donut {
 
-    constructor($donut) {
+    static DONUT_COLORS = {
+        excellent :'#FFE39C', 
+        good: '#6FCF97', 
+        satisfactorily: '#BC9CFF', 
+        badly: '#919191'
+    };
 
-        this.DONUT_COLORS = {
-            excellent :'#FFE39C', 
-            good: '#6FCF97', 
-            satisfactorily: '#BC9CFF', 
-            badly: '#919191'
-        }
+    constructor($donut) {
 
         this.$donut = $donut;
         let $mark = $donut.find('.js-donut__mark');
@@ -40,14 +40,14 @@ class Donut {
         let $seg = $donut.find(`.js-donut-segment[data-mark-name=${markName}]`);
     
         $seg.attr('stroke-width', 3);
-        $seg.attr('stroke', this.DONUT_COLORS[markName]);
+        $seg.attr('stroke', DONUT_COLORS[markName]);
     
         let $chartNumber = $donut.find('.js-chart-number');
         let $chartLabel = $donut.find('.js-chart-label');
     
         $chartNumber.text($seg.attr('data-value'));
-        $chartNumber.attr('fill', this.DONUT_COLORS[markName]);
-        $chartLabel.attr('fill', this.DONUT_COLORS[markName]);
+        $chartNumber.attr('fill', DONUT_COLORS[markName]);
+        $chartLabel.attr('fill', DONUT_COLORS[markName]);
     }
 
     @bind
