@@ -15,10 +15,10 @@ class Donut {
     constructor($donut) {
 
         this.$donut = $donut;
-        let $mark = $donut.find('.js-donut__mark');
+        let $marks = $donut.find('.js-donut__mark');
 
-        $mark.on('mouseenter', this.handleMarkMouseEnter);
-        $mark.on('mouseleave', this.handleMarkMouseLeave);
+        $marks.on('mouseenter', this.handleMarkMouseEnter);
+        $marks.on('mouseleave', this.handleMarkMouseLeave);
 
 
         let values = [];
@@ -31,26 +31,28 @@ class Donut {
         });
 
         this.buildDonutDiagram(values, donut);
-
     }
+
 
     @bind
     handleMarkMouseEnter() {
         let $mark = $(event.target);
         let $donut = (this).$donut;
 
-        let markName = $mark.find('.js-shape-circle').attr('data-mark-name');
-        let $segment = $donut.find(`.js-donut-segment[data-mark-name=${markName}]`);
+        let markId = $mark.attr('data-mark-id');
+        let colorPrimary = $mark.attr('data-color-primary');
+        let $segment = $donut.find(`.js-donut-segment[data-mark-id=${markId}]`);
+
     
         $segment.attr('stroke-width', this.ACTIVE_SEGMENT_WIDTH);
-        $segment.attr('stroke', this.DONUT_COLORS[markName]);
+        $segment.attr('stroke', colorPrimary);
     
         let $chartNumber = $donut.find('.js-chart-number');
         let $chartLabel = $donut.find('.js-chart-label');
     
         $chartNumber.text($segment.attr('data-value'));
-        $chartNumber.attr('fill', this.DONUT_COLORS[markName]);
-        $chartLabel.attr('fill', this.DONUT_COLORS[markName]);
+        $chartNumber.attr('fill', colorPrimary);
+        $chartLabel.attr('fill', colorPrimary);
     }
 
     @bind
@@ -58,11 +60,11 @@ class Donut {
         let $mark = $(event.target);
         let $donut = (this).$donut;
 
-        let markName = $mark.find('.js-shape-circle').attr('data-mark-name');
-        let $segment = $donut.find(`.js-donut-segment[data-mark-name=${markName}]`);
+        let markId = $mark.attr('data-mark-id');
+        let $segment = $donut.find(`.js-donut-segment[data-mark-id=${markId}]`);
     
         $segment.attr('stroke-width', this.SEGMENT_WIDTH);
-        $segment.attr('stroke', `url(#${markName})`);
+        $segment.attr('stroke', `url(#${markId})`);
     
         let $chartNumber = $donut.find('.js-chart-number');
         let $chartLabel = $donut.find('.js-chart-label');
@@ -76,20 +78,20 @@ class Donut {
     buildDonutDiagram(values, node) {
 
         let sum = 0;
-        values.forEach(function(el) {
-            sum += parseInt(el, 10);
+        values.forEach(function(value) {
+            sum += parseInt(value, 10);
         });
     
         let percents = [];
-        values.forEach(function(el, i) {
-            percents[i] = Number( (el / sum * 100).toFixed() );
+        values.forEach(function(value, i) {
+            percents[i] = Number( (value / sum * 100).toFixed() );
         });
     
         const INITIAL_OFFSET = -25;
         let incrementalSum = INITIAL_OFFSET;
         let segments = node.querySelectorAll('.js-donut-segment');
     
-        for (let i = 0; i < this.NUMBER_OF_MARKS; i++) {
+        for (let i = 0; i < values.length; i++) {
             let dash = percents[i] ? percents[i] - 1 : 0;
             let offset = percents[i] ? (100 - percents[i]) + 1 : (100 - percents[i]);
             segments[i].setAttribute('stroke-dasharray', `${dash} ${offset}`);

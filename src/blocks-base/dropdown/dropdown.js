@@ -3,7 +3,7 @@ import bind from 'bind-decorator';
 
 class Dropdown {
 
-    static ANIMATION_DURATION_MS = 200;
+    ANIMATION_DURATION_MS = 150;
 
     constructor($dropdown) {
         this.$dropdown = $dropdown;
@@ -19,11 +19,11 @@ class Dropdown {
         $apply.on('click', this.handleApplyClick);
 
         let $items = $dropdown.find('[data-outer="dropdown-item"]');
-        let MessageHub = new MessageHub($items, 'data-output', this.handleAttributeChange);
+        let messageHub = new MessageHub($items, 'data-output', this.handleMessage);
     }
 
     @bind
-    handleAttributeChange() {
+    handleMessage() {
         let $items = this.$dropdown.find('[data-outer="dropdown-item"]');
         let $textField = this.$dropdown.find('.js-dropdown__text');
         let $clear = this.$dropdown.find('.js-dropdown__action_clear');
@@ -51,7 +51,7 @@ class Dropdown {
 
     @bind
     handleArrowClick() {
-        this.$dropdown.children('.js-dropdown__popup').slideToggle(ANIMATION_DURATION_MS, 'linear');
+        this.$dropdown.children('.js-dropdown__popup').slideToggle(this.ANIMATION_DURATION_MS, 'linear');
         this.$dropdown.toggleClass('dropdown_open');
     }
 
@@ -68,7 +68,7 @@ class Dropdown {
 
     @bind
     handleApplyClick() {
-        this.$dropdown.find('.js-dropdown__popup').slideToggle(ANIMATION_DURATION_MS, 'linear').parent().toggleClass('dropdown_open');
+        this.$dropdown.find('.js-dropdown__popup').slideToggle(this.ANIMATION_DURATION_MS, 'linear').parent().toggleClass('dropdown_open');
     }
 }
 

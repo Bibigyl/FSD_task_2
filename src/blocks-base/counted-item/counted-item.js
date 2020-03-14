@@ -9,11 +9,11 @@ class CountedItem {
 
         $operations.on('click', this.handleOperationClick);
 
-        let MessageHub = new MessageHub($item, 'data-input', this.handleAttributeChange);
+        let messageHub = new MessageHub($item, 'data-input', this.handleMessage);
     }
 
     @bind
-    handleAttributeChange() {
+    handleMessage() {
         let $item = this.$item;
         if ( $item.attr('data-input') != 'clear' ) { return }
 

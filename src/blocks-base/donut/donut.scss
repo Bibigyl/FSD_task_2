@@ -39,7 +39,7 @@
     min-width: 140px;
   }
   
-  .figure-content svg {
+  .donut__figure {
     height: auto;
   }
   
@@ -53,39 +53,13 @@
     list-style: none;
   }
   
-  .figure-key-list li {
-    padding: 0;
-  
-    span {
-      margin-right: 1px;
-    }
-  }
-  
   .shape-circle {
     display: inline-block;
     vertical-align: middle;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-  }
-  
-  .shape-circle {
-
-    &_excellent {
-      background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
-    }
-  
-    &_good {
-      background: $gradientSecondary;
-    }
-  
-    &_satisfactorily {
-      background: $gradientPrimary;
-    }
-  
-    &_badly {
-      background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
-    }
+    margin-right: 4px;
   }
   
   .donut-wrap {
@@ -94,6 +68,7 @@
   
   .donut__mark {
     cursor: default;
+    padding: 0;
   }
   
   .donut-segment {

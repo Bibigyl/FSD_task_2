@@ -28,10 +28,34 @@
     "advantagesTitle": "Впечатления от номера",
     "donut": {
         "marks" : [
-            {"name": "Великолепно", "value": 520},
-            {"name": "Хорошо", "value": 260},
-            {"name": "Удовлетворительно", "value": 260},
-            {"name": "Разочарован", "value": 0}
+            {
+                "name": "Великолепно", 
+                "id": "excellent", 
+                "value": 520, 
+                "colorPrimary": "#FFE39C", 
+                "colorSecondary": "#FFBA9C"
+            },
+            {
+                "name": "Хорошо", 
+                "id": "good", 
+                "value": 260, 
+                "colorPrimary": "#6FCF97", 
+                "colorSecondary": "#66D2EA"
+            },
+            {
+                "name": "Удовлетворительно", 
+                "id": "satisfactorily", 
+                "value": 260, 
+                "colorPrimary": "#BC9CFF",
+                "colorSecondary": "#8BA4F9"
+            },
+            {
+                "name": "Разочарован", 
+                "id": "badly", 
+                "value": 0, 
+                "colorPrimary": "#919191", 
+                "colorSecondary": "#3D4975"
+            }
         ],
         "dataName": "голосов"
     },
