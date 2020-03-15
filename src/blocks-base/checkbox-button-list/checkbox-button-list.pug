@@ -1,8 +1,9 @@
 include ../checkbox-button/checkbox-button
 include ../title/title
 
-mixin checkbox-button-list({title, items})
-    .checkbox-button-list
+mixin checkbox-button-list({title, items, isRich = false})
+    - let rich = isRich ? 'checkbox-button-list_rich' : '';
+    .checkbox-button-list(class=rich)
         if title
             .checkbox-button-list__title
                 +title(title)

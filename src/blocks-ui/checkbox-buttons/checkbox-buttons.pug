@@ -1,7 +1,8 @@
 include ../../blocks-base/checkbox-button/checkbox-button
 
-mixin checkbox-buttons(buttons)
-    .checkbox-buttons
+mixin checkbox-buttons({buttons, isRich = false})
+    - let rich = isRich ? 'checkbox-buttons_rich' : ''; 
+    .checkbox-buttons(class = rich)
         each button in buttons
             .checkbox-buttons__checkbox-button
                 +checkbox-button(button)

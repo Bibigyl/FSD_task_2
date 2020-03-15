@@ -84,11 +84,13 @@
                 "title": "Checkbox Buttons",
                 "isMarginBig": true
             },
-            "content": [
-                {"text": "Можно курить"},
-                {"text": "Можно с питомцами", "isChecked": true},
-                {"text": "Можно пригласить гостей (до&nbsp;10&nbsp;человек)", "isChecked": true}
-            ]
+            "content": {
+                "buttons": [
+                    {"text": "Можно курить"},
+                    {"text": "Можно с питомцами", "isChecked": true},
+                    {"text": "Можно пригласить гостей (до&nbsp;10&nbsp;человек)", "isChecked": true}
+                ]
+            }
         },
         "radios": {
             "content": {
@@ -267,16 +269,19 @@
                 "title": "Rich checkbox buttons",
                 "isMarginBig": true
             }, 
-            "content": [
-                {
-                    "richText": "Широкий коридор",
-                    "text": "Ширина коридоров в номере не&nbsp;менее 91 см."   
-                },
-                {
-                    "richText": "Помощник для инвалидов",
-                    "text": "На 1 этаже вас встретит специалист и&nbsp;проводит до номера."                                        
-                }
-            ]                
+            "content": {
+                "buttons": [
+                    {
+                        "richText": "Широкий коридор",
+                        "text": "Ширина коридоров в номере не&nbsp;менее 91 см."   
+                    },
+                    {
+                        "richText": "Помощник для инвалидов",
+                        "text": "На 1 этаже вас встретит специалист и&nbsp;проводит до номера."                                        
+                    }
+                ],
+                "isRich": true
+            }        
         },
         "bulletList": {
             "title": "Bullet list",

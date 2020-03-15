@@ -2,13 +2,6 @@ import bind from 'bind-decorator';
 
 class Donut {
 
-    DONUT_COLORS = {
-        excellent :'#FFE39C', 
-        good: '#6FCF97', 
-        satisfactorily: '#BC9CFF', 
-        badly: '#919191'
-    };
-    NUMBER_OF_MARKS = 4;
     SEGMENT_WIDTH = 1;
     ACTIVE_SEGMENT_WIDTH = 3;
 
