@@ -3,15 +3,15 @@
 import '../../scss/main.scss';
 import './registration.scss';
 
-//--------------- import common js -----------------------------
+//--------------- import common js -------------------------
 
 import '../../js/main.js';
 
-//------------------ import blocks scripts -----------------------------
+//------------------ import blocks scripts -----------------
 
 import '../../blocks-base/text-field/text-field.js';
 
-//------------------ import components scripts -----------------------------
+//------------------ import components scripts --------------
 
 import '../../blocks-semantic/header/header.js';
 

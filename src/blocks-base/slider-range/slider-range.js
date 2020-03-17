@@ -23,7 +23,6 @@ class SliderRange {
             values = [min, max];
         }
 
-        // Initiate Slider
         $slider.slider({
             range: true,
             min: min,
@@ -32,7 +31,6 @@ class SliderRange {
             values: values
         });
 
-        // Apply initial values to the range container
         const THOUSANDS_RANKS = /(\d)(?=(\d\d\d)+(?!\d))/g;
         let begin = $slider.slider("values", 0).toString().replace(THOUSANDS_RANKS, "$1 ");
         let end = $slider.slider("values", 1).toString().replace(THOUSANDS_RANKS, "$1 ");
@@ -49,14 +47,12 @@ class SliderRange {
                 let begin = ui.values[0].toString().replace(THOUSANDS_RANKS, "$1 ");
                 let end = ui.values[1].toString().replace(THOUSANDS_RANKS, "$1 ");
                 
-                // Update the range container values upon sliding
                 $text.html(
                     `<span class="range-value">${begin}₽</span>
                     <span class="range-divider">
                     </span><span class="range-value">${end}₽</span>`
                 );
 
-                // Save new value
                 $slider.data({
                     'value': Number(ui.value)
                 });

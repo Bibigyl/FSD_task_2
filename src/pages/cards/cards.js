@@ -25,8 +25,6 @@ import '../../blocks-base/date-dropdown/date-dropdown.js';
 
 $(document).ready(function() {
 
-    // Открытый календарь в карточках
-    
     $('.js-cards__calendar').dateRangePicker({
         language: 'ru',
         singleMonth: true,
@@ -43,7 +41,6 @@ $(document).ready(function() {
         alwaysOpen: true, 
     });
 
-    // Создаем кнопки "очистить" и "принять"
     $('.calendar-wrap').find('.date-picker-wrapper').append(
         '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear">Очистить</button><button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply">Применить</button>'
     );
