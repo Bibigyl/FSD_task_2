@@ -15,7 +15,7 @@ class ExpandableCheckboxList {
   @bind
   handleArrowClick() {
     let $checkboxList = this.$list.closest('.js-expandable-checkbox-list');
-    $checkboxList.find('.js-expandable-checkbox-list__list').slideToggle(ANIMATION_DURATION_MS);
+    $checkboxList.find('.js-expandable-checkbox-list__list').slideToggle(ExpandableCheckboxList.ANIMATION_DURATION_MS);
     $checkboxList.toggleClass('expandable-checkbox-list_open');
   }
 }

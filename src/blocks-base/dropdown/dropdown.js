@@ -3,7 +3,7 @@ import bind from 'bind-decorator';
 
 class Dropdown {
 
-    ANIMATION_DURATION_MS = 150;
+    static ANIMATION_DURATION_MS = 150;
 
     constructor($dropdown) {
         this.$dropdown = $dropdown;
@@ -82,13 +82,13 @@ class Dropdown {
     }
 
     open() {
-        this.$dropdown.find('.js-dropdown__popup').slideDown(this.ANIMATION_DURATION_MS, 'linear').parent().addClass('dropdown_open');
+        this.$dropdown.find('.js-dropdown__popup').slideDown(Dropdown.ANIMATION_DURATION_MS, 'linear').parent().addClass('dropdown_open');
 
         $(document).on('mouseup', this.handleFocusLoss);
     }
 
     close() {
-        this.$dropdown.find('.js-dropdown__popup').slideUp(this.ANIMATION_DURATION_MS, 'linear').parent().removeClass('dropdown_open');
+        this.$dropdown.find('.js-dropdown__popup').slideUp(Dropdown.ANIMATION_DURATION_MS, 'linear').parent().removeClass('dropdown_open');
 
         $(document).unbind('mouseup', this.handleFocusLoss);
     }
