@@ -62,6 +62,16 @@
     }
   }
 
+  &__menu-link {
+    color: inherit;
+    text-decoration: none;
+
+    &:focus, &:visited {
+      color: $primary;
+      outline: none;
+    }
+  }
+
   &__buttons {
     display: flex;
     align-self: center;
@@ -93,14 +103,8 @@
     padding: 3px 0px 4px 5.9px;
     line-height: 30px;
     margin-left: 25px;
-    cursor: pointer;
     color: $greyOpacity50;
     transition: .2s;
-
-    &:hover {
-      color: $greyOpacity75;
-      transition: .2s;
-    }
   }
 
   &__user-icon {

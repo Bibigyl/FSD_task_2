@@ -1,10 +1,10 @@
 {
     "header": {
         "items": [
-            {"text": "О нас"},
+            {"text": "О нас", "href": "/mock-address/change-me"},
             {"text": "Услуги", "hasSubmenu": true},
-            {"text": "Вакансии"},
-            {"text": "Новости"},
+            {"text": "Вакансии", "href": "/mock-address/change-me"},
+            {"text": "Новости", "href": "/mock-address/change-me"},
             {"text": "Соглашения", "hasSubmenu": true}
         ],
         "loginButton": {
@@ -24,15 +24,29 @@
         "items": [
             {
                 "title": "Навигация", 
-                "subitems": ["О нас", "Новости", "Служба поддержки", "Услуги"]
+                "subitems": [
+                    {"text": "О нас", "href": "/mock-address/change-me"}, 
+                    {"text": "Новости", "href": "/mock-address/change-me"}, 
+                    {"text": "Служба поддержки", "href": "/mock-address/change-me"}, 
+                    {"text": "Услуги", "href": "/mock-address/change-me"}
+                ]
             },
             {
-                "title": "О нас", 
-                "subitems": ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
+                "title": "О нас",
+                "subitems": [
+                    {"text": "О сервисе", "href": "/mock-address/change-me"}, 
+                    {"text": "Наша команда", "href": "/mock-address/change-me"}, 
+                    {"text": "Вакансии", "href": "/mock-address/change-me"}, 
+                    {"text": "Инвесторы", "href": "/mock-address/change-me"}
+                ]
             },
             {
-                "title": "Служба поддержки", 
-                "subitems": ["Соглашения", "Сообщества", "Связь с нами"]
+                "title": "Служба поддержки",
+                "subitems": [
+                    {"text": "Соглашения", "href": "/mock-address/change-me"}, 
+                    {"text": "Сообщества", "href": "/mock-address/change-me"}, 
+                    {"text": "Связь с нами", "href": "/mock-address/change-me"}
+                ]
             }
         ],
         "subscription": {
@@ -45,9 +59,9 @@
         },
         "copyright": "Copyright © 2018 Toxin отель. Все права зачищены.",
         "links": [
-            {"name": "twitter"},
-            {"name": "facebook-square"},
-            {"name": "instagram"}
+            {"name": "twitter", "href": "https://twitter.com/"},
+            {"name": "facebook-square", "href": "https://www.facebook.com/"},
+            {"name": "instagram", "href": "https://www.instagram.com/"}
         ],
         "isRussian": true
     }

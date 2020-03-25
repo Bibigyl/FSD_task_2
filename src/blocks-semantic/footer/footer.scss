@@ -57,12 +57,21 @@
   &__subitem {
     margin-bottom: 14px;
     color: $greyOpacity50;
-    cursor: pointer;
     transition: .2s;
 
     &:hover {
       color: $greyOpacity75;
       transition: .2s;
+    }
+  }
+
+  &__subitem-link {
+    text-decoration: none;
+    color: inherit;
+
+    &:focus, &:visited {
+      color: $primary;
+      outline: none;
     }
   }
 

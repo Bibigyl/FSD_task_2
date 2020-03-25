@@ -1,12 +1,12 @@
 {
     "header": {
         "items": [
-            {"text": "Home", "isActive": true},
-            {"text": "About Us"},
-            {"text": "Services", "hasSubmenu": true},
-            {"text": "Careers"},
-            {"text": "News"},
-            {"text": "Documentation"}
+            {"text": "Home", "isActive": true, "href": "/mock-address/change-me"},
+            {"text": "About Us", "href": "/mock-address/change-me"},
+            {"text": "Services", "hasSubmenu": true, "href": "/mock-address/change-me"},
+            {"text": "Careers", "href": "/mock-address/change-me"},
+            {"text": "News", "href": "/mock-address/change-me"},
+            {"text": "Documentation", "href": "/mock-address/change-me"}
         ],
         "loginButton": {
             "text": "Login", 
@@ -21,12 +21,12 @@
 
     "headerLogined": {
         "items": [
-            {"text": "Home", "isActive": true},
-            {"text": "About Us"},
-            {"text": "Services", "hasSubmenu": true},
-            {"text": "Careers"},
-            {"text": "News"},
-            {"text": "Documentation"}
+            {"text": "Home", "isActive": true, "href": "/mock-address/change-me"},
+            {"text": "About Us", "href": "/mock-address/change-me"},
+            {"text": "Services", "hasSubmenu": true, "href": "/mock-address/change-me"},
+            {"text": "Careers", "href": "/mock-address/change-me"},
+            {"text": "News", "href": "/mock-address/change-me"},
+            {"text": "Documentation", "href": "/mock-address/change-me"}
         ],
         "user": "Cosmin Negoita"
     },
@@ -36,15 +36,29 @@
         "items": [
             {
                 "title": "Navigation", 
-                "subitems": ["About Us", "News", "Support", "Products"]
+                "subitems": [
+                    {"text": "About Us", "href": "/mock-address/change-me"}, 
+                    {"text": "News", "href": "/mock-address/change-me"}, 
+                    {"text": "Support", "href": "/mock-address/change-me"}, 
+                    {"text": "Products", "href": "/mock-address/change-me"}
+                ]
             },
             {
-                "title": "About us", 
-                "subitems": ["Who we are", "Our team", "Careers", "Investors"]
+                "title": "About us",
+                "subitems": [
+                    {"text": "Who we are", "href": "/mock-address/change-me"}, 
+                    {"text": "Our team", "href": "/mock-address/change-me"}, 
+                    {"text": "Careers", "href": "/mock-address/change-me"}, 
+                    {"text": "Investors", "href": "/mock-address/change-me"}
+                ]
             },
             {
-                "title": "Support", 
-                "subitems": ["Documentation", "Community", "Get in Touch"]
+                "title": "Support",
+                "subitems": [
+                    {"text": "Documentation", "href": "/mock-address/change-me"}, 
+                    {"text": "Community", "href": "/mock-address/change-me"}, 
+                    {"text": "Get in Touch", "href": "/mock-address/change-me"}
+                ]
             }
         ],
         "subscription": {
@@ -57,18 +71,18 @@
         },
         "copyright": "Copyright © 2018 Toxin UI Kit. All rights reserved.",
         "links": [
-            {"name": "twitter"},
-            {"name": "facebook-square"},
-            {"name": "instagram"}
+            {"name": "twitter", "href": "https://twitter.com/"},
+            {"name": "facebook-square", "href": "https://www.facebook.com/"},
+            {"name": "instagram", "href": "https://www.instagram.com/"}
         ]
     },
 
     "footerMin": {
         "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis",
         "links": [
-            {"name": "twitter"},
-            {"name": "facebook-square"},
-            {"name": "instagram"}
+            {"name": "twitter", "href": "https://twitter.com/"},
+            {"name": "facebook-square", "href": "https://www.facebook.com/"},
+            {"name": "instagram", "href": "https://www.instagram.com/"}
         ]
     }
 }

@@ -18,7 +18,7 @@ mixin footer({text, items, subscription, copyright, links, isRussian})
 							ul
 								each subitem in item.subitems
 									li.footer__subitem
-										a= subitem
+										a.footer__subitem-link(href=subitem.href)= subitem.text
 
 			.footer__subscription
 				h3.footer__subscription-title= subscription.title
@@ -31,5 +31,5 @@ mixin footer({text, items, subscription, copyright, links, isRussian})
 			p.footer__copyright= copyright
 			.footer__links
 				each link in links
-					a.footer__link(href=link.href)
+					a.footer__link(href=link.href target="_blank" rel="noopener noreferrer")
 						i.footer__link-icon.fab(class=`fa-${link.name}`)

@@ -14,7 +14,7 @@ mixin header({items, loginButton, registerButton, user, isMenuItemSlim})
 							- let active = item.isActive ? 'header__menu-item_active' : '';
 							- let withArrow = item.hasSubmenu ? 'header__menu-item_with-arrow' : '';
 							li.header__menu-item(class=[slim, active, withArrow])
-								a(href=item.href)= item.text
+								a.header__menu-link(href=item.href)= item.text
 								if item.hasSubmenu
 									i.header__menu-arrow.material-icons expand_more
 
