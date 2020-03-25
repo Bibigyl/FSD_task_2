@@ -17,6 +17,8 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 @import '~jquery-date-range-picker/dist/daterangepicker.scss';
 
+@import '~slick-carousel/slick/slick.scss';
+
 /*------------------------------ Common styles ----------------------------------------*/
 
 @import './_mixins';
@@ -151,6 +153,8 @@ h3 {
 @import '../blocks-base/bullet-list/bullet-list.scss';
 
 @import '../blocks-base/donut/donut.scss';
+
+@import '../blocks-base/slider/slider.scss';
 
 /*--------- Components styles -------------*/
 

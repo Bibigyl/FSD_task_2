@@ -163,7 +163,12 @@
     },
 
     "roomCard1": {
-        "image": "cards__room-card-1.jpg",
+        "images": [
+            "cards__room-card-1.jpg",
+            "cards__room-card-2.jpg",
+            "cards__room-card-1.jpg",
+            "cards__room-card-2.jpg"
+        ],
         "number": 888,
         "lux": "люкс",
         "price": {
@@ -178,7 +183,12 @@
     },
 
     "roomCard2": {
-        "image": "cards__room-card-2.jpg",
+        "images": [
+            "cards__room-card-2.jpg",
+            "cards__room-card-1.jpg",
+            "cards__room-card-2.jpg",
+            "cards__room-card-1.jpg"
+        ],
         "number": 840,
         "price": {
             "number": "9 900₽",

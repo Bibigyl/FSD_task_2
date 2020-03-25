@@ -1,0 +1,4 @@
+mixin slider({images, hasArrows = true, hasDots = true})
+    .slider.js-slider(data-arrows=hasArrows data-dots=hasDots)
+        each image in images
+            .sldier__image(style=`background-image: url( ${require('./images/' + image)})`)

@@ -1,0 +1,88 @@
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .slick-list,
+  .slick-track {
+    height: 100%;
+  }
+
+  &__image {
+    border-radius: 4px 4px 0 0;
+    background: center, center no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__arrow {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    border-radius: 4px 4px 0 0;
+    width: 42px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+    cursor: pointer;
+    border: 0;
+
+    &_prev {
+      top: 0;
+      left: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &_next {
+      top: 0;
+      right: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    .material-icons {
+      margin: 0;
+      color: #fff;
+      font-size: rem(24px);
+      transform: rotate(90deg);
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    z-index: 2;
+    bottom: 9px;
+    right: 12px;
+    transition: .4s;
+    cursor: default;
+
+    > * {
+      width: 7px;
+      height: 7px;
+      margin-right: 4px;
+      border-radius: 100px;
+      border: solid 1px #fff;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .slick-active {
+      background-color: #fff;
+    }
+
+    button {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .slider__arrow {
+      opacity: 1;
+      transition: .4s;
+    }
+  }
+}

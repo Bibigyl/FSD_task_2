@@ -58,9 +58,13 @@ block content
                     -
                         let price = item[3].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + '₽';
                         let lux = item[2] ? 'люкс' : '';
+                        let images = [];
+                        item[0].forEach( (item) => {
+                            images.push(`search-room__room-${item}.jpg`)
+                        })
 
                         let options = {
-                            image:  `search-room__room-${item[0]}.jpg`,
+                            'images': images,
                             number: item[1],
                             lux: lux,
                             price: {

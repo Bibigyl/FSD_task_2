@@ -21,7 +21,7 @@ import '../../blocks-base/text-field/text-field.js';
 import '../../blocks-base/counted-item/counted-item.js';
 import '../../blocks-base/dropdown/dropdown.js';
 import '../../blocks-base/date-dropdown/date-dropdown.js';
-
+import '../../blocks-base/slider/slider.js';
 
 $(document).ready(function() {
 
