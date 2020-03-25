@@ -8,11 +8,12 @@ class Dropdown {
     constructor($dropdown) {
         this.$dropdown = $dropdown;
 
-        let $arrows = $dropdown.find('.js-dropdown__arrow');
+        let $field = $dropdown.find('.js-dropdown__field');
         let $clear = $dropdown.find('.js-dropdown__action_clear');
         let $apply = $dropdown.find('.js-dropdown__action_apply');
 
-        $arrows.on('click', this.handleArrowClick);
+
+        $field.on('click', this.handleFieldClick);
 
         $clear.on('click', this.handleClearClick);
 
@@ -29,7 +30,6 @@ class Dropdown {
         let $clear = this.$dropdown.find('.js-dropdown__action_clear');
         let initialText = this.$dropdown.attr('data-initial-text');
         let text = '';
-
 
         let itemTexts = [];
         let itemText;
@@ -50,9 +50,12 @@ class Dropdown {
     }
 
     @bind
-    handleArrowClick() {
-        this.$dropdown.children('.js-dropdown__popup').slideToggle(this.ANIMATION_DURATION_MS, 'linear');
-        this.$dropdown.toggleClass('dropdown_open');
+    handleFieldClick() {
+        if (!this.$dropdown.hasClass('dropdown_open')) {
+            this.open();
+        } else {
+            this.close();
+        }
     }
 
     @bind
@@ -68,7 +71,26 @@ class Dropdown {
 
     @bind
     handleApplyClick() {
-        this.$dropdown.find('.js-dropdown__popup').slideToggle(this.ANIMATION_DURATION_MS, 'linear').parent().toggleClass('dropdown_open');
+        this.close()
+    }
+
+    @bind
+    handleFocusLoss(e) {
+        if (this.$dropdown.has(e.target).length === 0){
+            this.close();
+        }
+    }
+
+    open() {
+        this.$dropdown.find('.js-dropdown__popup').slideDown(this.ANIMATION_DURATION_MS, 'linear').parent().addClass('dropdown_open');
+
+        $(document).on('mouseup', this.handleFocusLoss);
+    }
+
+    close() {
+        this.$dropdown.find('.js-dropdown__popup').slideUp(this.ANIMATION_DURATION_MS, 'linear').parent().removeClass('dropdown_open');
+
+        $(document).unbind('mouseup', this.handleFocusLoss);
     }
 }
 

@@ -2,6 +2,7 @@ import moment from 'moment';
 import 'moment/locale/ru';
 import 'moment/locale/es-us';
 moment.locale('ru');
+import bind from 'bind-decorator';
 
 
 class FilterDateDropdown {
@@ -21,6 +22,7 @@ class FilterDateDropdown {
         let firstDate = $dropdown.attr('data-first-date') || '';
         let lastDate = $dropdown.attr('data-last-date') || '';
         let language = $dropdown.attr('data-language');
+        let initialText = $dropdown.attr('data-initial-text');
         let buttonClearText = $dropdown.attr('data-button-to-clear');
         let buttonApplyText = $dropdown.attr('data-button-to-apply');
 
@@ -63,16 +65,30 @@ class FilterDateDropdown {
 
         $dropdown.find('.js-calendar__icon-link_action_clear').on('click', function() {
             $dropdown.data('dateRangePicker').clear();
-            $input.find('input').val('');
+            $input.val(initialText);
         });
 
-        $dropdown.find('.js-calendar__icon-link_action_apply').on('click', function() {
-            $dropdown.data('dateRangePicker').close();
-        });
+        $dropdown.find('.js-calendar__icon-link_action_apply').on('click', this.close);
 
-        $dropdown.find('.js-filter-date-dropdown__arrow').on('click', function() {
-            $dropdown.data('dateRangePicker').close();      
-        });
+        $dropdown.find('.js-filter-date-dropdown__arrow').on('click', this.close);
+
+        const focusLostHandler = this.handleFocusLoss;
+        $dropdown.bind('datepicker-opened', function() {
+            $(document).on('mouseup', focusLostHandler);
+        })
+    }
+
+    @bind
+    handleFocusLoss(e) {
+        if (this.$dropdown.has(e.target).length === 0){
+            this.close();
+        }
+    }
+
+    @bind
+    close() {
+        this.$dropdown.data('dateRangePicker').close();
+        $(document).unbind('mouseup', this.handleFocusLoss);
     }
 }
 

@@ -23,6 +23,7 @@
     transition: .4s;
     padding-left: 14px;
     background-color: #fff;
+    cursor: pointer;
   }
 
   &__text {
@@ -34,7 +35,6 @@
 
   &__arrow {
     padding: 10px;
-    cursor: pointer;
     color: $greyOpacity50;
   }
 

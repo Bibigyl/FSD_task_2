@@ -65,13 +65,14 @@ class DateDropdown {
             $dateDropdown.data('dateRangePicker').clear();
         });
 
-        $dateDropdown.find('.js-calendar__icon-link_action_apply').on('click', function() {
-            $dateDropdown.data('dateRangePicker').close();
-        });
+        $dateDropdown.find('.js-calendar__icon-link_action_apply').on('click', this.close);
 
-        $dateDropdown.find('.js-date-dropdown__arrow').on('click', function() {
-            $dateDropdown.data('dateRangePicker').close();
-        });
+        $dateDropdown.find('.js-date-dropdown__arrow').on('click', this.close);
+
+        const focusLostHandler = this.handleFocusLoss;
+        $dateDropdown.bind('datepicker-opened', function() {
+            $(document).on('mouseup', focusLostHandler);
+        })
     }
 
 
@@ -96,6 +97,19 @@ class DateDropdown {
         if (event.keyCode == 13) {
             this.handleInputOnBlur();
         }
+    }
+
+    @bind
+    handleFocusLoss(e) {
+        if (this.$dateDropdown.has(e.target).length === 0){
+            this.close();
+        }
+    }
+
+    @bind
+    close() {
+        this.$dateDropdown.data('dateRangePicker').close();
+        $(document).unbind('mouseup', this.handleFocusLoss);
     }
 }
 

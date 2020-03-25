@@ -3,37 +3,37 @@ include ../title/title
 include ../counted-item/counted-item
 
 mixin dropdown({title, content = {initialText, text, items, buttons}, isOpen, isSmall})
-	-	
-		let open = isOpen ? 'dropdown_open' : '';
-		let small = isSmall ? 'dropdown_small' : '';
-		let isClearHidden = true;
-		let text = content.text || content.initialText;
+    -    
+        let open = isOpen ? 'dropdown_open' : '';
+        let small = isSmall ? 'dropdown_small' : '';
+        let isClearHidden = true;
+        let text = content.text || content.initialText;
 
-	.dropdown.js-dropdown(class=[open, small] data-initial-text=content.initialText)
-		if title
-			.dropdown__title
-				+title(title)
+    .dropdown.js-dropdown(class=[open, small] data-initial-text=content.initialText)
+        if title
+            .dropdown__title
+                +title(title)
 
-		.dropdown__field
-			span.dropdown__text.js-dropdown__text= text
-			i.dropdown__arrow.js-dropdown__arrow.material-icons expand_more
+        .dropdown__field.js-dropdown__field
+            span.dropdown__text.js-dropdown__text= text
+            i.dropdown__arrow.js-dropdown__arrow.material-icons expand_more
 
-		.dropdown__popup.js-dropdown__popup
+        .dropdown__popup.js-dropdown__popup
 
-			ul.js-dropdown__items
+            ul.js-dropdown__items
 
-				each item in content.items
-					li.dropdown__item
-						- item.value = item.value || 0;
-						- item.outerAttr = 'dropdown-item';
-						- isClearHidden = item.value > 0 ? false : isClearHidden;
+                each item in content.items
+                    li.dropdown__item
+                        - item.value = item.value || 0;
+                        - item.outerAttr = 'dropdown-item';
+                        - isClearHidden = item.value > 0 ? false : isClearHidden;
 
-						+counted-item(item)
-			
-			if content.buttons
-				- let clearHidden = isClearHidden ? 'dropdown__action_hidden' : '';
+                        +counted-item(item)
+            
+            if content.buttons
+                - let clearHidden = isClearHidden ? 'dropdown__action_hidden' : '';
 
-				.dropdown__action.dropdown__action_clear.js-dropdown__action_clear(class=clearHidden)
-					+icon-link({text: content.buttons[0]})
-				.dropdown__action.dropdown__action_apply.js-dropdown__action_apply
-					+icon-link({text: content.buttons[1], isPrimary: true})
+                .dropdown__action.dropdown__action_clear.js-dropdown__action_clear(class=clearHidden)
+                    +icon-link({text: content.buttons[0]})
+                .dropdown__action.dropdown__action_apply.js-dropdown__action_apply
+                    +icon-link({text: content.buttons[1], isPrimary: true})
