@@ -47,15 +47,15 @@
             <div class="header__menu js-header__menu">
               <nav class="header__menu-nav">
                 <ul class="header__menu-items">
-                  <li class="header__menu-item header__menu-item_slim"><a>О нас</a>
+                  <li class="header__menu-item header__menu-item_slim"><a class="header__menu-link" href="/mock-address/change-me">О нас</a>
                   </li>
-                  <li class="header__menu-item header__menu-item_slim header__menu-item_with-arrow"><a>Услуги</a><i class="header__menu-arrow material-icons">expand_more</i>
+                  <li class="header__menu-item header__menu-item_slim header__menu-item_with-arrow"><a class="header__menu-link">Услуги</a><i class="header__menu-arrow material-icons">expand_more</i>
                   </li>
-                  <li class="header__menu-item header__menu-item_slim"><a>Вакансии</a>
+                  <li class="header__menu-item header__menu-item_slim"><a class="header__menu-link" href="/mock-address/change-me">Вакансии</a>
                   </li>
-                  <li class="header__menu-item header__menu-item_slim"><a>Новости</a>
+                  <li class="header__menu-item header__menu-item_slim"><a class="header__menu-link" href="/mock-address/change-me">Новости</a>
                   </li>
-                  <li class="header__menu-item header__menu-item_slim header__menu-item_with-arrow"><a>Соглашения</a><i class="header__menu-arrow material-icons">expand_more</i>
+                  <li class="header__menu-item header__menu-item_slim header__menu-item_with-arrow"><a class="header__menu-link">Соглашения</a><i class="header__menu-arrow material-icons">expand_more</i>
                   </li>
                 </ul>
               </nav>
@@ -107,43 +107,43 @@
             <h2 class="room-details__diagram-title">Впечатления от номера</h2>
             <div class="room-details__diagram">
                     <div class="donut js-donut">
-                      <figure>
-                        <div class="figure-content">
+                      <figure class="donut__figure">
+                        <div class="donut__figure-content">
                           <svg class="donut__figure" width="100%" height="100%" viewbox="0 0 42 42" aria-labelledby="beers-title beers-desc" role="img">
-                            <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff" role="presentation"></circle>
-                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" role="presentation"></circle>
-                            <lineargradient id="excellent" x1="0" y1="0.5" x2="0.5" y2="0">
+                            <circle class="donut__hole" cx="21" cy="21" r="15.91549430918954" fill="#fff" role="presentation"></circle>
+                            <circle class="donut__ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" role="presentation"></circle>
+                            <lineargradient id="excellent" x1="0" y1="0" x2="0" y2="1">
                               <stop offset="0%" stop-color="#FFE39C"></stop>
                               <stop offset="100%" stop-color="#FFBA9C"></stop>
                             </lineargradient>
-                            <lineargradient id="good" x1="0.5" y1="0" x2="0" y2="0.5">
+                            <lineargradient id="good" x1="0" y1="1" x2="1" y2="0">
                               <stop offset="0%" stop-color="#6FCF97"></stop>
                               <stop offset="100%" stop-color="#66D2EA"></stop>
                             </lineargradient>
-                            <lineargradient id="satisfactorily" x1="0" y1="0" x2="0" y2="0.5">
+                            <lineargradient id="satisfactorily" x1="1" y1="1" x2="0" y2="0">
                               <stop offset="0%" stop-color="#BC9CFF"></stop>
                               <stop offset="100%" stop-color="#8BA4F9"></stop>
                             </lineargradient>
-                            <lineargradient id="badly" x1="0" y1="0" x2="0.5" y2="0">
+                            <lineargradient id="badly" x1="1" y1="0" x2="0" y2="0">
                               <stop offset="0%" stop-color="#919191"></stop>
                               <stop offset="100%" stop-color="#3D4975"></stop>
                             </lineargradient>
-                            <circle class="donut-segment js-donut-segment" data-mark-name="excellent" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#excellent)" stroke-width="1" stroke-dasharray></circle>
-                            <circle class="donut-segment js-donut-segment" data-mark-name="good" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#good)" stroke-width="1" stroke-dasharray></circle>
-                            <circle class="donut-segment js-donut-segment" data-mark-name="satisfactorily" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#satisfactorily)" stroke-width="1" stroke-dasharray></circle>
-                            <circle class="donut-segment js-donut-segment" data-mark-name="badly" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#badly)" stroke-width="1" stroke-dasharray></circle>
-                            <g class="chart-text">
-                              <text class="chart-number js-chart-number" x="50%" y="50%" fill="grey"></text>
-                              <text class="chart-label js-chart-label" x="50%" y="50%" fill="grey">голосов</text>
+                            <circle class="donut__segment js-donut__segment" data-mark-id="excellent" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#excellent)" stroke-width="1" stroke-dasharray></circle>
+                            <circle class="donut__segment js-donut__segment" data-mark-id="good" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#good)" stroke-width="1" stroke-dasharray></circle>
+                            <circle class="donut__segment js-donut__segment" data-mark-id="satisfactorily" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#satisfactorily)" stroke-width="1" stroke-dasharray></circle>
+                            <circle class="donut__segment js-donut__segment" data-mark-id="badly" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#badly)" stroke-width="1" stroke-dasharray></circle>
+                            <g class="donut__chart-text">
+                              <text class="donut__chart-number js-donut__chart-number" x="50%" y="50%" fill="grey"></text>
+                              <text class="donut__chart-label js-donut__chart-label" x="50%" y="50%" fill="grey">голосов</text>
                             </g>
                           </svg>
                         </div>
-                        <figcaption class="figure-key">
-                          <ul class="figure-key-list" aria-hidden="true" role="presentation">
-                            <li class="donut__mark js-donut__mark" data-value="520"><span class="shape-circle js-shape-circle shape-circle_excellent" data-mark-name="excellent"></span> Великолепно</li>
-                            <li class="donut__mark js-donut__mark" data-value="260"><span class="shape-circle js-shape-circle shape-circle_good" data-mark-name="good"></span> Хорошо</li>
-                            <li class="donut__mark js-donut__mark" data-value="260"><span class="shape-circle js-shape-circle shape-circle_satisfactorily" data-mark-name="satisfactorily"></span> Удовлетворительно</li>
-                            <li class="donut__mark js-donut__mark" data-value="0"><span class="shape-circle js-shape-circle shape-circle_badly" data-mark-name="badly"></span> Разочарован</li>
+                        <figcaption class="donut__figure-key">
+                          <ul class="donut__figure-key-list" aria-hidden="true" role="presentation">
+                            <li class="donut__mark js-donut__mark" data-value="520" data-color-primary="#FFE39C" data-color-secondary="#FFBA9C" data-mark-id="excellent"><span class="donut__shape-circle js-donut__shape-circle" style="background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%)"></span>Великолепно</li>
+                            <li class="donut__mark js-donut__mark" data-value="260" data-color-primary="#6FCF97" data-color-secondary="#66D2EA" data-mark-id="good"><span class="donut__shape-circle js-donut__shape-circle" style="background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)"></span>Хорошо</li>
+                            <li class="donut__mark js-donut__mark" data-value="260" data-color-primary="#BC9CFF" data-color-secondary="#8BA4F9" data-mark-id="satisfactorily"><span class="donut__shape-circle js-donut__shape-circle" style="background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)"></span>Удовлетворительно</li>
+                            <li class="donut__mark js-donut__mark" data-value="0" data-color-primary="#919191" data-color-secondary="#3D4975" data-mark-id="badly"><span class="donut__shape-circle js-donut__shape-circle" style="background: linear-gradient(180deg, #919191 0%, #3D4975 100%)"></span>Разочарован</li>
                           </ul>
                         </figcaption>
                       </figure>
@@ -215,7 +215,7 @@
         <div class="room-details__booking-card">
                 <div class="booking-card">
                   <form>
-                    <div class="booking-card__main-info"><span class="booking-card__number"> <span class="booking-card__simbol-number">№888</span></span><span class="booking-card__class">люкс</span><span class="booking-card__price"><span class="booking-card__price-number">9 990₽ в сутки</span></span></div>
+                    <div class="booking-card__main-info"><span class="booking-card__number"> <span class="booking-card__simbol-number">№</span>888</span><span class="booking-card__class">люкс</span><span class="booking-card__price"><span class="booking-card__price-number">9 990₽</span>в сутки</span></div>
                     <div class="booking-card__date-dropdown">
                             <div class="date-dropdown js-date-dropdown" data-language="ru" data-button-to-clear="Очистить" data-button-to-apply="Принять">
                               <div class="date-dropdown__dates">
@@ -250,7 +250,7 @@
                               <div class="dropdown__title">
                                       <h3 class="title">Гости</h3>
                               </div>
-                              <div class="dropdown__field"><span class="dropdown__text js-dropdown__text">3 гостя</span><i class="dropdown__arrow js-dropdown__arrow material-icons">expand_more</i></div>
+                              <div class="dropdown__field js-dropdown__field"><span class="dropdown__text js-dropdown__text">3 гостя</span><i class="dropdown__arrow js-dropdown__arrow material-icons">expand_more</i></div>
                               <div class="dropdown__popup js-dropdown__popup">
                                 <ul class="js-dropdown__items">
                                   <li class="dropdown__item">
@@ -313,7 +313,7 @@
         </div>
       </div>
       <div class="room-details__footer">
-        <footer class="footer footer_ru">
+        <footer class="footer footer_language_ru">
           <div class="footer__container">
             <div class="footer__main-info"><a class="footer__logo"><svg width="106" height="40" viewBox="0 0 106 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M62.335 13.368C62.5567 13.368 62.7375 13.4438 62.8775 13.5955C63.0292 13.7355 63.105 13.9163 63.105 14.138C63.105 14.348 63.0292 14.5288 62.8775 14.6805C62.7375 14.8322 62.5567 14.908 62.335 14.908H58.5725V25.408C58.5725 25.6297 58.4967 25.8163 58.345 25.968C58.205 26.108 58.0242 26.178 57.8025 26.178C57.5925 26.178 57.4117 26.108 57.26 25.968C57.1083 25.8163 57.0325 25.6297 57.0325 25.408V14.908H53.27C53.06 14.908 52.8792 14.8322 52.7275 14.6805C52.5758 14.5288 52.5 14.348 52.5 14.138C52.5 13.9163 52.5758 13.7355 52.7275 13.5955C52.8792 13.4438 53.06 13.368 53.27 13.368H62.335Z" fill="#1F2041"/>
@@ -347,10 +347,10 @@
                 <h3 class="footer__item-title">Навигация</h3>
                 <nav>
                   <ul>
-                    <li class="footer__subitem"><a>О нас</a></li>
-                    <li class="footer__subitem"><a>Новости</a></li>
-                    <li class="footer__subitem"><a>Служба поддержки</a></li>
-                    <li class="footer__subitem"><a>Услуги</a></li>
+                    <li class="footer__subitem"><a class="footer__subitem-link" href="/mock-address/change-me">О нас</a></li>
+                    <li class="footer__subitem"><a class="footer__subitem-link" href="/mock-address/change-me">Новости</a></li>
+                    <li class="footer__subitem"><a class="footer__subitem-link" href="/mock-address/change-me">Служба поддержки</a></li>
+                    <li class="footer__subitem"><a class="footer__subitem-link" href="/mock-address/change-me">Услуги</a></li>
                   </ul>
                 </nav>
               </div>
@@ -358,10 +358,10 @@
                 <h3 class="footer__item-title">О нас</h3>
                 <nav>
                   <ul>
-                    <li class="footer__subitem"><a>О сервисе</a></li>
-                    <li class="footer__subitem"><a>Наша команда</a></li>
-                    <li class="footer__subitem"><a>Вакансии</a></li>
-                    <li class="footer__subitem"><a>Инвесторы</a></li>
+                    <li class="footer__subitem"><a class="footer__subitem-link" href="/mock-address/change-me">О сервисе</a></li>
+                    <li class="footer__subitem"><a class="footer__subitem-link" href="/mock-address/change-me">Наша команда</a></li>
+                    <li class="footer__subitem"><a class="footer__subitem-link" href="/mock-address/change-me">Вакансии</a></li>
+                    <li class="footer__subitem"><a class="footer__subitem-link" href="/mock-address/change-me">Инвесторы</a></li>
                   </ul>
                 </nav>
               </div>
@@ -369,9 +369,9 @@
                 <h3 class="footer__item-title">Служба поддержки</h3>
                 <nav>
                   <ul>
-                    <li class="footer__subitem"><a>Соглашения</a></li>
-                    <li class="footer__subitem"><a>Сообщества</a></li>
-                    <li class="footer__subitem"><a>Связь с нами</a></li>
+                    <li class="footer__subitem"><a class="footer__subitem-link" href="/mock-address/change-me">Соглашения</a></li>
+                    <li class="footer__subitem"><a class="footer__subitem-link" href="/mock-address/change-me">Сообщества</a></li>
+                    <li class="footer__subitem"><a class="footer__subitem-link" href="/mock-address/change-me">Связь с нами</a></li>
                   </ul>
                 </nav>
               </div>
@@ -389,7 +389,7 @@
           <div class="footer__line"></div>
           <div class="footer__bottom-container">
             <p class="footer__copyright">Copyright © 2018 Toxin отель. Все права зачищены.</p>
-            <div class="footer__links"><a class="footer__link"><i class="footer__link-icon fab fa-twitter"></i></a><a class="footer__link"><i class="footer__link-icon fab fa-facebook-square"></i></a><a class="footer__link"><i class="footer__link-icon fab fa-instagram"></i></a>
+            <div class="footer__links"><a class="footer__link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="footer__link-icon fab fa-twitter"></i></a><a class="footer__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="footer__link-icon fab fa-facebook-square"></i></a><a class="footer__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="footer__link-icon fab fa-instagram"></i></a>
             </div>
           </div>
         </footer>

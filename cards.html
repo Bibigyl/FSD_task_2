@@ -62,7 +62,7 @@
                                 <div class="dropdown__title">
                                         <h3 class="title">Гости</h3>
                                 </div>
-                                <div class="dropdown__field"><span class="dropdown__text js-dropdown__text">Сколько гостей</span><i class="dropdown__arrow js-dropdown__arrow material-icons">expand_more</i></div>
+                                <div class="dropdown__field js-dropdown__field"><span class="dropdown__text js-dropdown__text">Сколько гостей</span><i class="dropdown__arrow js-dropdown__arrow material-icons">expand_more</i></div>
                                 <div class="dropdown__popup js-dropdown__popup">
                                   <ul class="js-dropdown__items">
                                     <li class="dropdown__item">
@@ -183,7 +183,7 @@
           <div class="booking-card-wrap card-wrap">             
                   <div class="booking-card">
                     <form>
-                      <div class="booking-card__main-info"><span class="booking-card__number"> <span class="booking-card__simbol-number">№888</span></span><span class="booking-card__class">люкс</span><span class="booking-card__price"><span class="booking-card__price-number">9 990₽ в сутки</span></span></div>
+                      <div class="booking-card__main-info"><span class="booking-card__number"> <span class="booking-card__simbol-number">№</span>888</span><span class="booking-card__class">люкс</span><span class="booking-card__price"><span class="booking-card__price-number">9 990₽</span>в сутки</span></div>
                       <div class="booking-card__date-dropdown">
                               <div class="date-dropdown js-date-dropdown" data-language="ru" data-button-to-clear="Очистить" data-button-to-apply="Принять">
                                 <div class="date-dropdown__dates">
@@ -218,7 +218,7 @@
                                 <div class="dropdown__title">
                                         <h3 class="title">Гости</h3>
                                 </div>
-                                <div class="dropdown__field"><span class="dropdown__text js-dropdown__text">3 гостя</span><i class="dropdown__arrow js-dropdown__arrow material-icons">expand_more</i></div>
+                                <div class="dropdown__field js-dropdown__field"><span class="dropdown__text js-dropdown__text">3 гостя</span><i class="dropdown__arrow js-dropdown__arrow material-icons">expand_more</i></div>
                                 <div class="dropdown__popup js-dropdown__popup">
                                   <ul class="js-dropdown__items">
                                     <li class="dropdown__item">
@@ -313,26 +313,24 @@
           </div>
           <div class="room-card-wrap-1 card-wrap">
                   <div class="room-card">
-                    <div class="room-card__image" style="background-image: url( images/cards__room-card-1.jpg)">
-                      <div class="room-card__arrow room-card__arrow_prev"><i class="material-icons">expand_more</i></div>
-                      <div class="room-card__arrow room-card__arrow_next"><i class="material-icons">expand_more</i></div>
-                      <div class="room-card__dots">
-                        <div class="room-card__dot room-card__dot_active"></div>
-                        <div class="room-card__dot"></div>
-                        <div class="room-card__dot"></div>
-                        <div class="room-card__dot"></div>
-                      </div>
+                    <div class="room-card__slider">
+                            <div class="slider js-slider" data-arrows data-dots>
+                              <div class="sldier__image" style="background-image: url( images/cards__room-card-1.jpg)"></div>
+                              <div class="sldier__image" style="background-image: url( images/cards__room-card-2.jpg)"></div>
+                              <div class="sldier__image" style="background-image: url( images/cards__room-card-1.jpg)"></div>
+                              <div class="sldier__image" style="background-image: url( images/cards__room-card-2.jpg)"></div>
+                            </div>
                     </div>
                     <div class="room-card__content">
                       <div class="room-card__room">
-                        <div class="room-card__room-number"> <span class="room-card__number-simbol">№888</span></div><span class="room-card__class">люкс</span>
+                        <div class="room-card__room-number"> <span class="room-card__number-simbol">№</span>888</div><span class="room-card__class">люкс</span>
                       </div>
                       <div class="room-card__price">
                         <div class="room-card__price-number">9 990₽</div><span class="room-card__price-text">в сутки</span>
                       </div>
                       <div class="room-card__line"></div>
                       <div class="room-card__rate-button">
-                              <div class="rate-button"><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i>
+                              <div class="rate-button js-rate-button"><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i>
                               </div>
                       </div>
                       <div class="room-card__reviews">
@@ -343,26 +341,24 @@
           </div>
           <div class="room-card-wrap-2 card-wrap">
                   <div class="room-card">
-                    <div class="room-card__image" style="background-image: url( images/cards__room-card-2.jpg)">
-                      <div class="room-card__arrow room-card__arrow_prev"><i class="material-icons">expand_more</i></div>
-                      <div class="room-card__arrow room-card__arrow_next"><i class="material-icons">expand_more</i></div>
-                      <div class="room-card__dots">
-                        <div class="room-card__dot room-card__dot_active"></div>
-                        <div class="room-card__dot"></div>
-                        <div class="room-card__dot"></div>
-                        <div class="room-card__dot"></div>
-                      </div>
+                    <div class="room-card__slider">
+                            <div class="slider js-slider" data-arrows data-dots>
+                              <div class="sldier__image" style="background-image: url( images/cards__room-card-2.jpg)"></div>
+                              <div class="sldier__image" style="background-image: url( images/cards__room-card-1.jpg)"></div>
+                              <div class="sldier__image" style="background-image: url( images/cards__room-card-2.jpg)"></div>
+                              <div class="sldier__image" style="background-image: url( images/cards__room-card-1.jpg)"></div>
+                            </div>
                     </div>
                     <div class="room-card__content">
                       <div class="room-card__room">
-                        <div class="room-card__room-number"> <span class="room-card__number-simbol">№840</span></div>
+                        <div class="room-card__room-number"> <span class="room-card__number-simbol">№</span>840</div>
                       </div>
                       <div class="room-card__price">
                         <div class="room-card__price-number">9 900₽</div><span class="room-card__price-text">в сутки</span>
                       </div>
                       <div class="room-card__line"></div>
                       <div class="room-card__rate-button">
-                              <div class="rate-button"><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons">star_border</i>
+                              <div class="rate-button js-rate-button"><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons rate-button__icon_checked js-rate-button__icon_checked">star</i><i class="rate-button__icon material-icons">star_border</i>
                               </div>
                       </div>
                       <div class="room-card__reviews">
