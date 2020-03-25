@@ -86,10 +86,10 @@
       }
     }
 
-    .first-date-selected,
-    .last-date-selected {
-      background: linear-gradient(180deg, $primary 0%, #8BA4F9 100%) !important;
-      color: white !important;
+    .month-wrapper table div.day.first-date-selected,
+    .month-wrapper table div.day.last-date-selected {
+      background: linear-gradient(180deg, $primary 0%, #8BA4F9 100%);
+      color: white;
     }
 
     .calendar__arrow i {
