@@ -21,5 +21,5 @@ class Header {
 
 
 $('.js-header').each(function() {
-    let header = new Header($(this));
+    new Header($(this));
 });

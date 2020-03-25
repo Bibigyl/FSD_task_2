@@ -5,7 +5,7 @@ class Slider {
     constructor($slider) {
 
         this.$slider = $slider;
-        console.log($slider.attr('data-arrows') !== undefined);
+        
         const nextArrow = $slider.attr('data-arrows') !== undefined ?
         '<button class="slider__arrow slider__arrow_next"><i class="material-icons">expand_more</i></button>' :
         '';
@@ -28,5 +28,5 @@ class Slider {
 }
 
 $('.js-slider').each(function() {
-    let slider = new Slider($(this));
+    new Slider($(this));
 })

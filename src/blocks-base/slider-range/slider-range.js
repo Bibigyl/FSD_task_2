@@ -63,5 +63,5 @@ class SliderRange {
 
 
 $('.js-slider-range').each(function() {
-    let sliderRange = new SliderRange($(this));
+    new SliderRange($(this));
 });

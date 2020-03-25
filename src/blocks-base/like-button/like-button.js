@@ -23,5 +23,5 @@ class LikeButton {
 
 
 $('.js-like-button').each(function() {
-    let likeButton = new LikeButton($(this));
+    new LikeButton($(this));
 });

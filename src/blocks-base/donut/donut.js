@@ -2,8 +2,8 @@ import bind from 'bind-decorator';
 
 class Donut {
 
-    SEGMENT_WIDTH = 1;
-    ACTIVE_SEGMENT_WIDTH = 3;
+    static SEGMENT_WIDTH = 1;
+    static ACTIVE_SEGMENT_WIDTH = 3;
 
     constructor($donut) {
 
@@ -37,7 +37,7 @@ class Donut {
         let $segment = $donut.find(`.js-donut__segment[data-mark-id=${markId}]`);
 
     
-        $segment.attr('stroke-width', this.ACTIVE_SEGMENT_WIDTH);
+        $segment.attr('stroke-width', Donut.ACTIVE_SEGMENT_WIDTH);
         $segment.attr('stroke', colorPrimary);
     
         let $chartNumber = $donut.find('.js-donut__chart-number');
@@ -56,7 +56,7 @@ class Donut {
         let markId = $mark.attr('data-mark-id');
         let $segment = $donut.find(`.js-donut__segment[data-mark-id=${markId}]`);
     
-        $segment.attr('stroke-width', this.SEGMENT_WIDTH);
+        $segment.attr('stroke-width', Donut.SEGMENT_WIDTH);
         $segment.attr('stroke', `url(#${markId})`);
     
         let $chartNumber = $donut.find('.js-donut__chart-number');
@@ -101,5 +101,5 @@ class Donut {
 
 
 $('.js-donut').each(function() {
-    let donut = new Donut($(this));
+    new Donut($(this));
 })

@@ -38,11 +38,11 @@ class TextField {
             console.warn(e.stack);
         }
 
-        let cleave = new Cleave($input, params);    
+        new Cleave($input, params);    
     }
 }
 
 
 $('.js-text-field').each(function() {
-	let textField = new TextField($(this));
+	new TextField($(this));
 });

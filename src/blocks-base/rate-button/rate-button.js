@@ -2,8 +2,8 @@ import bind from 'bind-decorator';
 
 class RateButton {
 
-    FULL = 'star';
-    EMPTY = 'star_border';
+    static FULL = 'star';
+    static EMPTY = 'star_border';
 
     constructor($rateButton) {
 
@@ -21,14 +21,13 @@ class RateButton {
     @bind
     handleIconMouseEnter() {
         let $icon = $(event.target);
-        let that = this;
 
-        $icon.text(this.FULL);
+        $icon.text(RateButton.FULL);
         $icon.prevAll().each(function() { 
-            $(this).text(that.FULL);
+            $(this).text(RateButton.FULL);
         });
         $icon.nextAll().each(function() { 
-            $(this).text(that.EMPTY); 
+            $(this).text(RateButton.EMPTY); 
         });               
     }
 
@@ -47,20 +46,19 @@ class RateButton {
 
     @bind
     handleIconMouseLeave() {
-        let that = this;
         let $lastChecked = this.$rate.find('.js-rate-button__icon_checked').last();
 
-        $lastChecked.text(that.FULL);
+        $lastChecked.text(RateButton.FULL);
         $lastChecked.prevAll().each(function() { 
-            $(this).text(that.FULL);
+            $(this).text(RateButton.FULL);
         });
         $lastChecked.nextAll().each(function() { 
-            $(this).text(that.EMPTY); 
+            $(this).text(RateButton.EMPTY); 
         });      
     }
 }
 
 
 $('.js-rate-button').each(function() {
-    let rateButton = new RateButton($(this));
+    new RateButton($(this));
 })

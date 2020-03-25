@@ -9,7 +9,7 @@ class CountedItem {
 
         $operations.on('click', this.handleOperationClick);
 
-        let messageHub = new MessageHub($item, 'data-input', this.handleMessage);
+        new MessageHub($item, 'data-input', this.handleMessage);
     }
 
     @bind
@@ -68,5 +68,5 @@ class CountedItem {
 
 
 $('.js-counted-item').each(function() {
-    let countedItem = new CountedItem($(this));
+    new CountedItem($(this));
 })

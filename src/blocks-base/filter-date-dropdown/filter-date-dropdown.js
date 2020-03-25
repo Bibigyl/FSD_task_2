@@ -94,5 +94,5 @@ class FilterDateDropdown {
 
 
 $('.js-filter-date-dropdown').each(function() {
-    let filreDateDropdown = new FilterDateDropdown($(this));
+    new FilterDateDropdown($(this));
 });

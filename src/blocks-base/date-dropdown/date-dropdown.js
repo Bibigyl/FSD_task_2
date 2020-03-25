@@ -114,5 +114,5 @@ class DateDropdown {
 }
 
 $('.js-date-dropdown').each(function() {
-    let dateDropdown = new DateDropdown($(this));
+    new DateDropdown($(this));
 })

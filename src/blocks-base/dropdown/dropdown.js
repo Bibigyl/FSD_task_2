@@ -20,7 +20,7 @@ class Dropdown {
         $apply.on('click', this.handleApplyClick);
 
         let $items = $dropdown.find('[data-outer="dropdown-item"]');
-        let messageHub = new MessageHub($items, 'data-output', this.handleMessage);
+        new MessageHub($items, 'data-output', this.handleMessage);
     }
 
     @bind
@@ -96,5 +96,5 @@ class Dropdown {
 
 
 $('.js-dropdown').each(function() {
-    let dropdown = new Dropdown($(this));
+    new Dropdown($(this));
 });

@@ -19,5 +19,5 @@ class Pagination {
 
 
 $('.js-pagination').each(function() {
-    let pagination = new Pagination($(this));
+    new Pagination($(this));
 });

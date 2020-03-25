@@ -21,5 +21,5 @@ class ExpandableCheckboxList {
 }
 
 $('.js-expandable-checkbox-list').each(function() {
-  let expandableCheckboxList = new ExpandableCheckboxList($(this));
+  new ExpandableCheckboxList($(this));
 })
