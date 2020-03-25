@@ -69,7 +69,8 @@
     text-decoration: none;
     color: inherit;
 
-    &:focus, &:visited {
+    &:focus,
+    &:visited {
       color: $primary;
       outline: none;
     }
