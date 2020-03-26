@@ -2,7 +2,7 @@ import bind from 'bind-decorator';
 
 class Header {
 
-    static ANIMATION_DURATION_MS = 400;
+    static ANIMATION_DURATION_MS = 300;
 
     constructor($header) {
 

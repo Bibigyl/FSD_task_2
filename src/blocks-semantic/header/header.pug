@@ -13,8 +13,11 @@ mixin header({items, loginButton, registerButton, user, isMenuItemSlim})
 						each item in items
 							- let active = item.isActive ? 'header__menu-item_active' : '';
 							- let withArrow = item.hasSubmenu ? 'header__menu-item_with-arrow' : '';
+							- let tag = item.hasSubmenu ? 'div' : 'a';
+							- let href = !item.hasSubmenu ? item.href : '';
+							
 							li.header__menu-item(class=[slim, active, withArrow])
-								a.header__menu-link(href=item.href)= item.text
+								#{tag}.header__menu-link(href=href)= item.text
 								if item.hasSubmenu
 									i.header__menu-arrow.material-icons expand_more
 
