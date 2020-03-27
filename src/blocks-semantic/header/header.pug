@@ -1,39 +1,39 @@
 include ../../blocks-base/button/button
 
 mixin header({items, loginButton, registerButton, user, isMenuItemSlim})
-	- let slim = isMenuItemSlim ? 'header__menu-item_slim' : '';
-	header.header.js-header
-		.header__container
-			a.header__logo
-				include ../../images/logo/logo-with-name.svg
-				
-			.header__menu.js-header__menu(class=menuClass)
-				nav.header__menu-nav
-					ul.header__menu-items
-						each item in items
-							- let active = item.isActive ? 'header__menu-item_active' : '';
-							- let withArrow = item.hasSubmenu ? 'header__menu-item_with-arrow' : '';
-							- let tag = item.hasSubmenu ? 'div' : 'a';
-							- let href = !item.hasSubmenu ? item.href : '';
-							
-							li.header__menu-item(class=[slim, active, withArrow])
-								#{tag}.header__menu-link(href=href)= item.text
-								if item.hasSubmenu
-									i.header__menu-arrow.material-icons expand_more
+    - let slim = isMenuItemSlim ? 'header__menu-item_slim' : '';
+    header.header.js-header
+        .header__container
+            a.header__logo
+                include ../../images/logo/logo-with-name.svg
+                
+            .header__menu.js-header__menu(class=menuClass)
+                nav.header__menu-nav
+                    ul.header__menu-items
+                        each item in items
+                            - let active = item.isActive ? 'header__menu-item_active' : '';
+                            - let withArrow = item.hasSubmenu ? 'header__menu-item_with-arrow' : '';
+                            - let tag = item.hasSubmenu ? 'div' : 'a';
+                            - let href = !item.hasSubmenu ? item.href : false;
+                            
+                            li.header__menu-item(class=[slim, active, withArrow])
+                                #{tag}.header__menu-link(href=href)= item.text
+                                if item.hasSubmenu
+                                    i.header__menu-arrow.material-icons expand_more
 
-				if !user
-					.header__buttons
-						.header__button.header__login-button
-							+button(loginButton)
-						.header__button.header__register-button
-							+button(registerButton)
+                if !user
+                    .header__buttons
+                        .header__button.header__login-button
+                            +button(loginButton)
+                        .header__button.header__register-button
+                            +button(registerButton)
 
-				if user
-					.header__user
-						.header__user-icon.material-icons person
-						.header__user-name= user
+                if user
+                    .header__user
+                        .header__user-icon.material-icons person
+                        .header__user-name= user
 
-			.header__hamburger.js-header__hamburger
-				span.header__hamburger-line
-				span.header__hamburger-line
-				span.header__hamburger-line
+            .header__hamburger.js-header__hamburger
+                span.header__hamburger-line
+                span.header__hamburger-line
+                span.header__hamburger-line

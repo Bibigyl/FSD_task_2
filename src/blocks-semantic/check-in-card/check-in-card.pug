@@ -4,40 +4,40 @@ include ../../blocks-base/toggle/toggle
 include ../../blocks-base/button/button
 
 mixin check-in-card({title, textFieldName, textFieldSurname, radioButtons, birthdayTitle, textFieldBirthday, credentialsTitle, textFieldEmail, textFieldPassword, toggle, button, enter})
-	.check-in-card
-		form
+    .check-in-card
+        form
 
-			h1.check-in-card__title= title
+            h1.check-in-card__title= title
 
-			.check-in-card__name
-				+text-field(textFieldName)
+            .check-in-card__name
+                +text-field(textFieldName)
 
-			.check-in-card__surname
-				+text-field(textFieldSurname)
+            .check-in-card__surname
+                +text-field(textFieldSurname)
 
-			.check-in-card__radio-buttons
-				+twin-radio-buttons(radioButtons)
+            .check-in-card__radio-buttons
+                +twin-radio-buttons(radioButtons)
 
-			.check-in-card__birthday
-				h3.check-in-card__birthday-title= birthdayTitle
-				+text-field(textFieldBirthday)
+            .check-in-card__birthday
+                h3.check-in-card__birthday-title= birthdayTitle
+                +text-field(textFieldBirthday)
 
-			.check-in-card__credentials
-				h3.check-in-card__credentials-title= credentialsTitle 
-				.check-in-card__email
-					+text-field(textFieldEmail)
-				.check-in-card__password
-					+text-field(textFieldPassword)
+            .check-in-card__credentials
+                h3.check-in-card__credentials-title= credentialsTitle 
+                .check-in-card__email
+                    +text-field(textFieldEmail)
+                .check-in-card__password
+                    +text-field(textFieldPassword)
 
-			.check-in-card__toggle
-				+toggle(toggle)
+            .check-in-card__toggle
+                +toggle(toggle)
 
-			.check-in-card__button
-				+button(button)
+            .check-in-card__button
+                +button(button)
 
-		.check-in-card__enter
-			span.check-in-card__enter-text= enter.text
-			.check-in-card__enter-button
-				+button(enter.button)
+        .check-in-card__enter
+            span.check-in-card__enter-text= enter.text
+            .check-in-card__enter-button
+                +button(enter.button)
 
 

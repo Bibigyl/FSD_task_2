@@ -1,9 +1,9 @@
 mixin icon-text({icon, richText, text, isUnderlined=true})
 
-	-let underline = isUnderlined ? 'icon-text_underlined' : '';
+    -let underline = isUnderlined ? 'icon-text_underlined' : '';
 
-	.icon-text(class=underline)
-		i.material-icons.icon-text__icon= icon
-		.icon-text__text-block
-			span.icon-text__rich-text= richText
-			span.icon-text__text= text
+    .icon-text(class=underline)
+        i.material-icons.icon-text__icon= icon
+        .icon-text__text-block
+            span.icon-text__rich-text= richText
+            span.icon-text__text= text

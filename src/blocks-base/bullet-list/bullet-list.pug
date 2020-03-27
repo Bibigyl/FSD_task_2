@@ -1,11 +1,11 @@
 include ../title/title
 
 mixin bullet-list({title, items})
-	.bullet-list
-		if title
-			.bullet-list__title
-				+title(title)
+    .bullet-list
+        if title
+            .bullet-list__title
+                +title(title)
 
-		ul.bullet-list__list
-			each item in items
-				li.bullet-list__item!= item
+        ul.bullet-list__list
+            each item in items
+                li.bullet-list__item!= item

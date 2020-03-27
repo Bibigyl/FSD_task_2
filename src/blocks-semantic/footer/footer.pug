@@ -1,35 +1,35 @@
 include ../../blocks-base/text-field/text-field
 
 mixin footer({text, items, subscription, copyright, links, isRussian})
-	- let ru = isRussian ? 'footer_language_ru' : '';
+    - let ru = isRussian ? 'footer_language_ru' : '';
 
-	footer.footer(class=ru)
-		.footer__container
-			.footer__main-info
-				a.footer__logo
-					include ../../images/logo/logo-with-name.svg
-				p.footer__text= text
+    footer.footer(class=ru)
+        .footer__container
+            .footer__main-info
+                a.footer__logo
+                    include ../../images/logo/logo-with-name.svg
+                p.footer__text= text
 
-			.footer__menu
-				each item in items
-					.footer__item
-						h3.footer__item-title= item.title
-						nav
-							ul
-								each subitem in item.subitems
-									li.footer__subitem
-										a.footer__subitem-link(href=subitem.href)= subitem.text
+            .footer__menu
+                each item in items
+                    .footer__item
+                        h3.footer__item-title= item.title
+                        nav
+                            ul
+                                each subitem in item.subitems
+                                    li.footer__subitem
+                                        a.footer__subitem-link(href=subitem.href)= subitem.text
 
-			.footer__subscription
-				h3.footer__subscription-title= subscription.title
-				p.footer__subscription-text= subscription.text
-				.footer__subscription-text-field
-					+text-field(subscription.textField)
+            .footer__subscription
+                h3.footer__subscription-title= subscription.title
+                p.footer__subscription-text= subscription.text
+                .footer__subscription-text-field
+                    +text-field(subscription.textField)
 
-		.footer__line
-		.footer__bottom-container
-			p.footer__copyright= copyright
-			.footer__links
-				each link in links
-					a.footer__link(href=link.href target="_blank" rel="noopener noreferrer")
-						i.footer__link-icon.fab(class=`fa-${link.name}`)
+        .footer__line
+        .footer__bottom-container
+            p.footer__copyright= copyright
+            .footer__links
+                each link in links
+                    a.footer__link(href=link.href target="_blank" rel="noopener noreferrer")
+                        i.footer__link-icon.fab(class=`fa-${link.name}`)

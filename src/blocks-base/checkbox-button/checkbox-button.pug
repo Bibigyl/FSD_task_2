@@ -1,10 +1,10 @@
 mixin checkbox-button({text, richText, isChecked=false})
 
-	-let rich = richText ? 'checkbox-button_rich' : '';
-	.checkbox-button(class=rich)
-		label.checkbox-button__label
-			input.checkbox-button__input(type="checkbox" checked=isChecked)
-			.checkbox-button__text-block
-				if richText
-					span.checkbox-button__title!= richText
-				span.checkbox-button__text!= text
+    -let rich = richText ? 'checkbox-button_rich' : '';
+    .checkbox-button(class=rich)
+        label.checkbox-button__label
+            input.checkbox-button__input(type="checkbox" checked=isChecked)
+            .checkbox-button__text-block
+                if richText
+                    span.checkbox-button__title!= richText
+                span.checkbox-button__text!= text

@@ -1,17 +1,17 @@
 mixin button(options = {})
-	-
-		let {
-			text = 'Click me', 
-			isSecondary, 
-			isExtended, 
-			isSmall, 
-			type = 'button'
-		} = options;
+    -
+        let {
+            text = 'Click me', 
+            isSecondary, 
+            isExtended, 
+            isSmall, 
+            type = 'button'
+        } = options;
 
-		let secondary = isSecondary ? 'button_secondary' : '';
-		let extended = isExtended ? 'button_extended' : '';
-		let small = isSmall ? 'button_small' : '';
+        let secondary = isSecondary ? 'button_secondary' : '';
+        let extended = isExtended ? 'button_extended' : '';
+        let small = isSmall ? 'button_small' : '';
 
-	button.button(class=[secondary, extended, small] type=type)= text
-		if (extended)
-			i.button__arrow.material-icons arrow_forward
+    button.button(class=[secondary, extended, small] type=type)= text
+        if (extended)
+            i.button__arrow.material-icons arrow_forward

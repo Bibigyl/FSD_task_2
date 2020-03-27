@@ -3,16 +3,16 @@ include ../../blocks-base/dropdown/dropdown
 include ../../blocks-base/button/button
 
 mixin search-card({title, dateDropdown, dropdown, button})
-	.search-card
-		form
-			h1.search-card__title= title
+    .search-card
+        form
+            h1.search-card__title= title
 
-			.search-card__date-dropdown
-				+date-dropdown(dateDropdown)
+            .search-card__date-dropdown
+                +date-dropdown(dateDropdown)
 
-			.search-card__dropdown
-				+dropdown(dropdown)
-				
-			.search-card__button
-				+button(button)
+            .search-card__dropdown
+                +dropdown(dropdown)
+                
+            .search-card__button
+                +button(button)
 

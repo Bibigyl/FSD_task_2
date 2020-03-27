@@ -1,34 +1,34 @@
 include ../../blocks-base/title/title
 
 mixin text-field(options = {})
-	-
-		let {
-			title, 
-			isSubscription, 
-			maskParameters = {},
-			placeholder,
-			type = 'text', 
-			value
-		} = options;
+    -
+        let {
+            title, 
+            isSubscription, 
+            maskParameters = {},
+            placeholder,
+            type = 'text', 
+            value
+        } = options;
 
-		let subscription = isSubscription ? 'text-field_subscription' : '';
-		let classMasked = Object.keys(maskParameters) != 0 ? 'text-field_masked js-text-field_masked' : '';
+        let subscription = isSubscription ? 'text-field_subscription' : '';
+        let classMasked = Object.keys(maskParameters) != 0 ? 'text-field_masked js-text-field_masked' : '';
 
-	.text-field.js-text-field(class=[subscription, classMasked])
-		if title
-			.text-field__title
-				+title(title)
-		input.text-field__input(
-			type=type 
-			placeholder=placeholder 
-			value=value 
-			data-type=maskParameters.type 
-			data-pattern=maskParameters.pattern 
-			data-delimiter=maskParameters.delimiter 
-			data-blocks=maskParameters.blocks
-		)
-		if subscription
-			i.material-icons.text-field__arrow arrow_forward
+    .text-field.js-text-field(class=[subscription, classMasked])
+        if title
+            .text-field__title
+                +title(title)
+        input.text-field__input(
+            type=type 
+            placeholder=placeholder 
+            value=value 
+            data-type=maskParameters.type 
+            data-pattern=maskParameters.pattern 
+            data-delimiter=maskParameters.delimiter 
+            data-blocks=maskParameters.blocks
+        )
+        if subscription
+            i.material-icons.text-field__arrow arrow_forward
 
 
 
