@@ -9,7 +9,7 @@ class DateDropdown {
         let $last = $dateDropdown.find('.js-date-dropdown__date_order_last input');
 
         this.build();
-        
+
         $first.on('blur', this.handleInputOnBlur);
         $last.on('blur', this.handleInputOnBlur);
 
@@ -23,7 +23,7 @@ class DateDropdown {
         let $first = $dateDropdown.find('.js-date-dropdown__date_order_first input');
         let $last = $dateDropdown.find('.js-date-dropdown__date_order_last input');
         let $calendar = $dateDropdown.find('.js-date-dropdown__calendar');
-        
+
         let firstDate = $dateDropdown.find('.js-date-dropdown__date_order_first').attr('data-date') || '';
         let lastDate = $dateDropdown.find('.js-date-dropdown__date_order_last').attr('data-date') || '';
         let language = $dateDropdown.attr('data-language');
@@ -38,7 +38,7 @@ class DateDropdown {
             startOfWeek: 'monday',
             format: 'DD.MM.YYYY',
             hoveringTooltip: false,
-            setValue: function(s,s1,s2) {
+            setValue: function (s, s1, s2) {
                 $first.val(s1);
                 $last.val(s2);
             },
@@ -50,18 +50,18 @@ class DateDropdown {
 
         $calendar.find('.date-picker-wrapper').append(
             `<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear" type="button">${buttonClearText}</button>
-            <button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply" type="button">${buttonApplyText}</button>`);
+                <button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply" type="button">${buttonApplyText}</button>`);
 
 
         if (firstDate && lastDate) {
             try {
                 $dateDropdown.data('dateRangePicker').setDateRange(firstDate, lastDate);
-            } catch(e) {
+            } catch (e) {
                 console.warn('Wrong date format');
-            }            
+            }
         }
 
-        $dateDropdown.find('.js-calendar__icon-link_action_clear').on('click', function() {
+        $dateDropdown.find('.js-calendar__icon-link_action_clear').on('click', function () {
             $dateDropdown.data('dateRangePicker').clear();
         });
 
@@ -70,7 +70,7 @@ class DateDropdown {
         $dateDropdown.find('.js-date-dropdown__arrow').on('click', this.close);
 
         const focusLostHandler = this.handleFocusLoss;
-        $dateDropdown.bind('datepicker-opened', function() {
+        $dateDropdown.bind('datepicker-opened', function () {
             $(document).on('mouseup', focusLostHandler);
         })
     }
@@ -82,13 +82,13 @@ class DateDropdown {
         let $first = $dateDropdown.find('.js-date-dropdown__date_order_first input');
         let $last = $dateDropdown.find('.js-date-dropdown__date_order_last input');
 
-        if ( $first.val() && $last.val() ) {
+        if ($first.val() && $last.val()) {
             try {
                 $dateDropdown.data('dateRangePicker').setDateRange($first.val(), $last.val());
                 $dateDropdown.data('dateRangePicker').close();
-            } catch(e) {
+            } catch (e) {
                 console.warn('Incorrect dates');
-            }      
+            }
         }
     }
 
@@ -101,7 +101,7 @@ class DateDropdown {
 
     @bind
     handleFocusLoss(e) {
-        if (this.$dateDropdown.has(e.target).length === 0){
+        if (this.$dateDropdown.has(e.target).length === 0) {
             this.close();
         }
     }
@@ -113,6 +113,6 @@ class DateDropdown {
     }
 }
 
-$('.js-date-dropdown').each(function() {
+$('.js-date-dropdown').each(function () {
     new DateDropdown($(this));
 })

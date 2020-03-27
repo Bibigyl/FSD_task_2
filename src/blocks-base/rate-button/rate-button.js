@@ -7,7 +7,9 @@ class RateButton {
 
     constructor($rateButton) {
 
-        if ( !$rateButton.hasClass('js-rate-button_clickable') ) { return }
+        if (!$rateButton.hasClass('js-rate-button_clickable')) {
+            return
+        }
 
         this.$rate = $rateButton;
 
@@ -15,7 +17,7 @@ class RateButton {
 
         $icons.on('mouseenter', this.handleIconMouseEnter);
         $icons.on('click', this.handleIconClick);
-        $icons.on('mouseleave', this.handleIconMouseLeave);   
+        $icons.on('mouseleave', this.handleIconMouseLeave);
     }
 
     @bind
@@ -23,12 +25,12 @@ class RateButton {
         let $icon = $(event.target);
 
         $icon.text(RateButton.FULL);
-        $icon.prevAll().each(function() { 
+        $icon.prevAll().each(function () {
             $(this).text(RateButton.FULL);
         });
-        $icon.nextAll().each(function() { 
-            $(this).text(RateButton.EMPTY); 
-        });               
+        $icon.nextAll().each(function () {
+            $(this).text(RateButton.EMPTY);
+        });
     }
 
     @bind
@@ -36,12 +38,12 @@ class RateButton {
         let $icon = $(event.target);
 
         $icon.addClass('rate-button__icon_checked js-rate-button__icon_checked');
-        $icon.prevAll().each(function() { 
+        $icon.prevAll().each(function () {
             $(this).addClass('rate-button__icon_checked js-rate-button__icon_checked');
         });
-        $icon.nextAll().each(function() { 
+        $icon.nextAll().each(function () {
             $(this).removeClass('rate-button__icon_checked js-rate-button__icon_checked');
-        });   
+        });
     }
 
     @bind
@@ -49,16 +51,16 @@ class RateButton {
         let $lastChecked = this.$rate.find('.js-rate-button__icon_checked').last();
 
         $lastChecked.text(RateButton.FULL);
-        $lastChecked.prevAll().each(function() { 
+        $lastChecked.prevAll().each(function () {
             $(this).text(RateButton.FULL);
         });
-        $lastChecked.nextAll().each(function() { 
-            $(this).text(RateButton.EMPTY); 
-        });      
+        $lastChecked.nextAll().each(function () {
+            $(this).text(RateButton.EMPTY);
+        });
     }
 }
 
 
-$('.js-rate-button').each(function() {
+$('.js-rate-button').each(function () {
     new RateButton($(this));
 })

@@ -22,6 +22,6 @@ class LikeButton {
 }
 
 
-$('.js-like-button').each(function() {
+$('.js-like-button').each(function () {
     new LikeButton($(this));
 });

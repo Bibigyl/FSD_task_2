@@ -15,7 +15,9 @@ class CountedItem {
     @bind
     handleMessage() {
         let $item = this.$item;
-        if ( $item.attr('data-input') != 'clear' ) { return }
+        if ($item.attr('data-input') != 'clear') {
+            return
+        }
 
         let $value = $item.find('.js-counted-item__value');
         let $dec = $item.find('.js-counted-item__operation_dec');
@@ -39,15 +41,17 @@ class CountedItem {
         let min = $item.attr('data-min');
         let max = $item.attr('data-max');
 
-        if ($operation.hasClass('counted-item__operation_disabled')) {return;}
+        if ($operation.hasClass('counted-item__operation_disabled')) {
+            return;
+        }
 
-        if ( $operation.hasClass('js-counted-item__operation_dec') ) {
+        if ($operation.hasClass('js-counted-item__operation_dec')) {
 
             value = value - 1;
             $inc.removeClass('counted-item__operation_disabled');
 
-            if ( value == min ) { 
-                $operation.addClass('counted-item__operation_disabled') 
+            if (value == min) {
+                $operation.addClass('counted-item__operation_disabled')
             }
 
         } else {
@@ -55,8 +59,8 @@ class CountedItem {
             value = value + 1;
             $dec.removeClass('counted-item__operation_disabled');
 
-            if ( value == max ) { 
-                $operation.addClass('counted-item__operation_disabled') 
+            if (value == max) {
+                $operation.addClass('counted-item__operation_disabled')
             }
         }
 
@@ -67,6 +71,6 @@ class CountedItem {
 }
 
 
-$('.js-counted-item').each(function() {
+$('.js-counted-item').each(function () {
     new CountedItem($(this));
 })

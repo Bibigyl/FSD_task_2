@@ -35,8 +35,8 @@ class FilterDateDropdown {
             format: 'D MMM',
             separator: ' - ',
             hoveringTooltip: false,
-            setValue: function(s) {
-                if(!$(this).attr('readonly') && !$(this).is(':disabled') && s != $(this).val()) {
+            setValue: function (s) {
+                if (!$(this).attr('readonly') && !$(this).is(':disabled') && s != $(this).val()) {
                     $input.val(s);
                 }
             },
@@ -48,8 +48,8 @@ class FilterDateDropdown {
 
         $calendar.find('.date-picker-wrapper').append(
             `<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear" type="button">${buttonClearText}</button>
-            <button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply" type="button">${buttonApplyText}</button>`);
-    
+                <button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply" type="button">${buttonApplyText}</button>`);
+
         if (firstDate && lastDate) {
             try {
                 moment.locale(language);
@@ -58,12 +58,12 @@ class FilterDateDropdown {
                 lastDate = moment(lastDate, 'DD.MM.YYYY').format('D MMM');
 
                 $dropdown.data('dateRangePicker').setDateRange(firstDate, lastDate);
-            } catch(e) {
+            } catch (e) {
                 console.warn('Wrong date format');
-            }            
+            }
         }
 
-        $dropdown.find('.js-calendar__icon-link_action_clear').on('click', function() {
+        $dropdown.find('.js-calendar__icon-link_action_clear').on('click', function () {
             $dropdown.data('dateRangePicker').clear();
             $input.val(initialText);
         });
@@ -73,14 +73,14 @@ class FilterDateDropdown {
         $dropdown.find('.js-filter-date-dropdown__arrow').on('click', this.close);
 
         const focusLostHandler = this.handleFocusLoss;
-        $dropdown.bind('datepicker-opened', function() {
+        $dropdown.bind('datepicker-opened', function () {
             $(document).on('mouseup', focusLostHandler);
         })
     }
 
     @bind
     handleFocusLoss(e) {
-        if (this.$dropdown.has(e.target).length === 0){
+        if (this.$dropdown.has(e.target).length === 0) {
             this.close();
         }
     }
@@ -93,6 +93,6 @@ class FilterDateDropdown {
 }
 
 
-$('.js-filter-date-dropdown').each(function() {
+$('.js-filter-date-dropdown').each(function () {
     new FilterDateDropdown($(this));
 });

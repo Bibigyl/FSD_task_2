@@ -33,16 +33,22 @@ class Dropdown {
 
         let itemTexts = [];
         let itemText;
-        $items.each(function() {
+        $items.each(function () {
             itemText = $(this).attr('data-output');
-            if ( itemText != '' ) { itemTexts.push(itemText); }
+            if (itemText != '') {
+                itemTexts.push(itemText);
+            }
         });
 
         if (itemTexts.length != 0) {
-            if ($clear) {$clear.removeClass('dropdown__action_hidden')};
+            if ($clear) {
+                $clear.removeClass('dropdown__action_hidden')
+            };
             text = itemTexts.join(', ');
         } else {
-            if ($clear) {$clear.addClass('dropdown__action_hidden')};
+            if ($clear) {
+                $clear.addClass('dropdown__action_hidden')
+            };
             text = initialText;
         }
 
@@ -76,7 +82,7 @@ class Dropdown {
 
     @bind
     handleFocusLoss(e) {
-        if (this.$dropdown.has(e.target).length === 0){
+        if (this.$dropdown.has(e.target).length === 0) {
             this.close();
         }
     }
@@ -95,6 +101,6 @@ class Dropdown {
 }
 
 
-$('.js-dropdown').each(function() {
+$('.js-dropdown').each(function () {
     new Dropdown($(this));
 });

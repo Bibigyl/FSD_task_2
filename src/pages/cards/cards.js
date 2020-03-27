@@ -8,7 +8,7 @@ import './cards.scss';
 import 'jquery-date-range-picker/dist/jquery.daterangepicker.js';
 
 import moment from 'moment'
-import 'moment/locale/ru' 
+import 'moment/locale/ru'
 moment.locale('ru');
 
 //--------------- import common js -----------------------------
@@ -23,7 +23,7 @@ import '../../blocks-base/dropdown/dropdown.js';
 import '../../blocks-base/date-dropdown/date-dropdown.js';
 import '../../blocks-base/slider/slider.js';
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     $('.js-cards__calendar').dateRangePicker({
         language: 'ru',
@@ -38,16 +38,16 @@ $(document).ready(function() {
 
         inline: true,
         container: '.calendar-wrap',
-        alwaysOpen: true, 
+        alwaysOpen: true,
     });
 
     $('.calendar-wrap').find('.date-picker-wrapper').append(
         '<button class="icon-link calendar__icon-link_action_clear js-calendar__icon-link_action_clear">Очистить</button><button class="icon-link icon-link_primary calendar__icon-link_action_apply js-calendar__icon-link_action_apply">Применить</button>'
     );
 
-    $('.js-cards__calendar').data('dateRangePicker').setDateRange('2019/08/19','2019/08/23');
+    $('.js-cards__calendar').data('dateRangePicker').setDateRange('2019/08/19', '2019/08/23');
 
-    $('.js-cards__calendar-wrap .js-calendar__icon-link_action_clear').click(function(evt) {
+    $('.js-cards__calendar-wrap .js-calendar__icon-link_action_clear').click(function (evt) {
         evt.stopPropagation();
         $('.js-cards__calendar').data('dateRangePicker').clear();
     });

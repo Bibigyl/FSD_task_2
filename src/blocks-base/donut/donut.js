@@ -18,7 +18,7 @@ class Donut {
         let value;
         let donut = $donut.get(0);
 
-        donut.querySelectorAll('.js-donut__mark').forEach(function(mark) {
+        donut.querySelectorAll('.js-donut__mark').forEach(function (mark) {
             value = mark.getAttribute('data-value');
             values.push(value);
         });
@@ -36,13 +36,13 @@ class Donut {
         let colorPrimary = $mark.attr('data-color-primary');
         let $segment = $donut.find(`.js-donut__segment[data-mark-id=${markId}]`);
 
-    
+
         $segment.attr('stroke-width', Donut.ACTIVE_SEGMENT_WIDTH);
         $segment.attr('stroke', colorPrimary);
-    
+
         let $chartNumber = $donut.find('.js-donut__chart-number');
         let $chartLabel = $donut.find('.js-donut__chart-label');
-    
+
         $chartNumber.text($segment.attr('data-value'));
         $chartNumber.attr('fill', colorPrimary);
         $chartLabel.attr('fill', colorPrimary);
@@ -55,13 +55,13 @@ class Donut {
 
         let markId = $mark.attr('data-mark-id');
         let $segment = $donut.find(`.js-donut__segment[data-mark-id=${markId}]`);
-    
+
         $segment.attr('stroke-width', Donut.SEGMENT_WIDTH);
         $segment.attr('stroke', `url(#${markId})`);
-    
+
         let $chartNumber = $donut.find('.js-donut__chart-number');
         let $chartLabel = $donut.find('.js-donut__chart-label');
-    
+
         $chartNumber.text($chartNumber.attr('data-sum'));
         $chartNumber.attr('fill', 'grey');
         $chartLabel.attr('fill', 'grey');
@@ -71,28 +71,28 @@ class Donut {
     buildDonutDiagram(values, node) {
 
         let sum = 0;
-        values.forEach(function(value) {
+        values.forEach(function (value) {
             sum += parseInt(value, 10);
         });
-    
+
         let percents = [];
-        values.forEach(function(value, i) {
-            percents[i] = Number( (value / sum * 100).toFixed() );
+        values.forEach(function (value, i) {
+            percents[i] = Number((value / sum * 100).toFixed());
         });
-    
+
         const INITIAL_OFFSET = -25;
         let incrementalSum = INITIAL_OFFSET;
         let segments = node.querySelectorAll('.js-donut__segment');
-    
+
         for (let i = 0; i < values.length; i++) {
             let dash = percents[i] ? percents[i] - 1 : 0;
             let offset = percents[i] ? (100 - percents[i]) + 1 : (100 - percents[i]);
             segments[i].setAttribute('stroke-dasharray', `${dash} ${offset}`);
             segments[i].setAttribute('stroke-dashoffset', incrementalSum);
             segments[i].setAttribute('data-value', values[i]);
-            incrementalSum = incrementalSum + percents[i+1];
+            incrementalSum = incrementalSum + percents[i + 1];
         }
-    
+
         let chart = node.querySelector('.js-donut__chart-number');
         chart.setAttribute('data-sum', sum);
         chart.textContent = sum;
@@ -100,6 +100,6 @@ class Donut {
 }
 
 
-$('.js-donut').each(function() {
+$('.js-donut').each(function () {
     new Donut($(this));
 })

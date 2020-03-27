@@ -20,6 +20,6 @@ class Header {
 }
 
 
-$('.js-header').each(function() {
+$('.js-header').each(function () {
     new Header($(this));
 });

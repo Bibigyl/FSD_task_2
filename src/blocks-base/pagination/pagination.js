@@ -18,6 +18,6 @@ class Pagination {
 }
 
 
-$('.js-pagination').each(function() {
+$('.js-pagination').each(function () {
     new Pagination($(this));
 });

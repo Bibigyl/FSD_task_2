@@ -37,20 +37,20 @@ class SliderRange {
 
         $text.html(
             `<span class="range-value">${begin}₽</span>
-            <span class="range-divider"></span>
-            <span class="range-value">${end}₽</span>`
+                <span class="range-divider"></span>
+                <span class="range-value">${end}₽</span>`
         );
 
         $slider.slider({
-            slide: function(event, ui) {
+            slide: function (event, ui) {
 
                 let begin = ui.values[0].toString().replace(THOUSANDS_RANKS, "$1 ");
                 let end = ui.values[1].toString().replace(THOUSANDS_RANKS, "$1 ");
-                
+
                 $text.html(
                     `<span class="range-value">${begin}₽</span>
-                    <span class="range-divider">
-                    </span><span class="range-value">${end}₽</span>`
+                        <span class="range-divider">
+                        </span><span class="range-value">${end}₽</span>`
                 );
 
                 $slider.data({
@@ -62,6 +62,6 @@ class SliderRange {
 }
 
 
-$('.js-slider-range').each(function() {
+$('.js-slider-range').each(function () {
     new SliderRange($(this));
 });
